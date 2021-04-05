@@ -1,0 +1,2464 @@
+{
+  "data": {
+    "nanodegree": {
+      "id": 950325,
+      "key": "nd032",
+      "title": "Intermediate JavaScript Nanodegree",
+      "semantic_type": "Degree",
+      "is_public": true,
+      "cohorts": [],
+      "version": "1.0.0",
+      "locale": "en-us",
+      "color_scheme": "color_scheme1",
+      "enrollment": {
+        "product_variant": "STANDARD",
+        "variant": "STANDARD",
+        "static_access": {
+          "static_access": true,
+          "access_expiry_at": "2021-10-29T00:44:17.294Z"
+        }
+      },
+      "nd_units": [
+        {
+          "id": 10372
+        }
+      ],
+      "hero_image": null,
+      "forum_path": "",
+      "summary": "The goal of the this program is to prepare students for roles in web development, server-side application development, and desktop development that require advanced  JavaScript skills.",
+      "is_graduated": false,
+      "is_term_based": true,
+      "is_default": true,
+      "project_deadlines": [
+        {
+          "due_at": "2020-11-03T23:47:06.519Z",
+          "node_key": "d1ab09ec-7059-4d97-96d7-c964dbf4b34f"
+        },
+        {
+          "due_at": "2020-12-01T23:47:06.519Z",
+          "node_key": "4f16bb05-967f-46a8-ac30-4a58269877c4"
+        },
+        {
+          "due_at": "2020-12-29T23:47:06.519Z",
+          "node_key": "d5f0cc67-dda9-4528-b04e-b5f73f00f99c"
+        }
+      ],
+      "user_state": {
+        "node_key": "nd032",
+        "completed_at": "2020-10-13T23:47:19.452Z",
+        "last_viewed_at": "2021-04-05T02:02:07.179Z",
+        "unstructured": null
+      },
+      "aggregated_state": {
+        "node_key": "nd032",
+        "completion_amount": 0.003289473684210526,
+        "completed_count": 1,
+        "concept_count": 196,
+        "last_viewed_child_key": "d05de335-9856-4986-86b2-ce46fd380e58",
+        "part_aggregated_states": [
+          {
+            "node_key": "396768aa-80ce-4b5f-ad14-4b5940e79a99",
+            "completed_at": null,
+            "completion_amount": 0,
+            "completed_count": 0,
+            "concept_count": 12,
+            "last_viewed_child_key": "f3817f45-fd33-43aa-9df6-cbcb3f6314cc",
+            "module_aggregated_states": [
+              {
+                "node_key": "f3817f45-fd33-43aa-9df6-cbcb3f6314cc",
+                "completed_at": null,
+                "completion_amount": 0,
+                "completed_count": 0,
+                "concept_count": 12,
+                "last_viewed_child_key": "75411e62-26db-4b9b-9428-2815ac570825",
+                "lesson_aggregated_states": [
+                  {
+                    "node_key": "75411e62-26db-4b9b-9428-2815ac570825",
+                    "completed_at": null,
+                    "completed_count": 0,
+                    "concept_count": 3,
+                    "completion_amount": 0,
+                    "last_viewed_child_key": "82d21b83-a3a9-42ce-9f06-d5ac8b35d642"
+                  },
+                  {
+                    "node_key": "d03deb6d-3aee-4331-b4ed-67b8cd2ec8bb",
+                    "completed_at": null,
+                    "completed_count": 0,
+                    "concept_count": 9,
+                    "completion_amount": 0,
+                    "last_viewed_child_key": "7b46b9c9-0d5b-4975-bab8-c6d265f06d9c"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node_key": "d4ff6b6c-2074-41d9-ab2a-440bf6e8c623",
+            "completed_at": null,
+            "completion_amount": 0,
+            "completed_count": 0,
+            "concept_count": 36,
+            "last_viewed_child_key": "a82d8fc9-9509-4717-b419-cd117cd6ce4a",
+            "module_aggregated_states": [
+              {
+                "node_key": "a82d8fc9-9509-4717-b419-cd117cd6ce4a",
+                "completed_at": null,
+                "completion_amount": 0,
+                "completed_count": 0,
+                "concept_count": 36,
+                "last_viewed_child_key": "504843ae-ba16-4573-a859-94da7a7d1dd4",
+                "lesson_aggregated_states": [
+                  {
+                    "node_key": "504843ae-ba16-4573-a859-94da7a7d1dd4",
+                    "completed_at": null,
+                    "completed_count": 0,
+                    "concept_count": 6,
+                    "completion_amount": 0,
+                    "last_viewed_child_key": "409c8e65-59c6-4d67-8ea8-6934fad5ab0b"
+                  },
+                  {
+                    "node_key": "fd2e70b8-84b4-4793-a89e-78a695ecf89d",
+                    "completed_at": null,
+                    "completed_count": 0,
+                    "concept_count": 7,
+                    "completion_amount": 0,
+                    "last_viewed_child_key": "4f972cf3-f265-4c78-a396-8c1edccbb642"
+                  },
+                  {
+                    "node_key": "7a95cd0f-752d-422e-b5a4-af8ddeaca0aa",
+                    "completed_at": null,
+                    "completed_count": 0,
+                    "concept_count": 8,
+                    "completion_amount": 0,
+                    "last_viewed_child_key": "4a452d7b-a495-4a4a-b32e-942910182830"
+                  },
+                  {
+                    "node_key": "75276e41-b4b7-462c-881b-bf465f28485b",
+                    "completed_at": null,
+                    "completed_count": 0,
+                    "concept_count": 7,
+                    "completion_amount": 0,
+                    "last_viewed_child_key": "a6879718-6809-409e-bcbc-a193e5d0bf6e"
+                  },
+                  {
+                    "node_key": "67c4cbad-0f84-4c13-aaee-a3fbd9ac6ca6",
+                    "completed_at": null,
+                    "completed_count": 0,
+                    "concept_count": 8,
+                    "completion_amount": 0,
+                    "last_viewed_child_key": "62634e68-5858-40be-a594-85dc472a4d1f"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node_key": "d05de335-9856-4986-86b2-ce46fd380e58",
+            "completed_at": null,
+            "completion_amount": 0.013157894736842105,
+            "completed_count": 1,
+            "concept_count": 76,
+            "last_viewed_child_key": "87ad3e83-48eb-44e8-bff2-9c3eabcb93dc",
+            "module_aggregated_states": [
+              {
+                "node_key": "87ad3e83-48eb-44e8-bff2-9c3eabcb93dc",
+                "completed_at": null,
+                "completion_amount": 0.013157894736842105,
+                "completed_count": 1,
+                "concept_count": 76,
+                "last_viewed_child_key": "432a93a3-1fba-4e51-bff2-14a3a4541499",
+                "lesson_aggregated_states": [
+                  {
+                    "node_key": "432a93a3-1fba-4e51-bff2-14a3a4541499",
+                    "completed_at": null,
+                    "completed_count": 1,
+                    "concept_count": 6,
+                    "completion_amount": 0.16666666666666666,
+                    "last_viewed_child_key": "48204298-20fe-4f8f-a9d7-1a6cb1a6a956"
+                  },
+                  {
+                    "node_key": "cda15ac3-493d-4200-849e-7598e06467a3",
+                    "completed_at": null,
+                    "completed_count": 0,
+                    "concept_count": 12,
+                    "completion_amount": 0,
+                    "last_viewed_child_key": "b17ced9e-8511-4e47-9e12-0b3b089e1b31"
+                  },
+                  {
+                    "node_key": "03cc6759-68e0-4a8b-9b30-119653103fab",
+                    "completed_at": null,
+                    "completed_count": 0,
+                    "concept_count": 26,
+                    "completion_amount": 0,
+                    "last_viewed_child_key": "7e256789-500d-4d44-b4c4-19963317cb8a"
+                  },
+                  {
+                    "node_key": "7f4b0779-a5eb-4d57-b148-b145216f3935",
+                    "completed_at": null,
+                    "completed_count": 0,
+                    "concept_count": 15,
+                    "completion_amount": 0,
+                    "last_viewed_child_key": "3a89910d-3ef5-4347-9939-8f461a3073c7"
+                  },
+                  {
+                    "node_key": "d381a3d8-b601-4c96-aac3-1ebd251aa567",
+                    "completed_at": null,
+                    "completed_count": 0,
+                    "concept_count": 14,
+                    "completion_amount": 0,
+                    "last_viewed_child_key": "251650e0-3ec7-4f53-bf60-f43397cd4e00"
+                  },
+                  {
+                    "node_key": "8bf3a7f1-e63f-4676-b93e-2f4f1560a2dd",
+                    "completed_at": null,
+                    "completed_count": 0,
+                    "concept_count": 3,
+                    "completion_amount": 0,
+                    "last_viewed_child_key": "0d9db495-2e75-478f-be84-f19e6e4df8c0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node_key": "0a8f51c9-17e3-4ae4-baef-2fc320e05b91",
+            "completed_at": null,
+            "completion_amount": 0,
+            "completed_count": 0,
+            "concept_count": 72,
+            "last_viewed_child_key": "54f82cdb-93e8-48c1-ae5c-4d9065097d6d",
+            "module_aggregated_states": [
+              {
+                "node_key": "54f82cdb-93e8-48c1-ae5c-4d9065097d6d",
+                "completed_at": null,
+                "completion_amount": 0,
+                "completed_count": 0,
+                "concept_count": 72,
+                "last_viewed_child_key": "f188a03b-c274-42e8-b585-2aec4e62e667",
+                "lesson_aggregated_states": [
+                  {
+                    "node_key": "f188a03b-c274-42e8-b585-2aec4e62e667",
+                    "completed_at": null,
+                    "completed_count": 0,
+                    "concept_count": 11,
+                    "completion_amount": 0,
+                    "last_viewed_child_key": "eeee407a-a402-475a-86f1-3cebc7425351"
+                  },
+                  {
+                    "node_key": "f3e0b0c5-2d46-4728-a166-0781652f07ee",
+                    "completed_at": null,
+                    "completed_count": 0,
+                    "concept_count": 18,
+                    "completion_amount": 0,
+                    "last_viewed_child_key": "f5125bc9-c998-4315-923f-2c8278615a3c"
+                  },
+                  {
+                    "node_key": "ef1c28b0-bcf6-40f8-8aa1-0b830c2a78d8",
+                    "completed_at": null,
+                    "completed_count": 0,
+                    "concept_count": 23,
+                    "completion_amount": 0,
+                    "last_viewed_child_key": "a5e8df04-d932-47a1-b8aa-52e3b773239c"
+                  },
+                  {
+                    "node_key": "7583b40b-579b-4932-910d-0ed0cea4a8ac",
+                    "completed_at": null,
+                    "completed_count": 0,
+                    "concept_count": 17,
+                    "completion_amount": 0,
+                    "last_viewed_child_key": "d071964a-e046-4d6f-a736-e78b4b93e219"
+                  },
+                  {
+                    "node_key": "dea404b8-837a-4ba2-8b6a-31fa458e7207",
+                    "completed_at": null,
+                    "completed_count": 0,
+                    "concept_count": 3,
+                    "completion_amount": 0,
+                    "last_viewed_child_key": "d8d7472e-6f09-4781-8f7d-5800eef020c2"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "resources": null,
+      "specializations": [],
+      "parts": [
+        {
+          "id": 1042966,
+          "key": "396768aa-80ce-4b5f-ad14-4b5940e79a99",
+          "title": "Welcome to the Intermediate JavaScript Nanodegree Program ",
+          "semantic_type": "Part",
+          "is_public": true,
+          "version": "1.0.0",
+          "locale": "en-us",
+          "summary": "",
+          "part_type": "Core",
+          "locked_reason": "not_locked",
+          "locked_until": null,
+          "content_ready_date_ms": 1594278000000,
+          "resources": null,
+          "image": null,
+          "specialization": null,
+          "modules": [
+            {
+              "id": 1071359,
+              "key": "f3817f45-fd33-43aa-9df6-cbcb3f6314cc",
+              "title": "Welcome to the Intermediate JavaScript Nanodegree Program ",
+              "semantic_type": "Module",
+              "is_public": true,
+              "version": "1.0.0",
+              "locale": "en-us",
+              "is_project_module": null,
+              "forum_path": "",
+              "lessons": [
+                {
+                  "id": 1043659,
+                  "key": "75411e62-26db-4b9b-9428-2815ac570825",
+                  "version": "1.0.0",
+                  "locale": "en-us",
+                  "semantic_type": "Lesson",
+                  "summary": null,
+                  "title": "Welcome to Udacity",
+                  "duration": 30,
+                  "is_public": true,
+                  "is_project_lesson": false,
+                  "display_workspace_project_only": false,
+                  "lesson_type": "Classroom",
+                  "image": {
+                    "url": "https://video.udacity-data.com/topher/2019/March/5c7f3eca_01-welcome/01-welcome.png",
+                    "width": 500,
+                    "height": 500
+                  },
+                  "video": null,
+                  "lab": null,
+                  "project": null,
+                  "concepts": [
+                    {
+                      "id": 1017735,
+                      "key": "82d21b83-a3a9-42ce-9f06-d5ac8b35d642",
+                      "title": "Welcome to Udacity",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1017737,
+                      "key": "429d8f29-a42a-4dc4-a482-bfd57c95c2b1",
+                      "title": "The Udacity Experience",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1043661,
+                      "key": "019a0304-2f76-45da-a657-93930b7bdaf5",
+                      "title": "How to Succeed",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    }
+                  ]
+                },
+                {
+                  "id": 718657,
+                  "key": "d03deb6d-3aee-4331-b4ed-67b8cd2ec8bb",
+                  "version": "1.0.0",
+                  "locale": "en-us",
+                  "semantic_type": "Lesson",
+                  "summary": "You are starting a challenging but rewarding journey! Take 5 minutes to read how to get help with projects and content.",
+                  "title": "Mentor Help, Peer Chat, and Careers",
+                  "duration": 30,
+                  "is_public": true,
+                  "is_project_lesson": false,
+                  "display_workspace_project_only": false,
+                  "lesson_type": "Classroom",
+                  "image": {
+                    "url": "https://s3.amazonaws.com/video.udacity-data.com/topher/2018/July/5b39acdb_1-3-learning-online-getting-help2x/1-3-learning-online-getting-help2x.jpg",
+                    "width": 592,
+                    "height": 640
+                  },
+                  "video": null,
+                  "lab": null,
+                  "project": null,
+                  "concepts": [
+                    {
+                      "id": 718664,
+                      "key": "7b46b9c9-0d5b-4975-bab8-c6d265f06d9c",
+                      "title": "What It Takes",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1021285,
+                      "key": "ce0fb21a-73a5-4f9b-8ffa-0335059917a7",
+                      "title": "Getting Help",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 782140,
+                      "key": "6324e0bb-4deb-41b3-b605-99e07af894cc",
+                      "title": "Mentor Help",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1163855,
+                      "key": "5f942e16-64ef-4b24-9de4-f4a8d2369c2c",
+                      "title": "Submitting Classroom Feedback",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1163845,
+                      "key": "445f9136-5662-43b8-bb60-a9e810310a09",
+                      "title": "Help Center",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 908233,
+                      "key": "6f52a708-af17-4b67-bff0-b487b048bc93",
+                      "title": "Udacity Support Community",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 831981,
+                      "key": "99232e4b-299c-40f5-a985-3162da96288e",
+                      "title": "Career Services",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1028834,
+                      "key": "d895e8dd-e35a-419b-b1ea-a2953e03d951",
+                      "title": "Plagiarism",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1163864,
+                      "key": "52823ce0-8170-425d-b817-f8395f8ea77f",
+                      "title": "Quiz: Plagiarism at Udacity",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1042963,
+          "key": "d4ff6b6c-2074-41d9-ab2a-440bf6e8c623",
+          "title": "Object-Oriented JavaScript",
+          "semantic_type": "Part",
+          "is_public": true,
+          "version": "1.0.0",
+          "locale": "en-us",
+          "summary": "",
+          "part_type": "Core",
+          "locked_reason": "not_locked",
+          "locked_until": null,
+          "content_ready_date_ms": 1594278000000,
+          "resources": null,
+          "image": null,
+          "specialization": null,
+          "modules": [
+            {
+              "id": 1071349,
+              "key": "a82d8fc9-9509-4717-b419-cd117cd6ce4a",
+              "title": "Object Oriented JavaScript",
+              "semantic_type": "Module",
+              "is_public": true,
+              "version": "1.0.0",
+              "locale": "en-us",
+              "is_project_module": null,
+              "forum_path": "",
+              "lessons": [
+                {
+                  "id": 467065,
+                  "key": "504843ae-ba16-4573-a859-94da7a7d1dd4",
+                  "version": "1.0.0",
+                  "locale": "en-us",
+                  "semantic_type": "Lesson",
+                  "summary": "Objects in JavaScript encapsulate both data and functionality. You'll create, access, and modify objects to build a solid foundation for object-oriented programming.",
+                  "title": "Objects in Depth",
+                  "duration": 120,
+                  "is_public": true,
+                  "is_project_lesson": false,
+                  "display_workspace_project_only": null,
+                  "lesson_type": "Classroom",
+                  "image": {
+                    "url": "https://s3.amazonaws.com/video.udacity-data.com/topher/2018/January/5a627994_5-objects-in-depth2x/5-objects-in-depth2x.jpg",
+                    "width": 500,
+                    "height": 500
+                  },
+                  "video": null,
+                  "lab": null,
+                  "project": null,
+                  "concepts": [
+                    {
+                      "id": 467612,
+                      "key": "409c8e65-59c6-4d67-8ea8-6934fad5ab0b",
+                      "title": "Introduction",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 468492,
+                      "key": "2bbcfed5-e683-431b-ace2-b67c091400d2",
+                      "title": "Create and Modify Properties",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 468602,
+                      "key": "bd94ce28-164e-4ee5-b2bb-819798f22218",
+                      "title": "Invoking Object Methods",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 468646,
+                      "key": "27af7aad-6d3b-483e-960d-22d3fc090dc1",
+                      "title": "Beware of Globals",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 468688,
+                      "key": "da23525a-34a4-4d5f-836a-c83505f4bb96",
+                      "title": "Extracting Properties and Values",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 468887,
+                      "key": "08205c02-bfe8-4443-8fe1-5dedbe86b5e4",
+                      "title": "Lesson Summary",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    }
+                  ]
+                },
+                {
+                  "id": 468902,
+                  "key": "fd2e70b8-84b4-4793-a89e-78a695ecf89d",
+                  "version": "1.0.0",
+                  "locale": "en-us",
+                  "semantic_type": "Lesson",
+                  "summary": "Functions are one of most important data structures. Learn what a \"first-class function\" is, learn about scope, dig into closures, and use immediately-invoked function expressions for private state.",
+                  "title": "Functions at Runtime",
+                  "duration": 120,
+                  "is_public": true,
+                  "is_project_lesson": false,
+                  "display_workspace_project_only": null,
+                  "lesson_type": "Classroom",
+                  "image": {
+                    "url": "https://s3.amazonaws.com/video.udacity-data.com/topher/2018/January/5a6279ba_6-functions-at-runtime2x/6-functions-at-runtime2x.jpg",
+                    "width": 500,
+                    "height": 500
+                  },
+                  "video": null,
+                  "lab": null,
+                  "project": null,
+                  "concepts": [
+                    {
+                      "id": 468903,
+                      "key": "4f972cf3-f265-4c78-a396-8c1edccbb642",
+                      "title": "Introduction",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 468911,
+                      "key": "f92efa0e-7143-4222-bf70-b44e5278fed6",
+                      "title": "First-Class Functions",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 468948,
+                      "key": "435a5d87-0a67-4787-9096-5426e36f9a90",
+                      "title": "Callbacks",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 469109,
+                      "key": "9354109e-3251-4a46-8aad-173f982429d9",
+                      "title": "Scope",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 469130,
+                      "key": "4a704701-a6ec-4882-8075-13524d1cd68a",
+                      "title": "Closures",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 469217,
+                      "key": "aca49107-327f-4a9e-afba-f897c08e894c",
+                      "title": "Immediately-Invoked Function Expressions (IIFE)",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 469234,
+                      "key": "00f37f28-4e41-4d6c-9c50-74d4338b6f2f",
+                      "title": "Lesson Summary",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    }
+                  ]
+                },
+                {
+                  "id": 469237,
+                  "key": "7a95cd0f-752d-422e-b5a4-af8ddeaca0aa",
+                  "version": "1.0.0",
+                  "locale": "en-us",
+                  "semantic_type": "Lesson",
+                  "summary": "Creating objects individually isn't sustainable. Learn how to create similar objects with ease using Classes. You'll also learn how object inheritance works through Prototypal Inheritance.",
+                  "title": "Classes and Objects",
+                  "duration": 180,
+                  "is_public": true,
+                  "is_project_lesson": false,
+                  "display_workspace_project_only": null,
+                  "lesson_type": "Classroom",
+                  "image": {
+                    "url": "https://s3.amazonaws.com/video.udacity-data.com/topher/2018/January/5a6279d7_7-classes-and-objects2x/7-classes-and-objects2x.jpg",
+                    "width": 500,
+                    "height": 500
+                  },
+                  "video": null,
+                  "lab": null,
+                  "project": null,
+                  "concepts": [
+                    {
+                      "id": 469238,
+                      "key": "4a452d7b-a495-4a4a-b32e-942910182830",
+                      "title": "Introduction",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 469246,
+                      "key": "b1b4a75b-a778-406e-8ab8-45191dc3f8f9",
+                      "title": "Constructor Functions",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 469268,
+                      "key": "b10c05b1-bf7b-48bc-83ba-8269540622ed",
+                      "title": "The `this` Keyword",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 469281,
+                      "key": "f55148aa-4cb0-423a-8589-e85d99535919",
+                      "title": "Setting Our Own `this`",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 469304,
+                      "key": "ab0184cb-2341-4ece-91f9-8c1a971769d0",
+                      "title": "Prototypal Inheritance",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 469324,
+                      "key": "ec211dfb-a817-4ff0-ae85-9fec23e3253f",
+                      "title": "Prototypal Inheritance: Subclasses",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 469342,
+                      "key": "7b03542a-fb93-40ca-b903-03e44d95381e",
+                      "title": "Lesson Summary",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 469344,
+                      "key": "05f7161c-420a-47e8-be6f-ba227eac0dd5",
+                      "title": "Course Outro",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    }
+                  ]
+                },
+                {
+                  "id": 669129,
+                  "key": "75276e41-b4b7-462c-881b-bf465f28485b",
+                  "version": "1.0.0",
+                  "locale": "en-us",
+                  "semantic_type": "Lesson",
+                  "summary": "Discover object-oriented design patterns that can be used to create an object -- all without involving its prototype. What's more: you'll also learn how to implement private properties in objects.",
+                  "title": "Object-Oriented Design Patterns",
+                  "duration": 120,
+                  "is_public": true,
+                  "is_project_lesson": false,
+                  "display_workspace_project_only": false,
+                  "lesson_type": "Classroom",
+                  "image": {
+                    "url": "https://s3.amazonaws.com/video.udacity-data.com/topher/2018/September/5ba1779b_4-5-object-decorator-pattern2x/4-5-object-decorator-pattern2x.jpg",
+                    "width": 592,
+                    "height": 640
+                  },
+                  "video": null,
+                  "lab": null,
+                  "project": null,
+                  "concepts": [
+                    {
+                      "id": 669047,
+                      "key": "a6879718-6809-409e-bcbc-a193e5d0bf6e",
+                      "title": "Introduction",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 669064,
+                      "key": "94af4197-eb48-449a-be9f-f76cb4782ef4",
+                      "title": "Mixins / Extending Object Functionality with Mixins",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 669079,
+                      "key": "d4411e32-2bcf-4485-98a0-aa2f05b2bb10",
+                      "title": "Functional Mixins",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 669097,
+                      "key": "50d77c45-73f6-41a9-b6bf-88ccde54db81",
+                      "title": "The Module Pattern",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 669108,
+                      "key": "3183f60e-d9f6-4453-a704-ac16cfffd775",
+                      "title": "The Revealing Module Pattern",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 669126,
+                      "key": "b27e4f34-b320-4448-8b23-a600aa23c207",
+                      "title": "Lesson Summary",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 669128,
+                      "key": "73d21573-d63d-49fd-8d3f-125685e897dc",
+                      "title": "Course Outro",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    }
+                  ]
+                },
+                {
+                  "id": 966783,
+                  "key": "67c4cbad-0f84-4c13-aaee-a3fbd9ac6ca6",
+                  "version": "1.0.0",
+                  "locale": "en-us",
+                  "semantic_type": "Lesson",
+                  "summary": null,
+                  "title": "Project: Dinosaurs",
+                  "duration": 240,
+                  "is_public": true,
+                  "is_project_lesson": true,
+                  "display_workspace_project_only": false,
+                  "lesson_type": "Classroom",
+                  "image": {
+                    "url": "https://video.udacity-data.com/topher/2020/July/5f02a20c_noun-dinosaur-2189938/noun-dinosaur-2189938.png",
+                    "width": 512,
+                    "height": 512
+                  },
+                  "video": null,
+                  "lab": null,
+                  "project": {
+                    "key": "d1ab09ec-7059-4d97-96d7-c964dbf4b34f",
+                    "version": "1.0.0",
+                    "locale": "en-us",
+                    "duration": 30240,
+                    "semantic_type": "Project",
+                    "title": "Dinosaurs",
+                    "description": "Please submit your solution using the Github link or as a ZIP file.\n\nYour project should meet all the rubric requirements to pass the project. The link is provided here: [Project Rubric](https://review.udacity.com/#!/rubrics/2786/view).\n\nYou can download the starter code for the [project on Github](https://github.com/udacity/Javascript).",
+                    "is_public": true,
+                    "summary": null,
+                    "forum_path": "",
+                    "rubric_id": "2786",
+                    "terminal_project_id": null,
+                    "resources": null,
+                    "image": null
+                  },
+                  "concepts": [
+                    {
+                      "id": 966785,
+                      "key": "62634e68-5858-40be-a594-85dc472a4d1f",
+                      "title": "Project Summary",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 966787,
+                      "key": "88538c81-8657-4f73-8625-9ff339135adc",
+                      "title": "Project Rubric",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 966789,
+                      "key": "ca57b7f4-795a-44cc-90ff-7655d8bf364c",
+                      "title": "Get the Starter Code",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 966791,
+                      "key": "601d730e-0f3b-4c5e-b689-5144d6c98b6a",
+                      "title": "Object-Oriented Javascript",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 966793,
+                      "key": "bf675071-ea0c-41df-b916-24f00b09d166",
+                      "title": "Development Strategy",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 966795,
+                      "key": "f69e4536-7891-4a1a-8e07-e6cafa7aa5eb",
+                      "title": "Version Control",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 966797,
+                      "key": "210e94a5-ca01-4d13-bb5d-0b51292817ff",
+                      "title": "Udacity Style Guides",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 966799,
+                      "key": "eb7e1dd5-2787-434d-9ce9-2b6da8524f29",
+                      "title": "Still Not Sure How to Begin?",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1042964,
+          "key": "d05de335-9856-4986-86b2-ce46fd380e58",
+          "title": "Functional Programming",
+          "semantic_type": "Part",
+          "is_public": true,
+          "version": "1.0.0",
+          "locale": "en-us",
+          "summary": "",
+          "part_type": "Core",
+          "locked_reason": "not_locked",
+          "locked_until": null,
+          "content_ready_date_ms": 1594278000000,
+          "resources": null,
+          "image": null,
+          "specialization": null,
+          "modules": [
+            {
+              "id": 1071327,
+              "key": "87ad3e83-48eb-44e8-bff2-9c3eabcb93dc",
+              "title": "Functional Programming",
+              "semantic_type": "Module",
+              "is_public": true,
+              "version": "1.0.0",
+              "locale": "en-us",
+              "is_project_module": null,
+              "forum_path": "",
+              "lessons": [
+                {
+                  "id": 960296,
+                  "key": "432a93a3-1fba-4e51-bff2-14a3a4541499",
+                  "version": "1.0.0",
+                  "locale": "en-us",
+                  "semantic_type": "Lesson",
+                  "summary": "Introduction to the course on Functional Programming with JavaScript",
+                  "title": "Course Introduction - Functional Programming",
+                  "duration": 30,
+                  "is_public": true,
+                  "is_project_lesson": false,
+                  "display_workspace_project_only": false,
+                  "lesson_type": "Classroom",
+                  "image": {
+                    "url": "https://video.udacity-data.com/topher/2020/July/5f016596_noun-process-807994/noun-process-807994.png",
+                    "width": 512,
+                    "height": 512
+                  },
+                  "video": null,
+                  "lab": null,
+                  "project": null,
+                  "concepts": [
+                    {
+                      "id": 960292,
+                      "key": "48204298-20fe-4f8f-a9d7-1a6cb1a6a956",
+                      "title": "Introduction",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 960293,
+                      "key": "742ad913-d13b-46f4-8c74-4496893812a6",
+                      "title": "FP Basics",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 960295,
+                      "key": "9d85a670-9b6e-437c-b4de-53883197c4ea",
+                      "title": "FP History",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 960294,
+                      "key": "04c75b28-8866-4d4a-beef-52508be68087",
+                      "title": "Course Overview & Tools",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 960291,
+                      "key": "f84bd5ec-0262-4a0e-bf54-737ea37b865e",
+                      "title": "Baseline Questions",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 960290,
+                      "key": "6e5593ee-1f4e-4ebd-922d-057d4fb2e55a",
+                      "title": "Intro Recap",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    }
+                  ]
+                },
+                {
+                  "id": 960434,
+                  "key": "cda15ac3-493d-4200-849e-7598e06467a3",
+                  "version": "1.0.0",
+                  "locale": "en-us",
+                  "semantic_type": "Lesson",
+                  "summary": "Foundational Introduction to Functional Programming in JavaScript",
+                  "title": "Introduction to Functional Programming",
+                  "duration": 120,
+                  "is_public": true,
+                  "is_project_lesson": false,
+                  "display_workspace_project_only": false,
+                  "lesson_type": "Classroom",
+                  "image": {
+                    "url": "https://video.udacity-data.com/topher/2020/July/5f0165a8_noun-coding-2933404/noun-coding-2933404.png",
+                    "width": 512,
+                    "height": 512
+                  },
+                  "video": null,
+                  "lab": null,
+                  "project": null,
+                  "concepts": [
+                    {
+                      "id": 960428,
+                      "key": "b17ced9e-8511-4e47-9e12-0b3b089e1b31",
+                      "title": "Programming Paradigms",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 960432,
+                      "key": "cc7de669-1a87-4843-8eea-1846afa5edeb",
+                      "title": "Why Learn Paradigms?",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 960430,
+                      "key": "473bf431-ed6e-47c0-a6ea-d5e3b891f0d5",
+                      "title": "Comparing Paradigms",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 966191,
+                      "key": "496ef25e-3165-4ba3-b506-f9e8d2270ad7",
+                      "title": "Exercise: Compare Paradigms",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 966195,
+                      "key": "9cfc300c-a811-46f9-a704-f0b3ecbd47c3",
+                      "title": "Paradigms Review",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 960433,
+                      "key": "4a69653c-08cd-4d60-8f35-3e5cb0b23239",
+                      "title": "Foundations of FP",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 966192,
+                      "key": "ca454f70-7ed5-4985-9155-5b6538c4d268",
+                      "title": "Exercise: Foundation Concepts",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 966194,
+                      "key": "5b6befcd-5a40-4444-9eaf-870ac622f67b",
+                      "title": "FP & Pure Functions Review",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 960431,
+                      "key": "09a4e274-51a0-424a-9433-bf659a851e41",
+                      "title": "Why FP?",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 966190,
+                      "key": "46b14757-dad1-4e05-8a25-e6766f4dacaf",
+                      "title": "Exercise: Basic FP",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 966193,
+                      "key": "f97698d2-5142-4b4e-b45a-0435581206a3",
+                      "title": "Basic FP Review",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 960429,
+                      "key": "95ad25a2-43b3-4288-963b-a89bfca5eb57",
+                      "title": "Lesson Recap",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    }
+                  ]
+                },
+                {
+                  "id": 960486,
+                  "key": "03cc6759-68e0-4a8b-9b30-119653103fab",
+                  "version": "1.0.0",
+                  "locale": "en-us",
+                  "semantic_type": "Lesson",
+                  "summary": "Experience writing functional programming with JavaScript & ES6 syntax",
+                  "title": "Functional JS Syntax",
+                  "duration": 180,
+                  "is_public": true,
+                  "is_project_lesson": false,
+                  "display_workspace_project_only": false,
+                  "lesson_type": "Classroom",
+                  "image": {
+                    "url": "https://video.udacity-data.com/topher/2021/January/5fff3475_noun-programming-3395503/noun-programming-3395503.png",
+                    "width": 500,
+                    "height": 500
+                  },
+                  "video": null,
+                  "lab": null,
+                  "project": null,
+                  "concepts": [
+                    {
+                      "id": 960475,
+                      "key": "7e256789-500d-4d44-b4c4-19963317cb8a",
+                      "title": "Functional JS Syntax Intro",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 960484,
+                      "key": "5af884b4-d55c-46d2-9548-2c414572ad4b",
+                      "title": "Array Methods",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 960477,
+                      "key": "a5df32a2-1138-471c-86a0-1053d1c99bd5",
+                      "title": "The Map Method",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 966870,
+                      "key": "d3198107-bcce-46a4-94e3-33a2487e530d",
+                      "title": "Exercise: Map Method",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 966238,
+                      "key": "a7cec6a3-ebec-4d11-9901-5709637d450a",
+                      "title": "Advanced Map Method",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 966865,
+                      "key": "5afea8d6-4509-493c-9719-630b79c0e39f",
+                      "title": "Exercise: Advanced Map Method",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 966239,
+                      "key": "6377a7f6-3a08-4659-8e1a-fc3d243a0901",
+                      "title": "Map Method Review",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 960476,
+                      "key": "9c77f0e0-50c1-4c3f-818e-390bc8fe77b1",
+                      "title": "The Filter Method",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 966866,
+                      "key": "181176ab-e1a4-49d1-8826-facf4487b9fc",
+                      "title": "Exercise: Filter Method",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 966240,
+                      "key": "1e4a5a97-471f-45f6-92c4-a64ece8249a6",
+                      "title": "Filter Method Review",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 960483,
+                      "key": "db8b4199-0dd5-4266-91c3-d50ab098d509",
+                      "title": "The Reduce Method",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 966867,
+                      "key": "9727fe7f-3c01-4a4d-9a6f-2e1df818c5f9",
+                      "title": "Exercise: Reduce Method",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 966241,
+                      "key": "c917ea60-16ed-448f-846a-dc4438602ab8",
+                      "title": "Reduce Review",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 960479,
+                      "key": "f5388f4f-1768-42d9-94b9-36b75f0d1ef5",
+                      "title": "Array Methods for Selection",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 966879,
+                      "key": "c766d958-78b1-4f16-bd73-e5b401d7928a",
+                      "title": "Exercise: Array Methods (Flat, Find, Include)",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 960481,
+                      "key": "43a140f7-900a-4583-a3ae-681f28fbdbb1",
+                      "title": "Array Method Problem Set",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 960480,
+                      "key": "248ccd1e-4026-4c1d-9892-d6a0a275bbee",
+                      "title": "Variables",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 960485,
+                      "key": "5e68c9e6-668e-4fc5-a123-dba6c9445bab",
+                      "title": "ES6 Object Methods & Freeze",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 966876,
+                      "key": "42ce2183-db16-4257-b9c8-48783bbdb1b5",
+                      "title": "Exercise: Object Method - Freeze",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 966235,
+                      "key": "e7ad79b0-1830-4129-a519-162c4c5d88e1",
+                      "title": "Object Method - Keys",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 966871,
+                      "key": "cbbc4b3d-6e70-430f-bd4a-31280cdd6761",
+                      "title": "Exercise: Object Method - Keys",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 966236,
+                      "key": "2411d15e-4ffc-484c-be65-7ac7276eb0a7",
+                      "title": "Object Method - Assign",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 966874,
+                      "key": "0b5e10b1-01a6-4b6a-b115-63d5cfb264b3",
+                      "title": "Exercise: Object Method - Assign",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 960482,
+                      "key": "26ace831-2e88-4b9e-9ef3-adabfc8f0614",
+                      "title": "Object Methods Problem Set",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 966237,
+                      "key": "8c03ffc4-679b-49c9-beff-e418c091cc1e",
+                      "title": "Exercise: Putting it All Together",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 960478,
+                      "key": "e4ff5658-aea4-42b4-9579-9d22f864eab6",
+                      "title": "Lesson Recap",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    }
+                  ]
+                },
+                {
+                  "id": 965848,
+                  "key": "7f4b0779-a5eb-4d57-b148-b145216f3935",
+                  "version": "1.0.0",
+                  "locale": "en-us",
+                  "semantic_type": "Lesson",
+                  "summary": "Practice applying what you've learned so far into creating functional programs and bring clarity to how React works behind the scenes. ",
+                  "title": "Functional Programming in JS",
+                  "duration": 180,
+                  "is_public": true,
+                  "is_project_lesson": false,
+                  "display_workspace_project_only": false,
+                  "lesson_type": "Classroom",
+                  "image": {
+                    "url": "https://video.udacity-data.com/topher/2021/January/5fff3347_noun-coding-2933421/noun-coding-2933421.png",
+                    "width": 500,
+                    "height": 500
+                  },
+                  "video": null,
+                  "lab": null,
+                  "project": null,
+                  "concepts": [
+                    {
+                      "id": 965838,
+                      "key": "3a89910d-3ef5-4347-9939-8f461a3073c7",
+                      "title": "Intro to FP in JS",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 965841,
+                      "key": "36320d15-0f15-4cef-90ca-3becce195c2b",
+                      "title": "Higher-Order Function Intro",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 967376,
+                      "key": "355289e8-79cf-4d0b-a755-98479c613e8f",
+                      "title": "Exercise: Higher-Order Functions 1",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 965840,
+                      "key": "da9dd6d7-6573-496d-859c-63ca0aa2cd4e",
+                      "title": "Higher-Order Functions",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 967368,
+                      "key": "642fcd82-bf52-408a-9379-f10ad6ed0126",
+                      "title": "Exercise: Higher-Order Functions 2",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 967380,
+                      "key": "c33a472c-8e49-49d6-b884-de28cd952175",
+                      "title": "Higher-Order Functions Review",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 965845,
+                      "key": "9793c3c8-56f3-4467-882b-ba35e149a5c5",
+                      "title": "Functional Data Manipulations",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 967378,
+                      "key": "9c2f40ae-6395-49cd-b136-fa1dbec9f3af",
+                      "title": "Exercise: Data Manipulations",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 965844,
+                      "key": "7572aab8-6bc1-42bb-8e46-27d3decfa13f",
+                      "title": "Data Manipulations Problem Set",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 965846,
+                      "key": "ef2ae4ef-fe0e-470d-bcc5-917438158efb",
+                      "title": "Functional DOM Manipulations",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 967379,
+                      "key": "671ae8b0-73ad-44fa-97aa-f84fc628c7c0",
+                      "title": "Exercise: Render Method",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 965842,
+                      "key": "619e7f6e-8abf-4fcd-9c1e-2855d5e379f1",
+                      "title": "Holding Application State",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 967377,
+                      "key": "b0ae757d-d70c-47fb-8912-2bca5d6e5c65",
+                      "title": "Exercise: Application State",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 965843,
+                      "key": "d9aca980-3a35-4a96-abb8-c6f06a702f61",
+                      "title": "Functional DOM Manipulation Problem Set",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 965847,
+                      "key": "a20b4843-674c-40eb-9d5e-854db98929e5",
+                      "title": "Lesson Recap",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    }
+                  ]
+                },
+                {
+                  "id": 965896,
+                  "key": "d381a3d8-b601-4c96-aac3-1ebd251aa567",
+                  "version": "1.0.0",
+                  "locale": "en-us",
+                  "semantic_type": "Lesson",
+                  "summary": "Going further with Functional Programming and common tools to solve traditional problems in web development. ",
+                  "title": "Going Further with Functional JS",
+                  "duration": 120,
+                  "is_public": true,
+                  "is_project_lesson": false,
+                  "display_workspace_project_only": false,
+                  "lesson_type": "Classroom",
+                  "image": {
+                    "url": "https://video.udacity-data.com/topher/2021/January/5fff329a_noun-language-1454992/noun-language-1454992.png",
+                    "width": 500,
+                    "height": 500
+                  },
+                  "video": null,
+                  "lab": null,
+                  "project": null,
+                  "concepts": [
+                    {
+                      "id": 965891,
+                      "key": "251650e0-3ec7-4f53-bf60-f43397cd4e00",
+                      "title": "Going Further with Functional JS Intro",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 965892,
+                      "key": "48128b9a-cb47-40cb-8cc9-a161621f1d1d",
+                      "title": "Persistent Data Structures",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 965890,
+                      "key": "afbc56d6-8861-4502-84c3-fc42d07ba72a",
+                      "title": "ImmutableJS",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 970068,
+                      "key": "5e236283-6b50-4130-b0dc-269ab7d5fe17",
+                      "title": "Exercise: ImmutableJS",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 970078,
+                      "key": "c8837475-7710-4c7d-825f-2f6894ef5134",
+                      "title": "ImmutableJS Review",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 965893,
+                      "key": "084b9f00-a21c-415e-8124-e319c049ad3a",
+                      "title": "Implementing ImmutableJS",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 970070,
+                      "key": "4627246d-4c46-4c82-8763-a2f7abddef3d",
+                      "title": "Exercise: Implementing ImmutableJS",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 970079,
+                      "key": "2876a352-2444-4b56-930b-5de3a4563c08",
+                      "title": "Implementing ImmutableJS Review",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 965895,
+                      "key": "0598c3bd-2afe-4191-98aa-c814cf5e60f2",
+                      "title": "RxJS and Ramda",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 965888,
+                      "key": "dc02eed5-6db0-40f1-a7c8-ad92605108d0",
+                      "title": "Functional Redux",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 970074,
+                      "key": "b0fbdcea-41b9-4123-be90-e6817c61fbf1",
+                      "title": "Exercise: Build Your Own Reducer",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 970077,
+                      "key": "78791595-f1d5-41a2-946a-27c4c9d14877",
+                      "title": "Functional Redux Review",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 965894,
+                      "key": "4d8b3c3b-3ea3-4611-a146-bf1a2aaa66a3",
+                      "title": "Lesson Recap",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 965889,
+                      "key": "a6c0dd91-feb1-4e22-9a55-24735933f696",
+                      "title": "Course Recap",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    }
+                  ]
+                },
+                {
+                  "id": 953164,
+                  "key": "8bf3a7f1-e63f-4676-b93e-2f4f1560a2dd",
+                  "version": "1.0.0",
+                  "locale": "en-us",
+                  "semantic_type": "Lesson",
+                  "summary": "In this project, you will create a dashboard that consumes the NASA API and applies all the functional programming learned throughout this course.",
+                  "title": "Mars Dashboard",
+                  "duration": 30,
+                  "is_public": true,
+                  "is_project_lesson": true,
+                  "display_workspace_project_only": false,
+                  "lesson_type": "Classroom",
+                  "image": {
+                    "url": "https://video.udacity-data.com/topher/2019/November/5ddc480b_noun-mars-1428250/noun-mars-1428250.png",
+                    "width": 1200,
+                    "height": 1200
+                  },
+                  "video": null,
+                  "lab": null,
+                  "project": {
+                    "key": "4f16bb05-967f-46a8-ac30-4a58269877c4",
+                    "version": "1.0.0",
+                    "locale": "en-us",
+                    "duration": 40320,
+                    "semantic_type": "Project",
+                    "title": "Mars Dashboard",
+                    "description": "## Project Summary\nCreate a dashboard that displays the most up to date information from the NASA API on the Mars rovers. \n\n## Submission Checklist\nBefore you submit, check if the following have been completed:  \n\n|    | |\n|-------------------------|--------------------------------------------------------------------------------------------------------------|\n| <input type=\"checkbox\"> | Everything in the [Rubric](https://review.udacity.com/#!/rubrics/2708/view) is complete. |\n| <input type=\"checkbox\"> | Rename the `starter` folder. |\n| <input type=\"checkbox\"> | The folder/repo you submit contains all the files listed <br>in the Frontend/Backend File structure found in the rubric.  |\n| | | |\n\n**Note**: The checklist above won't save your checkmarks so do this right before you plan to submit.\n\n## Ready to Submit?\nOnce you have all the items above completed, you can click the submit button. Follow the directions to submit your project in one of the following ways:\n* Submit a zip file \n* Submit a Github repo\n\n**Note**: If you used the Workspace/Online option, you can download the folder or use your Github as a submission.",
+                    "is_public": true,
+                    "summary": null,
+                    "forum_path": "",
+                    "rubric_id": "2708",
+                    "terminal_project_id": null,
+                    "resources": null,
+                    "image": null
+                  },
+                  "concepts": [
+                    {
+                      "id": 953166,
+                      "key": "0d9db495-2e75-478f-be84-f19e6e4df8c0",
+                      "title": "Project Overview",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 956979,
+                      "key": "557df94b-1ecf-488c-a347-6579386d27b2",
+                      "title": "Project Instructions",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 957034,
+                      "key": "acad216d-c9aa-4a52-bf41-80580e503da0",
+                      "title": "Workspace",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1042965,
+          "key": "0a8f51c9-17e3-4ae4-baef-2fc320e05b91",
+          "title": "Asynchronous Programming with JavaScript",
+          "semantic_type": "Part",
+          "is_public": true,
+          "version": "1.0.0",
+          "locale": "en-us",
+          "summary": "",
+          "part_type": "Core",
+          "locked_reason": "not_locked",
+          "locked_until": null,
+          "content_ready_date_ms": 1594278000000,
+          "resources": null,
+          "image": null,
+          "specialization": null,
+          "modules": [
+            {
+              "id": 1071317,
+              "key": "54f82cdb-93e8-48c1-ae5c-4d9065097d6d",
+              "title": "Asynchronous Programming with JavaScript",
+              "semantic_type": "Module",
+              "is_public": true,
+              "version": "1.0.0",
+              "locale": "en-us",
+              "is_project_module": null,
+              "forum_path": "",
+              "lessons": [
+                {
+                  "id": 1014051,
+                  "key": "f188a03b-c274-42e8-b585-2aec4e62e667",
+                  "version": "1.0.0",
+                  "locale": "en-us",
+                  "semantic_type": "Lesson",
+                  "summary": "Introduction to the course and concepts to be covered in this course.",
+                  "title": "Introduction to Asynchronous Programming",
+                  "duration": 80,
+                  "is_public": true,
+                  "is_project_lesson": false,
+                  "display_workspace_project_only": false,
+                  "lesson_type": "Classroom",
+                  "image": {
+                    "url": "https://video.udacity-data.com/topher/2020/June/5ef276e1_noun-program-3218092/noun-program-3218092.png",
+                    "width": 512,
+                    "height": 512
+                  },
+                  "video": null,
+                  "lab": null,
+                  "project": null,
+                  "concepts": [
+                    {
+                      "id": 1014052,
+                      "key": "eeee407a-a402-475a-86f1-3cebc7425351",
+                      "title": "Meet your Instructor",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1014054,
+                      "key": "fabd7df6-4a2f-4cb8-940d-93d3d3208eb0",
+                      "title": "Course Goals and Outline",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1014055,
+                      "key": "7f71cb82-809c-4f93-9330-1af109fac3a0",
+                      "title": "Prerequisites",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1016020,
+                      "key": "3b8c7375-b1f0-4967-8521-b5369d87265a",
+                      "title": "Introduction to Asynchronous Programming",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1014056,
+                      "key": "ee778443-794c-4a27-9e30-b01f8ec3337b",
+                      "title": "Exercise: Asynchronous Programming",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1029488,
+                      "key": "005e7663-c256-4610-9d43-e5ce3a549112",
+                      "title": "Solution: Asynchronous Programming",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1014057,
+                      "key": "acc933e7-4b9b-492d-8505-cf1863fb1640",
+                      "title": "Why Asynchronous Programming Is Important",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1021300,
+                      "key": "fbb61384-eac5-46ec-b940-c51c3a10876b",
+                      "title": "Tools, Environment & Dependencies",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1014059,
+                      "key": "73c748b5-964e-4079-a2b4-5993d595d08d",
+                      "title": "Project: UdaciRacer Simulator",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1014060,
+                      "key": "8a02c55b-0605-491e-bac9-c106b3aa2f6a",
+                      "title": "Recap",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1014061,
+                      "key": "8d50040b-baf9-4b2c-b793-833078046165",
+                      "title": "Good Luck!",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    }
+                  ]
+                },
+                {
+                  "id": 1015400,
+                  "key": "f3e0b0c5-2d46-4728-a166-0781652f07ee",
+                  "version": "1.0.0",
+                  "locale": "en-us",
+                  "semantic_type": "Lesson",
+                  "summary": "To create a foundation for asynchronous programming concepts, we start with a discussion of synchronous code and the concepts of blocking vs non-blocking, then learn to use asynchronous callbacks. ",
+                  "title": "Synchronous Concepts and Asynchronous Callbacks",
+                  "duration": 90,
+                  "is_public": true,
+                  "is_project_lesson": false,
+                  "display_workspace_project_only": false,
+                  "lesson_type": "Classroom",
+                  "image": {
+                    "url": "https://video.udacity-data.com/topher/2020/June/5ef2a92a_noun-arrange-3218078/noun-arrange-3218078.png",
+                    "width": 512,
+                    "height": 512
+                  },
+                  "video": null,
+                  "lab": null,
+                  "project": null,
+                  "concepts": [
+                    {
+                      "id": 1015402,
+                      "key": "f5125bc9-c998-4315-923f-2c8278615a3c",
+                      "title": "Lesson Introduction",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1016016,
+                      "key": "a0d83f5f-304c-4e35-9107-7291d59607db",
+                      "title": "Synchronous Programming ",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1029498,
+                      "key": "53a5111f-ad70-4626-bafc-08459c75348f",
+                      "title": "Introduction to Single Threaded Programming",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1016038,
+                      "key": "f41b5a6c-a8f2-4cf5-9d7c-4e925d370c49",
+                      "title": "Blocking vs Non-Blocking",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1016042,
+                      "key": "47b34695-a168-47d2-8983-c2049b1ea010",
+                      "title": "Blocking vs Non-Blocking Code",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1016049,
+                      "key": "6f0e6237-5a96-45a2-a852-353165658f2e",
+                      "title": "Exercise: Blocking vs Non-Blocking",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1029096,
+                      "key": "3b044f92-79dd-4913-ba10-1779e0f93491",
+                      "title": "Solution: Blocking vs Non-Blocking",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1015403,
+                      "key": "0276568b-af4e-4970-8a99-1fdbf4c17bb4",
+                      "title": "Asynchronous, Concurrent, or Parallel? ",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1029566,
+                      "key": "aa562291-9873-4bbf-8435-e31c646894b5",
+                      "title": "Quizzes: Synchronous Programming",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1015406,
+                      "key": "f9df7fd9-6dd2-4d7a-b27f-83d409976949",
+                      "title": "Introduction to Sequencing Events - Callbacks",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1015408,
+                      "key": "0219cc0e-f320-4c41-87a0-4ed5cc055a3c",
+                      "title": "Callbacks Best Practices - Chaining",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1037331,
+                      "key": "54d50cb0-154e-4d52-bfd9-1ff7de3e212e",
+                      "title": "Callbacks Best Practices - Error Handling",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1015409,
+                      "key": "822cda66-163a-4872-bd8f-ffdd5d9f111f",
+                      "title": "Cons of Callbacks",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1015411,
+                      "key": "001fe617-72f7-443e-8ae3-2f5d0bdfb236",
+                      "title": "Exercise: Callbacks",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1015412,
+                      "key": "295a0ee0-f4c8-4fdd-bd83-00d6ab4a3a49",
+                      "title": "Solution: Callbacks",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1015410,
+                      "key": "e7646ae3-e6a4-4b26-9ac2-511ce7f885ae",
+                      "title": "Callbacks Recap",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1015413,
+                      "key": "5662fa4b-f37f-4a01-adb0-6970fcdaf701",
+                      "title": "Lesson Conclusion",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1015414,
+                      "key": "bf3bdf06-7c21-4a66-abf6-f145212c7acf",
+                      "title": "Lesson Glossary",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    }
+                  ]
+                },
+                {
+                  "id": 1015415,
+                  "key": "ef1c28b0-bcf6-40f8-8aa1-0b830c2a78d8",
+                  "version": "1.0.0",
+                  "locale": "en-us",
+                  "semantic_type": "Lesson",
+                  "summary": "This lesson goes from basic Promise syntax all the way to implementing Promises, Fetch, and Promise methods. ",
+                  "title": "Sequencing Events - Promises",
+                  "duration": 120,
+                  "is_public": true,
+                  "is_project_lesson": false,
+                  "display_workspace_project_only": false,
+                  "lesson_type": "Classroom",
+                  "image": {
+                    "url": "https://video.udacity-data.com/topher/2020/June/5ef2a85e_noun-transfer-3218080/noun-transfer-3218080.png",
+                    "width": 512,
+                    "height": 512
+                  },
+                  "video": null,
+                  "lab": null,
+                  "project": null,
+                  "concepts": [
+                    {
+                      "id": 1015417,
+                      "key": "a5e8df04-d932-47a1-b8aa-52e3b773239c",
+                      "title": "Lesson Introduction",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1019906,
+                      "key": "dee028a4-d648-4899-8f01-6a7ff97b5302",
+                      "title": "Introduction to Promises",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1019910,
+                      "key": "bc38c63c-826b-42a6-b1ed-7061530ab92a",
+                      "title": "Promise Chaining",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1019914,
+                      "key": "1e96969e-6ffd-48a1-bb07-8ad80650d987",
+                      "title": "Promises as the Answer to Callbacks",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1019916,
+                      "key": "d005deca-a0a6-42f1-a75e-c7e068ac6835",
+                      "title": "Exercise: Promises I",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1031971,
+                      "key": "eed7df7e-e48c-4545-836b-1b0d2082a620",
+                      "title": "Solution: Promises I",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1019919,
+                      "key": "2e66eda8-f064-4e63-8a31-e1628bab1eae",
+                      "title": "Quizzes: Promises  I",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1019920,
+                      "key": "0554a7c2-8ebf-4025-8443-6f3fd6ab1c9f",
+                      "title": "Using Promises with Fetch",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1019927,
+                      "key": "4a1ad82c-1cfd-40a5-ac57-804b1233dfa8",
+                      "title": "Exercise: Fetch Request Practice",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1032760,
+                      "key": "12fc0691-b79f-4815-bed5-233f8f5895b6",
+                      "title": "Solution: Fetch Practice",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1019929,
+                      "key": "7bbbf603-7d3c-4944-aaf4-233d449f55ef",
+                      "title": "Promises Best Practices and Error Handling",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1019917,
+                      "key": "093b7419-e833-4736-8bc6-a1cf299520a1",
+                      "title": "Promises Helpful Tips",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1019931,
+                      "key": "de76c3af-4b69-4f92-aaf8-4f5048373585",
+                      "title": "Exercise: Promises II",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1036932,
+                      "key": "5da7d297-183c-4841-9d9e-810d74c35816",
+                      "title": "Solution: Promises II ",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1019932,
+                      "key": "aef66581-acf4-4459-a8ef-49675c875f5d",
+                      "title": "Advanced Promise Syntax",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1038469,
+                      "key": "fba15fdb-d281-4646-a051-18f30d27c016",
+                      "title": "Promise.allSettled",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1038470,
+                      "key": "a1476c99-a8ad-4273-be38-31ecc8d18a3a",
+                      "title": "Promise.all",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1038471,
+                      "key": "a48b86a9-58b7-4956-88d6-6c22f0e09d06",
+                      "title": "Promise.race",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1019934,
+                      "key": "c03f8a28-9cea-4002-8a7e-83f856548685",
+                      "title": "Exercise:  Promises III",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1036948,
+                      "key": "a63f496c-8123-435a-8c05-0282e21a9fa8",
+                      "title": "Solution: Promises III ",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1019935,
+                      "key": "ee028efe-beac-4307-9618-5ac8334bc7d5",
+                      "title": "Quizzes: Promises II",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1019936,
+                      "key": "0dde1aa9-b726-4132-a401-568c3f236b75",
+                      "title": "Lesson Conclusion",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1019937,
+                      "key": "2c3d8bb6-9be5-4511-9aa0-002d380e803d",
+                      "title": "Lesson Glossary",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    }
+                  ]
+                },
+                {
+                  "id": 1015416,
+                  "key": "7583b40b-579b-4932-910d-0ed0cea4a8ac",
+                  "version": "1.0.0",
+                  "locale": "en-us",
+                  "semantic_type": "Lesson",
+                  "summary": "This lesson will get you acquainted with the Async/Await syntax introduced in ES8. Let's master the code and principles behind this helpful addition designed to make asynchronous flows easier. ",
+                  "title": "Sequencing Events - Async/Await",
+                  "duration": 90,
+                  "is_public": true,
+                  "is_project_lesson": false,
+                  "display_workspace_project_only": false,
+                  "lesson_type": "Classroom",
+                  "image": {
+                    "url": "https://video.udacity-data.com/topher/2020/June/5ef2a7d7_noun-operation-3218087/noun-operation-3218087.png",
+                    "width": 512,
+                    "height": 512
+                  },
+                  "video": null,
+                  "lab": null,
+                  "project": null,
+                  "concepts": [
+                    {
+                      "id": 1015418,
+                      "key": "d071964a-e046-4d6f-a736-e78b4b93e219",
+                      "title": "Lesson Introduction",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1027972,
+                      "key": "f3c894c0-a2d7-4133-a203-0371ec8967bb",
+                      "title": "Getting  Started with Try/Catch",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1027976,
+                      "key": "2b37804d-610b-47d6-a37f-7e01aadc745f",
+                      "title": "Exercise: Try/Catch Practice",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1036057,
+                      "key": "f0d0f0fb-73a3-4019-bf67-f690bd9ce0b4",
+                      "title": "Solution: Try/Catch Practice",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1027975,
+                      "key": "4b346a96-9c24-4aab-93b7-0e390d9bbf34",
+                      "title": "Why Async/Await is Important",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1027973,
+                      "key": "5a00f1b3-9f32-4b4a-93cf-21859a8df133",
+                      "title": "Introduction to Async/Await",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1027978,
+                      "key": "c79158b7-b22e-4452-b3ad-fce537b1fa43",
+                      "title": "Exercise: Async/Await I",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1036058,
+                      "key": "43867c9a-646b-4f66-a69d-b54a5dad3db6",
+                      "title": "Solution: Async/Await I",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1027985,
+                      "key": "9c2b4add-c13e-4749-a8c3-d479bff6eaf0",
+                      "title": "Error Handling with Async/Await",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1027979,
+                      "key": "6c2c73be-4faa-40a2-84fd-5dba33fb858f",
+                      "title": "When (and When Not) to Use Async/Await",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1027981,
+                      "key": "76d7ccc8-9ebc-4be8-88ea-3c7a6d0aa118",
+                      "title": "Exercise: Async/Await II",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1036059,
+                      "key": "91642919-9f23-4d28-a1a2-260d0899d780",
+                      "title": "Solution: Async/Await II",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1027982,
+                      "key": "49d051e6-5fb8-4eaa-9b36-e98d17f2eae8",
+                      "title": "Quizzes: Async/Await ",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1027983,
+                      "key": "9663b171-2958-4e13-a9d3-0a02d79e2b78",
+                      "title": "Lesson Conclusion",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1027984,
+                      "key": "0001b86f-a797-44cc-9bdb-85d66e57185a",
+                      "title": "Lesson Glossary",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1031777,
+                      "key": "f1d6f30c-8250-486a-86cb-cbd093531de7",
+                      "title": "Course Recap",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1035527,
+                      "key": "55a22284-9d52-4cc2-b32d-e95afd9c9045",
+                      "title": "Congratulations!",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    }
+                  ]
+                },
+                {
+                  "id": 1015301,
+                  "key": "dea404b8-837a-4ba2-8b6a-31fa458e7207",
+                  "version": "1.0.0",
+                  "locale": "en-us",
+                  "semantic_type": "Lesson",
+                  "summary": null,
+                  "title": "Project: UdaciRacer Simulator",
+                  "duration": 300,
+                  "is_public": true,
+                  "is_project_lesson": true,
+                  "display_workspace_project_only": false,
+                  "lesson_type": "Classroom",
+                  "image": {
+                    "url": "https://video.udacity-data.com/topher/2020/June/5ef2a7bc_noun-racing-1938102/noun-racing-1938102.png",
+                    "width": 512,
+                    "height": 512
+                  },
+                  "video": null,
+                  "lab": null,
+                  "project": {
+                    "key": "d5f0cc67-dda9-4528-b04e-b5f73f00f99c",
+                    "version": "1.0.0",
+                    "locale": "en-us",
+                    "duration": 40320,
+                    "semantic_type": "Project",
+                    "title": "UdaciRacer Simulator",
+                    "description": "## UdaciRacer Simulator\n\nWe are creating a racing game called **UdaciRacer Sim**, which allows a user to race a simulated racer! This racing game runs as a Node application. Players will get to choose their racer and the track they want to race on. The strategy of the game is for each player to choose a pod racer they expect to win over a certain race track based on the pod’s characteristics (acceleration, handling, and top speed). A pre-built API will create the race selected by the players and return a stream of information lasting the duration of the race, resulting in a final ranking of racers.\n\n### Project Files\n\nYou can clone the project files from the [project repository](https://github.com/udacity/nd032-c3-asynchronous-programming-with-javascript-project-starter).\n\n### Rubric\n\nYour project will be evaluated by a Udacity code reviewer according to the UdaciRacer Simulation [project rubric](https://review.udacity.com/#!/rubrics/2829/view). Please make sure to re-review the rubric for detailed project requirements prior to submission.\n\n### Submission\n\nOnce you've met all of the rubric requirements, you can either include a zip file or link to your GitHub repository.",
+                    "is_public": true,
+                    "summary": null,
+                    "forum_path": "",
+                    "rubric_id": "2829",
+                    "terminal_project_id": null,
+                    "resources": null,
+                    "image": null
+                  },
+                  "concepts": [
+                    {
+                      "id": 1015303,
+                      "key": "d8d7472e-6f09-4781-8f7d-5800eef020c2",
+                      "title": "Introduction",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1015304,
+                      "key": "b2dac26a-9f14-42c6-b9be-9a5103a797af",
+                      "title": "Instructions",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    },
+                    {
+                      "id": 1102310,
+                      "key": "5ea26199-fabf-4a29-8b6e-cfaa1db2cbeb",
+                      "title": "Workspace",
+                      "semantic_type": "Concept",
+                      "is_public": true,
+                      "resources": null
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

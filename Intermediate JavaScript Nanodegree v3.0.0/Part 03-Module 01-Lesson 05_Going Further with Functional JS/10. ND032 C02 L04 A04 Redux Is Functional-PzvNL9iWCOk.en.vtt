@@ -1,0 +1,133 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.505
+Redux calls itself a predictable state container for JavaScript apps.
+
+00:00:05.505 --> 00:00:10.260
+Sounds familiar. Redux is a functional library for state management.
+
+00:00:10.260 --> 00:00:12.870
+Here's an excerpt straight from their Docs.
+
+00:00:12.870 --> 00:00:16.215
+It helps you write applications that behave consistently,
+
+00:00:16.215 --> 00:00:19.320
+run in different environments and are easy to test.
+
+00:00:19.320 --> 00:00:22.060
+What I love is that we have gone full circle.
+
+00:00:22.060 --> 00:00:25.890
+The benefits of functional programming we learned about in lesson 1 are
+
+00:00:25.890 --> 00:00:29.970
+being realized by these libraries that implement functional practices.
+
+00:00:29.970 --> 00:00:35.085
+In turn, those benefits are passed down to the developers that use these libraries.
+
+00:00:35.085 --> 00:00:38.235
+Where RxJS is usually used with Angular,
+
+00:00:38.235 --> 00:00:40.680
+Redux is usually seen with React.
+
+00:00:40.680 --> 00:00:42.510
+But same as RxJS,
+
+00:00:42.510 --> 00:00:45.650
+Redux doesn't have to be used with React.
+
+00:00:45.650 --> 00:00:50.360
+Redux illustrates some great functional concepts without standing clarity.
+
+00:00:50.360 --> 00:00:52.780
+Let's take a look at the general idea.
+
+00:00:52.780 --> 00:00:56.210
+In this example, imagine that I have a web app.
+
+00:00:56.210 --> 00:00:58.700
+My web app has state.
+
+00:00:58.700 --> 00:01:03.950
+My web app also recognizes different browser events that come from the user.
+
+00:01:03.950 --> 00:01:06.400
+This might be a click event or Onsubmit.
+
+00:01:06.400 --> 00:01:08.450
+When an event happens,
+
+00:01:08.450 --> 00:01:10.640
+I want to update state.
+
+00:01:10.640 --> 00:01:16.160
+It might be tempting to have that event directly update state,
+
+00:01:16.160 --> 00:01:22.895
+but that would be a bad idea because what if instead of one event we had 50,
+
+00:01:22.895 --> 00:01:27.440
+then all of the 50 events would be making a mad grab to change
+
+00:01:27.440 --> 00:01:33.115
+state and we would never be able to accurately tell what was in state at any given time.
+
+00:01:33.115 --> 00:01:37.395
+The best analogy I've ever heard for Redux is a bank.
+
+00:01:37.395 --> 00:01:43.275
+In a bank, you have vault and that vault can only be touched by tellers.
+
+00:01:43.275 --> 00:01:45.665
+In a bank, I can walk in.
+
+00:01:45.665 --> 00:01:49.130
+In this case, I am like an event and I probably only want to
+
+00:01:49.130 --> 00:01:53.560
+do one of the few actions like withdraw or deposit money.
+
+00:01:53.560 --> 00:01:58.460
+In Redux, the vault or store is an immutable object;
+
+00:01:58.460 --> 00:02:01.430
+it cannot be changed, only replaced.
+
+00:02:01.430 --> 00:02:06.290
+Tellers are pure functions that take in any one of
+
+00:02:06.290 --> 00:02:11.240
+the actions that might happen and return a brand new state.
+
+00:02:11.240 --> 00:02:14.675
+Actions themselves are simple objects.
+
+00:02:14.675 --> 00:02:17.720
+They simply state exactly the change that
+
+00:02:17.720 --> 00:02:21.715
+an event might cause in the simplest possible terms.
+
+00:02:21.715 --> 00:02:25.009
+There's a lot going on there and I hope that it wasn't too confusing,
+
+00:02:25.009 --> 00:02:28.460
+but it's really cool because you can see how Redux follows
+
+00:02:28.460 --> 00:02:32.485
+functional patterns to achieve its goal of organized state management.
+
+00:02:32.485 --> 00:02:36.200
+State management isn't even something that Lambda calculus has.
+
+00:02:36.200 --> 00:02:38.810
+But we can use the concepts we took from
+
+00:02:38.810 --> 00:02:43.680
+Lambda calculus and extend them for our needs in web development.
+

@@ -1,0 +1,400 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ImmutableJS Review</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Going Further with Functional JS</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Going Further with Functional JS Intro.html">01. Going Further with Functional JS Intro</a>
+    </li>
+    <li class="">
+      <a href="02. Persistent Data Structures.html">02. Persistent Data Structures</a>
+    </li>
+    <li class="">
+      <a href="03. ImmutableJS.html">03. ImmutableJS</a>
+    </li>
+    <li class="">
+      <a href="04. Exercise ImmutableJS.html">04. Exercise: ImmutableJS</a>
+    </li>
+    <li class="">
+      <a href="05. ImmutableJS Review.html">05. ImmutableJS Review</a>
+    </li>
+    <li class="">
+      <a href="06. Implementing ImmutableJS.html">06. Implementing ImmutableJS</a>
+    </li>
+    <li class="">
+      <a href="07. Exercise Implementing ImmutableJS.html">07. Exercise: Implementing ImmutableJS</a>
+    </li>
+    <li class="">
+      <a href="08. Implementing ImmutableJS Review.html">08. Implementing ImmutableJS Review</a>
+    </li>
+    <li class="">
+      <a href="09. RxJS and Ramda.html">09. RxJS and Ramda</a>
+    </li>
+    <li class="">
+      <a href="10. Functional Redux.html">10. Functional Redux</a>
+    </li>
+    <li class="">
+      <a href="11. Exercise Build Your Own Reducer.html">11. Exercise: Build Your Own Reducer</a>
+    </li>
+    <li class="">
+      <a href="12. Functional Redux Review.html">12. Functional Redux Review</a>
+    </li>
+    <li class="">
+      <a href="13. Lesson Recap.html">13. Lesson Recap</a>
+    </li>
+    <li class="">
+      <a href="14. Course Recap.html">14. Course Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. ImmutableJS Review</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Exercise Solution</p></h3>
+  <div>
+  <h2 id="rxjs">RxJS</h2>
+<p>Before we review ImmutableJS exercise solution you can go to <a href="https://rxjs-playground.github.io/#/" rel="noopener noreferrer" target="_blank">RxJS-playground</a> and load the following code to run some RxJS code. </p>
+<pre><code>// Browsers won't run RxJS code on their own, but thankfully RxJS created a tool called the RxJS playground! 
+// Take the code below and paste it into https://rxjs-playground.github.io/#/ to see it run
+
+
+// A function runs once and returns one set of information
+// An observable is like a function that runs for a period of time and can return many sets of information - a stream of information
+
+const observable = new Rx.Observable(subscriber =&gt; {
+  subscriber.next(1);
+  subscriber.next(2); // "return" another value
+  subscriber.next(3); // "return" another value
+  setTimeout(() =&gt; {
+    subscriber.next(4);
+    subscriber.complete();
+  }, 1000);
+});
+
+console.log('just before subscribe');
+
+observable.subscribe({
+  next(x) { console.log('got value ' + x); },
+  error(err) { console.error('something wrong occurred: ' + err); },
+  complete() { console.log('done'); }
+});
+
+console.log('just after subscribe');
+
+// the word 'next' is a special RxJS observable word that allows the observable to "return" multiple things over a period of time
+
+
+// There are three types of values an Observable Execution can deliver:
+
+// "Next" notification: sends a value such as a Number, a String, an Object, etc.
+// "Error" notification: sends a JavaScript Error or exception.
+// "Complete" notification: does not send a value.
+
+// "Next" notifications are the most important and most common type: they represent actual data being delivered to a subscriber. 
+// "Error" and "Complete" notifications may happen only once during the Observable Execution, and there can only be either one of them.</code></pre>
+<h2 id="exercise-solution---immutablejs">Exercise Solution - ImmutableJS</h2>
+<pre><code>PART 1. Getting and Setting values
+// Given the following object, make an update that turns name to 'Mal' and role to 'Captain'
+
+const state1 = Immutable.Map(const map1 = Immutable.Map({ 
+    name: 'Wash',
+    ship: {
+        name: 'Serenity',
+        class: 'Firefly'
+    },
+    role: 'Pilot',
+    favorite_thing: {
+        item: "Toy",
+        details: {
+            type: 'Toy Tyrannosaurus Rex'
+        }
+    }
+});
+
+// SOLUTION
+// You can do this:
+const state2 = state1.set('name', 'Mal')
+const state3 = state2.set('role', 'Captain')
+
+// But Immutable also allows you to do this:
+const state2 = state1.set('name', 'Mal').set('role', 'Captain')
+
+// -----------------------------------------------------------------
+// -----------------------------------------------------------------
+
+// PART 2. More with objects
+// This is a normal javascript object. It is very different from an Immutable Map
+const obj = { d: 100, o: 200, g: 300 };
+
+// But thankfully, normal javascript objects are still valid in Immutable
+// Notice that here we can merge a normal object into an Immutable Map
+const map3 = state1.merge(state2, obj);
+
+// But also notice how different the two are when we console log map3 
+console.log(map3)
+
+// YOUR TURN --------------------------------------------------------------
+// Can you locate the contents of our variable 'obj' inside the Immutable Map map3?
+console.log(map3)
+
+// SOLUTION --------------------------------------------------------------
+// If you open the Immutable map3 in inspect element, you can see that it isn't an ordinary object
+// you'll find all the properties under "entries"
+
+// -----------------------------------------------------------------
+// -----------------------------------------------------------------
+
+// PART 3. Arrays and Immutable Lists
+
+// An immutable array is called a LIST, and is declared like this:
+const numbers = List([1, 2, 3]);
+
+// We can turn normal JS arrays into Immutable Lists like this:
+const plainArray = [ 1, 2, 3, 4 ]
+const listFromPlainArray = List(plainArray)
+console.log(listFromPlainArray)
+
+// we can declare a new Immutable List
+const myList = List([ 'stuffed t-rex' ]);
+console.log(Array.from(myList));
+
+// and we can use the set method again to add or update values. Just provide the index first and value second
+const myList1 = myList.set(1, 'toy lightsaber');
+console.log(Array.from(myList1)); // [ "stuffed t-rex", "toy lightsaber" ]
+
+// but, in order to not need to supply the index, we can also add new values with push
+const myList2 = myList1.push('Picard bobblehead')
+console.log(Array.from(myList2));
+
+// YOUR TURN --------------------------------------------------------------------------
+
+// 1. Turn the following array into an Immutable array
+// 2. Add a character
+
+// -----------------------------------------------------------------
+// -----------------------------------------------------------------
+
+
+// STRETCH CHALLENGE ----------------------------------------------------------------------
+// 3. Remove Jabba the Hut from the Immutable List
+// look up in the documentation how you would remove a character from the Immutable list
+
+const characters = [
+  {
+    name: 'Marvin the Paranoid Android',
+    role: 'First Mate',
+    universe: 'Hitchhikers Guide to the Galaxy',
+    weapon: 'severe depression',
+    powerLevel: 1000
+  },
+  {
+    name: 'Jabba the Hutt',
+    role: 'villain',
+    universe: 'Star Wars',
+    weapon: 'henchmen',
+    powerLevel:  200
+  },
+  {
+    name: 'Zoë Alleyne Washburne',
+    role: 'First Mate',
+    universe: 'Firefly',
+    weapon: 'Winchester Model 1892 rifle',
+    powerLevel: 160
+  },
+  {
+    name: 'Peter Venkman',
+    role: 'Ghostbuster',
+    universe: 'Ghostbusters',
+    weapon: 'proton pack',
+    powerLevel: 120
+  },
+  {
+    name: 'Kathryn Janeway',
+    role: 'Captain',
+    universe: 'Star Trek',
+    weapon: 'Wit',
+    power_level: 140
+  }
+]
+
+// SOLUTION 
+
+const immutableCharacters = List(characters).push({
+    name: 'Yoda',
+    role: 'Jedi Master',
+    universe: 'Star Wars',
+    weapon: 'The Force',
+    powerLevel: 900
+})
+console.log(Array.from(immutableCharacters))
+
+// STRETCH SOLUTION
+const withoutJabba = immutableCharacters.delete(1)
+console.log(Array.from(withoutJabba))
+
+// or, all in one line, you could do:
+const allatonce = List(characters).push({
+    name: 'Yoda',
+    role: 'Jedi Master',
+    universe: 'Star Wars',
+    weapon: 'The Force',
+    powerLevel: 900
+}).delete(1)
+console.log(Array.from(allatonce))</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Concept Summary &amp; Further Research</p></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>Now that you’ve gotten to experiment with Persistent Data Structures in JavaScript via ImmutableJS, let’s take a look at implementing this library!</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. Implementing ImmutableJS.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. ImmutableJS Review')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

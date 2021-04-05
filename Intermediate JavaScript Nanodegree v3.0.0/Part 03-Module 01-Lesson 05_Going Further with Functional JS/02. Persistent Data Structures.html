@@ -1,0 +1,384 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Persistent Data Structures</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Going Further with Functional JS</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Going Further with Functional JS Intro.html">01. Going Further with Functional JS Intro</a>
+    </li>
+    <li class="">
+      <a href="02. Persistent Data Structures.html">02. Persistent Data Structures</a>
+    </li>
+    <li class="">
+      <a href="03. ImmutableJS.html">03. ImmutableJS</a>
+    </li>
+    <li class="">
+      <a href="04. Exercise ImmutableJS.html">04. Exercise: ImmutableJS</a>
+    </li>
+    <li class="">
+      <a href="05. ImmutableJS Review.html">05. ImmutableJS Review</a>
+    </li>
+    <li class="">
+      <a href="06. Implementing ImmutableJS.html">06. Implementing ImmutableJS</a>
+    </li>
+    <li class="">
+      <a href="07. Exercise Implementing ImmutableJS.html">07. Exercise: Implementing ImmutableJS</a>
+    </li>
+    <li class="">
+      <a href="08. Implementing ImmutableJS Review.html">08. Implementing ImmutableJS Review</a>
+    </li>
+    <li class="">
+      <a href="09. RxJS and Ramda.html">09. RxJS and Ramda</a>
+    </li>
+    <li class="">
+      <a href="10. Functional Redux.html">10. Functional Redux</a>
+    </li>
+    <li class="">
+      <a href="11. Exercise Build Your Own Reducer.html">11. Exercise: Build Your Own Reducer</a>
+    </li>
+    <li class="">
+      <a href="12. Functional Redux Review.html">12. Functional Redux Review</a>
+    </li>
+    <li class="">
+      <a href="13. Lesson Recap.html">13. Lesson Recap</a>
+    </li>
+    <li class="">
+      <a href="14. Course Recap.html">14. Course Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Persistent Data Structures</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Untitled</p></h3>
+  <div>
+  <h2 id="introducing-persistent-data-structures">Introducing Persistent Data Structures</h2>
+<p>Before we jump into our first library, ImmutableJS, we need to talk about once concept - Immutable Data Structures. When I first introduced the concept of immutability, I intentionally did not touch on one very important part of immutability -- space. If variables cannot change the values they hold, how do your programs not need huge amounts of memory to hold all those copies of old data? If even the smallest change to a value occurs, the Functional Paradigm would say that we need to create a unique variable - even if 99% of it is identical to the previous. This could not possibly be an efficient use of memory, especially for large programs, so how is this handled? Instead of making copies of variables, we make trees of data and have the variables reference values in the tree. That is a lot of new words and is probably confusing, so we will walk through an example in the next video.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ND032 C02 L04 A02 Persistent Data Structures</p></h3>
+  <video controls>
+  <source src="02. ND032 C02 L04 A02 Persistent Data Structures-hMVuguvKLnE.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. ND032 C02 L04 A02 Persistent Data Structures-hMVuguvKLnE.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Persistent Data Structures questions</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Remembering and allowing edits to previous versions of something… That sounds familiar; what popular technology is built around the idea of persistent data structures?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="rbk1" name="965857" id="rbk1">
+      <label for="rbk1"><p>React</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk2" name="965857" id="rbk2">
+      <label for="rbk2"><p>Git</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk3" name="965857" id="rbk3">
+      <label for="rbk3"><p>Redux</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk4" name="965857" id="rbk4">
+      <label for="rbk4"><p>Java</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk5" name="965857" id="rbk5">
+      <label for="rbk5"><p>SVN</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Git</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Persistent Data Structures questions</p></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>Let’s do some more research into Persistent Data Structures…</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="3734da35-83c0-4349-9646-da01d04b6989--0">
+        <label for="3734da35-83c0-4349-9646-da01d04b6989--0"><p>Watch this informative talk from JS Conf EU: <a href="https://www.youtube.com/watch?v=Wo0qiGPSV-s" rel="noopener noreferrer" target="_blank">https://www.youtube.com/watch?v=Wo0qiGPSV-s</a></p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Way to go!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Untitled</p></h3>
+  <div>
+  <p>Most of the knowledge surrounding persistent data structures is found in a computer science algorithms or data structures course, so we are only going to dip a toe into the subject, but we are going to create one simple example so that you can have a clearer picture of what is going on. For the sake of time, this example can only show the mechanics of working with persistent data structures, we will introduce a library later that adds all of the memory saving functionality.</p>
+<p>In Javascript, we are going to build a naive example of an <strong>array</strong> type persistent data structure.  </p>
+<p>First, we will create a class - we’ll call it PersistentArray. We are creating a class because it is the easiest way to wrap an array with extra functionality. Again, this wouldn’t really be something you would use in a real application, it is only an example to highlight some of the features of a persistent data structure. So here is our new kind of persistent array:</p>
+<pre><code>class PersistentArray {
+        constructor(items = []) {
+                this.persistentArray = items
+        }
+}
+
+const a = new PersistentArray([1, 2, 3])
+console.log("A", a)</code></pre>
+<p>You can see that PersistentArray takes in an array of items or defaults to an empty array if no arguments are provided. Then our class has a property of persistentArray, this will be a normal javascript array. </p>
+<p>Now imagine that we want to add a new item to this array. But we can’t just push a new value onto the array, because we can’t edit the original. So our PersistentArray class isn’t going to let us edit the original, it is going to five us a new array with the change made on that array by default. We are going to implement our own “push” method to work on our PersistentArray.</p>
+<pre><code>class PersistentArray {
+        constructor(items = []) {
+                this.persistentArray = items
+        }
+
+        push(newItem) {
+             return new PersistentArray(this.persistentArray.concat(newItem))
+         }
+}
+
+const a = new PersistentArray([1, 2, 3])
+console.log("A", a)
+
+const b = a.push(4)
+console.log("A", a)
+console.log("B", b)</code></pre>
+<p>You can see now that we are creating a push method which takes in one new value and returns a <strong>whole new class instance</strong> with an array that contains the new item. And you can see when we console log the results that array A is unchanged and the new array B contains the array with ‘4’ added to it. So in persistent data structures, you can see that once a value is created it can never be changed. </p>
+<p>Where our example differs from a truly persistent data structure - and why this is such a naive example - is the memory sharing. When our custom push method creates the new class instance, it takes up an entirely new spot in memory, it is saved as its own entity. But in a true implementation of this, array A and array B would share memory, only differing by one node (the new ‘4’ value we added to B).</p>
+<p>So now let’s explore the other side and implement a pop method. Take a look at this code.</p>
+<pre><code>class PersistentArray {
+    constructor(items = []) {
+                this.persistentArray = items
+    }
+
+    push(newItem) {
+                return new PersistentArray(this.persistentArray.concat(newItem))
+    }
+
+    pop() {
+                let poppedArray = [...this.persistentArray]
+                poppedArray.pop()
+                return new PersistentArray(poppedArray)
+    }
+}
+
+const a = new PersistentArray([1, 2, 3])
+console.log("A", a)
+
+const b = a.push(4)
+console.log("A", a)
+console.log("B", b)
+
+const c = a.pop()
+console.log("A", a)
+console.log("B", b)
+console.log("C", c)</code></pre>
+<p>Our custom pop method does mostly the same thing as push in that it returns a new instance of the class with an array containing the changes. </p>
+<p>You can see the above code in the following workspace. Walk through the code to get used to the syntax, are there other ways you could achieve the same result? You can also try creating a persistent data structure for objects!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div class="jumbotron">
+  <h3>Code</h3>
+
+  <p class="lead">If you need a code on the <a href="https://github.com/udacity"
+    target="_blank">https://github.com/udacity</a>. </p>
+
+    <li>
+      <strong>userCode:</strong>
+      <br>
+      <code>
+        <p>node -v</p>
+      </code>
+    </li>
+  </ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Persistent Data Structures Summary &amp; Further Research</p></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>This is the end of our very quick overview of persistent data structures. If you want to learn more about them, there are some more links provided at the end of the lesson.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Immutable and Persistent Data Structures</p></h3>
+  <div>
+  <p>This section is not supposed to be a tutorial about using the immutable library, but to simply show a real life example of the Functional concept immutability applied in JavaScript. You can import Immutable into a project of your own to try it out or read more in their excellent documentation. </p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. ImmutableJS.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. Persistent Data Structures')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

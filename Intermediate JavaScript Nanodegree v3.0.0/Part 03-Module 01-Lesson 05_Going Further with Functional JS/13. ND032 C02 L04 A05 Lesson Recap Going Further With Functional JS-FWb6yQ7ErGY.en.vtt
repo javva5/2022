@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.560
+Immutable.js lets us use persistent data structures in JavaScript.
+
+00:00:04.560 --> 00:00:09.705
+Ramda adds a whole collection of functions to help us write better functional programs.
+
+00:00:09.705 --> 00:00:13.680
+RxJS opened up a whole new world of asynchronous dataflows,
+
+00:00:13.680 --> 00:00:17.850
+while Redux gives us a reliable state management our apps need.
+
+00:00:17.850 --> 00:00:20.895
+Each of these libraries can be a huge help to you as you
+
+00:00:20.895 --> 00:00:24.150
+implement functional JavaScript programs in the real world.
+
+00:00:24.150 --> 00:00:26.355
+If there's one in particular that caught your eye,
+
+00:00:26.355 --> 00:00:29.860
+make sure to check out the resources we've collected for you.
+

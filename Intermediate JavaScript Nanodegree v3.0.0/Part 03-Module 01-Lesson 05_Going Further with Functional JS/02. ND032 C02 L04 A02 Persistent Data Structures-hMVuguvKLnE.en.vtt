@@ -1,0 +1,88 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.820
+Let's go through how this works in practice.
+
+00:00:02.820 --> 00:00:06.150
+Imagine that I have a functional program and I have
+
+00:00:06.150 --> 00:00:09.510
+an array that I need to update and add a new value to.
+
+00:00:09.510 --> 00:00:11.505
+To keep my variables immutable,
+
+00:00:11.505 --> 00:00:16.395
+I would need to make a copy of the first array and add my new value to that copy.
+
+00:00:16.395 --> 00:00:18.750
+In this case, we would end up with two As,
+
+00:00:18.750 --> 00:00:20.490
+two Bs, two Cs,
+
+00:00:20.490 --> 00:00:22.245
+and a new D in memory.
+
+00:00:22.245 --> 00:00:28.005
+This is only compounded if I need to make additional changes later as seen in v3 and v4.
+
+00:00:28.005 --> 00:00:31.665
+Not very efficient and probably slow.
+
+00:00:31.665 --> 00:00:36.095
+What if instead of making so many copies of my original variable,
+
+00:00:36.095 --> 00:00:39.740
+we broke the array up into its individual parts.
+
+00:00:39.740 --> 00:00:43.040
+Instead of thinking of an array as containing many values,
+
+00:00:43.040 --> 00:00:47.440
+what if it was just a list of references to value stored in a data tree.
+
+00:00:47.440 --> 00:00:50.210
+Then later when I need to update my array,
+
+00:00:50.210 --> 00:00:53.315
+I can reference back to those same values.
+
+00:00:53.315 --> 00:00:56.150
+This will save a lot of space and time.
+
+00:00:56.150 --> 00:00:59.030
+Persistent data structures are immutable because
+
+00:00:59.030 --> 00:01:01.990
+nothing about the original array has been updated.
+
+00:01:01.990 --> 00:01:04.865
+If we store all the previous references,
+
+00:01:04.865 --> 00:01:07.855
+then we also can remember the previous values.
+
+00:01:07.855 --> 00:01:11.585
+If a data structure remembers every previous version
+
+00:01:11.585 --> 00:01:15.275
+of a value and allows us to go back to that version and edit it,
+
+00:01:15.275 --> 00:01:17.285
+it's called fully persistent.
+
+00:01:17.285 --> 00:01:20.285
+But if we can only view the previous version,
+
+00:01:20.285 --> 00:01:22.255
+it's called partially persistent.
+
+00:01:22.255 --> 00:01:24.020
+In the next section, you'll see how
+
+00:01:24.020 --> 00:01:28.620
+persistent data structures can be used in JavaScript with ImmutableJS.
+

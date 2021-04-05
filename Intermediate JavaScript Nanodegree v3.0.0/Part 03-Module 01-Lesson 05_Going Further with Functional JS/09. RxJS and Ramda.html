@@ -1,0 +1,634 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RxJS and Ramda</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Going Further with Functional JS</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Going Further with Functional JS Intro.html">01. Going Further with Functional JS Intro</a>
+    </li>
+    <li class="">
+      <a href="02. Persistent Data Structures.html">02. Persistent Data Structures</a>
+    </li>
+    <li class="">
+      <a href="03. ImmutableJS.html">03. ImmutableJS</a>
+    </li>
+    <li class="">
+      <a href="04. Exercise ImmutableJS.html">04. Exercise: ImmutableJS</a>
+    </li>
+    <li class="">
+      <a href="05. ImmutableJS Review.html">05. ImmutableJS Review</a>
+    </li>
+    <li class="">
+      <a href="06. Implementing ImmutableJS.html">06. Implementing ImmutableJS</a>
+    </li>
+    <li class="">
+      <a href="07. Exercise Implementing ImmutableJS.html">07. Exercise: Implementing ImmutableJS</a>
+    </li>
+    <li class="">
+      <a href="08. Implementing ImmutableJS Review.html">08. Implementing ImmutableJS Review</a>
+    </li>
+    <li class="">
+      <a href="09. RxJS and Ramda.html">09. RxJS and Ramda</a>
+    </li>
+    <li class="">
+      <a href="10. Functional Redux.html">10. Functional Redux</a>
+    </li>
+    <li class="">
+      <a href="11. Exercise Build Your Own Reducer.html">11. Exercise: Build Your Own Reducer</a>
+    </li>
+    <li class="">
+      <a href="12. Functional Redux Review.html">12. Functional Redux Review</a>
+    </li>
+    <li class="">
+      <a href="13. Lesson Recap.html">13. Lesson Recap</a>
+    </li>
+    <li class="">
+      <a href="14. Course Recap.html">14. Course Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">09. RxJS and Ramda</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Functional Libraries</p></h3>
+  <div>
+  <h2 id="introduction">Introduction</h2>
+<p>Two more functional libraries we will take a quick look at are RxJS and Ramda. Each can help you write Functional code more efficiently, or keep you honest about not bending Functional rules. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ND032 C02 L04 A03 RxJs V3</p></h3>
+  <video controls>
+  <source src="09. ND032 C02 L04 A03 RxJs V3-g5D8bJmQFxU.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="09. ND032 C02 L04 A03 RxJs V3-g5D8bJmQFxU.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Code Review</p></h3>
+  <div>
+  <h2 id="code-review">Code Review</h2>
+<pre><code>// A function runs once and returns one set of information
+// An observable is like a function that runs for a period of time and can return many sets of information - a stream of information
+
+// An observable returns a stream of information
+// An observer (here, observable.subscribe) is how we ‘listen’ or subscribe to data being returned by an observable.
+
+const observable = new Rx.Observable(subscriber =&gt; {
+  subscriber.next(1);
+  subscriber.next(2); // "return" another value
+  subscriber.next(3); // "return" another value
+  setTimeout(() =&gt; {
+    subscriber.next(4);
+    subscriber.complete();
+  }, 1000);
+});
+
+console.log('just before subscribe');
+
+observable.subscribe({
+  next(x) { console.log('got value ' + x); },
+  error(err) { console.error('something wrong occurred: ' + err); },
+  complete() { console.log('done'); }
+});
+
+console.log('just after subscribe');
+
+// the word 'next' is a special RxJS observable word that allows the observable to "return" multiple things over a period of time
+
+
+// There are three types of values an Observable Execution can deliver:
+
+// "Next" notification: sends a value such as a Number, a String, an Object, etc.
+// "Error" notification: sends a JavaScript Error or exception.
+// "Complete" notification: does not send a value.
+
+// "Next" notifications are the most important and most common type: they represent actual data being delivered to a subscriber. 
+// "Error" and "Complete" notifications may happen only once during the Observable Execution, and there can only be either one of them.</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>[Optional] Implement RxJs</p></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>To take some next steps to learning RxJS, take a look at the following resources:</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="c945d211-563a-4f35-ac18-2f229cc360de--0">
+        <label for="c945d211-563a-4f35-ac18-2f229cc360de--0"><p>Take a quick read through the <a href="https://rxjs-dev.firebaseapp.com/guide/overview" rel="noopener noreferrer" target="_blank">overview</a> to see how RxJS could be used to clean up some of our DOM manipulations from the last lesson.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="c945d211-563a-4f35-ac18-2f229cc360de--1">
+        <label for="c945d211-563a-4f35-ac18-2f229cc360de--1"><p>Probably the best resource, if you want to start the journey to mastering RxJS, is this very well put together <a href="https://www.learnrxjs.io/concepts/rxjs-primer.html" rel="noopener noreferrer" target="_blank">primer</a>.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Way to go! RxJS is another world of opportunity that might become very popular in the next few years, good job getting ahead!</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Ramda</p></h3>
+  <div>
+  <h2 id="ramda">Ramda</h2>
+<p>Ramda is a library of functions that help JavaScript developers write better Functional code. Where RxJS is a whole new way to think about and interact with data streams and events, Ramda’s goal is to do an excellent job of providing JavaScript developers with truly Functional tools, and a lot of developers think they have done a really good job at that. </p>
+<p>Some cool things about Ramda:</p>
+<ul>
+<li>Each function is self-contained, pure, side effect free, and does not mutate anything</li>
+<li>Each function is written in JavaScript, so with the amount of JavaScript you know now, you can go to the source code and be able to understand how they built their function </li>
+</ul>
+<p>Some cool functions in Ramda:</p>
+<ul>
+<li>If you felt robbed when you learned that push, pop, etc. weren’t allowed in Functional programming - Ramda gives them back to you! Their array Update, Tail, Take, and TakeLast are all great options.</li>
+<li>Ramda even takes it one step further and allows you to leave specific values out of an array using the function <a href="https://ramdajs.com/docs/#without" rel="noopener noreferrer" target="_blank">Without</a></li>
+<li>Remember how we struggled with Object.assign not being functional? Well with Ramda’s <a href="https://ramdajs.com/docs/#merge" rel="noopener noreferrer" target="_blank">Merge</a> function - it can be. Merge does exactly the same as Object.assign, except it returns a new object. </li>
+<li>Ramda <a href="https://ramdajs.com/docs/#pluck" rel="noopener noreferrer" target="_blank">Pluck</a> is another great example. Knowing that developers often work with long arrays of objects, Pluck allows you to choose one property those objects share and will return a new array of just those values. </li>
+</ul>
+<p>In the edge cases where you really want a functional method, but the pure JavaScript doesn’t support it, Ramda will be a great resource. So if you end up writing more Functional code, keep Ramda in mind as a great option for adding more Functional utility without changing your workflow.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>[Optional] Implement Ramda</p></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>Now it's your turn, take a look at the Ramda docs and read about a few of their functions.</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="326fc9c8-1400-47b2-b737-955b18179ada--0">
+        <label for="326fc9c8-1400-47b2-b737-955b18179ada--0"><p>Ramda <a href="https://ramdajs.com/docs/#append" rel="noopener noreferrer" target="_blank">Append</a> could be a good one to look at first. It works like JS <code>concat()</code>.</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="326fc9c8-1400-47b2-b737-955b18179ada--1">
+        <label for="326fc9c8-1400-47b2-b737-955b18179ada--1"><p>Look at two other Ramda functions.</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>Great job! Even if you don’t add the library to your code, Ramda is a fantastic resource if you need to see a solid Functional approach to solving a problem in JavaScript.</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Functional Libraries Problem Set</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which library would you choose for working with a highly interactive program using web sockets?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="rbk1" name="965863" id="rbk1">
+      <label for="rbk1"><p>ImmutableJS</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk2" name="965863" id="rbk2">
+      <label for="rbk2"><p>RxJS</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk3" name="965863" id="rbk3">
+      <label for="rbk3"><p>RamdaJS</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk4" name="965863" id="rbk4">
+      <label for="rbk4"><p>All of these</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk5" name="965863" id="rbk5">
+      <label for="rbk5"><p>None of these</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>RxJS</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Functional Libraries</p></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>Match the JS libraries to the statement or code block about them that are true.</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>Immutable</p></button>
+  <button class="btn btn-primary"><p>Ramda</p></button>
+  <button class="btn btn-primary"><p>RxJs</p></button>
+  <button class="btn btn-primary"><p>RxJs</p></button>
+  <button class="btn btn-primary"><p>Immutable</p></button>
+  <button class="btn btn-primary"><p>Ramda</p></button>
+  <button class="btn btn-primary"><p>Immutable</p></button>
+  <button class="btn btn-primary"><p>Ramda</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>Statement or Code</p>
+      </th>
+      <th>
+        <p>JS Library</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>Provides stronger data structures to Javascript programs, without caring if they are functional or not.</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>Provides a comprehensive toolset of Functional methods for conventional Javascript programs</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>Is a whole new approach to data streams that combines Functional concepts with other programming ideas</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><pre><code>const map1 = Map({ a: 1, b: 2, c: 3 });</code></pre></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><pre><code>var getAges = R.pluck('age');</code></pre></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><pre><code>observable.subscribe({
+    next(x) { console.log(x); },
+    error(err) { console.error(err);},
+    complete() { console.log('done');}
+});</code></pre></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>Statement or Code</p>
+        </th>
+        <th>
+          <p>JS Library</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>Provides stronger data structures to Javascript programs, without caring if they are functional or not.</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Immutable</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <pre><code>const map1 = Map({ a: 1, b: 2, c: 3 });</code></pre>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Immutable</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Provides a comprehensive toolset of Functional methods for conventional Javascript programs</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Ramda</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <pre><code>var getAges = R.pluck('age');</code></pre>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Ramda</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Is a whole new approach to data streams that combines Functional concepts with other programming ideas</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>RxJs</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <pre><code>observable.subscribe({
+    next(x) { console.log(x); },
+    error(err) { console.error(err);},
+    complete() { console.log('done');}
+});</code></pre>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>RxJs</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Is a whole new approach to data streams that combines Functional concepts with other programming ideas</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>RxJs</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <pre><code>observable.subscribe({
+    next(x) { console.log(x); },
+    error(err) { console.error(err);},
+    complete() { console.log('done');}
+});</code></pre>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>RxJs</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Provides stronger data structures to Javascript programs, without caring if they are functional or not.</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Immutable</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <pre><code>const map1 = Map({ a: 1, b: 2, c: 3 });</code></pre>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Immutable</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Provides a comprehensive toolset of Functional methods for conventional Javascript programs</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Ramda</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <pre><code>var getAges = R.pluck('age');</code></pre>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Ramda</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Provides stronger data structures to Javascript programs, without caring if they are functional or not.</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Immutable</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <pre><code>const map1 = Map({ a: 1, b: 2, c: 3 });</code></pre>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Immutable</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Provides a comprehensive toolset of Functional methods for conventional Javascript programs</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Ramda</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <pre><code>var getAges = R.pluck('age');</code></pre>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Ramda</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Functional Libraries Problem Set</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>ImmutableJS only works if you use Immutable maps and lists instead of Javascript objects and arrays.</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="965883" id="rbk1">
+        <label for="rbk1"><p>True</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="965883" id="rbk2">
+        <label for="rbk2"><p>False</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    False
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Concept Summary &amp; Further Research</p></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>I hope that at least one of these libraries has piqued your interest to go and learn beyond this course. All three are fantastic tools for expanding your Functional Javascript capabilities.</p>
+<ul>
+<li><a href="https://rxjs-dev.firebaseapp.com/" rel="noopener noreferrer" target="_blank">RxJS</a></li>
+<li><a href="https://ramdajs.com/" rel="noopener noreferrer" target="_blank">Ramda</a></li>
+<li><a href="https://immutable-js.github.io/immutable-js/" rel="noopener noreferrer" target="_blank">ImmutableJS</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="10. Functional Redux.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('09. RxJS and Ramda')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

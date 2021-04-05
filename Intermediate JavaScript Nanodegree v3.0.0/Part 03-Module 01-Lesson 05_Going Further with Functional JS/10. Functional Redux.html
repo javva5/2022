@@ -1,0 +1,349 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Functional Redux</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Going Further with Functional JS</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Going Further with Functional JS Intro.html">01. Going Further with Functional JS Intro</a>
+    </li>
+    <li class="">
+      <a href="02. Persistent Data Structures.html">02. Persistent Data Structures</a>
+    </li>
+    <li class="">
+      <a href="03. ImmutableJS.html">03. ImmutableJS</a>
+    </li>
+    <li class="">
+      <a href="04. Exercise ImmutableJS.html">04. Exercise: ImmutableJS</a>
+    </li>
+    <li class="">
+      <a href="05. ImmutableJS Review.html">05. ImmutableJS Review</a>
+    </li>
+    <li class="">
+      <a href="06. Implementing ImmutableJS.html">06. Implementing ImmutableJS</a>
+    </li>
+    <li class="">
+      <a href="07. Exercise Implementing ImmutableJS.html">07. Exercise: Implementing ImmutableJS</a>
+    </li>
+    <li class="">
+      <a href="08. Implementing ImmutableJS Review.html">08. Implementing ImmutableJS Review</a>
+    </li>
+    <li class="">
+      <a href="09. RxJS and Ramda.html">09. RxJS and Ramda</a>
+    </li>
+    <li class="">
+      <a href="10. Functional Redux.html">10. Functional Redux</a>
+    </li>
+    <li class="">
+      <a href="11. Exercise Build Your Own Reducer.html">11. Exercise: Build Your Own Reducer</a>
+    </li>
+    <li class="">
+      <a href="12. Functional Redux Review.html">12. Functional Redux Review</a>
+    </li>
+    <li class="">
+      <a href="13. Lesson Recap.html">13. Lesson Recap</a>
+    </li>
+    <li class="">
+      <a href="14. Course Recap.html">14. Course Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">10. Functional Redux</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>ND032 C02 L04 A04 Redux Is Functional</p></h3>
+  <video controls>
+  <source src="10. ND032 C02 L04 A04 Redux Is Functional-PzvNL9iWCOk.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="10. ND032 C02 L04 A04 Redux Is Functional-PzvNL9iWCOk.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Reducer Analogy</p></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/970071.gif" alt="The actions of the reducer can be compared to a teller at a bank. As a bank patron (event) you want the teller to do something to your account such as withdraw, deposit, or create an account (actions) and the teller (reducer) is able to make changes to the vault (store) where your money (data) is stored. " class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>The actions of the reducer can be compared to a teller at a bank. As a bank patron (event) you want the teller to do something to your account such as withdraw, deposit, or create an account (actions) and the teller (reducer) is able to make changes to the vault (store) where your money (data) is stored. </p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Pure functions in Redux</p></h3>
+  <div>
+  <h2 id="pure-functions-in-redux">Pure Functions in Redux</h2>
+<p>Redux is a library typically imported into larger applications to manage and represent state in your application with a single Javascript object. Redux uses pure functions called Reducers to enact updates on the state object which is represented by the immutable store object. This is straight from their documentation:</p>
+<blockquote>
+  <p>“Reducers are just pure functions that take the previous state and an action, and return the next state.”</p>
+</blockquote>
+<p>Oftentimes, reducers are written as functions that contain case statements. Take a look at this example reducer from their docs:</p>
+<pre><code>import { createStore, combineReducers } from 'redux'
+const SET_NAME = 'SET_NAME'
+const SET_AGE = 'SET_AGE'
+function user(state = initialUserState, action) {
+   switch (action.type) {
+       case SET_NAME: {
+           return {
+               ...state,
+               name: action.name,
+           }
+       }
+       case SET_AGE: {
+           return {
+               ...state,
+               age: action.age,
+           }
+       }
+   }
+}
+const ADD_TODO = 'ADD_TODO'
+const COMPLETE_TODO = 'COMPLETE_TODO'
+const initialState = {
+   todos: []
+}
+function todos(state = initialState, action) {
+ switch (action.type) {
+   case ADD_TODO: {
+       const { todos } = state
+       return {
+           ...state,
+           todos: [...todos, action.todo],
+       }
+   }
+   case COMPLETE_TODO: {
+       const { todos } = state
+       const index = todos.find(todo =&gt; todo.id == action.id)
+       toods[index].comleted = true
+       return {
+           ...state,
+           todos,
+       }
+   }
+   default:
+     return state
+ }
+}
+const reducers = combineReducers({
+   todos,
+   user,
+})
+const store = createStore(reducers)</code></pre>
+<p>The ellipses before state is called “spreading” the object, which means to return the original value for state, except where it is different from the portion of state that was updated, in this case <code>text</code> and <code>completed</code>. Redux is a great example of how you can accomplish a lot by making good use of simple concepts.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Functional Highlights of Redux</p></h3>
+  <div>
+  <h2 id="functional-highlights-of-redux">Functional Highlights of Redux</h2>
+<p>Redux is a big topic and this is not a Redux tutorial. What is important to this course is that Redux has found great success among developers because it uses Functional programming practices and is a great example of these power concepts being used in the real world. </p>
+<p>Here are the Functional highlights of the Redux library:</p>
+<ul>
+<li>A read-only -- or immutable -- state. Reducers don’t update state; they return a brand new object.</li>
+<li>Pure Function reducers to handle Actions. This means that no actions in our entire app can be affected by Side Effects. This is a huge reason Redux is so effective.</li>
+<li>This careful Functional flow of data from event to store means that the same action, if called twice, will have the same effect on the whole application.</li>
+</ul>
+<h2 id="further-research">Further Research</h2>
+<ul>
+<li>Redux online tutorial <a href="https://redux.js.org/introduction/getting-started" rel="noopener noreferrer" target="_blank">book</a></li>
+<li>If you are interested in learning how to use React more in depth, you can take the Udacity <a href="https://www.udacity.com/course/react-nanodegree--nd019" rel="noopener noreferrer" target="_blank">React Nanodegree</a>, specifically the React &amp; Redux Course.</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Object methods questions</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which of the following are objects in Redux?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="rbk1" name="965854" id="rbk1">
+      <label for="rbk1"><p>Reducers</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk2" name="965854" id="rbk2">
+      <label for="rbk2"><p>Events</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk3" name="965854" id="rbk3">
+      <label for="rbk3"><p>Actions</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk4" name="965854" id="rbk4">
+      <label for="rbk4"><p>The Store</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Actions</li>
+      <li>The Store</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Exercise Instructions</p></h3>
+  <div>
+  <h2 id="exercise-instructions">Exercise Instructions</h2>
+<p>Next, you will create practice using Redux to write an app. If you need a reminder on the instructions head over to <em>Introduction to Functional Programming</em> exercises to get a reminder on those instructions.</p>
+<h3 id="local-machine">Local Machine</h3>
+<p>This next exercise can be found in <code>.../exercises/further_with_functional_js/reducer.js</code>.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="11. Exercise Build Your Own Reducer.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('10. Functional Redux')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

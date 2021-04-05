@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.240
+Congratulations, and thank you for sticking with me through
+
+00:00:03.240 --> 00:00:06.210
+this Functional JavaScript course. We've covered a lot.
+
+00:00:06.210 --> 00:00:09.015
+You got an overview of programming paradigms,
+
+00:00:09.015 --> 00:00:10.904
+the history of Lambda calculus,
+
+00:00:10.904 --> 00:00:12.945
+a whirlwind tour of ES6,
+
+00:00:12.945 --> 00:00:15.460
+and saw an example of a functional web app,
+
+00:00:15.460 --> 00:00:17.100
+and we rounded out the lesson with
+
+00:00:17.100 --> 00:00:20.820
+some awesome libraries to help you on your functional programming journey.
+
+00:00:20.820 --> 00:00:24.150
+In this project, you will be using all the skills to
+
+00:00:24.150 --> 00:00:27.435
+create a functional web dashboard for the NASA Mars Rovers.
+
+00:00:27.435 --> 00:00:29.730
+I really hope this course has been helpful for you,
+
+00:00:29.730 --> 00:00:31.990
+and good luck with the project.
+

@@ -1,0 +1,73 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.980
+In the UdaciRacer project,
+
+00:00:01.980 --> 00:00:03.630
+you will be able to race against
+
+00:00:03.630 --> 00:00:07.800
+simulated characters and prove your mastery of asynchronous JavaScript.
+
+00:00:07.800 --> 00:00:12.945
+You will need to complete partially built out asynchronous flows that use callbacks,
+
+00:00:12.945 --> 00:00:16.725
+promises, and async/await syntax to control the events of the game.
+
+00:00:16.725 --> 00:00:19.125
+Now let's take a look at what you'll build.
+
+00:00:19.125 --> 00:00:21.180
+In the product for this course,
+
+00:00:21.180 --> 00:00:23.985
+you will be building a racing simulation game.
+
+00:00:23.985 --> 00:00:27.870
+The racing simulation game can be themed to whatever you want.
+
+00:00:27.870 --> 00:00:29.925
+So for my project example,
+
+00:00:29.925 --> 00:00:31.770
+I chose Star Wars.
+
+00:00:31.770 --> 00:00:36.765
+In this game, you will be able to choose racers and race tracks.
+
+00:00:36.765 --> 00:00:40.610
+Each racer will have a top speed acceleration in
+
+00:00:40.610 --> 00:00:45.400
+handling that make them better or worse at handling a specific race track.
+
+00:00:45.400 --> 00:00:49.135
+If I select a race track and a racer,
+
+00:00:49.135 --> 00:00:50.840
+and start the race,
+
+00:00:50.840 --> 00:00:57.530
+I play by clicking as fast as I can to make my player go up in the leader board.
+
+00:00:57.530 --> 00:00:59.645
+If I stop clicking,
+
+00:00:59.645 --> 00:01:03.570
+you'll also see my player go down in the leader board.
+
+00:01:03.890 --> 00:01:09.320
+At the end of the race, you'll see a scoreboard to show you how you've done,
+
+00:01:09.320 --> 00:01:11.495
+and you can start a new race.
+
+00:01:11.495 --> 00:01:14.180
+So hopefully, all of that gets you excited
+
+00:01:14.180 --> 00:01:18.120
+to learn the course material and build this project.
+

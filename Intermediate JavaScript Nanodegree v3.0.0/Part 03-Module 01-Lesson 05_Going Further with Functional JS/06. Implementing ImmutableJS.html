@@ -1,0 +1,248 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Implementing ImmutableJS</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Going Further with Functional JS</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Going Further with Functional JS Intro.html">01. Going Further with Functional JS Intro</a>
+    </li>
+    <li class="">
+      <a href="02. Persistent Data Structures.html">02. Persistent Data Structures</a>
+    </li>
+    <li class="">
+      <a href="03. ImmutableJS.html">03. ImmutableJS</a>
+    </li>
+    <li class="">
+      <a href="04. Exercise ImmutableJS.html">04. Exercise: ImmutableJS</a>
+    </li>
+    <li class="">
+      <a href="05. ImmutableJS Review.html">05. ImmutableJS Review</a>
+    </li>
+    <li class="">
+      <a href="06. Implementing ImmutableJS.html">06. Implementing ImmutableJS</a>
+    </li>
+    <li class="">
+      <a href="07. Exercise Implementing ImmutableJS.html">07. Exercise: Implementing ImmutableJS</a>
+    </li>
+    <li class="">
+      <a href="08. Implementing ImmutableJS Review.html">08. Implementing ImmutableJS Review</a>
+    </li>
+    <li class="">
+      <a href="09. RxJS and Ramda.html">09. RxJS and Ramda</a>
+    </li>
+    <li class="">
+      <a href="10. Functional Redux.html">10. Functional Redux</a>
+    </li>
+    <li class="">
+      <a href="11. Exercise Build Your Own Reducer.html">11. Exercise: Build Your Own Reducer</a>
+    </li>
+    <li class="">
+      <a href="12. Functional Redux Review.html">12. Functional Redux Review</a>
+    </li>
+    <li class="">
+      <a href="13. Lesson Recap.html">13. Lesson Recap</a>
+    </li>
+    <li class="">
+      <a href="14. Course Recap.html">14. Course Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">06. Implementing ImmutableJS</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Implementing ImmutableJS</p></h3>
+  <div>
+  <h2 id="introduction">Introduction</h2>
+<p>There are many options when it comes to implementing ImmutableJS. You can install it as an npm module, grab it with a script in the browser, or use it in a Typescript project. The recommended way is to use the npm module. However, for the workspace environment that we are using in this course, we are going to use the browser script just to test it out. For use in the course project though, you should use the npm module.</p>
+<p><strong>WATCH OUT!</strong> One important thing to note is that nested objects have to be declared as Immutable maps just like top level ones. Otherwise, they will be stored as normal JS objects, which Immutable handles differently. You can see the difference below. </p>
+<pre><code>// Nest 1
+const currentShow = Immutable.Map({
+    title: 'Dr. Who',
+    seasons: 11,
+    currentSeason: 4,
+    characters: {
+        main: 'The Doctor',
+        supporting: ['Dalek1']
+    }
+})
+
+// Nest 2
+const currentShow = Immutable.Map({
+    title: 'Dr. Who',
+    seasons: 11,
+    currentSeason: 4,
+    characters: Immutable.Map({
+        main: 'The Doctor',
+        supporting: List(['Dalek1'])
+    })
+})</code></pre>
+<p><code>Nest 1</code> is not the same as <code>Nest 2</code>. The main difference is that the nested object <code>characters</code> is declared with <code>Immutable.Map</code> in <code>Nest 2</code>. <code>characters</code> in <code>Nest 1</code> will not be immutable while <code>characters</code> in <code>Nest 2</code> will be. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Concept Summary &amp; Further Research</p></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>Immutable makes it possible for us to write even better Functional code - or just better code in general - without being a big task to learn, which makes it a big win to me. If you want to look further into the how’s and the why's of Persistent Data Structures and ImmutableJS, a great place to start is their well-written documentation. <a href="https://immutable-js.github.io/immutable-js/" rel="noopener noreferrer" target="_blank">https://immutable-js.github.io/immutable-js/</a></p>
+<p>Other resources:<br />
+<a href="https://www.youtube.com/watch?v=Wo0qiGPSV-s" rel="noopener noreferrer" target="_blank">Data Structures</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Exercise Instructions</p></h3>
+  <div>
+  <h2 id="exercise-instructions">Exercise Instructions</h2>
+<p>Next, you will practice implementing ImmutableJS. If you need a reminder on the instructions head over to <em>Introduction to Functional Programming</em> exercises to get a reminder on those instructions.</p>
+<h3 id="local-machine">Local Machine</h3>
+<p>This next exercise can be found in <code>.../exercises/further_with_functional_js/implement_immutablejs.js</code>.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="07. Exercise Implementing ImmutableJS.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. Implementing ImmutableJS')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

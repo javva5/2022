@@ -1,0 +1,175 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.070
+If you've ever heard of RxJS,
+
+00:00:02.070 --> 00:00:04.650
+it was probably in the context of Angular.
+
+00:00:04.650 --> 00:00:08.805
+But RxJS is actually a free standing library for managing
+
+00:00:08.805 --> 00:00:10.710
+asynchronous data flows that uses
+
+00:00:10.710 --> 00:00:14.205
+the observer design pattern to help you keep track of all your data.
+
+00:00:14.205 --> 00:00:17.100
+If you haven't heard of the observer design pattern,
+
+00:00:17.100 --> 00:00:21.495
+I'll explain it at a super high level now and add some links in the resources.
+
+00:00:21.495 --> 00:00:23.400
+In the observer pattern,
+
+00:00:23.400 --> 00:00:25.845
+you create an object that does things,
+
+00:00:25.845 --> 00:00:29.025
+and that object can have a list of observers,
+
+00:00:29.025 --> 00:00:31.725
+or you might think of them as social media followers.
+
+00:00:31.725 --> 00:00:36.180
+If the observed object performs an action or changes state in any way,
+
+00:00:36.180 --> 00:00:40.345
+it can give its followers an update and they're notified that a change happened.
+
+00:00:40.345 --> 00:00:44.575
+This pattern can be very helpful when working with asynchronous logic.
+
+00:00:44.575 --> 00:00:49.070
+RxJS combines the observer pattern, functional programming concepts,
+
+00:00:49.070 --> 00:00:53.360
+and the iterator pattern to create a smooth and fast data management system.
+
+00:00:53.360 --> 00:00:55.580
+It's especially awesome if you're working with
+
+00:00:55.580 --> 00:00:58.000
+web sockets or streams of live information.
+
+00:00:58.000 --> 00:01:02.720
+The feature of RxJS you're most likely to hear about are observables.
+
+00:01:02.720 --> 00:01:06.320
+So let's talk through an example from the RxJS docs to see if
+
+00:01:06.320 --> 00:01:10.985
+the JavaScript we've learned so far in the course can help us make sense of this library.
+
+00:01:10.985 --> 00:01:14.780
+First off, you can see that we have an observable saved into a
+
+00:01:14.780 --> 00:01:19.610
+constant that is an instance of the RxJS observable,
+
+00:01:19.610 --> 00:01:22.525
+which is a special entity in RxJS.
+
+00:01:22.525 --> 00:01:25.175
+Observables are a little bit like functions,
+
+00:01:25.175 --> 00:01:28.640
+except that where a function happens once and then returns,
+
+00:01:28.640 --> 00:01:33.775
+an observable will be over a period of time and can return a stream of information.
+
+00:01:33.775 --> 00:01:35.880
+So let's see how that works.
+
+00:01:35.880 --> 00:01:37.325
+If I run this code,
+
+00:01:37.325 --> 00:01:40.265
+I get the message just before subscribe,
+
+00:01:40.265 --> 00:01:42.770
+which is this first console log.
+
+00:01:42.770 --> 00:01:44.930
+Then I start getting value 1, 2,
+
+00:01:44.930 --> 00:01:47.555
+3, which is this logic here,
+
+00:01:47.555 --> 00:01:52.945
+which I caused to run by calling subscribe on my observable.
+
+00:01:52.945 --> 00:01:55.605
+Observables can have a next,
+
+00:01:55.605 --> 00:01:57.780
+an error, and a complete.
+
+00:01:57.780 --> 00:02:01.250
+The error and complete can only happen once,
+
+00:02:01.250 --> 00:02:05.030
+but the next is like the return of a function,
+
+00:02:05.030 --> 00:02:08.855
+except that because observables happen over time,
+
+00:02:08.855 --> 00:02:12.785
+next can happen multiple times throughout runtime.
+
+00:02:12.785 --> 00:02:15.550
+Here you can see that we're calling next with 1, 2,
+
+00:02:15.550 --> 00:02:19.910
+and 3, which are the values we get here when we console log them.
+
+00:02:19.910 --> 00:02:22.740
+But we also have this setTimeout.
+
+00:02:22.740 --> 00:02:31.265
+The setTimeout waits for one second before sending the last next return and the complete.
+
+00:02:31.265 --> 00:02:33.025
+So what happens?
+
+00:02:33.025 --> 00:02:36.075
+We get the message just after describe.
+
+00:02:36.075 --> 00:02:40.534
+This means that while the program was waiting for this one second,
+
+00:02:40.534 --> 00:02:43.880
+it moved on to the next console log before
+
+00:02:43.880 --> 00:02:47.620
+coming back to get the value 4 and the message done.
+
+00:02:47.620 --> 00:02:52.640
+Hopefully this gives you a better picture of what observables are and how they work.
+
+00:02:52.640 --> 00:02:55.670
+RxJS is most commonly used in Angular.
+
+00:02:55.670 --> 00:02:57.905
+So if that's your JavaScript framework of choice,
+
+00:02:57.905 --> 00:03:00.680
+I would highly recommend learning this in more depth.
+
+00:03:00.680 --> 00:03:04.140
+But RxJS can also be integrated with react and view,
+
+00:03:04.140 --> 00:03:05.764
+and it's growing in popularity,
+
+00:03:05.764 --> 00:03:08.240
+so we might be seeing a lot more of it in the future.
+
+00:03:08.240 --> 00:03:12.750
+In the next section, you'll find some next steps for learning RxJS.
+

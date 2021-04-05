@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.070
+Maybe you've gotten pretty far without knowing any fancy asynchronous programming.
+
+00:00:05.070 --> 00:00:06.970
+So why should you learn it now?
+
+00:00:06.970 --> 00:00:09.675
+What benefits will you get from knowing about it?
+
+00:00:09.675 --> 00:00:12.345
+First of all, if you code in JavaScript,
+
+00:00:12.345 --> 00:00:15.435
+you're probably already using asynchronous code.
+
+00:00:15.435 --> 00:00:20.340
+JavaScript is asynchronous by default for I/O and DOM manipulations.
+
+00:00:20.340 --> 00:00:23.370
+So it's imperative to be comfortable with these concepts as
+
+00:00:23.370 --> 00:00:25.620
+a JavaScript developer and
+
+00:00:25.620 --> 00:00:29.400
+asynchronous programming is really a base skill for any developer.
+
+00:00:29.400 --> 00:00:30.890
+In a typical Dev job,
+
+00:00:30.890 --> 00:00:34.020
+you will see and use asynchronous patterns daily.
+
+00:00:34.020 --> 00:00:36.720
+So learning asynchronous programming is absolutely
+
+00:00:36.720 --> 00:00:40.345
+essential to moving beyond entry-level or junior web development.
+
+00:00:40.345 --> 00:00:43.250
+Reason three is that asynchronous programming and
+
+00:00:43.250 --> 00:00:46.790
+the concepts surrounding it are only going to become more important.
+
+00:00:46.790 --> 00:00:49.610
+Programs rely more and more on the efficiency of
+
+00:00:49.610 --> 00:00:53.035
+their code in order to run quickly and good news.
+
+00:00:53.035 --> 00:00:56.495
+Reason for is that these concepts of asynchronous programming
+
+00:00:56.495 --> 00:00:59.990
+are natively supported in most modern programming languages.
+
+00:00:59.990 --> 00:01:02.780
+So as you learn everything here in JavaScript,
+
+00:01:02.780 --> 00:01:04.660
+all you have to learn is the syntax,
+
+00:01:04.660 --> 00:01:08.640
+if you wanted to do the same thing in languages like rust and go.
+

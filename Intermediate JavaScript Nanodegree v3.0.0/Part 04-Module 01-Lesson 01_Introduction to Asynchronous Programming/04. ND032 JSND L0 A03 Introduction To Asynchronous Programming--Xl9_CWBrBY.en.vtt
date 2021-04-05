@@ -1,0 +1,94 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.220
+Before we really dive into any specifics of asynchronous programming,
+
+00:00:04.220 --> 00:00:06.840
+let's get a general picture of what we're talking about.
+
+00:00:06.840 --> 00:00:09.720
+Writing programs that do one thing at a time,
+
+00:00:09.720 --> 00:00:12.570
+like the JavaScript programs we've written so far that run
+
+00:00:12.570 --> 00:00:15.975
+one line at a time are fairly easy to reason about.
+
+00:00:15.975 --> 00:00:19.830
+Write the logic for one step at a time and then put them in order.
+
+00:00:19.830 --> 00:00:21.915
+All you need to think about is what happens next.
+
+00:00:21.915 --> 00:00:26.175
+Like the diagram here shows in the JavaScript programs we've written so far,
+
+00:00:26.175 --> 00:00:30.660
+we know that one task must be worked to completion before the next construct.
+
+00:00:30.660 --> 00:00:33.600
+What this means is that even if a task is just
+
+00:00:33.600 --> 00:00:36.910
+waiting for an IO operation to complete or is somehow idle,
+
+00:00:36.910 --> 00:00:40.845
+the whole program cannot progress until the task is completed.
+
+00:00:40.845 --> 00:00:43.830
+But as you can see, this isn't very efficient.
+
+00:00:43.830 --> 00:00:46.325
+We want to do something more like this,
+
+00:00:46.325 --> 00:00:49.850
+where if a particular task is waiting on an external event,
+
+00:00:49.850 --> 00:00:53.765
+our program can move past it to continue to work on other tasks.
+
+00:00:53.765 --> 00:00:57.080
+This is asynchronous programming in a nutshell.
+
+00:00:57.080 --> 00:01:01.940
+How to schedule these tasks and reason about more complicated flows will be the focus of
+
+00:01:01.940 --> 00:01:04.460
+the rest of this course and you will find yourself
+
+00:01:04.460 --> 00:01:07.235
+needing this all the time in real life.
+
+00:01:07.235 --> 00:01:12.800
+Some of the places asynchronous code is necessary are APIs or
+
+00:01:12.800 --> 00:01:15.335
+any external processes and
+
+00:01:15.335 --> 00:01:20.770
+long running processes like reading files or uploading files or things like that.
+
+00:01:20.770 --> 00:01:25.310
+Asynchronous code isn't only for dealing with processes happening elsewhere.
+
+00:01:25.310 --> 00:01:27.230
+It can also be a strategy for writing
+
+00:01:27.230 --> 00:01:30.415
+programs that make better use of your computer's resources.
+
+00:01:30.415 --> 00:01:33.680
+Most modern languages have built-in functionality to
+
+00:01:33.680 --> 00:01:37.100
+allow developers to create and manage asynchronous programs.
+
+00:01:37.100 --> 00:01:41.245
+We will cover both aspects and uses of asynchronous code in this course
+
+00:01:41.245 --> 00:01:46.920
+and I'll explain not only the syntax but the reasoning behind when and where to use it.
+

@@ -1,0 +1,354 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ImmutableJS</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Going Further with Functional JS</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Going Further with Functional JS Intro.html">01. Going Further with Functional JS Intro</a>
+    </li>
+    <li class="">
+      <a href="02. Persistent Data Structures.html">02. Persistent Data Structures</a>
+    </li>
+    <li class="">
+      <a href="03. ImmutableJS.html">03. ImmutableJS</a>
+    </li>
+    <li class="">
+      <a href="04. Exercise ImmutableJS.html">04. Exercise: ImmutableJS</a>
+    </li>
+    <li class="">
+      <a href="05. ImmutableJS Review.html">05. ImmutableJS Review</a>
+    </li>
+    <li class="">
+      <a href="06. Implementing ImmutableJS.html">06. Implementing ImmutableJS</a>
+    </li>
+    <li class="">
+      <a href="07. Exercise Implementing ImmutableJS.html">07. Exercise: Implementing ImmutableJS</a>
+    </li>
+    <li class="">
+      <a href="08. Implementing ImmutableJS Review.html">08. Implementing ImmutableJS Review</a>
+    </li>
+    <li class="">
+      <a href="09. RxJS and Ramda.html">09. RxJS and Ramda</a>
+    </li>
+    <li class="">
+      <a href="10. Functional Redux.html">10. Functional Redux</a>
+    </li>
+    <li class="">
+      <a href="11. Exercise Build Your Own Reducer.html">11. Exercise: Build Your Own Reducer</a>
+    </li>
+    <li class="">
+      <a href="12. Functional Redux Review.html">12. Functional Redux Review</a>
+    </li>
+    <li class="">
+      <a href="13. Lesson Recap.html">13. Lesson Recap</a>
+    </li>
+    <li class="">
+      <a href="14. Course Recap.html">14. Course Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. ImmutableJS</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>ImmutableJS</p></h3>
+  <div>
+  <h2 id="introduction">Introduction</h2>
+<p>Hopefully you’re all fired up to make use of Persistent Data Structures in your next JavaScript program, but writing all that functionality from scratch would be time consuming. Instead, we can use ImmutableJS, which is a library that gives us Persistent Data Structures in JavaScript. ImmutableJS has done the work of writing the JavaScript functionality so that when you create an object, it can look pretty much like a normal JavaScript object, but under the hood it will behave like a persistent data structure. This library is not solely a Functional library; you could actually use it in all the JavaScript you write if you wanted. The creators of Immutable have gone behind the scenes to create some very smart ways of handling data structures specific to JavaScript. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ImmutableJS Example</p></h3>
+  <div>
+  <p>To give you a clearer picture of what we’re talking about, let's take a look at some of the Immutable syntax. </p>
+<p>First, because Immutable is an external library, we have to add it to our project. We can do that one of two ways: via a script tag in an HTML page, or via a node module. Choose whichever one is more convenient for your application. For this course, we are going to use the browser script tag implementation. Here is an example of how ImmutableJS is implemented.</p>
+<pre><code>// Put this in an html page
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/immutable/3.8.2/immutable.min.js"&gt;&lt;/script&gt;
+
+// Or, you can install `immutable` module using npm and import this module in a js file
+npm install immutable // install immutable from the terminal
+const Immutable = require('immutable'); // add this line in js file</code></pre>
+<h2 id="immutablejs-basic-syntax">Immutable.js Basic Syntax</h2>
+<p>Now let's take a look at some syntax. We are going to take a quick tour of what it looks like to use Immutable, then once we have a feel for the syntax we’ll go back and take a look at how this uses persistent data structures under the hood. </p>
+<pre><code>// Getting and Setting values using Immutable module
+
+// Immutable objects are called ‘maps’
+const Immutable = require('immutable'); // import immutable module
+
+// this is how we declare an immutable Object
+const map1 = Immutable.Map({ a: 1, b: 2, c: 3 });
+
+
+// Here is an important part. We can’t update map1, so instead we have to make the change on map2. 
+const map2 = map1.set('b', 50);
+
+// Because of this, the old state of map1 is still available
+map1.get('b'); // 2
+
+// And map2 shows our update.
+map2.get('b'); // 50
+console.log(map2.get('b'))
+
+// equality check
+map1.equals(map2); // false
+console.log(map1.equals(map2))
+
+// Use with ordinary objects
+const state1 = Immutable.Map({ a: 1, b: 2, c: 3, d: 4 });
+const state2 = Immutable.Map({ c: 10, a: 20, t: 30 });
+const obj = { d: 100, o: 200, g: 300 };
+const map3 = state1.merge(state2, obj);
+console.log(map3.toJS()) // toJS() is a helper method to convert immutable object into javascript dictionary
+
+// If you open the returned object, you can see that it isn't an ordinary object
+// you'll find all the properties under "entries"
+
+// Use with ordinary arrays
+// An immutable array is declared as a `List` like this:
+const numbers = Immutable.List([1, 2, 3]);
+
+//But Immutable can also work with plain JS arrays
+const otherNumbers = [4, 5, 6]</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Immutable and Persistent Data Structures</p></h3>
+  <div>
+  <p>This section is not supposed to be a tutorial about using the immutable library, but to simply show a real life example of the Functional concept immutability applied in JavaScript. You can import Immutable into a project of your own to try it out or read more in their excellent documentation. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Immutable JS</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>From the code snippets below, which are examples of Immutable JS?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="1044084" id="rbk1">
+        <label for="rbk1"><pre><code>const map3 = map1.merge(map2, obj);</code></pre></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="1044084" id="rbk2">
+        <label for="rbk2"><pre><code>const person = Map({  name: 'Will',  pets: List(['cat', 'dog'])});</code></pre></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="1044084" id="rbk3">
+        <label for="rbk3"><pre><code>const people = map(p =&gt; {  name: p.name,  pets: ['cat', 'dog']
+});</code></pre></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk4" name="1044084" id="rbk4">
+        <label for="rbk4"><pre><code>const collection = Immutable.List.of('Rocket');
+collection.push('Groot');</code></pre></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    ``` javascript
+const collection = Immutable.List.of('Rocket');
+collection.push('Groot');
+```
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ImmutableJS Problem Set</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>In the DOM manipulation section in the previous lesson, we created a small program that could add content from our JavaScript file into the browser. Thinking back to that code, what part of it would be the best candidate as an Immutable value?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="rbk1" name="965853" id="rbk1">
+      <label for="rbk1"><p>The App function</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk2" name="965853" id="rbk2">
+      <label for="rbk2"><p>Components</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk3" name="965853" id="rbk3">
+      <label for="rbk3"><p>Store</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk4" name="965853" id="rbk4">
+      <label for="rbk4"><p>Render function</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk5" name="965853" id="rbk5">
+      <label for="rbk5"><p>All of the above</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Store</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Exercise Instructions</p></h3>
+  <div>
+  <h2 id="exercise-instructions">Exercise Instructions</h2>
+<p>Time to practice with some immutability challenges! Of course, Immutable is a library so we need to import it before any of its syntax will work. </p>
+<h3 id="local-machine">Local Machine</h3>
+<p>This next exercise can be found in <code>.../exercises/further_with_functional_js/immutablejs.js</code>.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. Exercise ImmutableJS.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. ImmutableJS')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

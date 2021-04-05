@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.815
+Hi, my name is Alyssa Hope and I'm going to be your instructor for this course.
+
+00:00:04.815 --> 00:00:08.790
+I'm a software engineer and spend most of my time writing React Apps.
+
+00:00:08.790 --> 00:00:10.065
+But for a long time,
+
+00:00:10.065 --> 00:00:12.075
+I was scared of asynchronous code.
+
+00:00:12.075 --> 00:00:15.900
+I didn't know the whys behind the syntax I was using so I just
+
+00:00:15.900 --> 00:00:19.935
+minimize the bare minimum and cross my fingers and hope that it would work.
+
+00:00:19.935 --> 00:00:22.620
+But that's not the right way to go about things,
+
+00:00:22.620 --> 00:00:25.200
+and asynchronous code is really a chance
+
+00:00:25.200 --> 00:00:27.975
+for our programmatic thinking to be challenged and shine.
+
+00:00:27.975 --> 00:00:30.755
+So if you've ever been afraid of asynchronous programming,
+
+00:00:30.755 --> 00:00:32.090
+you're in the right place.
+
+00:00:32.090 --> 00:00:36.425
+The goal of this course is to be a practical guide to the principles and syntax of
+
+00:00:36.425 --> 00:00:41.560
+asynchronous programming to empower you to write even more sophisticated programs.
+
+00:00:41.560 --> 00:00:45.100
+Without further ado, let's get started.
+

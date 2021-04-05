@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.165
+Look at that. You made it to the last lesson.
+
+00:00:03.165 --> 00:00:05.670
+You're now equipped with the necessary skills and
+
+00:00:05.670 --> 00:00:08.340
+knowledge to create some functional programs of your own.
+
+00:00:08.340 --> 00:00:12.330
+We're going to focus on the many resources in libraries that might save you
+
+00:00:12.330 --> 00:00:14.190
+time or enable you to go further with
+
+00:00:14.190 --> 00:00:17.265
+implementing functional programming in a professional setting.
+
+00:00:17.265 --> 00:00:20.430
+This course wouldn't be complete without introducing you to
+
+00:00:20.430 --> 00:00:24.700
+immutable RxJS, Ramda and Redux.
+

@@ -1,0 +1,306 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Introduction to Asynchronous Programming</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Introduction to Asynchronous Programming</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Meet your Instructor.html">01. Meet your Instructor</a>
+    </li>
+    <li class="">
+      <a href="02. Course Goals and Outline.html">02. Course Goals and Outline</a>
+    </li>
+    <li class="">
+      <a href="03. Prerequisites.html">03. Prerequisites</a>
+    </li>
+    <li class="">
+      <a href="04. Introduction to Asynchronous Programming.html">04. Introduction to Asynchronous Programming</a>
+    </li>
+    <li class="">
+      <a href="05. Exercise Asynchronous Programming.html">05. Exercise: Asynchronous Programming</a>
+    </li>
+    <li class="">
+      <a href="06. Solution Asynchronous Programming.html">06. Solution: Asynchronous Programming</a>
+    </li>
+    <li class="">
+      <a href="07. Why Asynchronous Programming Is Important.html">07. Why Asynchronous Programming Is Important</a>
+    </li>
+    <li class="">
+      <a href="08. Tools, Environment &amp; Dependencies.html">08. Tools, Environment &amp; Dependencies</a>
+    </li>
+    <li class="">
+      <a href="09. Project UdaciRacer Simulator.html">09. Project: UdaciRacer Simulator</a>
+    </li>
+    <li class="">
+      <a href="10. Recap.html">10. Recap</a>
+    </li>
+    <li class="">
+      <a href="11. Good Luck!.html">11. Good Luck!</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. Introduction to Asynchronous Programming</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="introduction-to-asynchronous-programming">Introduction to Asynchronous Programming</h2>
+<p>Lets jump right into some introductions. I'll give you a quick tour of Asynchronous Programming and what you'll gain by having a better understanding of these concepts.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ND032 JSND L0 A03 Introduction To Asynchronous Programming</p></h3>
+  <video controls>
+  <source src="04. ND032 JSND L0 A03 Introduction To Asynchronous Programming--Xl9_CWBrBY.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. ND032 JSND L0 A03 Introduction To Asynchronous Programming--Xl9_CWBrBY.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="key-points">Key Points</h3>
+<p>The JavaScript programs we’ve written so far run one function at a time and each function runs to completion before calling the next function in the chain. Programming in this synchronous way is fairly easy to reason about—write the logic for one task at a time and then run the tasks in order.</p>
+<p>Things get more complicated though when tasks don't just run sequentially. Either for efficiency reasons or to handle work done on another machine, we have to learn to manage when each step of our programs happen in a much more intentional way. This is the crux of asynchronous programming—it's all about “whenever [x] finishes, do [y]” or “while [x] is waiting, proceed with [y]”—and this scenario happens all the time in real life. Some of the places asynchronous code is necessary are:</p>
+<ul>
+<li>APIs (Asynchronous Programming Interfaces)</li>
+<li>Any external processes</li>
+<li>Long-running processes (reading files, uploading files, etc…)</li>
+<li>Writing more efficient programs that better utilize CPU</li>
+</ul>
+<p>The ability to write asynchronous programs is becoming commonplace in all modern languages, and the concepts you learn in this course will translate well to any language you end up using.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/synchronous-vs.-asynchronous.jpg" alt="Synchronous Vs. Asynchronous" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Synchronous Vs. Asynchronous</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="introduction-to-asynchronous-programming-quiz">Introduction to Asynchronous Programming Quiz</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Asynchronous Programming</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>From what we learned in this course, which of the following actions require asynchronous programming?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1592412832670" name="1036841" id="a1592412832670">
+      <label for="a1592412832670"><p>Reading/Writing to files</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1592412887546" name="1036841" id="a1592412887546">
+      <label for="a1592412887546"><p>Writing better CSS</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1592412904015" name="1036841" id="a1592412904015">
+      <label for="a1592412904015"><p>Compiled languages</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1592412964608" name="1036841" id="a1592412964608">
+      <label for="a1592412964608"><p>Requests to Application Programming Interfaces</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1592412996120" name="1036841" id="a1592412996120">
+      <label for="a1592412996120"><p>Long running processes that happen on another server</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1592413020907" name="1036841" id="a1592413020907">
+      <label for="a1592413020907"><p>Writing more efficient HTML</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1592413058390" name="1036841" id="a1592413058390">
+      <label for="a1592413058390"><p>Writing programs that make better use of time and CPU</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Reading/Writing to files</li>
+      <li>Requests to Application Programming Interfaces</li>
+      <li>Long running processes that happen on another server</li>
+      <li>Writing programs that make better use of time and CPU</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Asynchronous Programming</p></h3>
+  <div>
+  <p><strong>QUESTION: </strong></p>
+  <p>Have you written any asynchronous programs before taking this course? Reflect on what your experience has been with asynchronous events up to now. Maybe it was confusing or frustrating, or perhaps you got the code to work but couldn't visualize what was going on. If you've never written an asynchronous program, what are your preconceptions about how easy or difficult it is?</p>
+
+  <details>
+    <summary><strong>ANSWER:</strong></summary>
+    <p><p>This answer is just for you, being aware of where you are starting might help you make faster progress in the course! It might also be fun to look back at this answer once you've completed the course material!</p></p>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. Exercise Asynchronous Programming.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. Introduction to Asynchronous Programming')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,397 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars Dashboard</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Mars Dashboard</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Project Overview.html">01. Project Overview</a>
+    </li>
+    <li class="">
+      <a href="02. Project Instructions.html">02. Project Instructions</a>
+    </li>
+    <li class="">
+      <a href="03. Workspace.html">03. Workspace</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Mars Dashboard.html">Project Description - Mars Dashboard</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Mars Dashboard.html">Project Rubric - Mars Dashboard</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">Mars Dashboard</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            
+      <div>
+        <h2><p>Environment Setup</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Create a Node and Express Environment</p>
+        </td>
+        <td>
+          <p>App must use a Node/Express backend. Install the following <code>npm</code> packages in order to work with the API and build the rest of the app:</p>
+<ul>
+<li>Express</li>
+<li>Body parser</li>
+<li>Dotenv </li>
+<li>ImmutableJS</li>
+</ul>
+<p>Bolded files/folders are part of the <a href="https://video.udacity-data.com/topher/2019/November/5dd48879_rubric-envsetup-backendnodeexpress-ms-2/rubric-envsetup-backendnodeexpress-ms-2.png" rel="noopener noreferrer" target="_blank">Backend File</a> structure.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Create a Javascript Frontend</p>
+        </td>
+        <td>
+          <p>Setup the basic frontend dependencies and file structure for a single page application. Some starter code will be provided.</p>
+<p>Bolded files/folders are part of the <a href="https://video.udacity-data.com/topher/2019/November/5dd4887a_rubric-envsetup-frontend-ms-2/rubric-envsetup-frontend-ms-2.png" rel="noopener noreferrer" target="_blank">Frontend File</a> structure.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Immutable JS installed</p>
+        </td>
+        <td>
+          <p>Set up Immutable js for this project. For this project we are using a script for the CDN version. You should see the script referenced in <code>index.html</code>.</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>API and Routes</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Create API Credentials</p>
+        </td>
+        <td>
+          <p>Set up credentials to connect to the NASA API. </p>
+<ul>
+<li>Create an API key through NASA’s API. </li>
+<li>Add API key to the provided <code>.env-example</code> file.</li>
+<li>Rename the <code>.env-example</code> file to <code>.env</code>.</li>
+</ul>
+<p><strong>Note</strong>: The <code>.env-example</code> file is publicly visible and should not contain any personal information.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Show most recent information from the API</p>
+        </td>
+        <td>
+          <p>Create a dashboard showing photos and information about the Mars rovers using the NASA API</p>
+<p>Needs to display a minimum of this information for each rover (there are 3):</p>
+<ul>
+<li>Launch Date</li>
+<li>Landing Date</li>
+<li>Status</li>
+<li>Most recently available photos</li>
+<li>Date the most recent photos were taken</li>
+</ul>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Create Requests for the Desired Information</p>
+        </td>
+        <td>
+          <p>Set up the Node/Express app as a middleman to take requests from the frontend, make requests to the API, and pass that information back to the frontend using functional methods.</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>Functional JS Logic</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Use Pure Functions to organize logic</p>
+        </td>
+        <td>
+          <p>Build custom pure functions to do logic. No logic should happen outside of these functions.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Use of const/let/var correctly</p>
+        </td>
+        <td>
+          <p>Use the variable types in the appropriate instance:</p>
+<ul>
+<li><code>const</code> for all values that will not change<ul>
+<li><code>let</code> for those that will need to change</li>
+<li><code>var</code> <strong>only</strong> if an instance comes up where a globally editable value is necessary</li></ul></li>
+</ul>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Use of array methods correctly</p>
+        </td>
+        <td>
+          <p>Use the correct method to fit the information they are working with from the API. </p>
+<p>In the logic you should be able to see:</p>
+<ul>
+<li>At least one custom pure function using <code>map</code>, just about every API call will require this at some point.</li>
+<li>At least one dynamic component on their page (for instance, one that uses an <code>if statement</code> to behave differently based on the presence or absence of a value).</li>
+</ul>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Use higher-order functions</p>
+        </td>
+        <td>
+          <p>Use at least <strong>2</strong> higher-order functions that are reusable UI elements (i.e. an unordered list function that is returned by the other dashboard section functions).</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>Dynamic UI</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Create an interactive UI </p>
+        </td>
+        <td>
+          <p>The UI should have a dynamic aspect that allows a user to choose which rover’s information they want to see. This will most likely be a set of tabs that can be clicked to see the information. </p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Create appealing page with mobile first styling</p>
+        </td>
+        <td>
+          <p>Build upon the given mobile first styling for mobile or desktop. Must be a breakpoint for mobile that comes first in the stylesheet. </p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div class="jumbotron">
+        <h3>Tips to make your project standout:</h3>
+        <p><ol>
+<li>Find a good use for ForEach, Reduce, Find, Includes, or Sort methods.</li>
+<li>Explore other endpoints of the NASA API such as the following:</li>
+</ol>
+<ul>
+<li>Incorporate the apod image in the styling.</li>
+<li>Add the Mars weather embed code. </li>
+<li>Add a wind graph at the location of the rover.</li>
+</ul>
+<ol>
+<li>Pay extra attention to styling.</li>
+</ol></p>
+      </div>
+    
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('Mars Dashboard')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

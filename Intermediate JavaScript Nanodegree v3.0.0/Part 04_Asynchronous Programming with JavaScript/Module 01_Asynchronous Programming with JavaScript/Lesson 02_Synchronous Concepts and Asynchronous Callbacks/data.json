@@ -1,0 +1,1842 @@
+{
+  "data": {
+    "lesson": {
+      "id": 1015400,
+      "key": "f3e0b0c5-2d46-4728-a166-0781652f07ee",
+      "title": "Synchronous Concepts and Asynchronous Callbacks",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "To create a foundation for asynchronous programming concepts, we start with a discussion of synchronous code and the concepts of blocking vs non-blocking, then learn to use asynchronous callbacks. ",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/f3e0b0c5-2d46-4728-a166-0781652f07ee/1015400/1594150374984/Synchronous+Concepts+and+Asynchronous+Callbacks+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/f3e0b0c5-2d46-4728-a166-0781652f07ee/1015400/1594150371297/Synchronous+Concepts+and+Asynchronous+Callbacks+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 1015402,
+          "key": "f5125bc9-c998-4315-923f-2c8278615a3c",
+          "title": "Lesson Introduction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f5125bc9-c998-4315-923f-2c8278615a3c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 1018261,
+              "key": "f84fe030-e3b4-4987-bfd3-1845d91a0ac2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Synchronous Concepts and Asynchronous Callbacks",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1018196,
+              "key": "a2c3d449-9d26-4af6-8fee-f66983acfdab",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Overview",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1018195,
+              "key": "bd60c0e1-3b25-4c97-a641-161c289721b9",
+              "title": "ND032 JSND L1 A01 Lesson Introduction V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "CjqgN4FYWP8",
+                "china_cdn_id": "CjqgN4FYWP8.mp4"
+              }
+            },
+            {
+              "id": 1016032,
+              "key": "5437142d-c05f-42da-a96f-aa045888504d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Concepts\nIn this lesson we will cover the following:\n\n- Introduction to threads\n- Blocking vs. Non-Blocking code\n- Callbacks for asynchronous functionality\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1033529,
+              "key": "49806df3-5b34-4344-a142-c0c8e918624e",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2020/June/5edbf610_jsndc3-l1-overview/jsndc3-l1-overview.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/49806df3-5b34-4344-a142-c0c8e918624e",
+              "caption": "",
+              "alt": "Lesson Overview",
+              "width": 830,
+              "height": 336,
+              "instructor_notes": null
+            },
+            {
+              "id": 1033528,
+              "key": "ee45b49c-df3a-4454-bf5e-92bfc6e827dd",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Resources\nHere is a list of supporting resources you might find helpful as you start this lesson:\n- [Mozilla's Introduction to Asynchronous Concepts](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Concepts)\n- [Intro to Blocking and Non-Blocking ](https://saimulticorecomputing.wordpress.com/2014/06/25/blocking-and-non-blocking-function-calls/)\n\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1018266,
+              "key": "71b56e5f-c7ba-4c7e-9743-51efdc063e2e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Before we get started...",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1018264,
+              "key": "9900cedf-4fc4-4dbc-9c44-c5262351e5c5",
+              "title": "Terms Quiz",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "9900cedf-4fc4-4dbc-9c44-c5262351e5c5",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Which of these programming terms have you heard of? (You don't need to be able to define them or know anything about them, just if you've heard of them)",
+                "answers": [
+                  {
+                    "id": "a1588465042960",
+                    "text": "Asynchronous",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1588465127618",
+                    "text": "Blocking",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1588465139807",
+                    "text": "Non-Blocking",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1588465146281",
+                    "text": "Parallel",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1588465151841",
+                    "text": "Concurrent",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1588465158736",
+                    "text": "Single Threaded",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1588465174784",
+                    "text": "Multi Threaded",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1588465181086",
+                    "text": "Main Thread (in terms of JavaScript)",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 1016016,
+          "key": "a0d83f5f-304c-4e35-9107-7291d59607db",
+          "title": "Synchronous Programming ",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a0d83f5f-304c-4e35-9107-7291d59607db",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 1036848,
+              "key": "31f0e2b9-87d7-426a-b70c-67c9113bd545",
+              "title": "ND032 JSND L1 A02 What Is Synchronous Programming V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "MfdxdAkZkno",
+                "china_cdn_id": "MfdxdAkZkno.mp4"
+              }
+            },
+            {
+              "id": 1016017,
+              "key": "17c062ca-83fa-4d6d-b785-4182feeeb887",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## What is Synchronous Programming?\n\nBe patient with me a minute as we go back to the very basics. All this talk of asynchronous code… but what exactly does it mean to be “synchronous”?\n\n### An Analogy\nUnderstanding the synchronous process is easiest when you see it in comparison with an asynchronous process. There are a lot of really good analogies for synchronous/asynchronous programming, you might have heard some of them already. Listen to the video above to hear the coffee shop analogy.\n\n### Analogy Takeaways\nSo what is synchronous programming? It is programming in a way that doesn't try to be efficient with time. Like the barista who waits for the coffee machine as it makes coffee instead of moving on to other tasks, synchronous code will not move on from a task even if it is just waiting for a response from something else. \n\nYou can see how the asynchronous approach is **more efficient**, but also can be more complicated. Another important thing to notice in this analogy is that there is *only ever one barista*, we haven't sped up the process by adding another worker, instead the barista is effectively using their time by continuing with work they can do, while waiting for another task to complete. \n\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1029034,
+              "key": "078e56ec-e747-49d3-b815-de522e109023",
+              "title": "Thought Experiment",
+              "semantic_type": "ReflectAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "078e56ec-e747-49d3-b815-de522e109023",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "title": null,
+                "semantic_type": "TextQuestion",
+                "evaluation_id": null,
+                "text": "Can you find another synchronous/asynchronous analogy from your own life? \n\nFor example, mine would be something like this:\n\n*Doing the laundry synchronously - I would put clothes in the washer, add the soap, start the washing cycle, and then stand there watching the washing machine until it was done with the entire cycle. Doing the laundry asynchronously - I start a load of laundry, turn on the washer and go on to other tasks. The washer’s buzzer tells me that I can circle back around to the washer and grab the clean clothes.*\n\nThis is a great example of an asynchronous task and follows very closely with probably the most common asynchronous task you are familiar with - making API calls!"
+              },
+              "answer": {
+                "text": "Good work! Analogies for synchronous and asynchronous ways of doing things are very common in daily life. Deliveries, household chores, school, driving, they all hold potential analogies. ",
+                "video": null
+              }
+            }
+          ]
+        },
+        {
+          "id": 1029498,
+          "key": "53a5111f-ad70-4626-bafc-08459c75348f",
+          "title": "Introduction to Single Threaded Programming",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "53a5111f-ad70-4626-bafc-08459c75348f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 1029499,
+              "key": "d0b1e235-d0fd-4496-bbfe-5ea03cca909a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Introduction to Threads",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1029500,
+              "key": "39187735-fe00-465c-8116-8e20f8f2bce2",
+              "title": "ND032 JSND L1 A03 Introduction To Threads",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "NgiTvUbQxxg",
+                "china_cdn_id": "NgiTvUbQxxg.mp4"
+              }
+            },
+            {
+              "id": 1029501,
+              "key": "856f2a26-f7f8-49ca-949c-447e091b964d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Threads Summary\n\n**Threads** are where computers do work, they can do one thing at a time. Modern computers achieve work quickly by spreading tasks across multiple threads. \n\nBut **JavaScript is single-threaded**, we only get one thread on which to do work (with exceptions...but we'll get to that later). Only one thing can happen at a time, so we have to learn to use our single thread as efficiently as possible. \n\n**Synchronous programs** don't try to use the thread efficiently, they just program tasks to be done and if one task takes a long time - even if it is just waiting for something to happen - the thread is blocked and cannot move onto the next task until the current one is completely finished. \n\nThe inverse of this shows us that **Asynchronous programs** use clever methods and syntax to their advantage with a goal of getting as much usefulness out of the single thread as possible.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1034879,
+              "key": "355fed98-6422-44da-a293-06afd64d596f",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2020/June/5eec089c_jsndc3-l1-threads/jsndc3-l1-threads.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/355fed98-6422-44da-a293-06afd64d596f",
+              "caption": "",
+              "alt": "Single vs Multithread",
+              "width": 802,
+              "height": 378,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 1016038,
+          "key": "f41b5a6c-a8f2-4cf5-9d7c-4e925d370c49",
+          "title": "Blocking vs Non-Blocking",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f41b5a6c-a8f2-4cf5-9d7c-4e925d370c49",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 1016039,
+              "key": "904b6199-61b6-487e-9874-accce14a5df0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# The Concept of Blocking and Non-Blocking",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1016040,
+              "key": "18a3906c-cd68-47c8-b10f-921f3f857022",
+              "title": "ND032 JSND L1 A04 The Concept Of Blocking Vs Non-Blocking",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "sAsmw49Hvc0",
+                "china_cdn_id": "sAsmw49Hvc0.mp4"
+              }
+            },
+            {
+              "id": 1016041,
+              "key": "21bfc184-e209-4bf8-aa48-c1c56be2276a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Blocking and Non-Blocking Recap\n\n**Blocking** refers to a task that stops all work on the thread until it is complete. A **non-blocking** task allows the program to go on with other tasks while waiting for something to finish. For instance, if my application makes a blocking request to an API, the entire thread is stuck while it is just waiting for that information to come back. If we change it to use a non-blocking request our program can continue on to complete other tasks and deal with the API response when it becomes available.\n\n**Synchronous** programs use **blocking** code. **Asynchronous** programs use **non-blocking** code when it is beneficial. By learning to write non-blocking code to create asynchronous programs, we can reduce inefficiencies and make better use of the computing power available to us.\n\nThis was the theory - now on to the code!  In the next section we will do some code walkthroughs.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1034878,
+              "key": "1ea1f925-5269-4248-9690-70db82d2001d",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2020/June/5eec0a3e_jsndc2-l1-blocking-vs-non-blocking/jsndc2-l1-blocking-vs-non-blocking.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/1ea1f925-5269-4248-9690-70db82d2001d",
+              "caption": "",
+              "alt": "Blocking vs non blocking",
+              "width": 853,
+              "height": 466,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 1016042,
+          "key": "47b34695-a168-47d2-8983-c2049b1ea010",
+          "title": "Blocking vs Non-Blocking Code",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "47b34695-a168-47d2-8983-c2049b1ea010",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 1016044,
+              "key": "c65b0d25-57da-4abe-8282-acbda569ec33",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Blocking vs Non-Blocking Code \n\nNow let’s take a practical look at some blocking and non-blocking code examples and learn about the asynchronous nature of JavaScript.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1016046,
+              "key": "5c3ad4b6-b146-4ad2-9d71-2aae1d00c5e4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Code Walkthrough",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1016045,
+              "key": "846c99ab-ad6d-4961-a51b-03770cde40d5",
+              "title": "ND032 JSND L1 A05 Blocking Vs Non-Blocking Code",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "UECiAZbqSqY",
+                "china_cdn_id": "UECiAZbqSqY.mp4"
+              }
+            },
+            {
+              "id": 1016048,
+              "key": "e09600ee-a5c1-49ee-abaa-5b91381d5e6b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Walkthrough Recap\n\nNow we've seen some quick examples that hopefully illustrated the differences between blocking and non-blocking code. \n\nThe important thing is that we saw some asynchronous syntax in JavaScript. We learned that JavaScript moves I/O operations to a new thread via an internal API, which is why using the timer in our example was automatically non-blocking. This is what is meant when JavaScript is described as a \"**single threaded programming language with asynchronous non-blocking I/O**\". \n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1037284,
+              "key": "138b1966-3643-4f21-937a-2c1d92ecc3b3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Try It Yourself\n\nThis Workspace includes the code from both examples in the video.  Run it for yourself -- and then make some changes to explore blocking and non-blocking code.\n\nWhen you are ready, check out the Challenges on the next page.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1037283,
+              "key": "91bf4335-81fd-497c-b31c-789af053537a",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "r950324c1016042xGENERICe7fitab2",
+              "pool_id": "webterminal",
+              "view_id": "generic-0eqe0",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "port": 3000,
+                    "ports": [],
+                    "userCode": "",
+                    "openFiles": [
+                      "/home/workspace/blocking_example.js",
+                      "/home/workspace/non_blocking_example.js"
+                    ],
+                    "showFiles": true,
+                    "allowClose": false,
+                    "showEditor": true,
+                    "allowSubmit": false,
+                    "terminalTitle": "BASH",
+                    "openTerminalOnStartup": true
+                  },
+                  "kind": "generic"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 1037282,
+              "key": "c0643e9b-92bb-457f-bfd3-c865112c3c9d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Resources\n\nIf you want a list of the JavaScript internal API's, I found it hard to find a good list, but this one by Mozilla is pretty good: [Introduction to web APIs](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction).\n\nFor another explanation of the asynchronous nature of JavaScript, here is a good article that proceeds to many of the topics we will cover in this course: [Getting to know asynchronous JavaScript: Callbacks, Promises and Async/Await](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee).\n\nMany of the articles about asynchronous JavaScript focus on JavaScript running in the browser, here are the Node docs for a look from the server side perspective: [Overview of Blocking vs Non-Blocking](https://nodejs.org/en/docs/guides/blocking-vs-non-blocking/).\n\n\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 1016049,
+          "key": "6f0e6237-5a96-45a2-a852-353165658f2e",
+          "title": "Exercise: Blocking vs Non-Blocking",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6f0e6237-5a96-45a2-a852-353165658f2e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 1016050,
+              "key": "d9822c9e-2751-4d14-b166-62cdaa258ee9",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "r950324c1016049xGENERICgccca1qv",
+              "pool_id": "webterminal",
+              "view_id": "generic-7m2xt",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "port": 3000,
+                    "ports": [],
+                    "userCode": "",
+                    "openFiles": [
+                      "/home/workspace/non-blocking_challenge.js",
+                      "/home/workspace/non-blocking_challenge2.js"
+                    ],
+                    "showFiles": true,
+                    "allowClose": true,
+                    "showEditor": true,
+                    "allowSubmit": false,
+                    "terminalTitle": "BASH",
+                    "openTerminalOnStartup": true
+                  },
+                  "kind": "generic"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 1029096,
+          "key": "3b044f92-79dd-4913-ba10-1779e0f93491",
+          "title": "Solution: Blocking vs Non-Blocking",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3b044f92-79dd-4913-ba10-1779e0f93491",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 1029163,
+              "key": "7f86249b-a731-4e94-8a5d-1c475be96da4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Non-Blocking Challenge Solutions Explained\n\n### Challenge 1",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1029164,
+              "key": "ddb8ec7d-b3bb-464e-a39b-3c95c111e960",
+              "title": "ND032 JSND L1 A06 Blocking Vs Nonblocking Challenge Part 1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "OuRyyJHTEo4",
+                "china_cdn_id": "OuRyyJHTEo4.mp4"
+              }
+            },
+            {
+              "id": 1029165,
+              "key": "6fe534b6-732b-482f-8d46-49420415441f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "#### Solution Code\n\nHere is the code for the solution so you can interact with it yourself.\n\n```\nconst logB = () => {\n    console.log(\"B\")\n}\n\nconst logC = () => {\n    console.log(\"C\")\n    console.log(\"D\")\n}\n\nconsole.log(\"A\")\nsetTimeout(logB, 2000);\nsetTimeout(logC, 3000);\n```\n\n### Challenge 2",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1037214,
+              "key": "2b33f156-cbf8-4f21-8b8a-8d4e3108bdc1",
+              "title": "ND032 JSND L1 A06 Blocking Vs Nonblocking Challenge Part 2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "UQH4O2kYl_g",
+                "china_cdn_id": "UQH4O2kYl_g.mp4"
+              }
+            },
+            {
+              "id": 1035366,
+              "key": "8829fd2c-24d5-4ed5-8e36-4a1a9eb7e025",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "\n\n#### Solution Code\n\nHere is the code for the solution so you can interact with it yourself.\n```\nconst quote = \"The art of programming is the skill of controlling complexity.\";\nconst reference = \"-- Marijn Haverbeke, Eloquent JavaScript\";\n\n\nconst printWordClosure = () => {\n    let index = 0\n\n    return (quotation) => {\n        console.log(quotation[index])\n        if (index === quotation.length-1) {\n            clearInterval(quoteInterval)\n            console.log(reference)\n        }\n        index++\n    }\n}\n\nconst quoteInterval = setInterval(printWordClosure(), 1000, quote.split(' '));\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 1015403,
+          "key": "0276568b-af4e-4970-8a99-1fdbf4c17bb4",
+          "title": "Asynchronous, Concurrent, or Parallel? ",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0276568b-af4e-4970-8a99-1fdbf4c17bb4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 1016052,
+              "key": "f5605f2d-cb6b-4d95-bd49-6d5a8eb6d37b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Asynchronous, Concurrent, or Parallel?\n\nLets get some terms straight. These terms are similar enough in meaning that they often get mixed up, misused, and abused, but this course wouldn't be complete without making sure that you are equipped to use each term correctly and understand the differences between them. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1016053,
+              "key": "fc55f9d9-6990-4473-89bd-54caa05f92f0",
+              "title": "ND032 JSND L1 A07 Asynchronous Concurrent Or Parallel",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "FRmFrVSuXO4",
+                "china_cdn_id": "FRmFrVSuXO4.mp4"
+              }
+            },
+            {
+              "id": 1016054,
+              "key": "e72b68ab-89ad-4abe-bce0-38c7affafeab",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Recap\n\nWe covered a lot of new terms in this lesson, lets go over them again.\n\n##### **Asynchronous**\nRefers to the management of a single thread that can move past tasks that are waiting to complete the rest of the program. Synonymous with non-blocking.\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1031154,
+              "key": "88e5dbae-ec2d-4687-8d1d-3bf62453038a",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2020/June/5eec1159_jsncd-c3-l1-async/jsncd-c3-l1-async.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/88e5dbae-ec2d-4687-8d1d-3bf62453038a",
+              "caption": "",
+              "alt": "",
+              "width": 542,
+              "height": 497,
+              "instructor_notes": null
+            },
+            {
+              "id": 1031157,
+              "key": "b3500786-1e81-4a81-a443-a5028144edd3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "##### **Parallel**\nRunning two processes on two separate threads simultaneously\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1031156,
+              "key": "99b2c9f1-6078-47d0-ac10-ae97972b09fc",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2020/June/5eec1208_jsndc3-l1-parallel/jsndc3-l1-parallel.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/99b2c9f1-6078-47d0-ac10-ae97972b09fc",
+              "caption": "",
+              "alt": "",
+              "width": 636,
+              "height": 453,
+              "instructor_notes": null
+            },
+            {
+              "id": 1031158,
+              "key": "b515a3b5-6bd1-4982-a412-24ae61399602",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "##### **Concurrent**\nAchieving the appearance of simultaneous computation by switching between tasks on an active thread \n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1031155,
+              "key": "d93e3f90-457b-4c79-8580-ba8e1cbfe16b",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2020/June/5eec121e_jsndc3-l1-concurrent/jsndc3-l1-concurrent.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/d93e3f90-457b-4c79-8580-ba8e1cbfe16b",
+              "caption": "",
+              "alt": "",
+              "width": 586,
+              "height": 391,
+              "instructor_notes": null
+            },
+            {
+              "id": 1031159,
+              "key": "b27977d6-ad85-44ce-ad89-ddef4d0c97ed",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 1029566,
+          "key": "aa562291-9873-4bbf-8435-e31c646894b5",
+          "title": "Quizzes: Synchronous Programming",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "aa562291-9873-4bbf-8435-e31c646894b5",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 1029567,
+              "key": "864bc5cc-c322-495b-8b85-ec2cff6f6541",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## What Have You Learned About Synchronous Programming?\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1029569,
+              "key": "01d21bc5-9749-499f-a969-5a6bab88d17a",
+              "title": "Off the Main Thread",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "01d21bc5-9749-499f-a969-5a6bab88d17a",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Which of the following move work off the main thread in JavaScript?",
+                "answers": [
+                  {
+                    "id": "a1590887974614",
+                    "text": "setTimeout",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1590888154558",
+                    "text": "Array.map",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1590888491499",
+                    "text": "setInterval",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1590888492582",
+                    "text": "Object.create",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1591212737318",
+                    "text": "`fetch(\"www.myurl.com\")`",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 1031010,
+              "key": "24e36635-eceb-4246-94ef-73ef2ffa2651",
+              "title": "Terms",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "24e36635-eceb-4246-94ef-73ef2ffa2651",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "Match the terms to their definitions"
+                },
+                "concepts_label": "Term",
+                "answers_label": "Definition",
+                "concepts": [
+                  {
+                    "text": "Multi-threaded with one active execution thread ",
+                    "correct_answer": {
+                      "id": "a1590970321325",
+                      "text": "Concurrent"
+                    }
+                  },
+                  {
+                    "text": "Many threads, simultaneous execution ",
+                    "correct_answer": {
+                      "id": "a1590970383531",
+                      "text": "Parallel"
+                    }
+                  },
+                  {
+                    "text": "Single-threaded but capitalizes on idle time by continuing program execution",
+                    "correct_answer": {
+                      "id": "a1591211147353",
+                      "text": "Asynchronous"
+                    }
+                  },
+                  {
+                    "text": "Single-threaded and requires all tasks to complete before starting the next ",
+                    "correct_answer": {
+                      "id": "a1591211234366",
+                      "text": "Synchronous"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1591211282546",
+                    "text": "Parallel"
+                  },
+                  {
+                    "id": "a1591211306971",
+                    "text": "Asynchronous"
+                  },
+                  {
+                    "id": "a1591211147353",
+                    "text": "Asynchronous"
+                  },
+                  {
+                    "id": "a1590970321325",
+                    "text": "Concurrent"
+                  },
+                  {
+                    "id": "a1591211321579",
+                    "text": "Concurrent"
+                  },
+                  {
+                    "id": "a1590970383531",
+                    "text": "Parallel"
+                  },
+                  {
+                    "id": "a1591211234366",
+                    "text": "Synchronous"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 1037297,
+              "key": "97a7c068-8f88-40ed-ae72-b4b606238b0f",
+              "title": "Practice Interview Question",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "97a7c068-8f88-40ed-ae72-b4b606238b0f",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What is the difference between **Asynchronous** and **Parallel** programming?",
+                "matchers": [
+                  {
+                    "expression": "[^/s]+"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 1032047,
+              "key": "8204e2fb-c740-49ed-9fa1-35aa1d1b4361",
+              "title": "Fill in the blank",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "8204e2fb-c740-49ed-9fa1-35aa1d1b4361",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "JavaScript is a/n _______ language with non-blocking I/O.",
+                "answers": [
+                  {
+                    "id": "a1591211870824",
+                    "text": "asynchronous",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1591211936950",
+                    "text": "multi-threaded",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1591211941413",
+                    "text": "parallel",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1591211951156",
+                    "text": "single-threaded",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1591211967678",
+                    "text": "awesome",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 1032048,
+              "key": "46f4851f-1e30-4734-868c-bcc3e8f32386",
+              "title": "Blocking or Non-Blocking?",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "46f4851f-1e30-4734-868c-bcc3e8f32386",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Look at this code and determine whether it blocks the thread or not. Remember, you can run it locally to find out!\n\n```\nfunction runTimer = (startingTime) => {\n  const time = parseInt(startingTime);\n  while (time < 100) {\n    console.log(\"testing\", time);\n    time = time++;\n  }\n};\n\nrunTimer(0)\nconsole.log(\"timer complete\");\n\n```",
+                "answers": [
+                  {
+                    "id": "a1591212271690",
+                    "text": "Blocking",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1591212298435",
+                    "text": "Non-Blocking",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 1032049,
+              "key": "f41b4f7d-4ea6-4496-aa2a-7bc712d13592",
+              "title": "Blocking or Non-Blocking?",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "f41b4f7d-4ea6-4496-aa2a-7bc712d13592",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Look at this code and determine whether it blocks the thread or not. Remember, you can run it locally to find out!\n\n```\nlet recentAccountBalances = [];\n\nconst appendBalance = () => {\n  recentAccountBalances.push(Math.random() * (200 - 100) + 100)\n  console.log(recentAccountBalances)\n}\n\nconst pollAccount = () => {\n  setInterval(appendBalance, 4000)\n}\n\nconsole.log(\"test\")\n\npollAccount()\n```",
+                "answers": [
+                  {
+                    "id": "a1591212584571",
+                    "text": "Blocking",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1591212599050",
+                    "text": "Non-Blocking",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 1036838,
+              "key": "b138c80b-6437-4816-b2f3-b31a6c7316e0",
+              "title": "Single Threaded or Multi Threaded?",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "b138c80b-6437-4816-b2f3-b31a6c7316e0",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "We've learned a lot of different terms in this lesson, match the terms below to the type of program they apply to."
+                },
+                "concepts_label": "Term",
+                "answers_label": "Type of Program",
+                "concepts": [
+                  {
+                    "text": "Synchronous",
+                    "correct_answer": {
+                      "id": "a1592411386961",
+                      "text": "Single Threaded"
+                    }
+                  },
+                  {
+                    "text": "Asynchronous",
+                    "correct_answer": {
+                      "id": "a1592411596230",
+                      "text": "Single Threaded"
+                    }
+                  },
+                  {
+                    "text": "Concurrent",
+                    "correct_answer": {
+                      "id": "a1592411604548",
+                      "text": "Multi Threaded"
+                    }
+                  },
+                  {
+                    "text": "Parallel",
+                    "correct_answer": {
+                      "id": "a1592411613432",
+                      "text": "Multi Threaded"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1592411642872",
+                    "text": "Multi Threaded"
+                  },
+                  {
+                    "id": "a1592411638541",
+                    "text": "Single Threaded"
+                  },
+                  {
+                    "id": "a1592411613432",
+                    "text": "Multi Threaded"
+                  },
+                  {
+                    "id": "a1592411386961",
+                    "text": "Single Threaded"
+                  },
+                  {
+                    "id": "a1592411596230",
+                    "text": "Single Threaded"
+                  },
+                  {
+                    "id": "a1592411604548",
+                    "text": "Multi Threaded"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 1037344,
+              "key": "4743686d-55c6-4c56-a77c-a1f15f0593f4",
+              "title": "Practice Interview Question",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "4743686d-55c6-4c56-a77c-a1f15f0593f4",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "In your own words, explain the difference between blocking and non-blocking code. You might use an example from life or a tech example like an API request.\n\n",
+                "matchers": [
+                  {
+                    "expression": "[^/s]+"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 1036849,
+              "key": "55c588f9-135a-49bb-a018-a2fa87ce4142",
+              "title": "Code Review",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "55c588f9-135a-49bb-a018-a2fa87ce4142",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Select all the terms that apply to this code:\n\n```\nconst date = new Date();\nconst day = date.getDay();\nconst random = Math.floor(Math.random() * 10);\n\nconsole.log(`Hello there! Its ${day}, and your random number for the day is ${random}. Smile and have a great day!`)\n```",
+                "answers": [
+                  {
+                    "id": "a1592414864640",
+                    "text": "Single Threaded",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1592415230635",
+                    "text": "Multi Threaded",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1592415234796",
+                    "text": "Blocking",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1592415241080",
+                    "text": "Non-Blocking",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1592415245248",
+                    "text": "Synchronous",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1592415250837",
+                    "text": "Asynchronous",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1592415254733",
+                    "text": "Parallel",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1592415259515",
+                    "text": "Concurrent",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 1015406,
+          "key": "f9df7fd9-6dd2-4d7a-b27f-83d409976949",
+          "title": "Introduction to Sequencing Events - Callbacks",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f9df7fd9-6dd2-4d7a-b27f-83d409976949",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 1016235,
+              "key": "6dab6271-c2d4-4c95-a61b-a3f886d6084f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Sequencing Events with Callbacks\n\nYou have used callbacks already: any function passed to another function as argument is a callback. We aren’t going to go back to the basics with callbacks in this section, but we are going to cover how callbacks can create asynchronous flows.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1016237,
+              "key": "4977796e-0d29-42c4-9e32-1a88b9459ba3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### How Callbacks Create Asynchronous Functionality",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1016236,
+              "key": "b2c36915-f9ba-4111-979c-1d195d4f66dc",
+              "title": "ND032 JSND L1 A08 Sequencing Events Callbacks V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "hPUy46cEf7s",
+                "china_cdn_id": "hPUy46cEf7s.mp4"
+              }
+            },
+            {
+              "id": 1016238,
+              "key": "42919c55-89c7-464a-a5ba-ae8280e80c0e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Callbacks For Asynchronous Functionality Recap\n\nCallbacks are the vehicle for our asynchronous tasks to rejoin the main thread. When work moves off the thread, we send it with a function to run on the main thread when it is complete. This allows us to continue acting on the result of an asynchronous event whenever the event completes. In this way, passing functions as callbacks allows us to schedule reactions to asynchronous events without having to know how long the asynchronous event will take.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1029194,
+              "key": "25b40493-d92e-4937-bda1-714fce7be99e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### More Resources\n\nIf you need a refresher on JavaScript callbacks, here are some resources\n\n- [JavaScript.info: callbacks](https://javascript.info/callbacks)\n- [MDN webdocs: Async callbacks](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing#Async_callbacks)\n\nIf you want to go further into understanding how JavaScript handles these things at a lower level, I highly recommend this talk by Jake Archibald, the concepts you learned in this lesson will help you understand the concepts he covers:\n\n- [Jake Archibald: In The Loop - JSConf.Asia](https://www.youtube.com/watch?v=cCOL7MC4Pl0)",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 1015408,
+          "key": "0219cc0e-f320-4c41-87a0-4ed5cc055a3c",
+          "title": "Callbacks Best Practices - Chaining",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0219cc0e-f320-4c41-87a0-4ed5cc055a3c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 1016239,
+              "key": "9f90cde0-4747-4ff3-b880-9072c0f8dada",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Best Practices when using Callbacks\n\nHere are a few quick tips with code examples for writing cleaner and easier to debug callback chains. \n\n### Chaining for Easier Reading\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1029541,
+              "key": "509e06bc-4378-4d3d-ab10-ced94b949a8d",
+              "title": "ND032 JSND L1 A09 Callbacks Best Practices Part 1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "kxluxmC1nME",
+                "china_cdn_id": "kxluxmC1nME.mp4"
+              }
+            },
+            {
+              "id": 1036007,
+              "key": "a7a07039-a99c-4a4e-bf55-a33fef5b0ea4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Chaining for Easier Reading Recap\n\nHere is the code from the video above:\n\n```\nconst mockAPI = (returnValue) => (arg, cb) => {\n    setTimeout(() => cb(returnValue), 2000)\n}\n\nconst fetchSession = mockAPI({ id: \"123765\" })\nconst fetchUser = mockAPI({ firstname: \"Bob\" })\nconst fetchUserFavorites = mockAPI([ \"lions\", \"tigers\", \"bears\" ])\n\nconst runCallbacks = () => {\n    fetchSession(\"session-id\", (session) => {\n        fetchUser(session, (user) => {\n            fetchUserFavorites(user, (favorites) => {\n                console.log(favorites)\n            })\n        })\n    })\n}\n\nconst runCallbacksFlat = () => {\n    const handleFavorites = (favorites) => {\n        console.log(favorites)\n    }\n    \n    const handleUser = (user) => {\n        fetchUserFavorites(user, handleFavorites)\n    }\n\n    const handleSession = (session) => {\n        fetchUser(session, handleUser)\n    }\n\n    fetchSession(\"session-id\", handleSession)\n}\n```\n\n## Review Points\n\n- Flattening a callback chain might make it easier to read, but it will be more code\n- The cleanest way to write the callback chain will depend on how much logic is happening in each step, and your personal preference\n- It is always cleaner to move repeated steps, or long sets of steps, out into an external function\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1037340,
+              "key": "a4539eb6-6f7e-48f1-ac16-1d11470da785",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Try It Out\n\nUse the Workspace below to run the code from the video. Which version of the code do you prefer?",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1037338,
+              "key": "210227ec-34c3-4109-b6c5-45eb8cf2a528",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "r950324c1015408xGENERIC27qnlbcz",
+              "pool_id": "webterminal",
+              "view_id": "generic-j6rry",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "port": 3000,
+                    "ports": [],
+                    "userCode": "",
+                    "openFiles": [
+                      "/home/workspace/callbacks.js",
+                      "/home/workspace/flatcallbacks.js"
+                    ],
+                    "showFiles": true,
+                    "allowClose": false,
+                    "showEditor": true,
+                    "allowSubmit": false,
+                    "terminalTitle": "BASH",
+                    "openTerminalOnStartup": true
+                  },
+                  "kind": "generic"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 1037331,
+          "key": "54d50cb0-154e-4d52-bfd9-1ff7de3e212e",
+          "title": "Callbacks Best Practices - Error Handling",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "54d50cb0-154e-4d52-bfd9-1ff7de3e212e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 1037332,
+              "key": "10f6fd25-d564-435d-b2a1-e3cc5ad9e4ba",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Dealing with Errors\n\nWe are going to learn much more on this topic later in the course, but lets take a first look at error handling in callbacks.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1037333,
+              "key": "5def0138-0a20-4d2b-99e9-67cf204fbcf7",
+              "title": "ND032 JSND L1 A10 Callbacks Best Practices Part 2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "lF2ntbMout0",
+                "china_cdn_id": "lF2ntbMout0.mp4"
+              }
+            },
+            {
+              "id": 1037334,
+              "key": "3d4d8e4a-473c-436f-ba9b-67479957c438",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Error Handling in Callbacks Code\n\nHere is the code from the video above:\n```\nconst mockAPI = (returnValue) => (arg, success, failure) => {\n    setTimeout(() => success(returnValue), 2000)\n}\n\nconst fetchSession = mockAPI({ id: \"123765\" })\nconst fetchUser = mockAPI({ firstname: \"Bob\" })\nconst fetchUserFavorites = mockAPI([ \"lions\", \"tigers\", \"bears\" ])\nconst handleError = error => {\n    // you can put more custom logic here\n    console.log(error)\n}\n\nconst runCallbacks = () => {\n    fetchSession(\"session-id\", session => {\n        fetchUser(session, (user) => {\n            fetchUserFavorites(user, (favorites) => {\n                console.log(favorites)\n            }, handleError)\n        }, handleError)\n    }, handleError)\n}\n\nrunCallbacks();\n```\n\n## Error Handling Recap \n\n- The function to handle errors is passed as an argument in the same way we pass a function to handle a response with data\n- Each step in the chain will have its own error handling\n- It is cleaner (especially if needed to do more than console log) to move the error handling out into an external function",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1037341,
+              "key": "c8b94c79-dc9d-453d-9721-cba4a13253e1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Try It Out\n\nUse the Workspace below to run the code from the video.  Then change the code in `mockAPI` to run the failure code to trigger the error handling.\n\n```javascript\nconst mockAPI = (returnValue) => (arg, success, failure) => {\n    setTimeout(() => failure(\"Request Failed\"), 2000)\n}\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1037339,
+              "key": "388d1996-0eea-43dc-a261-d91ce22132f5",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "r950324c1037331xGENERIC4tb5jrhn",
+              "pool_id": "webterminal",
+              "view_id": "generic-cp9zf",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "port": 3000,
+                    "ports": [],
+                    "userCode": "",
+                    "openFiles": [
+                      "/home/workspace/errorHandling.js"
+                    ],
+                    "showFiles": true,
+                    "allowClose": false,
+                    "showEditor": true,
+                    "allowSubmit": false,
+                    "terminalTitle": "BASH",
+                    "openTerminalOnStartup": true
+                  },
+                  "kind": "generic"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 1015409,
+          "key": "822cda66-163a-4872-bd8f-ffdd5d9f111f",
+          "title": "Cons of Callbacks",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "822cda66-163a-4872-bd8f-ffdd5d9f111f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 1016240,
+              "key": "2856c03e-dbf1-4b5b-b962-88cb6fa52894",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Cons of Callbacks\n\nWe’ve just gotten a look at how to write better callbacks, so you might be thinking callbacks are pretty understandable and great. So why did JavaScript have to add all this other syntax like promises? What was the motivation for creating a new way to do the same thing? In this lesson we’ll explore what has come to be known as Callback Hell and some of the pain points around using callbacks for asynchronous events.\n\n## Callback Hell\n\nIn the last section we learned some tricks for making callback chains easier to read and debug, but you might have noticed how easily callback chains can get out of hand.\n\n```\nsetTimeout( (firstMessage, int) => {\n    console.log(firstMessage, int);\n\n    setTimeout((secondMessage, int2) => {\n        let sum = int + int2\n        console.log(secondMessage, sum);\n\n        setTimeout((thirdMessage, int3) => {\n            sum = sum + int3\n            console.log(thirdMessage, sum);\n\n        }, 3000, \"THIRD\", 3);\n    }, 2000, \"SECOND\", 2);\n}, 1000, \"FIRST\", 1);\n```\nImagine if the code block above were not three steps but eight, and each function had five lines of logic to get to the next step, and you were tasked with updating part of the flow. How do you update just one part? What if you need your logic flow to account for multiple different paths? Callback chains were notorious in the JavaScript community as being hairy to read and risky to change. \n\nAlso notice how each time we open a new step we have to indent again? Long chains of callbacks end up in this increasingly indented spiral, which is commonly referred to as **Callback Hell**. Callback Hell along with the low readability made complex callback chains an experience that left many developers frustrated. In vanilla JavaScript there was no way to clean up this syntax or make it easier to deal with asynchronous event chains, but asynchronous flows are essential to JavaScript functionality, so there was no option but to put up with them -- until es2015.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 1015411,
+          "key": "001fe617-72f7-443e-8ae3-2f5d0bdfb236",
+          "title": "Exercise: Callbacks",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "001fe617-72f7-443e-8ae3-2f5d0bdfb236",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 1017619,
+              "key": "5609d70d-f709-4eef-9f8a-f462356ee941",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "r950324c1015411xGENERIC7b7naiol",
+              "pool_id": "webterminal",
+              "view_id": "generic-z0i9p",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "port": 3000,
+                    "ports": [
+                      3000
+                    ],
+                    "userCode": "",
+                    "openFiles": [
+                      "/home/workspace/callbacks1.js",
+                      "/home/workspace/callbacks2.js"
+                    ],
+                    "showFiles": true,
+                    "allowClose": true,
+                    "showEditor": true,
+                    "allowSubmit": false,
+                    "terminalTitle": "Server Terminal",
+                    "openTerminalOnStartup": true
+                  },
+                  "kind": "generic"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 1015412,
+          "key": "295a0ee0-f4c8-4fdd-bd83-00d6ab4a3a49",
+          "title": "Solution: Callbacks",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "295a0ee0-f4c8-4fdd-bd83-00d6ab4a3a49",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 1031036,
+              "key": "565368f7-06b7-4092-9ffe-8c3d940dbfe4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Callback Exercise Solutions\n\n## Callback Challenge #1\n\n```\nconst dataJson = {\n    response: {\n        timeElapsed: 45938,\n        distanceTotal: 1314,\n        variant: \"3K8B\"\n    }\n}\n\nconst useValues = (parsedData) => { // pretend we're using these\n    console.log(\"Well done!\", parsedData)\n}\n\n// cb is a common naming choice for a callback argument\nconst parseResponse = (data, cb) => {\n    const {response} = data;\n    const parsed = {\n        points: [\n            response.timeElapsed, response.distanceTotal\n        ],\n        type: response.variant\n    }\n    cb(parsed)\n}\n\nconst handleResponse = (json) => {\n    let data = JSON.parse(json)\n    parseResponse(data, useValues)\n}\n\nconst getData = () => { // Mock API call\n    setTimeout(handleResponse, 1000, JSON.stringify(dataJson));\n} \n\ngetData()\n```\n\nThe three mistakes were:\n1. The `handleResponse` function passed the wrong callback function to `parseResponse`. It was actually causing `parseResponse` to call itself! Which is a legitimate strategy for some cases, but there's no need for recursion here!\n\n2. The `parseResponse` function references the variable `response` ... but `response` doesn't exist. We can infer that the developer actually wanted to use the response object inside the data object and forgot to destructure the object they wanted before referencing it!\n\n3. The program complains about JSON. You might notice that the `getData` function turns the data into JSON before passing it to the `handleResponse` function. This was done to mock what a real API response might send back, but the `handleResponse` function never turned that JSON back into a JavaScript object, so we had to add the JSON parse around it. This is actually a really common error to come across in the wild. Its simple to fix, easy to anticipate, and will still get you stumped from time to time! ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1031037,
+              "key": "991ae98c-410f-4904-81e1-7e6ef86e35b6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Callback Challenge 2\n\n```\nconst wait4 = secret_num => { \n    setTimeout(console.log, 4000, secret_num)\n}\n\nconst interval2 = (rand, cb) => {\n    let sum = rand;\n    const add1 = () => {\n        \n        sum = sum + 2;\n\n        if ( sum-rand >= 6) {\n            clearInterval(byTwo);\n            cb(sum-3);\n        }\n    }\n    const byTwo = setInterval(add1, 2000)\n}\n\nconst add5 = (rand, cb, cb2 ) => {\n    cb(rand+5, cb2);\n}\n\nconst generateRandomNumber = () => { \n    const rand = Math.round(Math.random() * 10);\n    setTimeout(add5, 3000, rand, interval2, wait4);\n} \n\ngenerateRandomNumber()\n```\n\nThis challenge might have taken a while to get running perfectly - and that's ok! This was a fairly complex set of rules to code out. Some important things to note are:\n\n- Its easier to keep track of what needs to run next by naming your functions with descriptive names like wait4 or add5. Names this simplistic probably won't work in real programs, but its good practice to keep these function names descriptive and short. \n- The `if()` statement in `interval2` allows us to control the flow of the program and only call wait4 exactly when we need it.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 1015410,
+          "key": "e7646ae3-e6a4-4b26-9ac2-511ce7f885ae",
+          "title": "Callbacks Recap",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e7646ae3-e6a4-4b26-9ac2-511ce7f885ae",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 1016244,
+              "key": "3d016210-9bff-4097-92ee-a221aadfaf45",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Callbacks Review\n\nWe've learned how callbacks allow the results of non-blocking tasks to re-enter the main thread. We practiced callback error handling and learned some tricks for writing better, cleaner callbacks. Lastly, we experienced the pain of callback hell that is the result of deeply nested callbacks. It was the need for a better way to chain asynchronous events that lead to the official addition of Promises into JavaScript in 2015. \n\n### Resources\n- For a good all-around discussion of callbacks: [Understanding JavaScript Callbacks and best practices](https://adrianmejia.com/callbacks-concurrency-in-javascript-node/)\n\n\n### Callbacks Quizzes",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1037343,
+              "key": "0a293f5b-159b-46bd-8493-fdd400a5f850",
+              "title": "Practice Interview Question",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "0a293f5b-159b-46bd-8493-fdd400a5f850",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What is the purpose of a callback in an asynchronous function?\n\n",
+                "matchers": [
+                  {
+                    "expression": "[^/s]+"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 1029549,
+              "key": "cdc4f81b-10ac-4108-b6dc-8dd93f69696b",
+              "title": "Callbacks Best Practices",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "cdc4f81b-10ac-4108-b6dc-8dd93f69696b",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Select items from the list below that have been sited as best practices when working with callbacks",
+                "answers": [
+                  {
+                    "id": "a1590883390531",
+                    "text": "Use console.logs to keep track of what step you're in",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1590883538411",
+                    "text": "Use function names that are desciptive ",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1590883630557",
+                    "text": "As much as possible, don't use external functions in your callback chains",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1592416375771",
+                    "text": "Break out heavily nested callbacks into a flatter format with named functions",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 1036873,
+              "key": "ad577d6d-1d6e-4030-9411-d5946d73e575",
+              "title": "Error handling with callbacks",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "ad577d6d-1d6e-4030-9411-d5946d73e575",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Which of the following is true of error handling with callbacks?",
+                "answers": [
+                  {
+                    "id": "a1592416416956",
+                    "text": "Only the most important calls to external resources need to have error handling, and the function responsible for error handling might be long so its best to break it out into an external named function or set of functions.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1592416519489",
+                    "text": "Every call to an external resource may fail so it should have error handling, and the function responsible for error handling might be long so its best to break it out into an external named function or set of functions.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1592416579206",
+                    "text": "Every call to an external resource may fail so it should have error handling, and the function responsible for error handling will not run correctly unless written inline with the success callback.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1592416643540",
+                    "text": "Error handling with callbacks is important in the same way that testing is important, you should do it if you have time and write one custom error per use case. ",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 1015413,
+          "key": "5662fa4b-f37f-4a01-adb0-6970fcdaf701",
+          "title": "Lesson Conclusion",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5662fa4b-f37f-4a01-adb0-6970fcdaf701",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 1016245,
+              "key": "071e21ad-de9f-4465-b8ce-07dfe75cafae",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Lesson Conclusion",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1016246,
+              "key": "0415d667-1870-4e55-96ab-4858d10f9507",
+              "title": "ND032 JSND L1 A11 Lesson Conclusion V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "PFLHaR8TfuE",
+                "china_cdn_id": "PFLHaR8TfuE.mp4"
+              }
+            },
+            {
+              "id": 1016247,
+              "key": "60af67d9-ad12-4703-9feb-0a1e8c013757",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## What We Covered\nGreat job! This lesson was a lot of new terms and concepts, but you've made it through all the exercises and now you're in a great place to pick up promises in the next lesson. Here's a list of the concepts we covered:\n\n- Threads: single and multi threaded programming\n- Multi threaded concepts of parallel and concurrent programming\n- Blocking and non-blocking concepts\n- Sequencing events with callbacks\n- Callbacks best practices and error handling\n- Cons of callbacks and the need for new syntax\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1034905,
+              "key": "bd346d8c-1f3b-4225-a29a-18771eea7126",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2020/June/5ee245f5_jsndc3-l1-overview/jsndc3-l1-overview.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/bd346d8c-1f3b-4225-a29a-18771eea7126",
+              "caption": "",
+              "alt": "",
+              "width": 850,
+              "height": 339,
+              "instructor_notes": null
+            },
+            {
+              "id": 1034906,
+              "key": "9923cd6d-5958-4236-a215-f79f07f9d602",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "\n### More Resources\n\nA great way to wrap up this lesson would be to read the Eloquent JavaScript chapter on these topics: [Asynchronous Programming](https://eloquentjavascript.net/11_async.html)",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 1015414,
+          "key": "bf3bdf06-7c21-4a66-abf6-f145212c7acf",
+          "title": "Lesson Glossary",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "bf3bdf06-7c21-4a66-abf6-f145212c7acf",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 1017618,
+              "key": "ca783f1b-4ce0-4f43-96ea-d5f1d7a4c4f9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Glossary\n\nYou have a lot of new terms in your repertoire. Here is a list of the terms covered in this lesson. \n\n\n### **Blocking**\n\nA process that blocks the thread even when idle or waiting for a response.\n\n### **Non-Blocking**\n\nA process that, while operating (which might be waiting for a response from an external service), allows the thread to move on and continue executing the program. This pattern is essential for efficient use of a thread.\n\n### **Asynchronous**\nFor managing a single thread. Synonymous with non-blocking in most cases, but can refer to an entire program whereas a program is not typically referred to as non-blocking.\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1032061,
+              "key": "3277c1f3-b892-401e-a506-9cec53485296",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2020/June/5eec16a4_jsndc3-l1-asynchronous/jsndc3-l1-asynchronous.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3277c1f3-b892-401e-a506-9cec53485296",
+              "caption": "",
+              "alt": "",
+              "width": 960,
+              "height": 540,
+              "instructor_notes": null
+            },
+            {
+              "id": 1032062,
+              "key": "b6f35dd3-f64a-4c39-a6ca-6f58d49c50bc",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### **Parallel**\nFor multi-threaded programs ( which will not be JavaScript ). Refers to using two or more threads and running separate processes on them simultaneously.  \n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1032063,
+              "key": "856d05d0-ccad-4b68-910c-b4b6f74de7c2",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2020/June/5eec1208_jsndc3-l1-parallel/jsndc3-l1-parallel.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/856d05d0-ccad-4b68-910c-b4b6f74de7c2",
+              "caption": "",
+              "alt": "",
+              "width": 636,
+              "height": 453,
+              "instructor_notes": null
+            },
+            {
+              "id": 1032064,
+              "key": "efda9f27-4c94-4ccb-9a04-5186c1850c9a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### **Concurrent**\nFor multi-threaded programs. Refers to a program that switches between multiple operations. Appears to do many things at once while only operating on one thread at a time. \n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1032065,
+              "key": "28d76b87-5901-4169-985b-ea71cab6d0b4",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2020/June/5eec121e_jsndc3-l1-concurrent/jsndc3-l1-concurrent.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/28d76b87-5901-4169-985b-ea71cab6d0b4",
+              "caption": "",
+              "alt": "",
+              "width": 586,
+              "height": 391,
+              "instructor_notes": null
+            },
+            {
+              "id": 1032066,
+              "key": "cf7f0c8f-2432-4204-97ff-db57ac94a4cc",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### **Thread**\nWhere computers do work. Can also be thought of as a single process. Can do one thing at a time, works linearly through a block of code. \n\n### **Single Threaded**\nMeaning a program can only run on one thread. JavaScript will almost always be single threaded.\n\n### ** Multi Threaded**\nSome languages have the ability to spin up new threads and manage work across multiple threads. Work that takes place across multiple threads is called multi-threaded\n\n### ** Callback Hell **\nLong chains of callbacks that end up in an increasingly indented spiral. \n\n",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "starter_files",
+      "reason": "prefer master_archive_id"
+    },
+    {
+      "name": "starter_files",
+      "reason": "prefer master_archive_id"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "starter_files",
+      "reason": "prefer master_archive_id"
+    },
+    {
+      "name": "starter_files",
+      "reason": "prefer master_archive_id"
+    },
+    {
+      "name": "starter_files",
+      "reason": "prefer master_archive_id"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}
