@@ -1,0 +1,67 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.045
+Let's go back to our non-blocking code.
+
+00:00:03.045 --> 00:00:06.960
+Let's say we make an API call while we were
+
+00:00:06.960 --> 00:00:11.145
+waiting for the result the thread moves on to complete the rest of the program.
+
+00:00:11.145 --> 00:00:14.220
+But what happens when that API result comes back?
+
+00:00:14.220 --> 00:00:19.590
+How does our program handle going back to pick up a task it previously skipped over?
+
+00:00:19.590 --> 00:00:23.070
+This is where callbacks come into asynchronous programming.
+
+00:00:23.070 --> 00:00:25.380
+We know that in JavaScript,
+
+00:00:25.380 --> 00:00:27.840
+functions are first-class citizens,
+
+00:00:27.840 --> 00:00:30.255
+meaning they can be saved to variables,
+
+00:00:30.255 --> 00:00:34.245
+returned from functions and passed as arguments to other functions.
+
+00:00:34.245 --> 00:00:38.805
+What if we gave our API call a specific instruction,
+
+00:00:38.805 --> 00:00:40.595
+when you get a response back,
+
+00:00:40.595 --> 00:00:43.805
+do x, and the x is a function.
+
+00:00:43.805 --> 00:00:46.670
+The function will get added to the event queue and
+
+00:00:46.670 --> 00:00:49.970
+executed once the current task on the queue is complete.
+
+00:00:49.970 --> 00:00:53.554
+If you take a look at this example from the previous set of challenges,
+
+00:00:53.554 --> 00:00:57.445
+you can see that we've already been using callbacks this whole time.
+
+00:00:57.445 --> 00:01:04.235
+Log B is a function that is scheduled to be called after the two-second wait time.
+
+00:01:04.235 --> 00:01:08.210
+The two-second wait time is happening on another thread but
+
+00:01:08.210 --> 00:01:12.230
+here log B gets us back into the main thread,
+
+00:01:12.230 --> 00:01:20.370
+same with log C. Log B and log C are the callbacks we send to the setTimeout function.
+

@@ -1,0 +1,115 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.865
+Threads are where computers do work.
+
+00:00:02.865 --> 00:00:05.850
+One thread can do one thing at a time.
+
+00:00:05.850 --> 00:00:07.125
+When we write code,
+
+00:00:07.125 --> 00:00:10.440
+we are creating a to-do list for the thread we're using.
+
+00:00:10.440 --> 00:00:12.600
+Going one task at a time,
+
+00:00:12.600 --> 00:00:16.605
+the thread will follow our program until it reaches the end of the instructions.
+
+00:00:16.605 --> 00:00:20.385
+Ninety-nine percent of the time you write JavaScript programs,
+
+00:00:20.385 --> 00:00:22.560
+you will be writing single-threaded programs,
+
+00:00:22.560 --> 00:00:25.395
+because JavaScript is a single threaded language.
+
+00:00:25.395 --> 00:00:28.095
+A little bit more about threads.
+
+00:00:28.095 --> 00:00:30.435
+Ever since computers were first invented,
+
+00:00:30.435 --> 00:00:32.715
+there's been a drive to make them faster.
+
+00:00:32.715 --> 00:00:37.980
+Recently, the most common way to make computing faster has been to add more threads.
+
+00:00:37.980 --> 00:00:42.384
+Computers have cores of threads that operate together to run programs.
+
+00:00:42.384 --> 00:00:45.245
+Your computer has a certain number of cores.
+
+00:00:45.245 --> 00:00:48.065
+You might have taken this number into account when you purchased it.
+
+00:00:48.065 --> 00:00:50.450
+Typically there are two threads per core,
+
+00:00:50.450 --> 00:00:53.180
+so an eight-core machine has 16 threads,
+
+00:00:53.180 --> 00:00:56.120
+16 processes that can be running at once.
+
+00:00:56.120 --> 00:00:58.355
+But back to synchronous programming.
+
+00:00:58.355 --> 00:01:01.580
+We now understand what a single-threaded program is.
+
+00:01:01.580 --> 00:01:04.835
+Here is the most important thing to get out of this video.
+
+00:01:04.835 --> 00:01:07.855
+Synchronous and asynchronous programming,
+
+00:01:07.855 --> 00:01:10.200
+both happen on a single thread.
+
+00:01:10.200 --> 00:01:13.675
+They are just two different ways of managing that thread.
+
+00:01:13.675 --> 00:01:16.730
+If we know we are constrained to a single thread,
+
+00:01:16.730 --> 00:01:19.670
+that only one thing can happen at a time,
+
+00:01:19.670 --> 00:01:22.400
+then the game comes down to how well we manage
+
+00:01:22.400 --> 00:01:25.505
+that single thread in order to complete tasks efficiently.
+
+00:01:25.505 --> 00:01:29.825
+Synchronous programs are the most basic types of programs possible.
+
+00:01:29.825 --> 00:01:32.665
+They make no effort to manage the thread.
+
+00:01:32.665 --> 00:01:37.219
+Up to now, you might not have been thinking about your program in terms of efficiency.
+
+00:01:37.219 --> 00:01:39.845
+So you were writing synchronous programs,
+
+00:01:39.845 --> 00:01:43.370
+except where modern syntax automatically helps you do better.
+
+00:01:43.370 --> 00:01:46.870
+This is where we get to the purpose of the entire course.
+
+00:01:46.870 --> 00:01:50.630
+We are going to learn to manage our one thread like a boss,
+
+00:01:50.630 --> 00:01:55.020
+because that is what asynchronous programming is all about.
+

@@ -1,0 +1,323 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>UdaciRacer Simulator</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Project: UdaciRacer Simulator</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Instructions.html">02. Instructions</a>
+    </li>
+    <li class="">
+      <a href="03. Workspace.html">03. Workspace</a>
+    </li>
+    <li class="">
+      <a href="Project Description - UdaciRacer Simulator.html">Project Description - UdaciRacer Simulator</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - UdaciRacer Simulator.html">Project Rubric - UdaciRacer Simulator</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">UdaciRacer Simulator</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            
+      <div>
+        <h2><p>Game Functionality</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>It successfully starts without errors</p>
+        </td>
+        <td>
+          <p>The node application runs successfully without any errors when running ‘npm install &amp; npm start’.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Create a race by selecting the racer and track they desire</p>
+        </td>
+        <td>
+          <p>We should be able to see the racer and track information from the API. Racer options should show the handling, acceleration, and top speed of the pod racer, as these are the metrics by which you win the game.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>The racer is able to “accelerate” their car by clicking the accelerate button</p>
+        </td>
+        <td>
+          <p>The user will press a button quickly in order to “race” their car. The button press must correctly be sent to the API.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Track race progress in real-time (live updates)</p>
+        </td>
+        <td>
+          <p>The user will be able to see a live-updated leaderboard as the race takes place. UI elements for this board will be provided, the student must write the logic to enable the live updates.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Show race results once the race is finished</p>
+        </td>
+        <td>
+          <p>The results page only needs to show the final race positions and should not be editable.</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>Code Quality</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Cleanly written JavaScript, using best practices</p>
+        </td>
+        <td>
+          <p>The project uses the provided examples to start a race with players.  There will be tips in the form of comments to help students structure their project well, in addition to examples where necessary.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Code is readable and DRY</p>
+        </td>
+        <td>
+          <p>Their code should minimize code repetition, be easy to read, and easy to maintain. It should name variables descriptively, and optionally use comments as needed to document code functionality.</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>Asynchronous Programming Constructs</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Handle front end logic of rendering UI elements using callbacks</p>
+        </td>
+        <td>
+          <p>Callbacks will be tested within the front end logic for rendering UI elements. The student will work with prebuilt components that require a level of familiarity with callbacks.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Handle API responses using JavaScript Promises</p>
+        </td>
+        <td>
+          <p>Promises will be the primary method for dealing with API responses. The student will show their level of knowledge by chaining on existing promises, correctly handling failing States of promises, and creating new promises.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Handle API calls using async/await</p>
+        </td>
+        <td>
+          <p>Async Await will be used with certain API calls and internal logic to handle game processes. Some async functions will be provided, which students will need to be familiar enough with to correctly await these asynchronous calls. Students are also expected to add error handling logic in the form of <code>try</code>/<code>catch</code> or<code>.catch</code> to all async functions.</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div class="jumbotron">
+        <h3>Tips to make your project standout:</h3>
+        <p><ul>
+<li>If you like this game, wouldn’t it be so much fun with more people? As an extra challenge, refactor this project to use WebSockets to allow for multiplayer functionality.</li>
+<li>Want to know when to throw in that final burst of speed? Show a race completion percentage while the race runs.</li>
+<li>The leaderboard as a table is a little boring. Create a more entertaining way to display the information! You could try animating some little cars.</li>
+<li>This is a game, it should be testable! Try adding tests to cover the basic functionality.</li>
+</ul></p>
+      </div>
+    
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('UdaciRacer Simulator')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

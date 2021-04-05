@@ -1,0 +1,58 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.845
+Our understanding of asynchronous processes came a long way in the last lesson.
+
+00:00:04.845 --> 00:00:09.089
+Now, armed with our knowledge of non-blocking processes and callbacks,
+
+00:00:09.089 --> 00:00:13.420
+we are in a great place to see how promises fit into the asynchronous picture.
+
+00:00:13.420 --> 00:00:16.860
+The goal of this lesson is to get you very comfortable with
+
+00:00:16.860 --> 00:00:21.465
+promises because they are the most common syntax for asynchronous JavaScript right now.
+
+00:00:21.465 --> 00:00:24.929
+I went a long time without truly understanding promises,
+
+00:00:24.929 --> 00:00:28.575
+they felt like this big mysterious thing that would be too hard to learn.
+
+00:00:28.575 --> 00:00:31.050
+But in reality, they're not so hard.
+
+00:00:31.050 --> 00:00:33.270
+So now I'm going to try to peel back
+
+00:00:33.270 --> 00:00:36.060
+any mystery that might have been shrouding promises for you.
+
+00:00:36.060 --> 00:00:38.205
+Some things we'll cover are,
+
+00:00:38.205 --> 00:00:41.835
+a general introduction to promise syntax and chaining,
+
+00:00:41.835 --> 00:00:47.065
+and how exactly promises solve to the problems we discussed with callback chains.
+
+00:00:47.065 --> 00:00:49.640
+You will be introduced to an implementation of
+
+00:00:49.640 --> 00:00:53.660
+promises by using fetch to make modern AJAX requests.
+
+00:00:53.660 --> 00:00:55.490
+We will wrap up the lesson with
+
+00:00:55.490 --> 00:00:59.450
+some helpful real-world tips for troubleshooting issues with promise chains,
+
+00:00:59.450 --> 00:01:03.930
+how to write better promise chains and promise methods.
+

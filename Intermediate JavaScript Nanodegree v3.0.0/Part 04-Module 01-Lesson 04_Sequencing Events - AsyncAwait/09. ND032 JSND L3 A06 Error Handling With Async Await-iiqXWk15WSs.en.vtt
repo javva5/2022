@@ -1,0 +1,187 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.520
+With synchronous JavaScript, we learned that
+
+00:00:02.520 --> 00:00:05.145
+we can use try/catch blocks to handle errors.
+
+00:00:05.145 --> 00:00:06.930
+When working with promises,
+
+00:00:06.930 --> 00:00:09.000
+we learned to use the catch statement.
+
+00:00:09.000 --> 00:00:10.530
+Now in both cases,
+
+00:00:10.530 --> 00:00:12.585
+we can send custom error messages,
+
+00:00:12.585 --> 00:00:16.815
+and we also learned that it can be difficult to handle errors while in JavaScript,
+
+00:00:16.815 --> 00:00:20.640
+but with async/await, we have a choice.
+
+00:00:20.640 --> 00:00:26.160
+Most developers prefer try/catch error handling with async/await, but some don't,
+
+00:00:26.160 --> 00:00:28.830
+so I'll show you both ways so that you can decide
+
+00:00:28.830 --> 00:00:32.340
+what situations would benefit from each kind of error handling.
+
+00:00:32.340 --> 00:00:37.050
+One of the big benefits of using async/await is that a lot of the logic that
+
+00:00:37.050 --> 00:00:42.105
+would have been in vengeance with promises can be written like synchronous JavaScript,
+
+00:00:42.105 --> 00:00:44.390
+and like synchronous JavaScript,
+
+00:00:44.390 --> 00:00:47.330
+it can be and you'll often see it this way,
+
+00:00:47.330 --> 00:00:50.765
+written with try-catch blocks around it for error handling.
+
+00:00:50.765 --> 00:00:54.170
+The argument for using try/catch blocks is that they can be
+
+00:00:54.170 --> 00:00:57.725
+nested and customized according to the level of detail you need.
+
+00:00:57.725 --> 00:00:59.960
+You'll recognize this code example,
+
+00:00:59.960 --> 00:01:04.445
+but I've updated one of the promises to reject with an error message.
+
+00:01:04.445 --> 00:01:08.070
+How do you think async/await will handle the scenario?
+
+00:01:08.070 --> 00:01:13.420
+Let's run the code. You can see that we're still waiting for each promised to resolve,
+
+00:01:13.420 --> 00:01:15.170
+but when the second one rejects,
+
+00:01:15.170 --> 00:01:18.500
+we get that error printed to the console without any extra help.
+
+00:01:18.500 --> 00:01:20.585
+It's not a great response,
+
+00:01:20.585 --> 00:01:24.010
+and it's obvious we don't have any error handling going on here.
+
+00:01:24.010 --> 00:01:27.050
+It turns out that in an async function,
+
+00:01:27.050 --> 00:01:31.505
+a rejected promise has the same effect as throwing a new error,
+
+00:01:31.505 --> 00:01:36.040
+and the reason for failure from the promise is passed as the message of the error.
+
+00:01:36.040 --> 00:01:40.785
+That means that if we wrap this code in a try/catch block like I have here,
+
+00:01:40.785 --> 00:01:44.625
+the catch statement should run when the promise rejects.
+
+00:01:44.625 --> 00:01:47.410
+Let's see if that happens.
+
+00:01:48.860 --> 00:01:51.000
+You can see that it worked.
+
+00:01:51.000 --> 00:01:54.865
+We get our console log error message value
+
+00:01:54.865 --> 00:01:58.850
+here instead of seeing the entire error like we did before.
+
+00:01:58.850 --> 00:02:02.200
+What this means is that all of the things we learned about
+
+00:02:02.200 --> 00:02:05.620
+exception handling with the try/catch earlier in this lesson,
+
+00:02:05.620 --> 00:02:08.515
+now apply an async functions as well,
+
+00:02:08.515 --> 00:02:11.895
+but I have one more code example for you to consider.
+
+00:02:11.895 --> 00:02:16.660
+Here I've gone back to the code example that didn't have the try/catch,
+
+00:02:16.660 --> 00:02:21.055
+but instead, I've added a catch statement at the end of the function call.
+
+00:02:21.055 --> 00:02:23.005
+Now when I run it,
+
+00:02:23.005 --> 00:02:26.590
+you can see that we get exactly the same response
+
+00:02:26.590 --> 00:02:30.245
+as we did from the previous example that did have try/catch.
+
+00:02:30.245 --> 00:02:35.660
+What this means is that we can handle errors in a catch after this promise
+
+00:02:35.660 --> 00:02:41.900
+defied handleManyThings function or we can add try/catch to the inside of this logic.
+
+00:02:41.900 --> 00:02:44.185
+Both of them achieve the same thing,
+
+00:02:44.185 --> 00:02:46.760
+we're just handling the error in a different place.
+
+00:02:46.760 --> 00:02:50.885
+I think it's more common to use try/catch with async/await,
+
+00:02:50.885 --> 00:02:54.220
+but in the end, this part comes down to personal preference.
+
+00:02:54.220 --> 00:02:57.215
+The only words of advice I have are these;
+
+00:02:57.215 --> 00:03:01.145
+the most important thing is that you handle exceptions.
+
+00:03:01.145 --> 00:03:06.055
+Whichever way you choose to achieve that is less important than the fact that you do it.
+
+00:03:06.055 --> 00:03:08.960
+If the codebase you're working on already
+
+00:03:08.960 --> 00:03:11.975
+has an established pattern for how to deal with errors,
+
+00:03:11.975 --> 00:03:15.100
+keep consistent with that when you add new code.
+
+00:03:15.100 --> 00:03:18.665
+This is actually a general principle that I think is a good idea.
+
+00:03:18.665 --> 00:03:24.350
+If the codebase you are working on generally follows a pattern and that pattern works,
+
+00:03:24.350 --> 00:03:27.050
+it's best to keep with that pattern for the sake of
+
+00:03:27.050 --> 00:03:29.764
+consistency and predictability in the codebase,
+
+00:03:29.764 --> 00:03:33.750
+even if it goes against your personal syntax preference.
+

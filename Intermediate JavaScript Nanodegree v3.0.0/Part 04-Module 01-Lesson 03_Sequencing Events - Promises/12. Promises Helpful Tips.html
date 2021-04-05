@@ -1,0 +1,291 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Promises Helpful Tips</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Sequencing Events - Promises</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Lesson Introduction.html">01. Lesson Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Introduction to Promises.html">02. Introduction to Promises</a>
+    </li>
+    <li class="">
+      <a href="03. Promise Chaining.html">03. Promise Chaining</a>
+    </li>
+    <li class="">
+      <a href="04. Promises as the Answer to Callbacks.html">04. Promises as the Answer to Callbacks</a>
+    </li>
+    <li class="">
+      <a href="05. Exercise Promises I.html">05. Exercise: Promises I</a>
+    </li>
+    <li class="">
+      <a href="06. Solution Promises I.html">06. Solution: Promises I</a>
+    </li>
+    <li class="">
+      <a href="07. Quizzes Promises  I.html">07. Quizzes: Promises  I</a>
+    </li>
+    <li class="">
+      <a href="08. Using Promises with Fetch.html">08. Using Promises with Fetch</a>
+    </li>
+    <li class="">
+      <a href="09. Exercise Fetch Request Practice.html">09. Exercise: Fetch Request Practice</a>
+    </li>
+    <li class="">
+      <a href="10. Solution Fetch Practice.html">10. Solution: Fetch Practice</a>
+    </li>
+    <li class="">
+      <a href="11. Promises Best Practices and Error Handling.html">11. Promises Best Practices and Error Handling</a>
+    </li>
+    <li class="">
+      <a href="12. Promises Helpful Tips.html">12. Promises Helpful Tips</a>
+    </li>
+    <li class="">
+      <a href="13. Exercise Promises II.html">13. Exercise: Promises II</a>
+    </li>
+    <li class="">
+      <a href="14. Solution Promises II .html">14. Solution: Promises II </a>
+    </li>
+    <li class="">
+      <a href="15. Advanced Promise Syntax.html">15. Advanced Promise Syntax</a>
+    </li>
+    <li class="">
+      <a href="16. Promise.allSettled.html">16. Promise.allSettled</a>
+    </li>
+    <li class="">
+      <a href="17. Promise.all.html">17. Promise.all</a>
+    </li>
+    <li class="">
+      <a href="18. Promise.race.html">18. Promise.race</a>
+    </li>
+    <li class="">
+      <a href="19. Exercise  Promises III.html">19. Exercise:  Promises III</a>
+    </li>
+    <li class="">
+      <a href="20. Solution Promises III .html">20. Solution: Promises III </a>
+    </li>
+    <li class="">
+      <a href="21. Quizzes Promises II.html">21. Quizzes: Promises II</a>
+    </li>
+    <li class="">
+      <a href="22. Lesson Conclusion.html">22. Lesson Conclusion</a>
+    </li>
+    <li class="">
+      <a href="23. Lesson Glossary.html">23. Lesson Glossary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">12. Promises Helpful Tips</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="helpful-tips">Helpful Tips</h1>
+<p>When working with Promises there are quite a few things that get people confused, even after taking a tutorial - or even if they've been using Promises for a while. Lets take a look at some of these gotchas:</p>
+<h2 id="promise-chaining-across-function-calls">Promise chaining across function calls</h2>
+<p>We've gone through a number of examples now where our then statements were all neatly in a row under the promise. But that is not always how they will be arranged. Often, then clauses will call other functions in our app, or chained then clauses might be separated across many lines or even files. Sometimes beginners get the idea that promise chaining works because the chains are in line with each other, and it can be confusing at first when the chain is broken up throughout the program. So lets see an example and get used to following a promise chain even if its scattered across many functions. </p>
+<pre><code>const genericAPIrequest = () =&gt; {
+   return new Promise((resolve, reject) =&gt; {
+        resolve({body: "My test data"})
+    })
+}
+
+genericAPIrequest().then(data =&gt; {
+    console.log(data);
+}).catch(error =&gt; console.log(error));</code></pre>
+<p>So in the code above, see how the function <code>genericAPIrequest</code> <strong>returns a Promise</strong>. Any function that returns a Promise, whether its one we make, or that comes as part of a library, or is otherwise abstracted away like with <code>fetch</code>, we have to build our then and catch statements off of the <em>result</em> of that function. </p>
+<p>Put another way, the function itself is not a Promise, so we can't do this:</p>
+<pre><code>genericAPIrequest.then(data =&gt; {
+    console.log(data);
+}).catch(error =&gt; console.log(error));</code></pre>
+<p>But rather, we have to call genericAPIrequest and build our then statement off of the result. In your mind, you can replace the genericAPIrequest call with the thing it returns, if we do that, it looks like this:</p>
+<pre><code>new Promise((resolve, reject) =&gt; {
+    resolve({body: "My test data"})
+}).then(data =&gt; {
+    console.log(data);
+}).catch(error =&gt; console.log(error));</code></pre>
+<p>And that looks exactly like what we've been doing all along. This is how it works to chain off of Promises that are returned from other functions, how we dealt with <code>fetch</code> is a good example here.</p>
+<h2 id="remember-the-return">Remember the Return</h2>
+<p>It might sound silly, but this mistake gets everyone eventually, especially if you are using automatic returns in arrow functions. I myself have fallen into this trap many times, so I'm going to say it here to be very clear: a then statement passes information to the next then in the chain by returning a value. If you don't return anything, your next then statement will try to run without data, which will most likely cause an error and the catch clause will be called. </p>
+<p>Here is where this mistake often gets me. I start off with a Promise chain that is using the automatic return rule.</p>
+<pre><code>new Promise((resolve, reject) =&gt; {
+    resolve("This is a message");
+})
+.then(data =&gt; data.split(" "))
+.then(data =&gt; data[0])
+.then(data =&gt; console.log(data))
+.catch(err =&gt; console.error(err));</code></pre>
+<p>But then, I need to go back and make a quick edit - maybe even just add a console log to see what is going on in the middle of the chain:</p>
+<pre><code>new Promise((resolve, reject) =&gt; {
+    resolve("This is a message");
+})
+.then(data =&gt; {
+  // do some more logic
+  data.split(" ")
+})
+.then(data =&gt; data[0])
+.then(data =&gt; console.log(data))
+.catch(err =&gt; console.error(err));</code></pre>
+<p>And I forget to add the extra return, now this Promise gives me the following error:</p>
+<pre><code>error: TypeError: can't access property 0, data is undefined</code></pre>
+<p>Any error like this is a good indication that data, or at least not the data you wanted, is being passed all the way through the chain.</p>
+<p>So here is the code with the fix:</p>
+<pre><code>new Promise((resolve, reject) =&gt; {
+    resolve("This is a message");
+})
+.then(data =&gt; {
+  // do some more logic
+  return data.split(" ")
+})
+.then(data =&gt; data[0])
+.then(data =&gt; console.log(data))
+.catch(err =&gt; console.error(err));</code></pre>
+<p>At least its a quick fix! This mistake is easy to make and easy to skip over when you've been looking at the same code for a while, but now you know what kind of error to watch out for.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="13. Exercise Promises II.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('12. Promises Helpful Tips')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

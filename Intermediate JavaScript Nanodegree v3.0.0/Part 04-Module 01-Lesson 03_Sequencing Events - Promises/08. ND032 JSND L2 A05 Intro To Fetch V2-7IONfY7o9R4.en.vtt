@@ -1,0 +1,295 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.140
+You've most likely already seen the Fetch syntax around in the wild.
+
+00:00:04.140 --> 00:00:06.090
+But now that we've gotten this far with
+
+00:00:06.090 --> 00:00:09.120
+promises and the concepts of asynchronous programming,
+
+00:00:09.120 --> 00:00:11.535
+let's take another look at how it works.
+
+00:00:11.535 --> 00:00:16.905
+Fetch has become a popular option for making requests to external web resources.
+
+00:00:16.905 --> 00:00:22.425
+Before Fetch, there were many iterations of syntax for making asynchronous HTTP calls.
+
+00:00:22.425 --> 00:00:27.870
+So humor me a second as we take a brief historical look at the JavaScript Ajax request.
+
+00:00:27.870 --> 00:00:31.055
+This is it, the original way in JavaScript
+
+00:00:31.055 --> 00:00:34.615
+to make asynchronous requests to an external resource.
+
+00:00:34.615 --> 00:00:38.435
+This was a big deal because without blocking the web page for the user,
+
+00:00:38.435 --> 00:00:42.700
+JavaScript could live update the site with information from another server.
+
+00:00:42.700 --> 00:00:46.070
+Don't worry, you're allowed to be intimidated by this syntax.
+
+00:00:46.070 --> 00:00:48.505
+It was definitely intimidating to me.
+
+00:00:48.505 --> 00:00:51.185
+You don't have to understand all of what it's doing.
+
+00:00:51.185 --> 00:00:56.615
+Later, the incredibly popular library jQuery came out with a new syntax.
+
+00:00:56.615 --> 00:01:00.085
+Here's an example of the jQuery Ajax request.
+
+00:01:00.085 --> 00:01:06.545
+Maybe you can see why this Ajax request became the preferred way to make HTTP requests.
+
+00:01:06.545 --> 00:01:09.815
+But when promises were added to JavaScript in ES6,
+
+00:01:09.815 --> 00:01:15.855
+it allowed for a whole new way to handle asynchronous HTTP requests, the Fetch request.
+
+00:01:15.855 --> 00:01:19.170
+Here's an example of a basic Fetch request.
+
+00:01:19.170 --> 00:01:22.385
+Hopefully, bells are going off in your brain right now.
+
+00:01:22.385 --> 00:01:25.355
+You've seen some of this before, and you're right.
+
+00:01:25.355 --> 00:01:28.250
+Calling Fetch returns a promise,
+
+00:01:28.250 --> 00:01:32.105
+a promise that we can build then and catch chain's off of.
+
+00:01:32.105 --> 00:01:34.730
+This is a very simple Fetch request,
+
+00:01:34.730 --> 00:01:36.560
+a GET type request.
+
+00:01:36.560 --> 00:01:41.180
+You can see that all I need is the URL I want to get information from,
+
+00:01:41.180 --> 00:01:43.225
+and Fetch assumes the rest.
+
+00:01:43.225 --> 00:01:45.704
+But how does Fetch use promises?
+
+00:01:45.704 --> 00:01:48.800
+Well, the Fetch function does a few things for us,
+
+00:01:48.800 --> 00:01:51.935
+not only does it create a request to a resource,
+
+00:01:51.935 --> 00:01:54.605
+but it does it inside of a new promise,
+
+00:01:54.605 --> 00:01:57.130
+just like we used in the previous sections.
+
+00:01:57.130 --> 00:02:00.725
+That means that we're back to the library analogy.
+
+00:02:00.725 --> 00:02:05.105
+We ask for a piece of information that happens to live on another server.
+
+00:02:05.105 --> 00:02:08.660
+While we are waiting for that server response to get back to us,
+
+00:02:08.660 --> 00:02:11.710
+the promise created by Fetch is pending.
+
+00:02:11.710 --> 00:02:17.600
+If the response comes back with an HTTP error code of four or 500 level,
+
+00:02:17.600 --> 00:02:20.270
+it will trigger and cause the catch clause.
+
+00:02:20.270 --> 00:02:22.505
+But anything two or 300 level,
+
+00:02:22.505 --> 00:02:24.730
+will trigger the then clause.
+
+00:02:24.730 --> 00:02:29.810
+This syntax can make handling HTTP requests so much easier.
+
+00:02:29.810 --> 00:02:34.235
+Fetch was a truly exciting development in the JavaScript community.
+
+00:02:34.235 --> 00:02:37.760
+The idea has spread into other libraries like Axios,
+
+00:02:37.760 --> 00:02:41.510
+which is also a promise-based way to make HTTP requests,
+
+00:02:41.510 --> 00:02:45.440
+but one that is designed specifically with the REST API in mind.
+
+00:02:45.440 --> 00:02:47.990
+We will focus on Fetch in this course,
+
+00:02:47.990 --> 00:02:49.115
+but once you learn it,
+
+00:02:49.115 --> 00:02:51.815
+other libraries like Axios will be so similar,
+
+00:02:51.815 --> 00:02:53.420
+you'll pick them up in no time.
+
+00:02:53.420 --> 00:02:56.510
+Let's take a look at some Fetch requests in action.
+
+00:02:56.510 --> 00:03:01.715
+I have set up a node express server of running on port 3,000 to make requests to.
+
+00:03:01.715 --> 00:03:05.410
+Here is an example of a GET request with Fetch.
+
+00:03:05.410 --> 00:03:10.730
+We don't have to specify the verb because Fetch uses GET by default.
+
+00:03:10.730 --> 00:03:13.100
+When we run this,
+
+00:03:13.100 --> 00:03:17.855
+you can see that I get a response from my makeshift API.
+
+00:03:17.855 --> 00:03:21.545
+But if I make a request to an endpoint that doesn't exist,
+
+00:03:21.545 --> 00:03:23.660
+then the server will return an error.
+
+00:03:23.660 --> 00:03:26.980
+The error triggers the catch clause to run.
+
+00:03:26.980 --> 00:03:30.930
+So here, I'm printing that error to the screen.
+
+00:03:30.930 --> 00:03:32.435
+It's not very pretty,
+
+00:03:32.435 --> 00:03:35.210
+but that's what a node error looks like in this case.
+
+00:03:35.210 --> 00:03:39.445
+What if we want to make a request other than a GET type request?
+
+00:03:39.445 --> 00:03:41.690
+Here's an example of a POST,
+
+00:03:41.690 --> 00:03:45.155
+but the syntax is the same for all other verbs.
+
+00:03:45.155 --> 00:03:48.830
+You can see that Fetch has an optional second argument
+
+00:03:48.830 --> 00:03:52.790
+that allows us to pass in extra information about our request.
+
+00:03:52.790 --> 00:03:56.135
+This object can include information like the method,
+
+00:03:56.135 --> 00:03:58.730
+the mode, headers, and body.
+
+00:03:58.730 --> 00:04:01.090
+We will not go into detail on all of these
+
+00:04:01.090 --> 00:04:03.430
+because they're outside the scope of this lesson.
+
+00:04:03.430 --> 00:04:06.500
+But we'll take a look at the method and body here.
+
+00:04:06.500 --> 00:04:09.940
+Method is for the name of your HTTP verb
+
+00:04:09.940 --> 00:04:14.305
+and body is for the information you want to send with the request.
+
+00:04:14.305 --> 00:04:16.375
+If you are sending JSON,
+
+00:04:16.375 --> 00:04:20.510
+then you need a header telling the API that you're sending JSON.
+
+00:04:20.510 --> 00:04:23.970
+Typically, the body will need to be JSON formatted.
+
+00:04:23.970 --> 00:04:26.980
+When I run this, I get a response saying that I
+
+00:04:26.980 --> 00:04:31.180
+successfully made a POST request which matches the verb that I used,
+
+00:04:31.180 --> 00:04:34.895
+and Norman, which was the name that I passed in the body.
+
+00:04:34.895 --> 00:04:37.840
+Now, let's take a look at an example that proves
+
+00:04:37.840 --> 00:04:40.900
+Fetch requests are asynchronous in nature.
+
+00:04:40.900 --> 00:04:42.650
+On the API side,
+
+00:04:42.650 --> 00:04:45.350
+I've added a timeout on this route that will
+
+00:04:45.350 --> 00:04:48.595
+force it to wait for three seconds before responding.
+
+00:04:48.595 --> 00:04:52.970
+I'm console logging something before and after the request.
+
+00:04:52.970 --> 00:04:57.785
+This will give you a good example of how Fetch requests are asynchronous.
+
+00:04:57.785 --> 00:04:59.330
+When I run the code,
+
+00:04:59.330 --> 00:05:02.270
+you can see that first thing and second thing,
+
+00:05:02.270 --> 00:05:04.475
+log immediately after each other.
+
+00:05:04.475 --> 00:05:07.775
+Because this request, too long example,
+
+00:05:07.775 --> 00:05:09.725
+has taken two seconds.
+
+00:05:09.725 --> 00:05:12.649
+The message, this request took two seconds,
+
+00:05:12.649 --> 00:05:14.690
+is my result from the API.
+
+00:05:14.690 --> 00:05:16.880
+Hopefully, these examples have given you
+
+00:05:16.880 --> 00:05:19.295
+a better picture of what it looks like to use Fetch,
+
+00:05:19.295 --> 00:05:23.960
+and you'll get the chance to try it out on your own in the next set of challenges
+

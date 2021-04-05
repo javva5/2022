@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.560
+Congratulations.
+
+00:00:01.560 --> 00:00:03.360
+You made it through Async/Await.
+
+00:00:03.360 --> 00:00:05.565
+Let's take a look back at what we did.
+
+00:00:05.565 --> 00:00:08.265
+We went back and looked at some synchronous code,
+
+00:00:08.265 --> 00:00:12.570
+and learned to use Try/Catch blocks for exception handling in our programs.
+
+00:00:12.570 --> 00:00:15.060
+We learned the Async/Await syntax,
+
+00:00:15.060 --> 00:00:18.375
+and the implementation of Async/Await with promise chains.
+
+00:00:18.375 --> 00:00:21.470
+Then we combined our knowledge of Try/Catch and
+
+00:00:21.470 --> 00:00:25.680
+Async/Await to get some practice with exception handling in Async/Await.
+
+00:00:25.680 --> 00:00:30.390
+We wrapped up with some discussion of when it's a good idea to use Async/Await,
+
+00:00:30.390 --> 00:00:32.175
+and when it might not be.
+
+00:00:32.175 --> 00:00:34.320
+All in all, we covered a lot and
+
+00:00:34.320 --> 00:00:37.455
+these concepts aren't necessarily easy or straightforward,
+
+00:00:37.455 --> 00:00:39.600
+but I hope you've gained some confidence to start
+
+00:00:39.600 --> 00:00:43.090
+trying them out and practicing in your own programs.
+

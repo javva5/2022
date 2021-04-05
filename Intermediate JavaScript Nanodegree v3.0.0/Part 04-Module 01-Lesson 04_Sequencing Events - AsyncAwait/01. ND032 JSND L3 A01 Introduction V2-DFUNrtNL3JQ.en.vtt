@@ -1,0 +1,64 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.905
+Now for the final lesson in our asynchronous JavaScript course.
+
+00:00:04.905 --> 00:00:08.010
+Async/Await is going to be the syntactic icing on
+
+00:00:08.010 --> 00:00:10.695
+top of this asynchronous K groove we've been constructing.
+
+00:00:10.695 --> 00:00:13.320
+As we end the course with nothing less than
+
+00:00:13.320 --> 00:00:17.130
+the synchronous code we started with in the first lesson. That's right.
+
+00:00:17.130 --> 00:00:22.095
+Async/Await builds on promises to make for even better asynchronous event handling.
+
+00:00:22.095 --> 00:00:27.135
+But its brilliance comes from making asynchronous code act more like synchronous code.
+
+00:00:27.135 --> 00:00:29.415
+So we really are going full circle,
+
+00:00:29.415 --> 00:00:33.710
+and that's why this lesson is going to rely not just on what we learned about promises,
+
+00:00:33.710 --> 00:00:36.875
+but also on concepts from earlier in the course.
+
+00:00:36.875 --> 00:00:41.255
+We'll start the lesson off with some more synchronous JavaScript syntax.
+
+00:00:41.255 --> 00:00:44.030
+Being familiar with the Try/Catch blocks of vanilla
+
+00:00:44.030 --> 00:00:47.105
+JavaScript will come in handy as we learned Async/Await.
+
+00:00:47.105 --> 00:00:50.300
+We'll go over the basic syntax of Async/Await,
+
+00:00:50.300 --> 00:00:52.775
+show its usage with promise chains,
+
+00:00:52.775 --> 00:00:55.475
+how it changes our error handling strategies,
+
+00:00:55.475 --> 00:00:57.800
+and wrap things up with a discussion of when you
+
+00:00:57.800 --> 00:01:01.205
+should or should not use Async/Await in your programs.
+
+00:01:01.205 --> 00:01:04.970
+All of that, along with lots of quiz questions and workspace practice,
+
+00:01:04.970 --> 00:01:07.950
+I think you'll get the hang of this pretty quick.
+

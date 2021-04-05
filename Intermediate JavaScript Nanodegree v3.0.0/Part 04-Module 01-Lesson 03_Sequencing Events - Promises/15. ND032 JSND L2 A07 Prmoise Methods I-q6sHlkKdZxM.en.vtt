@@ -1,0 +1,106 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.255
+In this video, I'm going to explain the use cases
+
+00:00:03.255 --> 00:00:06.599
+and give examples of more promise-related syntax.
+
+00:00:06.599 --> 00:00:09.420
+First, I'll cover some syntax you've already seen,
+
+00:00:09.420 --> 00:00:11.880
+but this time I'll cover it in greater detail.
+
+00:00:11.880 --> 00:00:16.155
+I'm also going to throw in one new method you can use in promise chains.
+
+00:00:16.155 --> 00:00:17.910
+As you already know,
+
+00:00:17.910 --> 00:00:22.965
+the new promise syntax is one way to initialize a new promise.
+
+00:00:22.965 --> 00:00:25.950
+Often though, you'll be working with promises that have
+
+00:00:25.950 --> 00:00:28.860
+been initiated elsewhere and return a promise to you,
+
+00:00:28.860 --> 00:00:31.095
+like we saw with the fetch requests.
+
+00:00:31.095 --> 00:00:33.220
+You'll remember this one as well.
+
+00:00:33.220 --> 00:00:37.100
+The promise.reject method forces a promise to fail,
+
+00:00:37.100 --> 00:00:41.200
+and takes an argument which should be the reason for failure or the error.
+
+00:00:41.200 --> 00:00:44.355
+Promise.resolve is also fairly straightforward.
+
+00:00:44.355 --> 00:00:46.630
+It forces a promise to succeed,
+
+00:00:46.630 --> 00:00:49.795
+and can pass in a result value if desired.
+
+00:00:49.795 --> 00:00:51.715
+Now, for the new method;
+
+00:00:51.715 --> 00:00:56.150
+we haven't talked a lot about the settled or fulfilled state of a promise,
+
+00:00:56.150 --> 00:00:58.760
+but sometimes you want to run logic after
+
+00:00:58.760 --> 00:01:02.710
+a request regardless of whether the request failed or succeeded.
+
+00:01:02.710 --> 00:01:07.625
+If you want something to happen in both the then statement and the catch statement,
+
+00:01:07.625 --> 00:01:11.845
+you could duplicate your code across both statements,
+
+00:01:11.845 --> 00:01:15.270
+or you could use the finally clause.
+
+00:01:15.270 --> 00:01:18.515
+Finally, we'll trigger when a promise is settled,
+
+00:01:18.515 --> 00:01:21.755
+and it is the last thing to run in a promise chain.
+
+00:01:21.755 --> 00:01:26.345
+The interesting thing about the finally method is that it takes no arguments,
+
+00:01:26.345 --> 00:01:29.060
+which make sense when you think about it because you can't
+
+00:01:29.060 --> 00:01:32.195
+know if the argument would be an error or a value.
+
+00:01:32.195 --> 00:01:35.965
+We already have other ways to handle both of those cases.
+
+00:01:35.965 --> 00:01:38.194
+The important thing about finally,
+
+00:01:38.194 --> 00:01:42.335
+is that you use it because you don't care what the response was.
+
+00:01:42.335 --> 00:01:45.505
+You want this action to happen in either case,
+
+00:01:45.505 --> 00:01:50.105
+and you don't need to add a finally statement unless you have logic to put in it.
+
+00:01:50.105 --> 00:01:55.410
+In the next section, we'll cover another set of advanced promise methods.
+

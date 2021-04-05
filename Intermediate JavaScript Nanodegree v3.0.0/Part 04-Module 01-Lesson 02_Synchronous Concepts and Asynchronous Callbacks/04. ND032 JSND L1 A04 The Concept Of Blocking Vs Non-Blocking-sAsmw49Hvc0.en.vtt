@@ -1,0 +1,73 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.450
+Let's put aside the term asynchronous for a second and
+
+00:00:03.450 --> 00:00:07.140
+instead think about the behavior of our programs on a thread.
+
+00:00:07.140 --> 00:00:10.905
+Code can be either blocking or non-blocking.
+
+00:00:10.905 --> 00:00:12.885
+When an action is blocking,
+
+00:00:12.885 --> 00:00:15.660
+nothing else can happen until it is finished.
+
+00:00:15.660 --> 00:00:19.380
+A non-blocking task allows the thread to move on to
+
+00:00:19.380 --> 00:00:23.010
+other tasks while waiting for another task to finish.
+
+00:00:23.010 --> 00:00:26.640
+This hopefully sounds familiar from the coffee shop analogy.
+
+00:00:26.640 --> 00:00:28.890
+Let's put this into perspective with
+
+00:00:28.890 --> 00:00:34.035
+probably the most common example for non-blocking processes, API calls.
+
+00:00:34.035 --> 00:00:38.040
+When my application asks for information from an API,
+
+00:00:38.040 --> 00:00:41.310
+it's just waiting for that information to come back.
+
+00:00:41.310 --> 00:00:43.605
+Like the barista at the coffee machine,
+
+00:00:43.605 --> 00:00:46.700
+if that request is treated as a blocking task,
+
+00:00:46.700 --> 00:00:51.125
+then the program is just sitting on its hands waiting until the response comes back.
+
+00:00:51.125 --> 00:00:53.975
+Asking for information from an API,
+
+00:00:53.975 --> 00:00:55.805
+like a barista making coffee,
+
+00:00:55.805 --> 00:01:00.785
+should be a non-blocking task so that we can make better use of our time.
+
+00:01:00.785 --> 00:01:04.550
+You might have already started to pick up on the connection here,
+
+00:01:04.550 --> 00:01:08.225
+but synchronous programs use blocking code,
+
+00:01:08.225 --> 00:01:10.745
+and asynchronous programs put
+
+00:01:10.745 --> 00:01:16.340
+non-blocking code in the places that matter to gain better performance and efficiency.
+
+00:01:16.340 --> 00:01:21.480
+Effectively, asynchronous and non-blocking are synonyms.
+

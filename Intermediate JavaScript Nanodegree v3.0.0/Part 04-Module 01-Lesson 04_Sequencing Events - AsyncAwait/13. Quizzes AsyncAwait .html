@@ -1,0 +1,533 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Quizzes: Async/Await </title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Sequencing Events - Async/Await</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Lesson Introduction.html">01. Lesson Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Getting  Started with TryCatch.html">02. Getting  Started with Try/Catch</a>
+    </li>
+    <li class="">
+      <a href="03. Exercise TryCatch Practice.html">03. Exercise: Try/Catch Practice</a>
+    </li>
+    <li class="">
+      <a href="04. Solution TryCatch Practice.html">04. Solution: Try/Catch Practice</a>
+    </li>
+    <li class="">
+      <a href="05. Why AsyncAwait is Important.html">05. Why Async/Await is Important</a>
+    </li>
+    <li class="">
+      <a href="06. Introduction to AsyncAwait.html">06. Introduction to Async/Await</a>
+    </li>
+    <li class="">
+      <a href="07. Exercise AsyncAwait I.html">07. Exercise: Async/Await I</a>
+    </li>
+    <li class="">
+      <a href="08. Solution AsyncAwait I.html">08. Solution: Async/Await I</a>
+    </li>
+    <li class="">
+      <a href="09. Error Handling with AsyncAwait.html">09. Error Handling with Async/Await</a>
+    </li>
+    <li class="">
+      <a href="10. When (and When Not) to Use AsyncAwait.html">10. When (and When Not) to Use Async/Await</a>
+    </li>
+    <li class="">
+      <a href="11. Exercise AsyncAwait II.html">11. Exercise: Async/Await II</a>
+    </li>
+    <li class="">
+      <a href="12. Solution AsyncAwait II.html">12. Solution: Async/Await II</a>
+    </li>
+    <li class="">
+      <a href="13. Quizzes AsyncAwait .html">13. Quizzes: Async/Await </a>
+    </li>
+    <li class="">
+      <a href="14. Lesson Conclusion.html">14. Lesson Conclusion</a>
+    </li>
+    <li class="">
+      <a href="15. Lesson Glossary.html">15. Lesson Glossary</a>
+    </li>
+    <li class="">
+      <a href="16. Course Recap.html">16. Course Recap</a>
+    </li>
+    <li class="">
+      <a href="17. Congratulations!.html">17. Congratulations!</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">13. Quizzes: Async/Await </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="asyncawait-quizzes">Async/Await Quizzes</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>Try/Catch is the traditional way to handle errors, Promise chains also handle errors too and uses slightly different syntax to cover the same situations. Match the Try/Catch syntax with the Promise syntax that performs the same function</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p><code>.finally</code></p></button>
+  <button class="btn btn-primary"><p><code>.then</code></p></button>
+  <button class="btn btn-primary"><p><code>.catch().then()</code></p></button>
+  <button class="btn btn-primary"><p><code>.catch</code></p></button>
+  <button class="btn btn-primary"><p><code>.after</code></p></button>
+  <button class="btn btn-primary"><p><code>.race</code></p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>Try/Catch</p>
+      </th>
+      <th>
+        <p>Promise</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p><code>try</code></p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p><code>catch</code></p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p><code>finally</code></p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>Try/Catch</p>
+        </th>
+        <th>
+          <p>Promise</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p><code>finally</code></p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p><code>.finally</code></p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><code>try</code></p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p><code>.then</code></p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><code>catch</code></p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p><code>.catch</code></p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Async and Try/Catch</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>When the logic of an <code>async</code> function is wrapped in Try/catch blocks and one of the awaited Promises rejects, Try/catch treats the rejected Promise:</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1592540789684" name="1037227" id="a1592540789684">
+        <label for="a1592540789684"><p>In the same way <code>Promise.allSettled</code> does, by marking that Promise as rejected in the resulting array</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1592541378406" name="1037227" id="a1592541378406">
+        <label for="a1592541378406"><p>In the same way as <code>Promise.race</code> does, by passing along any data that came with the rejected Promise</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1592541434726" name="1037227" id="a1592541434726">
+        <label for="a1592541434726"><p>In the same way as Try/Catch blocks treat errors thrown by JavaScript, meaning the <code>catch</code> statement will run</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    In the same way as Try/Catch blocks treat errors thrown by JavaScript, meaning the `catch` statement will run
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>async</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What will the following code output?</p>
+<pre><code>try {
+  console.log("A");
+  try {
+    console.log("B");
+    throw new Error("C");
+    console.log("D");
+  } catch(error) {
+    console.log("E");
+  } finally {
+    console.log("F");
+  };
+} catch(error){
+  console.log("G");
+};</code></pre></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1592542904424" name="1037228" id="a1592542904424">
+        <label for="a1592542904424"><p>A, B, C, E, F, G</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1592543038146" name="1037228" id="a1592543038146">
+        <label for="a1592543038146"><p>A, B, E, G</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1592543062645" name="1037228" id="a1592543062645">
+        <label for="a1592543062645"><p>A, B, C, E, G</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1592543088278" name="1037228" id="a1592543088278">
+        <label for="a1592543088278"><p>A, B, E, F</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1592543164155" name="1037228" id="a1592543164155">
+        <label for="a1592543164155"><p>A, B, E, F, G</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    A, B, E, F
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Async Await</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Select the benefits of using Async/await syntax from the list below.</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1592522784043" name="1037196" id="a1592522784043">
+      <label for="a1592522784043"><p>Allows us to not use Promises anymore</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1592522824816" name="1037196" id="a1592522824816">
+      <label for="a1592522824816"><p>Allows us to select Promises to be treated as blocking actions with the async word</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1592522879302" name="1037196" id="a1592522879302">
+      <label for="a1592522879302"><p>Allows us to select Promises to be treated as blocking actions with the await word</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1592522890575" name="1037196" id="a1592522890575">
+      <label for="a1592522890575"><p>Allows the developer to write all their asynchronous functionality with callbacks</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1592522973428" name="1037196" id="a1592522973428">
+      <label for="a1592522973428"><p>Allows the developer to use the results of many Promises and be confident that the Promises have resolved</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Allows us to select Promises to be treated as blocking actions with the await word</li>
+      <li>Allows the developer to use the results of many Promises and be confident that the Promises have resolved</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Practice Interview Question</p></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>Explain when you would use Async/await in JavaScript.</p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What will the following code output?</p>
+<pre><code>const p1 = new Promise((resolve, reject) =&gt; {
+    console.log('A');
+    resolve(['B', 'C']);
+})
+const p2 = new Promise((resolve, reject) =&gt; {
+    resolve(['D']);
+})
+const test = async () =&gt; {
+  try {
+    const d = await p1;
+    const d2 = await p2;
+    console.log(d.join(" "), d2.join(" "));
+  } catch(err) {
+    console.log(err)
+  };
+};
+
+test();</code></pre></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1592532358804" name="1037224" id="a1592532358804">
+        <label for="a1592532358804"><p>A, B, C, D</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1592532436833" name="1037224" id="a1592532436833">
+        <label for="a1592532436833"><p>A, C, B, D</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1592532446929" name="1037224" id="a1592532446929">
+        <label for="a1592532446929"><p>D, A, B, C</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1592532461932" name="1037224" id="a1592532461932">
+        <label for="a1592532461932"><p>B, C, D</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    A, B, C, D
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>async/await</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What would the following code output?</p>
+<pre><code>const p1 = new Promise((resolve, reject) =&gt; {
+    console.log('A');
+    resolve('B');
+})
+const p2 = new Promise((resolve, reject) =&gt; {
+    resolve(['D']);
+});
+const test = async () =&gt; {
+  try {
+    const d = await p1.then(data =&gt; console.log(data));
+    const d2 = await p2;
+    console.log(d, d2.join(""));
+  } catch(err) {
+    console.log(err);
+  };
+};</code></pre></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1592533329813" name="1037225" id="a1592533329813">
+        <label for="a1592533329813"><p>A, B, C, D</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1592533399137" name="1037225" id="a1592533399137">
+        <label for="a1592533399137"><p>A, B, D</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1592533443529" name="1037225" id="a1592533443529">
+        <label for="a1592533443529"><p>A, D, B</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1592533457681" name="1037225" id="a1592533457681">
+        <label for="a1592533457681"><p>A, B, Undefined,  D</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    A, B, Undefined,  D
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="14. Lesson Conclusion.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('13. Quizzes: Async/Await ')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

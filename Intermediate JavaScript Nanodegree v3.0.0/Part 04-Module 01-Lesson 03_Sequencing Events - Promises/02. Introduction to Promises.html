@@ -1,0 +1,299 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Introduction to Promises</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Sequencing Events - Promises</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Lesson Introduction.html">01. Lesson Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Introduction to Promises.html">02. Introduction to Promises</a>
+    </li>
+    <li class="">
+      <a href="03. Promise Chaining.html">03. Promise Chaining</a>
+    </li>
+    <li class="">
+      <a href="04. Promises as the Answer to Callbacks.html">04. Promises as the Answer to Callbacks</a>
+    </li>
+    <li class="">
+      <a href="05. Exercise Promises I.html">05. Exercise: Promises I</a>
+    </li>
+    <li class="">
+      <a href="06. Solution Promises I.html">06. Solution: Promises I</a>
+    </li>
+    <li class="">
+      <a href="07. Quizzes Promises  I.html">07. Quizzes: Promises  I</a>
+    </li>
+    <li class="">
+      <a href="08. Using Promises with Fetch.html">08. Using Promises with Fetch</a>
+    </li>
+    <li class="">
+      <a href="09. Exercise Fetch Request Practice.html">09. Exercise: Fetch Request Practice</a>
+    </li>
+    <li class="">
+      <a href="10. Solution Fetch Practice.html">10. Solution: Fetch Practice</a>
+    </li>
+    <li class="">
+      <a href="11. Promises Best Practices and Error Handling.html">11. Promises Best Practices and Error Handling</a>
+    </li>
+    <li class="">
+      <a href="12. Promises Helpful Tips.html">12. Promises Helpful Tips</a>
+    </li>
+    <li class="">
+      <a href="13. Exercise Promises II.html">13. Exercise: Promises II</a>
+    </li>
+    <li class="">
+      <a href="14. Solution Promises II .html">14. Solution: Promises II </a>
+    </li>
+    <li class="">
+      <a href="15. Advanced Promise Syntax.html">15. Advanced Promise Syntax</a>
+    </li>
+    <li class="">
+      <a href="16. Promise.allSettled.html">16. Promise.allSettled</a>
+    </li>
+    <li class="">
+      <a href="17. Promise.all.html">17. Promise.all</a>
+    </li>
+    <li class="">
+      <a href="18. Promise.race.html">18. Promise.race</a>
+    </li>
+    <li class="">
+      <a href="19. Exercise  Promises III.html">19. Exercise:  Promises III</a>
+    </li>
+    <li class="">
+      <a href="20. Solution Promises III .html">20. Solution: Promises III </a>
+    </li>
+    <li class="">
+      <a href="21. Quizzes Promises II.html">21. Quizzes: Promises II</a>
+    </li>
+    <li class="">
+      <a href="22. Lesson Conclusion.html">22. Lesson Conclusion</a>
+    </li>
+    <li class="">
+      <a href="23. Lesson Glossary.html">23. Lesson Glossary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Introduction to Promises</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="introduction-to-promises">Introduction to Promises</h1>
+<p>Let's kick off this lesson with a good look at Promise syntax, particularly the basic requirements and new keywords. Don't worry if it looks foreign to you right now - by the end of this lesson promises will look as familiar as For loops. </p>
+<h2 id="basic-syntax">Basic Syntax</h2>
+<p>This is the syntax for a basic promise. Try commenting in the resolve and reject methods in the code below to see the different outcomes when you run the program.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div class="jumbotron">
+  <h3>Code</h3>
+
+  <p class="lead">If you need a code on the <a href="https://github.com/udacity"
+    target="_blank">https://github.com/udacity</a>. </p>
+
+  </ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>There are a few things I want you to get out of seeing this code right now: </p>
+<ol>
+<li>You can run this code and see that A always happens, this base functionality always runs. </li>
+<li>B or C display based on whether you comment in the resolve or reject cases - interesting right?</li>
+<li>There are some new words here, the ones to pay attention to are: <strong>resolve</strong>, <strong>reject</strong>, <strong>then</strong>, and <strong>catch</strong></li>
+</ol>
+<p>If the rest of the syntax looks overwhelming or there are lots of question marks going off in your brain - that's ok! This is just step one and I'll explain the concepts above in the next video.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="states-of-a-promise">States of a Promise</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ND032 JSND L2 A02 States Of A Promise</p></h3>
+  <video controls>
+  <source src="02. ND032 JSND L2 A02 States Of A Promise-lHnT25nvvo8.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. ND032 JSND L2 A02 States Of A Promise-lHnT25nvvo8.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="promise-states-recap">Promise States Recap</h2>
+<p>A promise starts off with an initial request for something - data, a webpage, or any action that will take place off the main thread. Once we make the request, the promise is in a state called <strong>Pending</strong>. In other words, whether the request will be successful or fail is unknown and the program is waiting for a response. <strong>Promises are asynchronous</strong>, so during the pending state, the program will continue on from the promise to complete the rest of the program. </p>
+<p>When a response comes back from the request, it will either have succeeded or failed. If it failed, (for example an API response came back with a 500 error) the promise moves into a state called <strong>Rejected</strong> and the logic held in the <code>.catch()</code> clause will run. If the request succeeds, the promise state is called <strong>Resolved</strong> or fulfilled, and the logic held in the <code>.then()</code> statement is run. When a promise is no longer pending, whether it is rejected or resolved, it is <strong>settled</strong>. </p>
+<p>These three <strong>states of a promise</strong> describe the life cycle of a promise and allow us to sequence events in our programs and handle the potential responses from a request. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/jsndc3-l2-promise-states.jpg" alt="Promise States" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Promise States</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Promise Chaining.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. Introduction to Promises')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

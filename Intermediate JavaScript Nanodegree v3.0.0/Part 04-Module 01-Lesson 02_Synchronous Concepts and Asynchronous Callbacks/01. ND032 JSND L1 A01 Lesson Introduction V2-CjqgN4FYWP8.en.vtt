@@ -1,0 +1,79 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.865
+Welcome to this lesson on Synchronous Programming.
+
+00:00:02.865 --> 00:00:06.000
+The goal of this lesson is to lay a good foundation and
+
+00:00:06.000 --> 00:00:09.540
+set the basic concepts so that future lessons are easier.
+
+00:00:09.540 --> 00:00:12.990
+The topics we will cover are an introduction to threads.
+
+00:00:12.990 --> 00:00:15.855
+We won't be going into any great detail on threads.
+
+00:00:15.855 --> 00:00:18.090
+For instance, we won't cover hardware or anything,
+
+00:00:18.090 --> 00:00:21.180
+but we will take a little time to cover what you need to know
+
+00:00:21.180 --> 00:00:24.525
+about threads in order to understand a synchronous code later on.
+
+00:00:24.525 --> 00:00:27.075
+We'll cover blocking versus non-blocking.
+
+00:00:27.075 --> 00:00:30.840
+You might have heard people talk about blocking or non-blocking actions in code.
+
+00:00:30.840 --> 00:00:33.330
+In this lesson, we'll go into detail about
+
+00:00:33.330 --> 00:00:36.310
+this concept and practice writing non-blocking code.
+
+00:00:36.310 --> 00:00:40.270
+We'll also cover terms for asynchronous and multi-threaded programs.
+
+00:00:40.270 --> 00:00:42.860
+There are lots of new words you will hear when learning about
+
+00:00:42.860 --> 00:00:45.210
+asynchronous and multi-threaded programming,
+
+00:00:45.210 --> 00:00:47.265
+and many of them get misused.
+
+00:00:47.265 --> 00:00:49.400
+So we will take some time to define
+
+00:00:49.400 --> 00:00:52.400
+those terms so that you're comfortable using them and,
+
+00:00:52.400 --> 00:00:55.540
+most importantly, because they come in handy for interviews.
+
+00:00:55.540 --> 00:00:59.240
+We'll wrap up with callbacks for asynchronous functionality.
+
+00:00:59.240 --> 00:01:02.915
+You've used callbacks already and are used to following function chains,
+
+00:01:02.915 --> 00:01:04.970
+but in this lesson, we'll revisit them with
+
+00:01:04.970 --> 00:01:08.030
+an eye for how they play into asynchronous functionality.
+
+00:01:08.030 --> 00:01:10.955
+After these concepts and some hands-on practice,
+
+00:01:10.955 --> 00:01:13.680
+we'll be ready to move onto promises.
+

@@ -1,0 +1,91 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.000
+Did you find all the errors and get the last then-statement to run?
+
+00:00:04.000 --> 00:00:07.110
+I'll go over the issues in this code block and also
+
+00:00:07.110 --> 00:00:10.455
+add in some bonus issues you might have caught along the way.
+
+00:00:10.455 --> 00:00:12.825
+The first issue is typos,
+
+00:00:12.825 --> 00:00:14.940
+easy to miss and easy to do.
+
+00:00:14.940 --> 00:00:17.745
+But source here is spelled wrong.
+
+00:00:17.745 --> 00:00:21.600
+This error might have caused you, as it did me,
+
+00:00:21.600 --> 00:00:27.120
+to notice another issue that shows us some interesting things about how JavaScript works.
+
+00:00:27.120 --> 00:00:29.400
+Did you notice that in some cases,
+
+00:00:29.400 --> 00:00:32.610
+the typo didn't cause an error in the program at all?
+
+00:00:32.610 --> 00:00:36.120
+In JavaScript, we often check for the existence of
+
+00:00:36.120 --> 00:00:39.825
+an object attribute before checking its contents.
+
+00:00:39.825 --> 00:00:44.510
+Here we see just how important that check is because if I remove it,
+
+00:00:44.510 --> 00:00:46.595
+but keep the typo in,
+
+00:00:46.595 --> 00:00:49.385
+this code will still run,
+
+00:00:49.385 --> 00:00:54.550
+and we actually hit this error instead of creating an error here.
+
+00:00:54.550 --> 00:00:58.085
+The second issue was in the second then-statement.
+
+00:00:58.085 --> 00:01:00.710
+We were so busy setting the category,
+
+00:01:00.710 --> 00:01:02.705
+we forgot to return the data,
+
+00:01:02.705 --> 00:01:07.480
+which causes an error in the following then-chain when no data is passed in.
+
+00:01:07.480 --> 00:01:10.925
+Here I've fixed it by returning data.
+
+00:01:10.925 --> 00:01:13.670
+But if we wanted to be a little bit more efficient,
+
+00:01:13.670 --> 00:01:16.595
+we could destructure out the message and pass
+
+00:01:16.595 --> 00:01:20.420
+only the values to the next then-chain that it actually needs,
+
+00:01:20.420 --> 00:01:23.700
+which are id and message.
+
+00:01:23.700 --> 00:01:25.865
+That's the end of the challenges section.
+
+00:01:25.865 --> 00:01:27.560
+I hope it helped you feel a little bit more
+
+00:01:27.560 --> 00:01:30.470
+confident about the concepts we've learned in this section.
+
+00:01:30.470 --> 00:01:35.040
+The next section will be about Fetch and Ajax requests.
+

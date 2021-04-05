@@ -1,0 +1,184 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.660
+Let's take a look at an example of blocking code.
+
+00:00:03.660 --> 00:00:09.270
+Here we have two console logs separated by a long function call.
+
+00:00:09.270 --> 00:00:14.040
+This probably will work the way that you would expect your JavaScript code to work.
+
+00:00:14.040 --> 00:00:18.645
+When we run it, we get the first console log to show up immediately.
+
+00:00:18.645 --> 00:00:21.405
+We have to wait for the long function call to complete,
+
+00:00:21.405 --> 00:00:24.060
+before we get console log number two.
+
+00:00:24.060 --> 00:00:26.625
+Let's take stock of what we've learned so far.
+
+00:00:26.625 --> 00:00:30.540
+Threads can only do one thing at a time.
+
+00:00:30.540 --> 00:00:35.069
+But if a process is non-blocking and goes idle waiting for an I/O response,
+
+00:00:35.069 --> 00:00:38.535
+it allows the thread to continue on with the rest of the program.
+
+00:00:38.535 --> 00:00:42.000
+We talked about API calls being non-blocking,
+
+00:00:42.000 --> 00:00:44.400
+but we never really discussed why.
+
+00:00:44.400 --> 00:00:45.660
+The truth is that,
+
+00:00:45.660 --> 00:00:48.755
+whenever work moves off the thread,
+
+00:00:48.755 --> 00:00:50.865
+we want it to be non-blocking.
+
+00:00:50.865 --> 00:00:54.065
+But that still doesn't totally explain what's going on here.
+
+00:00:54.065 --> 00:00:58.855
+The next thing we need to take into account is what kind of animal JavaScript is.
+
+00:00:58.855 --> 00:01:05.795
+JavaScript is described as a single threaded programming language with asynchronous I/O.
+
+00:01:05.795 --> 00:01:07.550
+Now that's a lot of words,
+
+00:01:07.550 --> 00:01:11.095
+but we've actually covered everything we need to understand it.
+
+00:01:11.095 --> 00:01:13.380
+JavaScript is single threaded,
+
+00:01:13.380 --> 00:01:15.525
+no problem there, we knew that.
+
+00:01:15.525 --> 00:01:17.735
+But the asynchronous I/O part,
+
+00:01:17.735 --> 00:01:19.685
+let's take a closer look at that.
+
+00:01:19.685 --> 00:01:23.770
+We know asynchronous is the same as non-blocking.
+
+00:01:23.770 --> 00:01:26.520
+But what does I/O refer to?
+
+00:01:26.520 --> 00:01:28.900
+I/O is short for input-output,
+
+00:01:28.900 --> 00:01:34.850
+and refers to any communication between your program and the outside world, like an API.
+
+00:01:34.850 --> 00:01:40.600
+It turns out, that built into the JavaScript language are a bunch of internal APIs.
+
+00:01:40.600 --> 00:01:44.150
+Actions like operating on the DOM, setting timers,
+
+00:01:44.150 --> 00:01:49.415
+and other tasks are actually requests to the JavaScript browser API.
+
+00:01:49.415 --> 00:01:51.380
+You might have already guessed it,
+
+00:01:51.380 --> 00:01:56.310
+but that means those tasks take place on another thread,
+
+00:01:56.310 --> 00:01:58.415
+and that's the piece we needed.
+
+00:01:58.415 --> 00:02:01.700
+Let's take a look at an asynchronous example.
+
+00:02:01.700 --> 00:02:03.620
+Much like the synchronous example,
+
+00:02:03.620 --> 00:02:08.570
+we have two console logs separated by a non-blocking function call.
+
+00:02:08.570 --> 00:02:10.175
+Inside of that function,
+
+00:02:10.175 --> 00:02:11.920
+we have another console log.
+
+00:02:11.920 --> 00:02:16.100
+The question is, what order are these console logs going to show up in?
+
+00:02:16.100 --> 00:02:17.585
+When we run the code,
+
+00:02:17.585 --> 00:02:20.525
+you can see that one and three happened immediately.
+
+00:02:20.525 --> 00:02:25.835
+It says, if the console log three skipped this non-blocking function call,
+
+00:02:25.835 --> 00:02:30.650
+that wouldn't be possible with the JavaScript rules that we knew previously.
+
+00:02:30.650 --> 00:02:32.270
+But as we just learned,
+
+00:02:32.270 --> 00:02:36.700
+JavaScript uses asynchronous non-blocking I/O.
+
+00:02:36.700 --> 00:02:40.535
+SetTimeout is part of the JavaScript browser API.
+
+00:02:40.535 --> 00:02:41.915
+So when you call it,
+
+00:02:41.915 --> 00:02:44.900
+it's actually operating on another thread.
+
+00:02:44.900 --> 00:02:48.200
+On that thread, it will wait for three seconds,
+
+00:02:48.200 --> 00:02:50.350
+before console log in two.
+
+00:02:50.350 --> 00:02:54.150
+This happening on another thread part of the SetTimeout,
+
+00:02:54.150 --> 00:03:00.290
+means that console log three will happen immediately after console log one.
+
+00:03:00.290 --> 00:03:04.205
+This is a great example of asynchronous code in action.
+
+00:03:04.205 --> 00:03:07.955
+Because our set-timeout is happening on another thread,
+
+00:03:07.955 --> 00:03:10.550
+our function is non-blocking,
+
+00:03:10.550 --> 00:03:13.720
+which means that we go straight from console.log One,
+
+00:03:13.720 --> 00:03:16.560
+to invoking the non-blocking function,
+
+00:03:16.560 --> 00:03:20.115
+and then console.log three immediately after.
+
+00:03:20.115 --> 00:03:25.470
+You'll get the chance to try out exactly this pattern in the challenges.
+

@@ -1,0 +1,169 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.085
+The methods we covered in the last section all have something in common.
+
+00:00:05.085 --> 00:00:09.120
+They are used to create and manage a single promise.
+
+00:00:09.120 --> 00:00:11.895
+The methods we are going to learn next,
+
+00:00:11.895 --> 00:00:17.760
+get ready for it, are used when working with multiple promises at the same time.
+
+00:00:17.760 --> 00:00:20.555
+If your brain just freaked out a little bit,
+
+00:00:20.555 --> 00:00:22.845
+that's okay. Don't panic.
+
+00:00:22.845 --> 00:00:26.850
+We're going to take it slow. Before we look at any new methods,
+
+00:00:26.850 --> 00:00:28.545
+let's set up a scenario.
+
+00:00:28.545 --> 00:00:31.635
+In fact, let's go back to the library scenario.
+
+00:00:31.635 --> 00:00:35.130
+I'm the kind of person that always has a list of books,
+
+00:00:35.130 --> 00:00:38.280
+books that I want to read but haven't had time to.
+
+00:00:38.280 --> 00:00:42.435
+But I'm going on a trip and I know that I will have some time to read.
+
+00:00:42.435 --> 00:00:45.425
+I go to the library with my list of books.
+
+00:00:45.425 --> 00:00:48.870
+I want to borrow multiple books for this trip,
+
+00:00:48.870 --> 00:00:53.185
+so I gave the librarian my list of books to see which are available.
+
+00:00:53.185 --> 00:00:55.520
+By requesting five books,
+
+00:00:55.520 --> 00:00:57.665
+I create five promises.
+
+00:00:57.665 --> 00:01:01.505
+Each book I requested will either be available or not.
+
+00:01:01.505 --> 00:01:06.109
+But I don't want the librarian to answer me five separate times.
+
+00:01:06.109 --> 00:01:12.010
+Instead, I want to know when the librarian has finished looking up all the books.
+
+00:01:12.010 --> 00:01:16.980
+Here's where our first multi-promise management method comes into play.
+
+00:01:16.980 --> 00:01:19.170
+Promise.allSettled.
+
+00:01:19.170 --> 00:01:21.830
+The allSettled method lets you look at
+
+00:01:21.830 --> 00:01:25.595
+the results of many promises all at once in an array.
+
+00:01:25.595 --> 00:01:29.750
+Take a look at this example code using Promise.allSettled.
+
+00:01:29.750 --> 00:01:35.615
+I have an array of promises that I'm passing to the Promise.allSettled method.
+
+00:01:35.615 --> 00:01:39.455
+Notice that these aren't functions containing promises,
+
+00:01:39.455 --> 00:01:41.615
+they are just plain promises.
+
+00:01:41.615 --> 00:01:45.470
+When we run the code and all of the promises resolve,
+
+00:01:45.470 --> 00:01:50.875
+you'll see that we get back a lovely array of all of our resolved promises.
+
+00:01:50.875 --> 00:01:56.690
+If we take that one step further and console.log the value of each item in the array,
+
+00:01:56.690 --> 00:02:02.035
+we get a list of all of the values that are the responses of each promise.
+
+00:02:02.035 --> 00:02:06.905
+Even though each promise we passed in resolved in a different amount of time,
+
+00:02:06.905 --> 00:02:10.550
+the Promise.allSettled method waited until each promise
+
+00:02:10.550 --> 00:02:14.590
+fulfilled before giving back the answer in array format.
+
+00:02:14.590 --> 00:02:17.000
+This can be incredibly convenient when you
+
+00:02:17.000 --> 00:02:19.715
+need to keep an eye on lots of promises at once.
+
+00:02:19.715 --> 00:02:21.350
+But in the real world,
+
+00:02:21.350 --> 00:02:24.380
+perhaps all of these promises won't resolve.
+
+00:02:24.380 --> 00:02:28.700
+What happens then? What if one of the books I want is not available?
+
+00:02:28.700 --> 00:02:30.395
+In this new code example,
+
+00:02:30.395 --> 00:02:34.340
+I've updated book2 to reject, instead of resolving.
+
+00:02:34.340 --> 00:02:38.220
+Let's see what effect that has on the program when we run it.
+
+00:02:38.360 --> 00:02:45.070
+Here I can see that I get the same list of books back but book2 is undefined,
+
+00:02:45.070 --> 00:02:49.895
+and if we look at all of the information that allSettled gives us back for these books,
+
+00:02:49.895 --> 00:02:54.955
+we can see that the status was rejected instead of being fulfilled.
+
+00:02:54.955 --> 00:03:00.959
+We can also see that when allSettled has a rejected status,
+
+00:03:00.959 --> 00:03:02.885
+instead of giving a value,
+
+00:03:02.885 --> 00:03:05.380
+it gives a reason for the failure.
+
+00:03:05.380 --> 00:03:08.210
+This difference in properties that are given
+
+00:03:08.210 --> 00:03:10.790
+back to you by allSettled means that it's really
+
+00:03:10.790 --> 00:03:13.250
+easy to pick apart the list and find
+
+00:03:13.250 --> 00:03:16.300
+which promise is resolved and which promise is rejected.
+
+00:03:16.300 --> 00:03:19.010
+It can be really handy for when you need to get
+
+00:03:19.010 --> 00:03:23.430
+an understanding of what happened to a bunch of promises.
+

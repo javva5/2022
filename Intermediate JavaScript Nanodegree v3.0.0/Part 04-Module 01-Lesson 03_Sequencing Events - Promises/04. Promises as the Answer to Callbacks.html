@@ -1,0 +1,328 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Promises as the Answer to Callbacks</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Sequencing Events - Promises</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Lesson Introduction.html">01. Lesson Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Introduction to Promises.html">02. Introduction to Promises</a>
+    </li>
+    <li class="">
+      <a href="03. Promise Chaining.html">03. Promise Chaining</a>
+    </li>
+    <li class="">
+      <a href="04. Promises as the Answer to Callbacks.html">04. Promises as the Answer to Callbacks</a>
+    </li>
+    <li class="">
+      <a href="05. Exercise Promises I.html">05. Exercise: Promises I</a>
+    </li>
+    <li class="">
+      <a href="06. Solution Promises I.html">06. Solution: Promises I</a>
+    </li>
+    <li class="">
+      <a href="07. Quizzes Promises  I.html">07. Quizzes: Promises  I</a>
+    </li>
+    <li class="">
+      <a href="08. Using Promises with Fetch.html">08. Using Promises with Fetch</a>
+    </li>
+    <li class="">
+      <a href="09. Exercise Fetch Request Practice.html">09. Exercise: Fetch Request Practice</a>
+    </li>
+    <li class="">
+      <a href="10. Solution Fetch Practice.html">10. Solution: Fetch Practice</a>
+    </li>
+    <li class="">
+      <a href="11. Promises Best Practices and Error Handling.html">11. Promises Best Practices and Error Handling</a>
+    </li>
+    <li class="">
+      <a href="12. Promises Helpful Tips.html">12. Promises Helpful Tips</a>
+    </li>
+    <li class="">
+      <a href="13. Exercise Promises II.html">13. Exercise: Promises II</a>
+    </li>
+    <li class="">
+      <a href="14. Solution Promises II .html">14. Solution: Promises II </a>
+    </li>
+    <li class="">
+      <a href="15. Advanced Promise Syntax.html">15. Advanced Promise Syntax</a>
+    </li>
+    <li class="">
+      <a href="16. Promise.allSettled.html">16. Promise.allSettled</a>
+    </li>
+    <li class="">
+      <a href="17. Promise.all.html">17. Promise.all</a>
+    </li>
+    <li class="">
+      <a href="18. Promise.race.html">18. Promise.race</a>
+    </li>
+    <li class="">
+      <a href="19. Exercise  Promises III.html">19. Exercise:  Promises III</a>
+    </li>
+    <li class="">
+      <a href="20. Solution Promises III .html">20. Solution: Promises III </a>
+    </li>
+    <li class="">
+      <a href="21. Quizzes Promises II.html">21. Quizzes: Promises II</a>
+    </li>
+    <li class="">
+      <a href="22. Lesson Conclusion.html">22. Lesson Conclusion</a>
+    </li>
+    <li class="">
+      <a href="23. Lesson Glossary.html">23. Lesson Glossary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. Promises as the Answer to Callbacks</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="promises-as-the-answer-to-callbacks">Promises as the Answer to Callbacks</h1>
+<p>Now that we have a good idea of what Promises look like and have a feel for how they work, lets consider how they solve the pain points of Callback Hell we discussed in the last lesson.</p>
+<h2 id="benefits-of-promises">Benefits of Promises</h2>
+<p>Callbacks start to get difficult with more complex asynchronous flows. Heavily nested callbacks lead to callback hell, but with promises we have a much cleaner syntax - promise chaining! </p>
+<p>What makes promise chaining so appealing? It might not be obvious at first just how big of an advantage it can be. Promise chaining drastically cleans up the syntax of complex asynchronous flows. But rather than explaining, lets show an example. Here is the callback example code you saw in the previous lesson, re-written here with a promises version so you can compare.</p>
+<h3 id="nested-callback-chain">Nested Callback Chain</h3>
+<pre><code>const mockAPI = (returnValue) =&gt; (arg, cb) =&gt; {
+    setTimeout(() =&gt; cb(returnValue), 2000);
+};
+
+const fetchSession = mockAPI({ id: "123765" });
+const fetchUser = mockAPI({ firstname: "Bob" });
+const fetchUserFavorites = mockAPI([ "lions", "tigers", "bears" ]);
+
+const runCallbacks = () =&gt; {
+    fetchSession("session-id", (session) =&gt; {
+        fetchUser(session, (user) =&gt; {
+            fetchUserFavorites(user, (favorites) =&gt; {
+                console.log(favorites);
+            });
+        });
+    });
+};</code></pre>
+<h3 id="promise-chain">Promise Chain</h3>
+<pre><code>const mockAPI = (returnValue) =&gt; (arg, cb) =&gt; {
+    setTimeout(() =&gt; cb(returnValue), 2000);
+};
+
+const fetchSession = mockAPI({ id: "123765" });
+const fetchUser = mockAPI({ firstname: "Bob" });
+const fetchUserFavorites = mockAPI([ "lions", "tigers", "bears" ]);
+
+const runPromises = () =&gt; {
+    return fetchSession("session-id")
+        .then(session =&gt; fetchUser(session))
+        .then(user =&gt; fetchUserFavorites(user))
+        .then(favorites =&gt; console.log(favorites))
+        .catch(error =&gt; console.log("oops!"));
+};</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Benefits of Promise Chaining</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Compare the promise and callback versions of the program above. From the list below, which items do you think are benefits of using promises?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1589857103832" name="1023094" id="a1589857103832">
+      <label for="a1589857103832"><p>Less Code</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1589857130087" name="1023094" id="a1589857130087">
+      <label for="a1589857130087"><p>Faster runtime</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1589857135474" name="1023094" id="a1589857135474">
+      <label for="a1589857135474"><p>Fewer variables</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1589857158646" name="1023094" id="a1589857158646">
+      <label for="a1589857158646"><p>Better readability</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1589857169657" name="1023094" id="a1589857169657">
+      <label for="a1589857169657"><p>Works on old browsers and legacy code</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1591219610454" name="1023094" id="a1591219610454">
+      <label for="a1591219610454"><p>More explicit error handling</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1591219617749" name="1023094" id="a1591219617749">
+      <label for="a1591219617749"><p>Tighter flow control because of promise states</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Less Code</li>
+      <li>Better readability</li>
+      <li>More explicit error handling</li>
+      <li>Tighter flow control because of promise states</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="do-i-still-need-callbacks">Do I Still Need Callbacks?</h2>
+<p>With all this discussion of how Promises solve the pain points of callbacks, you might begin to wonder if we need callbacks anymore. But we absolutely do! Remember that callbacks are a primary way to chain functionality in JavaScript, so you will still see callbacks around all the time. Like the ES6 Array Methods we discussed in depth in the Functional JavaScript course, or to make use of <code>setTimeout</code> and other built in JavaScript methods, callbacks are an essential part of the language and are not going anywhere. Promises are simply <strong>syntactic sugar</strong> - meaning that they are just a convenient set of key words that do not add anything fundamentally new to the language. So, where we used to reach for callbacks for <em>everything</em>, we now have another option for longer asynchronous flows. </p>
+<p><strong>But are callbacks still a good option for asynchronous code?</strong> This comes down mostly to personal taste, but I would say yes. For short and simple asynchronous logic, I think callbacks are still an option. But I think it is safe to say that callbacks should no longer be used for long, complex, or multi-step asynchronous logic chains. That is what Promises were made for, so to not use them would be missing out on the perfect opportunity for cleaner syntax. </p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. Exercise Promises I.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. Promises as the Answer to Callbacks')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

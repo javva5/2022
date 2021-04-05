@@ -1,0 +1,88 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.190
+How did the challenge go for you?
+
+00:00:02.190 --> 00:00:05.280
+Maybe your solution looked something like this.
+
+00:00:05.280 --> 00:00:10.740
+Here, we have the quote sentence being broken up into an array,
+
+00:00:10.740 --> 00:00:13.405
+and then passed into the printWord function.
+
+00:00:13.405 --> 00:00:17.010
+The printWord function, uses the array and
+
+00:00:17.010 --> 00:00:22.260
+an external index number to print out the correct word every one second.
+
+00:00:22.260 --> 00:00:24.000
+If we run this code,
+
+00:00:24.000 --> 00:00:29.445
+you can see that we start getting every word of the sentence, every one second.
+
+00:00:29.445 --> 00:00:32.790
+We finish by calling console log on
+
+00:00:32.790 --> 00:00:36.985
+the reference and clearing the interval that we've saved in this variable.
+
+00:00:36.985 --> 00:00:40.325
+But there's something not quite right about this solution.
+
+00:00:40.325 --> 00:00:43.430
+It works, it prints everything that we needed it to.
+
+00:00:43.430 --> 00:00:46.520
+But the index is a global variable.
+
+00:00:46.520 --> 00:00:49.160
+We've learned that global variables aren't
+
+00:00:49.160 --> 00:00:52.295
+the best thing to start putting into our programs.
+
+00:00:52.295 --> 00:00:58.705
+The question is, can we re-factor this so that index is not a global variable?
+
+00:00:58.705 --> 00:01:02.075
+Here is a better solution to challenge to.
+
+00:01:02.075 --> 00:01:08.780
+I've moved index out of the global scope and into a printWordClosure.
+
+00:01:08.780 --> 00:01:10.400
+If we run this program,
+
+00:01:10.400 --> 00:01:13.505
+you can see that we get the same result as before,
+
+00:01:13.505 --> 00:01:19.330
+except that now index is safely encapsulated in a function.
+
+00:01:19.330 --> 00:01:22.730
+What's happening is that the printWordClosure sets
+
+00:01:22.730 --> 00:01:27.470
+the index value and then returns the same function we were using before.
+
+00:01:27.470 --> 00:01:29.525
+So here in the set interval,
+
+00:01:29.525 --> 00:01:31.405
+we call printWord closure,
+
+00:01:31.405 --> 00:01:32.985
+it returns a function,
+
+00:01:32.985 --> 00:01:38.220
+and what takes its place is the same function that we used in the previous example,
+
+00:01:38.220 --> 00:01:42.870
+so that that function is still getting called every one second.
+

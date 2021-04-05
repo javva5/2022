@@ -1,0 +1,109 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.560
+Now let's take a look at a very similar method, promised at all.
+
+00:00:04.560 --> 00:00:09.405
+There are so many similarities between promise all and promise allSettled,
+
+00:00:09.405 --> 00:00:11.655
+that most people get them confused.
+
+00:00:11.655 --> 00:00:15.840
+Many people use promise all without really understanding, allSettled.
+
+00:00:15.840 --> 00:00:17.310
+But after this example,
+
+00:00:17.310 --> 00:00:20.340
+I think you'll see why people find these methods confusing,
+
+00:00:20.340 --> 00:00:24.750
+and why you're likely to use allSettled more than all.
+
+00:00:24.750 --> 00:00:28.500
+This code example is exactly the same as the last one,
+
+00:00:28.500 --> 00:00:32.050
+except that now we're calling promise all instead of allSettled.
+
+00:00:32.050 --> 00:00:35.450
+What will change when we run this? Let's try it.
+
+00:00:35.450 --> 00:00:39.110
+At first glance, it doesn't look like a whole lot really changed.
+
+00:00:39.110 --> 00:00:41.390
+We're still getting an array with
+
+00:00:41.390 --> 00:00:44.635
+the names of each book that is the result of each promise.
+
+00:00:44.635 --> 00:00:46.420
+But where promise allSettled,
+
+00:00:46.420 --> 00:00:50.690
+had also given the information of whether that promise resolved or rejected,
+
+00:00:50.690 --> 00:00:53.560
+promised at all only supplies the array.
+
+00:00:53.560 --> 00:00:55.500
+Though the output of all,
+
+00:00:55.500 --> 00:00:57.480
+and the output of allSettled right now,
+
+00:00:57.480 --> 00:01:01.730
+seems to be about the same and you might think that you could use them interchangeably.
+
+00:01:01.730 --> 00:01:03.830
+Let's take a look at another example to show
+
+00:01:03.830 --> 00:01:06.410
+the big difference between all and allSettled.
+
+00:01:06.410 --> 00:01:08.540
+So let's take a look at this code.
+
+00:01:08.540 --> 00:01:10.385
+Just like in the last example,
+
+00:01:10.385 --> 00:01:14.290
+I've changed book2, to reject instead of resolving.
+
+00:01:14.290 --> 00:01:19.144
+How do you think promise all will respond when one of the promises rejects?
+
+00:01:19.144 --> 00:01:21.410
+Let's run the code and find out.
+
+00:01:21.410 --> 00:01:25.015
+Wow, now that is not what we expected.
+
+00:01:25.015 --> 00:01:29.025
+The main difference between promise allSettled and promise all,
+
+00:01:29.025 --> 00:01:32.690
+is that promise all will stop watching the promises and
+
+00:01:32.690 --> 00:01:37.255
+fire the catch clause the first time it encounters a promise that rejects.
+
+00:01:37.255 --> 00:01:40.010
+That's always confused me and I think that promise all
+
+00:01:40.010 --> 00:01:42.725
+should really have been named promise all resolved,
+
+00:01:42.725 --> 00:01:48.205
+because it only returns a list of values if every single promise is successful.
+
+00:01:48.205 --> 00:01:50.735
+Promise allSettled on the other hand,
+
+00:01:50.735 --> 00:01:56.340
+can handle resolved or rejected promises without triggering it's catch clause.
+

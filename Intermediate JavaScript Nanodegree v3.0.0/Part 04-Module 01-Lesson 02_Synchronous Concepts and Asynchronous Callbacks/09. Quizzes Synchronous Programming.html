@@ -1,0 +1,739 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Quizzes: Synchronous Programming</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Synchronous Concepts and Asynchronous Callbacks</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Lesson Introduction.html">01. Lesson Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Synchronous Programming .html">02. Synchronous Programming </a>
+    </li>
+    <li class="">
+      <a href="03. Introduction to Single Threaded Programming.html">03. Introduction to Single Threaded Programming</a>
+    </li>
+    <li class="">
+      <a href="04. Blocking vs Non-Blocking.html">04. Blocking vs Non-Blocking</a>
+    </li>
+    <li class="">
+      <a href="05. Blocking vs Non-Blocking Code.html">05. Blocking vs Non-Blocking Code</a>
+    </li>
+    <li class="">
+      <a href="06. Exercise Blocking vs Non-Blocking.html">06. Exercise: Blocking vs Non-Blocking</a>
+    </li>
+    <li class="">
+      <a href="07. Solution Blocking vs Non-Blocking.html">07. Solution: Blocking vs Non-Blocking</a>
+    </li>
+    <li class="">
+      <a href="08. Asynchronous, Concurrent, or Parallel .html">08. Asynchronous, Concurrent, or Parallel? </a>
+    </li>
+    <li class="">
+      <a href="09. Quizzes Synchronous Programming.html">09. Quizzes: Synchronous Programming</a>
+    </li>
+    <li class="">
+      <a href="10. Introduction to Sequencing Events - Callbacks.html">10. Introduction to Sequencing Events - Callbacks</a>
+    </li>
+    <li class="">
+      <a href="11. Callbacks Best Practices - Chaining.html">11. Callbacks Best Practices - Chaining</a>
+    </li>
+    <li class="">
+      <a href="12. Callbacks Best Practices - Error Handling.html">12. Callbacks Best Practices - Error Handling</a>
+    </li>
+    <li class="">
+      <a href="13. Cons of Callbacks.html">13. Cons of Callbacks</a>
+    </li>
+    <li class="">
+      <a href="14. Exercise Callbacks.html">14. Exercise: Callbacks</a>
+    </li>
+    <li class="">
+      <a href="15. Solution Callbacks.html">15. Solution: Callbacks</a>
+    </li>
+    <li class="">
+      <a href="16. Callbacks Recap.html">16. Callbacks Recap</a>
+    </li>
+    <li class="">
+      <a href="17. Lesson Conclusion.html">17. Lesson Conclusion</a>
+    </li>
+    <li class="">
+      <a href="18. Lesson Glossary.html">18. Lesson Glossary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">09. Quizzes: Synchronous Programming</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="what-have-you-learned-about-synchronous-programming">What Have You Learned About Synchronous Programming?</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Off the Main Thread</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which of the following move work off the main thread in JavaScript?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1590887974614" name="1029569" id="a1590887974614">
+      <label for="a1590887974614"><p>setTimeout</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1590888154558" name="1029569" id="a1590888154558">
+      <label for="a1590888154558"><p>Array.map</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1590888491499" name="1029569" id="a1590888491499">
+      <label for="a1590888491499"><p>setInterval</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1590888492582" name="1029569" id="a1590888492582">
+      <label for="a1590888492582"><p>Object.create</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1591212737318" name="1029569" id="a1591212737318">
+      <label for="a1591212737318"><p><code>fetch("www.myurl.com")</code></p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>setTimeout</li>
+      <li>setInterval</li>
+      <li>`fetch("www.myurl.com")`</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Terms</p></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>Match the terms to their definitions</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>Parallel</p></button>
+  <button class="btn btn-primary"><p>Asynchronous</p></button>
+  <button class="btn btn-primary"><p>Asynchronous</p></button>
+  <button class="btn btn-primary"><p>Concurrent</p></button>
+  <button class="btn btn-primary"><p>Concurrent</p></button>
+  <button class="btn btn-primary"><p>Parallel</p></button>
+  <button class="btn btn-primary"><p>Synchronous</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>Term</p>
+      </th>
+      <th>
+        <p>Definition</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>Multi-threaded with one active execution thread </p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>Many threads, simultaneous execution </p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>Single-threaded but capitalizes on idle time by continuing program execution</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>Single-threaded and requires all tasks to complete before starting the next </p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>Term</p>
+        </th>
+        <th>
+          <p>Definition</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>Many threads, simultaneous execution </p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Parallel</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Single-threaded but capitalizes on idle time by continuing program execution</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Asynchronous</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Single-threaded but capitalizes on idle time by continuing program execution</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Asynchronous</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Multi-threaded with one active execution thread </p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Concurrent</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Multi-threaded with one active execution thread </p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Concurrent</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Many threads, simultaneous execution </p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Parallel</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Single-threaded and requires all tasks to complete before starting the next </p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Synchronous</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Practice Interview Question</p></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>What is the difference between <strong>Asynchronous</strong> and <strong>Parallel</strong> programming?</p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Fill in the blank</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>JavaScript is a/n <strong><em>_</em></strong> language with non-blocking I/O.</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1591211870824" name="1032047" id="a1591211870824">
+        <label for="a1591211870824"><p>asynchronous</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1591211936950" name="1032047" id="a1591211936950">
+        <label for="a1591211936950"><p>multi-threaded</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1591211941413" name="1032047" id="a1591211941413">
+        <label for="a1591211941413"><p>parallel</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1591211951156" name="1032047" id="a1591211951156">
+        <label for="a1591211951156"><p>single-threaded</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1591211967678" name="1032047" id="a1591211967678">
+        <label for="a1591211967678"><p>awesome</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    single-threaded
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Blocking or Non-Blocking?</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Look at this code and determine whether it blocks the thread or not. Remember, you can run it locally to find out!</p>
+<pre><code>function runTimer = (startingTime) =&gt; {
+  const time = parseInt(startingTime);
+  while (time &lt; 100) {
+    console.log("testing", time);
+    time = time++;
+  }
+};
+
+runTimer(0)
+console.log("timer complete");</code></pre></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1591212271690" name="1032048" id="a1591212271690">
+        <label for="a1591212271690"><p>Blocking</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1591212298435" name="1032048" id="a1591212298435">
+        <label for="a1591212298435"><p>Non-Blocking</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Blocking
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Blocking or Non-Blocking?</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Look at this code and determine whether it blocks the thread or not. Remember, you can run it locally to find out!</p>
+<pre><code>let recentAccountBalances = [];
+
+const appendBalance = () =&gt; {
+  recentAccountBalances.push(Math.random() * (200 - 100) + 100)
+  console.log(recentAccountBalances)
+}
+
+const pollAccount = () =&gt; {
+  setInterval(appendBalance, 4000)
+}
+
+console.log("test")
+
+pollAccount()</code></pre></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1591212584571" name="1032049" id="a1591212584571">
+        <label for="a1591212584571"><p>Blocking</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1591212599050" name="1032049" id="a1591212599050">
+        <label for="a1591212599050"><p>Non-Blocking</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Non-Blocking
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Single Threaded or Multi Threaded?</p></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>We've learned a lot of different terms in this lesson, match the terms below to the type of program they apply to.</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>Multi Threaded</p></button>
+  <button class="btn btn-primary"><p>Single Threaded</p></button>
+  <button class="btn btn-primary"><p>Multi Threaded</p></button>
+  <button class="btn btn-primary"><p>Single Threaded</p></button>
+  <button class="btn btn-primary"><p>Single Threaded</p></button>
+  <button class="btn btn-primary"><p>Multi Threaded</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>Term</p>
+      </th>
+      <th>
+        <p>Type of Program</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>Synchronous</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>Asynchronous</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>Concurrent</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>Parallel</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>Term</p>
+        </th>
+        <th>
+          <p>Type of Program</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>Concurrent</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Multi Threaded</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Parallel</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Multi Threaded</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Synchronous</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Single Threaded</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Asynchronous</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Single Threaded</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Concurrent</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Multi Threaded</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Parallel</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Multi Threaded</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Synchronous</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Single Threaded</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Asynchronous</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Single Threaded</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Synchronous</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Single Threaded</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Asynchronous</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Single Threaded</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Concurrent</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Multi Threaded</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Parallel</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Multi Threaded</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Practice Interview Question</p></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>In your own words, explain the difference between blocking and non-blocking code. You might use an example from life or a tech example like an API request.</p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Code Review</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Select all the terms that apply to this code:</p>
+<pre><code>const date = new Date();
+const day = date.getDay();
+const random = Math.floor(Math.random() * 10);
+
+console.log(`Hello there! Its ${day}, and your random number for the day is ${random}. Smile and have a great day!`)</code></pre></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1592414864640" name="1036849" id="a1592414864640">
+      <label for="a1592414864640"><p>Single Threaded</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1592415230635" name="1036849" id="a1592415230635">
+      <label for="a1592415230635"><p>Multi Threaded</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1592415234796" name="1036849" id="a1592415234796">
+      <label for="a1592415234796"><p>Blocking</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1592415241080" name="1036849" id="a1592415241080">
+      <label for="a1592415241080"><p>Non-Blocking</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1592415245248" name="1036849" id="a1592415245248">
+      <label for="a1592415245248"><p>Synchronous</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1592415250837" name="1036849" id="a1592415250837">
+      <label for="a1592415250837"><p>Asynchronous</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1592415254733" name="1036849" id="a1592415254733">
+      <label for="a1592415254733"><p>Parallel</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1592415259515" name="1036849" id="a1592415259515">
+      <label for="a1592415259515"><p>Concurrent</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Single Threaded</li>
+      <li>Blocking</li>
+      <li>Synchronous</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="10. Introduction to Sequencing Events - Callbacks.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('09. Quizzes: Synchronous Programming')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

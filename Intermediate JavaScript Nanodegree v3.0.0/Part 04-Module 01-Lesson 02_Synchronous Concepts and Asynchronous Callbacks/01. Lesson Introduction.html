@@ -1,0 +1,329 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Lesson Introduction</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Synchronous Concepts and Asynchronous Callbacks</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Lesson Introduction.html">01. Lesson Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Synchronous Programming .html">02. Synchronous Programming </a>
+    </li>
+    <li class="">
+      <a href="03. Introduction to Single Threaded Programming.html">03. Introduction to Single Threaded Programming</a>
+    </li>
+    <li class="">
+      <a href="04. Blocking vs Non-Blocking.html">04. Blocking vs Non-Blocking</a>
+    </li>
+    <li class="">
+      <a href="05. Blocking vs Non-Blocking Code.html">05. Blocking vs Non-Blocking Code</a>
+    </li>
+    <li class="">
+      <a href="06. Exercise Blocking vs Non-Blocking.html">06. Exercise: Blocking vs Non-Blocking</a>
+    </li>
+    <li class="">
+      <a href="07. Solution Blocking vs Non-Blocking.html">07. Solution: Blocking vs Non-Blocking</a>
+    </li>
+    <li class="">
+      <a href="08. Asynchronous, Concurrent, or Parallel .html">08. Asynchronous, Concurrent, or Parallel? </a>
+    </li>
+    <li class="">
+      <a href="09. Quizzes Synchronous Programming.html">09. Quizzes: Synchronous Programming</a>
+    </li>
+    <li class="">
+      <a href="10. Introduction to Sequencing Events - Callbacks.html">10. Introduction to Sequencing Events - Callbacks</a>
+    </li>
+    <li class="">
+      <a href="11. Callbacks Best Practices - Chaining.html">11. Callbacks Best Practices - Chaining</a>
+    </li>
+    <li class="">
+      <a href="12. Callbacks Best Practices - Error Handling.html">12. Callbacks Best Practices - Error Handling</a>
+    </li>
+    <li class="">
+      <a href="13. Cons of Callbacks.html">13. Cons of Callbacks</a>
+    </li>
+    <li class="">
+      <a href="14. Exercise Callbacks.html">14. Exercise: Callbacks</a>
+    </li>
+    <li class="">
+      <a href="15. Solution Callbacks.html">15. Solution: Callbacks</a>
+    </li>
+    <li class="">
+      <a href="16. Callbacks Recap.html">16. Callbacks Recap</a>
+    </li>
+    <li class="">
+      <a href="17. Lesson Conclusion.html">17. Lesson Conclusion</a>
+    </li>
+    <li class="">
+      <a href="18. Lesson Glossary.html">18. Lesson Glossary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">01. Lesson Introduction</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="synchronous-concepts-and-asynchronous-callbacks">Synchronous Concepts and Asynchronous Callbacks</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="overview">Overview</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ND032 JSND L1 A01 Lesson Introduction V2</p></h3>
+  <video controls>
+  <source src="01. ND032 JSND L1 A01 Lesson Introduction V2-CjqgN4FYWP8.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="01. ND032 JSND L1 A01 Lesson Introduction V2-CjqgN4FYWP8.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="concepts">Concepts</h3>
+<p>In this lesson we will cover the following:</p>
+<ul>
+<li>Introduction to threads</li>
+<li>Blocking vs. Non-Blocking code</li>
+<li>Callbacks for asynchronous functionality</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/jsndc3-l1-overview.jpg" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="resources">Resources</h3>
+<p>Here is a list of supporting resources you might find helpful as you start this lesson:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Concepts" rel="noopener noreferrer" target="_blank">Mozilla's Introduction to Asynchronous Concepts</a></li>
+<li><a href="https://saimulticorecomputing.wordpress.com/2014/06/25/blocking-and-non-blocking-function-calls/" rel="noopener noreferrer" target="_blank">Intro to Blocking and Non-Blocking </a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="before-we-get-started">Before we get started…</h3>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Terms Quiz</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which of these programming terms have you heard of? (You don't need to be able to define them or know anything about them, just if you've heard of them)</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1588465042960" name="1018264" id="a1588465042960">
+      <label for="a1588465042960"><p>Asynchronous</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1588465127618" name="1018264" id="a1588465127618">
+      <label for="a1588465127618"><p>Blocking</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1588465139807" name="1018264" id="a1588465139807">
+      <label for="a1588465139807"><p>Non-Blocking</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1588465146281" name="1018264" id="a1588465146281">
+      <label for="a1588465146281"><p>Parallel</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1588465151841" name="1018264" id="a1588465151841">
+      <label for="a1588465151841"><p>Concurrent</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1588465158736" name="1018264" id="a1588465158736">
+      <label for="a1588465158736"><p>Single Threaded</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1588465174784" name="1018264" id="a1588465174784">
+      <label for="a1588465174784"><p>Multi Threaded</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1588465181086" name="1018264" id="a1588465181086">
+      <label for="a1588465181086"><p>Main Thread (in terms of JavaScript)</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Asynchronous</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="02. Synchronous Programming .html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('01. Lesson Introduction')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

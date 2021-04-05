@@ -1,0 +1,64 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.550
+That was a long lesson,
+
+00:00:02.550 --> 00:00:07.455
+but we've accomplished so much and I hope you feel just how far you've come.
+
+00:00:07.455 --> 00:00:09.585
+We covered a lot of new information.
+
+00:00:09.585 --> 00:00:11.595
+So let's take a look at where we've been.
+
+00:00:11.595 --> 00:00:15.390
+We started off the lesson with the most basic Promise syntax.
+
+00:00:15.390 --> 00:00:19.215
+We covered Promise states and how to resolve and reject Promises.
+
+00:00:19.215 --> 00:00:22.500
+Then we learned that you can chain then statements to
+
+00:00:22.500 --> 00:00:25.500
+keep long asynchronous flow as clean and neat,
+
+00:00:25.500 --> 00:00:29.730
+and you put all of that knowledge together and the challenges to create promise chains.
+
+00:00:29.730 --> 00:00:34.705
+Next, we saw how Fetch uses Promises to handle HTTP requests.
+
+00:00:34.705 --> 00:00:37.460
+We practiced our HTTP methods and Promise
+
+00:00:37.460 --> 00:00:41.255
+handling at the same time as we wrote our own Fetch requests.
+
+00:00:41.255 --> 00:00:44.509
+We improved our error handling with catch statements
+
+00:00:44.509 --> 00:00:48.020
+and learn some best practices related to Promise chains.
+
+00:00:48.020 --> 00:00:52.520
+Then finally, we took our knowledge of Promises even further by learning about
+
+00:00:52.520 --> 00:00:57.845
+some methods to manage chains of Promises and deal with multiple Promises at once.
+
+00:00:57.845 --> 00:01:00.305
+I know this lesson might have been challenging,
+
+00:01:00.305 --> 00:01:01.925
+but I hope that here at the end of it,
+
+00:01:01.925 --> 00:01:05.120
+you feel genuinely comfortable with the syntax and concepts of
+
+00:01:05.120 --> 00:01:10.110
+Promises and ready to start using them fearlessly in your own programs.
+

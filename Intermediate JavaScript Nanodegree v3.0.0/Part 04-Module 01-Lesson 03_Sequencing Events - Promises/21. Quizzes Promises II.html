@@ -1,0 +1,548 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Quizzes: Promises II</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Sequencing Events - Promises</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Lesson Introduction.html">01. Lesson Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Introduction to Promises.html">02. Introduction to Promises</a>
+    </li>
+    <li class="">
+      <a href="03. Promise Chaining.html">03. Promise Chaining</a>
+    </li>
+    <li class="">
+      <a href="04. Promises as the Answer to Callbacks.html">04. Promises as the Answer to Callbacks</a>
+    </li>
+    <li class="">
+      <a href="05. Exercise Promises I.html">05. Exercise: Promises I</a>
+    </li>
+    <li class="">
+      <a href="06. Solution Promises I.html">06. Solution: Promises I</a>
+    </li>
+    <li class="">
+      <a href="07. Quizzes Promises  I.html">07. Quizzes: Promises  I</a>
+    </li>
+    <li class="">
+      <a href="08. Using Promises with Fetch.html">08. Using Promises with Fetch</a>
+    </li>
+    <li class="">
+      <a href="09. Exercise Fetch Request Practice.html">09. Exercise: Fetch Request Practice</a>
+    </li>
+    <li class="">
+      <a href="10. Solution Fetch Practice.html">10. Solution: Fetch Practice</a>
+    </li>
+    <li class="">
+      <a href="11. Promises Best Practices and Error Handling.html">11. Promises Best Practices and Error Handling</a>
+    </li>
+    <li class="">
+      <a href="12. Promises Helpful Tips.html">12. Promises Helpful Tips</a>
+    </li>
+    <li class="">
+      <a href="13. Exercise Promises II.html">13. Exercise: Promises II</a>
+    </li>
+    <li class="">
+      <a href="14. Solution Promises II .html">14. Solution: Promises II </a>
+    </li>
+    <li class="">
+      <a href="15. Advanced Promise Syntax.html">15. Advanced Promise Syntax</a>
+    </li>
+    <li class="">
+      <a href="16. Promise.allSettled.html">16. Promise.allSettled</a>
+    </li>
+    <li class="">
+      <a href="17. Promise.all.html">17. Promise.all</a>
+    </li>
+    <li class="">
+      <a href="18. Promise.race.html">18. Promise.race</a>
+    </li>
+    <li class="">
+      <a href="19. Exercise  Promises III.html">19. Exercise:  Promises III</a>
+    </li>
+    <li class="">
+      <a href="20. Solution Promises III .html">20. Solution: Promises III </a>
+    </li>
+    <li class="">
+      <a href="21. Quizzes Promises II.html">21. Quizzes: Promises II</a>
+    </li>
+    <li class="">
+      <a href="22. Lesson Conclusion.html">22. Lesson Conclusion</a>
+    </li>
+    <li class="">
+      <a href="23. Lesson Glossary.html">23. Lesson Glossary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">21. Quizzes: Promises II</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="promises-quiz-ii">Promises Quiz II</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Fetch</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which of the following are true statements about the Fetch syntax?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1592448221737" name="1036972" id="a1592448221737">
+      <label for="a1592448221737"><p>Fetch is the pre es6 way to make AJAX requests</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1592455025364" name="1036972" id="a1592455025364">
+      <label for="a1592455025364"><p>Fetch is the post es6 way to make AJAX requests</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1592455032559" name="1036972" id="a1592455032559">
+      <label for="a1592455032559"><p>Fetch is a syntax similar to Promises in modern JavaScript but unrelated</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1592455084297" name="1036972" id="a1592455084297">
+      <label for="a1592455084297"><p>Fetch is a syntax is built on Promises</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1592456422045" name="1036972" id="a1592456422045">
+      <label for="a1592456422045"><p>HTTP errors cause the catch clause of the returned Promise to run </p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1592456755169" name="1036972" id="a1592456755169">
+      <label for="a1592456755169"><p>HTTP errors cause the special Fetch denied clause to run</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Fetch is the post es6 way to make AJAX requests</li>
+      <li>Fetch is a syntax is built on Promises</li>
+      <li>HTTP errors cause the catch clause of the returned Promise to run </li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Practice Interview Question</p></h3>
+  <div>
+  <p><strong>QUESTION: </strong></p>
+  <p>Explain the purpose of the finally clause in Promises.</p>
+
+  <details>
+    <summary><strong>ANSWER:</strong></summary>
+    <p><p>Your answer should contain the following:</p>
+<ul>
+<li>Finally runs after either the final .then or .catch</li>
+<li>Finally is for logic that you want to run in either the resolve or reject case</li>
+<li>It is optional and should only be added if you have a reason to use it</li>
+</ul></p>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Promise Methods</p></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>Match the method to its description.</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>Race</p></button>
+  <button class="btn btn-primary"><p>Finally</p></button>
+  <button class="btn btn-primary"><p>All</p></button>
+  <button class="btn btn-primary"><p>Resolve</p></button>
+  <button class="btn btn-primary"><p>Reject</p></button>
+  <button class="btn btn-primary"><p>AllSettled</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>Term</p>
+      </th>
+      <th>
+        <p>Description </p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>Causes a Promise to resolve. Optionally takes an argument for data to pass to the then statement. </p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>Causes a Promise to reject and the catch clause to run</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>Runs after the final catch or then in the Promise chain, used for logic you want to run whether the Promise rejects or resolves. </p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>A Promise method for handling multiple Promises, takes an array of Promises and collects the results. Exits the chain and runs the catch the first time it encounters a rejected Promise. </p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>A Promise method for handling multiple Promises, takes an array of Promises and collects the results. The results array lists each Promise and whether it resolved or rejected, along the data returned.</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>A Promise method for handling multiple Promises, takes an array of Promises and returns the information for the one that fulfills first and says whether it resolved or rejected.</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>Term</p>
+        </th>
+        <th>
+          <p>Description </p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>A Promise method for handling multiple Promises, takes an array of Promises and returns the information for the one that fulfills first and says whether it resolved or rejected.</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Race</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Runs after the final catch or then in the Promise chain, used for logic you want to run whether the Promise rejects or resolves. </p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Finally</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>A Promise method for handling multiple Promises, takes an array of Promises and collects the results. Exits the chain and runs the catch the first time it encounters a rejected Promise. </p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>All</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Causes a Promise to resolve. Optionally takes an argument for data to pass to the then statement. </p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Resolve</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Causes a Promise to reject and the catch clause to run</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Reject</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>A Promise method for handling multiple Promises, takes an array of Promises and collects the results. The results array lists each Promise and whether it resolved or rejected, along the data returned.</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>AllSettled</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Interview Question Practice </p></h3>
+  <div>
+  <p><strong>QUESTION: </strong></p>
+  <p>Name one Promise method for handling multiple Promises and give one use case for when you might need it.</p>
+
+  <details>
+    <summary><strong>ANSWER:</strong></summary>
+    <p><p>Here are some potential answers:</p>
+<p>Promise.All<br />
+You need information from multiple sources and you expect them all to resolve. You can use this in any case where it would be considered an error for any of the Promises to reject.</p>
+<p>Promise.AllSettled<br />
+You need to make many requests and get an overview of which requests failed or succeeded, for instance if you need to poll multiple resources to which are available.</p>
+<p>Promise.Race<br />
+You only care about the fastest of a set of Promises. If you are building a timeout or a request that is time sensitive and not important after a certain amount of time, this would be the method to use.</p></p>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Advanced Promises</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What would this output?</p>
+<pre><code>new Promise((resolve, reject) =&gt; {
+  resolve("New message");
+})
+.then(data =&gt; {
+  const arr = data.split("");
+  throw new Error("Uh-oh!");
+  return arr.reverse();
+})
+.catch(err =&gt; {
+  console.log(err.message);
+})
+.then(data =&gt; data.join(""))
+.then(data =&gt; console.log(data))
+.catch(error =&gt; {
+  console.log("There was an error");
+  console.log(error.message);
+ });</code></pre></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1592447712335" name="1036959" id="a1592447712335">
+        <label for="a1592447712335"><p>Uh-oh!</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1592518241050" name="1036959" id="a1592518241050">
+        <label for="a1592518241050"><p>Uh-oh!, egassem wen a si sihT</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1592518287638" name="1036959" id="a1592518287638">
+        <label for="a1592518287638"><p>egassem wen a si sihT, There was an error</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1592518302506" name="1036959" id="a1592518302506">
+        <label for="a1592518302506"><p>There was an error, can't access property "join" data is undefined</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1592518308005" name="1036959" id="a1592518308005">
+        <label for="a1592518308005"><p>Uh-oh!, There was an error, can't access property "join" data is undefined</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Uh-oh!, There was an error, can't access property "join" data is undefined
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Promise Chaining</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What would this output?</p>
+<pre><code>new Promise((resolve, reject) =&gt; {
+  resolve("New message");
+})
+.then(data =&gt; {
+  const dataArr = data.split("");
+  throw new Error("Uh-oh!");
+  return dataArr.reverse();
+})
+.then(data =&gt; data.join(""))
+.then(data =&gt; console.log(data))
+.catch(error =&gt; {
+  console.log("Encountered a problem!");
+  return error
+})
+.then(error =&gt; {
+  console.log(error.message);
+}); </code></pre></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1592518863700" name="1037181" id="a1592518863700">
+        <label for="a1592518863700"><p>New message</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1592519109783" name="1037181" id="a1592519109783">
+        <label for="a1592519109783"><p>egassem meN</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1592519122249" name="1037181" id="a1592519122249">
+        <label for="a1592519122249"><p>Uh-oh!</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1592519131734" name="1037181" id="a1592519131734">
+        <label for="a1592519131734"><p>Uh-oh!, egassem meN</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1592519138483" name="1037181" id="a1592519138483">
+        <label for="a1592519138483"><p>Encountered a problem!</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1592519147865" name="1037181" id="a1592519147865">
+        <label for="a1592519147865"><p>Uh-oh!, Encountered a problem!</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1592519160128" name="1037181" id="a1592519160128">
+        <label for="a1592519160128"><p>Encountered a problem!, Uh-oh!</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Encountered a problem!, Uh-oh!
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="22. Lesson Conclusion.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('21. Quizzes: Promises II')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.025
+One more method to go,
+
+00:00:02.025 --> 00:00:05.520
+and it's a really cool one called promise race.
+
+00:00:05.520 --> 00:00:07.965
+Back to the library analogy.
+
+00:00:07.965 --> 00:00:09.885
+I have my list of books,
+
+00:00:09.885 --> 00:00:12.540
+but what if this time I'm in a hurry and I
+
+00:00:12.540 --> 00:00:15.570
+don't have time to check out all the books on my list.
+
+00:00:15.570 --> 00:00:17.955
+I just want to borrow one book,
+
+00:00:17.955 --> 00:00:20.160
+and it doesn't matter what book.
+
+00:00:20.160 --> 00:00:24.165
+I just want to check out the first one that's available and leave.
+
+00:00:24.165 --> 00:00:28.560
+We can achieve this scenario with promises using race.
+
+00:00:28.560 --> 00:00:30.690
+Let's take a look at an example.
+
+00:00:30.690 --> 00:00:34.235
+Here we have our by-now familiar list of books.
+
+00:00:34.235 --> 00:00:38.935
+Everything is the same except for calling dot race instead of all are all settled.
+
+00:00:38.935 --> 00:00:44.060
+In the list of books each one of them is resolving in a different amount of time.
+
+00:00:44.060 --> 00:00:47.960
+Book 4 resolves first with a time of one second.
+
+00:00:47.960 --> 00:00:49.700
+So when I run this code,
+
+00:00:49.700 --> 00:00:56.255
+I expect that promise race will tell me which promise resolved first, and it does.
+
+00:00:56.255 --> 00:00:59.510
+After one second, the book 4 promise
+
+00:00:59.510 --> 00:01:04.730
+resolves and the race method gives me back the message from that resolved promise.
+
+00:01:04.730 --> 00:01:08.390
+The race method puts all the promises you pass to it
+
+00:01:08.390 --> 00:01:12.575
+in a race against each other and only returns the winner.
+
+00:01:12.575 --> 00:01:15.845
+This next example will make it even more clear.
+
+00:01:15.845 --> 00:01:19.280
+Here, I've changed some of the set timeout times.
+
+00:01:19.280 --> 00:01:22.085
+So that book 1 resolves after three seconds,
+
+00:01:22.085 --> 00:01:24.575
+book 2 resolves after four seconds,
+
+00:01:24.575 --> 00:01:27.350
+and book 3 resolves after two seconds.
+
+00:01:27.350 --> 00:01:31.565
+But book 4 resolves after one whole minute.
+
+00:01:31.565 --> 00:01:35.315
+Now, if this was promised all or all settled,
+
+00:01:35.315 --> 00:01:37.670
+I would have to wait for all of
+
+00:01:37.670 --> 00:01:41.495
+these promise resolutions to come back before getting an answer.
+
+00:01:41.495 --> 00:01:44.810
+But you can see that when I run promise dot race,
+
+00:01:44.810 --> 00:01:47.090
+I still get my answer after
+
+00:01:47.090 --> 00:01:52.285
+just two seconds with the fastest promise in the bunch, which is book 3.
+
+00:01:52.285 --> 00:01:55.520
+There's still one more thing we need to take a look at for promise race,
+
+00:01:55.520 --> 00:01:59.089
+and that is how it reacts to reject it promises.
+
+00:01:59.089 --> 00:02:01.325
+Here I've updated my list of books,
+
+00:02:01.325 --> 00:02:04.315
+so that book 2 and 4 now reject.
+
+00:02:04.315 --> 00:02:06.975
+Book 4 is the fastest promise.
+
+00:02:06.975 --> 00:02:11.680
+So let's see how race reacts to the first promise being rejected.
+
+00:02:11.680 --> 00:02:13.830
+The result is interesting.
+
+00:02:13.830 --> 00:02:19.645
+Promise.race doesn't care whether the fastest promise resolves or rejects.
+
+00:02:19.645 --> 00:02:23.660
+It just gives us back the information from the first promise.
+
+00:02:23.660 --> 00:02:29.030
+So in this case, the first promise rejected with a message of sorry not available,
+
+00:02:29.030 --> 00:02:31.700
+and that's what we got from promise.race.
+
+00:02:31.700 --> 00:02:38.230
+If the fastest promise in the list that you send to promise race happens to be rejected,
+
+00:02:38.230 --> 00:02:43.145
+then promise race will return that rejection as the fastest response.
+
+00:02:43.145 --> 00:02:48.215
+Promise race does not care whether the first promise resolved or rejected.
+
+00:02:48.215 --> 00:02:52.640
+One common use case for the race method is creating timeouts.
+
+00:02:52.640 --> 00:02:55.805
+If you make a request to an API resource,
+
+00:02:55.805 --> 00:02:58.990
+what happens if that API resource isn't reachable?
+
+00:02:58.990 --> 00:03:03.005
+If you wanted to set a request timeout of five seconds,
+
+00:03:03.005 --> 00:03:06.635
+you could create a promise that waits for five seconds,
+
+00:03:06.635 --> 00:03:09.935
+and then race it against the API request.
+
+00:03:09.935 --> 00:03:14.060
+That way, if the API request does not come back in time,
+
+00:03:14.060 --> 00:03:17.200
+you can handle that error the other race method.
+
+00:03:17.200 --> 00:03:22.190
+See promise methods that handle multiple promises aren't so bad after all.
+
+00:03:22.190 --> 00:03:24.320
+I hope this video has helped you see
+
+00:03:24.320 --> 00:03:27.880
+the potential use cases for each of these awesome methods.
+
+00:03:27.880 --> 00:03:33.000
+Now all you have to do is keep your eyes peeled for the opportunity to use them.
+

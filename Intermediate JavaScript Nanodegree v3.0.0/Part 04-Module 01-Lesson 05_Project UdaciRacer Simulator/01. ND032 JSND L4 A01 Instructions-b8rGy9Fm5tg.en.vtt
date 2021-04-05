@@ -1,0 +1,184 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.655
+Let's take a look at the project starter code.
+
+00:00:02.655 --> 00:00:07.200
+In this video, I'm going to show you how to start the app and set up the API,
+
+00:00:07.200 --> 00:00:09.600
+and then we'll take a tour of the repo and
+
+00:00:09.600 --> 00:00:12.720
+its structure and show you where you'll be writing your code.
+
+00:00:12.720 --> 00:00:15.270
+At the end, we'll take a look at the ways that you
+
+00:00:15.270 --> 00:00:17.895
+can improve the project and make it your own.
+
+00:00:17.895 --> 00:00:21.600
+For this project, the API is written to be a black box.
+
+00:00:21.600 --> 00:00:24.035
+You don't need to edit anything in it.
+
+00:00:24.035 --> 00:00:28.835
+We compile the API into a binary and it will run on a separate terminal tab,
+
+00:00:28.835 --> 00:00:30.440
+just like a Node server.
+
+00:00:30.440 --> 00:00:33.830
+To start it, we need to run this command.
+
+00:00:33.830 --> 00:00:36.080
+Simply select your operating system from
+
+00:00:36.080 --> 00:00:39.650
+the list and then run the command associated with it.
+
+00:00:39.650 --> 00:00:42.590
+When you do that, you should be able to see that
+
+00:00:42.590 --> 00:00:45.890
+the program is running and that terminal tab is taking over.
+
+00:00:45.890 --> 00:00:47.330
+Then in another tab,
+
+00:00:47.330 --> 00:00:51.210
+you can start the front-end by running npm start.
+
+00:00:51.910 --> 00:00:56.525
+Once you have both the API and the front-end running,
+
+00:00:56.525 --> 00:01:00.145
+you should be able to see the page on localhost: 3000.
+
+00:01:00.145 --> 00:01:04.415
+Here you can see that we have some base HTML setup for you.
+
+00:01:04.415 --> 00:01:07.355
+If you click the "Start My Race" button,
+
+00:01:07.355 --> 00:01:09.335
+you'll come to the first page.
+
+00:01:09.335 --> 00:01:13.850
+But the options to create a race are not available yet,
+
+00:01:13.850 --> 00:01:17.150
+and that's because your first task will be to make
+
+00:01:17.150 --> 00:01:21.125
+the API request to add these options to the front-end.
+
+00:01:21.125 --> 00:01:25.780
+So let's take a look at where your code will go and the structure of this repo.
+
+00:01:25.780 --> 00:01:29.015
+First, you'll see that we have a server folder
+
+00:01:29.015 --> 00:01:32.840
+which has the index.js file that will run the front-end.
+
+00:01:32.840 --> 00:01:34.625
+You don't have to do anything here,
+
+00:01:34.625 --> 00:01:36.590
+but it might be nice to know where it is.
+
+00:01:36.590 --> 00:01:38.135
+In the client folder,
+
+00:01:38.135 --> 00:01:43.145
+you'll see that we already have some style sheets and JavaScript files created for you,
+
+00:01:43.145 --> 00:01:46.535
+as well as some base HTML pages.
+
+00:01:46.535 --> 00:01:48.230
+In the JavaScript folder,
+
+00:01:48.230 --> 00:01:51.305
+we have the main file where you will be doing your work.
+
+00:01:51.305 --> 00:01:54.695
+This file already has a lot of code written for you.
+
+00:01:54.695 --> 00:01:59.480
+Any code marked does provided should not be removed or edited,
+
+00:01:59.480 --> 00:02:02.050
+everything will work if this stays the same.
+
+00:02:02.050 --> 00:02:04.770
+But your tasks are marked with TODOs,
+
+00:02:04.770 --> 00:02:08.735
+they have a comment explaining what you should do at each stage.
+
+00:02:08.735 --> 00:02:13.940
+Your main task in this project will be to fill out these TODOs with your own code.
+
+00:02:13.940 --> 00:02:18.575
+As you do that, you should be able to play through more and more of the game.
+
+00:02:18.575 --> 00:02:21.050
+As some advice for getting started,
+
+00:02:21.050 --> 00:02:24.050
+I would suggest starting by reading through
+
+00:02:24.050 --> 00:02:27.325
+this entire file to see how much you can understand.
+
+00:02:27.325 --> 00:02:30.365
+Second, it's probably helpful to build
+
+00:02:30.365 --> 00:02:33.770
+each step as you need it by playing through the game.
+
+00:02:33.770 --> 00:02:38.465
+Here you can see that I don't have the options to select a race or a racer.
+
+00:02:38.465 --> 00:02:41.480
+So it would be a good idea to start with
+
+00:02:41.480 --> 00:02:44.900
+the API requests that will let me see those options.
+
+00:02:44.900 --> 00:02:48.640
+All of the API requests take place here at the bottom.
+
+00:02:48.640 --> 00:02:52.055
+Now let's talk about how you can make this project your own.
+
+00:02:52.055 --> 00:02:55.040
+When I created my example for this project,
+
+00:02:55.040 --> 00:02:58.225
+I decided to theme it as Star Wars.
+
+00:02:58.225 --> 00:03:01.220
+But you can theme it as whatever you want.
+
+00:03:01.220 --> 00:03:03.950
+Here you can see that all of my options,
+
+00:03:03.950 --> 00:03:07.355
+racers, and CSS are styled to a theme.
+
+00:03:07.355 --> 00:03:10.255
+You can do the same with anything that you'd like.
+
+00:03:10.255 --> 00:03:14.330
+Hopefully, you'll find this project to be both fun and challenging as it
+
+00:03:14.330 --> 00:03:19.140
+forces you to use all of the asynchronous concepts we've learned in this course.
+

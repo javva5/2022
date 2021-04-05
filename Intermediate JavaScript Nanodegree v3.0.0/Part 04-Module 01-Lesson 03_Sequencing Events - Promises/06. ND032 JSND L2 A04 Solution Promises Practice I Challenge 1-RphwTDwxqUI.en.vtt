@@ -1,0 +1,115 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.100
+How did you do? This exercise was complicated with so many steps,
+
+00:00:05.100 --> 00:00:07.855
+and there are many options as to how you could have solved it,
+
+00:00:07.855 --> 00:00:09.285
+but here's one solution,
+
+00:00:09.285 --> 00:00:11.655
+so you can see how it matches up to yours.
+
+00:00:11.655 --> 00:00:14.715
+The first thing I'll mention is that as you're getting started,
+
+00:00:14.715 --> 00:00:19.150
+it can sometimes be hard to see how to get the thing you want from the response you get.
+
+00:00:19.150 --> 00:00:22.365
+The practice you saw here in the challenge of actually writing out
+
+00:00:22.365 --> 00:00:26.400
+all the steps of changes and things that need to happen with a promise response,
+
+00:00:26.400 --> 00:00:29.190
+can be really helpful for complex flows.
+
+00:00:29.190 --> 00:00:34.590
+Writing the Venn clauses should flow easier once you have these steps organized,
+
+00:00:34.590 --> 00:00:39.555
+but you don't necessarily need one then statement for each step.
+
+00:00:39.555 --> 00:00:41.964
+Here there are four steps,
+
+00:00:41.964 --> 00:00:45.180
+but I only created three clauses.
+
+00:00:45.180 --> 00:00:48.260
+There were four steps in the challenge instructions,
+
+00:00:48.260 --> 00:00:51.490
+but I only created three then clauses.
+
+00:00:51.490 --> 00:00:54.560
+The first step does have a check though to see if there are
+
+00:00:54.560 --> 00:00:59.210
+any unread alerts and causes an error if there are no unread alerts,
+
+00:00:59.210 --> 00:01:05.555
+then we return the array of unread alerts to pass it to the next link in the chain.
+
+00:01:05.555 --> 00:01:11.165
+The second Venn statement performs two of the required steps for this exercise.
+
+00:01:11.165 --> 00:01:16.430
+It's more efficient to look for two things in a single pass of filter,
+
+00:01:16.430 --> 00:01:19.400
+than it is to filter the entire array twice.
+
+00:01:19.400 --> 00:01:23.720
+So here I'm looking for whether the alert is a system alert or not,
+
+00:01:23.720 --> 00:01:26.749
+and performing an action in both cases.
+
+00:01:26.749 --> 00:01:31.220
+One thing I want you to notice is that many times when writing promises,
+
+00:01:31.220 --> 00:01:34.070
+you will see people use the word data or something very
+
+00:01:34.070 --> 00:01:37.565
+generic as the argument name, but you don't have to.
+
+00:01:37.565 --> 00:01:39.755
+This comes down to personal preference,
+
+00:01:39.755 --> 00:01:41.690
+but when I can name the argument,
+
+00:01:41.690 --> 00:01:46.370
+something that tells the reader what is being returned from the previous then statement,
+
+00:01:46.370 --> 00:01:49.325
+I think it makes reading the code more intuitive.
+
+00:01:49.325 --> 00:01:53.000
+Also notice the implicit return in this statement.
+
+00:01:53.000 --> 00:01:56.540
+When you don't use curly brackets around the logic of an error function,
+
+00:01:56.540 --> 00:01:58.655
+the result is automatically returned.
+
+00:01:58.655 --> 00:02:02.990
+Therefore it is automatically passed to the next then clause.
+
+00:02:02.990 --> 00:02:06.050
+The third then statement is fairly straightforward,
+
+00:02:06.050 --> 00:02:09.380
+but notice the formatted console log and imagine that we could do
+
+00:02:09.380 --> 00:02:13.980
+something like an alert that would actually print out to the user to help them.
+

@@ -1,0 +1,220 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.130
+In this video, I'm going to cover
+
+00:00:02.130 --> 00:00:05.940
+some good habits for writing awesome catch clauses in your promises,
+
+00:00:05.940 --> 00:00:08.460
+as well as look at some general ways that we can
+
+00:00:08.460 --> 00:00:11.130
+handle errors that are in our JavaScript programs.
+
+00:00:11.130 --> 00:00:15.120
+This is super important because the better your error handling is,
+
+00:00:15.120 --> 00:00:18.600
+the faster you can isolate a problem and get on with the fix.
+
+00:00:18.600 --> 00:00:23.385
+First off, there's a secret about catch statements that we haven't covered yet.
+
+00:00:23.385 --> 00:00:27.150
+You can actually write a then clause off of a catch.
+
+00:00:27.150 --> 00:00:29.580
+This means that we can handle errors with
+
+00:00:29.580 --> 00:00:32.580
+the same attention to detail as we do successes.
+
+00:00:32.580 --> 00:00:36.510
+Here's an example of a promise chain we used earlier in the course,
+
+00:00:36.510 --> 00:00:40.095
+but with better error handling added to the catch statements.
+
+00:00:40.095 --> 00:00:45.770
+Errors in JavaScript have many properties that we can use to create custom error actions.
+
+00:00:45.770 --> 00:00:48.125
+First of all, errors have types.
+
+00:00:48.125 --> 00:00:52.030
+You can find the type of an error by looking at its name property.
+
+00:00:52.030 --> 00:00:55.910
+An error we throw will have a generic error type,
+
+00:00:55.910 --> 00:00:57.995
+but an error that JavaScript throws,
+
+00:00:57.995 --> 00:01:01.055
+will have a type such as ReferenceError or TypeError.
+
+00:01:01.055 --> 00:01:05.095
+The message of a JavaScript error is held in the message property.
+
+00:01:05.095 --> 00:01:07.730
+In this example, I'm going to show you how to deal
+
+00:01:07.730 --> 00:01:10.280
+with custom errors that we throw on purpose,
+
+00:01:10.280 --> 00:01:13.405
+as well as system errors thrown by JavaScript.
+
+00:01:13.405 --> 00:01:17.360
+First, I have this reference to an undeclared variable.
+
+00:01:17.360 --> 00:01:21.845
+JavaScript will throw an error here and the catch clause will run.
+
+00:01:21.845 --> 00:01:25.850
+You can see that here I'm actually printing
+
+00:01:25.850 --> 00:01:29.839
+a custom console log if a certain error happens.
+
+00:01:29.839 --> 00:01:33.290
+We can see that custom console log happening here.
+
+00:01:33.290 --> 00:01:35.600
+If I get rid of that error though,
+
+00:01:35.600 --> 00:01:37.700
+and instead throw a custom error,
+
+00:01:37.700 --> 00:01:41.470
+you can see that I handle that in a separate section of the catch clause.
+
+00:01:41.470 --> 00:01:46.370
+Here I am throwing an error and always passing the array as the message.
+
+00:01:46.370 --> 00:01:50.810
+Anything you pass to the message of an error will get turned into a string.
+
+00:01:50.810 --> 00:01:52.295
+In my catch clause,
+
+00:01:52.295 --> 00:01:54.905
+I can check what the string contains.
+
+00:01:54.905 --> 00:01:57.770
+Based on what data is included in the array,
+
+00:01:57.770 --> 00:02:01.145
+I can tell what stage this promise failed at.
+
+00:02:01.145 --> 00:02:02.975
+For my own debugging benefit,
+
+00:02:02.975 --> 00:02:07.660
+I then concatenate the step where the error occurred with the error message.
+
+00:02:07.660 --> 00:02:09.305
+When we run the code,
+
+00:02:09.305 --> 00:02:14.190
+you can see that my custom error message is printed. Neat, right?
+
+00:02:14.190 --> 00:02:18.230
+It shows just how much detail you can use to handle errors in your app.
+
+00:02:18.230 --> 00:02:21.575
+This is an amazing superpower when you're building apps.
+
+00:02:21.575 --> 00:02:25.945
+Let's take a minute to discuss why error handling is so important.
+
+00:02:25.945 --> 00:02:28.730
+One question you might be asking yourself is,
+
+00:02:28.730 --> 00:02:33.440
+why should I try so hard catching errors if all I ever do is console log them?
+
+00:02:33.440 --> 00:02:36.830
+That's one problem I see with many JavaScript programs.
+
+00:02:36.830 --> 00:02:39.875
+Oftentimes, errors are just console logged,
+
+00:02:39.875 --> 00:02:43.670
+which is fine in development or for developers,
+
+00:02:43.670 --> 00:02:47.285
+but the user can't see your logged error messages.
+
+00:02:47.285 --> 00:02:49.220
+The really important question is,
+
+00:02:49.220 --> 00:02:53.185
+what do your users experience when the program counters and error?
+
+00:02:53.185 --> 00:02:55.920
+How do you translate that error to them?
+
+00:02:55.920 --> 00:03:00.830
+Do you prompt them for what to do next or guide them to an error-free page?
+
+00:03:00.830 --> 00:03:03.740
+In web development, this process of handling
+
+00:03:03.740 --> 00:03:06.680
+errors gracefully is called exception handling.
+
+00:03:06.680 --> 00:03:10.580
+Exception handling means writing code in such a way as to
+
+00:03:10.580 --> 00:03:14.360
+allow programs to handle errors in a way that's beneficial,
+
+00:03:14.360 --> 00:03:16.960
+or without crashing or becoming unusable.
+
+00:03:16.960 --> 00:03:20.720
+In order for an app or a website to feel solid for users,
+
+00:03:20.720 --> 00:03:23.105
+you need to have good exception handling.
+
+00:03:23.105 --> 00:03:26.110
+Imagine the users of your app for a moment.
+
+00:03:26.110 --> 00:03:30.740
+If you were to print the message you get in a console logged error to the user,
+
+00:03:30.740 --> 00:03:33.445
+it probably wouldn't help them much.
+
+00:03:33.445 --> 00:03:39.080
+We can parse an error to make it prettier and more useful to someone using our app.
+
+00:03:39.080 --> 00:03:41.810
+You saw some examples of how we could do this in
+
+00:03:41.810 --> 00:03:44.935
+the code example when we created custom error messages.
+
+00:03:44.935 --> 00:03:48.800
+It would be much more helpful to alert a custom error message to the user,
+
+00:03:48.800 --> 00:03:51.755
+than to print the reference error text we saw.
+
+00:03:51.755 --> 00:03:54.590
+That is what exception handling is all about.
+
+00:03:54.590 --> 00:03:59.405
+Good exception handling will make our programs easier for developers to debug,
+
+00:03:59.405 --> 00:04:01.820
+easier for users to understand,
+
+00:04:01.820 --> 00:04:06.360
+and more resilient to problems that might otherwise make it crash.
+

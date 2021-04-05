@@ -1,0 +1,278 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Instructions</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Project: UdaciRacer Simulator</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Instructions.html">02. Instructions</a>
+    </li>
+    <li class="">
+      <a href="03. Workspace.html">03. Workspace</a>
+    </li>
+    <li class="">
+      <a href="Project Description - UdaciRacer Simulator.html">Project Description - UdaciRacer Simulator</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - UdaciRacer Simulator.html">Project Rubric - UdaciRacer Simulator</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Instructions</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="getting-started">Getting Started</h2>
+<p>The first step is to clone this <a href="https://github.com/udacity/nd032-c3-asynchronous-programming-with-javascript-project-starter" rel="noopener noreferrer" target="_blank">project repository</a>.</p>
+<p>In order to build this game, we need to run two things: the game engine API and the front end.</p>
+<h3 id="start-the-server-api">Start the Server (API)</h3>
+<p>The game engine has been compiled down to a binary so that you can run it on any system. Because of this, you cannot edit the API in any way, it is just a black box that we interact with via the API endpoints. </p>
+<p>To run the server, locate your operating system and run the associated command in your terminal at the root of the project.</p>
+<table>
+<thead>
+<tr>
+<th id="your_os">Your OS</th>
+<th id="command_to_start_the_api">Command to start the API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mac</td>
+<td><code>ORIGIN_ALLOWED=http://localhost:3000 ./bin/server-osx</code></td>
+</tr>
+<tr>
+<td>Windows</td>
+<td><code>ORIGIN_ALLOWED=http://localhost:3000 ./bin/server.exe</code></td>
+</tr>
+<tr>
+<td>Linux (Ubuntu, etc..)</td>
+<td><code>ORIGIN_ALLOWED=http://localhost:3000 ./bin/server-linux</code></td>
+</tr>
+</tbody>
+</table>
+<p>If you are on an older OS and the above command doesn't run for you - or if you know that you are running a 32bit system - add <code>-32</code> to the end of the file name. For reference, here are the same commands but for a 32-bit system.</p>
+<table>
+<thead>
+<tr>
+<th id="32_bit_systems_only!">32 Bit Systems Only!</th>
+<th id="command_to_start_the_api">Command to start the API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mac</td>
+<td><code>ORIGIN_ALLOWED=http://localhost:3000 ./bin/server-osx-32</code></td>
+</tr>
+<tr>
+<td>Windows</td>
+<td><code>ORIGIN_ALLOWED=http://localhost:3000 ./bin/server-32.exe</code></td>
+</tr>
+<tr>
+<td>Linux (Ubuntu, etc..)</td>
+<td><code>ORIGIN_ALLOWED=http://localhost:3000 ./bin/server-linux-32</code></td>
+</tr>
+</tbody>
+</table>
+<p>Note that this process will use your terminal tab, so you will have to open a new tab and navigate back to the project root to start the front end.</p>
+<h3 id="start-the-frontend">Start the Frontend</h3>
+<p>First, run your preference of <code>npm install &amp;&amp; npm start</code> or <code>yarn &amp;&amp; yarn start</code> at the root of this project. Then you should be able to access http://localhost:3000.</p>
+<h2 id="project-requirements">Project Requirements</h2>
+<p>You can look at the rubric <a href="https://review.udacity.com/#!/rubrics/2829/view" rel="noopener noreferrer" target="_blank">here</a> for a more in-depth look at the project requirements.</p>
+<p>This starter code base has directions for you in <code>src/client/assets/javascript/index.js</code>. There you will be directed to use certain asynchronous methods to achieve tasks. You will know you're making progress as you can play through more and more of the game.</p>
+<h3 id="api-calls">API Calls</h3>
+<p>To complete the project you must first create the calls to the API. These will all be fetch requests, and all information needed to create the request is provided in the instructions. The API calls are all at the bottom of the file: <code>src/client/assets/javascript/index.js</code>.</p>
+<p>Below are a list of the API endpoints and the shape of the data they return. These are all of the endpoints you need to complete the game. Consult this information often as you complete the project:</p>
+<p>[GET] <code>api/tracks</code> <br />
+List of all tracks</p>
+<ul>
+<li>id: number (1)</li>
+<li>name: string ("Executioner")</li>
+<li>segments: number<a href="[87,47,29,31,78,25,80,76,60,14….]" rel="noopener noreferrer" target="_blank"></a></li>
+</ul>
+<p>[GET] <code>api/cars</code> <br />
+List of all cars</p>
+<ul>
+<li>id: number (3)</li>
+<li>driver_name: string ("Anakin Skywalker")</li>
+<li>top_speed: number (500)</li>
+<li>acceleration: number (10)</li>
+<li>handling: number (10)</li>
+</ul>
+<p>[GET] <code>api/races/${id}</code><br />
+Information about a single race</p>
+<ul>
+<li>status: RaceStatus ("unstarted" | "in-progress" | "finished")</li>
+<li>positions object[] ([{ car: object, final_position: number (omitted if empty), speed: number, segment: number}])</li>
+</ul>
+<p>[POST] <code>api/races</code> <br />
+Create a race</p>
+<ul>
+<li>id: number</li>
+<li>track: string</li>
+<li>player_id: number</li>
+<li>cars: Cars[] (array of cars in the race)</li>
+<li>results: Cars[] (array of cars in the position they finished, available if the race is finished)</li>
+</ul>
+<p>[POST] <code>api/races/${id}/start</code><br />
+Begin a race</p>
+<ul>
+<li>Returns nothing</li>
+</ul>
+<p>[POST] <code>api/races/${id}/accelerate</code><br />
+Accelerate a car</p>
+<ul>
+<li>Returns nothing</li>
+</ul>
+<p>To complete the race logic, find all the TODO tags in index.js and read the instructions. </p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Workspace.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. Instructions')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

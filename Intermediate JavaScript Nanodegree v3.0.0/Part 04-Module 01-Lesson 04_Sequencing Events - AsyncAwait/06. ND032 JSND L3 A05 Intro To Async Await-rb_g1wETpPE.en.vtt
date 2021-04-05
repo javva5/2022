@@ -1,0 +1,211 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.525
+The syntax of async/await is surprisingly simple,
+
+00:00:03.525 --> 00:00:05.460
+just two new keywords.
+
+00:00:05.460 --> 00:00:07.665
+Using async/await effectively though,
+
+00:00:07.665 --> 00:00:11.310
+is a matter of truly understanding the effect of these two words.
+
+00:00:11.310 --> 00:00:14.115
+Perhaps more than any other topic in this course,
+
+00:00:14.115 --> 00:00:18.075
+I have seen a lot of misunderstanding around the use of async/await.
+
+00:00:18.075 --> 00:00:20.570
+As we explore the syntax in this video,
+
+00:00:20.570 --> 00:00:24.020
+I'll make sure to point out the most common places to go wrong.
+
+00:00:24.020 --> 00:00:26.630
+As we get started, it's important to remember that
+
+00:00:26.630 --> 00:00:29.780
+promises and async/await are just syntactic sugar.
+
+00:00:29.780 --> 00:00:34.100
+In the same way that anything you can do with promises can be achieved with callbacks,
+
+00:00:34.100 --> 00:00:37.564
+everything you can do with async/await can be done with promises,
+
+00:00:37.564 --> 00:00:40.405
+but there are some nice syntax features you'll miss out on.
+
+00:00:40.405 --> 00:00:43.565
+First, let's take a look at the await keyword.
+
+00:00:43.565 --> 00:00:44.960
+In the last section,
+
+00:00:44.960 --> 00:00:47.150
+we talked about how the asynchronous nature of
+
+00:00:47.150 --> 00:00:50.755
+promises can make the results difficult to use in our programs.
+
+00:00:50.755 --> 00:00:54.080
+We said that async/await was meant to make this easier
+
+00:00:54.080 --> 00:00:57.670
+by making our asynchronous code behaves synchronously.
+
+00:00:57.670 --> 00:01:00.120
+This is what the await word does.
+
+00:01:00.120 --> 00:01:04.085
+When you put a wait in front of a function that returns a promise,
+
+00:01:04.085 --> 00:01:08.770
+it causes that promise to block the program until the promise is fulfilled.
+
+00:01:08.770 --> 00:01:11.280
+Awesome, that's a cool trick.
+
+00:01:11.280 --> 00:01:15.440
+But we can't just start throwing the await word around anywhere we want.
+
+00:01:15.440 --> 00:01:18.125
+We only wield the power of a wait
+
+00:01:18.125 --> 00:01:21.665
+inside of a function that has the async word in front of it.
+
+00:01:21.665 --> 00:01:24.800
+The async word does two things: It let's us use
+
+00:01:24.800 --> 00:01:29.780
+the await word and it forces the function that is called on to return a promise.
+
+00:01:29.780 --> 00:01:32.750
+Let's take a look at an example of all this though.
+
+00:01:32.750 --> 00:01:36.185
+You'll recognize this code example from the last section.
+
+00:01:36.185 --> 00:01:42.080
+Again, it doesn't work because the math tries to run before the promises are fulfilled.
+
+00:01:42.080 --> 00:01:46.775
+Let's try our new async/await syntax and see if we can make this better.
+
+00:01:46.775 --> 00:01:50.180
+In this example, I've added the async word before
+
+00:01:50.180 --> 00:01:54.395
+the function and added the await word before each promise call.
+
+00:01:54.395 --> 00:01:59.010
+The console logs will show us what's happening as the function runs.
+
+00:02:00.700 --> 00:02:04.100
+You can see that each console log is only
+
+00:02:04.100 --> 00:02:07.955
+happening after each promise is fully completed,
+
+00:02:07.955 --> 00:02:13.735
+which allows us to get a solution of 11 when we finally do the math in the last step.
+
+00:02:13.735 --> 00:02:16.485
+Now we have a working program.
+
+00:02:16.485 --> 00:02:20.180
+You can see that the await word turned our promise
+
+00:02:20.180 --> 00:02:24.065
+into a blocking operation so that when we go to do the math later on,
+
+00:02:24.065 --> 00:02:28.585
+we can be confident that we're working with two numbers instead of two pending promises.
+
+00:02:28.585 --> 00:02:31.370
+Now, you might be thinking that making something
+
+00:02:31.370 --> 00:02:35.300
+asynchronous act synchronous is going backwards.
+
+00:02:35.300 --> 00:02:38.615
+Aren't we getting less efficient when we do this?
+
+00:02:38.615 --> 00:02:41.315
+If you were already asking yourself that question,
+
+00:02:41.315 --> 00:02:46.915
+you're doing great because that is really the key point behind using async/await well.
+
+00:02:46.915 --> 00:02:50.615
+We only want to use async/await to make it easier to
+
+00:02:50.615 --> 00:02:54.595
+wait for values we were going to have to wait for anyway.
+
+00:02:54.595 --> 00:02:56.135
+Like in this case,
+
+00:02:56.135 --> 00:02:58.430
+if you're going to do math with two numbers,
+
+00:02:58.430 --> 00:03:03.350
+then there's no way around waiting for those two numbers before getting a sum.
+
+00:03:03.350 --> 00:03:08.750
+async/await gives the developer the power and responsibility to choose
+
+00:03:08.750 --> 00:03:14.000
+what actions should behave in a non-blocking manner and which will need to be blocking.
+
+00:03:14.000 --> 00:03:17.870
+One last code example will be a quick one just to show you what I meant
+
+00:03:17.870 --> 00:03:21.695
+about the async word forcing the function to return a promise.
+
+00:03:21.695 --> 00:03:24.050
+Here I have the same code as above,
+
+00:03:24.050 --> 00:03:26.900
+but I'm console logging the function immediately after it's
+
+00:03:26.900 --> 00:03:30.260
+called and then again after everything is resolved.
+
+00:03:30.260 --> 00:03:32.210
+If I run this code,
+
+00:03:32.210 --> 00:03:36.815
+you can see that I get a promise pending which means that our function,
+
+00:03:36.815 --> 00:03:39.935
+HandleManyThings, is indeed a promise.
+
+00:03:39.935 --> 00:03:42.620
+But we don't use the promise keyword anywhere,
+
+00:03:42.620 --> 00:03:47.020
+it's only a promise because the async word forces it to be one.
+
+00:03:47.020 --> 00:03:51.275
+Then after everything is resolved and we console log it again,
+
+00:03:51.275 --> 00:03:54.560
+you can see that it's a promise that has been resolved.
+
+00:03:54.560 --> 00:03:58.805
+I hope this gives you a better feel for what is going on with async/await.
+
+00:03:58.805 --> 00:04:00.740
+There are some challenges up next,
+
+00:04:00.740 --> 00:04:03.240
+so get ready for some practice.
+

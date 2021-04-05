@@ -1,0 +1,121 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.265
+Promises are awesome.
+
+00:00:02.265 --> 00:00:04.860
+As we learned at length in the last lesson,
+
+00:00:04.860 --> 00:00:07.455
+promises are convenient, chainable,
+
+00:00:07.455 --> 00:00:10.545
+and we can control them individually or in groups.
+
+00:00:10.545 --> 00:00:15.015
+We can do all sorts of things which might leave you with a question,
+
+00:00:15.015 --> 00:00:18.500
+why hardly two years after promises came to
+
+00:00:18.500 --> 00:00:22.755
+JavaScript in ES6 was async/await added in ES8?
+
+00:00:22.755 --> 00:00:26.640
+We know promises solve to the pain point of callback hell,
+
+00:00:26.640 --> 00:00:30.095
+but what pain point does async/await solve?
+
+00:00:30.095 --> 00:00:33.470
+The answer is that scheduling asynchronous events,
+
+00:00:33.470 --> 00:00:36.240
+even with promises, is hard.
+
+00:00:36.240 --> 00:00:40.970
+It can get complex especially if you perform long strings of asynchronous events.
+
+00:00:40.970 --> 00:00:44.285
+One of the great things about promises that they are
+
+00:00:44.285 --> 00:00:48.685
+non-blocking can also be one of the things that makes them difficult.
+
+00:00:48.685 --> 00:00:50.780
+Take a look at this example,
+
+00:00:50.780 --> 00:00:52.430
+it might seem silly,
+
+00:00:52.430 --> 00:00:54.379
+but things like this can be surprisingly
+
+00:00:54.379 --> 00:00:57.730
+tricky because of the non-blocking nature of promises.
+
+00:00:57.730 --> 00:00:59.240
+When I run the code,
+
+00:00:59.240 --> 00:01:01.280
+you'll be able to see the problem.
+
+00:01:01.280 --> 00:01:03.860
+Because promises are asynchronous,
+
+00:01:03.860 --> 00:01:07.840
+the calculation runs while the two promises are still pending.
+
+00:01:07.840 --> 00:01:13.330
+That's why we get these two pending notes here for value1 and value2.
+
+00:01:13.330 --> 00:01:16.430
+So how could you do something so simple as perform
+
+00:01:16.430 --> 00:01:20.120
+an operation on the result of two separate promises?
+
+00:01:20.120 --> 00:01:22.610
+Here's where you could easily find yourself down
+
+00:01:22.610 --> 00:01:24.850
+a rabbit trail of chaining [inaudible] and making
+
+00:01:24.850 --> 00:01:26.870
+new promises inside of the [inaudible] of
+
+00:01:26.870 --> 00:01:30.860
+another promise or you could set a timeout across the whole thing,
+
+00:01:30.860 --> 00:01:33.410
+but it's not an ideal solution,
+
+00:01:33.410 --> 00:01:35.645
+or at least it's not super easy.
+
+00:01:35.645 --> 00:01:37.355
+But you know what is easy?
+
+00:01:37.355 --> 00:01:41.725
+Synchronous code. We're all used to working with synchronous code.
+
+00:01:41.725 --> 00:01:46.520
+So what if we could make our asynchronous events easier for our tired 2:00
+
+00:01:46.520 --> 00:01:51.860
+AM code brains to understand by making them act more like synchronous events.
+
+00:01:51.860 --> 00:01:57.005
+You might be incredulous and think that you can't have the best of both worlds like that.
+
+00:01:57.005 --> 00:02:02.065
+But aha, that is the pain point async/await was meant to solve.
+
+00:02:02.065 --> 00:02:05.810
+How does async/await achieve this wonderful sounding scenario?
+
+00:02:05.810 --> 00:02:10.830
+Find out in the next lesson as we explore the async/await syntax.
+

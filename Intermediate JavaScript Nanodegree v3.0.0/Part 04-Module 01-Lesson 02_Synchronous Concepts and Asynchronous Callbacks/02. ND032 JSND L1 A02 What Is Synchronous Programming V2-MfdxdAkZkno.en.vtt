@@ -1,0 +1,133 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.900
+Be patient with me a minute as we go back to the very basics.
+
+00:00:03.900 --> 00:00:06.945
+We've been talking so much about asynchronous code,
+
+00:00:06.945 --> 00:00:10.080
+but what exactly does it mean to be synchronous?
+
+00:00:10.080 --> 00:00:12.990
+Understanding the synchronous process is easiest when
+
+00:00:12.990 --> 00:00:15.885
+you see it in comparison with an asynchronous process.
+
+00:00:15.885 --> 00:00:20.130
+There are lots of really good analogies for asynchronous synchronous programming.
+
+00:00:20.130 --> 00:00:22.605
+You might have heard some of them already.
+
+00:00:22.605 --> 00:00:25.230
+I'm going to use the coffee shop example,
+
+00:00:25.230 --> 00:00:27.630
+but they're all pretty much the same.
+
+00:00:27.630 --> 00:00:30.045
+Here's a synchronous analogy.
+
+00:00:30.045 --> 00:00:31.665
+Picture a coffee shop.
+
+00:00:31.665 --> 00:00:34.890
+There's a coffee machine and one barista working.
+
+00:00:34.890 --> 00:00:39.015
+The barista is responsible for taking orders and making coffee.
+
+00:00:39.015 --> 00:00:43.155
+If that barista is working in a synchronous way, it looks like this.
+
+00:00:43.155 --> 00:00:45.815
+Two customers lineup at the counter,
+
+00:00:45.815 --> 00:00:48.890
+the barista takes the order of the first customer,
+
+00:00:48.890 --> 00:00:50.800
+turns on the coffee machine,
+
+00:00:50.800 --> 00:00:53.970
+and then waits for the coffee to be done.
+
+00:00:53.970 --> 00:00:58.190
+When it's finished, the barista hands the coffee to the customer,
+
+00:00:58.190 --> 00:01:00.895
+and takes the order of the next customer in line.
+
+00:01:00.895 --> 00:01:04.400
+Does that sound like any coffee shop you've ever been to?
+
+00:01:04.400 --> 00:01:08.990
+Likely not, because most baristas work in an asynchronous way.
+
+00:01:08.990 --> 00:01:11.695
+The asynchronous way looks like this.
+
+00:01:11.695 --> 00:01:14.310
+Two customers line up at the counter,
+
+00:01:14.310 --> 00:01:16.020
+the first makes their order,
+
+00:01:16.020 --> 00:01:18.180
+and the barista turns on the coffee machine.
+
+00:01:18.180 --> 00:01:21.125
+While that coffee is being made,
+
+00:01:21.125 --> 00:01:25.610
+the barista takes the order of the second customer and starts their coffee.
+
+00:01:25.610 --> 00:01:30.365
+Now, both customers have been helped and both of their coffees are being made.
+
+00:01:30.365 --> 00:01:33.140
+The barista gives each customer their drink
+
+00:01:33.140 --> 00:01:36.130
+in the order the coffee machine finishes each coffee.
+
+00:01:36.130 --> 00:01:38.430
+So what is synchronous programming?
+
+00:01:38.430 --> 00:01:42.650
+It is programming in a way that doesn't try to be efficient with time.
+
+00:01:42.650 --> 00:01:46.280
+Like the barista who waits for the coffee machine as it makes coffee,
+
+00:01:46.280 --> 00:01:48.579
+instead of moving on to other tasks,
+
+00:01:48.579 --> 00:01:51.455
+synchronous code will not move on from a task,
+
+00:01:51.455 --> 00:01:55.340
+even if it is just waiting for a response from something else.
+
+00:01:55.340 --> 00:01:58.940
+You can see how the asynchronous approach is more efficient,
+
+00:01:58.940 --> 00:02:01.264
+but can also be more complicated.
+
+00:02:01.264 --> 00:02:06.260
+Another important thing to notice in this analogy is that there is only ever one barista.
+
+00:02:06.260 --> 00:02:09.530
+We haven't sped up the process by adding another worker.
+
+00:02:09.530 --> 00:02:13.070
+Instead, the barista is effectively using their time by
+
+00:02:13.070 --> 00:02:17.730
+continuing with work they can do while waiting for another task to complete.
+

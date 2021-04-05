@@ -1,0 +1,166 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.930
+Now we'll take a small detour to get some terms straight.
+
+00:00:03.930 --> 00:00:06.780
+These terms are similar enough in meaning that
+
+00:00:06.780 --> 00:00:09.825
+they often get mixed up, misused, and abused.
+
+00:00:09.825 --> 00:00:13.020
+But this course wouldn't be complete without making sure that you're
+
+00:00:13.020 --> 00:00:16.995
+equipped to use them correctly and understand their unique differences.
+
+00:00:16.995 --> 00:00:20.085
+Asynchronous. As we already covered,
+
+00:00:20.085 --> 00:00:23.370
+asynchronous and non-blocking are synonyms.
+
+00:00:23.370 --> 00:00:26.490
+It means that we make more efficient use of our thread by
+
+00:00:26.490 --> 00:00:30.330
+letting it continue with work while another task is idle or waiting.
+
+00:00:30.330 --> 00:00:34.725
+Essentially, it is good time management when working on a single thread.
+
+00:00:34.725 --> 00:00:39.390
+Concurrent and parallel are terms you have probably heard thrown around.
+
+00:00:39.390 --> 00:00:41.235
+But what do they actually mean,
+
+00:00:41.235 --> 00:00:44.160
+and are they at all related to asynchronicity?
+
+00:00:44.160 --> 00:00:48.410
+Asynchronous is all about managing one thread well.
+
+00:00:48.410 --> 00:00:53.735
+Concurrent and parallel are terms that refer to dealing with multithreaded scenarios.
+
+00:00:53.735 --> 00:00:57.920
+There are a lot of opinions when it comes to defining these two terms,
+
+00:00:57.920 --> 00:01:01.220
+which has made even more difficult to navigate because we are talking
+
+00:01:01.220 --> 00:01:04.780
+about things that are hard to picture and give clear definitions to.
+
+00:01:04.780 --> 00:01:08.090
+I've tried to gather the most correct definitions of these terms
+
+00:01:08.090 --> 00:01:11.465
+that I can and tried to give them the clearest definition.
+
+00:01:11.465 --> 00:01:16.565
+But don't be surprised if you hear a different or even conflicting definition elsewhere,
+
+00:01:16.565 --> 00:01:21.560
+especially as some programming languages even implement these concepts differently.
+
+00:01:21.560 --> 00:01:24.290
+In the end, getting it to work correctly for
+
+00:01:24.290 --> 00:01:28.040
+your program in the language you're using is the most important thing,
+
+00:01:28.040 --> 00:01:30.965
+and a definition won't change the end result.
+
+00:01:30.965 --> 00:01:32.995
+But I'm going to try.
+
+00:01:32.995 --> 00:01:37.835
+Parallel is perhaps the more clearly definable of the two terms.
+
+00:01:37.835 --> 00:01:44.240
+Parallel programs leverage multiple threads to execute tasks simultaneously.
+
+00:01:44.240 --> 00:01:47.240
+The key here is that three things are happening at
+
+00:01:47.240 --> 00:01:50.630
+the same time on three separate threads.
+
+00:01:50.630 --> 00:01:54.110
+The term concurrent has slightly different meanings in
+
+00:01:54.110 --> 00:01:58.865
+different programming languages because of how each language achieves this effect.
+
+00:01:58.865 --> 00:02:03.440
+But it is enough to say that concurrent programs achieve results by
+
+00:02:03.440 --> 00:02:08.285
+breaking code up into pieces and then switching between those pieces very quickly.
+
+00:02:08.285 --> 00:02:14.150
+Those pieces though, are running on multiple threads with one active thread at a time.
+
+00:02:14.150 --> 00:02:18.860
+The best analogy I ever heard for this is chatting or texting people.
+
+00:02:18.860 --> 00:02:24.785
+Parallel would be writing two messages to two different people at exactly the same time.
+
+00:02:24.785 --> 00:02:27.155
+Not exactly possible for humans,
+
+00:02:27.155 --> 00:02:29.060
+but possible for computers.
+
+00:02:29.060 --> 00:02:31.610
+Concurrent would be if you have
+
+00:02:31.610 --> 00:02:36.170
+multiple text conversations going on with different people at the same time,
+
+00:02:36.170 --> 00:02:38.585
+you are talking to many people,
+
+00:02:38.585 --> 00:02:42.490
+but only by actively talking to one person at a time.
+
+00:02:42.490 --> 00:02:45.905
+The effect is that you are having multiple conversations,
+
+00:02:45.905 --> 00:02:49.400
+but you're achieving that by switching between conversations.
+
+00:02:49.400 --> 00:02:52.675
+That is effectively how concurrent programs work.
+
+00:02:52.675 --> 00:02:55.865
+There are pros and cons to each of these three strategies.
+
+00:02:55.865 --> 00:03:00.350
+So even though parallel walks away from this challenge with the best overall time,
+
+00:03:00.350 --> 00:03:02.915
+there are still reasons you would choose the others.
+
+00:03:02.915 --> 00:03:05.895
+In JavaScript, for instance, we don't have a choice.
+
+00:03:05.895 --> 00:03:10.085
+We have to choose asynchronous because JavaScript is not multithreaded.
+
+00:03:10.085 --> 00:03:12.830
+In languages that do support multi-threading,
+
+00:03:12.830 --> 00:03:17.195
+writing those programs comes with their very own sets of challenges and difficulties,
+
+00:03:17.195 --> 00:03:20.430
+but they can achieve impressive performance.
+
