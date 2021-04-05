@@ -1,0 +1,67 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.960 --> 00:00:04.730
+Let's check out these two functions.
+
+00:00:04.730 --> 00:00:06.785
+First we have "callAndAdd",
+
+00:00:06.785 --> 00:00:10.535
+which takes in two arguments: the first one being a single number,
+
+00:00:10.535 --> 00:00:13.169
+and the second one being a callback function.
+
+00:00:13.169 --> 00:00:15.365
+The other function over here is "returnsThree",
+
+00:00:15.365 --> 00:00:20.405
+which actually doesn't take in any arguments but just returns simply the number three.
+
+00:00:20.405 --> 00:00:22.565
+Let's go ahead and invoke "callAndAdd",
+
+00:00:22.565 --> 00:00:23.945
+pass it a number,
+
+00:00:23.945 --> 00:00:27.670
+and also pass in the "returnsThree" function into it as a callback.
+
+00:00:27.670 --> 00:00:36.579
+Great.
+
+00:00:36.579 --> 00:00:39.405
+So invoking the "callAndAdd" function and passing a
+
+00:00:39.405 --> 00:00:42.789
+two and the callback function returns three,
+
+00:00:42.789 --> 00:00:44.960
+gives us an output of five.
+
+00:00:44.960 --> 00:00:47.795
+Let's kind of see what's going on.
+
+00:00:47.795 --> 00:00:53.115
+So code execution actually moves into the function "callAndAdd".
+
+00:00:53.115 --> 00:00:58.825
+The end variable stored the number two that we passed in,
+
+00:00:58.825 --> 00:01:06.340
+and the callback function variable stores the returns three function that we passed in;
+
+00:01:08.439 --> 00:01:13.995
+"callAndAdd" goes ahead and invokes the "returnsThree" function,
+
+00:01:13.995 --> 00:01:17.570
+which returns the number three.
+
+00:01:17.569 --> 00:01:23.649
+So, all in all, the "callAndAdd" function returns the sum of two and three,
+
+00:01:23.650 --> 00:01:26.000
+and the result is five.
+

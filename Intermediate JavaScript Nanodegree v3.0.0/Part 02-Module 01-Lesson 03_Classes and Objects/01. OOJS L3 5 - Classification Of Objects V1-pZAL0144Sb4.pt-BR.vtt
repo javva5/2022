@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.934
+Temos um cachorro
+e o objeto "cachorro".
+
+00:00:03.968 --> 00:00:07.400
+E se criarmos um objeto
+para esta flor?
+
+00:00:07.434 --> 00:00:11.834
+As propriedades seriam:
+"folhas verdes" e "fragrância".
+
+00:00:11.868 --> 00:00:16.400
+Os métodos seriam: "crescer"
+ou "converter luz".
+
+00:00:16.434 --> 00:00:20.567
+Temos o objeto "cachorro"
+e o objeto "flor".
+
+00:00:20.601 --> 00:00:24.434
+Ambos são objetos,
+mas são diferentes.
+
+00:00:24.467 --> 00:00:30.234
+É melhor poder classificar
+os objetos "cachorro" e "flor".
+
+00:00:30.267 --> 00:00:33.400
+O JavaScript orientado a objeto
+é uma forma de compor código
+
+00:00:33.434 --> 00:00:35.601
+que classifica
+automaticamente os objetos.
+

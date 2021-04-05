@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.540
+We reached the end of course. Fantastic work.
+
+00:00:03.540 --> 00:00:07.799
+We covered a lot of complex but important materials in this lesson.
+
+00:00:07.799 --> 00:00:09.404
+We first did a review of objects,
+
+00:00:09.404 --> 00:00:11.459
+how to create, access, and modify them.
+
+00:00:11.460 --> 00:00:14.725
+Then, we looked at how functions work at runtime.
+
+00:00:14.724 --> 00:00:16.304
+We looked at scopes, closures,
+
+00:00:16.304 --> 00:00:18.899
+and Immediately-Invoked Function Expressions.
+
+00:00:18.899 --> 00:00:22.349
+Then, we combined all of these together to build our own classes.
+
+00:00:22.350 --> 00:00:23.950
+We learned about constructor functions,
+
+00:00:23.949 --> 00:00:25.230
+used the "this" keyword,
+
+00:00:25.230 --> 00:00:29.129
+and made use of prototypal inheritance to create and extend objects.
+
+00:00:29.129 --> 00:00:30.379
+Your new skills on
+
+00:00:30.379 --> 00:00:34.299
+object-oriented programming opens up a whole new set of career opportunities.
+
+00:00:34.299 --> 00:00:37.000
+So, congratulations. We'll see you next time.
+

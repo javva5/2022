@@ -1,0 +1,34 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.334 --> 00:00:03.701
+Funções, objetos
+e a palavra-chave "this"
+
+00:00:03.734 --> 00:00:05.767
+estão todos interligados
+no JavaScript.
+
+00:00:05.801 --> 00:00:08.634
+Quando uma função é chamada,
+uma variável "this"
+
+00:00:08.667 --> 00:00:10.567
+é configurada a um objeto.
+
+00:00:10.601 --> 00:00:15.267
+O valor de "this" depende
+de como a função é chamada.
+
+00:00:15.300 --> 00:00:18.234
+Nesta seção,
+veremos formas de chamar funções
+
+00:00:18.267 --> 00:00:21.200
+e como cada uma delas
+configura o valor de "this"
+
+00:00:21.234 --> 00:00:22.534
+de forma diferente.
+

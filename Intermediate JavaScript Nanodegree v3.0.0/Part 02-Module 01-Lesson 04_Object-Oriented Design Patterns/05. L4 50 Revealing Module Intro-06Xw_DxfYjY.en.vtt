@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.300
+In the previous section, we saw how using a module allows
+
+00:00:03.300 --> 00:00:06.795
+us to create objects with private properties and methods.
+
+00:00:06.795 --> 00:00:11.215
+Now, the reveal module pattern is a slight variation to the module pattern.
+
+00:00:11.215 --> 00:00:13.215
+The underlying philosophy is the same.
+
+00:00:13.215 --> 00:00:15.470
+We use it to maintain encapsulation.
+
+00:00:15.470 --> 00:00:18.075
+But, with the revealing module pattern,
+
+00:00:18.075 --> 00:00:21.630
+all data and functions are private and only the ones that
+
+00:00:21.630 --> 00:00:25.600
+developer wants to be public are revealed. Let's check it out.
+

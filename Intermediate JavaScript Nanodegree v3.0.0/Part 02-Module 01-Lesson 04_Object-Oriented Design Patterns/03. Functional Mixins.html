@@ -1,0 +1,377 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Functional Mixins</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Object-Oriented Design Patterns</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Mixins  Extending Object Functionality with Mixins.html">02. Mixins / Extending Object Functionality with Mixins</a>
+    </li>
+    <li class="">
+      <a href="03. Functional Mixins.html">03. Functional Mixins</a>
+    </li>
+    <li class="">
+      <a href="04. The Module Pattern.html">04. The Module Pattern</a>
+    </li>
+    <li class="">
+      <a href="05. The Revealing Module Pattern.html">05. The Revealing Module Pattern</a>
+    </li>
+    <li class="">
+      <a href="06. Lesson Summary.html">06. Lesson Summary</a>
+    </li>
+    <li class="">
+      <a href="07. Course Outro.html">07. Course Outro</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. Functional Mixins</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="remember-constructor-functions">Remember Constructor Functions?</h2>
+<p>We previously used a <strong>constructor function</strong> to create a new object:</p>
+<pre><code class="js language-js">function City(name, population) {
+  this.name = name;
+  this.population = population;
+
+  this.identify = function () {
+    console.log(`${this.name}'s population is ${this.population}.`);
+  };
+}</code></pre>
+<p>To instantiate, we invoke the function with the <code>new</code> operator: </p>
+<pre><code class="js language-js">const sanFrancisco = new City('San Francisco', 870000);
+
+console.log(sanFrancisco);
+// {
+//   name: 'San Francisco',
+//   population: 870000,
+//   identify: function () {
+//     console.log(`${this.name}'s population is ${this.population}.`);
+//   };
+// }</code></pre>
+<p>We can use the same constructor to create multiple objects:</p>
+<pre><code class="js language-js">const mountainView = new City('Mountain View', 78000);
+
+console.log(mountainView);
+// {
+//   name: 'Mountain View',
+//   population: 78000,
+//   identify: function () {
+//     console.log(`${this.name}'s population is ${this.population}.`);
+//   };
+// }</code></pre>
+<p>Again, note that we used the <code>new</code> keyword each time to create a new object. Let's now shift gears a bit to <strong>factory functions</strong> which produce object instances <em>without</em> the use of the <code>new</code> operator!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="factory-functions">Factory Functions</h2>
+<p>A factory function is a function that returns an object, but isn't itself a class or constructor. As such, we invoke a factory function as a normal function without using the <code>new</code> operator. Using a factory function, we can easily create object instances without the complexity of classes and constructors!</p>
+<p>Check out the following <code>Basketball()</code> factory function:</p>
+<pre><code class="js language-js">function Basketball(color) {
+  return {
+    color: color,
+    numDots: 35000
+  };
+}</code></pre>
+<p>What's important to note here is that <code>Basketball()</code> returns an object directly. This is different from a constructor function which returns its object automatically.</p>
+<p>Let's invoke <code>Basketball()</code> and check out its output:</p>
+<pre><code class="js language-js">const orangeBasketball = Basketball('orange');
+
+console.log(orangeBasketball);
+// { color: 'orange', numDots: 35000 }</code></pre>
+<p>A factory function has its name because, just like a chair factory can produce chair after chair after chair, a factory function can be used over and over to create any number of objects:</p>
+<pre><code class="js language-js">const myBB = Basketball('blue and green');
+const yourBB = Basketball('purple');
+const bouncy = Basketball('neon pink');</code></pre>
+<p>Great! Invoking the factory function allows us to compose a single object -- all without the use of the <code>new</code> operator. Before we take a look at a more complex example, let's summarize the differences between a factory function and a constructor function:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2018-07-02-at-1.56.13-pm.png" alt="_Comparing and contrasting factory functions and constructor functions_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>Comparing and contrasting factory functions and constructor functions</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>22 - SC -- Factory Functions With Closure</p></h3>
+  <video controls>
+  <source src="03. 22 - SC -- Factory Functions With Closure-4LonUWj8FPY.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. 22 - SC -- Factory Functions With Closure-4LonUWj8FPY.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/OOJS-screencasts/blob/master/L4-object-oriented-design-patterns/22-factory-functions-with-closure.js" rel="noopener noreferrer" target="_blank">Here's the link to the commit</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="functional-mixins">Functional Mixins</h2>
+<p>In the previous section, we used <strong>mixins</strong> to add features into a composite object. We also just leveraged <strong>factory functions</strong> to create objects without using the <code>new</code> operator or messing with prototypal inheritance. Let's combine what we've learned from mixins and factory functions and take things a step further with <strong>functional mixins</strong>!</p>
+<p>A functional mixin is a composable factory function that receives a _mixin_as an argument, copies properties and methods from that mixin, and returns a new object. Check out the following example: <code>CoffeeMaker()</code>:</p>
+<pre><code class="js language-js">function CoffeeMaker(object) {
+  let needsRefill = false;
+
+  return Object.assign({}, object, {
+    pourAll: function () {
+      needsRefill = true;
+    },
+    isEmpty: function () {
+      return needsRefill;
+    }
+  });
+}</code></pre>
+<p>Note that unlike a standard factory function, which takes in individual property <em>values</em> as arguments -- the functional mixin actually takes in an object itself! Whichever object is passed in to the function, is merged with other objects passed into <code>Object.assign()</code>. </p>
+<p>Let's pass the following <code>percolator</code> object into <code>CoffeeMaker()</code> and view the results:</p>
+<pre><code class="js language-js">const mixedCoffeeMaker = CoffeeMaker({ style: 'percolator' });</code></pre>
+<p>The returned <code>mixedCoffeeMaker</code> object now looks like:</p>
+<pre><code class="js language-js">{
+  style: 'percolator',
+  pourAll: function () {
+    needsRefill = true;
+  },
+  isEmpty: function () {
+    return needsRefill;
+  }
+}</code></pre>
+<p>Now, one of the great things about functional mixins is that they are <em>composable</em>; we can use them as individual pieces of code that add specific properties like an assembly line. Let's take a closer look!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>25 - SC - Functional Mixins</p></h3>
+  <video controls>
+  <source src="03. 25 - SC - Functional Mixins-It42ufgUqXk.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. 25 - SC - Functional Mixins-It42ufgUqXk.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/OOJS-screencasts/blob/master/L4-object-oriented-design-patterns/25-functional-mixins.js" rel="noopener noreferrer" target="_blank">Here's the link to the commit</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz: Factory Functions and Mixins</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is true about factory functions or mixins? Select all that apply:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="rbk14" name="669075" id="rbk14">
+      <label for="rbk14"><p>A mixin is always meant to be inherited and extended by sub-objects via its prototype</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk15" name="669075" id="rbk15">
+      <label for="rbk15"><p>Factory functions must always close over local variables</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk16" name="669075" id="rbk16">
+      <label for="rbk16"><p>Just like a constructor function, a factory function can be called multiple times to create an object</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk17" name="669075" id="rbk17">
+      <label for="rbk17"><p>A factory function is normally called with the <code>new</code> operator</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Just like a constructor function, a factory function can be called multiple times to create an object</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>A factory function creates objects. It is invoked as normal function, <em>not</em> with the <code>new</code> operator. Functional mixins take things a bit further by accepting a mixin as an argument, copies properties and methods from the mixin, and returns a new object.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="further-research">Further Research</h2>
+<ul>
+<li><a href="https://medium.com/javascript-scene/javascript-factory-functions-vs-constructor-functions-vs-classes-2f22ceddf33e" rel="noopener noreferrer" target="_blank">JavaScript Factory Functions vs Constructor Functions vs Classes</a> by Eric Elliott</li>
+<li><a href="https://medium.com/@pyrolistical/factory-functions-pattern-in-depth-356d14801c91" rel="noopener noreferrer" target="_blank">Factory Function Pattern In-Depth</a> by Ronald Chen</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. The Module Pattern.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. Functional Mixins')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

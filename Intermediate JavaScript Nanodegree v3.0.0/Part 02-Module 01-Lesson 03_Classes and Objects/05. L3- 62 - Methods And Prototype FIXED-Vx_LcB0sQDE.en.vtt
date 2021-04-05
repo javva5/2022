@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.610
+Here, we have the dog constructor function,
+
+00:00:02.610 --> 00:00:07.845
+which we can invoke to create objects with four of their own properties: age,
+
+00:00:07.845 --> 00:00:10.185
+weight, name and bark.
+
+00:00:10.185 --> 00:00:14.410
+And so, defining this bark method directly in the constructor,
+
+00:00:14.410 --> 00:00:17.490
+let's go ahead and move bark to the dog's prototype.
+
+00:00:17.490 --> 00:00:21.400
+Let's take out bark first.
+
+00:00:21.400 --> 00:00:25.820
+Now, let's go ahead and define bark on the dog's prototype.
+
+00:00:25.820 --> 00:00:27.290
+No special tricks here.
+
+00:00:27.290 --> 00:00:34.830
+We could just use dot notation to define bark.
+
+00:00:34.830 --> 00:00:39.980
+We'll now call the dog constructor function to create a new object.
+
+00:00:39.980 --> 00:00:46.660
+Finally, let's invoke the bark method on this new dog.
+
+00:00:47.840 --> 00:00:50.895
+And here's the message,
+
+00:00:50.895 --> 00:00:54.575
+"Java says woof!" Let's recap what happened.
+
+00:00:54.575 --> 00:00:57.155
+When we called the bark method on dog,
+
+00:00:57.155 --> 00:00:59.900
+the JavaScript engine will look through its own properties
+
+00:00:59.900 --> 00:01:02.735
+to try to find a name that matches the bark method.
+
+00:01:02.735 --> 00:01:05.895
+Since bark isn't defined directly in this dog,
+
+00:01:05.895 --> 00:01:09.020
+it will then look at the prototype for the bark method.
+
+00:01:09.020 --> 00:01:14.065
+As a result, we don't need to call dog.prototype.bark,
+
+00:01:14.065 --> 00:01:15.480
+all we need to call is just
+
+00:01:15.480 --> 00:01:21.980
+dog.bark and this works
+
+00:01:21.980 --> 00:01:27.000
+because this dog object is already linked to the bark method via its prototype.
+

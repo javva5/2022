@@ -1,0 +1,247 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.467 --> 00:00:02.567
+Aqui, temos um array chamado
+"favoriteFlavors",
+
+00:00:02.600 --> 00:00:04.967
+com os sabores de sorvete
+que eu acho incríveis.
+
+00:00:05.000 --> 00:00:07.833
+Temos "cookie dough",
+"salted caramel" e "toffee".
+
+00:00:07.867 --> 00:00:09.267
+Vamos usar o loop forEach
+
+00:00:09.300 --> 00:00:11.433
+e fazer um loop
+em cada um dos sabores deste array.
+
+00:00:12.100 --> 00:00:14.700
+Primeiro, vou chamar o forEach
+em "favoriteFlavors".
+
+00:00:22.200 --> 00:00:24.600
+O forEach recebe uma callback
+como argumento.
+
+00:00:24.633 --> 00:00:28.233
+Neste ponto, vamos passar
+ao forEach uma função
+
+00:00:28.267 --> 00:00:31.267
+que será chamada
+em cada sabor desse array.
+
+00:00:35.667 --> 00:00:40.100
+O forEach vai iterar por todo
+esse array "favoriteFlavors"
+
+00:00:40.133 --> 00:00:43.567
+e chamar estar função
+em cada um dos sabores do array.
+
+00:00:44.067 --> 00:00:48.700
+Você pode ver que o meu primeiro
+sabor de sorvete é massa de cookie.
+
+00:00:48.733 --> 00:00:51.033
+Vamos passar para o próximo
+elemento, "salted caramel".
+
+00:00:51.067 --> 00:00:54.433
+Você deve ver "Eu gosto
+de sorvete de caramelo".
+
+00:00:54.467 --> 00:00:56.233
+O mesmo vale para "toffee".
+
+00:00:56.767 --> 00:00:58.067
+Vamos ver isso em ação.
+
+00:00:59.467 --> 00:01:00.867
+Foi exatamente isso
+que aconteceu.
+
+00:01:00.900 --> 00:01:03.767
+Passa primeiro por "cookie dough"
+e forma uma frase,
+
+00:01:04.233 --> 00:01:08.067
+depois passa para o próximo sabor
+do array, que é "salted caramel",
+
+00:01:08.100 --> 00:01:09.700
+e forma esta frase.
+
+00:01:09.733 --> 00:01:12.533
+Quando ela chega em "toffee",
+faz o mesmo com ele.
+
+00:01:13.600 --> 00:01:15.167
+Tudo acontece muito rápido.
+
+00:01:15.633 --> 00:01:17.400
+O que podemos fazer
+é pôr um depurador
+
+00:01:17.433 --> 00:01:19.300
+para conseguirmos
+ver passo a passo,
+
+00:01:19.333 --> 00:01:23.400
+para ver como o forEach itera
+pelo array "favoriteFlavors"
+
+00:01:23.433 --> 00:01:26.100
+e forma cada mensagem
+uma por uma.
+
+00:01:26.500 --> 00:01:29.600
+Primeiro, eu vou recarregar
+para obter um pouco mais de espaço.
+
+00:01:30.267 --> 00:01:33.767
+Depois, vou adicionar um depurador
+na função que passamos a forEach.
+
+00:01:41.000 --> 00:01:44.167
+Agora que temos o depurador, vamos
+rodar esta função passo a passo
+
+00:01:44.200 --> 00:01:45.567
+para ver o que ocorre.
+
+00:01:46.933 --> 00:01:48.633
+Agora, você pode ver
+onde estamos na função.
+
+00:01:48.667 --> 00:01:50.033
+Estamos com o depurador
+nesta linha
+
+00:01:50.067 --> 00:01:54.167
+e o sabor pelo qual estávamos
+passando é "cookie dough",
+
+00:01:54.200 --> 00:01:57.367
+que deve ser o primeiro
+elemento do array, bem aqui.
+
+00:01:57.767 --> 00:01:59.367
+Ótimo, estamos começando
+do início.
+
+00:01:59.400 --> 00:02:02.267
+Vamos passar por estes um por um
+para ver o que acontece.
+
+00:02:06.200 --> 00:02:07.933
+Agora, estamos na segunda linha
+desta função,
+
+00:02:07.967 --> 00:02:10.567
+na parte do "console.log",
+e o sabor permanece "cookie dough".
+
+00:02:12.333 --> 00:02:13.767
+Vamos passar mais uma vez.
+
+00:02:15.933 --> 00:02:18.967
+Agora, estamos aqui e "Eu gosto
+de sorvete de massa de cookie"
+
+00:02:19.000 --> 00:02:20.300
+foi impresso no console.
+
+00:02:20.333 --> 00:02:21.800
+Ótimo. Vamos partir
+para o próximo.
+
+00:02:23.800 --> 00:02:25.400
+Se você pressionar de novo...
+
+00:02:26.933 --> 00:02:30.533
+vamos para "salted caramel", que é
+o segundo elemento desse array.
+
+00:02:30.567 --> 00:02:32.833
+Parece que ele está iterando
+pelos elementos
+
+00:02:32.867 --> 00:02:34.433
+do array "favoriteFlavors"
+em ordem.
+
+00:02:34.467 --> 00:02:35.633
+Vamos ver o próximo passo.
+
+00:02:38.400 --> 00:02:40.167
+Sem surpresas, ainda estamos
+em "salted caramel",
+
+00:02:40.200 --> 00:02:42.533
+e essa linha precisa ser executada.
+Vamos executá-la.
+
+00:02:45.600 --> 00:02:49.000
+Note que a mensagem
+"Eu gosto de sorvete de caramelo"
+
+00:02:49.033 --> 00:02:50.133
+foi impressa na tela.
+
+00:02:50.700 --> 00:02:52.033
+Vamos partir para o último.
+
+00:02:54.900 --> 00:02:56.733
+Agora, estamos
+no último elemento deste array,
+
+00:02:56.767 --> 00:02:58.500
+no último sabor,
+que é "toffee".
+
+00:02:58.533 --> 00:03:00.300
+Se você executar de novo...
+
+00:03:01.800 --> 00:03:05.100
+Estamos nesta linha
+e, quando ela é executada,
+
+00:03:05.133 --> 00:03:08.800
+vemos "Eu gosto de sorvete
+de toffee" impresso no console.
+
+00:03:09.633 --> 00:03:11.033
+Legal. Vou dar
+uma passada geral.
+
+00:03:13.600 --> 00:03:15.533
+Aí está. Vamos revisar
+o que fizemos aqui.
+
+00:03:15.567 --> 00:03:18.500
+Chamamos forEach
+no array "favoriteFlavors",
+
+00:03:18.533 --> 00:03:20.933
+o que, se eu subir um pouco,
+mostra-se um array
+
+00:03:20.967 --> 00:03:23.633
+de diferentes strings, "cookie
+dough", "salted caramel" e "toffee",
+
+00:03:23.667 --> 00:03:26.800
+e o que fizemos
+para cada elemento deste array
+
+00:03:26.833 --> 00:03:28.333
+foi executar esta função
+uma vez.
+

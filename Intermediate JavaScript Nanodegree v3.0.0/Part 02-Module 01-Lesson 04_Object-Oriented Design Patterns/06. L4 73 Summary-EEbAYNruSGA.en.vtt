@@ -1,0 +1,25 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.250
+In this lesson, we took close look at
+
+00:00:02.250 --> 00:00:06.880
+a few object-oriented design patterns that we can use to both create and extend objects,
+
+00:00:06.880 --> 00:00:08.820
+all without involving inheritance.
+
+00:00:08.820 --> 00:00:11.220
+We first looked at mixins to copy properties and
+
+00:00:11.220 --> 00:00:14.025
+methods from one object to another object.
+
+00:00:14.025 --> 00:00:16.830
+Then, we looked at both the module pattern and
+
+00:00:16.830 --> 00:00:20.920
+the revealing module pattern to create private properties. Great work.
+

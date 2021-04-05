@@ -1,0 +1,97 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.880
+Here we have some code written in a module pattern.
+
+00:00:02.880 --> 00:00:04.785
+Just a couple things to point out.
+
+00:00:04.785 --> 00:00:06.670
+Note that we're using an iffy,
+
+00:00:06.670 --> 00:00:08.670
+meaning that we wrap the entire function in
+
+00:00:08.670 --> 00:00:12.000
+parentheses and then we
+
+00:00:12.000 --> 00:00:15.350
+immediately invoke that function with the second set of parentheses over here.
+
+00:00:15.350 --> 00:00:19.890
+Also, note that we're returning an object with a public function and that
+
+00:00:19.890 --> 00:00:25.090
+the return value of the entire expression is stored in a variable called myModule.
+
+00:00:25.090 --> 00:00:28.100
+So, again, this is just a normal module pattern.
+
+00:00:28.100 --> 00:00:32.245
+How would we go about converting all this to the revealing module pattern?
+
+00:00:32.245 --> 00:00:35.465
+Well, first, what we should do is move the public methods
+
+00:00:35.465 --> 00:00:40.540
+outside of the returned object. So, let's go ahead and do that.
+
+00:00:40.670 --> 00:00:44.465
+So, now, what we have is an empty returned object.
+
+00:00:44.465 --> 00:00:47.540
+Now, again, the main difference between the module pattern and
+
+00:00:47.540 --> 00:00:51.735
+the revealing module pattern is that while we still maintain encapsulation,
+
+00:00:51.735 --> 00:00:55.490
+we can actually choose to reveal specific data and functions.
+
+00:00:55.490 --> 00:00:57.935
+So, when this return object literal over here,
+
+00:00:57.935 --> 00:01:01.340
+we can say publicMethod and the value for
+
+00:01:01.340 --> 00:01:05.520
+this publicMethod property can actually referenced some of the module content.
+
+00:01:05.520 --> 00:01:08.925
+We'll go ahead and make it referenced the publicMethod function over here.
+
+00:01:08.925 --> 00:01:13.070
+I'm going to hit Enter, and we'll check I what myModule looks like.
+
+00:01:13.070 --> 00:01:14.775
+Again, as we expect,
+
+00:01:14.775 --> 00:01:16.750
+it's just an object with a single property,
+
+00:01:16.750 --> 00:01:20.270
+publicMethod, which we can invoke.
+
+00:01:20.700 --> 00:01:26.945
+So, just to recap, the key components of the revealing module pattern is first an iffy,
+
+00:01:26.945 --> 00:01:29.130
+which we used over here,
+
+00:01:29.130 --> 00:01:32.300
+as well as any module content,
+
+00:01:32.300 --> 00:01:36.170
+meaning, any variables, methods, objects, etc.,
+
+00:01:36.170 --> 00:01:38.990
+and the key ingredient that brings everything together is
+
+00:01:38.990 --> 00:01:41.870
+the returned object literal at the very end over here,
+
+00:01:41.870 --> 00:01:46.470
+with keys that points any data and functions that you want to reveal.
+

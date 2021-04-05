@@ -1,0 +1,662 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Scope</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Functions at Runtime</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. First-Class Functions.html">02. First-Class Functions</a>
+    </li>
+    <li class="">
+      <a href="03. Callbacks.html">03. Callbacks</a>
+    </li>
+    <li class="">
+      <a href="04. Scope.html">04. Scope</a>
+    </li>
+    <li class="">
+      <a href="05. Closures.html">05. Closures</a>
+    </li>
+    <li class="">
+      <a href="06. Immediately-Invoked Function Expressions (IIFE).html">06. Immediately-Invoked Function Expressions (IIFE)</a>
+    </li>
+    <li class="">
+      <a href="07. Lesson Summary.html">07. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. Scope</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>If you took <a href="https://www.udacity.com/course/intro-to-javascript--ud803" rel="noopener noreferrer" target="_blank">Intro to Javascript</a>, you learned about <em>block</em> scope vs. <em>function</em> scope. These determine where a variable can be seen in some code. Computer scientists call this <strong>lexical scope</strong>.</p>
+<p>However, there also exists <em>another</em> kind of scope called <strong>runtime scope</strong>. When a function is run, it creates a new runtime scope. This scope represents the <em>context</em> of the function, or more specifically, the set of variables available for the function to use. </p>
+<p>So what exactly <em>does</em> a function have access to?</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>OOJS L2 32 - Scope Intro</p></h3>
+  <video controls>
+  <source src="04. OOJS L2 32 - Scope Intro-EZ3owNzefF4.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="04. OOJS L2 32 - Scope Intro-EZ3owNzefF4.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="04. OOJS L2 32 - Scope Intro-EZ3owNzefF4.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="04. OOJS L2 32 - Scope Intro-EZ3owNzefF4.pt-BR.vtt" label="pt-BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="scope">Scope</h2>
+<p>A function's runtime scope describes the variables available for use inside a given function. The code inside a function has access to:</p>
+<ol>
+<li>The function's arguments.</li>
+<li>Local variables declared within the function.</li>
+<li>Variables from its parent function's scope.</li>
+<li>Global variables.</li>
+</ol>
+<p>Check out the following image that highlights a function's scope, then we'll take a look at a live example.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/l2-34-scope-image.png" alt="_The nested &#x60;child()&#x60; function has access to all &#x60;a&#x60;, &#x60;b&#x60;, and &#x60;c&#x60; variables. That is, these variables are in the &#x60;child()&#x60; function&#x27;s scope._" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>The nested <code>child()</code> function has access to all <code>a</code>, <code>b</code>, and <code>c</code> variables. That is, these variables are in the <code>child()</code> function's scope.</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L2 - 34 - Scope Demo</p></h3>
+  <video controls>
+  <source src="04. L2 - 34 - Scope Demo-1OcdRnbiepI.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="04. L2 - 34 - Scope Demo-1OcdRnbiepI.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="04. L2 - 34 - Scope Demo-1OcdRnbiepI.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="04. L2 - 34 - Scope Demo-1OcdRnbiepI.pt-BR.vtt" label="pt-BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/OOJS-screencasts/blob/master/L2-functions-at-runtime/35-scope-demo.js" rel="noopener noreferrer" target="_blank">Here's the code from the preceding video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="video-recap">Video Recap</h2>
+<p>In the previous video, the <code>introduceMyself()</code> function contains a nested <code>introduce()</code> function. While <code>introduce()</code> does not take in any arguments, nor are there any local variables declared within it -- variables in both the aforementioned settings are indeed in <code>introduce()</code>'s scope.</p>
+<p><code>introduce()</code> <em>does</em> use the global variable <code>myName</code>, however, as well as the <code>you</code> variable contained in its parent function, <code>introduceMyself()</code>  (where <code>introduce()</code> was defined). Both are highlighted below:</p>
+<pre><code class="js language-js">const myName = 'Andrew';
+// Global variable
+
+function introduceMyself() {
+
+  const you = 'student';
+  // Variable declared where introduce() is defined
+  // (i.e., within introduce()'s parent function, introduceMyself())
+
+  function introduce() {
+    console.log(`Hello, ${you}, I'm ${myName}!`);
+  }
+
+  return introduce();
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Consider the following:</p>
+<pre><code>const num1 = 5;
+
+function functionOne() {
+  const num2 = 10;
+
+  function functionTwo(num3) {
+    const num4 = 35;
+
+    return num1 + num2 + num3 + num4;
+  }
+
+  return functionTwo(0);
+}</code></pre>
+<p>Which variables does <code>functionTwo()</code> have access to? Select all that apply:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1512510124290" name="469117" id="a1512510124290">
+      <label for="a1512510124290"><p><code>num1</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512510139605" name="469117" id="a1512510139605">
+      <label for="a1512510139605"><p><code>num2</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512510140077" name="469117" id="a1512510140077">
+      <label for="a1512510140077"><p><code>num3</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512510140492" name="469117" id="a1512510140492">
+      <label for="a1512510140492"><p><code>num4</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512510146941" name="469117" id="a1512510146941">
+      <label for="a1512510146941"><p>It is indeterminate.</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>`num1`</li>
+      <li>`num2`</li>
+      <li>`num3`</li>
+      <li>`num4`</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="javascript-is-function-scoped">JavaScript is Function-Scoped</h2>
+<p>You may be wondering why scope is so heavily associated with <em>functions</em> in JavaScript. Especially if you've had past experience in another programming language, this might seem a bit unusual (e.g., <em>blocks</em> in Ruby have their own scope)!</p>
+<p>This is all because variables in JavaScript are traditionally defined in the scope of a <em>function</em>, rather than in the scope of a <em>block</em>. Since entering a function will change scope, any variables defined inside that function are <em>not</em> available outside of that function. On the other hand, if there are any variables defined inside a <em>block</em> (e.g., within an <code>if</code> statement), those variables <em>are</em> available outside of that block.</p>
+<p>Let's see an example of how function-scoping in JavaScript works:</p>
+<pre><code class="js language-js">var globalNumber = 5;
+
+function globalIncrementer() {
+  const localNumber = 10;
+
+  globalNumber += 1;
+  return globalNumber;
+}</code></pre>
+<p>In the example above, <code>globalNumber</code> is outside the function; it is a global variable that the <code>globalIncrementer()</code> function has access to. <code>globalIncrementer()</code> simply has a local variable (<code>localNumber</code>) declared within it, then increments <code>globalNumber</code> by 1 before returning the updated value of <code>globalNumber</code> itself. </p>
+<p>After calling the function a few times, we see that the value of <code>globalNumber</code> has indeed increased each time:</p>
+<pre><code class="js language-js">console.log(globalIncrementer());
+// 6
+
+console.log(globalIncrementer());
+// 7
+
+console.log(globalIncrementer());
+// 8</code></pre>
+<p>However, when attempting to access <code>localNumber</code> outside of the function, we see a error:</p>
+<pre><code class="js language-js">console.log(localNumber);
+
+// ReferenceError: localNumber is not defined</code></pre>
+<p>Because JavaScript is function-scoped, functions have access to all its own variables as well as all the global variables outside of it. For more details on <em>block scoping</em>, check out <strong>Further Research</strong> at the end of this page.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="💡-block-scoping-💡">💡 Block-Scoping 💡</h2>
+  <p>ES6 syntax allows for additional scope while declaring variables with the <code>let</code> and <code>const</code> keywords. These keywords are used to declare <em>block-scoped</em> variables in JavaScript, and largely replace the need for <code>var</code>. </p>
+  <p>We've used them throughout this course, but for a closer look, check out our course: <a href="https://www.udacity.com/course/es6-javascript-improved--ud356" rel="noopener noreferrer" target="_blank">ES6 - JavaScript Improved</a>. Via MDN:</p>
+  <ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" rel="noopener noreferrer" target="_blank">let</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const" rel="noopener noreferrer" target="_blank">const</a></li>
+  </ul>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="scope-chain">Scope Chain</h2>
+<p>Whenever your code attempts to access a variable during a function call, the JavaScript interpreter will always start off by looking within its own local variables. If the variable isn't found, the search will continue looking up what is called the <strong>scope chain</strong>. Let's take a look at an example:</p>
+<pre><code class="js language-js">function one() {
+  two();
+  function two() {
+    three();
+    function three() {
+      // function three's code here
+    }
+  }
+}
+
+one();</code></pre>
+<p>In the above example, when <code>one()</code> is called, all the other nested functions will be called as well (all the way to <code>three()</code>). </p>
+<p>You can visualize the scope chain moving outwards starting at the innermost level: from <code>three()</code>, to <code>two()</code>, to <code>one()</code>, and finally to <code>window</code> (i.e., the global/window object). This way, the function <code>three()</code> will not only have access to the variables and functions "above" it (i.e., those of <code>two()</code> and <code>one()</code>) -- <code>three()</code> will also have access to any global variables defined outside <code>one()</code>.</p>
+<p>Let's now revisit the image from the beginning of this section, and visualize the entire process:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/l2-42-scope-chain.png" alt="_When resolving a variable, the JavaScript engine begins by looking at the nested child function&#x27;s locally-defined variables. If found, then the value is retrieved; if not, the JavaScript engine continues to looking outward until the variable is resolved. If the JavaScript engine reaches the global scope and is still unable to resolve the variable, the variable is undefined._" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>When resolving a variable, the JavaScript engine begins by looking at the nested child function's locally-defined variables. If found, then the value is retrieved; if not, the JavaScript engine continues to looking outward until the variable is resolved. If the JavaScript engine reaches the global scope and is still unable to resolve the variable, the variable is undefined.</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="💡-the-global-window-object💡">💡 The Global (<code>window</code>) Object💡</h2>
+  <p>Recall that when JavaScript applications run inside a host environment (e.g., a browser), the host provides a <code>window</code> object, otherwise known as the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Global_object" rel="noopener noreferrer" target="_blank">global object</a>. Any global variables declared are accessed as <em>properties</em> of this object, which represents the outermost level of the scope chain.</p>
+  <p>For a refresher, feel free to check out <strong>Beware of Globals</strong> in Lesson 1.</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="variable-shadowing">Variable Shadowing</h2>
+<p>What happens when you create a variable with the <em>same name</em> as another variable somewhere in the scope chain?</p>
+<p>JavaScript won't throw an error or otherwise prevent you from creating that extra variable. In fact, the variable with local scope will just temporarily "shadow" the variable in the outer scope. This is called <strong>variable shadowing</strong>. Consider the following example:</p>
+<pre><code class="js language-js">const symbol = '¥';
+
+function displayPrice(price) {
+  const symbol = '$';
+  console.log(symbol + price);
+}
+
+displayPrice('80');
+// '$80'</code></pre>
+<p>In the above snippet, note that <code>symbol</code> is declared in two places: </p>
+<ol>
+<li>Outside the <code>displayPrice()</code> function, as a <em>global</em> variable.</li>
+<li>Inside the <code>displayPrice()</code> function, as a <em>local</em> variable.</li>
+</ol>
+<p>After invoking <code>displayPrice()</code> and passing it an argument of <code>'80'</code>, the function outputs <code>'$80'</code> to the console.</p>
+<p>How does the JavaScript interpreter know which value of <code>symbol</code> to use? Well, since the variable pointing to <code>'$'</code> is declared inside a function (i.e., the "inner" scope), it will override any variables of the same name that belong in an outer scope -- such as the global variable pointing to <code>'¥'</code>. As a result, <code>'$80'</code> is displayed rather than <code>'¥80'</code>.</p>
+<p>All in all, if there are any naming overlaps between variables in different contexts, they are all resolved by moving through the scope chain from inner to outer scopes (i.e., local all the way to global). This way, any local variables that have the same name take precedence over those with a wider scope.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What will the console display when <code>myFunction()</code> is called?</p>
+<pre><code class="js language-js">let n = 2;
+
+function myFunction() {
+  let n = 8;
+  console.log(n);
+}
+
+myFunction();
+// ???</code></pre></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1512510420444" name="469124" id="a1512510420444">
+        <label for="a1512510420444"><p><code>2</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512510460385" name="469124" id="a1512510460385">
+        <label for="a1512510460385"><p><code>8</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512510460968" name="469124" id="a1512510460968">
+        <label for="a1512510460968"><p><code>null</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512510462752" name="469124" id="a1512510462752">
+        <label for="a1512510462752"><p><code>undefined</code></p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    `8`
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>When searching for variables along the scope chain, in what order will the JavaScript interpreter search?</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>Parent function's variables</p></button>
+  <button class="btn btn-primary"><p>Parent function's <em>parent function's</em> variables</p></button>
+  <button class="btn btn-primary"><p>Local variables</p></button>
+  <button class="btn btn-primary"><p>Global variables</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>Order</p>
+      </th>
+      <th>
+        <p>Location</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>1st</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>2nd</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>3rd</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>4th</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>Order</p>
+        </th>
+        <th>
+          <p>Location</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>2nd</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Parent function's variables</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>3rd</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Parent function's <em>parent function's</em> variables</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>1st</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Local variables</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>4th</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Global variables</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>When the following code runs, what is the output of the first, second, and third logs to the console (respectively)?</p>
+<pre><code class="js language-js">let n = 8;
+
+function functionOne() {
+  let n = 9;
+
+  function functionTwo() {
+    let n = 10;
+    console.log(n);  // First log
+  }
+
+  functionTwo();
+
+  console.log(n);  // Second log
+}
+
+functionOne();
+
+console.log(n);  // Third log</code></pre></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1512510739703" name="469127" id="a1512510739703">
+        <label for="a1512510739703"><p><code>8</code>, <code>9</code>, <code>10</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512510762803" name="469127" id="a1512510762803">
+        <label for="a1512510762803"><p><code>10</code>, <code>9</code>, <code>9</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512510763363" name="469127" id="a1512510763363">
+        <label for="a1512510763363"><p><code>9</code>, <code>10</code>, <code>8</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512510763755" name="469127" id="a1512510763755">
+        <label for="a1512510763755"><p><code>10</code>, <code>9</code>, <code>8</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512510778467" name="469127" id="a1512510778467">
+        <label for="a1512510778467"><p>It is indeterminant.</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    `10`, `9`, `8`
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>When a function is run, it creates its own <strong>scope</strong>. A function's scope is the set of variables available for use within that function. The scope of a function includes:</p>
+<ol>
+<li>The function's arguments.</li>
+<li>Local variables declared within the function.</li>
+<li>Variables from its parent function's scope.</li>
+<li>Global variables.</li>
+</ol>
+<p>Variables in JavaScript are also <em>function-scoped</em>. This means that any variables defined inside a function are not available for use outside the function, though any variables defined within blocks (e.g. <code>if</code> or <code>for</code>) <em>are</em> available outside that block.</p>
+<p>When it comes to accessing variables, the JavaScript engine will traverse the <strong>scope chain</strong>, first looking at the innermost level (e.g., a function's local variables), then to outer scopes, eventually reaching the global scope if necessary.</p>
+<p>In this section, we've seen quite a few examples of a nested function being able to access variables declared in its parent function's scope (i.e., in the scope in which that function was nested). These functions, combined with the lexical environment it which it was declared, actually have a very particular name: <strong>closure</strong>. Closures are <em>very</em> closely related to scope in JavaScript, and lead to some powerful and useful applications. We'll take a look at closures in detail next!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://www.udacity.com/course/intro-to-javascript--ud803" rel="noopener noreferrer" target="_blank">Intro to JavaScript</a> (Lesson 5's coverage of scope)</li>
+<li>Douglas Crockford's discussion of block-scoped variables in <a href="https://www.youtube.com/watch?v=Ji6NHEnNHcA&t=26m9s" rel="noopener noreferrer" target="_blank">The Better Parts</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block#Description" rel="noopener noreferrer" target="_blank">Block Scoping Rules</a> on MDN</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions" rel="noopener noreferrer" target="_blank">Functions and Function Scope</a> on MDN</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. Closures.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. Scope')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

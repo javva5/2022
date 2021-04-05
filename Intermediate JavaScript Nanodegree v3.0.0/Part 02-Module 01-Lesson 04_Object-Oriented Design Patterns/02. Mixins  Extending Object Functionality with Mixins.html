@@ -1,0 +1,471 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mixins / Extending Object Functionality with Mixins</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Object-Oriented Design Patterns</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Mixins  Extending Object Functionality with Mixins.html">02. Mixins / Extending Object Functionality with Mixins</a>
+    </li>
+    <li class="">
+      <a href="03. Functional Mixins.html">03. Functional Mixins</a>
+    </li>
+    <li class="">
+      <a href="04. The Module Pattern.html">04. The Module Pattern</a>
+    </li>
+    <li class="">
+      <a href="05. The Revealing Module Pattern.html">05. The Revealing Module Pattern</a>
+    </li>
+    <li class="">
+      <a href="06. Lesson Summary.html">06. Lesson Summary</a>
+    </li>
+    <li class="">
+      <a href="07. Course Outro.html">07. Course Outro</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Mixins / Extending Object Functionality with Mixins</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="an-object-is-prototype-linked-to-a-single-object">An Object is Prototype-linked to a Single Object</h2>
+<p>Recall that an object's <code>.prototype</code> property points to just <em>one</em> object. This is because JavaScript only supports single inheritance. If there is an object A and an object B, object C can only be prototype-linked to either A <em>or</em> B. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/singlez.png" alt="_The &#x60;cat&#x60; object is prototype-linked to a single object: &#x60;animal&#x60;_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>The <code>cat</code> object is prototype-linked to a single object: <code>animal</code></em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Object extension</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is true about the following? Select all that apply:</p>
+<pre><code class="js language-js">const aircraft = {
+  flies: true
+};
+
+const helicopter = Object.create(aircraft);
+
+console.log(helicopter.flies);
+// true</code></pre></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="rbk1" name="669050" id="rbk1">
+      <label for="rbk1"><p>The <code>helicopter</code> object has no properties of its own</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk2" name="669050" id="rbk2">
+      <label for="rbk2"><p><code>helicopter</code> is prototype-linked to <code>aircraft</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk3" name="669050" id="rbk3">
+      <label for="rbk3"><p><code>helicopter</code> can actually be prototype-linked to several different objects</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk4" name="669050" id="rbk4">
+      <label for="rbk4"><p><code>console.log(helicopter.flies);</code> should be <code>undefined</code></p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>The `helicopter` object has no properties of its own</li>
+      <li>`helicopter` is prototype-linked to `aircraft`</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L4 05 Multiple Inheritance  Mixin Intro V5</p></h3>
+  <video controls>
+  <source src="02. L4 05 Multiple Inheritance  Mixin Intro V5-OMorcZPV6dw.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. L4 05 Multiple Inheritance  Mixin Intro V5-OMorcZPV6dw.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="mixins">Mixins</h2>
+<p>If a JavaScript object can only be prototype-linked to a single object, how can we go about extending properties and methods from <em>multiple</em> different sources? A <strong>mixin</strong> allows us to just that!</p>
+<p>A mixin is a technique that takes the properties and methods from one object and copies them over to another object. In other words: a mixin is an technique that provides some useful functionality, but is not meant to be added to the prototype chain.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="🍦all-good-comes-from-ice-cream-🍦">🍦All Good Comes from Ice Cream 🍦</h2>
+</blockquote>
+<blockquote>
+  <p>Did you know that the term <em>mixin</em> is actually <a href="https://en.wikipedia.org/wiki/Mixin#History" rel="noopener noreferrer" target="_blank">inspired by ice cream</a>? The concept of a basic flavor being <em>mixed in</em> with several different extra items (e.g. nuts, fudge, cookies, sprinkles, etc.) was later adopted by computer scientists in object-oriented programming. What a tasty revelation!</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="objectassign">Object.assign()</h2>
+<p>The simplest way to implement the mixin pattern is to use <code>Object.assign()</code>. <code>Object.assign()</code> is a method that copies an object's own (non-inherited) properties from one or more <em>source</em> objects into a <em>target</em> object, then returns the updated target object. In other words, <code>Object.assign()</code> adds to the target object by <em>merging</em> in the source object(s). Consider the following:</p>
+<pre><code class="js language-js">let target = {};
+
+let source = { number: 7 };
+
+Object.assign(target, source);
+
+console.log(target);
+// { number: 7 }</code></pre>
+<p>The first argument passed in, <code>target</code>, is the destination that receives the properties copied from the source object, <code>source</code>. Note that <code>Object.assign()</code> does <em>not</em> create and return a <em>new</em> object; it directly modifies then returns the same target object that was passed in! As such, values of existing properties will be overwritten, while properties that don't exist in the source object will remain intact:</p>
+<pre><code class="js language-js">let target = { letter: 'a', number: 11 };
+
+let source = { number: 7 };
+
+Object.assign(target, source);
+
+console.log(target);
+// { letter: 'a', number: 7 }</code></pre>
+<p>In the above example, the value of <code>target</code>'s <code>number</code> property was overwritten, while its <code>letter</code> property was ignored.</p>
+<h3 id="multiple-source-objects">Multiple Source Objects</h3>
+<p><code>Object.assign()</code> can even take in multiple different source objects. Let's create a <code>platypus</code> object by mixing in properties from other animals:</p>
+<pre><code class="js language-js">const duck = {
+  hasBill: true
+};
+const beaver = {
+  hasTail: true
+};
+const otter = {
+  hasFur: true,
+  feet: 'webbed'
+};
+
+const platypus = Object.assign({}, duck, beaver, otter);
+
+console.log(platypus);
+// { hasBill: true, hasTail: true, hasFur: true, feet: 'webbed' }</code></pre>
+<p>Great! After merging an empty target object (i.e., an object without properties of its own) with the properties from <code>duck</code>, <code>beaver</code>, and <code>otter</code>, the target object is returned with all four properties. It is important to note that the <code>platypus</code> object is <em>not</em> prototype-linked to the three other objects! That is, <code>platypus</code> doesn't exist in any of the three source objects' prototype chains, and vice versa:</p>
+<pre><code class="js language-js">platypus.constructor;
+// Object()
+
+platypus.isPrototypeOf(duck);
+// false
+
+duck.isPrototypeOf(platypus);
+// false
+
+platypus.isPrototypeOf(beaver);
+// false
+
+beaver.isPrototypeOf(duck);
+// false
+
+platypus.isPrototypeOf(otter);
+// false
+
+otter.isPrototypeOf(platypus);
+// false</code></pre>
+<p>Let's take a look at all this in action below!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>10 - SC - Object.Assign()</p></h3>
+  <video controls>
+  <source src="02. 10 - SC - Object.Assign()-icLF3wuGyHI.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. 10 - SC - Object.Assign()-icLF3wuGyHI.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/OOJS-screencasts/blob/master/L4-object-oriented-design-patterns/10-object.assign.js" rel="noopener noreferrer" target="_blank">Here's the link to the commit</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="⚠️-objectassign-compatibility-⚠️">⚠️ Object.assign() Compatibility ⚠️</h2>
+<p><code>Object.assign()</code> is a great way to copy properties own properties into a given object. Keep in mind that since it was introduced to the official specification in ES2015 (ES6), you may need to review <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Browser_compatibility" rel="noopener noreferrer" target="_blank">browser compatibility</a> to make sure it'll work in your environment.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Target object</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Let's modify the above code a bit. What is true after the following? </p>
+<pre><code class="js language-js">const duck = {
+  hasBill: true
+};
+const beaver = {
+  hasTail: true
+};
+const otter = {
+  hasFur: true,
+  feet: 'webbed'
+};
+
+const platypus = Object.assign(duck, beaver, otter);</code></pre>
+<p>Select all that apply:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="rbk5" name="669059" id="rbk5">
+      <label for="rbk5"><p>The console will throw an error because there is no target object passed into <code>Object.assign()</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk6" name="669059" id="rbk6">
+      <label for="rbk6"><p><code>platypus</code> is an object with four properties</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk7" name="669059" id="rbk7">
+      <label for="rbk7"><p><code>duck</code> becomes an object with four properties</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk8" name="669059" id="rbk8">
+      <label for="rbk8"><p><code>Object.assign()</code> will automatically insert an empty target object as the first argument</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk9" name="669059" id="rbk9">
+      <label for="rbk9"><p><code>platypus === duck</code></p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>`platypus` is an object with four properties</li>
+      <li>`duck` becomes an object with four properties</li>
+      <li>`platypus === duck`</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Quiz: Mixins</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is true about multiple inheritance or mixins? Select all that apply:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="rbk10" name="669060" id="rbk10">
+      <label for="rbk10"><p>Using a mixin is ideal when you want to set up multiple branches in the prototype chain</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk11" name="669060" id="rbk11">
+      <label for="rbk11"><p>Using a mixin allows a JavaScript class to have more than one superclass</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk12" name="669060" id="rbk12">
+      <label for="rbk12"><p>A mixin supplies properties and/or methods that can be shared</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="rbk13" name="669060" id="rbk13">
+      <label for="rbk13"><p>We can leverage <code>Object.assign()</code> to "mix in" properties  and methods from a number of objects into a composite object</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>A mixin supplies properties and/or methods that can be shared</li>
+      <li>We can leverage `Object.assign()` to "mix in" properties  and methods from a number of objects into a composite object</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>A mixin is a technique that copies data and functionality from a source object (or source objects) to a target object. We can use ES6's <code>Object.assign()</code> to return a target object with properties from one or more source objects "mixed into" that target object.</p>
+<p>In the next section, we'll take a look at factory functions and functional mixins -- how they're built, and how we can use them to create objects without the use of the <code>new</code> operator!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="further-research">Further Research</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign" rel="noopener noreferrer" target="_blank">Object.assign()</a> on MDN</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Functional Mixins.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. Mixins / Extending Object Functionality with Mixins')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

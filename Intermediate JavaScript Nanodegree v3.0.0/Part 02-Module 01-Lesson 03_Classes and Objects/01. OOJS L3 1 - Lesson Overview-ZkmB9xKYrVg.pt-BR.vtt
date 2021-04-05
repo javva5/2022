@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.467 --> 00:00:01.834
+Como vimos neste curso,
+
+00:00:01.868 --> 00:00:04.534
+quase tudo no JavaScript
+é um objeto.
+
+00:00:04.567 --> 00:00:07.767
+Até agora,
+construímos um tipo de objeto.
+
+00:00:07.801 --> 00:00:10.801
+Isso é bom, mas para construir
+aplicativos mais estruturados,
+
+00:00:10.834 --> 00:00:15.133
+precisamos construir as classes
+ou categorias dos objetos.
+
+00:00:15.167 --> 00:00:19.100
+Nesta aula, criaremos novos
+objetos com funções construtoras.
+
+00:00:19.133 --> 00:00:21.434
+Também alavancaremos
+a palavra-chave "this"
+
+00:00:21.467 --> 00:00:22.767
+para acessar objetos
+
+00:00:22.801 --> 00:00:26.334
+e aprenderemos
+a configurar o valor dela.
+
+00:00:26.367 --> 00:00:29.667
+Aprenderemos como basear objetos
+em outros objetos
+
+00:00:29.701 --> 00:00:32.200
+com herança de protótipos
+e subclasses.
+

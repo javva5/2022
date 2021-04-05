@@ -1,0 +1,28 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.780
+We've seen how "this" gets set depending on how a function is called.
+
+00:00:04.780 --> 00:00:08.285
+But what if we wanted to set the value of "this" ourselves?
+
+00:00:08.285 --> 00:00:12.640
+Javascript offers a few methods that allow you to do just that.
+
+00:00:12.640 --> 00:00:17.594
+These methods are: call, apply, and bind.
+
+00:00:17.594 --> 00:00:19.769
+Call and apply are called as methods on
+
+00:00:19.769 --> 00:00:24.155
+a function with a few slight differences in how arguments are passed into them.
+
+00:00:24.155 --> 00:00:28.815
+On the other hand, bind is a method that returns a new function.
+
+00:00:28.815 --> 00:00:32.000
+Each of these methods are used in different contexts. Let's check them out.
+

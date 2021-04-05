@@ -1,0 +1,22 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:06.009
+Functions, objects, and the "this" keyword are all interconnected in Javascript.
+
+00:00:06.009 --> 00:00:07.154
+When a function is called,
+
+00:00:07.155 --> 00:00:10.699
+a "this" variable is set to a specific object.
+
+00:00:10.699 --> 00:00:15.179
+Now, the value of "this" depends on just how the function was called.
+
+00:00:15.179 --> 00:00:18.359
+In this section, we'll explore different ways the call functions,
+
+00:00:18.359 --> 00:00:22.129
+as well as how each of these sets the value of "this" a little bit differently.
+

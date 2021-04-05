@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.110
+You don't have to create an object using object literal notation.
+
+00:00:04.110 --> 00:00:07.200
+You can also write a function that will return an object.
+
+00:00:07.200 --> 00:00:11.990
+However, one of the main ways that objects are created is with a constructor function.
+
+00:00:11.990 --> 00:00:15.265
+A constructor function is similar to a function that returns an object,
+
+00:00:15.265 --> 00:00:17.815
+but there are a few major differences.
+
+00:00:17.815 --> 00:00:21.040
+For one, a constructor functions starts with a capital letter.
+
+00:00:21.039 --> 00:00:25.439
+A constructor function must always be called with a special new keyword.
+
+00:00:25.440 --> 00:00:28.790
+And another major difference is that while a regular function must create
+
+00:00:28.789 --> 00:00:32.164
+the object it's going to return and modify that object directly,
+
+00:00:32.164 --> 00:00:35.359
+the constructor function has its object created automatically.
+
+00:00:35.359 --> 00:00:38.109
+Then, to add properties or methods of this object,
+
+00:00:38.109 --> 00:00:41.000
+you have to use a special "this" keyword.
+

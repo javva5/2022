@@ -1,0 +1,135 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.400 --> 00:00:01.867
+Temos aqui algumas coisas.
+
+00:00:01.900 --> 00:00:04.667
+Primeiro, temos uma variável
+global chamada "number",
+
+00:00:04.700 --> 00:00:06.500
+que aponta
+para o número três,
+
+00:00:06.533 --> 00:00:09.800
+também há uma função de ordem
+superior chamada "myFunction".
+
+00:00:09.833 --> 00:00:13.133
+Dentro da "myFunction",
+há a variável local "otherNumber",
+
+00:00:13.167 --> 00:00:17.333
+que aponta para o número um,
+e uma função chamada "logger".
+
+00:00:17.367 --> 00:00:20.933
+Ela registra "otherNumber"
+no console.
+
+00:00:20.967 --> 00:00:23.867
+No fim, "myFunction"
+retorna "logger".
+
+00:00:24.800 --> 00:00:26.467
+Vamos invocar "myFunction"
+
+00:00:26.500 --> 00:00:30.033
+e armazenar o resultado
+na variável "result".
+
+00:00:32.833 --> 00:00:36.167
+Como vemos, o valor retornado
+quando chamamos "myFunction"
+
+00:00:36.200 --> 00:00:38.900
+será armazenado na variável
+chamada "result".
+
+00:00:39.533 --> 00:00:41.267
+Se invocarmos "result",
+
+00:00:44.700 --> 00:00:47.367
+temos o resultado
+igual a um no console.
+
+00:00:47.400 --> 00:00:49.733
+Como isso é possível?
+
+00:00:49.767 --> 00:00:54.800
+Graças ao closure, "logger"
+captura a variável "otherNumber",
+
+00:00:54.833 --> 00:00:58.100
+que é declarada localmente
+dentro de "myFunction".
+
+00:00:58.133 --> 00:01:00.833
+Em outras palavras,
+a função "logger" aninhada
+
+00:01:00.867 --> 00:01:03.600
+ainda pode acessar
+a variável "otherNumber"
+
+00:01:03.633 --> 00:01:05.633
+no escopo da função-pai,
+
+00:01:05.667 --> 00:01:08.833
+mesmo depois que a função-pai
+tenha retornado.
+
+00:01:08.867 --> 00:01:11.033
+Vejamos isso mais de perto.
+
+00:01:11.067 --> 00:01:14.700
+Recarrego o console
+e faço tudo que fiz,
+
+00:01:14.733 --> 00:01:16.700
+mas com um depurador
+de erros.
+
+00:01:18.767 --> 00:01:20.400
+Se invocarmos novamente,
+
+00:01:23.900 --> 00:01:27.867
+pausamos a execução nesta
+linha de código, a linha sete.
+
+00:01:27.900 --> 00:01:30.767
+Mas ao conferir o que acontece
+do lado direito da tela,
+
+00:01:31.567 --> 00:01:33.267
+vemos closure aqui.
+
+00:01:33.300 --> 00:01:36.067
+Vamos abri-lo.
+Muito interessante!
+
+00:01:36.100 --> 00:01:38.033
+Vemos a variável
+"otherNumber",
+
+00:01:38.067 --> 00:01:42.033
+que é a variável
+que a função "logger" encerrou.
+
+00:01:42.067 --> 00:01:44.767
+Recapitulando.
+Funções como "logger"
+
+00:01:44.800 --> 00:01:47.467
+mantêm a referência
+ao escopo da função-pai,
+
+00:01:47.500 --> 00:01:48.800
+que é "myFunction",
+
+00:01:48.833 --> 00:01:51.367
+mesmo depois que a função-pai
+tenha retornado.
+

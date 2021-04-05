@@ -1,0 +1,64 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.980
+Here, we have a function expression.
+
+00:00:02.980 --> 00:00:06.269
+It's an anonymous function assigned to a variable called
+
+00:00:06.269 --> 00:00:08.969
+"returnsAFunction" and the return value of
+
+00:00:08.970 --> 00:00:12.250
+this function is actually, well, another function.
+
+00:00:12.250 --> 00:00:15.044
+It's a function that just outputs "Hello from inside a function!"
+
+00:00:15.044 --> 00:00:17.759
+to the console. Let's go ahead and assign
+
+00:00:17.760 --> 00:00:21.755
+the return value of returnsAFunction to a new variable.
+
+00:00:21.754 --> 00:00:25.739
+Let's call it "newFunction".
+
+00:00:25.739 --> 00:00:27.009
+So as you can see here,
+
+00:00:27.010 --> 00:00:30.205
+we're invoking the "returnsAFunction" function
+
+00:00:30.204 --> 00:00:34.859
+and assigning that return value to a variable, "newFunction".
+
+00:00:34.859 --> 00:00:36.399
+So now if we invoke it,
+
+00:00:36.399 --> 00:00:38.894
+we should see the message "Hello from inside a function!"
+
+00:00:38.895 --> 00:00:43.380
+print to the console. And indeed we do.
+
+00:00:43.380 --> 00:00:45.900
+One thing we also could have done was just immediately execute the
+
+00:00:45.899 --> 00:00:48.973
+"returnsAFunction" as well just by adding parenthesis.
+
+00:00:48.973 --> 00:00:52.754
+So if we type "returnsAFunction",
+
+00:00:52.755 --> 00:00:57.798
+call it, and then invoke that return function,
+
+00:00:57.798 --> 00:01:02.064
+we should see the same message printed out to the console.
+
+00:01:02.064 --> 00:01:05.019
+Great. Hello to you, too.
+

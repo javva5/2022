@@ -1,0 +1,642 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Setting Our Own &#x60;this&#x60;</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Classes and Objects</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Constructor Functions.html">02. Constructor Functions</a>
+    </li>
+    <li class="">
+      <a href="03. The &#x60;this&#x60; Keyword.html">03. The &#x60;this&#x60; Keyword</a>
+    </li>
+    <li class="">
+      <a href="04. Setting Our Own &#x60;this&#x60;.html">04. Setting Our Own &#x60;this&#x60;</a>
+    </li>
+    <li class="">
+      <a href="05. Prototypal Inheritance.html">05. Prototypal Inheritance</a>
+    </li>
+    <li class="">
+      <a href="06. Prototypal Inheritance Subclasses.html">06. Prototypal Inheritance: Subclasses</a>
+    </li>
+    <li class="">
+      <a href="07. Lesson Summary.html">07. Lesson Summary</a>
+    </li>
+    <li class="">
+      <a href="08. Course Outro.html">08. Course Outro</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. Setting Our Own `this`</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Recall that functions, objects, and the <code>this</code> keyword are all interconnected. Whether you're invoking a constructor function with the <code>new</code> operator, invoking a method on an object, or simply invoking a function normally -- each form of invocation sets the value of <code>this</code> a bit differently.</p>
+<p>But what if we want to set the value of <code>this</code> ourselves? JavaScript offers a few methods that can do just that!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>OOJS L3 40 - Setting Own This Intro V1</p></h3>
+  <video controls>
+  <source src="04. OOJS L3 40 - Setting Own This Intro V1-jMEwWv5hkYI.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="04. OOJS L3 40 - Setting Own This Intro V1-jMEwWv5hkYI.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="04. OOJS L3 40 - Setting Own This Intro V1-jMEwWv5hkYI.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="04. OOJS L3 40 - Setting Own This Intro V1-jMEwWv5hkYI.pt-BR.vtt" label="pt-BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="more-ways-to-invoke-functions">More Ways to Invoke Functions</h2>
+<p>We've seen various ways to invoke functions, each with their own implications regarding the value of <code>this</code>. There are yet two more ways to invoke a function: either using the <code>call()</code> or the <code>apply()</code> methods. </p>
+<p>Each method can be directly invoked onto a function itself (after all, JavaScript functions are <em>first-class</em> functions and can have properties and methods). As a result, the <em>receiving</em> function will be invoked with a specified <code>this</code> value, as well as any arguments passed in. </p>
+<p>Let's take a closer look at each of these methods, starting with <code>call()</code>!</p>
+<h3 id="call">call()</h3>
+<p><code>call()</code> is a method directly invoked onto a function. We first pass into it a single value to set as the value of <code>this</code>; then we pass in any of the receiving function's arguments one-by-one, separated by commas. </p>
+<p>Consider the following function, <code>multiply()</code>, which simply returns the product of its two arguments:</p>
+<pre><code class="js language-js">function multiply(n1, n2) {
+  return n1 * n2;
+}</code></pre>
+<p>Let's invoke it in the console:</p>
+<pre><code class="js language-js">multiply(3, 4);
+
+// 12</code></pre>
+<p>No surprises here! But now -- let's use the <code>call()</code> method to invoke the same function:</p>
+<pre><code class="js language-js">multiply.call(window, 3, 4);
+
+// 12</code></pre>
+<p>We get the same result! How did this happen? We first invoke the <code>call()</code> method directly onto the <code>multiply()</code> function. Note that the <code>multiply</code> preceding <code>.call(window, 3, 4)</code> is not followed by any parentheses. <code>call()</code> will be handling the invocation <em>and</em> the <code>multiply()</code> function's arguments itself!</p>
+<p>After writing that part, it's time to pass in the arguments! For the first argument of the <code>call()</code> method, we pass in the value to be set as <code>this</code>, which is <code>window</code>. We then finish up by passing in the <code>multiply()</code> function's arguments individually, <em>separated by commas</em>. </p>
+<p>Once <code>multiply.call(window, 3, 4);</code> executes, the function will be invoked with the given value of <code>this</code>, and the result that we see is <code>12</code>. Outside of <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode" rel="noopener noreferrer" target="_blank">strict mode</a>, both ways of invoking <code>multiply()</code> above are equivalent.</p>
+<p>Along with invoking regular functions, how do we go upon invoking <em>functions attached to objects</em> (i.e., methods)? This is where the power of <code>call()</code> really shines. Using <code>call()</code> to invoke a method allows us to "borrow" a method from one object -- then use it for <em>another</em> object! Check out the following object, <code>mockingbird</code>:</p>
+<pre><code class="js language-js">const mockingbird = {
+  title: 'To Kill a Mockingbird',
+  describe: function () {
+    console.log(`${this.title} is a classic novel`);
+  }
+};</code></pre>
+<p>We can have <code>mockingbird</code> invoke its own <code>describe()</code> method:</p>
+<pre><code class="js language-js">mockingbird.describe();
+
+// 'To Kill a Mockingbird is a classic novel'</code></pre>
+<p>Using <code>call()</code>, however, the following <code>pride</code> object can utilize <code>mockingbird</code>'s <code>describe()</code> method:</p>
+<pre><code class="js language-js">const pride = {
+  title: 'Pride and Prejudice'
+};
+
+mockingbird.describe.call(pride);
+// 'Pride and Prejudice is a classic novel'</code></pre>
+<p>Let's break down what happened when <code>mockingbird.describe.call(pride);</code> is executed! </p>
+<p>First, the <code>call()</code> method is invoked onto <code>mockingbird.describe</code> (which points to a function). Then, the value of <code>this</code> is passed into the <code>call()</code> method: <code>pride</code>. </p>
+<p>Since <code>mockingbird</code>'s <code>describe()</code> method references <code>this.title</code>, we need to access the <code>title</code> property of the object that <code>this</code> refers to. But since we've set our own value of <code>this</code>, the value of <code>this.title</code> will be accessed from the <code>pride</code> object! As a result, <code>mockingbird.describe.call(pride);</code> is executed, and we see <code>'Pride and Prejudice is a classic novel'</code> in the console.</p>
+<p><code>call()</code> is very effective if you're looking to invoke a function in the scope of the first argument passed into it. Likewise, we can leverage the <code>apply()</code> method to do the same, albeit with differences in how arguments are passed into it. Let's take a closer look!</p>
+<h3 id="apply">apply()</h3>
+<p>Just like <code>call()</code>, the <code>apply()</code> method is called on a function to not only invoke that function, but also to associate with it a specific value of <code>this</code>. However, rather than passing arguments one-by-one, separated by commas -- <code>apply()</code> takes the function's arguments in an <em>array</em>.  Recall the <code>multiply()</code> function from earlier:</p>
+<pre><code class="js language-js">function multiply(n1, n2) {
+  return n1 * n2;
+}</code></pre>
+<p>We used <code>call()</code> and passed in arguments individually:</p>
+<pre><code class="js language-js">multiply.call(window, 3, 4);
+
+// 12</code></pre>
+<p>Using <code>apply()</code>, however, we collect all of the <code>multiply()</code> function's arguments in an <em>array</em>! Then, we pass that entire array into <code>apply()</code>:</p>
+<pre><code class="js language-js">multiply.apply(window, [3, 4]);
+
+// 12</code></pre>
+<p>Great! Note that the first argument in both <code>call()</code> and <code>apply()</code> is still <code>window</code> (i.e., the object to bind the value of <code>this</code> to). </p>
+<p>Now what about invoking an object's method with <code>apply()</code>? Recall the previous <code>mockingbird</code> and <code>pride</code> objects:</p>
+<pre><code class="js language-js">const mockingbird = {
+  title: 'To Kill a Mockingbird',
+  describe: function () {
+    console.log(`${this.title} is a classic novel`);
+  }
+};
+
+
+const pride = {
+  title: 'Pride and Prejudice'
+};</code></pre>
+<p>Previously, we used <code>call()</code> to allow the <code>pride</code> object to "borrow" <code>mockingbird</code>'s <code>describe()</code> method:</p>
+<pre><code class="js language-js">mockingbird.describe.call(pride);
+
+// 'Pride and Prejudice is a classic novel'</code></pre>
+<p>We can achieve the same result using <code>apply()</code>!</p>
+<pre><code class="js language-js">mockingbird.describe.apply(pride);
+
+// 'Pride and Prejudice is a classic novel'</code></pre>
+<p>Note that the first argument passed into both <code>call()</code> and <code>apply()</code> is the same: <code>pride</code>. Since the <code>describe()</code> method doesn't take any arguments, the only difference between <code>mockingbird.describe.call(pride);</code> and <code>mockingbird.describe.apply(pride);</code> is just the method! Both approaches produce the same result.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="choosing-one-method-over-the-other">Choosing One Method Over the Other</h3>
+<p>Both <code>call()</code> and <code>apply()</code> invoke a function in the scope of the first argument passed in them (i.e., the object to be the value of <code>this</code>). So when would you choose <code>call()</code> over <code>apply()</code>, or vice versa? </p>
+<p><code>call()</code> may be limited if you don't know ahead of time the number of arguments that the function needs. In this case, <code>apply()</code> would be a better option, since it simply takes an array of arguments, then unpacks them to pass along to the function. Keep in mind that the unpacking comes at a minor performance cost, but it shouldn't be much of an issue.</p>
+<p>Let's now see <code>call()</code> and <code>apply()</code> in action!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L3 - 42 - Invoking Functions Demo</p></h3>
+  <video controls>
+  <source src="04. L3 - 42 - Invoking Functions Demo-rHMH0budUKk.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="04. L3 - 42 - Invoking Functions Demo-rHMH0budUKk.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="04. L3 - 42 - Invoking Functions Demo-rHMH0budUKk.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="04. L3 - 42 - Invoking Functions Demo-rHMH0budUKk.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="04. L3 - 42 - Invoking Functions Demo-rHMH0budUKk.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/OOJS-screencasts/blob/master/L3-objects-and-classes/44-invoking-functions-demo.js" rel="noopener noreferrer" target="_blank">Here's the code from the preceding video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Consider the following <code>dave</code> object, and the <code>sayHello()</code> function:</p>
+<pre><code class="js language-js">const dave = {
+  name: 'Dave'
+};
+
+function sayHello(message) {
+  console.log(`${message}, ${this.name}. You're looking well today.`);
+}</code></pre>
+<p>Let's say you want the message <code>'Hello, Dave. You're looking well today.'</code> printed to the console. </p>
+<p>Which of the following expressions could you write to accomplish that?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1512527239841" name="469288" id="a1512527239841">
+        <label for="a1512527239841"><p><code>dave.apply(sayHello('Hello'));</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512527247167" name="469288" id="a1512527247167">
+        <label for="a1512527247167"><p><code>dave.sayHello('Hello');</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512527247647" name="469288" id="a1512527247647">
+        <label for="a1512527247647"><p><code>sayHello.apply(dave, ['Hello']);</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512527248007" name="469288" id="a1512527248007">
+        <label for="a1512527248007"><p>It is not possible. <code>sayHello()</code> <em>must</em> be called as a method (i.e., invoked onto an object directly) in order to set <code>this</code> properly.</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    `sayHello.apply(dave, ['Hello']);`
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Consider the following <code>Andrew</code> and <code>Richard</code> objects:</p>
+<pre><code class="js language-js">const Andrew = {
+  name: 'Andrew',
+  introduce: function () {
+    console.log(`Hi, my name is ${this.name}!`);
+  }
+};</code></pre>
+<pre><code class="js language-js">const Richard = {
+  name: 'Richard',
+  introduce: function () {
+    console.log(`Hello there! I'm ${this.name}.`);
+  }
+};</code></pre>
+<p>When <code>Richard.introduce.call(Andrew);</code> is executed, what is logged to the console?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1512527328563" name="469289" id="a1512527328563">
+        <label for="a1512527328563"><p><code>'Hello there! I'm Andrew.'</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512527383879" name="469289" id="a1512527383879">
+        <label for="a1512527383879"><p><code>'Hello there! I'm Richard.'</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512527384327" name="469289" id="a1512527384327">
+        <label for="a1512527384327"><p><code>'Hi, my name is Richard!'</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512527384895" name="469289" id="a1512527384895">
+        <label for="a1512527384895"><p><code>'Hi, my name is Andrew!'</code></p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    `'Hello there! I'm Andrew.'`
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>Consider the following:</p>
+<pre><code class="js language-js">const andrew = {
+  name: 'Andrew'
+};
+
+function introduce(language) {
+  console.log(`I'm ${this.name} and my favorite programming language is ${language}.`);
+}</code></pre>
+<p>Write an expression that uses the <code>call()</code> method to produce the message: <code>'I'm Andrew and my favorite programming language is JavaScript.'</code></p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="callbacks-and-this">Callbacks and <code>this</code></h2>
+<p>The value of <code>this</code> has some potential scope issues when <em>callback functions</em> are involved, and things can get a bit tricky. Let's check it out below.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L3 -49 - Callbacks And This Demo V1</p></h3>
+  <video controls>
+  <source src="04. L3 -49 - Callbacks And This Demo V1-r7bmNJHFttE.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="04. L3 -49 - Callbacks And This Demo V1-r7bmNJHFttE.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="04. L3 -49 - Callbacks And This Demo V1-r7bmNJHFttE.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="04. L3 -49 - Callbacks And This Demo V1-r7bmNJHFttE.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="04. L3 -49 - Callbacks And This Demo V1-r7bmNJHFttE.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/OOJS-screencasts/blob/master/L3-objects-and-classes/50-callbacks-and-this-demo.js" rel="noopener noreferrer" target="_blank">Here's the code from the preceding video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="saving-this-with-an-anonymous-closure">Saving <code>this</code> with an Anonymous Closure</h2>
+<p>Let's recap the issue at hand. Here's the <code>invoiceTwice()</code> function from the previous video, as well as the <code>dog</code> object:</p>
+<pre><code class="js language-js">function invokeTwice(cb) {
+   cb();
+   cb();
+}
+
+const dog = {
+  age: 5,
+  growOneYear: function () {
+    this.age += 1;
+  }
+};</code></pre>
+<p>First, invoking <code>growOneYear()</code> works as expected, updating the value of the <code>dog</code> object's <code>age</code> property from <code>5</code> to <code>6</code>:</p>
+<pre><code class="js language-js">dog.growOneYear();
+
+dog.age; 
+// 6</code></pre>
+<p>However, passing <code>dog.growOneYear</code> (a function) as an argument into <code>invokeTwice()</code> produces an odd result:</p>
+<pre><code class="js language-js">invokeTwice(dog.growOneYear);
+
+dog.age;
+// 6</code></pre>
+<p>You may have expected the value of the <code>age</code> property in <code>dog</code> to have increased to <code>8</code>. Why did it remain <code>6</code>? </p>
+<p>As it turns out, <code>invokeTwice()</code> does indeed invoke <code>growOneYear</code> -- but it is invoked as a <em>function</em> rather than a <em>method</em>! Let's revisit the <code>this</code> grid from earlier:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/l3-53-this-grid-2.png" alt="_If a constructor function is called with the &#x60;new&#x60; operator, the value of &#x60;this&#x60; is set to the newly-created object. If a method is invoked on an object, &#x60;this&#x60; is set to that object itself. And if a function is simply invoked, &#x60;this&#x60; is set to the global object: &#x60;window&#x60;._" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>If a constructor function is called with the <code>new</code> operator, the value of <code>this</code> is set to the newly-created object. If a method is invoked on an object, <code>this</code> is set to that object itself. And if a function is simply invoked, <code>this</code> is set to the global object: <code>window</code>.</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="saving-this-with-an-anonymous-closure">Saving <code>this</code> with an Anonymous Closure</h2>
+<p>Recall that simply invoking a normal function will set the value of <code>this</code> to the global object (i.e., <code>window</code>). This is an issue, because we want <code>this</code> to be the <code>dog</code> object! </p>
+<p>So how can we make sure that <code>this</code> is preserved?</p>
+<p>One way to resolve this issue is to use an <strong>anonymous closure</strong> to close over the <code>dog</code> object:</p>
+<pre><code class="js language-js">invokeTwice(function () { 
+  dog.growOneYear(); 
+});
+
+dog.age;
+// 7</code></pre>
+<p>Using this approach, invoking <code>invokeTwice()</code> still sets the value of <code>this</code> to <code>window</code>. However, this has no effect on the closure; within the anonymous function, the <code>growOneYear()</code> method will still be directly called onto the <code>dog</code> object! As a result, the value of <code>dog</code>'s <code>age</code> property increases from <code>5</code> to <code>7</code>.</p>
+<p>Since this is such a common pattern, JavaScript provides an alternate and less verbose approach: the <code>bind()</code> method.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="saving-this-with-bind">Saving <code>this</code> with bind()</h2>
+<p>Similar to <code>call()</code> and <code>apply()</code>, the <code>bind()</code> method allows us to directly define a value for <code>this</code>. <code>bind()</code> is a method that is also called <em>on</em>  a function, but unlike <code>call()</code> or <code>apply()</code>, which both invoke the function right away -- <code>bind()</code> <em>returns</em> a new function that, when called, has <code>this</code> set to the value we give it.</p>
+<p>Let's see it in action!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L3 - 52 - Using Bind V1</p></h3>
+  <video controls>
+  <source src="04. L3 - 52 - Using Bind V1-t225UNDPO9c.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="04. L3 - 52 - Using Bind V1-t225UNDPO9c.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="04. L3 - 52 - Using Bind V1-t225UNDPO9c.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="04. L3 - 52 - Using Bind V1-t225UNDPO9c.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="04. L3 - 52 - Using Bind V1-t225UNDPO9c.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/OOJS-screencasts/blob/master/L3-objects-and-classes/56-using-bind.js" rel="noopener noreferrer" target="_blank">Here's the code from the preceding video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is true about <code>bind()</code>? Select all that apply:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1512527951804" name="469300" id="a1512527951804">
+      <label for="a1512527951804"><p><code>bind()</code> is a method that is called on a function</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512527958504" name="469300" id="a1512527958504">
+      <label for="a1512527958504"><p><code>bind()</code> returns a new function that, when called, has <code>this</code> set to the provided object</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512527959008" name="469300" id="a1512527959008">
+      <label for="a1512527959008"><p>The object passed into <code>bind()</code> <em>must</em> be the same as the object on which the method was called (e.g., <code>dog.growOneYear.bind(dog);</code>)</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512527959407" name="469300" id="a1512527959407">
+      <label for="a1512527959407"><p><code>bind()</code> <em>invokes</em> a function, so it can be substituted with <code>call()</code> and <code>apply()</code></p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>`bind()` is a method that is called on a function</li>
+      <li>`bind()` returns a new function that, when called, has `this` set to the provided object</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>Consider the following:</p>
+<pre><code class="js language-js">const driver = {
+  name: 'Danica',
+  displayName: function () {
+    console.log(`Name: ${this.name}`);
+  }
+};
+
+const car = {
+  name: 'Fusion'
+};</code></pre>
+<p>Write an expression using <code>bind()</code> that allows us to "borrow" the <code>displayName()</code> method from <code>driver</code> for the <code>car</code> object to use. Note: The <em>expression itself</em> is sufficient (no need to save it to a variable).</p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>JavaScript provides three methods that allow us to set the value of <code>this</code> for a given function:</p>
+<ul>
+<li><code>call()</code> invokes the function and has arguments passed in individually, separated by commas.</li>
+<li><code>apply()</code> is similar to <code>call()</code>; it invokes the function just the same, but arguments are passed in as an array.</li>
+<li><code>bind()</code> returns a new function with <code>this</code> bound to a specific object, allowing us to call it as a regular function.</li>
+</ul>
+<p>For further research, we recommend checking out Kyle Simpson's <strong>You Don't Know JS</strong> series on <code>this</code>, linked below.</p>
+<p>At this point, you've seen how functions, objects, and the <code>this</code> keyword are all very much interconnected. You've also seen how just about <em>everything</em> in JavaScript is an object! </p>
+<p>Did you know that you can even base <em>objects</em> on <em>other objects</em>? This is the main idea behind <strong>prototypal inheritance</strong>, and by implementing it, objects can take on properties of <em>other objects</em>. We'll cover all this and more, coming up next!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="further-research">Further Research</h3>
+<ul>
+<li>Kyle Simpson's <a href="https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes" rel="noopener noreferrer" target="_blank">You Don't Know JS</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call" rel="noopener noreferrer" target="_blank">call()</a> on MDN</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply" rel="noopener noreferrer" target="_blank">apply()</a> on MDN</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind" rel="noopener noreferrer" target="_blank">bind()</a> on MDN</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. Prototypal Inheritance.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. Setting Our Own &#x60;this&#x60;')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

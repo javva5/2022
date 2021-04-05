@@ -1,0 +1,115 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.375
+Here, we have a variable called myName,
+
+00:00:03.375 --> 00:00:05.785
+which just points to a string, Andrew.
+
+00:00:05.785 --> 00:00:07.935
+This is variables in the Javascript file,
+
+00:00:07.934 --> 00:00:09.785
+but it is not inside any function,
+
+00:00:09.785 --> 00:00:12.210
+so it is global scope.
+
+00:00:12.210 --> 00:00:14.940
+Let us now go ahead and write a function called introduceMyself,
+
+00:00:14.939 --> 00:00:16.387
+and define a local variable inside it.
+
+00:00:16.387 --> 00:00:24.519
+Great, So here we
+
+00:00:24.519 --> 00:00:27.429
+have the variable you, which points to a student.
+
+00:00:27.429 --> 00:00:29.410
+And again this is a local variable,
+
+00:00:29.410 --> 00:00:32.854
+meaning that it's declared directly within introduceMyself.
+
+00:00:32.854 --> 00:00:36.669
+Let's do one more thing and write a function called introduce,
+
+00:00:36.670 --> 00:00:38.890
+and return it from introduceMyself.
+
+00:00:38.890 --> 00:00:44.039
+Great.
+
+00:00:44.039 --> 00:00:45.655
+So where going to see what is going on here.
+
+00:00:45.655 --> 00:00:48.395
+We have introduce which all it's going to do,
+
+00:00:48.395 --> 00:00:51.275
+is that it is going to print out a message to the console,
+
+00:00:51.274 --> 00:00:54.570
+and that message references two variables that we have defined here.
+
+00:00:54.570 --> 00:00:57.960
+We have you, and we also have myName.
+
+00:00:57.960 --> 00:01:00.664
+So let us break these both down and see what is happening.
+
+00:01:00.664 --> 00:01:04.789
+We know that myName is a variable defined outside of this entire function,
+
+00:01:04.790 --> 00:01:07.865
+meaning that it is a global variable with global scope,
+
+00:01:07.864 --> 00:01:10.084
+and it is available for all functions to use,
+
+00:01:10.084 --> 00:01:13.174
+including introduceMyself, and introduce.
+
+00:01:13.174 --> 00:01:14.444
+So, that makes sense,
+
+00:01:14.444 --> 00:01:16.239
+but what about this variable over here?
+
+00:01:16.239 --> 00:01:21.769
+You. It might look kind of odd because you is referenced by this function introduce,
+
+00:01:21.769 --> 00:01:24.719
+even though you, was never passed in as an argument,
+
+00:01:24.719 --> 00:01:29.385
+nor was you, ever declaring a local variable within introduce.
+
+00:01:29.385 --> 00:01:32.510
+This is all possible because a [inaudible] function scope includes
+
+00:01:32.510 --> 00:01:36.645
+variables declared in this scope where the function was defined in the first place.
+
+00:01:36.644 --> 00:01:38.670
+So in other words, you is available,
+
+00:01:38.670 --> 00:01:42.890
+because introduce still has access to its parent function scope,
+
+00:01:42.890 --> 00:01:46.609
+and that is exactly where you is defined in the first place.
+
+00:01:46.609 --> 00:01:49.640
+Finally, let's call introduceMyself and see the entire message.
+
+00:01:49.640 --> 00:01:57.875
+And there you have it.
+
+00:01:57.875 --> 00:02:00.319
+Hello student, I'm Andrew.
+

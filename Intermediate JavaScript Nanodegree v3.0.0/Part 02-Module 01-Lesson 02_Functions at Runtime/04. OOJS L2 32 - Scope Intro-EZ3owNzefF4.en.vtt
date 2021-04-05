@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.645
+When you write a function,
+
+00:00:01.645 --> 00:00:04.290
+it has access to its own arguments.
+
+00:00:04.290 --> 00:00:07.644
+Functions are able to use any arguments passed directly into them,
+
+00:00:07.644 --> 00:00:09.304
+such as numbers, strings,
+
+00:00:09.304 --> 00:00:11.279
+or even other functions.
+
+00:00:11.279 --> 00:00:13.875
+Second, functions are able to access
+
+00:00:13.875 --> 00:00:17.740
+any local variables declared inside the function itself.
+
+00:00:17.739 --> 00:00:23.399
+Third, a function has access to the same variables its parent function uses.
+
+00:00:23.399 --> 00:00:26.409
+This includes the parent functions' local variables,
+
+00:00:26.410 --> 00:00:28.539
+the parent functions' arguments,
+
+00:00:28.539 --> 00:00:32.649
+or even the variables in the parent functions' parent function scope.
+
+00:00:32.649 --> 00:00:35.814
+And lastly, functions can use global variables,
+
+00:00:35.814 --> 00:00:39.159
+meaning, any variables defined outside of all functions.
+

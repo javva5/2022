@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.615
+In this lesson, you'll learn about using functions as values,
+
+00:00:04.615 --> 00:00:09.025
+and we can do this because Javascript has FirstClass functions.
+
+00:00:09.025 --> 00:00:10.875
+We also passed functions as arguments,
+
+00:00:10.875 --> 00:00:13.349
+identified when a scope is created and
+
+00:00:13.349 --> 00:00:17.155
+leveraged closure to capture variables within a scope chain.
+
+00:00:17.155 --> 00:00:19.140
+Finally, we connected immediately invoked
+
+00:00:19.140 --> 00:00:24.359
+function expressions with scoping closure to create privacy in data.
+
+00:00:24.359 --> 00:00:27.314
+In the next lesson, we'll check out how to build classes
+
+00:00:27.315 --> 00:00:31.000
+that can serve as blueprints for creating new objects.
+

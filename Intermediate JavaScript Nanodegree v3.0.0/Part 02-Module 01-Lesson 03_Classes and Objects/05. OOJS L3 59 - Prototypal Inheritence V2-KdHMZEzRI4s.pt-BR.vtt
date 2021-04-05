@@ -1,0 +1,72 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.567 --> 00:00:04.667
+Meus pais têm cabelos escuros.
+Eu tenho cabelos escuros.
+
+00:00:04.701 --> 00:00:09.467
+Podemos dizer que eu herdei
+os genes dos meus pais.
+
+00:00:09.501 --> 00:00:13.300
+No JavaScript,
+herança é quando um objeto
+
+00:00:13.334 --> 00:00:15.501
+se baseia em outro objeto.
+
+00:00:15.534 --> 00:00:18.801
+Isso é chamado de herança
+ou extensão.
+
+00:00:18.834 --> 00:00:23.033
+Imagine uma função construtora
+que cria objetos de carros.
+
+00:00:23.067 --> 00:00:26.701
+Cada objeto contém valores
+de propriedade de cor variados:
+
+00:00:26.734 --> 00:00:29.834
+vermelho, azul e verde.
+
+00:00:29.868 --> 00:00:32.400
+Além de os objetos
+terem propriedades
+
+00:00:32.434 --> 00:00:34.868
+eles são ligados secretamente
+a um objeto em comum
+
+00:00:34.901 --> 00:00:37.033
+chamado "protótipo".
+
+00:00:37.067 --> 00:00:38.801
+Podemos adicionar métodos
+ao protótipo
+
+00:00:38.834 --> 00:00:41.100
+que os objetos
+podem compartilhar.
+
+00:00:41.334 --> 00:00:44.200
+Em vez de criar
+um novo método "dirigir"
+
+00:00:44.234 --> 00:00:46.100
+sempre que um novo carro
+for feito,
+
+00:00:46.133 --> 00:00:48.300
+cada um pode
+compartilhar o mesmo.
+
+00:00:48.334 --> 00:00:52.667
+Diferente de outras linguagens,
+o JavaScript alavanca o protótipo
+
+00:00:52.701 --> 00:00:54.033
+para gerenciar a herança.
+

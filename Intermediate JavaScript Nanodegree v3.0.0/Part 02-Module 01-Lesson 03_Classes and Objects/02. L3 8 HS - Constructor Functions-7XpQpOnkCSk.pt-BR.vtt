@@ -1,0 +1,55 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.667 --> 00:00:03.968
+Não precisamos criar um objeto
+com notação literal de objeto,
+
+00:00:04.000 --> 00:00:07.234
+também podemos compor uma função
+que retorna um objeto.
+
+00:00:07.267 --> 00:00:10.234
+Porém uma das principais
+formas de criar um objeto
+
+00:00:10.267 --> 00:00:12.100
+é com uma função
+construtora.
+
+00:00:12.133 --> 00:00:15.267
+Ela é parecida com uma função
+que retorna um objeto,
+
+00:00:15.300 --> 00:00:17.467
+mas com algumas diferenças.
+
+00:00:17.534 --> 00:00:21.167
+As funções construtoras começam
+com letra maiúscula.
+
+00:00:21.200 --> 00:00:25.701
+Elas sempre devem ser chamadas
+com a palavra-chave "new"
+
+00:00:25.734 --> 00:00:30.367
+e, enquanto a função normal cria
+o objeto que será retornado
+
+00:00:30.400 --> 00:00:32.133
+e modifica
+o objeto diretamente,
+
+00:00:32.167 --> 00:00:35.534
+uma função construtora cria
+o objeto automaticamente.
+
+00:00:35.567 --> 00:00:38.100
+Para adicionar propriedades
+ou métodos ao objeto,
+
+00:00:38.133 --> 00:00:40.834
+utilizamos
+a palavra-chave "this".
+

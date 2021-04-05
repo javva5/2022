@@ -1,0 +1,340 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dinosaurs</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Project: Dinosaurs</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Project Summary.html">01. Project Summary</a>
+    </li>
+    <li class="">
+      <a href="02. Project Rubric.html">02. Project Rubric</a>
+    </li>
+    <li class="">
+      <a href="03. Get the Starter Code.html">03. Get the Starter Code</a>
+    </li>
+    <li class="">
+      <a href="04. Object-Oriented Javascript.html">04. Object-Oriented Javascript</a>
+    </li>
+    <li class="">
+      <a href="05. Development Strategy.html">05. Development Strategy</a>
+    </li>
+    <li class="">
+      <a href="06. Version Control.html">06. Version Control</a>
+    </li>
+    <li class="">
+      <a href="07. Udacity Style Guides.html">07. Udacity Style Guides</a>
+    </li>
+    <li class="">
+      <a href="08. Still Not Sure How to Begin.html">08. Still Not Sure How to Begin?</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Dinosaurs.html">Project Description - Dinosaurs</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Dinosaurs.html">Project Rubric - Dinosaurs</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">Dinosaurs</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            
+      <div>
+        <h2><p>Code Functionality &amp; UI</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Clicking “Compare me” on index.html produces no errors.</p>
+        </td>
+        <td>
+          <p>No error messages should be logged to console. Console should also be void of any console.log statements. </p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>On click, form was removed from DOM</p>
+        </td>
+        <td>
+          <p>There should be a click event where form should no longer be visible on the UI once the button is clicked. </p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>On click, grid of 9 tiles added to DOM</p>
+        </td>
+        <td>
+          <p>The Dom should contain a grid of 9 tiles with the following conditions:</p>
+<ul>
+<li>7 Dinosaurs with species, image, and random fact displayed</li>
+<li>1 Human located in the middle with name from input displayed in place of species and no fact.</li>
+<li>1 Bird with species, image, and the fact, “All birds are Dinosaurs.”</li>
+<li>Refreshing the screen and entering new data should reveal different facts. </li>
+</ul>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>Code Quality</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Code should follow Udacity coding standards</p>
+        </td>
+        <td>
+          <p>Ensure that the code follows <a href="http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html" rel="noopener noreferrer" target="_blank">Udacity javascript coding standards</a> and be linted and commented. </p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Code is readable and DRY</p>
+        </td>
+        <td>
+          <p>Code should minimize code repetition and be easy to read and easy to maintain (DRY).</p>
+<p>It should name variables descriptively, and optionally use comments as needed to document code functionality. Functions should include comments to describe the function. Functions should be declared before they are called. Class (regardless of how it is created) should be easy to recognize and commented as such. </p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>OOJS Concepts</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Contain a class and all necessary objects</p>
+        </td>
+        <td>
+          <p>There should be at least 1 class/function for creating new objects. There should be 9 objects created.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Get user data from the DOM</p>
+        </td>
+        <td>
+          <p>Student should complete the human object with data pulled from the form when “Compare me” is clicked. </p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Contain at least 3 methods for comparisons</p>
+        </td>
+        <td>
+          <p>There should be at least 3 methods which compare dino data to the user data from the DOM. Student may choose to add additional options to the form to compare alternative items such as location, length, or time period.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Append tiles with object data to DOM</p>
+        </td>
+        <td>
+          <p>Iterate through objects to create tiles with species, image, and fact that are appended to DOM. Conditionally display appropriate information for Human, Bird and Dinosaurs.</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div class="jumbotron">
+        <h3>Tips to make your project standout:</h3>
+        <p><ul>
+<li>Validate the form data to ensure the data is acceptable and complete. </li>
+<li>Allow the user to generate a new infographic. </li>
+<li>Move the tile colors from CSS to JS for more control. </li>
+<li>Randomize the order of the tiles while keeping the human in the middle. </li>
+<li>Create a hover state on the tiles that displays the rest of the species statistics. </li>
+<li>Create additional methods for comparing data. </li>
+<li>Rewrite the project to use <a href="https://medium.com/javascript-scene/javascript-factory-functions-vs-constructor-functions-vs-classes-2f22ceddf33e" rel="noopener noreferrer" target="_blank">constructor functions, factory functions, the module pattern, and revealing module pattern</a></li>
+<li>Allow the user to select different units for the numbers and update the methods to account for this. </li>
+</ul></p>
+      </div>
+    
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('Dinosaurs')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

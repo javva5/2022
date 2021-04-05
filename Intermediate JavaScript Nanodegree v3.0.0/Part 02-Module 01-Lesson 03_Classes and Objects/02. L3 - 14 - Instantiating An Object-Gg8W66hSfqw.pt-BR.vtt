@@ -1,0 +1,160 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.233 --> 00:00:03.067
+Temos uma função construtora
+chamada "Hero"
+
+00:00:03.100 --> 00:00:05.967
+que cria objetos
+com algumas propriedades.
+
+00:00:06.667 --> 00:00:09.433
+Quando invocamos essa função
+com a palavra-chave "new",
+
+00:00:09.467 --> 00:00:11.233
+o nome que passamos
+
+00:00:11.267 --> 00:00:15.233
+será o valor da propriedade
+"name" do objeto.
+
+00:00:15.267 --> 00:00:17.433
+Da mesma forma,
+o papel passado
+
+00:00:17.467 --> 00:00:20.267
+se tornará o valor
+da propriedade "role".
+
+00:00:20.300 --> 00:00:23.833
+O objeto novo também terá
+um método chamado "introduce",
+
+00:00:23.867 --> 00:00:27.767
+que imprime a mensagem
+no console usando as propriedades
+
+00:00:27.800 --> 00:00:29.700
+de nome e papel do objeto.
+
+00:00:29.733 --> 00:00:33.400
+Vamos invocar "Hero"
+e instanciar novos objetos.
+
+00:00:44.100 --> 00:00:46.300
+Chamamos a função
+construtora "Hero"
+
+00:00:46.333 --> 00:00:49.200
+com a palavra-chave "new"
+e passamos dois argumentos,
+
+00:00:49.233 --> 00:00:51.867
+passamos a string "Taylor"
+para representar o nome,
+
+00:00:51.900 --> 00:00:55.500
+e a string "mother",
+para representar o papel.
+
+00:00:55.533 --> 00:00:58.733
+Chamar esta função com "new"
+instancia um novo objeto,
+
+00:00:58.767 --> 00:01:01.600
+que é referenciado
+pela variável "Taylor".
+
+00:01:01.633 --> 00:01:03.833
+Usamos a mesma
+função construtora,
+
+00:01:03.867 --> 00:01:05.267
+chamamos com "new" novamente
+
+00:01:05.300 --> 00:01:08.267
+e passamos a string "Riley"
+e a string "coach"
+
+00:01:08.300 --> 00:01:09.833
+para criar um novo objeto.
+
+00:01:09.867 --> 00:01:13.633
+Vamos conferir as propriedades
+para que os objetos se apresentem.
+
+00:01:15.867 --> 00:01:18.833
+Acessar a propriedade "name"
+do objeto "Taylor"
+
+00:01:18.867 --> 00:01:20.067
+retorna "Taylor",
+
+00:01:20.100 --> 00:01:22.900
+que passamos
+na função construtora aqui.
+
+00:01:22.933 --> 00:01:25.467
+Vejamos algumas propriedades
+do objeto "Riley".
+
+00:01:28.067 --> 00:01:31.667
+Ótimo. Acessar a propriedade
+"role" do objeto "Riley"
+
+00:01:31.700 --> 00:01:33.500
+nos fornece
+a string "coach",
+
+00:01:33.533 --> 00:01:36.533
+que é exatamente o que passamos
+à função construtora aqui.
+
+00:01:37.200 --> 00:01:39.867
+Vamos chamar o método
+"introduce" em cada objeto.
+
+00:01:46.200 --> 00:01:51.967
+Demais! Como chamamos "introduce"
+como método no objeto "Taylor",
+
+00:01:52.000 --> 00:01:54.467
+o valor de "this" é dado
+ao próprio objeto.
+
+00:01:54.500 --> 00:01:57.967
+Podemos pegar "Taylor"
+de "this.name"
+
+00:01:58.000 --> 00:02:01.500
+e "mother" de "this.role".
+
+00:02:01.533 --> 00:02:05.300
+Ao chamar "introduce"
+no objeto "Riley",
+
+00:02:05.333 --> 00:02:07.400
+obtemos a propriedade
+de nome de "Riley",
+
+00:02:07.433 --> 00:02:08.800
+que é a string "Riley",
+
+00:02:08.833 --> 00:02:12.333
+e obtemos a propriedade do papel
+do "Riley", que é "coach".
+
+00:02:12.367 --> 00:02:13.967
+O bom da função construtora
+
+00:02:14.000 --> 00:02:16.433
+é que podemos chamar
+a mesma função construtora
+
+00:02:16.467 --> 00:02:19.767
+e criar quantas instâncias
+ou objetos desejarmos.
+

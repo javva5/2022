@@ -1,0 +1,59 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.567 --> 00:00:01.734
+Quando você escreve
+uma função,
+
+00:00:01.767 --> 00:00:04.033
+ela tem acesso
+aos próprios argumentos dela.
+
+00:00:04.367 --> 00:00:06.167
+Funções conseguem
+usar qualquer argumento
+
+00:00:06.200 --> 00:00:08.601
+passado diretamente
+a ela, como números,
+
+00:00:08.634 --> 00:00:11.200
+strings ou até mesmo
+outras funções.
+
+00:00:11.767 --> 00:00:15.100
+Segundo, funções podem
+acessar variáveis locais
+
+00:00:15.133 --> 00:00:17.567
+declaradas dentro
+da própria função.
+
+00:00:18.133 --> 00:00:20.901
+Terceiro, uma função tem
+acesso às mesmas variáveis
+
+00:00:20.934 --> 00:00:23.133
+que sua função-pai usa.
+
+00:00:23.167 --> 00:00:26.734
+Isso inclui as variáveis locais
+da função-pai,
+
+00:00:26.767 --> 00:00:29.467
+seus argumentos,
+ou até mesmo as variáveis
+
+00:00:29.501 --> 00:00:32.567
+dentro do escopo da função-pai
+da função-pai.
+
+00:00:33.000 --> 00:00:35.801
+Por fim, funções podem usar
+variáveis globais,
+
+00:00:35.834 --> 00:00:39.167
+isto é, qualquer variável definida
+fora de todas as funções.
+

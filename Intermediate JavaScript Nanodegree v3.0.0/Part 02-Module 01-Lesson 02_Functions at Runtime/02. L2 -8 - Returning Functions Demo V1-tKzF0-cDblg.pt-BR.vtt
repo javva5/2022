@@ -1,0 +1,79 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.333 --> 00:00:02.900
+Aqui, temos uma função
+de expressão.
+
+00:00:02.933 --> 00:00:05.833
+Ela é uma função anônima
+atribuída a uma variável
+
+00:00:05.867 --> 00:00:07.767
+chamada "returnsAFunction".
+
+00:00:07.800 --> 00:00:12.133
+O valor de retorno desta função
+é, na verdade, outra função.
+
+00:00:12.167 --> 00:00:14.867
+É uma função cujo valor de saída
+é "Olá de dentro de uma função!"
+
+00:00:14.900 --> 00:00:16.233
+para o console.
+
+00:00:16.900 --> 00:00:20.100
+Vamos atribuir o valor de retorno
+de "returnsAFunction"
+
+00:00:20.133 --> 00:00:21.933
+a uma nova variável.
+
+00:00:21.967 --> 00:00:24.000
+Vamos chamá-la
+de "newFunction".
+
+00:00:25.833 --> 00:00:30.167
+Note que estamos invocando
+a função "returnsAFunction"
+
+00:00:30.200 --> 00:00:34.333
+e atribuindo este valor de retorno
+a uma variável, "newFunction".
+
+00:00:35.000 --> 00:00:37.633
+Agora, se a invocarmos,
+vamos ver a mensagem
+
+00:00:37.667 --> 00:00:40.067
+"Olá de dentro de uma função!"
+impressa no console.
+
+00:00:42.133 --> 00:00:43.300
+E aí está.
+
+00:00:43.333 --> 00:00:47.233
+Também poderíamos ter executado
+imediatamente a função de retorno
+
+00:00:47.267 --> 00:00:48.767
+apenas adicionando
+parênteses.
+
+00:00:48.800 --> 00:00:54.200
+Se digitarmos "returnsAFunction",
+chamá-la
+
+00:00:55.233 --> 00:00:57.867
+e invocarmos essa função
+de retorno,
+
+00:00:57.900 --> 00:01:00.567
+veremos a mesma mensagem
+impressa no console.
+
+00:01:03.900 --> 00:01:05.200
+Ótimo. Olá para você também!
+

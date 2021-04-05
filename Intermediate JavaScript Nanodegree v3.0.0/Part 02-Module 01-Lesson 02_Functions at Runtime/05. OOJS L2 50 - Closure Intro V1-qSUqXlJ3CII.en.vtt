@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.639
+Closure. It's kind of a weird word that's not super descriptive.
+
+00:00:04.639 --> 00:00:06.529
+So, what is it?
+
+00:00:06.530 --> 00:00:11.339
+A closure is a combination of a function and it's lexical environment,
+
+00:00:11.339 --> 00:00:13.140
+which is the scope of the function,
+
+00:00:13.140 --> 00:00:16.005
+which is basically what identifiers that has access to.
+
+00:00:16.004 --> 00:00:19.179
+Scope and closure, they're very closely related.
+
+00:00:19.179 --> 00:00:23.804
+Now, every function has its own closure just like every function has its own scope.
+
+00:00:23.804 --> 00:00:26.850
+What makes the function's closure powerful is
+
+00:00:26.850 --> 00:00:30.234
+when that function is returned from another function.
+
+00:00:30.234 --> 00:00:32.880
+When a function is declared in a function but
+
+00:00:32.880 --> 00:00:35.880
+returned and run outside of where it was declared,
+
+00:00:35.880 --> 00:00:40.010
+it will still have access to the scope it was declared in because of closure.
+

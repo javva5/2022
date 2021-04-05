@@ -1,0 +1,94 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:07.006
+Let's go ahead and create an array and assign a variable to that array.
+
+00:00:07.006 --> 00:00:12.029
+Now, let's call join on that array?
+
+00:00:12.029 --> 00:00:19.399
+Cool. So clearly, myArray has access to the join method over here.
+
+00:00:19.399 --> 00:00:26.412
+Let's go ahead and take a look at some of the properties of myArray.
+
+00:00:26.413 --> 00:00:31.493
+Let's open it up.
+
+00:00:31.493 --> 00:00:37.969
+It's all going to be stored in this "_proto_" property over here.
+
+00:00:37.969 --> 00:00:39.744
+Don't worry too much about what this is right now.
+
+00:00:39.744 --> 00:00:42.989
+Just know that this is what allows us to access the properties
+
+00:00:42.990 --> 00:00:48.560
+of this array or this object's prototype. Check it out.
+
+00:00:48.820 --> 00:00:52.554
+So, pretty interesting.
+
+00:00:52.554 --> 00:00:55.560
+We've definitely used some of these before in this course.
+
+00:00:55.560 --> 00:00:57.435
+We've definitely seen join just now.
+
+00:00:57.435 --> 00:01:00.925
+We've seen keys we use for each earlier.
+
+00:01:00.924 --> 00:01:02.729
+Definitely use push.
+
+00:01:02.729 --> 00:01:04.075
+So, it's pretty useful.
+
+00:01:04.075 --> 00:01:08.500
+You see a lot of methods that can be called on this array.
+
+00:01:08.500 --> 00:01:11.325
+The take home message here is that this individual array,
+
+00:01:11.325 --> 00:01:15.420
+myArray, doesn't have direct access to this join method directly.
+
+00:01:15.420 --> 00:01:20.510
+Instead, it goes up the prototype chain and grabs the method directly from array.
+
+00:01:20.510 --> 00:01:24.560
+I'm kind of curious. Let's check out array on MDN.
+
+00:01:24.560 --> 00:01:28.390
+If we scroll down, we can see the same methods
+
+00:01:28.390 --> 00:01:32.765
+actually that the individual array, myArray, had access to.
+
+00:01:32.765 --> 00:01:34.930
+Again, a lot of the same things for each.
+
+00:01:34.930 --> 00:01:37.390
+We saw keys, we saw push,
+
+00:01:37.390 --> 00:01:41.290
+definitely used join earlier.
+
+00:01:41.290 --> 00:01:42.670
+So, as it turns out,
+
+00:01:42.670 --> 00:01:45.625
+you've actually been using prototype methods all along.
+
+00:01:45.625 --> 00:01:49.579
+These are methods that we define directly in the array or in the object.
+
+00:01:49.579 --> 00:01:53.109
+Instead, these methods that their individual array have access
+
+00:01:53.109 --> 00:01:58.000
+to are inherited from the arrays prototype. Pretty awesome.
+

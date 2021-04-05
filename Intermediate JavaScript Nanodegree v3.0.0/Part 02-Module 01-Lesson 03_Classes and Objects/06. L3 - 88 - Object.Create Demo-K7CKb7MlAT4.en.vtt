@@ -1,0 +1,100 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.050 --> 00:00:03.149
+Here's the Animal Constructor Function along with
+
+00:00:03.149 --> 00:00:06.439
+the Walk method defined directly on animals prototype.
+
+00:00:06.440 --> 00:00:09.445
+Along with that, we also have the Cat Constructor Function.
+
+00:00:09.445 --> 00:00:12.240
+But, one thing you might notice is that we're using
+
+00:00:12.240 --> 00:00:15.765
+the Call method over here in the cat constructor,
+
+00:00:15.765 --> 00:00:19.425
+and we're invoking that directly on the animal constructor.
+
+00:00:19.425 --> 00:00:21.179
+The reason for this, is that we want to call
+
+00:00:21.179 --> 00:00:25.564
+the super constructor on the cat instance or in the cat objects.
+
+00:00:25.565 --> 00:00:29.920
+Otherwise, this.name will actually be undefined.
+
+00:00:29.920 --> 00:00:34.079
+On top of that, we're using call instead of the new operator when we want to invoke
+
+00:00:34.079 --> 00:00:36.179
+the animal constructor because we don't want to
+
+00:00:36.179 --> 00:00:38.829
+construct a whole new animal object although,
+
+00:00:38.829 --> 00:00:41.714
+all we really care about is just the animal initialization logic
+
+00:00:41.715 --> 00:00:45.160
+on the cat instance or on the cat object.
+
+00:00:45.159 --> 00:00:52.306
+Again, all the call method does is just invoke animal and sets this to the cat instance.
+
+00:00:52.307 --> 00:00:55.304
+Great. You can hit, Return.
+
+00:00:55.304 --> 00:01:03.712
+And now, let's have this cat inherit from animal.
+
+00:01:03.712 --> 00:01:08.585
+One more thing we need to do is change the constructor.
+
+00:01:08.584 --> 00:01:14.079
+Otherwise, all cat objects will actually have their constructor point to animal,
+
+00:01:14.079 --> 00:01:18.209
+but it should point to cat. So let's change that.
+
+00:01:19.890 --> 00:01:25.575
+So, I'm going to clear the console to give myself a little bit more space here.
+
+00:01:25.575 --> 00:01:27.189
+At this point, let's add a method to
+
+00:01:27.189 --> 00:01:32.879
+the cat's prototype so all cat objects can share it. Let's call it meow.
+
+00:01:35.219 --> 00:01:38.780
+Now, we can call a cat constructor with
+
+00:01:38.780 --> 00:01:44.555
+a new operator and instantiate a new cat object. Let's call it Bambi.
+
+00:01:44.555 --> 00:01:49.606
+And now, let's make sure Bambi has all the properties and methods that we wanted.
+
+00:01:49.606 --> 00:01:59.174
+We have meow, we also have walk that we inherited from the animal constructor,
+
+00:01:59.174 --> 00:02:02.334
+and, of course, when we call bambi.name,
+
+00:02:02.334 --> 00:02:06.399
+we got Bambi's name.
+
+00:02:06.400 --> 00:02:10.480
+So, to recap, to efficiently manage inheritance in JavaScript,
+
+00:02:10.479 --> 00:02:12.715
+a great way is to avoid mutating the prototype
+
+00:02:12.715 --> 00:02:17.740
+completely and using object.create allows us to do just that.
+

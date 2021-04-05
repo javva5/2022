@@ -1,0 +1,51 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.467 --> 00:00:02.100
+Você escreveu funções
+no JavaScript
+
+00:00:02.133 --> 00:00:05.133
+que podem ser chamadas
+com diferentes tipos de argumentos.
+
+00:00:05.167 --> 00:00:07.868
+Às vezes, você pode passar
+uma string para a função.
+
+00:00:07.901 --> 00:00:10.133
+Às vezes,
+você pode passar um número.
+
+00:00:10.167 --> 00:00:14.667
+Ou você pode passar uma combinação
+de diferentes argumentos.
+
+00:00:14.701 --> 00:00:18.601
+Mas como as funções do JavaScript
+são de primeira classe,
+
+00:00:18.634 --> 00:00:21.133
+também podemos passar funções
+como argumentos
+
+00:00:21.167 --> 00:00:22.601
+para outras funções.
+
+00:00:22.634 --> 00:00:26.133
+Uma função passada
+a outra função como argumento
+
+00:00:26.167 --> 00:00:28.334
+é chamada
+de "função callback",
+
+00:00:28.367 --> 00:00:31.501
+e a função que a recebe
+pode executar a função callback
+
+00:00:31.534 --> 00:00:33.100
+após executar
+o seu próprio código.
+

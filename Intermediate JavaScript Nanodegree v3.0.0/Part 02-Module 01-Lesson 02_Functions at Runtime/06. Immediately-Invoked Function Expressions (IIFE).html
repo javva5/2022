@@ -1,0 +1,497 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Immediately-Invoked Function Expressions (IIFE)</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Functions at Runtime</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. First-Class Functions.html">02. First-Class Functions</a>
+    </li>
+    <li class="">
+      <a href="03. Callbacks.html">03. Callbacks</a>
+    </li>
+    <li class="">
+      <a href="04. Scope.html">04. Scope</a>
+    </li>
+    <li class="">
+      <a href="05. Closures.html">05. Closures</a>
+    </li>
+    <li class="">
+      <a href="06. Immediately-Invoked Function Expressions (IIFE).html">06. Immediately-Invoked Function Expressions (IIFE)</a>
+    </li>
+    <li class="">
+      <a href="07. Lesson Summary.html">07. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">06. Immediately-Invoked Function Expressions (IIFE)</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="function-declarations-vs-function-expressions">Function Declarations vs. Function Expressions</h2>
+<p>Before we jump into <strong>immediately-invoked function expressions</strong> (IIFE), let's make sure we're on the same page regarding the differences between function <em>declarations</em> and function <em>expressions</em>.</p>
+<p>A function <em>declaration</em> defines a function and does not require a variable to be assigned to it. It simply declares a function, and doesn't itself return a value. Here's an example:</p>
+<pre><code class="js language-js">function returnHello() {
+  return 'Hello!';
+}</code></pre>
+<p>On the other hand, a function <em>expression</em> does return a value. Function expressions can be anonymous or named, and are part of another expression's syntax. They're commonly assigned to variables, as well. Here's the same function as a function <em>expression</em>:</p>
+<pre><code class="js language-js">// anonymous
+const myFunction = function () {
+  return 'Hello!';
+};
+
+// named
+const myFunction = function returnHello() {
+  return 'Hello!';
+};</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L2 64 - IIFE Intro</p></h3>
+  <video controls>
+  <source src="06. L2 64 - IIFE Intro-jHrk_5erjxE.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="06. L2 64 - IIFE Intro-jHrk_5erjxE.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="06. L2 64 - IIFE Intro-jHrk_5erjxE.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="06. L2 64 - IIFE Intro-jHrk_5erjxE.pt-BR.vtt" label="pt-BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="immediately-invoked-function-expressions-structure-and-syntax">Immediately-Invoked Function Expressions: Structure and Syntax</h2>
+<p>An immediately-invoked function expression, or IIFE (pronounced <em>iffy</em>), is a function that is called immediately after it is defined. Check out the following example:</p>
+<pre><code class="js language-js">(function sayHi(){
+    alert('Hi there!');
+  }
+)();
+
+// alerts 'Hi there!'</code></pre>
+<p>The syntax might seem a bit odd, but all we're doing is wrapping a function in parentheses, then adding a pair of parentheses at the end of that to invoke it! </p>
+<h3 id="passing-arguments-into-iifes">Passing Arguments into IIFE's</h3>
+<p>Let's look into how we can go about passing arguments into IIFE's. Consider the following example of an <em>anonymous</em> function expression that takes in a single argument:</p>
+<pre><code class="js language-js">(function (name){
+    alert(`Hi, ${name}`);
+  }
+)('Andrew');
+
+// alerts 'Hi, Andrew'</code></pre>
+<p>The second pair of parentheses not only immediately executes the function preceding it -- it's also the place to put any arguments that the function may need! We pass in the string <code>'Andrew'</code>, which is stored in the function expression's <code>name</code> variable. It is then immediately invoked, alerting the message <code>'Hi, Andrew'</code> onto the screen.</p>
+<p>Here's another example of an IIFE, this time taking two arguments and returning their product:</p>
+<pre><code class="js language-js">(function (x, y){
+    console.log(x * y);
+  }
+)(2, 3);
+
+// 6</code></pre>
+<p>Again -- the arguments passed into the anonymous function (i.e., <code>2</code> and <code>3</code>) belong in trailing set of parentheses.</p>
+<h2 id="iifes-and-private-scope">IIFE's and Private Scope</h2>
+<p>One of the primary uses for IIFE's is to create <em>private scope</em> (i.e., private state). Recall that variables in JavaScript are traditionally scoped to a function. Knowing this, we can leverage the behavior of closures to protect variables or methods from being accessed! Consider the following example of a simple closure within an IIFE, referenced by <code>myFunction</code>:</p>
+<pre><code class="js language-js">const myFunction = (
+  function () {
+    const hi = 'Hi!';
+    return function () {
+      console.log(hi);
+    }
+  }
+)();</code></pre>
+<p>Let's break <code>myFunction</code> down and review the individual parts that make it up:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/l2-67-iife-with-a-closure.png" alt="_&#x60;myFunction&#x60; refers to an IIFE with a locally-defined variable, &#x60;hi&#x60;, and a returned function that closes over &#x60;hi&#x60; and prints its value to the console._" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em><code>myFunction</code> refers to an IIFE with a locally-defined variable, <code>hi</code>, and a returned function that closes over <code>hi</code> and prints its value to the console.</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>In the above image, an immediately-invoked function expression is used to immediately run a function. This function runs and returns an anonymous function that is stored in the <code>myFunction</code> variable.</p>
+<p>Note that the function that is being returned closes over (i.e., <em>captures</em>) the <code>hi</code> variable. This allows <code>myFunction</code> to maintain a private, mutable state that cannot be accessed outside the function! What's more: because the function expressed is called immediately, the IIFE wraps up the code nicely so that we don't pollute the global scope. </p>
+<p>If any of this sounds familiar -- it's because IIFE's are <em>very</em> closely related to everything you've learned about scope and closures!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is true about immediately-invoked function expressions? Select all that apply:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1512688681809" name="474082" id="a1512688681809">
+      <label for="a1512688681809"><p>IIFE's can be used to create private scope</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512688738325" name="474082" id="a1512688738325">
+      <label for="a1512688738325"><p>IIFE's are generally written without parentheses</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512688738893" name="474082" id="a1512688738893">
+      <label for="a1512688738893"><p>IIFE's are very closely associated with scope and closures</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512688739301" name="474082" id="a1512688739301">
+      <label for="a1512688739301"><p>There is an alternative syntax for writing an IIFE</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>IIFE's can be used to create private scope</li>
+      <li>IIFE's are very closely associated with scope and closures</li>
+      <li>There is an alternative syntax for writing an IIFE</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="💡-alternative-syntax-for-iifes-💡">💡 Alternative Syntax for IIFE's 💡</h2>
+</blockquote>
+<blockquote>
+  <p>Recall the example from the beginning of this section:</p>
+</blockquote>
+<blockquote>
+<pre><code class="js language-js">(function sayHi(){
+   alert('Hi there!');
+ }
+)();
+
+// alerts 'Hi there!'</code></pre>
+</blockquote>
+<blockquote>
+  <p>This works great, but there's also another way we can write this to achieve the same results! The first set of parentheses can wrap around the <em>entire</em> expression. That is, we can move the first closing parenthesis to the very end:</p>
+</blockquote>
+<blockquote>
+<pre><code class="js language-js">(function sayHi(){
+   alert('Hi there!');
+}());
+
+// alerts 'Hi there!'</code></pre>
+</blockquote>
+<blockquote>
+  <p>Again, using either approach will still produce the same result: alerting <code>'Hi there!'</code> in the browser.</p>
+</blockquote>
+<blockquote>
+  <p>Now, when would you choose one form over the other? Much of this is a stylistic choice; there is no "correct" way of auto-executing an anonymous function. Both are valid approaches for achieving the same result, and the JavaScript engine will still parse them each as a function expression (i.e., rather than as a function <em>declaration</em>). </p>
+</blockquote>
+<blockquote>
+  <p>Among developers, Douglas Crockford has mentioned that wrapping the entire unit in parentheses (as presented directly above) helps readers understand that what they're seeing is indeed an expression. Feel free to check out his chat <a href="https://www.youtube.com/watch?feature=player_detailpage&v=taaEzHI9xyY#t=2020s" rel="noopener noreferrer" target="_blank">here</a>. </p>
+</blockquote>
+<blockquote>
+  <p>All in all, however you decide to form your immediately-invoked function expressions is up to you!</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="iifes-private-scope-and-event-handling">IIFE's, Private Scope, and Event Handling</h2>
+<p>Let's check out another example of an immediately-invoked function expression -- this time in the context of handling an event. Say that we want to create a button on a page that alerts the user on every other click. One way to begin doing this would be to keep track of the number of times that the button was clicked. But how should we maintain this data? </p>
+<p>We <em>could</em> keep track of the count with a variable that we declare in the global scope (this would make sense if other parts of the application need access to the count data). However, an even better approach would be to enclose this data <em>in event handler itself</em>! </p>
+<p>For one, this approach prevents us from polluting the global with extra variables (and potentially variable name collisions). What's more: if we use an IIFE, we can leverage a <em>closure</em> to protect the <code>count</code> variable from being accessed externally! This prevents any accidental mutations or unwanted side-effects from inadvertently altering the count.</p>
+<p>To begin, let's first create an HTML file containing a single button:</p>
+<pre><code class="html language-html">&lt;!-- button.html --&gt;
+
+&lt;html&gt;
+
+  &lt;body&gt;
+
+     &lt;button id='button'&gt;Click me!&lt;/button&gt;
+
+     &lt;script src='button.js'&gt;&lt;/script&gt;
+
+  &lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+<p>No surprises here -- just a <code>&lt;button&gt;</code> tag with ID of <code>'button'</code>. We also reference a <code>button.js</code> file that we're now going to build. Within that file, let's retrieve a reference to that element via its ID, then save that reference to a variable, <code>button</code>:</p>
+<pre><code class="js language-js">// button.js
+
+const button = document.getElementById('button');</code></pre>
+<p>Next, we'll add an event listener to <code>button</code>, and listen for a <code>'click'</code> event. Then, we'll pass in an IIFE as the second argument:</p>
+<pre><code class="js language-js">// button.js
+
+button.addEventListener('click', (function() {
+  let count = 0;
+
+  return function() {
+    count += 1;
+
+    if (count === 2) {
+      alert('This alert appears every other press!');
+      count = 0;
+    }
+  };
+})());</code></pre>
+<p>Quite a bit is going on in the IIFE, so let's break it down! </p>
+<p>First, we declare a local variable, <code>count</code>, which is initially set to <code>0</code>. We then return a function from <em>that</em> function. The returned function increments <code>count</code>, but alerts the user and resets the count back to <code>0</code> if the count reaches <code>2</code>. </p>
+<p>What is important to note is that the returned function <em>closes over</em> the <code>count</code> variable. That is, because a function maintains a reference to its parent's scope, <code>count</code> is available for the returned function to use! As a result, we immediately invoke a function that returns that function. And since the returned function has access to the internal variable, <code>count</code>, a <strong>private scope</strong> is created -- effectively protecting the data! </p>
+<p>Containing <code>count</code> in a closure allows us to retain the data from each click. Now, let's see this all in action!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L2 - 70 - IIFE In Events</p></h3>
+  <video controls>
+  <source src="06. L2 - 70 - IIFE In Events-lowdzRLtNKg.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="06. L2 - 70 - IIFE In Events-lowdzRLtNKg.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="06. L2 - 70 - IIFE In Events-lowdzRLtNKg.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="06. L2 - 70 - IIFE In Events-lowdzRLtNKg.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="06. L2 - 70 - IIFE In Events-lowdzRLtNKg.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Here's the code from the preceding video:</p>
+<ul>
+<li><a href="https://github.com/udacity/OOJS-screencasts/blob/master/L2-functions-at-runtime/button.html" rel="noopener noreferrer" target="_blank">button.html</a></li>
+<li><a href="https://github.com/udacity/OOJS-screencasts/blob/master/L2-functions-at-runtime/button.js" rel="noopener noreferrer" target="_blank">button.js</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>The following immediately-invoked function expression is run in the browser:</p>
+<pre><code class="js language-js">(function(n){
+  delete n;
+  return n;
+})(2);</code></pre>
+<p>What is the return value?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1512688825953" name="474083" id="a1512688825953">
+        <label for="a1512688825953"><p><code>undefined</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512688835430" name="474083" id="a1512688835430">
+        <label for="a1512688835430"><p><code>null</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512688835965" name="474083" id="a1512688835965">
+        <label for="a1512688835965"><p><code>NaN</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512688836541" name="474083" id="a1512688836541">
+        <label for="a1512688836541"><p><code>2</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512688843390" name="474083" id="a1512688843390">
+        <label for="a1512688843390"><p>The console will throw an error.</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    `2`
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="benefits-of-immediately-invoked-function-expressions">Benefits of Immediately-Invoked Function Expressions</h2>
+<p>We've seen how using an immediately-invoked function expression creates a private scope that protects variables or methods from being accessed. IIFE's ultimately use the returned functions to access private data within the closure. This works out very well: while these returned functions are publicly-accessible, they still maintain privacy for the variables defined within them!</p>
+<p>Another great opportunity to use an IFFE is when you want to execute some code without creating extra global variables. However, note that an IIFE is only intended to be invoked once, to create a unique execution context. If you have some code that is expected to be re-used (e.g., a function meant to be executed more than once in the application), declaring the function and then invoking it might be a better option. </p>
+<p>All in all, if you simply have a one-time task (e.g., initializing an application), an IIFE is a great way to get something done without polluting your the global environment with extra variables. Cleaning up the global namespace decreases the chance of collisions with duplicate variable names, after all.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>An <strong>immediately-invoked function expression</strong> (IIFE) is a function that is called immediately after it is defined. Utilizing an IIFE alongside closures allows for a <strong>private scope</strong>, which maintains privacy for variables defined within them. And since less variables are created, an IIFE will help to minimize pollution of the global environment, hindering the chances of variable name collisions.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/" rel="noopener noreferrer" target="_blank">Function Declarations vs. Function Expressions</a></li>
+<li><a href="http://adripofjavascript.com/blog/drips/an-introduction-to-iffes-immediately-invoked-function-expressions.html" rel="noopener noreferrer" target="_blank">An Introduction to IIFEs - Immediately Invoked Function Expressions</a> on A Drip of JavaScript</li>
+<li><a href="http://benalman.com/news/2010/11/immediately-invoked-function-expression/" rel="noopener noreferrer" target="_blank">Immediately-Invoked Function Expression (IIFE)</a> by Ben Alman</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="07. Lesson Summary.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. Immediately-Invoked Function Expressions (IIFE)')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

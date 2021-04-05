@@ -1,0 +1,187 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.730
+Here we have an array called favoriteFlavors
+
+00:00:02.730 --> 00:00:04.990
+with ice cream flavors that I think are pretty awesome.
+
+00:00:04.990 --> 00:00:07.940
+We got cookie dough, salted caramel, and toffee.
+
+00:00:07.940 --> 00:00:09.810
+Let's go ahead and use the forEach loop and loop through
+
+00:00:09.810 --> 00:00:11.883
+every single flavor in this array.
+
+00:00:11.882 --> 00:00:16.699
+So first, I'm going to call forEach on favoriteFlavors.
+
+00:00:20.170 --> 00:00:24.785
+ForEach takes in a callback as an argument.
+
+00:00:24.785 --> 00:00:27.515
+So what you want to do at this point is pass in forEach,
+
+00:00:27.515 --> 00:00:33.020
+a function that's going to be called on every single flavor in that array.
+
+00:00:33.560 --> 00:00:39.609
+Great. So what forEach is going to do is iterate through this entire favoriteFlavors
+
+00:00:39.609 --> 00:00:44.000
+array and call this function on every single flavor in that array.
+
+00:00:44.000 --> 00:00:48.289
+So for the first one you should see I enjoy cookie dough, ice cream.
+
+00:00:48.289 --> 00:00:51.339
+Then let's move on to the next element, salted caramel.
+
+00:00:51.340 --> 00:00:53.545
+And you should see I enjoy salted caramel,
+
+00:00:53.545 --> 00:00:56.410
+ice cream, and also do the same thing for toffee as well.
+
+00:00:56.409 --> 00:01:01.109
+So let's see it in action. Cool. And that's exactly what happened.
+
+00:01:01.109 --> 00:01:04.263
+It moves through cookie dough first and then forms a sentence.
+
+00:01:04.263 --> 00:01:06.100
+And then it moves on to the next element in this array,
+
+00:01:06.099 --> 00:01:08.109
+the next flavor in this array, salted caramel,
+
+00:01:08.109 --> 00:01:09.969
+and forms this sentence.
+
+00:01:09.969 --> 00:01:11.245
+And then when it hits toffee,
+
+00:01:11.245 --> 00:01:13.715
+it does the same for that as well.
+
+00:01:13.715 --> 00:01:15.555
+So all that happened pretty fast.
+
+00:01:15.555 --> 00:01:19.390
+What we can do is just put debuggier right there and see everything step by step.
+
+00:01:19.390 --> 00:01:21.969
+Kind of see how far each iterates through the entire
+
+00:01:21.969 --> 00:01:26.489
+flavorFlavors array and forms every message one by one.
+
+00:01:26.489 --> 00:01:29.920
+So first, what I want to do is reload so I get a little bit more space,
+
+00:01:29.920 --> 00:01:40.820
+then I'm going to add debugger into the function that we pass into forEach.
+
+00:01:40.819 --> 00:01:42.689
+So now that we have the debugger in there,
+
+00:01:42.689 --> 00:01:46.420
+let's run this function step by step and see what's going on.
+
+00:01:46.420 --> 00:01:48.570
+So you can see right now we're in the function.
+
+00:01:48.569 --> 00:01:50.639
+We're on this line debugger and
+
+00:01:50.640 --> 00:01:54.314
+the current flavor that we're going through is cookie dough,
+
+00:01:54.314 --> 00:01:57.989
+which should be the first element in the array that we have over here. So great.
+
+00:01:57.989 --> 00:02:00.000
+We're starting at the very beginning. Let's go ahead
+
+00:02:00.000 --> 00:02:04.155
+and step through this one by one and see what happens.
+
+00:02:04.155 --> 00:02:08.069
+So right now we're on the second line in this function on
+
+00:02:08.069 --> 00:02:11.358
+the console log portion and the flavor is still cookie dough.
+
+00:02:11.359 --> 00:02:14.525
+Let's step through one more time.
+
+00:02:14.525 --> 00:02:18.349
+And right now we're over here and I enjoy cookie dough,
+
+00:02:18.349 --> 00:02:20.042
+ice cream printed to the console.
+
+00:02:20.042 --> 00:02:22.719
+Great. Let's move onto the next one.
+
+00:02:22.719 --> 00:02:25.649
+If we press it again,
+
+00:02:25.649 --> 00:02:30.900
+we're now on salted caramel which is actually the second element in this array.
+
+00:02:30.900 --> 00:02:34.015
+So it looks like it's iterating through this favoriteFlavors array in order.
+
+00:02:34.014 --> 00:02:39.000
+Check on the next step. No surprises.
+
+00:02:39.000 --> 00:02:40.199
+We're still on salted caramel.
+
+00:02:40.199 --> 00:02:47.129
+And this line has yet to be run [inaudible] You can see that this message,
+
+00:02:47.129 --> 00:02:50.525
+I enjoy salted caramel ice cream is printed to the screen.
+
+00:02:50.525 --> 00:02:56.432
+Let's move on to the final one. Now we're like on the last element in this array,
+
+00:02:56.432 --> 00:02:59.004
+the last flavor, which is toffee.
+
+00:02:59.004 --> 00:03:00.894
+And if we play it again,
+
+00:03:00.895 --> 00:03:05.125
+we're on this line and once that line executes,
+
+00:03:05.125 --> 00:03:09.282
+we see I enjoyed toffee ice cream printed out to the console.
+
+00:03:09.282 --> 00:03:12.977
+Cool. Let's run all the way through.
+
+00:03:12.978 --> 00:03:15.540
+So there we have it. Let's recap what we did here.
+
+00:03:15.539 --> 00:03:16.939
+We called the forEach,
+
+00:03:16.939 --> 00:03:20.472
+on the favoriteFlavors array which if I scroll up a little bit,
+
+00:03:20.473 --> 00:03:21.968
+it's just an array of different strings cookie dough,
+
+00:03:21.967 --> 00:03:23.574
+salted caramel, and toffee.
+
+00:03:23.574 --> 00:03:29.000
+And what we did for every single element in this array was execute this function once.
+

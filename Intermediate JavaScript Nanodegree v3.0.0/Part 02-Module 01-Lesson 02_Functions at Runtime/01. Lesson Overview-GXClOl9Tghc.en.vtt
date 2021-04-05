@@ -1,0 +1,55 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.740
+What's this code? If you said object, you'd be right.
+
+00:00:04.740 --> 00:00:08.070
+Wait, what object? That's right.
+
+00:00:08.070 --> 00:00:10.380
+You've probably learned that this is a "function. "
+
+00:00:10.380 --> 00:00:13.050
+Yeah, that could be true.
+
+00:00:13.050 --> 00:00:16.644
+So, is it a function or is it an object?
+
+00:00:16.644 --> 00:00:19.804
+That's for me to know and you to find out.
+
+00:00:19.804 --> 00:00:24.489
+In this lesson, you'll learn about this mysterious thing and discover if it's an object,
+
+00:00:24.489 --> 00:00:27.000
+a function, or a function object.
+
+00:00:27.000 --> 00:00:29.460
+In the process, you'll learn to write cleaner,
+
+00:00:29.460 --> 00:00:31.859
+more efficient code and also understand how
+
+00:00:31.859 --> 00:00:35.070
+powerful Javascript can be in the applications you build.
+
+00:00:35.070 --> 00:00:38.579
+You'll learn how to pass functions as arguments to other functions,
+
+00:00:38.579 --> 00:00:42.445
+how to identify when and how scope is created.
+
+00:00:42.445 --> 00:00:44.789
+You'll also learn how functions can keep track of
+
+00:00:44.789 --> 00:00:47.939
+the variables around them through a concept called closure.
+
+00:00:47.939 --> 00:00:50.609
+And finally, you'll use functions that are immediately
+
+00:00:50.609 --> 00:00:54.000
+invoked after they're declared to manage private data.
+

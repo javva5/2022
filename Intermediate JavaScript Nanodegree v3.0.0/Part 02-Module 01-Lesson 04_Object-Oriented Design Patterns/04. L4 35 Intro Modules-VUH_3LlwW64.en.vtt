@@ -1,0 +1,19 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.040
+Rather than using an object literal or simple function to create privacy,
+
+00:00:04.040 --> 00:00:10.125
+we can leverage a larger unit of organization called a module to achieve true privacy.
+
+00:00:10.125 --> 00:00:13.955
+This has become a common technique and is known as the module pattern.
+
+00:00:13.955 --> 00:00:16.920
+The module pattern leverages what we already know about scope and
+
+00:00:16.920 --> 00:00:20.320
+closures to protect variables from external access.
+

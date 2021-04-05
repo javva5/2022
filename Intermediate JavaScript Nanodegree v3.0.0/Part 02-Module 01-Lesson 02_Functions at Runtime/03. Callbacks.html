@@ -1,0 +1,614 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Callbacks</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Functions at Runtime</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. First-Class Functions.html">02. First-Class Functions</a>
+    </li>
+    <li class="">
+      <a href="03. Callbacks.html">03. Callbacks</a>
+    </li>
+    <li class="">
+      <a href="04. Scope.html">04. Scope</a>
+    </li>
+    <li class="">
+      <a href="05. Closures.html">05. Closures</a>
+    </li>
+    <li class="">
+      <a href="06. Immediately-Invoked Function Expressions (IIFE).html">06. Immediately-Invoked Function Expressions (IIFE)</a>
+    </li>
+    <li class="">
+      <a href="07. Lesson Summary.html">07. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. Callbacks</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>OOJS L2 13 - Callbacks V1</p></h3>
+  <video controls>
+  <source src="03. OOJS L2 13 - Callbacks V1-pJfiPKKiu9Q.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="03. OOJS L2 13 - Callbacks V1-pJfiPKKiu9Q.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="03. OOJS L2 13 - Callbacks V1-pJfiPKKiu9Q.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="03. OOJS L2 13 - Callbacks V1-pJfiPKKiu9Q.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="03. OOJS L2 13 - Callbacks V1-pJfiPKKiu9Q.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="callback-functions">Callback Functions</h2>
+<p>Recall that JavaScript functions are first-class functions. We can do with functions just about everything we can do with other values -- including passing them into <em>other</em> functions! A function that takes other functions as arguments (and/or <em>returns</em> a function, as we learned in the previous section) is known as a <strong>higher-order function</strong>. A function that is passed as an argument into another function is called a <strong>callback</strong> function. </p>
+<p>We'll be focusing on callbacks in this section. Callback functions are great because they can delegate calling functions to other functions. They allow you to build your applications with <em>composition</em>, leading to cleaner and more efficient code.</p>
+<p>Let's jump right in!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L2 - 15 - Callback Demo</p></h3>
+  <video controls>
+  <source src="03. L2 - 15 - Callback Demo-nXPC4YTKdZg.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="03. L2 - 15 - Callback Demo-nXPC4YTKdZg.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="03. L2 - 15 - Callback Demo-nXPC4YTKdZg.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="03. L2 - 15 - Callback Demo-nXPC4YTKdZg.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="03. L2 - 15 - Callback Demo-nXPC4YTKdZg.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/OOJS-screencasts/blob/master/L2-functions-at-runtime/16-callback-demo.js" rel="noopener noreferrer" target="_blank">Here's the code from the preceding video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is true about callbacks? Select all that apply:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1512507127106" name="469039" id="a1512507127106">
+      <label for="a1512507127106"><p>A function that is passed as an argument to another function is called a callback.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512507205113" name="469039" id="a1512507205113">
+      <label for="a1512507205113"><p>A function that takes another function in as an argument is a higher-order function.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512507205945" name="469039" id="a1512507205945">
+      <label for="a1512507205945"><p>Leveraging callbacks is possible because JavaScript functions are <em>first-class</em> functions.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512507213025" name="469039" id="a1512507213025">
+      <label for="a1512507213025"><p>Callback functions do not work in the browser.</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>A function that is passed as an argument to another function is called a callback.</li>
+      <li>A function that takes another function in as an argument is a higher-order function.</li>
+      <li>Leveraging callbacks is possible because JavaScript functions are _first-class_ functions.</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Consider the following two functions:</p>
+<pre><code class="js language-js">function each(array, callback) {
+  for (let i = 0; i &lt; array.length; i++) {
+    if (callback(array[i])) {
+      console.log(array[i]);
+    }
+  }
+}</code></pre>
+<pre><code class="js language-js">function isPositive(n) {
+  return n &gt; 0;
+};</code></pre>
+<p>The following is then executed:</p>
+<pre><code>each([-2, 7, 11, -4, -10], isPositive);</code></pre>
+<p>What is outputted to the console?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1512507380285" name="469053" id="a1512507380285">
+        <label for="a1512507380285"><p><code>-2</code>, <code>-4</code>, <code>-10</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512507425627" name="469053" id="a1512507425627">
+        <label for="a1512507425627"><p><code>-7</code>, <code>-11</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512507426139" name="469053" id="a1512507426139">
+        <label for="a1512507426139"><p><code>-2</code>, <code>7</code>, <code>11</code>, <code>-4</code>, <code>-10</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512507426643" name="469053" id="a1512507426643">
+        <label for="a1512507426643"><p><code>7</code>, <code>11</code></p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    `7`, `11`
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="array-methods">Array Methods</h2>
+<p>Where have you probably seen callback functions used? In array methods! Functions are commonly passed into array methods and called on elements <em>within</em> an array (i.e., the array on which the method was called). </p>
+<p>Let's check out a couple in detail:</p>
+<ul>
+<li><code>forEach()</code></li>
+<li><code>map()</code></li>
+<li><code>filter()</code></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="foreach">forEach()</h2>
+<p>Array's <code>forEach()</code> method takes in a callback function and invokes that function <em>for each</em> element in the array. In other words, <code>forEach()</code> allows you to iterate (i.e., loop) through an array, similar to using a <code>for</code> loop. Check out its signature:</p>
+<pre><code class="js language-js">array.forEach(function callback(currentValue, index, array) {
+    // function code here
+});</code></pre>
+<p>The callback function itself receives the arguments: the current array element, its index, and the entire array itself. </p>
+<p>Let's say we have a simple function, <code>logIfOdd()</code>, that takes in a single number and logs it to the console if that number is an odd number:</p>
+<pre><code class="js language-js">function logIfOdd(n) {
+  if (n % 2 !== 0) {
+    console.log(n);
+  }
+}
+
+logIfOdd(2);
+// (nothing is logged)
+
+logIfOdd(3);
+// 3</code></pre>
+<p>When <code>2</code> is passed into the function, <code>logIfOdd()</code> does not output anything to the console because <code>2</code> is an even number. However, when <code>3</code> is passed into the function, <code>3</code> <em>is</em> logged to the console because it's an odd number. </p>
+<p>The <code>logIfOdd()</code> function works great for individual numbers, but what if we want to check <em>an entire array</em> and log only the odd numbers within it?</p>
+<pre><code class="js language-js">[1, 5, 2, 4, 6, 3]</code></pre>
+<p>We can iterate through the above array with <code>forEach()</code> and simply pass it the <code>logIfOdd()</code> function!</p>
+<pre><code class="js language-js">[1, 5, 2, 4, 6, 3].forEach(function logIfOdd(n) {
+  if (n % 2 !== 0) {
+    console.log(n);
+  }
+});
+
+// 1
+// 5
+// 3</code></pre>
+<p>In the above array, only the numbers that are odd numbers are printed to the console. Let's recap what happened: <code>logIfOdd()</code> is a function and is passed in as an argument to <code>forEach()</code>. <code>forEach()</code> then invokes <code>logIfOdd()</code> for each element in the array (i.e., <code>[1, 5, 2, 4, 6, 3]</code>), which outputs <code>1</code>, <code>5</code>, and <code>3</code>.</p>
+<p>Keep in mind that it's quite common to pass an <em>anonymous function</em> as an argument in <code>forEach()</code> as well:</p>
+<pre><code class="js language-js">[1, 5, 2, 4, 6, 3].forEach(function (n) {
+  if (n % 2 !== 0) {
+    console.log(n);
+  }
+});
+
+// 1
+// 5
+// 3</code></pre>
+<p>Alternatively, it's possible to simply pass in just the name of the function as well (i.e., assuming the function was already defined, of course).</p>
+<pre><code class="js language-js">[1, 5, 2, 4, 6, 3].forEach(logIfOdd);
+
+// 1
+// 5
+// 3</code></pre>
+<p>The three different ways shown each produce the same output (i.e., logging <code>1</code>, <code>5</code>, and <code>3</code> to the console). </p>
+<p>Now, let's see <code>forEach()</code> in action!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L2 - 21 - ForEach Demo</p></h3>
+  <video controls>
+  <source src="03. L2 - 21 - ForEach Demo-g99g07TZYvo.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="03. L2 - 21 - ForEach Demo-g99g07TZYvo.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="03. L2 - 21 - ForEach Demo-g99g07TZYvo.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="03. L2 - 21 - ForEach Demo-g99g07TZYvo.pt-BR.vtt" label="pt-BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/OOJS-screencasts/blob/master/L2-functions-at-runtime/22-forEach-demo.js" rel="noopener noreferrer" target="_blank">Here's the code from the preceding video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which of the following are valid ways to iterate through an array and log each value to the console?</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1512508167422" name="469081" id="a1512508167422">
+      <label for="a1512508167422"><p>[1, 2, 3, 4].forEach(function(num) { <br>   &nbsp;&nbsp; console.log(num); <br> });</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512508861818" name="469081" id="a1512508861818">
+      <label for="a1512508861818"><p>[1, 2, 3, 4].forEach(function() {  <br>   &nbsp;&nbsp; console.log(num);<br> });</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512508862690" name="469081" id="a1512508862690">
+      <label for="a1512508862690"><p>function logNum (num) {  <br>   &nbsp;&nbsp; console.log(num);<br> }  <br> <br> [1, 2, 3, 4].forEach(logNum);</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512508863345" name="469081" id="a1512508863345">
+      <label for="a1512508863345"><p>[1, 2, 3, 4].forEach(console.log);</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>[1, 2, 3, 4].forEach(function(num) { <br>   &nbsp;&nbsp; console.log(num); <br> });</li>
+      <li>function logNum (num) {  <br>   &nbsp;&nbsp; console.log(num);<br> }  <br> <br> [1, 2, 3, 4].forEach(logNum);</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="map">map()</h2>
+<p>Array's <code>map()</code> method is similar to <code>forEach()</code> in that it invokes a callback function for each element in an array. However, <code>map()</code> returns a <em>new array</em> based on what's returned from the callback function. Check out the following:</p>
+<pre><code class="js language-js">const names = ['David', 'Richard', 'Veronika'];
+
+const nameLengths = names.map(function(name) {
+  return name.length;
+});</code></pre>
+<p>Let's go over what's happening here. The <code>map()</code> method works on arrays, so we have to have an array to start with:</p>
+<pre><code class="js language-js">const names = ['David', 'Richard', 'Veronika'];</code></pre>
+<p>We call <code>map()</code> on the <code>names</code> array and pass it an anonymous function as an argument:</p>
+<pre><code class="js language-js">names.map(function(name) {
+  return name.length;
+});</code></pre>
+<p>The function that's passed to <code>map()</code> gets called <em>for each item</em> in the <code>names</code> array! The function receives the first name in the array, stores it in the <code>name</code> variable and returns its length. Then it does that again for the remaining two names. </p>
+<p>Remember that the key difference between <code>forEach()</code> and <code>map()</code> is that <code>forEach()</code> doesn't return anything, while <code>map()</code> returns a new array with the values that are returned from the function:</p>
+<pre><code class="js language-js">const nameLengths = names.map(function(name) {
+  return name.length;
+});</code></pre>
+<p>So <code>nameLengths</code> will be a <em>new</em> array: <code>[5, 7, 8]</code>. Again, it is important to understand that <strong>the <code>map()</code> method returns a new array; it does not modify the original array</strong>.</p>
+<p>This was just a brief overview of how the <code>map()</code> method works. For a deeper dive, check out <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map" rel="noopener noreferrer" target="_blank"><code>map()</code> on MDN</a>.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#469101-StudentMain-js" class="nav-item nav-link  active show" id="tab-469101-StudentMain-js" data-toggle="tab" role="tab"
+      aria-controls="469101-StudentMain-js" aria-selected="true">StudentMain.js</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="469101-StudentMain-js" aria-labelledby="tab-469101-StudentMain-js" role="tabpanel">
+      <pre><code></code>/* Using map()
+ *
+ * Using the musicData array and map():
+ *   - Return a string for each item in the array in the following format:
+ *     &lt;album-name&gt; by &lt;artist&gt; sold &lt;sales&gt; copies
+ *   - Store the returned data in a new albumSalesStrings variable
+ *
+ * Note:
+ *   - Do not delete the musicData variable
+ *   - Do not alter any of the musicData content
+ *   - Do not format the sales number; leave it as a long string of digits
+ */
+
+const musicData &#x3D; [
+    { artist: &#x27;Adele&#x27;, name: &#x27;25&#x27;, sales: 1731000 },
+    { artist: &#x27;Drake&#x27;, name: &#x27;Views&#x27;, sales: 1608000 },
+    { artist: &#x27;Beyonce&#x27;, name: &#x27;Lemonade&#x27;, sales: 1554000 },
+    { artist: &#x27;Chris Stapleton&#x27;, name: &#x27;Traveller&#x27;, sales: 1085000 },
+    { artist: &#x27;Pentatonix&#x27;, name: &#x27;A Pentatonix Christmas&#x27;, sales: 904000 },
+    { artist: &#x27;Original Broadway Cast Recording&#x27;, 
+      name: &#x27;Hamilton: An American Musical&#x27;, sales: 820000 },
+    { artist: &#x27;Twenty One Pilots&#x27;, name: &#x27;Blurryface&#x27;, sales: 738000 },
+    { artist: &#x27;Prince&#x27;, name: &#x27;The Very Best of Prince&#x27;, sales: 668000 },
+    { artist: &#x27;Rihanna&#x27;, name: &#x27;Anti&#x27;, sales: 603000 },
+    { artist: &#x27;Justin Bieber&#x27;, name: &#x27;Purpose&#x27;, sales: 554000 }
+];
+
+const albumSalesStrings &#x3D; &#x27;Replace this message with your code!&#x27;;
+
+console.log(albumSalesStrings);
+</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="filter">filter()</h2>
+<p>Array's <code>filter()</code> method is similar to the <code>map()</code> method:</p>
+<ul>
+<li>It is called on an array</li>
+<li>It takes a function as an argument</li>
+<li>It returns a new array</li>
+</ul>
+<p>The difference is that the function passed to <code>filter()</code> is used as a test, and only items in the array that pass the test are included in the new array. Consider the following example:</p>
+<pre><code class="js language-js">const names = ['David', 'Richard', 'Veronika'];
+
+const shortNames = names.filter(function(name) {
+  return name.length &lt; 6;
+});</code></pre>
+<p>Just as before, let's break it down a bit! We have the starting array:</p>
+<pre><code class="js language-js">const names = ['David', 'Richard', 'Veronika'];</code></pre>
+<p>We call <code>filter()</code> on the <code>names</code> array and pass it a function as an argument:</p>
+<pre><code class="js language-js">names.filter(function(name) {
+  return name.length &lt; 6;
+});</code></pre>
+<p>Again, just like with <code>map()</code>, the function that's passed to <code>filter()</code> gets called <em>for each item</em> in the <code>names</code> array. The first item (i.e., <code>'David'</code>) is stored in the <code>name</code> variable. Then the test is performed -- and this is what's doing the actual filtering. First, it checks the length of the name. If it's <code>6</code> or greater, then it's skipped (and <em>not</em> included in the new array!). But, if the length of the name is less than <code>6</code>, then <code>name.length &lt; 6</code> returns <code>true</code> and the name <em>is</em> included in the new array!</p>
+<p>And lastly, just like with <code>map()</code>, the <code>filter()</code> method returns a <em>new</em> array instead of modifying the original array:</p>
+<pre><code class="js language-js">const shortNames = names.filter(function(name) {
+  return name.length &lt; 6;
+});
+
+console.log(shortNames);
+// ['David']</code></pre>
+<p>Above, the value of <code>shortNames</code> is the new array: <code>['David']</code>. Notice that it only has one name in it, because both <code>'Richard'</code> and <code>'Veronika'</code> are <code>6</code> characters or longer, and were filtered out.</p>
+<p>This was just a brief overview of how the <code>filter()</code> method works. For a deeper dive, check out <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" rel="noopener noreferrer" target="_blank"><code>filter()</code> on MDN</a>. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#469106-StudentMain-js" class="nav-item nav-link  active show" id="tab-469106-StudentMain-js" data-toggle="tab" role="tab"
+      aria-controls="469106-StudentMain-js" aria-selected="true">StudentMain.js</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="469106-StudentMain-js" aria-labelledby="tab-469106-StudentMain-js" role="tabpanel">
+      <pre><code></code>/* Using filter()
+ *
+ * Using the musicData array and filter():
+ *   - Return only album objects where the album&#x27;s name is
+ *     10 characters long, 25 characters long, or anywhere in between
+ *   - Store the returned data in a new &#x60;results&#x60; variable
+ *
+ * Note:
+ *   - Do not delete the musicData variable
+ *   - Do not alter any of the musicData content
+ */
+
+const musicData &#x3D; [
+    { artist: &#x27;Adele&#x27;, name: &#x27;25&#x27;, sales: 1731000 },
+    { artist: &#x27;Drake&#x27;, name: &#x27;Views&#x27;, sales: 1608000 },
+    { artist: &#x27;Beyonce&#x27;, name: &#x27;Lemonade&#x27;, sales: 1554000 },
+    { artist: &#x27;Chris Stapleton&#x27;, name: &#x27;Traveller&#x27;, sales: 1085000 },
+    { artist: &#x27;Pentatonix&#x27;, name: &#x27;A Pentatonix Christmas&#x27;, sales: 904000 },
+    { artist: &#x27;Original Broadway Cast Recording&#x27;, 
+      name: &#x27;Hamilton: An American Musical&#x27;, sales: 820000 },
+    { artist: &#x27;Twenty One Pilots&#x27;, name: &#x27;Blurryface&#x27;, sales: 738000 },
+    { artist: &#x27;Prince&#x27;, name: &#x27;The Very Best of Prince&#x27;, sales: 668000 },
+    { artist: &#x27;Rihanna&#x27;, name: &#x27;Anti&#x27;, sales: 603000 },
+    { artist: &#x27;Justin Bieber&#x27;, name: &#x27;Purpose&#x27;, sales: 554000 }
+];
+
+const results &#x3D; &#x27;Replace this message with your code!&#x27;;
+
+console.log(results);</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>JavaScript functions can take in a variety of different arguments, including strings, numbers, arrays, and objects. Since functions are first-class functions, functions can <em>also</em> be passed as arguments to a given function. Functions that take in other functions as arguments are called <strong>higher-order functions</strong>. Functions that are passed as arguments to other functions are called <strong>callback</strong> functions.</p>
+<p>Callbacks allow you to pass functions without needing to name them (i.e., anonymous functions), which leads to less variables floating around. They also allow you to delegate calling functions to <em>other</em> functions. Array methods, such as <code>forEach()</code>, <code>map()</code>, and <code>filter()</code>, take advantage of callbacks to execute functions onto a given array's elements. Feel free to check out the list of other array methods listed below.</p>
+<p>Now that we know that functions in JavaScript can have access to many different types of variables in its list of arguments -- <em>what else</em> is available for functions to use? That is, what is included in the <strong>scope</strong> of a function? Let's find out in the next section!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype" rel="noopener noreferrer" target="_blank">Array Methods</a> on MDN</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. Scope.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. Callbacks')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

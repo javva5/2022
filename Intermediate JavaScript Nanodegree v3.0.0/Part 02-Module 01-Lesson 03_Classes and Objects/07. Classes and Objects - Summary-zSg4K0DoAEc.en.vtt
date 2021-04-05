@@ -1,0 +1,22 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.855
+Great job. This section was all about classes and objects.
+
+00:00:04.855 --> 00:00:09.350
+We started off by building a constructor function to instantiate new objects.
+
+00:00:09.349 --> 00:00:12.925
+Then, we learned about function setting a value for the "this" keyword
+
+00:00:12.925 --> 00:00:17.644
+and how "this" can mean something different depending on how the function is invoked.
+
+00:00:17.644 --> 00:00:21.984
+We also added functionality to objects by adding methods to the object's prototype.
+
+00:00:21.984 --> 00:00:27.000
+And finally, we implemented prototypal inheritance to extend objects.
+

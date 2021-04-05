@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.585
+Here we have a function called "invokeTwice".
+
+00:00:03.585 --> 00:00:08.550
+All it does is take in a single callback function over here and calls it two times.
+
+00:00:08.550 --> 00:00:12.780
+Additionally, we also have a dog object. It's pretty simple.
+
+00:00:12.779 --> 00:00:14.039
+It just has two properties,
+
+00:00:14.039 --> 00:00:16.140
+"age" and "growOneYear", which is
+
+00:00:16.140 --> 00:00:19.240
+just the method that increments the age property by one.
+
+00:00:19.239 --> 00:00:24.320
+Let's go ahead and try it out. Let's invoke "growOneYear" on dog.
+
+00:00:24.579 --> 00:00:28.859
+Now, let's check the dog's age property,
+
+00:00:28.859 --> 00:00:31.875
+and check out the new ages.
+
+00:00:31.875 --> 00:00:38.064
+Great. So it's now six when it used to be five.
+
+00:00:38.064 --> 00:00:42.974
+Now, what if we pass "dog.growOneYear" as a function
+
+00:00:42.975 --> 00:00:50.344
+into "invokeTwice"? Hit enter.
+
+00:00:50.344 --> 00:00:55.710
+Okay. But now let's double check the dog's age property.
+
+00:00:55.710 --> 00:00:59.685
+As it appears, nothing really changed.
+
+00:00:59.685 --> 00:01:02.280
+The dog's age is still six.
+
+00:01:02.280 --> 00:01:05.519
+So why doesn't "invokeTwice" seem to work?
+
+00:01:05.519 --> 00:01:10.465
+Well, the thing is "invokeTwice" calls a "dog.growOneYear",
+
+00:01:10.465 --> 00:01:12.635
+but it calls it as a function.
+
+00:01:12.635 --> 00:01:15.371
+And as a result, "this",
+
+00:01:15.370 --> 00:01:19.194
+it sets the global object rather than the dog object.
+
+00:01:19.194 --> 00:01:22.009
+So because using callbacks is such a common pattern,
+
+00:01:22.010 --> 00:01:25.000
+we need a way to save the "this" reference.
+

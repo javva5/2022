@@ -1,0 +1,651 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Prototypal Inheritance</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Classes and Objects</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Constructor Functions.html">02. Constructor Functions</a>
+    </li>
+    <li class="">
+      <a href="03. The &#x60;this&#x60; Keyword.html">03. The &#x60;this&#x60; Keyword</a>
+    </li>
+    <li class="">
+      <a href="04. Setting Our Own &#x60;this&#x60;.html">04. Setting Our Own &#x60;this&#x60;</a>
+    </li>
+    <li class="">
+      <a href="05. Prototypal Inheritance.html">05. Prototypal Inheritance</a>
+    </li>
+    <li class="">
+      <a href="06. Prototypal Inheritance Subclasses.html">06. Prototypal Inheritance: Subclasses</a>
+    </li>
+    <li class="">
+      <a href="07. Lesson Summary.html">07. Lesson Summary</a>
+    </li>
+    <li class="">
+      <a href="08. Course Outro.html">08. Course Outro</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. Prototypal Inheritance</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>OOJS L3 59 - Prototypal Inheritence V2</p></h3>
+  <video controls>
+  <source src="05. OOJS L3 59 - Prototypal Inheritence V2-KdHMZEzRI4s.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="05. OOJS L3 59 - Prototypal Inheritence V2-KdHMZEzRI4s.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="05. OOJS L3 59 - Prototypal Inheritence V2-KdHMZEzRI4s.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="05. OOJS L3 59 - Prototypal Inheritence V2-KdHMZEzRI4s.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="05. OOJS L3 59 - Prototypal Inheritence V2-KdHMZEzRI4s.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="adding-methods-to-the-prototype">Adding Methods to the Prototype</h2>
+<p>Recall that objects contain data (i.e., properties), as well as the means to manipulate that data (i.e., methods). Earlier in this Lesson, we simply added methods <em>directly</em> into the constructor function itself:</p>
+<pre><code class="js language-js">function Cat(name) {
+ this.lives = 9;
+ this.name = name;
+
+ this.sayName = function () {
+   console.log(`Meow! My name is ${this.name}`);
+ };
+}</code></pre>
+<p>This way, a <code>sayName</code> method gets added to all <code>Cat</code> objects by saving a function to the <code>sayName</code> attribute of newly-created <code>Cat</code> objects. </p>
+<p>This works just fine, but what if we want to instantiate more and more <code>Cat</code> objects with this constructor? You'll create a new function every single time for that <code>Cat</code> object's <code>sayName</code>! What's more: if you ever want to make changes to the method, you'll have to update all objects <em>individually</em>. In this situation, it makes sense to have all objects created by the same <code>Cat</code> constructor function just <em>share</em> a single <code>sayName</code> method.</p>
+<p>To save memory and keep things DRY, we can add methods to the constructor function's <code>prototype</code> property. The prototype is just an object, and all objects created by a constructor function keep a reference to the prototype. Those objects can even use the <code>prototype</code>'s properties <em>as their own</em>!</p>
+<p>JavaScript leverages this secret link -- between an object and its prototype -- to implement inheritance. Consider the following prototype chain:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/l3-64-prototype-chain-diagram.png" alt="_The &#x60;Cat()&#x60; constructor function is invoked using the &#x60;new&#x60; operator, which creates the &#x60;bailey&#x60; instance (object). Note that the &#x60;meow()&#x60; method is defined in the prototype of the &#x60;bailey&#x60; object&#x27;s constructor function. The prototype is just an object, and all objects created by that constructor are secretly linked to the prototype. As such, we can execute &#x60;bailey.meow()&#x60; as if it were &#x60;bailey&#x60;&#x27;s own method!_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>The <code>Cat()</code> constructor function is invoked using the <code>new</code> operator, which creates the <code>bailey</code> instance (object). Note that the <code>meow()</code> method is defined in the prototype of the <code>bailey</code> object's constructor function. The prototype is just an object, and all objects created by that constructor are secretly linked to the prototype. As such, we can execute <code>bailey.meow()</code> as if it were <code>bailey</code>'s own method!</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Recall that each function has a <code>prototype</code> property, which is really just an object. When this function is invoked as a constructor using the <code>new</code> operator, it creates and returns a new object. This object is secretly linked to its constructor's <code>prototype</code>, and this secret link allows the object to access the <code>prototype</code>'s properties and methods as if it were its own!</p>
+<p>Since we know that the <code>prototype</code> property just points to a regular object, <em>that</em> object itself also has a secret link to <em>its</em> prototype. And <em>that</em> prototype object also has reference to <em>its own</em> prototype -- and so on. This is how the <strong>prototype chain</strong> is formed.</p>
+<h2 id="finding-properties-and-methods-on-the-prototype-chain">Finding Properties and Methods on the Prototype Chain</h2>
+<p>Whether you're accessing a property (e.g., <code>bailey.lives;</code>) or invoking a method (e.g., <code>bailey.meow();</code>), the JavaScript interpreter looks for them along the prototype chain in a very particular order:</p>
+<ol>
+<li>First, the JavaScript engine will look at the object's <em>own</em> properties. This means that any properties and methods defined directly in the object itself will take precedence over any properties and methods elsewhere if their names are the same (similar to variable shadowing in the <em>scope chain</em>).</li>
+<li>If it doesn't find the property in question, it will then search the object's constructor's prototype for a match.</li>
+<li>If the property doesn't exist in the prototype, the JavaScript engine will continue looking up the chain.</li>
+<li>At the very end of the chain is the <code>Object()</code> object, or the top-level parent. If the property <em>still</em> cannot be found, the property is undefined.</li>
+</ol>
+<p>Previously, we simply defined methods directly in a constructor function itself. Let's see how things look if we defined methods in the constructor's <code>prototype</code> instead!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L3- 62 - Methods And Prototype FIXED</p></h3>
+  <video controls>
+  <source src="05. L3- 62 - Methods And Prototype FIXED-Vx_LcB0sQDE.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="05. L3- 62 - Methods And Prototype FIXED-Vx_LcB0sQDE.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="05. L3- 62 - Methods And Prototype FIXED-Vx_LcB0sQDE.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="05. L3- 62 - Methods And Prototype FIXED-Vx_LcB0sQDE.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/OOJS-screencasts/blob/master/L3-objects-and-classes/66-methods-and-prototype.js" rel="noopener noreferrer" target="_blank">Here's the code from the preceding video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>For the next quiz, consider the following two code snippets below (i.e., A and B):</p>
+<pre><code class="js language-js">// (A)
+
+function Dalmatian (name) {
+  this.name = name;
+
+  this.bark = function() {
+    console.log(`${this.name} barks!`);
+  };
+}</code></pre>
+<pre><code class="js language-js">// (B)
+
+function Dalmatian (name) {
+  this.name = name;
+}
+
+Dalmatian.prototype.bark = function() {
+  console.log(`${this.name} barks!`);
+};</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Let's say that we want to define a method that can be invoked on instances (objects) of the <code>Dalmatian</code> constructor function (we'll be instantiating at least 101 of them!). </p>
+<p>Which of the preceding two approaches is optimal?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1512528662644" name="469313" id="a1512528662644">
+        <label for="a1512528662644"><p><strong>(A)</strong> is optimal, because <code>bark()</code> can be called directly on an instance of <code>Dalmatian</code>. In (B), <code>bark()</code> needs to be called on the <code>Dalmatian</code> instance's prototype for the method to be properly invoked (e.g., spotty.prototype.bark()).</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512528683849" name="469313" id="a1512528683849">
+        <label for="a1512528683849"><p><strong>(B)</strong> is optimal, because the function that <code>bark</code> points to does not need to be recreated each time an instance of <code>Dalmatian</code> is created.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512528684552" name="469313" id="a1512528684552">
+        <label for="a1512528684552"><p><strong>(A)</strong> is optimal, because all methods should always be enclosed within the <code>Dalmatian()</code> constructor function itself.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512528685040" name="469313" id="a1512528685040">
+        <label for="a1512528685040"><p>Both approaches (both <strong>(A)</strong> and <strong>(B)</strong>) are equal; there are no differences.</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512528701936" name="469313" id="a1512528701936">
+        <label for="a1512528701936"><p>None. Methods should always be manually added to individual instances of <code>Dalmatian</code>. </p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    **(B)** is optimal, because the function that `bark` points to does not need to be recreated each time an instance of `Dalmatian` is created.
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="💡-replacing-the-prototype-object-💡">💡 Replacing the <code>prototype</code> Object 💡</h3>
+<p>What happens if you completely replace a function's <code>prototype</code> object? How does this affect objects created by that function? Let's look at a simple <code>Hamster</code> constructor function and instantiate a few objects:</p>
+<pre><code class="js language-js">function Hamster() {
+  this.hasFur = true;
+}
+
+let waffle = new Hamster();
+let pancake = new Hamster();</code></pre>
+<p>First, note that even after we make the new objects, <code>waffle</code> and <code>pancake</code>, we can still add properties to <code>Hamster</code>'s prototype and it will still be able to access those new properties.</p>
+<pre><code class="js language-js">Hamster.prototype.eat = function () {
+  console.log('Chomp chomp chomp!');
+};
+
+waffle.eat();
+// 'Chomp chomp chomp!'
+
+pancake.eat();
+// 'Chomp chomp chomp!'</code></pre>
+<p>Now, let's replace <code>Hamster</code>'s <code>prototype</code> object with something else entirely:</p>
+<pre><code class="js language-js">Hamster.prototype = {
+  isHungry: false,
+  color: 'brown'
+};</code></pre>
+<p>The previous objects don't have access to the updated prototype's properties; they just retain their secret link to the old prototype:</p>
+<pre><code class="js language-js">console.log(waffle.color);
+// undefined
+
+waffle.eat();
+// 'Chomp chomp chomp!'
+
+console.log(pancake.isHungry);
+// undefined</code></pre>
+<p>As it turns out, any new <code>Hamster</code> objects created moving forward will use the updated prototype:</p>
+<pre><code class="js language-js">const muffin = new Hamster();
+
+muffin.eat();
+// TypeError: muffin.eat is not a function
+
+console.log(muffin.isHungry);
+// false
+
+console.log(muffin.color);
+// 'brown'</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L3 - 70 - Prototype Demo</p></h3>
+  <video controls>
+  <source src="05. L3 - 70 - Prototype Demo-MaNixLkrYTE.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="05. L3 - 70 - Prototype Demo-MaNixLkrYTE.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="05. L3 - 70 - Prototype Demo-MaNixLkrYTE.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="05. L3 - 70 - Prototype Demo-MaNixLkrYTE.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="05. L3 - 70 - Prototype Demo-MaNixLkrYTE.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/OOJS-screencasts/blob/master/L3-objects-and-classes/72-prototype-demo.js" rel="noopener noreferrer" target="_blank">Here's the code from the preceding video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="checking-an-objects-properties">Checking an Object's Properties</h2>
+<p>As we've just seen, if an object doesn't have a particular property of its own, it can access one somewhere along the prototype chain (assuming it <em>exists</em>, of course). With so many options, it can sometimes get tricky to tell just <em>where</em> a particular property is coming from! Here are a few useful methods to help you along the way.</p>
+<h3 id="hasownproperty">hasOwnProperty()</h3>
+<p><code>hasOwnProperty()</code> allows you to find the origin of a particular property. Upon passing in a string of the property name you're looking for, the method will return a boolean indicating whether or not the property belongs to the object itself (i.e., that property was <em>not</em> inherited). Consider the <code>Phone</code> constructor with a single property defined directly in the function, and another property on its <code>prototype</code> object:</p>
+<pre><code class="js language-js">function Phone() {
+  this.operatingSystem = 'Android';
+}
+
+Phone.prototype.screenSize = 6;</code></pre>
+<p>Let's now create a new object, <code>myPhone</code>, and check whether <code>operatingSystem</code> is its own property, meaning that it was not inherited from its prototype (or somewhere else along the prototype chain):</p>
+<pre><code class="js language-js">const myPhone = new Phone();
+
+const own = myPhone.hasOwnProperty('operatingSystem');
+
+console.log(own);
+// true</code></pre>
+<p>Indeed it returns true! What about the <code>screenSize</code> property, which exists on <code>Phone</code> objects' <code>prototype</code>?</p>
+<pre><code class="js language-js">const inherited = myPhone.hasOwnProperty('screenSize');
+
+console.log(inherited);
+// false</code></pre>
+<p>Using <code>hasOwnProperty()</code>, we gain insight a certain property's origins.</p>
+<h3 id="isprototypeof">isPrototypeOf()</h3>
+<p>Objects also have access to the <code>isPrototypeOf()</code> method, which checks whether or not an object exists in another object's prototype chain. Using this method, you can confirm if a particular object serves as the prototype of another object. Check out the following <code>rodent</code> object:</p>
+<pre><code class="js language-js">const rodent = {
+  favoriteFood: 'cheese',
+  hasTail: true
+};</code></pre>
+<p>Let's now build a <code>Mouse()</code> constructor function, and assign its <code>prototype</code> to <code>rodent</code>:</p>
+<pre><code class="js language-js">function Mouse() {
+  this.favoriteFood = 'cheese';
+}
+
+Mouse.prototype = rodent;</code></pre>
+<p>If we create a new <code>Mouse</code> object, its prototype should be the <code>rodent</code> object. Let's confirm:</p>
+<pre><code class="js language-js">const ralph = new Mouse();
+
+const result = rodent.isPrototypeOf(ralph);
+
+console.log(result);
+// true</code></pre>
+<p>Great! <code>isPrototypeOf()</code> is a great way to confirm if an object exists in another object's prototype chain.</p>
+<h3 id="objectgetprototypeof">Object.getPrototypeOf()</h3>
+<p><code>isPrototypeOf()</code> works well, but keep in mind that in order to use it, you must <em>have</em> that prototype object at hand in the first place! What if you're not sure what a certain object's prototype is? <code>Object.getPrototypeOf()</code> can help with just that!</p>
+<p>Using the previous example, let's store the return value of <code>Object.getPrototypeOf()</code> in a variable, <code>myPrototype</code>, then check what it is:</p>
+<pre><code class="js language-js">const myPrototype = Object.getPrototypeOf(ralph);
+
+console.log(myPrototype);
+// { favoriteFood: 'cheese', hasTail: true }</code></pre>
+<p>Great! The prototype of <code>ralph</code> has the same properties as the result because they <em>are</em> the same object. <code>Object.getPrototypeOf()</code> is great for retrieving <em>the</em> prototype of a given object.</p>
+<h3 id="the-constructor-property">The <code>constructor</code> Property</h3>
+<p>Each time an object is created, a special property is assigned to it under the hood: <code>constructor</code>. Accessing an object's <code>constructor</code> property returns a reference to the constructor function that created that object in the first place! Here's a simple <code>Longboard</code> constructor function. We'll also go ahead and make a new object, then save it to a <code>board</code> variable:</p>
+<pre><code class="js language-js">function Longboard() {
+  this.material = 'bamboo';
+}
+
+const board = new Longboard();</code></pre>
+<p>If we access <code>board</code>'s <code>constructor</code> property, we should see the original constructor function itself:</p>
+<pre><code class="js language-js">console.log(board.constructor);
+
+// function Longboard() {
+//   this.material = 'bamboo';
+// }</code></pre>
+<p>Excellent! Keep in mind that if an object was created using literal notation, its constructor is the built-in <code>Object()</code> constructor function!</p>
+<pre><code class="js language-js">const rodent = {
+  favoriteFood: 'cheese',
+  hasTail: true
+};
+
+console.log(rodent.constructor);
+// function Object() { [native code] }</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is true about <code>hasOwnProperty()</code>? Select all that apply:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1512528837826" name="469318" id="a1512528837826">
+      <label for="a1512528837826"><p>An object is passed into <code>hasOwnProperty</code> as an argument</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512528851409" name="469318" id="a1512528851409">
+      <label for="a1512528851409"><p>It returns a boolean indicating whether the object has the specified property as its own property (i.e., the property isn't inherited)</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512528851896" name="469318" id="a1512528851896">
+      <label for="a1512528851896"><p>A string cannot be passed as an argument into <code>hasOwnProperty()</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512528852432" name="469318" id="a1512528852432">
+      <label for="a1512528852432"><p><code>hasOwnProperty()</code> is invoked as a method onto an object</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>It returns a boolean indicating whether the object has the specified property as its own property (i.e., the property isn't inherited)</li>
+      <li>`hasOwnProperty()` is invoked as a method onto an object</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is true about <code>isPrototypeOf()</code> or <code>getPrototypeOf()</code>? Select all that apply:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1512528901042" name="469319" id="a1512528901042">
+      <label for="a1512528901042"><p><code>isPrototypeOf()</code> checks whether or not an object exists in another object's prototype chain</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512528908528" name="469319" id="a1512528908528">
+      <label for="a1512528908528"><p><code>isPrototypeOf()</code> takes a single argument: an object whose prototype chain is to be searched</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512528909040" name="469319" id="a1512528909040">
+      <label for="a1512528909040"><p><code>getPrototypeOf()</code> is invoked on an instance of a constructor function (i.e., a single object itself)</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512528909592" name="469319" id="a1512528909592">
+      <label for="a1512528909592"><p><code>getPrototypeOf()</code> returns the prototype of the object passed into it</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>`isPrototypeOf()` checks whether or not an object exists in another object's prototype chain</li>
+      <li>`isPrototypeOf()` takes a single argument: an object whose prototype chain is to be searched</li>
+      <li>`getPrototypeOf()` returns the prototype of the object passed into it</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is true about <code>constructor</code> property? Select all that apply:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1512528947868" name="469320" id="a1512528947868">
+      <label for="a1512528947868"><p>Accessing an object's <code>constructor</code> property returns a reference to the constructor function that created that object (instance)</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512528964441" name="469320" id="a1512528964441">
+      <label for="a1512528964441"><p>The value of the <code>constructor</code> property is just a string of the constructor function's name, rather than the function itself</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512528973936" name="469320" id="a1512528973936">
+      <label for="a1512528973936"><p>Every object has a <code>constructor</code> property</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512528974544" name="469320" id="a1512528974544">
+      <label for="a1512528974544"><p>Objects created with literal notation are constructed with the <code>Object()</code> constructor function</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Accessing an object's `constructor` property returns a reference to the constructor function that created that object (instance)</li>
+      <li>Every object has a `constructor` property</li>
+      <li>Objects created with literal notation are constructed with the `Object()` constructor function</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Let's say that we create the following object, <code>capitals</code>, using regular object literal notation:</p>
+<pre><code class="js language-js">const capitals = {
+  California: 'Sacramento',
+  Washington: 'Olympia',
+  Oregon: 'Salem',
+  Texas: 'Austin'
+};</code></pre>
+<p>What is returned when <code>Object.getPrototypeOf(capitals);</code> is executed?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1512529013811" name="469321" id="a1512529013811">
+        <label for="a1512529013811"><p>A reference to <code>Object()</code>'s prototype</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512529024632" name="469321" id="a1512529024632">
+        <label for="a1512529024632"><p><code>undefined</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512529025096" name="469321" id="a1512529025096">
+        <label for="a1512529025096"><p><code>Object()</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512529025640" name="469321" id="a1512529025640">
+        <label for="a1512529025640"><p><code>{}</code></p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    A reference to `Object()`'s prototype
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>Inheritance in JavaScript is when an object is based on <em>another</em> object. Inheritance allows us to reuse existing code, having objects take on properties of other objects.</p>
+<p>When a function is called as a constructor using the <code>new</code> operator, the function creates and returns a new object. This object is secretly linked to its constructor's <code>prototype</code>, which is just another object. Using this secret link allows an object to access the <code>prototype</code>'s properties and methods as if it were its own. If JavaScript does not find a particular property within an object, it will keep looking up the prototype chain, eventually reaching <code>Object()</code> (top-level parent) if necessary.</p>
+<p>We also looked at a few methods and properties that allow use to check the origins and references of objects and their prototypes, namely:</p>
+<ul>
+<li><code>hasOwnProperty()</code></li>
+<li><code>isPrototypeOf()</code></li>
+<li><code>Object.getPrototypeOf()</code></li>
+<li><code>.constructor</code></li>
+</ul>
+<p>In the next section, we'll check out another part of prototypal inheritance in the form of <strong>subclassing</strong>. What if you want to inherit just a few properties from an object -- but want an object to also have other, specialized properties of their own? We'll take an even deeper dive into prototypal inheritance in the next section!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="http://www.objectplayground.com/" rel="noopener noreferrer" target="_blank">Object Playground</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty" rel="noopener noreferrer" target="_blank">hasOwnProperty()</a> on MDN</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf" rel="noopener noreferrer" target="_blank">isPrototypeOf()</a> on MDN</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf" rel="noopener noreferrer" target="_blank">Object.getPrototypeOf()</a> on MDN</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor" rel="noopener noreferrer" target="_blank">.constructor</a> on MDN</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. Prototypal Inheritance Subclasses.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. Prototypal Inheritance')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

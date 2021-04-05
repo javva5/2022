@@ -1,0 +1,41 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.133 --> 00:00:03.167
+Uma função chamada
+imediatamente após ser definida
+
+00:00:03.200 --> 00:00:06.367
+é chamada de Expressão de Função
+Invocada Imediatamente,
+
+00:00:06.400 --> 00:00:10.567
+abreviada como IIFE.
+
+00:00:10.601 --> 00:00:12.334
+Vejamos um exemplo.
+
+00:00:12.367 --> 00:00:16.667
+Temos uma declaração de função
+para a função "logger".
+
+00:00:16.701 --> 00:00:19.400
+Ela pode se tornar
+uma expressão de função
+
+00:00:19.434 --> 00:00:21.634
+colocando-a em parênteses.
+
+00:00:21.667 --> 00:00:25.067
+Uma expressão de função
+também pode ser anônima.
+
+00:00:25.100 --> 00:00:28.567
+Se adicionarmos parênteses
+ao fim da expressão de função,
+
+00:00:28.601 --> 00:00:31.601
+a função será chamada
+logo após ter sido definida.
+

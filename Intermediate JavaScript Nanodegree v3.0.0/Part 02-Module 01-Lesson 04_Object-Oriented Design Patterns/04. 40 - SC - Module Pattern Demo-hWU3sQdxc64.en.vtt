@@ -1,0 +1,133 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.665
+The module pattern leverages a lot of the powerful features of JavaScript like scope,
+
+00:00:04.665 --> 00:00:08.660
+closures, and IIFEs or immediately invoked function expressions.
+
+00:00:08.660 --> 00:00:10.710
+So, let's go ahead and check out how it looks like.
+
+00:00:10.710 --> 00:00:13.245
+First, I know I'm going to need an IIFE.
+
+00:00:13.245 --> 00:00:16.270
+What you also need to do is return an object from this IIFE.
+
+00:00:16.270 --> 00:00:18.905
+So, let's go ahead and write that first and fill in the rest later,
+
+00:00:18.905 --> 00:00:23.520
+and on top of that, what we need to do is create a local variable inside this IIFE.
+
+00:00:23.520 --> 00:00:26.789
+Again, from what we know about scope closures and IIFEs,
+
+00:00:26.789 --> 00:00:29.045
+we know that this variable is going to be private.
+
+00:00:29.045 --> 00:00:32.585
+Let's call this one name and give it a string value.
+
+00:00:32.585 --> 00:00:36.680
+Now, let's go ahead and add a few methods to this return object that we can
+
+00:00:36.680 --> 00:00:40.790
+use to both access and modify this name variable over here.
+
+00:00:40.790 --> 00:00:43.630
+First, I'll supply the simple method to get the name.
+
+00:00:43.630 --> 00:00:45.475
+We'll just call it getName.
+
+00:00:45.475 --> 00:00:48.030
+Let's also write a set name method.
+
+00:00:48.030 --> 00:00:50.200
+This method can have a single parameter,
+
+00:00:50.200 --> 00:00:54.900
+which we can use to change the value of the name variable over here.
+
+00:00:57.110 --> 00:01:03.795
+Lastly, what we want to do is assign the return value of this entire IIFE to a variable,
+
+00:01:03.795 --> 00:01:05.960
+let's call this one person.
+
+00:01:05.960 --> 00:01:09.290
+Just double-check, let's go ahead and see if we can access this name
+
+00:01:09.290 --> 00:01:12.490
+variable over here undefined, which again,
+
+00:01:12.490 --> 00:01:17.050
+it makes sense because name isn't a defined property in this person object,
+
+00:01:17.050 --> 00:01:18.550
+but on the other hand,
+
+00:01:18.550 --> 00:01:24.165
+we can still access this string value over here by using the getName method.
+
+00:01:24.165 --> 00:01:28.775
+The string Veronica is still accessible via this getName method.
+
+00:01:28.775 --> 00:01:32.300
+Likewise, what we can also do is set the name which just
+
+00:01:32.300 --> 00:01:36.225
+reassigns the value of name to whatever name that we pass in.
+
+00:01:36.225 --> 00:01:38.555
+So, if we now try and get name,
+
+00:01:38.555 --> 00:01:41.150
+we can see that the string value of name which was originally
+
+00:01:41.150 --> 00:01:43.435
+Veronica has actually changed to Jessica,
+
+00:01:43.435 --> 00:01:45.090
+which is what we passed in over here.
+
+00:01:45.090 --> 00:01:48.155
+So, a couple of take-home messages with this one is that
+
+00:01:48.155 --> 00:01:52.605
+these methods getName and setName retain their parent's scope,
+
+00:01:52.605 --> 00:01:56.080
+which means they can reference their parent function's local variables.
+
+00:01:56.080 --> 00:01:58.540
+Again, you can see name over here, name over here,
+
+00:01:58.540 --> 00:02:02.125
+which refers to the local variable name inside this parent.
+
+00:02:02.125 --> 00:02:04.790
+So, one of the main benefits of this is that by
+
+00:02:04.790 --> 00:02:08.465
+defining a class or function inside a function,
+
+00:02:08.465 --> 00:02:12.305
+we actually introduce a new scope and keep things out of the global scope,
+
+00:02:12.305 --> 00:02:15.395
+but of course, means to execute the function which we did over here.
+
+00:02:15.395 --> 00:02:19.610
+So, what's great about the module pattern is that it uses closures to create
+
+00:02:19.610 --> 00:02:21.860
+private and public properties of an object
+
+00:02:21.860 --> 00:02:24.930
+which actually isn't provided by JavaScript by default.
+

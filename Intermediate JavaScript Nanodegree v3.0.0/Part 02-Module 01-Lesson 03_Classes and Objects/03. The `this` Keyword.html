@@ -1,0 +1,478 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The &#x60;this&#x60; Keyword</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Classes and Objects</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Constructor Functions.html">02. Constructor Functions</a>
+    </li>
+    <li class="">
+      <a href="03. The &#x60;this&#x60; Keyword.html">03. The &#x60;this&#x60; Keyword</a>
+    </li>
+    <li class="">
+      <a href="04. Setting Our Own &#x60;this&#x60;.html">04. Setting Our Own &#x60;this&#x60;</a>
+    </li>
+    <li class="">
+      <a href="05. Prototypal Inheritance.html">05. Prototypal Inheritance</a>
+    </li>
+    <li class="">
+      <a href="06. Prototypal Inheritance Subclasses.html">06. Prototypal Inheritance: Subclasses</a>
+    </li>
+    <li class="">
+      <a href="07. Lesson Summary.html">07. Lesson Summary</a>
+    </li>
+    <li class="">
+      <a href="08. Course Outro.html">08. Course Outro</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. The `this` Keyword</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>OOJS L3 27 - This Keyword Intro V2</p></h3>
+  <video controls>
+  <source src="03. OOJS L3 27 - This Keyword Intro V2-v2yF-ItJdzY.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="03. OOJS L3 27 - This Keyword Intro V2-v2yF-ItJdzY.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="03. OOJS L3 27 - This Keyword Intro V2-v2yF-ItJdzY.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="03. OOJS L3 27 - This Keyword Intro V2-v2yF-ItJdzY.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="03. OOJS L3 27 - This Keyword Intro V2-v2yF-ItJdzY.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="this-in-constructor-functions"><code>this</code> in Constructor Functions</h2>
+<p>In the previous section, we saw <code>this</code> right inside a constructor function. Here's another example:</p>
+<pre><code class="js language-js">function Cat(name) {
+ this.name = name;
+ this.sayName = function () {
+   console.log(`Meow! My name is ${this.name}`);
+ };
+}
+
+const bailey = new Cat('Bailey');</code></pre>
+<p>In the above <code>Cat()</code> constructor, the function that <code>sayName</code> references <code>this.name</code>. Back in Lesson 1, we saw <code>this</code> used in <em>methods</em>. But in <code>Cat()</code>'s case, what exactly does <code>this</code> refer to?</p>
+<p>As it turns out, when invoking a constructor function with the <code>new</code> operator, <code>this</code> gets set to the <em>newly-created object</em>! Let's check out what the new <code>bailey</code> object looks like:</p>
+<pre><code class="js language-js">{
+  name: 'Bailey',
+  sayName: function () {
+    console.log(`Meow! My name is ${this.name}`);
+  }
+}</code></pre>
+<p>In the snippet above, notice that <code>this</code> is <em>outside</em> a constructor function (i.e., in a method). As we saw in Lesson 1, when you say <code>this</code> in a method, what you're really saying is "this object" or "the object at hand." As a result, the <code>sayName()</code> method can use <code>this</code> to access the <code>name</code> property of that object! This makes the following method call possible:</p>
+<pre><code class="js language-js">bailey.sayName();
+
+// 'Meow! My name is Bailey'</code></pre>
+<p><strong>Note</strong>: For a refresher on how a method uses <code>this</code> to access an object on which it was called, feel free to review <strong>Invoking Object Methods</strong> in Lesson 1. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="when-is-this-assigned">When is <code>this</code> Assigned?</h2>
+<p>A common misconception is that <code>this</code> refers to the object <em>where it is defined</em>. This is not the case! </p>
+<p>The value of <code>this</code> is actually not assigned to anything until an object calls the method where <code>this</code> is used. In other words, the value assigned to <code>this</code> is based on <em>the object that invokes the method where <code>this</code> is defined</em>. Let's look at an example:</p>
+<pre><code class="js language-js">const dog = {
+  bark: function () {
+    console.log('Woof!');
+  },
+  barkTwice: function () {
+    this.bark();
+    this.bark();
+  }
+};</code></pre>
+<p>Let's go ahead and invoke both of <code>dog</code>'s methods:</p>
+<pre><code class="js language-js">dog.bark();
+// Woof!
+
+dog.barkTwice();
+// Woof!
+// Woof!</code></pre>
+<p>We know that when we call <code>dog.bark();</code> (or <code>dog.barkTwice();</code>) a variable <code>this</code> gets set. Since <code>this</code> can access the object it was called on, <code>barkTwice</code> can use <code>this</code> to access the <code>dog</code> object, which contains the <code>bark</code> method.</p>
+<p>But what if we just wrote <code>bark();</code> instead of <code>this.bark();</code> in <code>barkTwice</code>? The function would have first looked for a local variable named <code>bark</code> in the scope of <code>barkTwice</code>. If <code>bark</code> isn't found, it would have looked further up the scope chain.</p>
+<p>To tie things all together: <code>this.bark();</code> tells <code>barkTwice</code> to look at <code>dog</code> -- the object that the method was called on -- to find <code>bark</code>.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Time for a quick review! We explored the <code>this</code> keyword a bit in Lesson 1, so let's make sure we're on the same page before continuing.</p>
+<p>What is true about <code>this</code>? Select all that apply:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1512526525624" name="469272" id="a1512526525624">
+      <label for="a1512526525624"><p><code>this</code> refers to "this property," or "this method"</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512526545326" name="469272" id="a1512526545326">
+      <label for="a1512526545326"><p>Using <code>this</code>, methods can access and manipulate an object's properties</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512526546013" name="469272" id="a1512526546013">
+      <label for="a1512526546013"><p>The exact value of <code>this</code> is already set before a method is invoked</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512526546510" name="469272" id="a1512526546510">
+      <label for="a1512526546510"><p><code>this</code> is a reserved word in JavaScript</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Using `this`, methods can access and manipulate an object's properties</li>
+      <li>`this` is a reserved word in JavaScript</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Consider the following constructor function, <code>City</code>:</p>
+<pre><code class="js language-js">function City(name, population) {
+  this.name = name;
+  this.population = population;
+
+  this.identify = function () {
+    console.log(`${this.name}'s population is ${this.population}.`);
+  };
+}</code></pre>
+<p>The following is executed:</p>
+<pre><code class="js language-js">const sanFrancisco = new City('San Francisco', 870000);</code></pre>
+<p>What is the value of <code>this</code>?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1512526672498" name="469273" id="a1512526672498">
+        <label for="a1512526672498"><p><code>City</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512526678454" name="469273" id="a1512526678454">
+        <label for="a1512526678454"><p>Any property (such as <code>name</code>, or <code>population</code>)</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512526678942" name="469273" id="a1512526678942">
+        <label for="a1512526678942"><p><code>undefined</code>, because <code>this</code> must always be inside an <em>object</em> (i.e., in a method), not a constructor function</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512526679422" name="469273" id="a1512526679422">
+        <label for="a1512526679422"><p>The newly-created object, referenced by <code>sanFrancisco</code></p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    The newly-created object, referenced by `sanFrancisco`
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="what-does-this-get-set-to">What Does <code>this</code> Get Set To?</h2>
+<p>At this point, we've seen <code>this</code> in many different contexts, such as within a method, or referenced by a constructor function. Let's now organize our thoughts and bring it all together!</p>
+<p>There are four ways to call functions, and each way sets <code>this</code> differently.</p>
+<p>First, calling a constructor function with the <code>new</code> keyword sets <code>this</code> to a newly-created object. Recall that creating an instance of <code>Cat</code> earlier had set <code>this</code> to the new <code>bailey</code> object. </p>
+<p>On the other hand, calling a function that belongs to an object (i.e., a <em>method</em>) sets <code>this</code> to the object itself. Recall that earlier, the <code>dog</code> object's <code>barkTwice()</code> method was able to access properties of <code>dog</code> itself.</p>
+<p>Third, calling a function on its own (i.e., simply invoking a regular function) will set <code>this</code> to <code>window</code>, which is the global object if the host environment is the browser. </p>
+<pre><code class="js language-js">function funFunction() {
+  return this;
+}
+
+funFunction();
+// (returns the global object, `window`)</code></pre>
+<p>The fourth way to call functions allows us to set <code>this</code> ourselves! Don't worry about this approach for now; we'll take a deep dive in the very next section.</p>
+<p>Whew -- that was a lot of <code>this</code>! Let's compartmentalize these findings in the video below:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>OOJS L3 33 - 'This' Grid V1</p></h3>
+  <video controls>
+  <source src="03. OOJS L3 33 - &#x27;This&#x27; Grid V1-Xwfi1wCB8OM.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="03. OOJS L3 33 - &#x27;This&#x27; Grid V1-Xwfi1wCB8OM.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="03. OOJS L3 33 - &#x27;This&#x27; Grid V1-Xwfi1wCB8OM.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="03. OOJS L3 33 - &#x27;This&#x27; Grid V1-Xwfi1wCB8OM.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="03. OOJS L3 33 - &#x27;This&#x27; Grid V1-Xwfi1wCB8OM.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/l3-53-this-grid-2.png" alt="_If a constructor function is called with the &#x60;new&#x60; operator, the value of &#x60;this&#x60; is set to the newly-created object. If a method is invoked on an object, &#x60;this&#x60; is set to that object itself. And if a function is simply invoked, &#x60;this&#x60; is set to the global object: &#x60;window&#x60;._" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>If a constructor function is called with the <code>new</code> operator, the value of <code>this</code> is set to the newly-created object. If a method is invoked on an object, <code>this</code> is set to that object itself. And if a function is simply invoked, <code>this</code> is set to the global object: <code>window</code>.</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Consider the following object, <code>building</code>:</p>
+<pre><code class="js language-js">const building = {
+  floors: 5,
+  addFloor: function () {
+    this.floors += 1;
+  }
+};
+
+building.addFloor();
+// ???</code></pre>
+<p>What is the value of <code>this</code> when <code>building.addFloor();</code> is executed?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1512526812842" name="469277" id="a1512526812842">
+        <label for="a1512526812842"><p><code>window</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512526841982" name="469277" id="a1512526841982">
+        <label for="a1512526841982"><p><code>building</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512526842486" name="469277" id="a1512526842486">
+        <label for="a1512526842486"><p><code>undefined</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512526842919" name="469277" id="a1512526842919">
+        <label for="a1512526842919"><p><code>addFloor()</code> will return an error because <code>this.floors += 1;</code> cannot be resolved</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    `building`
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Consider the following:</p>
+<pre><code class="js language-js">function myFunction() {
+  console.log("What is the value of 'this'?");
+}
+
+myFunction();
+// ???</code></pre>
+<p>When <code>myFunction();</code> is executed, what is the value of the <code>this</code> keyword?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1512526911753" name="469278" id="a1512526911753">
+        <label for="a1512526911753"><p><code>myFunction</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512526917799" name="469278" id="a1512526917799">
+        <label for="a1512526917799"><p><code>undefined</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512526918327" name="469278" id="a1512526918327">
+        <label for="a1512526918327"><p><code>this</code> does not get set to any value when a function is invoked</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512526918807" name="469278" id="a1512526918807">
+        <label for="a1512526918807"><p><code>window</code></p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    `window`
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>Functions, objects, and <code>this</code> are all interconnected. When invoking constructor functions with the <code>new</code> operator, a <code>this</code> variable is set to the newly-created object. When invoking a method on an object, <code>this</code> is set to that object itself. And when invoking a function in a browser environment, <code>this</code> is set to <code>window</code>, otherwise known as the global object.</p>
+<p>Along with all this, there is yet one more set of ways to invoke functions: with <code>apply()</code>, and with <code>call()</code>. Both methods share quite a few similarities, and they each allow us to specify how we want to set <code>this</code>. We'll take a look at each of them in detail next!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this" rel="noopener noreferrer" target="_blank">The this operator</a> on MDN</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. Setting Our Own &#x60;this&#x60;.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. The &#x60;this&#x60; Keyword')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

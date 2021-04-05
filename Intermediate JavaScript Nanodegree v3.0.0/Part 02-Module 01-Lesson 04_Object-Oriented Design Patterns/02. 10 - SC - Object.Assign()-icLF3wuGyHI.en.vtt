@@ -1,0 +1,151 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.245
+Here we have the same three objects: duck, beaver and otter.
+
+00:00:04.245 --> 00:00:08.190
+Let's now go ahead and use object on a sign and create a platypus.
+
+00:00:08.190 --> 00:00:09.930
+So again, with objects on a sign,
+
+00:00:09.930 --> 00:00:13.515
+the first argument that you pass into it is the target object.
+
+00:00:13.515 --> 00:00:16.920
+This will be the object that all the properties are going to be copied into.
+
+00:00:16.920 --> 00:00:19.245
+So, we just pass in a blank object.
+
+00:00:19.245 --> 00:00:22.245
+Now, let's go ahead and pass in the rest of the objects.
+
+00:00:22.245 --> 00:00:25.515
+So just to recap, we pass in a target object which is blank.
+
+00:00:25.515 --> 00:00:27.390
+Then we pass in the duck, beaver,
+
+00:00:27.390 --> 00:00:30.930
+and otter objects to have their properties mixed at the target object.
+
+00:00:30.930 --> 00:00:34.055
+But, let's do something a little bit different this time.
+
+00:00:34.055 --> 00:00:38.225
+What if we actually added a new property to the duck object?
+
+00:00:38.225 --> 00:00:40.070
+What if this new property had
+
+00:00:40.070 --> 00:00:44.490
+the same property name as one properties in one of the other objects?
+
+00:00:44.490 --> 00:00:47.295
+Let's say for example, we go into duck over here.
+
+00:00:47.295 --> 00:00:49.100
+In the duck object, we have
+
+00:00:49.100 --> 00:00:55.050
+another property that's also called feet just like the other object has.
+
+00:00:55.520 --> 00:00:58.400
+We can give the feet property a string value.
+
+00:00:58.400 --> 00:01:00.245
+We'll just say, orange,
+
+00:01:00.245 --> 00:01:01.940
+just to be a little bit descriptive.
+
+00:01:01.940 --> 00:01:05.210
+So, what do you think will happen as we use
+
+00:01:05.210 --> 00:01:08.690
+objects on a sign to merge on the properties into the target object?
+
+00:01:08.690 --> 00:01:13.010
+What happens if you have property names that are the same?
+
+00:01:13.010 --> 00:01:17.960
+So, will this platypus object receive a feet property with a value of webbed?
+
+00:01:17.960 --> 00:01:21.875
+Or would it receive a feet property with the value of orange?
+
+00:01:21.875 --> 00:01:23.950
+Let's check out what platypus looks like.
+
+00:01:23.950 --> 00:01:25.275
+So as it turns out,
+
+00:01:25.275 --> 00:01:27.020
+it has the same properties you expect.
+
+00:01:27.020 --> 00:01:28.265
+We have has Bill.
+
+00:01:28.265 --> 00:01:29.840
+We have feet, has Tail,
+
+00:01:29.840 --> 00:01:33.305
+and has Fur, just like they do in these objects over here.
+
+00:01:33.305 --> 00:01:36.110
+But if we took out feets over here,
+
+00:01:36.110 --> 00:01:38.305
+it has a string value of webbed.
+
+00:01:38.305 --> 00:01:41.300
+So, why did they choose webbed rather
+
+00:01:41.300 --> 00:01:45.320
+than orange over here even though the property names are the same?
+
+00:01:45.320 --> 00:01:47.195
+So, as it turns out,
+
+00:01:47.195 --> 00:01:50.150
+the order in which you pass in the source objects
+
+00:01:50.150 --> 00:01:53.150
+into object on a sign actually makes a huge difference.
+
+00:01:53.150 --> 00:01:55.430
+If there are actually any name collisions between any of
+
+00:01:55.430 --> 00:01:57.800
+the properties of the source objects,
+
+00:01:57.800 --> 00:02:01.070
+just like we have again over here and feet and feet,
+
+00:02:01.070 --> 00:02:03.950
+the value in the object passed in later actually
+
+00:02:03.950 --> 00:02:07.265
+takes precedence over the value of the object passed on earlier.
+
+00:02:07.265 --> 00:02:10.250
+So, since otter was passed in right after duck,
+
+00:02:10.250 --> 00:02:13.220
+object at the sign is going to take these on order and actually
+
+00:02:13.220 --> 00:02:16.285
+use the value of the object passed in later which would be otter.
+
+00:02:16.285 --> 00:02:19.460
+So, that's why again, you would see webbed versus orange.
+
+00:02:19.460 --> 00:02:22.505
+It's just something handy to know as you use object and assign.
+
+00:02:22.505 --> 00:02:24.770
+Because again order matters.
+

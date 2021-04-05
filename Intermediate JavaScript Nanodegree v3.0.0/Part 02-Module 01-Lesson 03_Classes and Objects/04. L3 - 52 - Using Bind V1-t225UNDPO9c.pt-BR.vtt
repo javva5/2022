@@ -1,0 +1,113 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.100 --> 00:00:03.867
+Estes são o objeto "dog"
+e a função "invokeTwice".
+
+00:00:04.533 --> 00:00:09.667
+Tentamos chamar "invokeTwice"
+e passar "dog.growOneYear".
+
+00:00:13.133 --> 00:00:15.567
+Mas isso retornou
+"undefined".
+
+00:00:16.267 --> 00:00:19.433
+Para resolver, podemos
+utilizar o método "bind()",
+
+00:00:19.467 --> 00:00:21.333
+que retorna uma nova função
+
+00:00:21.367 --> 00:00:24.100
+com o valor
+de "this" correto.
+
+00:00:24.133 --> 00:00:27.600
+O "bind()" é um método que chamamos
+diretamente em uma função.
+
+00:00:27.633 --> 00:00:28.633
+Vamos fazer isso.
+
+00:00:32.067 --> 00:00:35.100
+Vamos passar
+um argumento a "bind()"
+
+00:00:35.133 --> 00:00:38.500
+que servirá como parâmetro
+de "this" para a função alvo,
+
+00:00:38.533 --> 00:00:40.367
+que é "growOneYear",
+
+00:00:40.400 --> 00:00:42.367
+quando a função vinculada
+for chamada.
+
+00:00:42.400 --> 00:00:45.367
+Neste caso, não queremos
+que "this" seja o objeto global
+
+00:00:45.400 --> 00:00:49.367
+ou janela, que é o caso
+de quando chamamos "invokeTwice".
+
+00:00:49.400 --> 00:00:52.100
+Queremos que "this"
+seja "dog",
+
+00:00:52.133 --> 00:00:55.633
+pois queremos que a idade
+do cachorro aumente em um.
+
+00:00:55.667 --> 00:00:56.933
+Vamos fazer isso.
+
+00:00:58.900 --> 00:01:01.533
+O valor retornado disso
+é uma nova função.
+
+00:01:01.567 --> 00:01:03.900
+Vamos salvar "this"
+em uma nova variável.
+
+00:01:03.933 --> 00:01:05.833
+Nós a chamaremos
+de "myGrow".
+
+00:01:09.167 --> 00:01:12.867
+Ótimo. Agora passamos
+"myGrow" para "invokeTwice".
+
+00:01:18.000 --> 00:01:20.800
+A função "invokeTwice"
+
+00:01:20.833 --> 00:01:25.100
+chamou "myGrow" duas vezes,
+como vemos aqui.
+
+00:01:25.133 --> 00:01:28.667
+Se acessarmos a propriedade
+da idade do cachorro,
+
+00:01:28.700 --> 00:01:30.833
+veremos uma atualização
+do valor.
+
+00:01:33.733 --> 00:01:35.633
+E de fato é verdade. Sete.
+
+00:01:35.667 --> 00:01:37.033
+Para recapitular,
+
+00:01:37.067 --> 00:01:40.400
+"bind()" é um método chamado
+diretamente em uma função
+
+00:01:40.433 --> 00:01:45.200
+e retorna uma cópia da função
+com o valor de "this" especificado.
+

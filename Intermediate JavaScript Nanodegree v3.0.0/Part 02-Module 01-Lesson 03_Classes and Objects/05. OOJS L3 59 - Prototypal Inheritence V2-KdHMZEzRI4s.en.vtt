@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.495
+My parents have dark hair, I have dark hair,
+
+00:00:04.495 --> 00:00:09.714
+so you can say that I inherited the dark hair gene from my parents.
+
+00:00:09.714 --> 00:00:15.789
+Now in JavaScript, inheritance is when one object is based on another object.
+
+00:00:15.789 --> 00:00:18.649
+This is called inheriting or extending,
+
+00:00:18.649 --> 00:00:23.049
+let's say we have a constructor function that creates new car objects,
+
+00:00:23.050 --> 00:00:26.815
+each car object contains different color property values like,
+
+00:00:26.815 --> 00:00:29.990
+red, blue, and green.
+
+00:00:29.989 --> 00:00:32.429
+Not only do objects have their own properties,
+
+00:00:32.429 --> 00:00:37.144
+they are also securely linked to a common object called the prototype.
+
+00:00:37.145 --> 00:00:41.080
+We can add methods to the prototype that all new car objects can share.
+
+00:00:41.079 --> 00:00:46.019
+So, rather than creating say a new drive method every time a new car is made,
+
+00:00:46.020 --> 00:00:48.590
+each car can just share the same one.
+
+00:00:48.590 --> 00:00:50.695
+Now unlike other languages,
+
+00:00:50.695 --> 00:00:54.000
+JavaScript leverages the prototype to manage inheritance.
+

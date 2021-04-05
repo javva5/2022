@@ -1,0 +1,92 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.133 --> 00:00:03.400
+Temos uma função
+chamada "invokeTwice".
+
+00:00:03.433 --> 00:00:06.433
+Ela pega uma função callback
+
+00:00:06.467 --> 00:00:08.233
+e a chama duas vezes.
+
+00:00:09.067 --> 00:00:11.967
+Além disso,
+também temos um objeto "dog".
+
+00:00:12.000 --> 00:00:14.067
+Ele é simples,
+possui duas propriedades,
+
+00:00:14.100 --> 00:00:15.833
+"age" e "growOneYear",
+
+00:00:15.867 --> 00:00:19.200
+que é o método que aumenta
+a idade em um.
+
+00:00:19.233 --> 00:00:23.233
+Vamos testar. Vamos invocar
+"growOneYear" no objeto.
+
+00:00:26.333 --> 00:00:28.900
+Agora vejamos
+a propriedade "age"
+
+00:00:28.933 --> 00:00:31.000
+para conferir a nova idade.
+
+00:00:33.600 --> 00:00:37.033
+Ótimo. Agora ele tem seis anos,
+antes tinha cinco.
+
+00:00:38.100 --> 00:00:43.133
+E se passarmos "dog.growOneYear"
+como uma função
+
+00:00:43.167 --> 00:00:44.833
+em "invokeTwice"?
+
+00:00:48.700 --> 00:00:50.167
+Dou "enter".
+
+00:00:50.933 --> 00:00:54.733
+Vamos conferir a propriedade
+da idade do cachorro.
+
+00:00:57.367 --> 00:00:59.767
+Ao que parece,
+nada foi alterado.
+
+00:00:59.800 --> 00:01:02.267
+A idade do cachorro
+continua igual a seis.
+
+00:01:02.300 --> 00:01:05.833
+Por que "invokeTwice"
+não funcionou?
+
+00:01:05.867 --> 00:01:10.467
+É porque ela chama
+"dog.growOneYear"
+
+00:01:10.500 --> 00:01:12.733
+como uma função.
+
+00:01:12.767 --> 00:01:17.267
+Como resultado, "this"
+é configurado no objeto global
+
+00:01:17.300 --> 00:01:19.300
+e não no objeto "dog".
+
+00:01:19.333 --> 00:01:21.800
+Como utilizar callbacks
+é um padrão comum,
+
+00:01:21.833 --> 00:01:24.933
+precisamos de uma forma
+de salvar a referência de "this".
+

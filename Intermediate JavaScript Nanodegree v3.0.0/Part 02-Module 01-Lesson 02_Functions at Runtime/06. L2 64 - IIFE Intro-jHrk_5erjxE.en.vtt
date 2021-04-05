@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.549
+A function that is called immediately after it's
+
+00:00:02.549 --> 00:00:06.389
+defined is known as an Immediately-Invoked Function Expression,
+
+00:00:06.389 --> 00:00:10.814
+commonly abbreviated to I I F E, pronounced IIFE.
+
+00:00:10.814 --> 00:00:12.205
+Let's check out an example.
+
+00:00:12.205 --> 00:00:16.815
+Here, we have a function declaration for a function named logger.
+
+00:00:16.815 --> 00:00:21.804
+We can easily turn it into a function expression by wrapping it in parentheses.
+
+00:00:21.804 --> 00:00:25.125
+Keep in mind that a function expression can also be anonymous.
+
+00:00:25.125 --> 00:00:28.838
+If we append parentheses to the end of this function expression,
+
+00:00:28.838 --> 00:00:32.000
+the function will be called right after it's defined.
+

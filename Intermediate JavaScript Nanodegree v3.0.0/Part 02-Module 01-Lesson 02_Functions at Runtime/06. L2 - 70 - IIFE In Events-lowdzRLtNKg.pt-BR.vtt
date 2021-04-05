@@ -1,0 +1,48 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.100 --> 00:00:02.733
+Este é o código de antes.
+Para recapitular,
+
+00:00:02.767 --> 00:00:06.967
+pegamos o botão da página
+e armazenamos na variável "button".
+
+00:00:07.000 --> 00:00:10.200
+Nela adicionamos
+um "eventListener" de clique
+
+00:00:10.233 --> 00:00:12.700
+e passamos em uma IIFE.
+
+00:00:12.733 --> 00:00:16.967
+A IIFE retorna uma função
+que fecha a variável "count".
+
+00:00:17.000 --> 00:00:19.600
+Nós também teremos a página.
+
+00:00:19.633 --> 00:00:21.633
+Isto é só um simples botão.
+
+00:00:21.667 --> 00:00:26.367
+A tag "script" faz referência
+ao arquivo "button.js" que vimos.
+
+00:00:26.400 --> 00:00:28.567
+Vejamos isso em ação.
+
+00:00:28.600 --> 00:00:30.567
+Ao clicar uma vez,
+
+00:00:30.600 --> 00:00:33.100
+novamente, vemos o alerta.
+
+00:00:34.500 --> 00:00:35.767
+Novamente.
+
+00:00:39.833 --> 00:00:41.033
+Excelente!
+

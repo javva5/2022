@@ -1,0 +1,243 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Development Strategy</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Project: Dinosaurs</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Project Summary.html">01. Project Summary</a>
+    </li>
+    <li class="">
+      <a href="02. Project Rubric.html">02. Project Rubric</a>
+    </li>
+    <li class="">
+      <a href="03. Get the Starter Code.html">03. Get the Starter Code</a>
+    </li>
+    <li class="">
+      <a href="04. Object-Oriented Javascript.html">04. Object-Oriented Javascript</a>
+    </li>
+    <li class="">
+      <a href="05. Development Strategy.html">05. Development Strategy</a>
+    </li>
+    <li class="">
+      <a href="06. Version Control.html">06. Version Control</a>
+    </li>
+    <li class="">
+      <a href="07. Udacity Style Guides.html">07. Udacity Style Guides</a>
+    </li>
+    <li class="">
+      <a href="08. Still Not Sure How to Begin.html">08. Still Not Sure How to Begin?</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Dinosaurs.html">Project Description - Dinosaurs</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Dinosaurs.html">Project Rubric - Dinosaurs</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. Development Strategy</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="development-strategy">Development Strategy</h1>
+<p>For this project, you will be writing most of your code in <strong>app.js</strong>. Note that it's very important that you plan your project before you start writing any code! Break your project down into small pieces of work and strategize your approach to each one. With these bite-sized amounts, it'll be easier to debug and fix any issues that appear.</p>
+<p>Feel free to implement your own design workflow, but if you get stuck -- here is a walkthrough to get you up and running!</p>
+<ol>
+<li><p><strong>Clone the starter package from the <a href="https://github.com/udacity/Javascript" rel="noopener noreferrer" target="_blank">GitHub repository</a></strong>. Go through the files to review the contents and familiarize yourself with the pieces that have been supplied. Pay specific attention to what the index.html file already contains and what seems to be missing.  No server, task runner, or bundler is required for this project, but if you feel it improves your personal workflow, now would be the time to add them. The ES6 techniques that have been introduced are encouraged, but if you are not using a build tool, there will be no transpiling to ES5; this will not be counted against you for this assignment, but will be worth considering if you choose to display it for your portfolio.</p></li>
+<li><p><strong>Decide how you will work with classes, then build out your classes and objects.</strong></p></li>
+</ol>
+<ul>
+<li>There are several ways to build your objects, as well as multiple design patterns. What will be the most readable for this project?</li>
+<li>Do you have a need for subclasses? </li>
+<li>What properties are needed?</li>
+</ul>
+<ol>
+<li>**Get human data from the html form to build your human object. **<br />
+Think about what 3 things you are going to compare to your human. You may need to create more fields, adjust the fields that are there, or remove fields to correspond with the data you will be collecting. </li>
+</ol>
+<ul>
+<li>Do you need to create any functions to translate the data values to values that can be compared to the dino data. </li>
+<li>How do the properties compare? Do you need any additional ones? </li>
+<li>Start thinking about what events are going to need to occur and how you can take advantage of IIFEs.</li>
+</ul>
+<ol>
+<li><strong>Create at least 3 methods that compare dino data to human data.</strong><br />
+Depending on how you decided to create your objects and what design pattern you chose, you may encounter issues accessing or working with some of the data. Do you need to create any functions to access/store this data?</li>
+</ol>
+<ul>
+<li>When was the last time you linted your code? The linter may suggest you move around some of your methods and objects and name functions properly.</li>
+<li>What sort of conversions are needed for your methods to get accurate output? It’s easiest to use console.log here for testing, but start thinking about how you are going to get this data onto the DOM. </li>
+</ul>
+<ol>
+<li><strong>Generate tiles and append to the DOM.</strong>  Each Dino title must include at least the species, an image, and a fact. The dino fact displayed should be chosen at random from at least 6 options (including your 3 methods). The Human tile must include the user’s name, and the human graphic--no fact is needed. The bird tile should include the species, image, and fact, “All birds are dinosaurs.”</li>
+</ol>
+<ul>
+<li>How will you display different information on the tiles dependant on dino, bird, or human?</li>
+<li>How will you randomize the fact that is being displayed? If needed, here is a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch" rel="noopener noreferrer" target="_blank">hint</a>.</li>
+<li>How can you create the html for these tiles and get them to display on the dom? There are a lot of options for this some faster, some more secure. Time and experience will help you choose the best option for future projects.</li>
+</ul>
+<ol>
+<li><p><strong>Make certain the grid is not being added until you click the button to submit user data. Additionally, remove the form once the user has clicked to generate the infographic.</strong> It is a good idea to remove any calls to console.log at this point. </p></li>
+<li><p><strong>REFACTOR.</strong> At this point, your code should be working properly. Ideally, refactoring happens while you are developing, but as a new developer, you often don’t have the whole picture in your head to be able to do so properly.  Let’s clean the project up. </p></li>
+</ol>
+<ul>
+<li>Have you run your code through a linter? We request you still follow Udacity standards when the code is complete, but running it through an <a href="https://eslint.org/demo" rel="noopener noreferrer" target="_blank">eslinter</a> is going to help you get started in refactoring. </li>
+<li>Are you using ES6 const and let? </li>
+<li>Are you taking advantage of ES6 arrow functions and naming them appropriately?</li>
+<li>Is your code DRY? Are there any pieces that would be better served as a helper function to avoid duplication?</li>
+<li>How is your code structured? Have you created functions for the main functionality with properly scoped variables? Remember the design patterns you learned for Object Oriented Javascript, would readability improve if you followed those patterns? </li>
+<li>Are you using the best method for your iterations? </li>
+</ul>
+<ol>
+<li><strong>Suggested:</strong> Validate the form data to ensure the data is acceptable and complete. Allow the user to generate a new infographic. Move the tile colors from CSS to JS for more control. Randomize the order of the tiles while keeping the human in the middle. Create a hover state on the tiles that displays the rest of the species statistics. Create additional methods for comparing data. <a href="https://medium.com/javascript-scene/javascript-factory-functions-vs-constructor-functions-vs-classes-2f22ceddf33e" rel="noopener noreferrer" target="_blank">Rewrite the project to use constructor functions, factory functions, the module pattern, and revealing module pattern</a>. Change out data and images to generate an infographic of your own choosing. Allow the user to select different units for the numbers and update your methods to account for this. Make changes to the CSS, and HTML to make the project your own. </li>
+</ol>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. Version Control.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. Development Strategy')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

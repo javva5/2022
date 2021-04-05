@@ -1,0 +1,148 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.533 --> 00:00:04.167
+Vamos compor a função construtora
+chamada "SoftwareDeveloper".
+
+00:00:07.533 --> 00:00:12.100
+Quando "SoftwareDeveloper" for
+chamada com a palavra-chave "new",
+
+00:00:12.133 --> 00:00:15.700
+isso criará um novo objeto
+com propriedade "favoriteLanguage"
+
+00:00:15.733 --> 00:00:17.800
+e valor igual a JavaScript.
+
+00:00:17.833 --> 00:00:21.433
+Vamos chamar a função
+construtora "SoftwareDeveloper"
+
+00:00:21.467 --> 00:00:24.300
+com a palavra-chave "new"
+para criar um novo objeto.
+
+00:00:24.333 --> 00:00:26.167
+Vamos chamá-lo
+de "developer".
+
+00:00:29.233 --> 00:00:31.167
+Se conferirmos
+como é o "developer",
+
+00:00:32.467 --> 00:00:34.167
+vemos que ele é um objeto
+
+00:00:34.200 --> 00:00:36.600
+com propriedade única
+igual a "favoriteLanguage"
+
+00:00:36.633 --> 00:00:38.600
+apontando
+para uma string JavaScript.
+
+00:00:38.633 --> 00:00:42.667
+Vemos a função construtora
+"SoftwareDeveloper"
+
+00:00:42.700 --> 00:00:45.633
+também referenciada
+no DevTools do Chrome.
+
+00:00:45.667 --> 00:00:48.767
+Em vez de chamar a função
+construtora "SoftwareDeveloper"
+
+00:00:48.800 --> 00:00:52.000
+para criar um novo objeto,
+vamos compor um manualmente.
+
+00:00:52.033 --> 00:00:54.500
+Vamos utilizar
+a notação literal de objeto.
+
+00:00:54.533 --> 00:00:57.100
+Chamaremos este
+de "otherDeveloper".
+
+00:01:00.667 --> 00:01:03.267
+Ótimo.
+Agora vamos acessá-lo.
+
+00:01:05.433 --> 00:01:07.000
+Comparado com o "developer",
+
+00:01:07.033 --> 00:01:10.133
+parece que o objeto
+é praticamente igual.
+
+00:01:10.167 --> 00:01:13.233
+Temos apenas uma propriedade
+apontando para JavaScript
+
+00:01:13.267 --> 00:01:15.000
+da mesma forma que aqui.
+
+00:01:15.033 --> 00:01:17.933
+Perceba que a função
+construtora que criamos
+
+00:01:17.967 --> 00:01:19.967
+não está listada
+no DevTools do Chrome.
+
+00:01:20.000 --> 00:01:23.833
+Isso pode ser diferente
+no DevTools do Safari
+
+00:01:23.867 --> 00:01:25.400
+ou do Firefox,
+
+00:01:25.433 --> 00:01:29.833
+mas no Chrome, ele exibe
+a função construtora criada aqui.
+
+00:01:29.867 --> 00:01:31.700
+Vamos abrir cada um destes.
+
+00:01:35.400 --> 00:01:37.500
+Confira
+as propriedades "proto".
+
+00:01:37.533 --> 00:01:39.600
+Não se preocupe
+com o que é "proto" agora,
+
+00:01:39.633 --> 00:01:41.967
+falaremos mais sobre isso
+posteriormente.
+
+00:01:44.467 --> 00:01:47.467
+Vemos que a "constructor"
+do objeto "developer"
+
+00:01:47.500 --> 00:01:50.633
+era na verdade a função
+construtora "SoftwareDeveloper".
+
+00:01:50.667 --> 00:01:52.733
+Mas, no outro "developer",
+
+00:01:52.767 --> 00:01:56.600
+a propriedade "constructor" aponta
+para "Object".
+
+00:01:56.633 --> 00:01:58.067
+Uma rápida comparação.
+
+00:01:58.100 --> 00:01:59.933
+Os protótipos
+serão diferentes.
+
+00:01:59.967 --> 00:02:02.400
+Nos aprofundaremos em cada
+um desses em breve.
+

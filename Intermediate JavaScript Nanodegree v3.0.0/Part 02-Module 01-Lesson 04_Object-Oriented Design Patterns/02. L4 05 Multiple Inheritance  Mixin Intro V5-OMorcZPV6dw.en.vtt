@@ -1,0 +1,52 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.280
+If you've ever programmed in a traditional class-based programming language,
+
+00:00:04.280 --> 00:00:07.680
+then you know that single inheritance means a child class
+
+00:00:07.680 --> 00:00:11.450
+inherits all the data and methods from the parent class it's extending.
+
+00:00:11.450 --> 00:00:14.384
+So, for traditional OOP programmers
+
+00:00:14.384 --> 00:00:18.735
+JavaScripts prototypal linking is actually similar to single inheritance.
+
+00:00:18.735 --> 00:00:24.465
+In other words, a JavaScript object can be prototyped linked to just one object.
+
+00:00:24.465 --> 00:00:26.750
+Now, the question is,
+
+00:00:26.750 --> 00:00:30.515
+can we inherit data and functionality from outside the prototype chain?
+
+00:00:30.515 --> 00:00:34.100
+For example, what if I want the property name from
+
+00:00:34.100 --> 00:00:36.950
+this developer object or what if I want
+
+00:00:36.950 --> 00:00:40.850
+an object take on properties and methods from multiple different sources?
+
+00:00:40.850 --> 00:00:44.980
+In JavaScript, we can actually use a mixin to accomplish this.
+
+00:00:44.980 --> 00:00:48.110
+A mixin is a technique that takes on properties and methods
+
+00:00:48.110 --> 00:00:51.490
+from one object and copys them over to another object.
+
+00:00:51.490 --> 00:00:54.190
+Using a mixin, we can have an object gain
+
+00:00:54.190 --> 00:00:57.160
+new functionality all without involving inheritance.
+

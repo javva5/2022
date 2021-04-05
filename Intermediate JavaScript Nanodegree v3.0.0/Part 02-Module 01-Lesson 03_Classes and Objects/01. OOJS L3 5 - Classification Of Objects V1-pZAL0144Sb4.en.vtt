@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.230
+So, we have this dog in the dog object.
+
+00:00:04.230 --> 00:00:07.060
+What if we created an object for this flower?
+
+00:00:07.059 --> 00:00:11.189
+For properties, it has green leaves and fragrant.
+
+00:00:11.189 --> 00:00:16.554
+For methods, it can have grow or convert light.
+
+00:00:16.554 --> 00:00:20.425
+Now, we have this dog object and a flower object.
+
+00:00:20.425 --> 00:00:24.530
+They're both objects but fundamentally, they're quite different.
+
+00:00:24.530 --> 00:00:27.960
+It might be better if we can make a classification for dog objects,
+
+00:00:27.960 --> 00:00:30.179
+and one for flower objects.
+
+00:00:30.179 --> 00:00:35.549
+Object-oriented JavaScript is a way to write code that'll automatically classify objects.
+

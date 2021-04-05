@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.160
+Up to this point, we've seen lots of ways to create objects.
+
+00:00:03.160 --> 00:00:05.205
+We've written object literals,
+
+00:00:05.205 --> 00:00:07.915
+we've created functions that return objects,
+
+00:00:07.915 --> 00:00:11.850
+we've also built constructor functions to instantiate a new object.
+
+00:00:11.850 --> 00:00:14.100
+In this lesson, we'll take a closer look at
+
+00:00:14.100 --> 00:00:17.115
+a few design patterns that we can not only use to create a new object,
+
+00:00:17.115 --> 00:00:18.860
+but also extend an object,
+
+00:00:18.860 --> 00:00:21.030
+all without involving its prototype.
+
+00:00:21.030 --> 00:00:23.700
+We'll first look at mixins, what they are,
+
+00:00:23.700 --> 00:00:27.930
+and how they can be used to copy properties from one object to another object.
+
+00:00:27.930 --> 00:00:32.705
+Then, we'll create objects with private properties using two different design patterns,
+
+00:00:32.705 --> 00:00:38.170
+the module pattern and the superior revealing module pattern. Let's get started.
+

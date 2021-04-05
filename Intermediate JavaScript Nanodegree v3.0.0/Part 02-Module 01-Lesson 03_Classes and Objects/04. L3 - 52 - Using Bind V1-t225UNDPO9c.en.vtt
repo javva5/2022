@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.094
+Here's a dog object from earlier as well as the invokeTwice function.
+
+00:00:04.094 --> 00:00:12.426
+Just to recap, we tried calling invokeTwice and passed in dog.growOneYear,
+
+00:00:12.426 --> 00:00:16.125
+but that actually returned undefined.
+
+00:00:16.125 --> 00:00:19.850
+To solve this, we can now use the bind method which
+
+00:00:19.850 --> 00:00:24.200
+returns a new function with the value of this correctly bound.
+
+00:00:24.199 --> 00:00:30.155
+Now, bind is a method that we can call directly onto a function, so let's do that.
+
+00:00:30.155 --> 00:00:35.870
+Now, let's go ahead and pass in an argument into bind that'll serve as
+
+00:00:35.869 --> 00:00:38.689
+the this parameter for the target function which
+
+00:00:38.689 --> 00:00:42.414
+is growOneYear when the bound function is called.
+
+00:00:42.414 --> 00:00:46.534
+In this case, we don't want this to be the global object or window,
+
+00:00:46.534 --> 00:00:49.472
+which is the case when we called invokeTwice up here.
+
+00:00:49.472 --> 00:00:52.759
+We actually want this to be dog because we want
+
+00:00:52.759 --> 00:00:58.649
+the dog's age to increase by one. Let's go ahead and do that.
+
+00:00:58.649 --> 00:01:01.464
+The return value of this is a new function.
+
+00:01:01.465 --> 00:01:03.560
+So, let's go ahead and save this to a new variable.
+
+00:01:03.560 --> 00:01:09.189
+We'll call it myGrow.
+
+00:01:09.189 --> 00:01:17.326
+Great. Now, we can pass myGrow into invokeTwice.
+
+00:01:17.326 --> 00:01:23.370
+So, what this function invokeTwice just did was that it called myGrow twice,
+
+00:01:23.370 --> 00:01:25.335
+as we can see over here.
+
+00:01:25.334 --> 00:01:28.544
+Now, if we access the dog's age property,
+
+00:01:28.545 --> 00:01:32.415
+we should see an updated value.
+
+00:01:32.415 --> 00:01:35.495
+And indeed, it's true, seven.
+
+00:01:35.495 --> 00:01:39.640
+Just to recap, bind is a method that we call directly onto
+
+00:01:39.640 --> 00:01:45.000
+a function and returns a copy of that function with a specified this value.
+

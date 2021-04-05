@@ -1,0 +1,42 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.434 --> 00:00:04.767
+Vimos que "this" é configurado
+de acordo como a função é chamada.
+
+00:00:04.801 --> 00:00:08.667
+Mas e se quisermos
+configurar o valor de "this"?
+
+00:00:08.701 --> 00:00:10.434
+O JavaScript oferece
+alguns métodos
+
+00:00:10.467 --> 00:00:12.968
+que nos permitem fazer isso.
+
+00:00:13.000 --> 00:00:17.667
+Os métodos são: "call()",
+"apply()" e "bind()".
+
+00:00:17.734 --> 00:00:20.400
+"call()" e "apply()" são chamados
+como métodos em uma função,
+
+00:00:20.434 --> 00:00:23.934
+com algumas diferenças na forma
+como os argumentos são passados.
+
+00:00:23.968 --> 00:00:28.667
+Por outro lado, "bind()" é um método
+que retorna uma nova função.
+
+00:00:28.701 --> 00:00:31.100
+Cada método é utilizado
+em contexto diferente.
+
+00:00:31.133 --> 00:00:32.300
+Vamos dar uma olhada.
+

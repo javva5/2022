@@ -1,0 +1,34 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.016
+As you've learned throughout this course,
+
+00:00:02.016 --> 00:00:04.654
+almost everything in JavaScript is an object.
+
+00:00:04.655 --> 00:00:07.860
+Up until now, we've been building one off objects.
+
+00:00:07.860 --> 00:00:10.915
+These are fine enough, but to build more structured applications,
+
+00:00:10.914 --> 00:00:14.929
+we need to learn how to build the classes or categories of objects.
+
+00:00:14.929 --> 00:00:18.765
+In this lesson we'll create new objects with constructor functions.
+
+00:00:18.765 --> 00:00:22.810
+We'll also leverage the this keyword to access objects,
+
+00:00:22.809 --> 00:00:26.721
+and even learn how to set the value of this ourselves.
+
+00:00:26.721 --> 00:00:28.949
+Finally, we'll learn how to base objects on
+
+00:00:28.949 --> 00:00:32.000
+other objects with prototypal inheritance and subclassing.
+

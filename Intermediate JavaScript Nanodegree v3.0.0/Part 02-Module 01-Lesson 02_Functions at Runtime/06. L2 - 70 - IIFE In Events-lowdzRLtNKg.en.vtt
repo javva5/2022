@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.805
+Here's a quote from earlier. Just to recap,
+
+00:00:02.805 --> 00:00:06.945
+we grabbed the button from the page and store that in a variable that we call, button.
+
+00:00:06.945 --> 00:00:11.637
+Then on button, we AddEventListner for click and we pass it in f field.
+
+00:00:11.637 --> 00:00:17.120
+Note that the if field returns a function that closes over the count variable.
+
+00:00:17.120 --> 00:00:19.789
+What we also have is the page itself.
+
+00:00:19.789 --> 00:00:21.720
+All it is is just a simple button,
+
+00:00:21.719 --> 00:00:26.229
+and the script tag just references the button that JS file that we just saw.
+
+00:00:26.230 --> 00:00:28.625
+Now, we'll see it all in action.
+
+00:00:28.625 --> 00:00:30.225
+So if I click once,
+
+00:00:30.225 --> 00:00:33.405
+click it again, we see the alert.
+
+00:00:33.405 --> 00:00:37.050
+Let's try it again.
+
+00:00:37.049 --> 00:00:41.000
+Excellent.
+

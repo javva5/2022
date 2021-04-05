@@ -1,0 +1,42 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.334 --> 00:00:04.634
+Ótimo trabalho.
+Falamos de classes e objetos.
+
+00:00:04.667 --> 00:00:07.100
+Começamos construindo
+uma função construtora
+
+00:00:07.133 --> 00:00:09.300
+para instanciar
+novos objetos,
+
+00:00:09.334 --> 00:00:12.767
+configuramos um valor
+para a palavra-chave "this"
+
+00:00:12.801 --> 00:00:15.234
+e vimos como ela pode
+significar algo diferente
+
+00:00:15.267 --> 00:00:17.300
+dependendo de como a função
+é invocada.
+
+00:00:17.334 --> 00:00:20.234
+Adicionamos funcionalidade
+a objetos adicionando métodos
+
+00:00:20.267 --> 00:00:22.067
+ao protótipo do objeto.
+
+00:00:22.100 --> 00:00:24.834
+Por fim, implementamos
+a herança de protótipos
+
+00:00:24.868 --> 00:00:26.434
+de objetos estendidos.
+

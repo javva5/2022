@@ -1,0 +1,65 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.467 --> 00:00:03.167
+Temos uma função construtora
+chamada "Developer",
+
+00:00:03.200 --> 00:00:05.767
+que invocamos para configurar
+um novo objeto
+
+00:00:05.800 --> 00:00:07.633
+com uma única propriedade
+"name".
+
+00:00:07.667 --> 00:00:09.067
+Vamos fazer isso.
+
+00:00:11.367 --> 00:00:13.633
+Chamamos a função
+construtora "Developer"
+
+00:00:13.667 --> 00:00:17.067
+com a palavra-chave "new"
+passando a string "Veronika",
+
+00:00:17.100 --> 00:00:20.600
+que será o valor da propriedade
+"name" do objeto.
+
+00:00:20.633 --> 00:00:23.367
+Vamos conferir se isso
+é de fato um objeto.
+
+00:00:25.267 --> 00:00:26.533
+De fato é.
+
+00:00:27.467 --> 00:00:30.000
+Podemos utilizar
+a instância de método
+
+00:00:30.033 --> 00:00:33.367
+para conferir se é uma instância
+da função construtora "Developer".
+
+00:00:35.933 --> 00:00:38.867
+Utilizar a instância do operador
+retorna um booleano.
+
+00:00:38.900 --> 00:00:40.933
+Vemos que é "true".
+
+00:00:40.967 --> 00:00:45.533
+Não coloque parêntese ao fim
+do nome da função.
+
+00:00:45.567 --> 00:00:48.267
+Não estamos invocando
+a função construtora "Developer",
+
+00:00:48.300 --> 00:00:50.300
+só estamos
+nos referindo ao nome.
+

@@ -1,0 +1,100 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.433 --> 00:00:03.400
+Esta é uma função de expressão
+armazenada em uma variável,
+
+00:00:03.433 --> 00:00:04.733
+"myFunction".
+
+00:00:04.767 --> 00:00:07.633
+Uma função armazenada numa variável
+não precisa de um nome de função,
+
+00:00:07.667 --> 00:00:08.633
+como você vê aqui,
+
+00:00:08.667 --> 00:00:11.567
+ela, na verdade,
+aponta para uma função anônima.
+
+00:00:11.600 --> 00:00:13.800
+Mas o maior benefício
+de ter um nome de função
+
+00:00:13.833 --> 00:00:15.633
+é que ele vai aparecer
+durante a depuração,
+
+00:00:15.667 --> 00:00:17.467
+então também poderíamos
+ter dado um nome a ela.
+
+00:00:20.500 --> 00:00:23.433
+Agora, você pode invocar a função
+apenas usando o nome da variável.
+
+00:00:25.333 --> 00:00:28.167
+Ótimo. Agora, vamos conferir
+o exemplo que tenho na outra tela.
+
+00:00:29.367 --> 00:00:31.367
+Aqui, temos
+uma declaração de função
+
+00:00:31.400 --> 00:00:34.100
+que retorna uma média
+de três números passados a ela:
+
+00:00:34.133 --> 00:00:36.300
+"n1", "n2" e "n3".
+
+00:00:37.567 --> 00:00:40.733
+Uma coisa que podemos fazer
+é checar a extensão dessa função.
+
+00:00:40.767 --> 00:00:43.267
+Para isso, chamamos ".length"
+em "average".
+
+00:00:44.867 --> 00:00:46.333
+Ela vai retornar "3".
+
+00:00:46.367 --> 00:00:51.800
+Esse método é peculiar, porque
+chamamos ".length" em uma função.
+
+00:00:52.267 --> 00:00:55.500
+Isso fornece mais provas
+de que a função é um objeto.
+
+00:00:55.533 --> 00:00:58.300
+Outra prova que temos
+de que funções são objetos
+
+00:00:58.333 --> 00:01:01.133
+é que cada função
+tem uma propriedade "name",
+
+00:01:01.167 --> 00:01:03.067
+ou seja, podemos conferir
+o nome da função.
+
+00:01:04.167 --> 00:01:06.867
+Se chamarmos ".name"
+nesta função "average",
+
+00:01:07.933 --> 00:01:09.600
+ela nos retorna
+o nome da função.
+
+00:01:10.033 --> 00:01:13.300
+Então parece que podemos acessar
+propriedades em funções,
+
+00:01:13.333 --> 00:01:16.633
+porque, no JavaScript, funções
+são objetos de primeira classe.
+

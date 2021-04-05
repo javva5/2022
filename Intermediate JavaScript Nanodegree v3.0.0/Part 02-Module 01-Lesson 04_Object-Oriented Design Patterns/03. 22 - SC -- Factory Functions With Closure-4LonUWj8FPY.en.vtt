@@ -1,0 +1,106 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.090
+This is a factory function that returns a closure.
+
+00:00:03.090 --> 00:00:05.550
+So, like an instance of a class,
+
+00:00:05.550 --> 00:00:10.450
+the closure has its own functions and variables as well. Check out what's going on here.
+
+00:00:10.450 --> 00:00:14.705
+First, we can see that the radio function has a single parameter, "mode".
+
+00:00:14.705 --> 00:00:18.930
+The radio function also has a local variable defined in it called "on",
+
+00:00:18.930 --> 00:00:24.450
+and what this function returns is simply an object with a couple properties,
+
+00:00:24.450 --> 00:00:27.395
+mode, turnOn and isOn.
+
+00:00:27.395 --> 00:00:32.330
+So, what's interesting to note about this factory function is that the object that's
+
+00:00:32.330 --> 00:00:34.790
+returned from this function actually has
+
+00:00:34.790 --> 00:00:37.700
+a reference to variables defined within the function "on".
+
+00:00:37.700 --> 00:00:41.850
+You can see on being used over here and on being returned over here.
+
+00:00:41.850 --> 00:00:44.540
+What this object is doing is that it's closing over
+
+00:00:44.540 --> 00:00:47.330
+a variable defined it within its parent function.
+
+00:00:47.330 --> 00:00:49.935
+In other words, it preserves his own state.
+
+00:00:49.935 --> 00:00:53.330
+I'm going to invoke this function and pass in a single argument for
+
+00:00:53.330 --> 00:00:56.635
+its mode and let me go ahead and save this to a variable,
+
+00:00:56.635 --> 00:00:58.875
+we'll just call it fmRadio.
+
+00:00:58.875 --> 00:01:01.840
+So, if this radio function returns an object,
+
+00:01:01.840 --> 00:01:05.340
+what if we try to access this on variable over here?
+
+00:01:06.010 --> 00:01:12.150
+We get undefined which actually makes sense if you check out what fmRadio looks like.
+
+00:01:12.950 --> 00:01:17.060
+fmRadio is just an object with a single mode property which points to
+
+00:01:17.060 --> 00:01:21.395
+a string in two methods, turnOn and isOn.
+
+00:01:21.395 --> 00:01:25.550
+So, even though the object references this on variable over here,
+
+00:01:25.550 --> 00:01:29.400
+on itself isn't actually a property in this fmRadio object.
+
+00:01:29.400 --> 00:01:32.470
+But since isOn still references the on variable,
+
+00:01:32.470 --> 00:01:39.070
+we can still access the value of on since isOn closes over it. Check it out.
+
+00:01:39.970 --> 00:01:42.550
+So again, as we expect,
+
+00:01:42.550 --> 00:01:46.620
+on should return false and that's exactly what we get over here.
+
+00:01:46.620 --> 00:01:50.120
+Before moving on, I'm actually going to go ahead and clear my console really quick,
+
+00:01:50.120 --> 00:01:51.625
+give myself a little bit more space.
+
+00:01:51.625 --> 00:01:54.555
+Now, let's go ahead and call the other method turnOn,
+
+00:01:54.555 --> 00:01:57.775
+and now let's check out what the isOn method returns.
+
+00:01:57.775 --> 00:02:03.080
+It returns true, since the turnOn method actually reassigns the value of on.
+
+00:02:03.080 --> 00:02:07.330
+So again, you can leverage factory functions with the closure to preserve state.
+

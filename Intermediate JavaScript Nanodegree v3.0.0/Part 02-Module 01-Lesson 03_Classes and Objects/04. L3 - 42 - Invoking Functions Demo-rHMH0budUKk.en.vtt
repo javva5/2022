@@ -1,0 +1,109 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.700
+Here, we have an object called cat as well as a function, sayHello.
+
+00:00:04.700 --> 00:00:09.449
+All sayHello does is taking a single parameter and prints out a message to the console.
+
+00:00:09.449 --> 00:00:11.309
+Now, this might look kind of peculiar,
+
+00:00:11.310 --> 00:00:15.359
+because sayHello actually references the "this" keyword.
+
+00:00:15.359 --> 00:00:17.699
+If we invoked sayHello as a function,
+
+00:00:17.699 --> 00:00:19.814
+what would "this" get set to?
+
+00:00:19.815 --> 00:00:23.429
+Well, it would get set to window or the global object.
+
+00:00:23.429 --> 00:00:26.766
+So, if you wanted "this" to refer to cat,
+
+00:00:26.766 --> 00:00:31.649
+we can do it ourselves manually using the special call or apply methods.
+
+00:00:31.649 --> 00:00:33.734
+Let's check out how we can do that, starting with call.
+
+00:00:33.734 --> 00:00:39.564
+Call's a method that we can invoke directly onto a function. Let's go ahead and do that.
+
+00:00:39.564 --> 00:00:44.849
+We can pass in two arguments right now into the call method.
+
+00:00:44.850 --> 00:00:50.045
+First, it'll be the object that we bind "this" to which will be cat.
+
+00:00:50.045 --> 00:00:55.820
+Next, it's a set of arguments passed into the function that call is being called on,
+
+00:00:55.820 --> 00:00:57.020
+in this case would be Hello,
+
+00:00:57.020 --> 00:00:59.782
+and we know that it takes in a single argument. Just message.
+
+00:00:59.781 --> 00:01:03.539
+Let's go ahead and pass on that message.
+
+00:01:03.640 --> 00:01:09.332
+Great, let's go ahead and execute this and see what we get.
+
+00:01:09.332 --> 00:01:12.640
+And there you have it. Nice to see you, Bailey.
+
+00:01:12.640 --> 00:01:16.575
+We can actually achieve the same results using the apply method,
+
+00:01:16.575 --> 00:01:18.954
+but the arguments passed on are a little bit different.
+
+00:01:18.954 --> 00:01:20.429
+Let's check it out. I'll switch to
+
+00:01:20.430 --> 00:01:23.885
+the other window right now to give myself a little bit more space here.
+
+00:01:23.885 --> 00:01:29.195
+Just like call, apply is directly invoked onto a function.
+
+00:01:29.194 --> 00:01:32.019
+The first argument should be the same,
+
+00:01:32.019 --> 00:01:37.744
+which is just the object that you want to bind this to, in this case would be cat.
+
+00:01:37.745 --> 00:01:42.680
+Next, rather than separating individual arguments that will be passed
+
+00:01:42.680 --> 00:01:47.178
+into the sayHello function by commas like we do with call,
+
+00:01:47.177 --> 00:01:51.105
+apply actually takes in all the arguments in the form of an array.
+
+00:01:51.105 --> 00:01:52.924
+Again, we know in this case it's a single argument
+
+00:01:52.924 --> 00:01:55.474
+because sayHello only takes in message.
+
+00:01:55.474 --> 00:01:59.427
+So let's go ahead and pass on our message in an array.
+
+00:01:59.427 --> 00:02:04.078
+Great, let's invoke it and see what happens.
+
+00:02:04.078 --> 00:02:06.640
+Hello, Bailey. There we go.
+
+00:02:06.640 --> 00:02:11.289
+Call and apply are great ways to set the value of "this" ourselves.
+

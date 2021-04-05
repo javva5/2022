@@ -1,0 +1,85 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.701 --> 00:00:02.067
+O que é esse código?
+
+00:00:02.100 --> 00:00:04.701
+Se você disse "objeto",
+acertou.
+
+00:00:04.734 --> 00:00:06.601
+Espere aí. O quê? Objeto?
+
+00:00:06.634 --> 00:00:07.734
+Isso mesmo.
+
+00:00:07.767 --> 00:00:10.767
+Você deve ter aprendido
+que isso é uma "função".
+
+00:00:11.467 --> 00:00:13.033
+Até pode ser verdade.
+
+00:00:13.067 --> 00:00:16.767
+Mas então é uma função
+ou um objeto?
+
+00:00:16.801 --> 00:00:20.033
+Isso eu sei,
+mas você tem que descobrir.
+
+00:00:20.067 --> 00:00:22.767
+Nesta aula, você vai aprender
+sobre esse mistério,
+
+00:00:22.801 --> 00:00:25.400
+e descobrir se isso é um objeto,
+uma função,
+
+00:00:25.434 --> 00:00:27.234
+ou uma função-objeto.
+
+00:00:27.267 --> 00:00:29.200
+No processo,
+você vai aprender a escrever
+
+00:00:29.234 --> 00:00:30.901
+códigos mais limpos
+e mais eficientes,
+
+00:00:30.934 --> 00:00:33.367
+além de entender o quão poderoso
+o JavaScript pode ser
+
+00:00:33.400 --> 00:00:35.000
+nos apps que você construir.
+
+00:00:35.033 --> 00:00:37.300
+Você vai aprender a passar
+funções como argumentos
+
+00:00:37.334 --> 00:00:38.667
+para outras funções
+
+00:00:38.701 --> 00:00:42.234
+e a identificar
+quando e como o escopo é criado.
+
+00:00:42.267 --> 00:00:44.634
+Você também vai aprender
+como funções podem monitorar
+
+00:00:44.667 --> 00:00:48.167
+as variáveis ao redor delas
+através do conceito de "closure".
+
+00:00:48.200 --> 00:00:51.167
+Por fim, você vai usar funções
+que são imediatamente invocadas
+
+00:00:51.200 --> 00:00:53.868
+depois de serem declaradas
+para gerenciar dados particulares.
+

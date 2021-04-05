@@ -1,0 +1,91 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.040
+Here we have the myCounter function that uses a closure to create a private state.
+
+00:00:05.040 --> 00:00:08.765
+First, we have a local variable count which is set to zero.
+
+00:00:08.765 --> 00:00:10.995
+Then, myCounter returns a function that
+
+00:00:10.994 --> 00:00:14.554
+increments count by one, and then returns the count.
+
+00:00:14.554 --> 00:00:18.277
+What's really cool is that this function has private but mutable state,
+
+00:00:18.277 --> 00:00:20.219
+but it can't be accessed externally because it
+
+00:00:20.219 --> 00:00:22.714
+closes over the counter variable over here.
+
+00:00:22.714 --> 00:00:25.289
+I'm going to invoke my counter and save
+
+00:00:25.289 --> 00:00:29.559
+the return value to a variable, and let's call that counter.
+
+00:00:29.559 --> 00:00:33.379
+Great. Now let's call it.
+
+00:00:33.380 --> 00:00:35.705
+After calling it, we get one,
+
+00:00:35.704 --> 00:00:37.679
+which is one more than the original account of zero.
+
+00:00:37.679 --> 00:00:41.005
+Let's call it again.
+
+00:00:41.005 --> 00:00:46.370
+So now we have two, and if we call it again, you have three.
+
+00:00:46.369 --> 00:00:47.954
+Since count keeps incrementing,
+
+00:00:47.954 --> 00:00:51.759
+we know that this data is retained and it can also be modified.
+
+00:00:51.759 --> 00:00:55.969
+And that's what happens when you see each counter call up here one, two and three.
+
+00:00:55.969 --> 00:00:57.174
+Now, let's try to do something else.
+
+00:00:57.174 --> 00:00:59.834
+Let's actually try to access count variable.
+
+00:00:59.835 --> 00:01:04.245
+But before I do that, let me clear my screen so I get a little bit more space.
+
+00:01:04.245 --> 00:01:07.418
+I'm going to show some of the previous code again just for reference.
+
+00:01:07.418 --> 00:01:14.704
+Now if we try to access the count variable, it shows undefined.
+
+00:01:14.703 --> 00:01:17.304
+What if we just say count? It throws an error.
+
+00:01:17.305 --> 00:01:20.470
+What's really nice about using closures to create private state,
+
+00:01:20.469 --> 00:01:23.379
+is that there's no way any method outside of the closure
+
+00:01:23.379 --> 00:01:27.609
+itself can access the count state or the count data.
+
+00:01:27.609 --> 00:01:29.995
+Having a private state is pretty useful because now
+
+00:01:29.995 --> 00:01:33.070
+any of your users can't accidentally reset that count.
+
+00:01:33.069 --> 00:01:36.159
+There's no way that that data can be accessed externally.
+

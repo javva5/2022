@@ -1,0 +1,48 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.167 --> 00:00:04.701
+Quando uma função é chamada,
+a variável "this" recebe um valor.
+
+00:00:04.734 --> 00:00:07.234
+Dependendo de como a função
+foi chamada,
+
+00:00:07.267 --> 00:00:10.267
+a quê "this" se refere
+pode ser muito diferente.
+
+00:00:10.300 --> 00:00:13.267
+Se a função construtora é chamada
+com o operador "new",
+
+00:00:13.300 --> 00:00:16.634
+"this" é configurado
+ao novo objeto.
+
+00:00:16.667 --> 00:00:18.934
+Se o método é chamado
+em um objeto,
+
+00:00:18.968 --> 00:00:22.033
+"this" é configurado
+ao objeto.
+
+00:00:22.067 --> 00:00:24.767
+Se uma função normal
+é simplesmente invocada,
+
+00:00:24.801 --> 00:00:28.567
+"this" é configurado à janela
+ou ao objeto global.
+
+00:00:28.601 --> 00:00:32.434
+Existem formas diferentes
+de alterar o valor do "this",
+
+00:00:32.467 --> 00:00:34.267
+mas veremos isso
+na próxima seção.
+

@@ -1,0 +1,125 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.133 --> 00:00:03.000
+Esta é a função "myCounter"
+que utiliza um closure
+
+00:00:03.033 --> 00:00:04.700
+para criar
+um estado privado.
+
+00:00:04.733 --> 00:00:08.600
+Temos uma variável local,
+"count", configurada como zero.
+
+00:00:08.633 --> 00:00:12.500
+E "myCounter" retorna uma função
+que aumenta a contagem em um
+
+00:00:12.533 --> 00:00:14.333
+e retorna o valor.
+
+00:00:14.367 --> 00:00:18.100
+Esta função possui estado
+privado e mutável,
+
+00:00:18.133 --> 00:00:19.900
+mas não pode
+ser acessada de fora,
+
+00:00:19.933 --> 00:00:23.500
+porque ela fecha
+a variável "count" aqui.
+
+00:00:23.533 --> 00:00:26.867
+Invoco "myCounter"
+e salvo o valor em uma variável.
+
+00:00:26.900 --> 00:00:28.900
+Vamos chamá-la de "counter".
+
+00:00:31.267 --> 00:00:32.933
+Ótimo. Vamos chamá-la.
+
+00:00:34.133 --> 00:00:35.700
+Após chamá-la,
+recebemos "um",
+
+00:00:35.733 --> 00:00:38.067
+que é maior
+do que a contagem inicial "zero".
+
+00:00:38.100 --> 00:00:39.667
+Vamos chamá-la novamente.
+
+00:00:40.900 --> 00:00:43.933
+Agora temos dois.
+E se chamarmos novamente,
+
+00:00:43.967 --> 00:00:45.133
+temos três.
+
+00:00:46.100 --> 00:00:47.967
+Como a contagem
+continua aumentando,
+
+00:00:48.000 --> 00:00:51.767
+sabemos que os dados são retidos
+e podem ser modificados.
+
+00:00:51.800 --> 00:00:54.233
+É isso que acontece a cada vez
+que chamamos "counter",
+
+00:00:54.267 --> 00:00:55.867
+um, dois e três.
+
+00:00:55.900 --> 00:00:59.800
+Agora vamos tentar acessar
+a variável "count".
+
+00:00:59.833 --> 00:01:03.200
+Antes disso, vou limpar a tela
+para ter mais espaço.
+
+00:01:04.300 --> 00:01:07.367
+Mostrarei o código anterior
+como referência.
+
+00:01:07.400 --> 00:01:09.567
+Se tentarmos acessar
+a variável "count",
+
+00:01:12.700 --> 00:01:14.600
+ela exibe "undefined".
+
+00:01:14.633 --> 00:01:17.433
+E se dissermos só "count"?
+Ele dá um erro.
+
+00:01:17.467 --> 00:01:20.500
+O legal de utilizar closure
+para criar estado privado,
+
+00:01:20.533 --> 00:01:24.200
+é que nenhum método
+fora do closure
+
+00:01:24.233 --> 00:01:27.533
+pode acessar o estado
+ou os dados de "count".
+
+00:01:27.567 --> 00:01:29.100
+Ter um estado privado
+é útil,
+
+00:01:29.133 --> 00:01:33.067
+pois o usuário não pode reiniciar
+a contagem por acidente.
+
+00:01:33.100 --> 00:01:36.300
+Não há como acessar
+os dados de fora.
+

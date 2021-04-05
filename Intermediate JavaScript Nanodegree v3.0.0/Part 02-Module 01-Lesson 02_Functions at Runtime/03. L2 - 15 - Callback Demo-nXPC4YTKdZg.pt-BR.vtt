@@ -1,0 +1,93 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:02.900 --> 00:00:04.533
+Vamos examinar
+estas duas funções.
+
+00:00:04.567 --> 00:00:08.667
+Primeiro, temos "callAndAdd",
+que recebe dois argumentos:
+
+00:00:08.700 --> 00:00:10.567
+sendo o primeiro
+um único número,
+
+00:00:10.600 --> 00:00:13.167
+e o segundo,
+uma função callback.
+
+00:00:13.200 --> 00:00:15.467
+A outra função que temos
+é a "returnsThree",
+
+00:00:15.500 --> 00:00:17.567
+que não recebe
+nenhum argumento,
+
+00:00:17.600 --> 00:00:19.867
+e retorna simplesmente
+o número "3".
+
+00:00:20.500 --> 00:00:23.767
+Vamos invocar "callAndAdd",
+passar um número a ela
+
+00:00:23.800 --> 00:00:26.833
+e também passar a função
+"returnsThree" para ela,
+
+00:00:26.867 --> 00:00:28.600
+como uma callback.
+
+00:00:36.367 --> 00:00:38.333
+Ótimo. Invocando
+a função "callAndAdd"
+
+00:00:38.367 --> 00:00:39.867
+e passando um "2" a ela,
+
+00:00:39.900 --> 00:00:42.767
+como a função callback
+retorna um "3",
+
+00:00:42.800 --> 00:00:45.100
+obtemos um valor
+de saída de "5".
+
+00:00:45.133 --> 00:00:46.467
+Vamos ver o que ocorre.
+
+00:00:49.400 --> 00:00:53.200
+A execução do código ocorre
+na função "callAndAdd".
+
+00:00:53.233 --> 00:00:57.433
+A variável "n" armazenou
+o número "2", que passamos,
+
+00:01:00.267 --> 00:01:03.733
+e a variável da função callback
+armazena a função "returnsThree"
+
+00:01:03.767 --> 00:01:05.033
+que passamos.
+
+00:01:10.367 --> 00:01:14.000
+A "callAndAdd" invoca
+a função "returnsThree",
+
+00:01:14.033 --> 00:01:15.867
+que retorna o número "3".
+
+00:01:19.367 --> 00:01:20.567
+Considerando tudo isso,
+
+00:01:20.600 --> 00:01:23.433
+a função "callAndAdd"
+retorna a soma de "2" mais "3",
+
+00:01:23.733 --> 00:01:25.167
+e o resultado é "5".
+

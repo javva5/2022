@@ -1,0 +1,153 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.267 --> 00:00:04.367
+Temos um objeto chamado "cat"
+e uma função "sayHello".
+
+00:00:04.400 --> 00:00:06.700
+Ela pega um parÃ¢metro
+
+00:00:06.733 --> 00:00:09.333
+e imprime uma mensagem
+no console.
+
+00:00:09.367 --> 00:00:11.200
+Isso pode ser peculiar,
+
+00:00:11.233 --> 00:00:15.267
+pois "sayHello" faz referÃªncia
+Ã&nbsp; palavra-chave "this".
+
+00:00:15.300 --> 00:00:17.867
+Se invocarmos "sayHello"
+como funÃ§Ã£o,
+
+00:00:17.900 --> 00:00:20.167
+como "this" serÃ¡
+configurado?
+
+00:00:20.200 --> 00:00:23.467
+SerÃ¡ configurado Ã&nbsp; janela
+ou ao objeto global.
+
+00:00:23.500 --> 00:00:26.667
+Se quisermos que "this"
+se refira ao objeto,
+
+00:00:26.700 --> 00:00:31.367
+podemos fazer isso manualmente com
+os mÃ©todos "call()" ou "apply()".
+
+00:00:31.400 --> 00:00:33.867
+Vejamos como fazer isso,
+comeÃ§ando com o "call()".
+
+00:00:33.900 --> 00:00:37.167
+Ele Ã© um mÃ©todo que invocamos
+diretamente em uma funÃ§Ã£o.
+
+00:00:37.200 --> 00:00:38.467
+Vamos fazer isso.
+
+00:00:41.233 --> 00:00:44.933
+Passamos dois argumentos
+no mÃ©todo "call()".
+
+00:00:44.967 --> 00:00:48.000
+O primeiro Ã© o objeto
+no qual vinculamos "this",
+
+00:00:48.033 --> 00:00:49.400
+que serÃ¡ "cat",
+
+00:00:51.233 --> 00:00:53.933
+e o conjunto de argumentos
+passado na funÃ§Ã£o
+
+00:00:53.967 --> 00:00:57.000
+na qual "call()" estÃ¡ sendo chamado,
+neste caso, "Hello".
+
+00:00:57.033 --> 00:01:00.400
+Sabemos que ele tem
+argumento Ãºnico, "message".
+
+00:01:00.433 --> 00:01:02.300
+Vamos passar a mensagem.
+
+00:01:05.567 --> 00:01:08.300
+Ã“timo. Vamos executar
+para ver o que recebemos.
+
+00:01:10.000 --> 00:01:12.567
+Pronto.
+"Que bom ver vocÃª, Bailey!"
+
+00:01:12.600 --> 00:01:16.467
+Teremos os mesmos resultados
+com o mÃ©todo "apply()",
+
+00:01:16.500 --> 00:01:18.900
+mas os argumentos passados
+sÃ£o diferentes.
+
+00:01:18.933 --> 00:01:23.300
+Vejamos. Mudarei de janela
+para ter mais espaÃ§o.
+
+00:01:23.933 --> 00:01:28.000
+Assim como "call()",
+"apply()" Ã© invocado na funÃ§Ã£o.
+
+00:01:30.367 --> 00:01:32.100
+O primeiro argumento
+Ã© o mesmo,
+
+00:01:32.133 --> 00:01:35.033
+que Ã© o objeto no qual
+desejamos vincular "this",
+
+00:01:35.067 --> 00:01:36.967
+neste caso, seria "cat".
+
+00:01:38.833 --> 00:01:41.833
+Agora, em vez de separar
+argumentos individuais
+
+00:01:41.867 --> 00:01:45.467
+que serÃ£o passados para a funÃ§Ã£o
+"sayHello" com vÃ­rgulas,
+
+00:01:45.500 --> 00:01:47.067
+assim como fizemos
+com "call()",
+
+00:01:47.100 --> 00:01:50.900
+"apply()" pega todos os argumentos
+na forma de array.
+
+00:01:50.933 --> 00:01:52.967
+Sabemos que Ã©
+um argumento Ãºnico,
+
+00:01:53.000 --> 00:01:55.433
+pois "sayHello"
+sÃ³ recebe "message".
+
+00:01:55.467 --> 00:01:58.233
+Passaremos nossa mensagem
+em um array.
+
+00:02:00.733 --> 00:02:03.033
+Vamos invocar
+para ver o que acontece.
+
+00:02:04.533 --> 00:02:06.600
+"OlÃ¡, Bailey." Prontinho.
+
+00:02:06.633 --> 00:02:10.667
+"call()" e "apply()" sÃ£o boas formas
+de definirmos o valor de "this".
+

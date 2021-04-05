@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.230
+In JavaScript, functions are first-class functions.
+
+00:00:04.230 --> 00:00:06.215
+But what does that mean?
+
+00:00:06.214 --> 00:00:07.849
+First, think of a string.
+
+00:00:07.849 --> 00:00:10.369
+Let's use the string, Udacity.
+
+00:00:10.369 --> 00:00:12.945
+This string can be stored in a variable.
+
+00:00:12.945 --> 00:00:14.759
+It can be returned from a function.
+
+00:00:14.759 --> 00:00:17.864
+And it can be passed as an argument to a function.
+
+00:00:17.864 --> 00:00:20.534
+However, not all programming languages have
+
+00:00:20.535 --> 00:00:23.350
+equal support for the different data structures.
+
+00:00:23.350 --> 00:00:25.493
+For example, in some languages,
+
+00:00:25.493 --> 00:00:27.780
+functions can't be stored in variables.
+
+00:00:27.780 --> 00:00:30.660
+They can't be passed as arguments to other functions.
+
+00:00:30.660 --> 00:00:34.140
+And they can't be the return value of a function.
+
+00:00:34.140 --> 00:00:35.759
+So compared with the humble string,
+
+00:00:35.759 --> 00:00:38.799
+the function doesn't have all of these privileges.
+
+00:00:38.799 --> 00:00:41.358
+Now, that's for some languages.
+
+00:00:41.359 --> 00:00:44.359
+JavaScript does have first-class functions.
+
+00:00:44.359 --> 00:00:47.130
+This means that the JavaScript function can do
+
+00:00:47.130 --> 00:00:50.410
+all of the things we did with the Udacity string.
+
+00:00:50.409 --> 00:00:52.049
+We can store it in a variable.
+
+00:00:52.049 --> 00:00:54.164
+We can pass it as an argument.
+
+00:00:54.164 --> 00:00:56.460
+And we can return it from a function.
+
+00:00:56.460 --> 00:01:01.250
+So a first-class function means it has equal status in that programming language,
+
+00:01:01.250 --> 00:01:03.000
+as the other data structures.
+

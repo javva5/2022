@@ -1,0 +1,124 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.120
+Here we have a constructor function called Hero,
+
+00:00:03.120 --> 00:00:06.075
+which creates objects with a few properties,
+
+00:00:06.075 --> 00:00:09.505
+when we invoke this function with a new keyword.
+
+00:00:09.505 --> 00:00:14.804
+The name that we pass in will be the value of a new object's name property.
+
+00:00:14.804 --> 00:00:19.905
+Likewise, the role that we pass on will become the value of the role property,
+
+00:00:19.905 --> 00:00:23.730
+the newly created object will also have a method called introduce,
+
+00:00:23.730 --> 00:00:27.015
+which simply prints a message to the console using the objects,
+
+00:00:27.015 --> 00:00:29.414
+name, and role properties.
+
+00:00:29.414 --> 00:00:31.394
+Let's go ahead and invoke Hero,
+
+00:00:31.394 --> 00:00:40.487
+and instantiate a few new objects.
+
+00:00:40.487 --> 00:00:47.590
+Here we called the Hero constructor function using the new keyword,
+
+00:00:47.590 --> 00:00:49.090
+and pass it to arguments,
+
+00:00:49.090 --> 00:00:51.740
+we pass in the string "Taylor" to represent the name,
+
+00:00:51.740 --> 00:00:55.210
+and we also pass in the string "mother" to represent the role.
+
+00:00:55.210 --> 00:00:58.645
+Calling this function with a new instantiates a new object,
+
+00:00:58.645 --> 00:01:01.315
+which is referenced by the "Taylor" variable over here.
+
+00:01:01.314 --> 00:01:05.140
+Likewise we use the same constructor function and call it with new again,
+
+00:01:05.140 --> 00:01:09.890
+and passed it a string of "Riley" and a string "coach" to create a new object.
+
+00:01:09.890 --> 00:01:11.484
+Let's go ahead and check out a few properties,
+
+00:01:11.484 --> 00:01:13.200
+and then have the objects introduce themselves.
+
+00:01:13.200 --> 00:01:17.037
+We can see that accessing by
+
+00:01:17.037 --> 00:01:19.480
+name property of the "Taylor" object returns
+
+00:01:19.480 --> 00:01:22.630
+"Taylor" which is what we passed into the constructor function over here.
+
+00:01:22.629 --> 00:01:25.030
+Let's check out some of the "Riley" object's properties.
+
+00:01:25.030 --> 00:01:28.849
+Great.
+
+00:01:28.849 --> 00:01:30.859
+We can see that accessing the role property of
+
+00:01:30.859 --> 00:01:33.439
+the "Riley" object gives us a string "coach",
+
+00:01:33.439 --> 00:01:36.715
+which is exactly what we pass the constructor function over here.
+
+00:01:36.715 --> 00:01:41.469
+Let us go ahead and call the introduce method on each object.
+
+00:01:44.260 --> 00:01:48.990
+Awesome. So keep in mind that since we called
+
+00:01:48.989 --> 00:01:52.034
+introduce as a method onto the "Taylor" object,
+
+00:01:52.034 --> 00:01:54.524
+the value of this gets set to the object itself,
+
+00:01:54.525 --> 00:01:57.945
+meaning that we can grab Taylor from this tag name,
+
+00:01:57.944 --> 00:02:01.859
+and we can also grab "mother", from this.role.
+
+00:02:01.859 --> 00:02:05.484
+Same goes for the "Riley" object when we call introduce on the "Riley" object.
+
+00:02:05.484 --> 00:02:08.939
+We grab Riley's name property which is a string "Riley" and
+
+00:02:08.939 --> 00:02:12.655
+we also grab Riley's role property which is "coach."
+
+00:02:12.655 --> 00:02:14.205
+What's great about constructor functions,
+
+00:02:14.205 --> 00:02:16.800
+is that we can call the same constructor function and
+
+00:02:16.800 --> 00:02:20.000
+create as many instances or objects as we like.
+

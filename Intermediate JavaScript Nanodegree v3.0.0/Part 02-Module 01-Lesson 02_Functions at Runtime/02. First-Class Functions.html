@@ -1,0 +1,364 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>First-Class Functions</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Functions at Runtime</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. First-Class Functions.html">02. First-Class Functions</a>
+    </li>
+    <li class="">
+      <a href="03. Callbacks.html">03. Callbacks</a>
+    </li>
+    <li class="">
+      <a href="04. Scope.html">04. Scope</a>
+    </li>
+    <li class="">
+      <a href="05. Closures.html">05. Closures</a>
+    </li>
+    <li class="">
+      <a href="06. Immediately-Invoked Function Expressions (IIFE).html">06. Immediately-Invoked Function Expressions (IIFE)</a>
+    </li>
+    <li class="">
+      <a href="07. Lesson Summary.html">07. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. First-Class Functions</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>OOJS L2 2 - First Class Functions - V1</p></h3>
+  <video controls>
+  <source src="02. OOJS L2 2 - First Class Functions - V1-8VjddoyyG1Q.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="02. OOJS L2 2 - First Class Functions - V1-8VjddoyyG1Q.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="02. OOJS L2 2 - First Class Functions - V1-8VjddoyyG1Q.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="02. OOJS L2 2 - First Class Functions - V1-8VjddoyyG1Q.pt-BR.vtt" label="pt-BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="functions-are-first-class-functions">Functions are First-Class Functions</h2>
+<p>In JavaScript, functions are <em>first-class</em> functions. This means that you can do with a <em>function</em> just about anything that you can do with other elements, such as numbers, strings, objects, arrays, etc. JavaScript functions can:</p>
+<ol>
+<li>Be stored in variables</li>
+<li>Be returned from a function.</li>
+<li>Be passed as arguments into another function.</li>
+</ol>
+<p>Note that while we can, say, treat a function as an object, a key difference between a function and an object is that functions can be called (i.e., invoked with <code>()</code>), while regular objects <em>cannot</em>.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L2 - 4 - Functions Are First Class Objects V1</p></h3>
+  <video controls>
+  <source src="02. L2 - 4 - Functions Are First Class Objects V1-FpT_U0pOB-c.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="02. L2 - 4 - Functions Are First Class Objects V1-FpT_U0pOB-c.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="02. L2 - 4 - Functions Are First Class Objects V1-FpT_U0pOB-c.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="02. L2 - 4 - Functions Are First Class Objects V1-FpT_U0pOB-c.pt-BR.vtt" label="pt-BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/OOJS-screencasts/blob/master/L2-functions-at-runtime/4-functions-are-first-class-functions-demo.js" rel="noopener noreferrer" target="_blank">Here's the code from the preceding video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>How are JavaScript functions <em>first-class</em> functions? Select all that apply:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1512503217528" name="468932" id="a1512503217528">
+      <label for="a1512503217528"><p>A function can be returned from another function</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512503232219" name="468932" id="a1512503232219">
+      <label for="a1512503232219"><p>A function can be stored in a variable</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512503232787" name="468932" id="a1512503232787">
+      <label for="a1512503232787"><p>A function is actually a primitive</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512503233346" name="468932" id="a1512503233346">
+      <label for="a1512503233346"><p>A function can be passed in as an argument into another function</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>A function can be returned from another function</li>
+      <li>A function can be stored in a variable</li>
+      <li>A function can be passed in as an argument into another function</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="functions-can-return-functions">Functions Can Return Functions</h2>
+<p>Recall that a function must always return a value. Whether the value is explicitly specified in a <code>return</code> statement (e.g., returning a string, boolean, array, etc.), or the function implicitly returns <code>undefined</code> (e.g., a function that simply logs something to the console), a function will always return just <em>one</em> value. </p>
+<p>Since we know that functions are first-class functions, we can treat a <em>function</em> as a value and just as easily return a <em>function</em> from another function! A function that returns another function is known as <strong>higher-order function</strong>. Consider this example:</p>
+<pre><code class="js language-js">function alertThenReturn() {
+  alert('Message 1!');
+
+  return function () {
+    alert('Message 2!');
+  };
+}</code></pre>
+<p>If <code>alertThenReturn()</code> is invoked in a browser, we'll first see an alert message that says <code>'Message 1!'</code>, followed by the <code>alertThenReturn()</code> function returning an anonymous function. However, we don't actually see an alert that says <code>'Message 2!'</code>, since none of the code from the inner function is executed. How do we go about executing the returned function?</p>
+<p>Since <code>alertThenReturn()</code> <em>returns</em> that inner function, we can assign a variable to that return value:</p>
+<pre><code class="js language-js">const innerFunction = alertThenReturn();</code></pre>
+<p>We can then use the <code>innerFunction</code> variable like any other function!</p>
+<pre><code class="js language-js">innerFunction();
+
+// alerts 'Message 2!'</code></pre>
+<p>Likewise, this function can be invoked immediately without being stored in a variable. We'll still get the same outcome if we simply add another set of parentheses to the expression <code>alertThenReturn();</code>:</p>
+<pre><code class="js language-js">alertThenReturn()();
+
+// alerts 'Message 1!' then alerts 'Message 2!'</code></pre>
+<p>Notice the double set of parentheses (i.e. <code>()()</code>) in that function call! The first pair of parentheses executes the <code>alertThenReturn()</code> function. The return value of this invocation is a function, which then gets invoked by the <em>second</em> pair of parentheses!</p>
+<p>Let's see another example in action!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L2 -8 - Returning Functions Demo V1</p></h3>
+  <video controls>
+  <source src="02. L2 -8 - Returning Functions Demo V1-tKzF0-cDblg.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="02. L2 -8 - Returning Functions Demo V1-tKzF0-cDblg.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="02. L2 -8 - Returning Functions Demo V1-tKzF0-cDblg.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="02. L2 -8 - Returning Functions Demo V1-tKzF0-cDblg.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="02. L2 -8 - Returning Functions Demo V1-tKzF0-cDblg.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/OOJS-screencasts/blob/master/L2-functions-at-runtime/9-returning-functions-demo.js" rel="noopener noreferrer" target="_blank">Here's the code from the preceding video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#468937-StudentMain-js" class="nav-item nav-link  active show" id="tab-468937-StudentMain-js" data-toggle="tab" role="tab"
+      aria-controls="468937-StudentMain-js" aria-selected="true">StudentMain.js</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="468937-StudentMain-js" aria-labelledby="tab-468937-StudentMain-js" role="tabpanel">
+      <pre><code></code>/*
+
+Declare a function named &#x60;higherOrderFunction&#x60; that takes no arguments,
+and returns an anonymous function.
+
+The returned function itself takes no arguments as well, and simply
+returns the number 8.
+
+*/
+</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>In the JavaScript language, functions are <strong>first-class functions</strong>. This means that we can do with functions just about everything that we can do with other elements in JavaScript, such as strings, arrays, or numbers. JavaScript functions can:</p>
+<ol>
+<li>Be stored in variables</li>
+<li>Be returned from a function.</li>
+<li>Be passed as arguments into another function.</li>
+</ol>
+<p>We've seen quite a few examples of the first two in the list, but what about passing a <em>function</em> as an argument into another function? Since this is such an important and common pattern in JavaScript, we'll take a deep dive in the next section!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/First-class_function" rel="noopener noreferrer" target="_blank">First-class function</a> on Wikipedia</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Callbacks.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. First-Class Functions')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

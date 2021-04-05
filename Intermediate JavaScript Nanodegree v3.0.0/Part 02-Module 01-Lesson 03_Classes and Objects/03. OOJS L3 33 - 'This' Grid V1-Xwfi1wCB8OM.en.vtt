@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.174
+When a function is called, a variable,
+
+00:00:02.174 --> 00:00:04.650
+this, gets set to a certain value.
+
+00:00:04.650 --> 00:00:07.245
+But depending on how the function was called,
+
+00:00:07.245 --> 00:00:10.125
+what this refers to can be very different.
+
+00:00:10.125 --> 00:00:13.449
+If constructor function is called with a new operator,
+
+00:00:13.449 --> 00:00:16.869
+this is set to the newly created object.
+
+00:00:16.870 --> 00:00:19.019
+If a method is called on an object,
+
+00:00:19.019 --> 00:00:21.820
+this is set to that particular object itself.
+
+00:00:21.820 --> 00:00:25.198
+And if a normal function is simply invoked,
+
+00:00:25.198 --> 00:00:28.865
+this is set to window or the global object.
+
+00:00:28.864 --> 00:00:32.484
+Now, there are a few different ways that we can change the value of this ourselves,
+
+00:00:32.484 --> 00:00:34.210
+but we'll check them out in the next section.
+

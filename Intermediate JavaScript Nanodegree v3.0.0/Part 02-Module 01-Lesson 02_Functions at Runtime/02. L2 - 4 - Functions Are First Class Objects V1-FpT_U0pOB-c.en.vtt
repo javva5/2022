@@ -1,0 +1,64 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.605
+Here is a function expression stored in a variable, "myFunction".
+
+00:00:04.605 --> 00:00:07.585
+A function stored in a variable doesn't need a function name,
+
+00:00:07.585 --> 00:00:11.425
+as you kind of see here, it's actually an anonymous function that was pointing to.
+
+00:00:11.425 --> 00:00:15.625
+But a major benefit of having a function name is that it'll show when debugging.
+
+00:00:15.625 --> 00:00:18.629
+So we also could have given a name.
+
+00:00:18.629 --> 00:00:24.149
+Now, you can invoke the function just by using the variable name.
+
+00:00:24.149 --> 00:00:28.649
+Great. Now let us check on another example that I have on the other screen.
+
+00:00:28.649 --> 00:00:32.079
+Here, we have function declaration that returns
+
+00:00:32.079 --> 00:00:37.719
+the average of three numbers pass into it: n1, n2, and n3.
+
+00:00:37.719 --> 00:00:40.589
+One thing we can do is check this function's length.
+
+00:00:40.590 --> 00:00:46.305
+So if we call.length on average, it returns three.
+
+00:00:46.304 --> 00:00:51.994
+So, this method kind of peculiar because we're calling.length on a function.
+
+00:00:51.994 --> 00:00:55.614
+So it gives you little more proof that for function is actually an object.
+
+00:00:55.615 --> 00:00:58.335
+Another proof that we have, a function is being objects as well,
+
+00:00:58.335 --> 00:01:01.020
+is that each function has a name property.
+
+00:01:01.020 --> 00:01:03.960
+Meaning that we can check the function' s name.
+
+00:01:03.960 --> 00:01:07.375
+So if you call.name on this average function over here,
+
+00:01:07.375 --> 00:01:10.019
+it returns as the name of the function.
+
+00:01:10.019 --> 00:01:13.799
+So as it turns out, we can access properties on functions because,
+
+00:01:13.799 --> 00:01:16.039
+in JavaScript, functions are first-class
+

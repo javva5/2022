@@ -1,0 +1,98 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.400 --> 00:00:03.968
+No JavaScript, funções
+são funções de primeira classe.
+
+00:00:04.400 --> 00:00:05.868
+Mas o que isso quer dizer?
+
+00:00:06.200 --> 00:00:07.968
+Primeiro,
+pense em uma string.
+
+00:00:08.000 --> 00:00:10.267
+Vamos usar a string
+"Udacity".
+
+00:00:10.300 --> 00:00:12.901
+Essa string pode ser
+armazenada em uma variável.
+
+00:00:12.934 --> 00:00:14.868
+pode retornar de uma função,
+
+00:00:14.901 --> 00:00:18.033
+e pode ser passada
+como argumento a uma função.
+
+00:00:18.067 --> 00:00:20.200
+Contudo, nem todas
+as linguagens de programação
+
+00:00:20.234 --> 00:00:23.367
+suportam da mesma maneira
+as diferentes estruturas de dados.
+
+00:00:23.400 --> 00:00:25.334
+Por exemplo,
+em algumas linguagens,
+
+00:00:25.367 --> 00:00:27.767
+funções não podem ser
+armazenadas em variáveis,
+
+00:00:27.801 --> 00:00:30.634
+não podem ser passadas
+como argumentos para outras funções,
+
+00:00:30.667 --> 00:00:33.968
+e não podem ser o valor
+de retorno de uma função.
+
+00:00:34.000 --> 00:00:35.834
+Então, comparada
+com a simples string,
+
+00:00:35.868 --> 00:00:38.601
+a função não tem
+todos esses privilégios.
+
+00:00:38.634 --> 00:00:41.167
+Mas isso se aplica
+a algumas linguagens.
+
+00:00:41.200 --> 00:00:44.133
+O JavaScript
+tem funções de primeira classe.
+
+00:00:44.167 --> 00:00:47.100
+Isso significa que a função
+do JavaScript pode fazer
+
+00:00:47.133 --> 00:00:50.200
+todas as coisas que fizemos
+com a string "Udacity".
+
+00:00:50.234 --> 00:00:52.200
+Podemos armazená-la
+em uma variável,
+
+00:00:52.234 --> 00:00:54.234
+podemos passá-la
+como um argumento,
+
+00:00:54.267 --> 00:00:56.634
+e podemos retorná-la
+de uma função.
+
+00:00:56.667 --> 00:00:59.834
+Então, uma função de primeira classe
+significa que ela tem o mesmo status
+
+00:00:59.868 --> 00:01:02.801
+em uma linguagem de programação
+que as outras estruturas de dados.
+

@@ -1,0 +1,470 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Closures</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Functions at Runtime</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. First-Class Functions.html">02. First-Class Functions</a>
+    </li>
+    <li class="">
+      <a href="03. Callbacks.html">03. Callbacks</a>
+    </li>
+    <li class="">
+      <a href="04. Scope.html">04. Scope</a>
+    </li>
+    <li class="">
+      <a href="05. Closures.html">05. Closures</a>
+    </li>
+    <li class="">
+      <a href="06. Immediately-Invoked Function Expressions (IIFE).html">06. Immediately-Invoked Function Expressions (IIFE)</a>
+    </li>
+    <li class="">
+      <a href="07. Lesson Summary.html">07. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. Closures</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="functions-retain-their-scope">Functions Retain Their Scope</h2>
+<p>We just looked at how function scope works and how a scope chain is created. Just to recap: when an <strong>identifier</strong> (i.e., a variable) is used, the JavaScript engine will check the scope chain to retrieve the value for that identifier. The identifier might be found in the local scope (either in the function or block). If it's not found locally, then it might exist in an outer scope. It'll then keep checking the next outer scope followed by the next outer scope until it reaches the global scope (if necessary). </p>
+<p>Identifier lookup and the scope chain are really powerful tools for a function to access identifiers in the code. In fact, this lets you do something really interesting: create a function now, package it up with some variables, and save it to run later. If you have five buttons on the screen, you could write five different click handler functions, or you could use the same code five times with different saved values.</p>
+<p>Let's check out an example of a function retaining access to its scope. Consider the <code>remember()</code> function below:</p>
+<pre><code class="js language-js">function remember(number) {
+    return function() {
+        return number;
+    }
+}
+
+const returnedFunction = remember(5);
+
+console.log( returnedFunction() );
+// 5</code></pre>
+<p>When the Javascript engine enters <code>remember()</code>, it creates a new execution scope that points back to the prior execution scope. This new scope includes a reference to the <code>number</code> parameter (an immutable <code>Number</code> with the value <code>5</code>). When the engine reaches the inner function (a <em>function expression</em>), it attaches a link to the current execution scope.</p>
+<p>This process of a function retaining access to its scope is called a <strong>closure</strong>. In this example, the inner function "closes over" <code>number</code>. A closure can capture any number of parameters and variables that it needs. MDN defines a closure as:</p>
+<blockquote>
+  <p>"the combination of a function and the lexical environment within which that function was declared."</p>
+</blockquote>
+<p>This definition might not make a lot of sense if you don't know what the words "lexical environment" mean. The <a href="http://es5.github.io/#x10.2" rel="noopener noreferrer" target="_blank">ES5 spec</a> refers to a lexical environment as:</p>
+<blockquote>
+  <p>"the association of Identifiers to specific variables and functions based upon the lexical nesting structure of ECMAScript code."</p>
+</blockquote>
+<p>In this case, the "lexical environment" refers the code as it was written in the JavaScript file. As such, a closure is:</p>
+<ul>
+<li>The function itself, and</li>
+<li>The code (but more importantly, the <em>scope chain of</em>) where the function is declared</li>
+</ul>
+<p>When a function is declared, it locks onto the scope chain. You might think this is pretty straightforward since we just looked at that in the previous section. What's really interesting about a function, though, is that it will <em>retain</em> this scope chain -- even if it is invoked in a location <em>other</em> than where it was declared. This is all due to the closure!</p>
+<p>So looking back at the above example -- after <code>remember(5)</code> is executed and returned, how is the returned function still able to access <code>number</code>'s value (i.e., <code>5</code>)? In this section, we'll investigate how closures allow us to <em>store a snapshot of state</em> at the time the function object is created. Let's jump in!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>OOJS L2 50 - Closure Intro V1</p></h3>
+  <video controls>
+  <source src="05. OOJS L2 50 - Closure Intro V1-qSUqXlJ3CII.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="05. OOJS L2 50 - Closure Intro V1-qSUqXlJ3CII.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="05. OOJS L2 50 - Closure Intro V1-qSUqXlJ3CII.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="05. OOJS L2 50 - Closure Intro V1-qSUqXlJ3CII.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="05. OOJS L2 50 - Closure Intro V1-qSUqXlJ3CII.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="creating-a-closure">Creating a Closure</h2>
+<p>Every time a function is defined, closure is created for that function. Strictly speaking, then, <em>every</em> function has closure! This is because functions close over at least one other context along the scope chain: the global scope. However, the capabilities of closures really shine when working with a nested function (i.e., a function defined within another function). </p>
+<p>Recall that a nested function has access to variables outside of it. From what we have learned about the scope chain, this includes the variables from the outer, enclosing function itself (i.e., the parent function)! These nested functions close over (i.e., <em>capture</em>) variables that aren't passed in as arguments nor defined locally, otherwise known as <strong>free variables</strong>.</p>
+<p>As we saw with the <code>remember()</code> function earlier, it is important to note that a function maintains a reference to its parent's scope. If the reference to the function is still accessible, the scope persists!</p>
+<h3 id="closures-and-scope">Closures and Scope</h3>
+<p>Closures and scope are so closely related that you may even be surprised you had been working with them all along! Let's revisit an example from the previous section:</p>
+<pre><code class="js language-js">const myName = 'Andrew';
+
+function introduceMyself() {
+  const you = 'student';
+
+  function introduce() {
+    console.log(`Hello, ${you}, I'm ${myName}!`);
+  }
+
+  return introduce();
+}
+
+introduceMyself();
+// 'Hello, student, I'm Andrew!'</code></pre>
+<p>To recap: <code>myName</code> is a variable defined outside a function, hence it's a <em>global</em> variable in the global scope. In other words, <code>myName</code> is available for all functions to use. </p>
+<p>But let's look closely at the other variable: <code>you</code>. <code>you</code> is referenced by <code>introduce()</code>, even though it wasn't declared within <code>introduce()</code>! This is possible because a nested function's scope includes variables declared in the scope where the function is nested (i.e., variables from its parent function's scope, where the function is defined).</p>
+<p>As it turns out, the <code>introduce()</code> function and its lexical environment form a <em>closure</em>. This way, <code>introduce()</code> has access to not only the global variable <code>myName</code>, but also the variable <code>you</code>, which was declared in the scope of its parent function, <code>introduceMyself()</code>. </p>
+<p>Let's see closures in action!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L2 - 52 - Closure Demo 1 V1</p></h3>
+  <video controls>
+  <source src="05. L2 - 52 - Closure Demo 1 V1-dCcypTP_LEg.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="05. L2 - 52 - Closure Demo 1 V1-dCcypTP_LEg.zh-CN.vtt" label="zh-CN">
+  <track default="true" kind="subtitles" srclang="en" src="05. L2 - 52 - Closure Demo 1 V1-dCcypTP_LEg.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="05. L2 - 52 - Closure Demo 1 V1-dCcypTP_LEg.pt-BR.vtt" label="pt-BR">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/OOJS-screencasts/blob/master/L2-functions-at-runtime/53-closure-demo-1.js" rel="noopener noreferrer" target="_blank">Here's the code from the preceding video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is true about closures? Select all that apply:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1512523515121" name="469208" id="a1512523515121">
+      <label for="a1512523515121"><p>A closure is created for a function only if that function is executed.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512523524451" name="469208" id="a1512523524451">
+      <label for="a1512523524451"><p>Scope and closures are largely unrelated topics.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512523525235" name="469208" id="a1512523525235">
+      <label for="a1512523525235"><p>A function maintains a reference to its parent's scope.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512523525819" name="469208" id="a1512523525819">
+      <label for="a1512523525819"><p>If the reference to a parent function is still accessible, the scope persists.</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>A function maintains a reference to its parent's scope.</li>
+      <li>If the reference to a parent function is still accessible, the scope persists.</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is the output when <code>result(10);</code> is executed?</p>
+<pre><code class="js language-js">function outerFunction() {
+  let num1 = 5;
+
+  return function(num2) {
+    console.log(num1 + num2);
+  };
+}
+
+let result = outerFunction();
+
+result(10);
+// ???</code></pre></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1512523609054" name="469209" id="a1512523609054">
+        <label for="a1512523609054"><p><code>5</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512523616363" name="469209" id="a1512523616363">
+        <label for="a1512523616363"><p><code>10</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512523616899" name="469209" id="a1512523616899">
+        <label for="a1512523616899"><p><code>15</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512523617499" name="469209" id="a1512523617499">
+        <label for="a1512523617499"><p><code>undefined</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512523626083" name="469209" id="a1512523626083">
+        <label for="a1512523626083"><p><code>null</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512523626611" name="469209" id="a1512523626611">
+        <label for="a1512523626611"><p><code>NaN</code></p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    `15`
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>2 56 - Closure Demo 2</p></h3>
+  <video controls>
+  <source src="05. 2 56 - Closure Demo 2-ojZBKgCv83s.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="05. 2 56 - Closure Demo 2-ojZBKgCv83s.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="05. 2 56 - Closure Demo 2-ojZBKgCv83s.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="05. 2 56 - Closure Demo 2-ojZBKgCv83s.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="05. 2 56 - Closure Demo 2-ojZBKgCv83s.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/OOJS-screencasts/blob/master/L2-functions-at-runtime/57-closure-demo-2.js" rel="noopener noreferrer" target="_blank">Here's the code from the preceding video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="applications-of-closures">Applications of Closures</h2>
+<p>To recap, we've seen two common and powerful applications of closures:</p>
+<ol>
+<li>Passing arguments implicitly.</li>
+<li>At function declaration, storing a snapshot of scope.</li>
+</ol>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#469213-StudentMain-js" class="nav-item nav-link  active show" id="tab-469213-StudentMain-js" data-toggle="tab" role="tab"
+      aria-controls="469213-StudentMain-js" aria-selected="true">StudentMain.js</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="469213-StudentMain-js" aria-labelledby="tab-469213-StudentMain-js" role="tabpanel">
+      <pre><code></code>/*
+
+Declare a function named &#x60;expandArray()&#x60; that:
+
+* Takes no arguments
+* Contains a single local variable, &#x60;myArray&#x60;, which points to [1, 1, 1]
+* Returns an anonymous function that directly modifies &#x60;myArray&#x60; by
+  appending another &#x60;1&#x60; into it
+* The returned function then returns the value of &#x60;myArray&#x60;
+
+*/
+</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="garbage-collection">Garbage Collection</h2>
+<p>JavaScript manages memory with automatic <strong>garbage collection</strong>. This means that when data is no longer referable (i.e., there are no remaining references to that data available for executable code), it is "garbage collected" and will be destroyed at some later point in time. This frees up the resources (i.e., computer memory) that the data had once consumed, making those resources available for re-use.</p>
+<p>Let's look at garbage collection in the context of <em>closures</em>. We know that the variables of a parent function are accessible to the nested, inner function. If the nested function captures and uses its parent's variables (or variables along the scope chain, such as its parent's parent's variables), those variables will stay in memory as long as the functions that utilize them can still be referenced. </p>
+<p>As such, referenceable variables in JavaScript are <em>not</em> garbage collected! Let's quickly look back at the <code>myCounter</code> function from the previous video: </p>
+<pre><code class="js language-js">function myCounter() {
+  let count = 0;
+
+  return function () {
+    count += 1;
+    return count;
+  };
+}</code></pre>
+<p>The existence of the nested function keeps the <code>count</code> variable from being available for garbage collection, therefore <code>count</code> remains available for future access. After all, a given function (and its scope) does <em>not</em> end when the function is returned. Remember that functions in JavaScript retain access to the scope that they were created in!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>A <strong>closure</strong> refers to the combination of a function and the lexical environment in which that function was declared. Every time a function is defined, closure is created for that function. This is especially powerful in situations where a function is defined within another function, allowing the nested function to access variables outside of it. Functions also keep a link to its parent's scope even if the <em>parent</em> has returned. This prevents data in its parents from being garbage collected.</p>
+<p>At this point, we've worked a lot with functions declarations and function expressions. Did you know that you can write functions that can be immediately invoked after they're defined? We'll check out these <strong>immediately-invoked function expressions</strong> (IIFE's, or <em>iiffy's</em>) in the next section!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management" rel="noopener noreferrer" target="_blank">Memory Management</a> on MDN</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures" rel="noopener noreferrer" target="_blank">Closures</a> on MDN</li>
+<li><a href="http://es5.github.io/#x10.2" rel="noopener noreferrer" target="_blank">Lexical Environments</a> in the ES5 spec</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. Immediately-Invoked Function Expressions (IIFE).html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. Closures')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

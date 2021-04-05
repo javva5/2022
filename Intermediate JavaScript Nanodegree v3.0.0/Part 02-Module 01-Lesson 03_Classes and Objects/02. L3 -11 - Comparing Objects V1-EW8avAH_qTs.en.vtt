@@ -1,0 +1,118 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.705
+Let's go ahead and write out the constructor function called SoftwareDeveloper.
+
+00:00:05.705 --> 00:00:11.984
+So just to recap, when SoftwareDeveloper is invoked with the new keyword,
+
+00:00:11.984 --> 00:00:15.879
+it's going to create a new object that has a favorite language property,
+
+00:00:15.880 --> 00:00:17.949
+has a value of JavaScript.
+
+00:00:17.949 --> 00:00:19.210
+Now let's go ahead and call
+
+00:00:19.210 --> 00:00:24.140
+the SoftwareDeveloper constructor function with a new keyword, and create a new object.
+
+00:00:24.140 --> 00:00:28.670
+Let's call it developer.
+
+00:00:28.670 --> 00:00:31.700
+If we check out what developer looks like,
+
+00:00:31.699 --> 00:00:36.551
+we can see that it's indeed an object over here with a single property favorite language,
+
+00:00:36.551 --> 00:00:38.640
+points to a string JavaScript.
+
+00:00:38.640 --> 00:00:40.350
+And what's really nice is that we can also see
+
+00:00:40.350 --> 00:00:42.450
+the constructor function SoftwareDeveloper,
+
+00:00:42.450 --> 00:00:45.720
+referenced over here in Chrome DevTools as well.
+
+00:00:45.719 --> 00:00:46.769
+Now, instead of calling
+
+00:00:46.770 --> 00:00:50.205
+the software developer constructor function to create a new object,
+
+00:00:50.204 --> 00:00:51.649
+let's write one out manually.
+
+00:00:51.649 --> 00:00:54.701
+Let's write it out with object literal notation.
+
+00:00:54.701 --> 00:00:58.519
+We'll call this one otherDeveloper.
+
+00:00:58.710 --> 00:01:05.049
+Great, and let's access it just for good measure.
+
+00:01:05.049 --> 00:01:07.189
+So compared to developer,
+
+00:01:07.189 --> 00:01:10.174
+itsSeems like the object looks pretty much the same actually.
+
+00:01:10.174 --> 00:01:14.844
+Again, it's a single property pointing to a JavaScript just like over here.
+
+00:01:14.844 --> 00:01:17.239
+But notice that the constructor function that we
+
+00:01:17.239 --> 00:01:20.140
+created it with isn't listed in Chrome DevTools.
+
+00:01:20.140 --> 00:01:23.560
+It might look different depending on if you're using let's say Safari DevTools,
+
+00:01:23.560 --> 00:01:25.647
+or maybe something in Firefox,
+
+00:01:25.647 --> 00:01:29.629
+but in Chrome, usually shows the constructor function that created it right over here.
+
+00:01:29.629 --> 00:01:33.000
+Let's open up each of these.
+
+00:01:33.370 --> 00:01:37.143
+And now check out their proto properties.
+
+00:01:37.143 --> 00:01:39.730
+Don't worry too much about what proto is for now.
+
+00:01:39.730 --> 00:01:42.939
+We'll take a deep dive into it a little bit later.
+
+00:01:42.939 --> 00:01:46.129
+So you can see that the constructor for
+
+00:01:46.129 --> 00:01:50.429
+the developer object was actually the software developer constructor function,
+
+00:01:50.430 --> 00:01:52.695
+but in the case of other developer,
+
+00:01:52.694 --> 00:01:56.689
+the constructor property actually points to the object constructor.
+
+00:01:56.689 --> 00:01:58.129
+So just a quick comparison.
+
+00:01:58.129 --> 00:02:00.034
+The prototypes are going to be a little bit different.
+
+00:02:00.034 --> 00:02:02.170
+We'll take a deeper dive into each of these shortly.
+

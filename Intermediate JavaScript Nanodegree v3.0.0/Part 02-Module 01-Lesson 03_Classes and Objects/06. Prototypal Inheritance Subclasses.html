@@ -1,0 +1,615 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Prototypal Inheritance: Subclasses</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Classes and Objects</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Constructor Functions.html">02. Constructor Functions</a>
+    </li>
+    <li class="">
+      <a href="03. The &#x60;this&#x60; Keyword.html">03. The &#x60;this&#x60; Keyword</a>
+    </li>
+    <li class="">
+      <a href="04. Setting Our Own &#x60;this&#x60;.html">04. Setting Our Own &#x60;this&#x60;</a>
+    </li>
+    <li class="">
+      <a href="05. Prototypal Inheritance.html">05. Prototypal Inheritance</a>
+    </li>
+    <li class="">
+      <a href="06. Prototypal Inheritance Subclasses.html">06. Prototypal Inheritance: Subclasses</a>
+    </li>
+    <li class="">
+      <a href="07. Lesson Summary.html">07. Lesson Summary</a>
+    </li>
+    <li class="">
+      <a href="08. Course Outro.html">08. Course Outro</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">06. Prototypal Inheritance: Subclasses</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="subclasses">Subclasses</h2>
+<p>One of the benefits of implementing inheritance is that it allows you to <em>reuse existing code</em>. By establishing inheritance, we can <strong>subclass</strong>, that is, have a "child" object take on most or all of a "parent" object's properties while retaining unique properties of its own.</p>
+<p>Let's say we have a parent <code>Animal</code> object, which contains properties like <code>age</code> and <code>weight</code>. That same <code>Animal</code> object can also access methods like <code>eat</code> and <code>sleep</code>.</p>
+<p>Now, let's also say that we want to create a <code>Cat</code> child object. Just like you can with other animals, you can also describe a cat by its <em>age</em> or <em>weight</em>, and you can also be certain that the cat <em>eats</em> and <em>sleeps</em> as well. When creating that <code>Cat</code> object, then, we can simply re-write and re-implement all those methods and properties from <code>Animal</code> -- or, we can save some time and prevent repeated code by having <code>Cat</code> <em>inherit</em> those existing properties and methods from <code>Animal</code>!</p>
+<p>Not only can <code>Cat</code> take on properties and methods of <code>Animal</code>, we can also give <code>Cat</code> its own unique properties and methods as well! Perhaps a <code>Cat</code> has a unique <code>lives</code> property of <code>9</code>, or it has a specialized <code>meow()</code> method that no <code>Animal</code> has. </p>
+<p>By using prototypal inheritance, <code>Cat</code> only needs to implement <code>Cat</code>-specific functionality, and just reuse <code>Animal</code>'s existing functionality.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="inheritance-via-prototypes">Inheritance Via Prototypes</h2>
+<p>Recall the prototype chain from the previous section:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/l3-83-prototype-chain-diagram.png" alt="_The &#x60;Cat()&#x60; constructor function is invoked using the &#x60;new&#x60; operator, which creates the &#x60;bailey&#x60; instance (object). Note that the &#x60;meow()&#x60; method is defined in the prototype of the &#x60;bailey&#x60; object&#x27;s constructor function. The prototype is just an object, and all objects created by that constructor are secretly linked to the prototype. As such, we can execute &#x60;bailey.meow()&#x60; as if it were &#x60;bailey&#x60;&#x27;s own method!_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>The <code>Cat()</code> constructor function is invoked using the <code>new</code> operator, which creates the <code>bailey</code> instance (object). Note that the <code>meow()</code> method is defined in the prototype of the <code>bailey</code> object's constructor function. The prototype is just an object, and all objects created by that constructor are secretly linked to the prototype. As such, we can execute <code>bailey.meow()</code> as if it were <code>bailey</code>'s own method!</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>When calling any property on any object, the JavaScript engine will first look for the property in the object itself (i.e., the object's <em>own</em>, non-inherited properties). If the property is not found, JavaScript will then look at the object's prototype. If the property <em>still</em> isn't found in the object's prototype, JavaScript will continue the search up the <strong>prototype chain</strong>.</p>
+<p>Again, inheritance in JavaScript is all about setting up this chain!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="the-secret-link">The Secret Link</h2>
+<p>As you know, an object's constructor function's prototype is first place searched when the JavaScript engine tries to access a property that doesn't exist in the object itself. Consider the following <code>bear</code> object with two properties, <code>claws</code> and <code>diet</code>:</p>
+<pre><code class="js language-js">const bear = {
+  claws: true,
+  diet: 'carnivore'
+};</code></pre>
+<p>We'll assign the following <code>PolarBear()</code> constructor function's <code>prototype</code> property to <code>bear</code>:</p>
+<pre><code class="js language-js">function PolarBear() { 
+  // ...
+}
+
+PolarBear.prototype = bear;</code></pre>
+<p>Let's now call the <code>PolarBear()</code> constructor to create a new object, then give it two properties:</p>
+<pre><code class="js language-js">const snowball = new PolarBear();
+
+snowball.color = 'white';
+snowball.favoriteDrink = 'cola';</code></pre>
+<p>This is how the <code>snowball</code> object looks at this point:</p>
+<pre><code class="js language-js">{
+  color: 'white',
+  favoriteDrink: 'cola'
+}</code></pre>
+<p>Note that <code>snowball</code> has just two properties of its own: <code>color</code> and <code>favoriteDrink</code>. However, <code>snowball</code> <em>also</em> has access to properties that <em>don't</em> exist inside it: <code>claws</code> and <code>diet</code>:</p>
+<pre><code class="js language-js">console.log(snowball.claws);
+// true
+
+console.log(snowball.diet);
+// 'carnivore'</code></pre>
+<p>Since <code>claws</code> and <code>diet</code> both exist as properties in the <code>prototype</code> object, they are looked up because objects are <em>secretly linked</em> to their constructor's <code>prototype</code> property.</p>
+<p>Great! But you may be wondering: just <em>what</em> is this secret link that leads to the <code>prototype</code> object? Right after objects are made from the <code>PolarBear()</code> constructor (such as <code>snowball</code>), they have immediate access to properties in <code>PolarBear()</code>'s prototype. How exactly is this possible?</p>
+<p>As it turns out, the secret link is <code>snowball</code>'s <code>__proto__</code> property (note the two underscores on each end). <code>__proto__</code> is a property of all objects (i.e., instances) made by a constructor function, and points directly to that constructor's <code>prototype</code> object. Let's check out what it looks like!</p>
+<pre><code class="js language-js">console.log(snowball.__proto__);
+
+// { claws: true, diet: 'carnivore' }</code></pre>
+<p>Since the <code>__proto__</code> property refers to the same object as <code>PolarBear</code>'s prototype, <code>bear</code>, comparing them returns <code>true</code>:</p>
+<pre><code class="js language-js">console.log(snowball.__proto__ === bear);
+
+// true</code></pre>
+<p><strong>It is highly discouraged to reassign the <code>__proto__</code> property, or even use it in any code you write</strong>. First, there are compatibility issues across browsers. What's more: since the JavaScript engine searches and accesses properties along the prototype chain, mutating an object's prototype can lead to performance issues. The MDN article for  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto" rel="noopener noreferrer" target="_blank"><strong>proto</strong></a> even warns against using this property in red text at the very top of the page!</p>
+<p>It's great to <em>know</em> the secret link for learning how functions and objects are interconnected, but you <strong>should not use <code>__proto__</code> to manage inheritance</strong>. If you ever just need to review an object's prototype, you can still use <code>Object.getPrototypeOf()</code>.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="💡-what-about-just-inheriting-the-prototype-💡">💡 What About Just Inheriting the Prototype? 💡</h2>
+  <p>Let's say we want a <code>Child</code> object to inherit from a <code>Parent</code> object. Why shouldn't we just set <code>Child.prototype = Parent.prototype</code>?</p>
+  <p>First, recall that objects are passed by <em>reference</em>. This means that since the <code>Child.prototype</code> object and the <code>Parent.prototype</code> object refer to the <em>same object</em> -- any changes you make to <code>Child</code>'s prototype will <em>also</em> be made to <code>Parent</code>'s prototype! We don't want children being able to modify properties of their parents!</p>
+  <p>On top of all this, no prototype chain will be set up. What if we want an object to inherit from any object we want, not just its prototype?</p>
+  <p>We still need a way to efficiently manage inheritance without mutating the prototype at all. </p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Consider the following:</p>
+<pre><code class="js language-js">function GuineaPig (name) {
+  this.name = name;
+  this.isCute = true;
+}
+
+const waffle = new GuineaPig('Waffle');</code></pre>
+<p>What does <code>waffle.__proto__</code> refer to?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1512540264501" name="469333" id="a1512540264501">
+        <label for="a1512540264501"><p><code>GuineaPig.__proto__</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512540270586" name="469333" id="a1512540270586">
+        <label for="a1512540270586"><p><code>GuineaPig.proto</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512540271059" name="469333" id="a1512540271059">
+        <label for="a1512540271059"><p><code>GuineaPig.prototype</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512540271549" name="469333" id="a1512540271549">
+        <label for="a1512540271549"><p><code>guineapig.proto</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512540279160" name="469333" id="a1512540279160">
+        <label for="a1512540279160"><p><code>GuineaPig</code></p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    `GuineaPig.prototype`
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>Consider the following:</p>
+<pre><code class="js language-js">function Car (color, year) {
+  this.color = color;
+  this.year = year;
+}
+
+Car.prototype.drive = function () {
+  console.log('Vroom vroom!');
+};
+
+const car = new Car('silver', 1988);</code></pre>
+<p>What happens when <code>car.drive();</code> is executed? List the following events in the order that they occur:</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>First, the JavaScript engine searches inside the <code>car</code> object for a property named <code>drive</code>.</p></button>
+  <button class="btn btn-primary"><p>Finally, since <code>drive</code> is invoked as a method on <code>car</code>, the value of <code>this</code> is set to <code>car</code>.</p></button>
+  <button class="btn btn-primary"><p>The JavaScript engine does not find <code>drive</code> within the <code>car</code> object.</p></button>
+  <button class="btn btn-primary"><p>The JavaScript engine then accesses the <code>car.__proto__</code> property.</p></button>
+  <button class="btn btn-primary"><p>Because <code>Car.prototype.drive</code> <em>is</em> a defined property, it is returned.</p></button>
+  <button class="btn btn-primary"><p>Since the <code>car.__proto__</code> property points to <code>Car.prototype</code>, the JavaScript engine searches for <code>drive</code> in the prototype.</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>Order</p>
+      </th>
+      <th>
+        <p>Event</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>1st</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>2nd</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>3rd</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>4th</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>5th</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>6th</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>Order</p>
+        </th>
+        <th>
+          <p>Event</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>1st</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>First, the JavaScript engine searches inside the <code>car</code> object for a property named <code>drive</code>.</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>6th</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Finally, since <code>drive</code> is invoked as a method on <code>car</code>, the value of <code>this</code> is set to <code>car</code>.</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>2nd</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>The JavaScript engine does not find <code>drive</code> within the <code>car</code> object.</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>3rd</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>The JavaScript engine then accesses the <code>car.__proto__</code> property.</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>5th</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Because <code>Car.prototype.drive</code> <em>is</em> a defined property, it is returned.</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>4th</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Since the <code>car.__proto__</code> property points to <code>Car.prototype</code>, the JavaScript engine searches for <code>drive</code> in the prototype.</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="objectcreate">Object.create()</h2>
+<p>At this point, we've reached a few roadblocks when it comes to inheritance. First, even though  <code>__proto__</code> can access the prototype of the object it is called on, using it in any code you write is not good practice. </p>
+<p>What's more: we also shouldn't inherit <em>only</em> the prototype; this doesn't set up the prototype chain, and any changes that we made to a child object will also be reflected in a parent object. </p>
+<p>So how should we move forward?</p>
+<p>There's actually a way for us to set up the prototype of an object ourselves: using <code>Object.create()</code>. And best of all, this approach lets us manage inheritance <em>without</em> altering the prototype!</p>
+<p><code>Object.create()</code> takes in a single object as an argument, and returns a new object with its <code>__proto__</code> property set to what argument is passed into it. From that point, you simply set the returned object to be the prototype of the child object's constructor function. Let's check out an example!</p>
+<p>First, let's say we have a <code>mammal</code> object with two properties: <code>vertebrate</code> and <code>earBones</code>:</p>
+<pre><code class="js language-js">const mammal = {
+  vertebrate: true,
+  earBones: 3
+};</code></pre>
+<p>Recall that <code>Object.create()</code> takes in a single object as an argument, and returns a <em>new</em> object. That new object's <code>__proto__</code> property is set to whatever was originally passed into <code>Object.create()</code>. Let's save that returned value to a variable, <code>rabbit</code>:</p>
+<pre><code class="js language-js">const rabbit = Object.create(mammal);</code></pre>
+<p>We expect the new <code>rabbit</code> object to be blank, with no properties of its own:</p>
+<pre><code class="js language-js">console.log(rabbit);
+
+// {}</code></pre>
+<p>However, <code>rabbit</code> should now be secretly linked to <code>mammal</code>. That is, its <code>__proto__</code> property should point to <code>mammal</code>:</p>
+<pre><code class="js language-js">console.log(rabbit.__proto__ === mammal);
+
+// true</code></pre>
+<p>Great! This means that now, <code>rabbit</code> extends <code>mammal</code> (i.e., <code>rabbit</code> inherits from <code>mammal</code>). As a result, <code>rabbit</code> can access <code>mammal</code>'s properties as if it were its own!</p>
+<pre><code class="js language-js">console.log(rabbit.vertebrate);
+// true
+
+console.log(rabbit.earBones);
+// 3</code></pre>
+<p><code>Object.create()</code> gives us a clean method of establishing prototypal inheritance in JavaScript. We can easily extend the prototype chain this way, and we can have objects inherit from just about any object we want! </p>
+<p>Let's check out a more involved example below:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L3 - 88 - Object.Create Demo</p></h3>
+  <video controls>
+  <source src="06. L3 - 88 - Object.Create Demo-K7CKb7MlAT4.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="06. L3 - 88 - Object.Create Demo-K7CKb7MlAT4.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="06. L3 - 88 - Object.Create Demo-K7CKb7MlAT4.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="06. L3 - 88 - Object.Create Demo-K7CKb7MlAT4.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="06. L3 - 88 - Object.Create Demo-K7CKb7MlAT4.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/OOJS-screencasts/blob/master/L3-objects-and-classes/90-objectcreate-demo.js" rel="noopener noreferrer" target="_blank">Here's the code from the preceding video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Consider the following:</p>
+<pre><code class="js language-js">function Parent() {
+  // ...
+}
+
+function Child() {
+  // ...
+}
+
+Child.prototype = Object.create(Parent.prototype);
+
+const child = new Child();</code></pre>
+<p>The following is then executed:</p>
+<pre><code class="js language-js">child instanceof Parent;</code></pre>
+<p>What is printed to the console?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1512540525318" name="469338" id="a1512540525318">
+        <label for="a1512540525318"><p><code>Child</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512540543369" name="469338" id="a1512540543369">
+        <label for="a1512540543369"><p><code>undefined</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512540543792" name="469338" id="a1512540543792">
+        <label for="a1512540543792"><p><code>false</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512540544153" name="469338" id="a1512540544153">
+        <label for="a1512540544153"><p><code>true</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512540544786" name="469338" id="a1512540544786">
+        <label for="a1512540544786"><p>The console will throw an error.</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    `true`
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is true about <code>Object.create()</code>? Select all that apply:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1512540625400" name="469339" id="a1512540625400">
+      <label for="a1512540625400"><p>It returns a new object whose <code>__proto__</code> property is set to the object passed into <code>Object.create()</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512540636015" name="469339" id="a1512540636015">
+      <label for="a1512540636015"><p>Using <code>Object.create()</code>, we can have objects inherit from just about any object we want (i.e., not only the <code>prototype</code>)</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512540636489" name="469339" id="a1512540636489">
+      <label for="a1512540636489"><p><code>Object.create()</code> allows us to implement prototypal inheritance without mutating the prototype</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512540637025" name="469339" id="a1512540637025">
+      <label for="a1512540637025"><p>The method is invoked directly <em>on</em> a single object</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>It returns a new object whose `__proto__` property is set to the object passed into `Object.create()`</li>
+      <li>Using `Object.create()`, we can have objects inherit from just about any object we want (i.e., not only the `prototype`)</li>
+      <li>`Object.create()` allows us to implement prototypal inheritance without mutating the prototype</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>Inheritance in JavaScript is all about setting up the prototype chain. This allows us to <strong>subclass</strong>, that is, create a "child" object that inherits most or all of a "parent" object's properties and methods. We can then implement any of the child object's unique properties and methods separately, while still retaining data and functionality from its parent.</p>
+<p>An object (instance) is secretly linked to its constructor function's prototype object through that instance's <code>__proto__</code> property. <strong>You should never use the <code>__proto__</code> property in any code you write.</strong> Using <code>__proto__</code> in any code, or even inheriting just the prototype directly, leads to some unwanted side effects. </p>
+<p>To efficiently manage inheritance in JavaScript, an effective approach is to avoid mutating the prototype completely. <code>Object.create()</code> allows us to do just that, taking in a parent object and returning a <em>new</em> object with its <code>__proto__</code> property set to that parent object.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain" rel="noopener noreferrer" target="_blank">Inheritance and the prototype chain</a> on MDN</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create" rel="noopener noreferrer" target="_blank">Object.create()</a> on MDN</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="07. Lesson Summary.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. Prototypal Inheritance: Subclasses')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

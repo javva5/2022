@@ -1,0 +1,57 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.167 --> 00:00:04.701
+Closure é uma palavra estranha
+que não descreve muita coisa.
+
+00:00:04.734 --> 00:00:06.434
+O que é?
+
+00:00:06.467 --> 00:00:11.534
+É a combinação de uma função
+e o seu ambiente léxico,
+
+00:00:11.567 --> 00:00:13.200
+que é o escopo da função,
+
+00:00:13.234 --> 00:00:16.200
+que basicamente identifica
+o que ela pode acessar.
+
+00:00:16.234 --> 00:00:19.133
+Escopo e closure são
+muito próximos.
+
+00:00:19.167 --> 00:00:21.167
+Cada função possui
+um closure,
+
+00:00:21.200 --> 00:00:24.001
+assim como cada função
+possui seu próprio escopo.
+
+00:00:24.033 --> 00:00:26.634
+O que torna o closure
+de uma função poderoso
+
+00:00:26.667 --> 00:00:30.467
+é quando a função é devolvida
+de outra função.
+
+00:00:30.501 --> 00:00:32.767
+Quando uma função
+é declarada em uma função,
+
+00:00:32.801 --> 00:00:35.834
+mas é devolvida e rodada
+fora de onde foi declarada,
+
+00:00:35.868 --> 00:00:38.834
+ela ainda terá acesso
+ao escopo no qual foi declarada
+
+00:00:38.868 --> 00:00:40.300
+graças ao closure.
+
