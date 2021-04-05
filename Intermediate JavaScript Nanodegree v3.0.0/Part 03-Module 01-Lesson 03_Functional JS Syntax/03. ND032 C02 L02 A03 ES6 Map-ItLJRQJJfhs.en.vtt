@@ -1,0 +1,121 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.080
+The map method performs an action on every item in an array,
+
+00:00:04.080 --> 00:00:07.200
+but creates a new array to store the results.
+
+00:00:07.200 --> 00:00:09.225
+See how that's a lot more functional.
+
+00:00:09.225 --> 00:00:13.365
+We're repeating a function call once per item in an array,
+
+00:00:13.365 --> 00:00:18.540
+and everything necessary for the function to run is passed as an argument and
+
+00:00:18.540 --> 00:00:21.120
+the return value is the only effect of running
+
+00:00:21.120 --> 00:00:24.650
+the function and the original array is left intact.
+
+00:00:24.650 --> 00:00:27.350
+That follows the rules of functional perfectly.
+
+00:00:27.350 --> 00:00:29.945
+Here let's take a look at an example.
+
+00:00:29.945 --> 00:00:34.340
+In this example, you can see that I have a captain's array and that I am
+
+00:00:34.340 --> 00:00:39.530
+mapping over that array to create a new array called titles.
+
+00:00:39.530 --> 00:00:45.790
+All that I'm doing as I map over the items is to append the word captain to their name.
+
+00:00:45.790 --> 00:00:47.360
+If I run the code,
+
+00:00:47.360 --> 00:00:49.520
+you can see here that I can console log
+
+00:00:49.520 --> 00:00:53.525
+the result array that has the expected captain before each name,
+
+00:00:53.525 --> 00:00:55.715
+but I also can still console log,
+
+00:00:55.715 --> 00:00:59.170
+the original array which does not have captain.
+
+00:00:59.170 --> 00:01:04.160
+This is a purely functional array method, which is great.
+
+00:01:04.160 --> 00:01:06.950
+If this syntax isn't as familiar to you,
+
+00:01:06.950 --> 00:01:10.490
+you might recognize this better with a more traditional arrow function,
+
+00:01:10.490 --> 00:01:15.675
+but this is simply one argument that we receive from map,
+
+00:01:15.675 --> 00:01:18.710
+and this is automatically returned from
+
+00:01:18.710 --> 00:01:22.400
+the function and becomes an item in the titles array.
+
+00:01:22.400 --> 00:01:24.305
+In this second example,
+
+00:01:24.305 --> 00:01:28.970
+you can see that I have an array of numbers and I'm running a map method on
+
+00:01:28.970 --> 00:01:34.925
+those numbers to return a new array that contains the numbers doubled.
+
+00:01:34.925 --> 00:01:39.860
+But what if I wanted to move this logic out into another function?
+
+00:01:39.860 --> 00:01:42.860
+Well I can, it's called an external callback,
+
+00:01:42.860 --> 00:01:49.785
+and I can create a function here which I've called doubler and I can run my map method,
+
+00:01:49.785 --> 00:01:53.375
+and instead of writing my logic inside,
+
+00:01:53.375 --> 00:01:56.630
+I can simply call my function that is outside.
+
+00:01:56.630 --> 00:02:00.530
+Now this is sometimes better because it allows you to write
+
+00:02:00.530 --> 00:02:03.200
+cleaner functionality in an external function
+
+00:02:03.200 --> 00:02:06.930
+without having a ton of logic right inside of the map,
+
+00:02:06.930 --> 00:02:09.140
+but this is only a matter of personal preference.
+
+00:02:09.140 --> 00:02:10.955
+In the end as you can see,
+
+00:02:10.955 --> 00:02:13.145
+the two achieve the same results.
+
+00:02:13.145 --> 00:02:17.180
+Hopefully that walk-through helps make map a little bit more clear,
+
+00:02:17.180 --> 00:02:21.590
+but now it's your turn to go try them in the exercises.
+

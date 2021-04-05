@@ -1,0 +1,58 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.610
+A side effect is any effect of running
+
+00:00:02.610 --> 00:00:05.745
+a function that is not part of the return statement.
+
+00:00:05.745 --> 00:00:07.770
+You'll see what I mean in this example.
+
+00:00:07.770 --> 00:00:11.210
+In this program, I have an object called galaxy_ship and
+
+00:00:11.210 --> 00:00:15.250
+a function called stock_arsenal that will update my torpedo_balance.
+
+00:00:15.250 --> 00:00:17.100
+When I call stock_arsenal,
+
+00:00:17.100 --> 00:00:18.900
+I can call the number of torpedoes that I
+
+00:00:18.900 --> 00:00:21.650
+want and the ID of the ship I want to run it on.
+
+00:00:21.650 --> 00:00:26.505
+Which all of this looks fantastic except for this line right here.
+
+00:00:26.505 --> 00:00:32.005
+You can see that I'm actually updating galaxy_ship in the middle of my function.
+
+00:00:32.005 --> 00:00:33.780
+This is a side effect.
+
+00:00:33.780 --> 00:00:37.850
+The side effect is causing my function to change
+
+00:00:37.850 --> 00:00:43.030
+my program without encapsulating that change in the return value.
+
+00:00:43.030 --> 00:00:46.475
+Side effects might seem harmless in a small program,
+
+00:00:46.475 --> 00:00:47.960
+but as the program grows,
+
+00:00:47.960 --> 00:00:49.460
+it can create problems.
+
+00:00:49.460 --> 00:00:52.505
+Pure functions must be without side effects,
+
+00:00:52.505 --> 00:00:56.550
+which makes our programs more reliable and edge case free.
+

@@ -1,0 +1,40 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.465
+You've made it to the next lesson in the functional programming course.
+
+00:00:03.465 --> 00:00:04.800
+In the previous lesson,
+
+00:00:04.800 --> 00:00:08.400
+we talked about the ideals and general principles of functional programming,
+
+00:00:08.400 --> 00:00:12.015
+but did you notice how JavaScript wasn't talked about?
+
+00:00:12.015 --> 00:00:15.420
+That's because it's not really a functional language.
+
+00:00:15.420 --> 00:00:18.590
+But we can still write good functional style JavaScript.
+
+00:00:18.590 --> 00:00:22.785
+From here on out, I'm going to make a distinction between functional programming,
+
+00:00:22.785 --> 00:00:25.980
+the pure academic lambda calculus rules,
+
+00:00:25.980 --> 00:00:30.240
+and the functional style where we take queues from functional programming and
+
+00:00:30.240 --> 00:00:34.755
+apply them practically in languages not traditionally recognized as functional.
+
+00:00:34.755 --> 00:00:37.590
+In this lesson, we'll cover the tools and syntax
+
+00:00:37.590 --> 00:00:41.320
+we have within JavaScript to write functional programs.
+

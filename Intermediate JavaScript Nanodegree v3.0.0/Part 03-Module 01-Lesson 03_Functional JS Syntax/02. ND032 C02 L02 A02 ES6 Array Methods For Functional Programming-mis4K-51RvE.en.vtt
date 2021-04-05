@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.135
+Working with arrays is an essential programming skill,
+
+00:00:03.135 --> 00:00:07.185
+and JavaScript gives us lots of tools to work with arrays in a functional way,
+
+00:00:07.185 --> 00:00:09.620
+but it might not be all the ways you're used to.
+
+00:00:09.620 --> 00:00:11.945
+For instance, you've probably used push,
+
+00:00:11.945 --> 00:00:14.835
+or shift, or pop to manipulate arrays.
+
+00:00:14.835 --> 00:00:18.105
+But each of these change the array they are run on,
+
+00:00:18.105 --> 00:00:19.995
+so they're called mutators.
+
+00:00:19.995 --> 00:00:21.960
+Editing values like this, of course,
+
+00:00:21.960 --> 00:00:23.985
+goes against the functional rule of,
+
+00:00:23.985 --> 00:00:26.190
+you guessed it, immutability.
+
+00:00:26.190 --> 00:00:30.165
+In this lesson, we're going to cover the functional array methods.
+
+00:00:30.165 --> 00:00:32.730
+We'll be focusing on the ones here,
+
+00:00:32.730 --> 00:00:35.800
+map, filter, and reduce.
+

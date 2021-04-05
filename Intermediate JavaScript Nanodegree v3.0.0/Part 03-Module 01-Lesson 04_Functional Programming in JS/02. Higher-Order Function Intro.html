@@ -1,0 +1,261 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Higher-Order Function Intro</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Functional Programming in JS</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Intro to FP in JS.html">01. Intro to FP in JS</a>
+    </li>
+    <li class="">
+      <a href="02. Higher-Order Function Intro.html">02. Higher-Order Function Intro</a>
+    </li>
+    <li class="">
+      <a href="03. Exercise Higher-Order Functions 1.html">03. Exercise: Higher-Order Functions 1</a>
+    </li>
+    <li class="">
+      <a href="04. Higher-Order Functions.html">04. Higher-Order Functions</a>
+    </li>
+    <li class="">
+      <a href="05. Exercise Higher-Order Functions 2.html">05. Exercise: Higher-Order Functions 2</a>
+    </li>
+    <li class="">
+      <a href="06. Higher-Order Functions Review.html">06. Higher-Order Functions Review</a>
+    </li>
+    <li class="">
+      <a href="07. Functional Data Manipulations.html">07. Functional Data Manipulations</a>
+    </li>
+    <li class="">
+      <a href="08. Exercise Data Manipulations.html">08. Exercise: Data Manipulations</a>
+    </li>
+    <li class="">
+      <a href="09. Data Manipulations Problem Set.html">09. Data Manipulations Problem Set</a>
+    </li>
+    <li class="">
+      <a href="10. Functional DOM Manipulations.html">10. Functional DOM Manipulations</a>
+    </li>
+    <li class="">
+      <a href="11. Exercise Render Method.html">11. Exercise: Render Method</a>
+    </li>
+    <li class="">
+      <a href="12. Holding Application State.html">12. Holding Application State</a>
+    </li>
+    <li class="">
+      <a href="13. Exercise Application State.html">13. Exercise: Application State</a>
+    </li>
+    <li class="">
+      <a href="14. Functional DOM Manipulation Problem Set.html">14. Functional DOM Manipulation Problem Set</a>
+    </li>
+    <li class="">
+      <a href="15. Lesson Recap.html">15. Lesson Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Higher-Order Function Intro</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Higher Order Functions</p></h3>
+  <div>
+  <h2 id="introduction">Introduction</h2>
+<p>Higher-Order Functions are not only used in Functional programming but are a central part of Functional programs specifically. Higher-Order Functions (HOFs) allow us to string together many functions. HOFs have slightly different definitions across programming languages, but in JavaScript, you can say that a function is Higher-Order if it: </p>
+<ul>
+<li>Takes in a function as an argument (a callback) </li>
+<li>Returns a function</li>
+</ul>
+<p>Often, you will see both of these happen in a single function. </p>
+<p>We are already quite familiar with functions that take a callback. Map, Filter, and Reduce are all HOFs. When a function returns another function, it forms a closure around that function, typically to wrap it with extra functionality. HOFs are an important tool for creating more-complex Functional programs in JavaScript.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ND032 C02 L03 A02 HIgher Order Functions Overview</p></h3>
+  <video controls>
+  <source src="02. ND032 C02 L03 A02 HIgher Order Functions Overview-laZ2s9kT3gs.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="02. ND032 C02 L03 A02 HIgher Order Functions Overview-laZ2s9kT3gs.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Code Review</p></h3>
+  <div>
+  <h2 id="code-review-br">Code Review <br></h2>
+<p>In case you want to play around with the examples from the video, we’ve provided the code snippets below:</p>
+<pre><code>// Doubling
+const nums = [1, 2, 3, 4, 5]
+const doubles = nums.map(x =&gt; x * 2)
+
+console.log(doubles)
+// expected output: Array [2, 4, 6, 8, 10]
+
+// Equivalent to:
+const doubler = function (x) {
+    return x * 2
+}
+
+const doubles2 = nums.map(doubler)
+
+// inside map…
+// doubler(1, 0, [1, 2, 3, 4, 5])
+
+console.log(doubles2)
+// expected output: Array [2, 4, 6, 8, 10]</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Exercise Instructions</p></h3>
+  <div>
+  <h2 id="exercise-instructions">Exercise Instructions</h2>
+<p>Next, you will follow the exercise to create a HOF. If you need a reminder on how to work in our node environment head over to the <em>Introduction to Functional Programming</em> exercises.</p>
+<h3 id="local-machine">Local Machine</h3>
+<p>This next exercise can be found in <code>.../exercises/fp_in_js/hof_1.js</code></p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Exercise Higher-Order Functions 1.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. Higher-Order Function Intro')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

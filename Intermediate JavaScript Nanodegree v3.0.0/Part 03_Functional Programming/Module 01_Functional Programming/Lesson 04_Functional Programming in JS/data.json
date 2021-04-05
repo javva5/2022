@@ -1,0 +1,1030 @@
+{
+  "data": {
+    "lesson": {
+      "id": 965848,
+      "key": "7f4b0779-a5eb-4d57-b148-b145216f3935",
+      "title": "Functional Programming in JS",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Practice applying what you've learned so far into creating functional programs and bring clarity to how React works behind the scenes. ",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/7f4b0779-a5eb-4d57-b148-b145216f3935/965848/1594154504582/Functional+Programming+in+JS+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/7f4b0779-a5eb-4d57-b148-b145216f3935/965848/1594154501834/Functional+Programming+in+JS+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 965838,
+          "key": "3a89910d-3ef5-4347-9939-8f461a3073c7",
+          "title": "Intro to FP in JS",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3a89910d-3ef5-4347-9939-8f461a3073c7",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 965827,
+              "key": "19ef3f66-a3c2-4c4b-9589-b559d8f2f5c9",
+              "title": "ND032 C02 L03 A01 Intro To Functionalk Programming In JS",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "XSQieAKANuU",
+                "china_cdn_id": "XSQieAKANuU.mp4"
+              }
+            },
+            {
+              "id": 965829,
+              "key": "9d25da4c-5f18-4a61-8710-db991b1552c5",
+              "title": "Intro Summary",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Lesson Outline \n- Higher-Order Functions\n- Data Manipulations\n- DOM",
+              "instructor_notes": ""
+            },
+            {
+              "id": 965821,
+              "key": "15cd7ae5-520e-47cf-8028-c1a28766b128",
+              "title": "Course Overview",
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2020/January/5e0e3a87_l3-3-courseoverview/l3-3-courseoverview.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/15cd7ae5-520e-47cf-8028-c1a28766b128",
+              "caption": "Now that we have all the foundations we can apply JavaScript in a Functional Programming paradigm.",
+              "alt": "Course Overview Diagram",
+              "width": 612,
+              "height": 201,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 965841,
+          "key": "36320d15-0f15-4cef-90ca-3becce195c2b",
+          "title": "Higher-Order Function Intro",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "36320d15-0f15-4cef-90ca-3becce195c2b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 965831,
+              "key": "72e9f160-dab5-44fd-9f9d-ad22d5d120d1",
+              "title": "Higher Order Functions",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Introduction\nHigher-Order Functions are not only used in Functional programming but are a central part of Functional programs specifically. Higher-Order Functions (HOFs) allow us to string together many functions. HOFs have slightly different definitions across programming languages, but in JavaScript, you can say that a function is Higher-Order if it: \n- Takes in a function as an argument (a callback) \n- Returns a function\n\nOften, you will see both of these happen in a single function. \n\nWe are already quite familiar with functions that take a callback. Map, Filter, and Reduce are all HOFs. When a function returns another function, it forms a closure around that function, typically to wrap it with extra functionality. HOFs are an important tool for creating more-complex Functional programs in JavaScript.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 965822,
+              "key": "d324da60-2597-4f82-b8d8-e14265b93824",
+              "title": "ND032 C02 L03 A02 HIgher Order Functions Overview",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "laZ2s9kT3gs",
+                "china_cdn_id": "laZ2s9kT3gs.mp4"
+              }
+            },
+            {
+              "id": 1043531,
+              "key": "e9eccec4-155f-4f30-86d9-24e3fa4fc3a8",
+              "title": "Code Review",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Code Review <br>\nIn case you want to play around with the examples from the video, we’ve provided the code snippets below:\n\n``` javascript\n// Doubling\nconst nums = [1, 2, 3, 4, 5]\nconst doubles = nums.map(x => x * 2)\n\nconsole.log(doubles)\n// expected output: Array [2, 4, 6, 8, 10]\n\n// Equivalent to:\nconst doubler = function (x) {\n    return x * 2\n}\n\nconst doubles2 = nums.map(doubler)\n\n// inside map…\n// doubler(1, 0, [1, 2, 3, 4, 5])\n\nconsole.log(doubles2)\n// expected output: Array [2, 4, 6, 8, 10]\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 967367,
+              "key": "c40e604a-3430-4608-9925-d6285f52d15e",
+              "title": "Exercise Instructions",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Exercise Instructions\nNext, you will follow the exercise to create a HOF. If you need a reminder on how to work in our node environment head over to the *Introduction to Functional Programming* exercises.\n\n### Local Machine\rThis next exercise can be found in `.../exercises/fp_in_js/hof_1.js`",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 967376,
+          "key": "355289e8-79cf-4d0b-a755-98479c613e8f",
+          "title": "Exercise: Higher-Order Functions 1",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "355289e8-79cf-4d0b-a755-98479c613e8f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 967383,
+              "key": "4233a8f4-0f64-46ba-9375-ecb206e14049",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "r950324c967376xGENERICli9qyqcf",
+              "pool_id": "webterminal",
+              "view_id": "generic-3b9sp",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "port": 3000,
+                    "ports": [],
+                    "userCode": "node -v",
+                    "openFiles": [
+                      "/home/workspace/hof_1.js"
+                    ],
+                    "showFiles": false,
+                    "allowClose": false,
+                    "showEditor": true,
+                    "allowSubmit": false,
+                    "terminalTitle": "BASH",
+                    "openTerminalOnStartup": true
+                  },
+                  "kind": "generic"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 965840,
+          "key": "da9dd6d7-6573-496d-859c-63ca0aa2cd4e",
+          "title": "Higher-Order Functions",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "da9dd6d7-6573-496d-859c-63ca0aa2cd4e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 965826,
+              "key": "b9506507-9264-47b5-bcc0-9ac2101f0195",
+              "title": "ND032 C02 L03 A03 Flexible Programs With Higher Order Functions",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "U28m5rYS_b0",
+                "china_cdn_id": "U28m5rYS_b0.mp4"
+              }
+            },
+            {
+              "id": 1043532,
+              "key": "86868908-6833-478b-9da9-98d0f96a9f9c",
+              "title": "Code Review",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Code Review\n\n``` javascript\nfunction greaterThan(n) {\n    return m => m > n;\n}\n\nlet greaterThanEight = greaterThan(8);\nconsole.log(greaterThanEight)\n// expected output:  [Function]\n\nconsole.log(greaterThanEight(11));\n// expected output: true\n\n// The syntax above can be tricky, but it is all ES6\n\n// Equivalent to:\nfunction greaterThan(n) {\n    return function (m) {\n        return m > n;\n    }\n}\n```\n\n## Resources\nUdacity's free course, [Object-Oriented Programming in JavaScript](https://www.udacity.com/course/object-oriented-javascript--ud711) Lesson 2: Functions in Runtime, has a section on **Closures**. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 967375,
+              "key": "2dc5cba5-6650-4e22-9adb-226a801723b1",
+              "title": "Exercise Instructions",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Exercise Instructions\nNext, you will independently create a HOF. If you need a reminder on how to work in our node environment head over to the *Introduction to Functional Programming* exercises.\n\n\n### Local Machine\rThis next exercise can be found in `.../exercises/fp_in_js/hof_2.js`",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 967368,
+          "key": "642fcd82-bf52-408a-9379-f10ad6ed0126",
+          "title": "Exercise: Higher-Order Functions 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "642fcd82-bf52-408a-9379-f10ad6ed0126",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 967384,
+              "key": "c8ca90f3-48f2-4ca3-a173-02065b2acfc1",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "r950324c967368xGENERICm35uzpt5",
+              "pool_id": "webterminal",
+              "view_id": "generic-eteyw",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "port": 3000,
+                    "ports": [],
+                    "userCode": "node -v",
+                    "openFiles": [
+                      "/home/workspace/hof_2.js"
+                    ],
+                    "showFiles": false,
+                    "allowClose": false,
+                    "showEditor": true,
+                    "allowSubmit": false,
+                    "terminalTitle": "BASH",
+                    "openTerminalOnStartup": true
+                  },
+                  "kind": "generic"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 967380,
+          "key": "c33a472c-8e49-49d6-b884-de28cd952175",
+          "title": "Higher-Order Functions Review",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c33a472c-8e49-49d6-b884-de28cd952175",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 967370,
+              "key": "c8ac8c12-cf18-4d79-832c-4798805f888d",
+              "title": "Exercise Solution",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Exercise Solution - HOF 1\n``` javascript\n// Create a function that when passed as a callback to the Higher-Order function provided, makes the final return the number's square plus two\n\nconst addTwo = (callback) => {\n  return callback() + 2\n}\n\n// Create a Higher Order Function that could take this callback to return a greeting\n\nconst createFullName = (first_name, last_name, title) => {\n  return `${title} ${first_name} ${last_name}`\n}\n\n\n// you might notice that this function is less than ideal - that's great! We'll talk about why next\n```\n\n## Exercise Solution - HOF 2\n``` javascript\nweaponsWithNoises = [\n    \t{name: 'Phaser', noise: 'bssszzsssss', universe: 'Star Trek'},\n\t{name: 'Blaster', noise: 'Pew Pew', universe: 'Star Wars'},\n\t{name: 'Sonic Screwdriver', noise: 'Pew Pew', universe: 'Dr. Who'},\n\t{name: 'Lightsaber', noise: 'Pew Pew', universe: 'Star Wars'},\n\t{name: 'Noisy Cricket', noise: 'Pew Pew', universe: 'Men in Black'}\n]\n\nfunction weaponsFromUniverse(universe) {\n\t// ...Your code here!\n}\n\n// USAGE\nconst useStarWarsWeapon = weaponsFromUniverse('Star Wars')\n\nuseStarWarsWeapon('Blaster') // console logs 'used Blaster: Pew Pew'\nuseStarWarsWeapon('Noisy Cricket') // console logs 'Noisy Cricket is not a part of the Star Wars universe'\n\n\n// solution:\nfunction weaponsFromUniverse(universe) {\n\tconst useableWeapons = weaponsWithNoises.filter(w => w.universe == universe)\n    \n\tconst useWeapon = (weaponName) => {\n    \t  const weapon = useableWeapons.find(w => weaponName == w.name)\n   \t \n    \t  if (weapon) {\n        \t    console.log(`used ${weapon.name}: ${weapon.noise}`)\n    \t  } else {\n        \t    console.log(`${weaponName} is not a part of the ${universe} universe`)\n    \t  }\n\t}\n    \n\treturn useWeapon\n}\n\nconst useStarWarsWeapon = weaponsFromUniverse('Star Wars')\nuseStarWarsWeapon('Blaster')\nuseStarWarsWeapon('Noisy Cricket')\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 965816,
+              "key": "c584b404-f921-4741-b506-245dbf78ea58",
+              "title": "Higher Order Functions Overview Problem Set",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "c584b404-f921-4741-b506-245dbf78ea58",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Higher-Order Functions are functions that:",
+                "answers": [
+                  {
+                    "id": "rbk1",
+                    "text": "Are passed as arguments to functions",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk2",
+                    "text": "Return a function",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "rbk3",
+                    "text": "Create a function",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk4",
+                    "text": "Have a nested function inside of them",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk5",
+                    "text": "Receive a function as an argument",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 967391,
+              "key": "c25ec7ed-11b0-4878-aeff-1e4147c89773",
+              "title": "Higher-Order Functions Overview",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "c25ec7ed-11b0-4878-aeff-1e4147c89773",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "Match keywords to the correct code snippets below:"
+                },
+                "concepts_label": "Code",
+                "answers_label": "Keyword",
+                "concepts": [
+                  {
+                    "text": "What would you call the anonymous function `(v) => v > star_id` in the following code?\n``` javascript\nfunction furtherSun(star_id) {\n\treturn v => v > star_id;\n}\n```\n",
+                    "correct_answer": {
+                      "id": "a1578620052334",
+                      "text": "Nested Function"
+                    }
+                  },
+                  {
+                    "text": "What is `init_terraform` in the below code?\n``` javascript\nconst s_phase = (a, b, c) => {\n    ...\n    return \n       '${c.prefix}${a}${(b/7)*.88}'\n}\ninit_terraform(s_phase, 'Narstrum')\n```",
+                    "correct_answer": {
+                      "id": "a1578620115927",
+                      "text": "Higher-Order Function"
+                    }
+                  },
+                  {
+                    "text": "What is `futherSun` in the following code?\n``` javascript\nfunction furtherSun(star_id) {\n\treturn v => v > star_id;\n}\n```",
+                    "correct_answer": {
+                      "id": "a1578620117314",
+                      "text": "Higher-Order Function"
+                    }
+                  },
+                  {
+                    "text": "In the code below, if `stasis` is called inside a pure function, what would it be?\n``` javascript\nconst stasis = (zone, depth) => \n   (zone * 327)/(depth * .24)\n```\n",
+                    "correct_answer": {
+                      "id": "a1578620118202",
+                      "text": "Callback"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1578620118202",
+                    "text": "Callback"
+                  },
+                  {
+                    "id": "a1578620371233",
+                    "text": "Anonymous Function"
+                  },
+                  {
+                    "id": "a1578620382456",
+                    "text": "Function Expression"
+                  },
+                  {
+                    "id": "a1578620052334",
+                    "text": "Nested Function"
+                  },
+                  {
+                    "id": "a1578620115927",
+                    "text": "Higher-Order Function"
+                  },
+                  {
+                    "id": "a1578620394670",
+                    "text": "Double Function"
+                  },
+                  {
+                    "id": "a1578620117314",
+                    "text": "Higher-Order Function"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 965830,
+              "key": "895a930f-f18b-4e8b-a616-0bfc810a7b91",
+              "title": "Concept summary & Further Research",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Summary\nI hope this lesson has made you comfortable with the concept of HOFs, and also that it opened your eyes to all the advanced possibilities of using them in your programs. If you’re feeling comfortable - congratulations! That is a really significant step. And, if you don’t feel comfortable with closures and HOFs just yet, I want to leave you with this - don’t worry. In my experience, these two concepts just take time. As I was learning code, I learned about each of them about four separate times over two years before I finally had my true lightbulb moment. No matter what your comfort level with these concepts, I would recommend reading the Eloquent JavaScript section on [Higher Order Functions](https://eloquentjavascript.net/05_higher_order.html).",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 965845,
+          "key": "9793c3c8-56f3-4467-882b-ba35e149a5c5",
+          "title": "Functional Data Manipulations",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9793c3c8-56f3-4467-882b-ba35e149a5c5",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 965825,
+              "key": "d1a37b77-ea41-4794-a0c4-a468ec0af661",
+              "title": "Introduction",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Functional Data Manipulations Intro\nWorking with data is a primary requirement for any programmer, so we are going to practice manipulating data with the methods learned in the last lesson. To make this section as realistic to a job situation as possible, we will practice manipulating real API response data. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 965819,
+              "key": "ae5936a6-d8b7-4551-8358-21f823f02101",
+              "title": "ND032 C02 L03 A04 Data Manipulations In Functional Programs",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "2eV1m-3BoJU",
+                "china_cdn_id": "2eV1m-3BoJU.mp4"
+              }
+            },
+            {
+              "id": 965828,
+              "key": "c4525847-29ce-4885-907b-97a4faf455de",
+              "title": "Data Manipulations & DOM Overview",
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2020/January/5e0e3a87_l3-13-datamanipulationdomoverview/l3-13-datamanipulationdomoverview.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/c4525847-29ce-4885-907b-97a4faf455de",
+              "caption": "Visualize how depending on where you mainpulate data whether you are doing DOM or Data Manipulations. ",
+              "alt": "DOM & Data Manipulations",
+              "width": 960,
+              "height": 540,
+              "instructor_notes": null
+            },
+            {
+              "id": 967373,
+              "key": "0d820575-44f8-4ad8-bab5-44daa9ee6dc9",
+              "title": "Exercise Instructions",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Exercise Instructions\nNext, we will give you some real API data so that you can practice wrangling complex objects and arrays in a Functional way. \n\nIf you need a reminder on the instructions of how to use our node environment, look back at the *Introduction to Functional Programming* exercises.\n\n**NOTE: the Node version in the following workspace is version 8.9. This version doesn't support array flat. This is supported in Node 11 onward.**\n\n### Local Machine\rThis next exercise can be found in `.../exercises/fp_in_js/data_manipulations.js`.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 967378,
+          "key": "9c2f40ae-6395-49cd-b136-fa1dbec9f3af",
+          "title": "Exercise: Data Manipulations",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9c2f40ae-6395-49cd-b136-fa1dbec9f3af",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 967385,
+              "key": "dc8ff44f-4833-4588-9086-0a6dec623c61",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "r950324c967378xGENERIC9rwqjd7v",
+              "pool_id": "webterminal",
+              "view_id": "generic-clwqc",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "port": 3000,
+                    "ports": [],
+                    "userCode": "node -v",
+                    "openFiles": [
+                      "/home/workspace/data_manipulations.js",
+                      "/home/workspace/nasa_near_earth_object_API.json"
+                    ],
+                    "showFiles": false,
+                    "allowClose": false,
+                    "showEditor": true,
+                    "allowSubmit": false,
+                    "terminalTitle": "BASH",
+                    "openTerminalOnStartup": true
+                  },
+                  "kind": "generic"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 965844,
+          "key": "7572aab8-6bc1-42bb-8e46-27d3decfa13f",
+          "title": "Data Manipulations Problem Set",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7572aab8-6bc1-42bb-8e46-27d3decfa13f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 967369,
+              "key": "28780433-ec5b-4e59-a195-2b1cac984e60",
+              "title": "Exercise Solution",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Exercise Solution - Data Manipulations\n\nTotal Count --------------------------------------------------------------------\n How many near earth objects did NASA register for the date of the search? Return the count.\r\rExpected output: \n\nAverages ----------------------------------------------------------------------\nReturn the average absolute_magnitude_h of all the near earth objects.\r\r// Expected output: 22.613545454545452\n\r// Extra Challenge Solution:\n``` javascript\rasteroids.reduce((acc, curr, i, arr) => {\r   if (i + 1 == arr.length) {\n                     // this is the averages trick\r                     //  at the very last item, take the accumulated sum and divide by the total number of items\n \t       return acc / arr.length\r             }\n            return acc += curr['absolute_magnitude_h']\n           }, 0)\r           ```\n\n\nHazardous -------------------------------------------------------------------\nReturn a list of all objects (their id, name, max size in miles, and how many miles it will miss the earth by) that are labeled potentially hazardous\n\n       ```javascript\r\nconst hazardous = api_sample_data['near_earth_objects']['2019-12-02'].filter(asteroid => asteroid['is_potentially_hazardous_asteroid'] === true)\n\nconsole.log(hazardous[0])\n\nconst hazardousFmt = hazardous.map(asteroid => {\n\tconst closeApproach = asteroid['close_approach_data']\n\n\treturn {\n   \tid: asteroid['id'],\n   \tname: asteroid['name'],\n   \tmaxSize: asteroid['estimated_diameter']['miles']['estimated_diameter_max'],\n   \tclosestApproach: closeApproach[0]['miss_distance']['miles']\n\t}\n})\r\n// expected output: [{\"id\":\"3797749\",\"name\":\"(2018 BO1)\",\"maxSize\":0.2933532873,\"closestApproach\":\"30311929.3487318204\"},{\"id\":\"3740494\",\"name\":\"(2016 AF193)\",\"maxSize\":0.1539539936,\"closestApproach\":\"9930345.1795315036\"}]\n\r\n// OR - you could use destructuring:\n\nconst { id, name, estimated_diameter: { miles: { estimatedDiameterMax } }, closeApproachData } = asteroid\n\nreturn {\n   id: id,\n   name: name,\n   maxSize: estimatedDiameterMax,\n   closestApproach: closeApproachData[0].missDistance.miles\n}\r```\n\nToo Close for Comfort -----------------------------------\nA list of all objects (their id, name, max size in miles, and closest approach in miles) that have a miss_distance of less than 900,000 miles\n\n```javascript\nconst tooClose = api_sample_data['near_earth_objects']['2019-12-02'].filter(asteroid => {\n\tconst closeApproach = asteroid['close_approach_data']\n\treturn closeApproach[0].miss_distance.miles < 900000\n})\n\nconst tooCloseResults = tooClose.map(asteroid => {\n    const closeApproach = asteroid['close_approach_data']\nreturn {\n   \tid: asteroid['id'],\n   \tname: asteroid['name'],\n   \tmaxSize: asteroid['estimated_diameter']['miles']['estimated_diameter_max'],\n   \tclosestApproach: closeApproach[0]['miss_distance']['miles']\n\t}\n\n})\n// expected output: [{\"id\":\"3907553\",\"name\":\"(2019 XH2)\",\"maxSize\":0.0061544743,\"closestApproach\":\"775950.9423668918\"}]\n```\n\nAlert ---------------------------------------------------\nOf all the near earth objects for 2019-12-02, find the time that the asteroid with the nearest miss will be closest to earth.\n```javascript\nconst closest = apiSampleData.nearEarthObjects['2019-12-02'].reduce((closest, curr) => {\n  const currDist = parseFloat(curr.closeApproachData[0].missDistance.miles)\n  const closestDist = parseFloat(closest.closeApproachData[0].missDstance.miles)\n\n  if (currDist > closestDist) {\n    return closest\n  } else {\n    return curr\n  }\n})\n\nconsole.log(closest.closeApproachData[0].missDistance.miles)\n\n// expected output: 775950.9423668918\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 965832,
+              "key": "fdf3e1f4-0003-4491-a037-402850bf0969",
+              "title": "Data manipulations in functional programs",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "fdf3e1f4-0003-4491-a037-402850bf0969",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Which of the following JavaScript methods might you see in a Functional data manipulation?",
+                "answers": [
+                  {
+                    "id": "rbk1",
+                    "text": "array.map",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "rbk2",
+                    "text": "array.reduce",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "rbk3",
+                    "text": "array.unshift",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk4",
+                    "text": "array.concat",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "rbk5",
+                    "text": "array.flat",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "rbk6",
+                    "text": "array.filter",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "rbk7",
+                    "text": "array.sort",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 965820,
+              "key": "cbc0d400-2c25-4f4e-a082-37c55bb77019",
+              "title": "Concept summary & Further Research",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Summary\n\nYou just learned about data manipulations and how to interact with an API using Functional JS. It can be really challenging to navigate real world API’s but hopefully you saw how the tools and methods we learned in Lesson 2 can really come to your rescue to manage large data sets. In my experience, working with large amounts of json is a matter of patience, persistence, and a lot of trial and error and console logging, more than writing clever functions - so if you are ever frustrated and not getting the results you want, know that it happens to everyone! Take a quick break and go at it with fresh eyes after a few minutes. You might find that the answer was just a comma or quote away! And like everything, it gets easier over time. \r\rIf data manipulations are mostly focused on external data coming into your app, then the next logical thing we need to work on is using Functional programming within our app. And that is indeed the next section - so get ready for Functional DOM Manipulations!",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 965846,
+          "key": "ef2ae4ef-fe0e-470d-bcc5-917438158efb",
+          "title": "Functional DOM Manipulations",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ef2ae4ef-fe0e-470d-bcc5-917438158efb",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 965837,
+              "key": "573ed663-e957-4831-b463-19f2a483feb5",
+              "title": "Manipulating the DOM in a FP",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Functional DOM Manipulations\nDealing with the DOM is inherently not Functional. In fact, working with the DOM often requires relying on “side effects” and other practices that go fully against the Functional concepts we learned at the beginning of this course.  We saw in the last section that manipulating data according to Functional concepts is totally possible and often is to our advantage, but things are going to get trickier trying to work with the DOM in a Functional way. In this section, we are going to create our own Functional, React-inspired way to create and update DOM elements. The goal is that by doing this, you will see where the Functional concepts come into play. It is important to note that this course does not teach any React and no React knowledge is needed to proceed with the lesson. It is enough to know that React takes a Functional styled approach to Front End web development, so some of the strategies we will use are similar. \n\n## Rendering to the DOM",
+              "instructor_notes": ""
+            },
+            {
+              "id": 965817,
+              "key": "3dd57581-31ae-425d-b0b1-6e9f593fbbc0",
+              "title": "ND032 C02 L03 A05 Manipulating The DOM In A Functional Program",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "XMlBJq2vvIs",
+                "china_cdn_id": "XMlBJq2vvIs.mp4"
+              }
+            },
+            {
+              "id": 1043533,
+              "key": "dea4f32f-ccd9-4fb6-9dc8-fef04aab559f",
+              "title": "Code Review",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Code Review\r\r** NOTE - We are now in the DOM section of the course, so your node environment will not be able to run these examples. To see them in action, paste this code in a sandbox or your browser console.\n\n``` javascript\nconst root = document.getElementById('root')\r\n// First Pass - Basic Layout\nconst render = root => {\n    root.innerHTML = `<div> I EXIST! </div>`\n}\n\rrender(root)\n\n// Second Pass - Easier to add more layout\nconst render = root => {\n    root.innerHTML = App()\n}\n\nconst Welcome = () => {  // pure function  \n\r    return `Welcome to my JavaScript Program!`\r} \n\nconst App = () => { // higher-order and pure function\n    return `\n        <h1>${Welcome()}<h1>\n       <div> I EXIST! </div>\n    `\n}  \nrender(root)\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 967374,
+              "key": "2f8a704d-1b9d-4a81-96fe-e3673c3261e8",
+              "title": "Exercise Instructions",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Exercise Instructions\nYou can now go into the exercise to extend the program covered in the video above. If you need a reminder on the instructions head over to *Introduction to Functional Programming* exercises to get a reminder on those instructions.\n\n### Local Machine  \nThis next exercise can be found in `.../exercises/fp_in_js/render_method.js`.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 967379,
+          "key": "671ae8b0-73ad-44fa-97aa-f84fc628c7c0",
+          "title": "Exercise: Render Method",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "671ae8b0-73ad-44fa-97aa-f84fc628c7c0",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 967386,
+              "key": "df17cd7d-fe34-4a2a-a26e-9f1629b13e88",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "r950324c967379xGENERICvm8ue6j0",
+              "pool_id": "webterminal",
+              "view_id": "generic-vb1h5",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "port": 3000,
+                    "ports": [],
+                    "userCode": "node -v",
+                    "openFiles": [
+                      "/home/workspace/index.html",
+                      "/home/workspace/render_method.js"
+                    ],
+                    "showFiles": false,
+                    "allowClose": false,
+                    "showEditor": true,
+                    "allowSubmit": false,
+                    "terminalTitle": "BASH",
+                    "openTerminalOnStartup": true
+                  },
+                  "kind": "generic"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 965842,
+          "key": "619e7f6e-8abf-4fcd-9c1e-2855d5e379f1",
+          "title": "Holding Application State",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "619e7f6e-8abf-4fcd-9c1e-2855d5e379f1",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 965818,
+              "key": "5adf86c2-048b-4f77-b2a0-b105358909a3",
+              "title": "state",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## State\nWe have seen that we can create elements in our JavaScript program and make them appear in the DOM, but now how do we hold onto values, take in data and do all the other things necessary for an interactive app? That is the focus of this section. \r\nWe need a place to hold information. Our app is likely going to collect information from users or receive it from an API, and we need an organized way to handle data from any source. Functional Programming stays away from creating a global state, but in a real life web application, sticking to that rule proves difficult and overly complicated to do. Instead of **no** global state, what we can do is create just **one** place for all that global information to live. We will create an immutable object to store data - Functional Programming has no rules against that - and we will use this immutable object as the **single source of truth** for our application’s data. \r\r``` javascript\nconst store = {\n    user: {\n        first_name: ‘John’,\n        last_name: ‘Doe’\n    }\n}\r```\nStore is a generic term for an object that **stores** application data. That will be the purpose of this immutable object, so we named it *store* and it can now be passed as an argument into our functions. \n\n``` javascript\nconst render = (root, state) => {\n   root.innerHTML = App(state)\n}\n\nconst Welcome = (name) => {\n   return `Welcome, ${name} to my JavaScript Program!`\n}\n\nconst App = (state) => {\n   return `\n       <h1>${Welcome(state.user.first_name)}<h1>\n      <div> I EXIST! </div>\n   `\n}\n\nrender(root, store)\n```\nHere we have taken the code that generated the DOM elements in the last section and passed our new store object to it so that data is accessible to our component functions. \r\nOne more thing, if you have recreated these two sections on your own computer and tried to see the results in your browser, there was likely a problem and nothing showed up on the screen except what was in your `index.html` file. Why’s that? Because we are missing one function that tells the JavaScript when to run. You might have seen this function from other Javascript programs for the browser. We need to wait for the load event to make sure that our JavaScript doesn’t run before the DOM element ‘root’ exists.\r\r``` javascript\nwindow.addEventListener('load', () => {\n   render(root, store)\n})\n```\n\nNow we are telling our JavaScript to wait until the `load` event has finished in the browser, which means it's safe to create the rest of our layout. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 967371,
+              "key": "214a5c1a-372f-435f-845c-b68138e4fa73",
+              "title": "Exercise Instructions",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Exercise Instructions\nNow you can apply what you learned about holding the state of your program in the following exercise. If you need a reminder on the instructions head over to *Introduction to Functional Programming* exercises to get a reminder on those instructions.\n\n### Local Machine\rThis next exercise can be found in `.../exercises/fp_in_js/application_state.js`",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 967377,
+          "key": "b0ae757d-d70c-47fb-8912-2bca5d6e5c65",
+          "title": "Exercise: Application State",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b0ae757d-d70c-47fb-8912-2bca5d6e5c65",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 967387,
+              "key": "c53ef7cd-963e-490f-bdec-ce6d781d1238",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "r950324c967377xGENERICsz52wtqn",
+              "pool_id": "webterminal",
+              "view_id": "generic-ai5zj",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "port": 3000,
+                    "ports": [],
+                    "userCode": "node -v",
+                    "openFiles": [
+                      "/home/workspace/index.html",
+                      "/home/workspace/application_state.js"
+                    ],
+                    "showFiles": false,
+                    "allowClose": false,
+                    "showEditor": true,
+                    "allowSubmit": false,
+                    "terminalTitle": "BASH",
+                    "openTerminalOnStartup": true
+                  },
+                  "kind": "generic"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 965843,
+          "key": "d9aca980-3a35-4a96-abb8-c6f06a702f61",
+          "title": "Functional DOM Manipulation Problem Set",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d9aca980-3a35-4a96-abb8-c6f06a702f61",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 967372,
+              "key": "2451c6a7-095c-4d2d-b1eb-2d28922f4f14",
+              "title": "Exercise Solution",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Render Method - Exercise Solution\n\n``` javascript\n// Here is the code from the example text\n\nconst root = document.getElementById('root')\n\nconst Welcome = () => {\n    return `Welcome to my JavaScript Program!`\n}\n\nconst App = () => {\n    return `\n        <h1>${Welcome()}<h1>\n        <div> I EXIST! </div>\n    `\n}\n\nconst render = root => {\n    root.innerHTML = App()\n}\n\nrender(root)\n\n// Add a new Menu component that takes in a show argument which is either true or false\n// Show this content if show is true:\n{/* <nav>\n    <ul>\n        <li>About Us</li>\n        <li>Contact Us</li>\n        <li>Login</li>\n    </ul>\n</nav> */}\n\n// and this content if show is false:\n{/* <nav>Menu</nav> */ }\n\nconst Menu = (show) => {\n    if(show) {\n        return (`\n                <nav>\n                    <ul>\n                        <li>About Us</li>\n                        <li>Contact Us</li>\n                        <li>Login</li>\n                    </ul>\n                </nav>\n            `)\n   }\n    return `<nav>Menu</nav>`\n}\n```\n\n## Application State - Exercise Solution\n\n``` javascript\n// Given\n\nlet store = {\n    user: {\n        first_name: 'John',\n        last_name: 'Doe'\n    }\n}\n\nconst render = (root, state) => {\n    root.innerHTML = App(state)\n}\n\nconst Welcome = (name) => {\n    return `Welcome, ${name} to my JavaScript Program!`\n}\n\nconst App = (state) => {\n    return `\n       <h1>${Welcome(state.user.first_name)}<h1>\n      <div> I EXIST! </div>\n   `\n}\n\nwindow.addEventListener('load', () => {\n    render(root, store)\n})\n// But what if state changes at some point in our app?\n// Using the object methods we have learned so far in this course, \n// create a function called updateStore that takes in the old state, the new state, and updates the old state with any new information\n// This won't be a pure function, instead of a return, call the render method again\n\nconst updateStore = (store, newState) => {\n    store = Object.assign(store, newState)\n    render(root, store)\n}\n\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 965815,
+              "key": "9aa02e97-0bc9-4d93-b418-fec9e4424211",
+              "title": "Functional DOM questions",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "9aa02e97-0bc9-4d93-b418-fec9e4424211",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Updating the DOM cannot be achieved with only pure functions, but that doesn’t mean we can’t code in a Functional style the rest of the time and benefit from it. Which of the following are Functional?",
+                "answers": [
+                  {
+                    "id": "rbk1",
+                    "text": "``` javascript\nconst root = document.getElementById('root')\n```",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk2",
+                    "text": "``` javascript\nconst Welcome = () => {\n   return `Welcome to my JavaScript Program!`\n}\n```",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "rbk3",
+                    "text": "``` javascript\nconst App = () => {\n   return `\n       <h1>${Welcome()}<h1>\n       <div> I EXIST! </div>\n   `\n}\n```",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "rbk4",
+                    "text": "``` javascript\nconst render = root => {\n   root.innerHTML = App()\n}\n```",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk5",
+                    "text": "``` javascript\nconst updateStore = (store, newState) => {\n   store = Object.assign(store, newState)\n   render(root, store)\n}\n```",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 965824,
+              "key": "0a7ee888-1724-4f1b-b862-79dbb232fa6d",
+              "title": "Functional DOM questions",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "0a7ee888-1724-4f1b-b862-79dbb232fa6d",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Global state (like our store in the example code) is an idea Functional Programming took directly from Lambda calculus.",
+                "answers": [
+                  {
+                    "id": "rbk1",
+                    "text": "True",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk2",
+                    "text": "False",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 965835,
+              "key": "a1fa02ee-3be0-4192-9183-62ace0895cce",
+              "title": "Concept summary & Further Research",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Summary\nThere isn’t such a thing as truly “Functional” DOM manipulations, but we have now seen how to isolate the parts of our logic that can’t be functional ( like the render method from the exercise) so that we are free to write the main logic in a Functional style. \r\r**Bonus fact:** If you are familiar with React, this is exactly how React handles non-Functional DOM manipulations. Next time you spin up a Create React App project - take a look in the index.html file and first render function. ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 965847,
+          "key": "a20b4843-674c-40eb-9d5e-854db98929e5",
+          "title": "Lesson Recap",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a20b4843-674c-40eb-9d5e-854db98929e5",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 965836,
+              "key": "5aef847f-af41-4d04-ba1c-03ee25f8de44",
+              "title": "ND032 C02 L03 A06 Lesson Recap Functional Programming In JS",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "PXyxbcWoMaQ",
+                "china_cdn_id": "PXyxbcWoMaQ.mp4"
+              }
+            },
+            {
+              "id": 965823,
+              "key": "811f2630-826f-45da-8759-e1285d52f919",
+              "title": "Lesson Summary",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Lesson Summary\nThis lesson has been putting the concepts from lesson 1 and the syntax from lesson 2 to use in real programs. And we’ve learned that it's hard and not always a perfect world when it comes to implementing these ideas, but you have also seen first hand how to reap the benefits of a Functional style in a real-life scenario. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 965833,
+              "key": "2ae746e2-58af-4a76-a5c0-13582947dec6",
+              "title": "Resources",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Resources\nYou can learn more about Higher-Order Functions from Eloquent JavaScript's Chapter on [Higher-Order Functions](https://eloquentjavascript.net/05_higher_order.html)\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 965834,
+              "key": "9f1029eb-5fb2-4bc4-aec8-2ec4e140bd82",
+              "title": "Glossary",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Glossary\n**Higher-Order Function** - In JavaScript, is a function that takes another function as an argument or returns another function",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "starter_files",
+      "reason": "prefer master_archive_id"
+    },
+    {
+      "name": "starter_files",
+      "reason": "prefer master_archive_id"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "starter_files",
+      "reason": "prefer master_archive_id"
+    },
+    {
+      "name": "starter_files",
+      "reason": "prefer master_archive_id"
+    },
+    {
+      "name": "starter_files",
+      "reason": "prefer master_archive_id"
+    }
+  ]
+}

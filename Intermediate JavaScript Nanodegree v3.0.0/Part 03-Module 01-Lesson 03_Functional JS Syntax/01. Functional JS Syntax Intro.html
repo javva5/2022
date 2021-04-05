@@ -1,0 +1,323 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Functional JS Syntax Intro</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Functional JS Syntax</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Functional JS Syntax Intro.html">01. Functional JS Syntax Intro</a>
+    </li>
+    <li class="">
+      <a href="02. Array Methods.html">02. Array Methods</a>
+    </li>
+    <li class="">
+      <a href="03. The Map Method.html">03. The Map Method</a>
+    </li>
+    <li class="">
+      <a href="04. Exercise Map Method.html">04. Exercise: Map Method</a>
+    </li>
+    <li class="">
+      <a href="05. Advanced Map Method.html">05. Advanced Map Method</a>
+    </li>
+    <li class="">
+      <a href="06. Exercise Advanced Map Method.html">06. Exercise: Advanced Map Method</a>
+    </li>
+    <li class="">
+      <a href="07. Map Method Review.html">07. Map Method Review</a>
+    </li>
+    <li class="">
+      <a href="08. The Filter Method.html">08. The Filter Method</a>
+    </li>
+    <li class="">
+      <a href="09. Exercise Filter Method.html">09. Exercise: Filter Method</a>
+    </li>
+    <li class="">
+      <a href="10. Filter Method Review.html">10. Filter Method Review</a>
+    </li>
+    <li class="">
+      <a href="11. The Reduce Method.html">11. The Reduce Method</a>
+    </li>
+    <li class="">
+      <a href="12. Exercise Reduce Method.html">12. Exercise: Reduce Method</a>
+    </li>
+    <li class="">
+      <a href="13. Reduce Review.html">13. Reduce Review</a>
+    </li>
+    <li class="">
+      <a href="14. Array Methods for Selection.html">14. Array Methods for Selection</a>
+    </li>
+    <li class="">
+      <a href="15. Exercise Array Methods (Flat, Find, Include).html">15. Exercise: Array Methods (Flat, Find, Include)</a>
+    </li>
+    <li class="">
+      <a href="16. Array Method Problem Set.html">16. Array Method Problem Set</a>
+    </li>
+    <li class="">
+      <a href="17. Variables.html">17. Variables</a>
+    </li>
+    <li class="">
+      <a href="18. ES6 Object Methods &amp; Freeze.html">18. ES6 Object Methods &amp; Freeze</a>
+    </li>
+    <li class="">
+      <a href="19. Exercise Object Method - Freeze.html">19. Exercise: Object Method - Freeze</a>
+    </li>
+    <li class="">
+      <a href="20. Object Method - Keys.html">20. Object Method - Keys</a>
+    </li>
+    <li class="">
+      <a href="21. Exercise Object Method - Keys.html">21. Exercise: Object Method - Keys</a>
+    </li>
+    <li class="">
+      <a href="22. Object Method - Assign.html">22. Object Method - Assign</a>
+    </li>
+    <li class="">
+      <a href="23. Exercise Object Method - Assign.html">23. Exercise: Object Method - Assign</a>
+    </li>
+    <li class="">
+      <a href="24. Object Methods Problem Set.html">24. Object Methods Problem Set</a>
+    </li>
+    <li class="">
+      <a href="25. Exercise Putting it All Together.html">25. Exercise: Putting it All Together</a>
+    </li>
+    <li class="">
+      <a href="26. Lesson Recap.html">26. Lesson Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">01. Functional JS Syntax Intro</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>ND032 C02 L02 A01 Intro To Functional JS Syntax</p></h3>
+  <video controls>
+  <source src="01. ND032 C02 L02 A01 Intro To Functional JS Syntax-Bj4FoLCSdmk.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="01. ND032 C02 L02 A01 Intro To Functional JS Syntax-Bj4FoLCSdmk.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Summary &amp; Outline</p></h3>
+  <div>
+  <h2 id="lesson-outline">Lesson Outline</h2>
+<p>ES6 introduced a lot of new syntax, and much of the syntax was intentionally added to support writing JavaScript in a Functional style. In this lesson you will learn about the following changes in syntax and specifically how they help us write functional programs: </p>
+<ul>
+<li>Array Methods</li>
+<li>Variables</li>
+<li>Object Methods</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Course Overview</p></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/l2-3-courseoverview.png" alt="We will continue on to applying the foundations of FP we just learned to JavaScript." class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>We will continue on to applying the foundations of FP we just learned to JavaScript.</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>JS basic research</p></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>To the docs! Who better to be an authority on what kind of language JavaScript is than ECMA? Read this section of the JavaScript docs [<a href="https://www.ecma-international.org/ecma-262/5.1/" rel="noopener noreferrer" target="_blank">https://www.ecma-international.org/ecma-262/5.1/</a>] to answer the following question. </p>
+<p>What kind of programming language is JavaScript? </p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>JS Basic Research</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>To the docs! Who better to be an authority on what kind of language JavaScript is than ECMA? Read this section of the JavaScript docs [<a href="https://www.ecma-international.org/ecma-262/5.1/" rel="noopener noreferrer" target="_blank">https://www.ecma-international.org/ecma-262/5.1/</a>] to answer the following question. </p>
+<p>What kind of programming language is JavaScript? </p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="rbk1" name="1043510" id="rbk1">
+        <label for="rbk1"><p>Object Oriented</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk2" name="1043510" id="rbk2">
+        <label for="rbk2"><p>Functional</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk3" name="1043510" id="rbk3">
+        <label for="rbk3"><p>Imperative</p></label>
+      </div>
+      <div>
+        <input type="radio" value="rbk4" name="1043510" id="rbk4">
+        <label for="rbk4"><p>Scripting</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Object Oriented
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="02. Array Methods.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('01. Functional JS Syntax Intro')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

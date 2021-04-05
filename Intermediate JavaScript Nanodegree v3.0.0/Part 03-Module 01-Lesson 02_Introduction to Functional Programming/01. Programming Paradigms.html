@@ -1,0 +1,271 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Programming Paradigms</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Introduction to Functional Programming</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Programming Paradigms.html">01. Programming Paradigms</a>
+    </li>
+    <li class="">
+      <a href="02. Why Learn Paradigms.html">02. Why Learn Paradigms?</a>
+    </li>
+    <li class="">
+      <a href="03. Comparing Paradigms.html">03. Comparing Paradigms</a>
+    </li>
+    <li class="">
+      <a href="04. Exercise Compare Paradigms.html">04. Exercise: Compare Paradigms</a>
+    </li>
+    <li class="">
+      <a href="05. Paradigms Review.html">05. Paradigms Review</a>
+    </li>
+    <li class="">
+      <a href="06. Foundations of FP.html">06. Foundations of FP</a>
+    </li>
+    <li class="">
+      <a href="07. Exercise Foundation Concepts.html">07. Exercise: Foundation Concepts</a>
+    </li>
+    <li class="">
+      <a href="08. FP &amp; Pure Functions Review.html">08. FP &amp; Pure Functions Review</a>
+    </li>
+    <li class="">
+      <a href="09. Why FP.html">09. Why FP?</a>
+    </li>
+    <li class="">
+      <a href="10. Exercise Basic FP.html">10. Exercise: Basic FP</a>
+    </li>
+    <li class="">
+      <a href="11. Basic FP Review.html">11. Basic FP Review</a>
+    </li>
+    <li class="">
+      <a href="12. Lesson Recap.html">12. Lesson Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">01. Programming Paradigms</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>What is a paradigm?</p></h3>
+  <div>
+  <h1 id="introduction-to-functional-programming">Introduction to Functional Programming</h1>
+<h2 id="lesson-outline">Lesson Outline</h2>
+<p>In this lesson, I'll be covering the following topics:</p>
+<ul>
+<li>Introduction to Programming Paradigms</li>
+<li>History of Functional Programming</li>
+<li>Foundational Concepts of Functional Programming</li>
+<li>Benefits of Functional Programming</li>
+</ul>
+<h2 id="introduction-to-programming-paradigms">Introduction to Programming Paradigms</h2>
+<p>What are <strong>programming paradigms</strong> anyway? The word “paradigm” always felt ephemeral and for a long time I did not feel like I understood what it was all about. Paradigms are styles of programming that are tried and true at helping you write clean, readable, and effective programs, so they are definitely worth learning! In this lesson, we will start with an overview of paradigms in general, look at three in particular, and then move into the specific benefits and structure of the Functional Programming paradigm.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Course Overview</p></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/l1-2-courseoverview.png" alt="We will continue on to an Introduction to Functional Programming paradigm." class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>We will continue on to an Introduction to Functional Programming paradigm.</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ND032 C02 L01 A01 Programming Paradigms Overview</p></h3>
+  <video controls>
+  <source src="01. ND032 C02 L01 A01 Programming Paradigms Overview-hHj7-fyi6Ys.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="01. ND032 C02 L01 A01 Programming Paradigms Overview-hHj7-fyi6Ys.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Programming paradigm overview highlights</p></h3>
+  <div>
+  <p>That was a lot of information, so here are the main points again:</p>
+<ul>
+<li><strong>Programming Paradigm</strong> is a philosophy, style, or general approach to writing code.</li>
+<li>Most programming paradigms differ in how they deal with state.</li>
+<li>The <strong>Imperative Paradigm</strong> solves problems with an explicit sequence of commands to get from point A to point B. If the code or comments read like a recipe or handbook, it's likely to be imperative. Many programming languages, especially dynamic ones, including Javascript, PHP, and Python can be used to write imperative programs.</li>
+<li>The <strong>Functional Paradigm</strong> solves problems with functions that hold simple pieces of logic and can be chained together to accomplish more complex actions.</li>
+<li>The <strong>Object-Oriented Paradigm</strong> solves problems by defining objects that can hold both values (properties) and functionality (methods).</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Why paradigms reading</p></h3>
+  <div>
+  <p><strong>QUESTION: <p>Reflect</p></strong></p>
+  <p>Find <strong>two</strong> new paradigms you've never heard of and read their examples. You could start  from a resource like Dr. Ray Toal's note linked <a href="https://cs.lmu.edu/~ray/notes/paradigms/" rel="noopener noreferrer" target="_blank">here</a>. </p>
+<p>Learning about paradigms is all well and good, but it becomes important when we consider how these theories will affect what we write. Reflect on the two paradigms you read: </p>
+<ul>
+<li>Did anything about them perhaps change the way you think about programs you’ve written in the past? </li>
+<li>Would you be interested in writing a program that used either of them? </li>
+</ul>
+
+  <details>
+    <summary><strong>ANSWER:</strong></summary>
+    <p><p>Thanks for your response! Hopefully, learning the Functional Paradigm in this course will have an effect on the code you write in the future. </p></p>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Concept Summary &amp; further research</p></h3>
+  <div>
+  <p>Advancing your understanding of paradigms is a worthwhile endeavor, and before the course is done, I hope you begin to see tangible benefits in your programs because of these concepts. As you have seen, we are only scratching the surface of all the paradigms that are out there!</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="02. Why Learn Paradigms.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('01. Programming Paradigms')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

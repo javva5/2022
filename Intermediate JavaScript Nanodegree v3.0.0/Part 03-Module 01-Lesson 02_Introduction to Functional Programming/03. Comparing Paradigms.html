@@ -1,0 +1,302 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Comparing Paradigms</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Introduction to Functional Programming</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Programming Paradigms.html">01. Programming Paradigms</a>
+    </li>
+    <li class="">
+      <a href="02. Why Learn Paradigms.html">02. Why Learn Paradigms?</a>
+    </li>
+    <li class="">
+      <a href="03. Comparing Paradigms.html">03. Comparing Paradigms</a>
+    </li>
+    <li class="">
+      <a href="04. Exercise Compare Paradigms.html">04. Exercise: Compare Paradigms</a>
+    </li>
+    <li class="">
+      <a href="05. Paradigms Review.html">05. Paradigms Review</a>
+    </li>
+    <li class="">
+      <a href="06. Foundations of FP.html">06. Foundations of FP</a>
+    </li>
+    <li class="">
+      <a href="07. Exercise Foundation Concepts.html">07. Exercise: Foundation Concepts</a>
+    </li>
+    <li class="">
+      <a href="08. FP &amp; Pure Functions Review.html">08. FP &amp; Pure Functions Review</a>
+    </li>
+    <li class="">
+      <a href="09. Why FP.html">09. Why FP?</a>
+    </li>
+    <li class="">
+      <a href="10. Exercise Basic FP.html">10. Exercise: Basic FP</a>
+    </li>
+    <li class="">
+      <a href="11. Basic FP Review.html">11. Basic FP Review</a>
+    </li>
+    <li class="">
+      <a href="12. Lesson Recap.html">12. Lesson Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. Comparing Paradigms</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>ND032 C02 L01 A03 Programming Paradigms</p></h3>
+  <video controls>
+  <source src="03. ND032 C02 L01 A03 Programming Paradigms-H3oVYmXdzVE.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. ND032 C02 L01 A03 Programming Paradigms-H3oVYmXdzVE.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Programming Paradigms Review</p></h3>
+  <div>
+  <h2 id="code-review">Code Review</h2>
+<h3 id="imperative">Imperative</h3>
+<pre><code>let name = 'Captain Kirk'
+let hour = new Date().getHours()
+
+let greeting = ''
+
+if (hour &lt;= 6) {
+    greeting = 'Good Morning, '
+} else if (hour &gt;= 17) {
+    greeting = 'Good Evening, '
+} else {
+    greeting = 'Hello, '
+}
+
+greeting += name + '.'
+
+console.log(greeting)  
+//expected output: Hello, Captain Kirk</code></pre>
+<h3 id="functional">Functional</h3>
+<pre><code>const greet = (name) =&gt; (salutation) =&gt; `${salutation}, ${name}.`
+
+const determineSalutation = (callback) =&gt; {
+    const hour = new Date().getHours()
+
+    if (hour &lt;= 6) {
+        return callback('Good Morning')
+    } else if (hour &gt;= 17) {
+        return callback('Good Evening')
+    } else {
+        return callback('Hello')
+    }
+}
+
+let result = determineSalutation(greet('Captain Kirk')) 
+console.log(result)
+//expected output: Hello, Captain Kirk</code></pre>
+<h3 id="object-oriented">Object-Oriented</h3>
+<pre><code>class Person {
+    constructor(name){
+        this.name = name
+    }
+
+    determineSalutation(date){
+        const hour = (date &amp;&amp; date.getHours()) || new Date().getHours()
+
+        if (hour &lt;= 6) {
+            return "Good Morning"
+        } else if (hour &gt;= 17) {
+            return "Good Evening"
+        } else {
+            return "Hello"
+        }
+    }
+
+    greet() {
+        return `${this.determineSalutation()}\u00A0${this.name}`
+        // using JavaScript template literal: `${}`
+        // \u00A0 is a symbol to add a space in the template literal
+    }
+}
+
+const kirk = new Person("Kirk", "Captain")
+console.log(kirk.greet())
+//expected output: Hello, Captain Kirk</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Exercise Instructions</p></h3>
+  <div>
+  <h2 id="exercise-instructions">Exercise Instructions</h2>
+<p>Next, you will put what you have learned into hands-on practice in the following exercise. You can complete these exercises on your local machine or in the given workspace. Below are the directions for both.  </p>
+<h4 id="local-machine">Local Machine</h4>
+<ol>
+<li>You should have the exercise repo on your local machine. If you do not, go back to the <strong>Course Introduction to Functional Programming</strong> Lesson and find the instructions in the <strong>Course Overview & Tools</strong> Concept. </li>
+<li>You will find this exercise here:</li>
+</ol>
+<pre><code class="plaintext language-plaintext">.../exercises/intro_to_fp//compare_paradigms.js</code></pre>
+<ol start="3">
+<li>Now you can use your local setup to complete the exercise. You can use the <em>Workspace</em> directions to help you debug your setup.</li>
+</ol>
+<h4 id="workspace">Workspace</h4>
+<p>The following instructions will also be found in the workspace. </p>
+<ol>
+<li>Check that the <code>compare_paradigms.js</code> is open on the top half of the workspace. </li>
+<li>In the bottom half you will find a terminal with the title BASH with a version number as the 1st line. This indicates you have node installed and the current version. </li>
+<li>To run the starter code, type <code>node compare_paradigms.js</code> in BASH and hit <strong>Enter</strong>. This should be what your BASH terminal should now look like:</li>
+</ol>
+<pre><code class="BASH language-BASH">root:/home/workspace# node compare_paradigms.js
+Captain, the engines are active and we could be going faster.
+root:/home/workspace# </code></pre>
+<ol start="4">
+<li>Now you can use the workspace to complete the exercise. </li>
+</ol>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. Exercise Compare Paradigms.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. Comparing Paradigms')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

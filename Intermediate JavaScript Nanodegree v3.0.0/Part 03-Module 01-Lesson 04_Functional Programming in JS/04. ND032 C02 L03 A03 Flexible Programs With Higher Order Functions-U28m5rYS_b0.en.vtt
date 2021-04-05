@@ -1,0 +1,85 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.940
+The real power of higher-order functions comes
+
+00:00:02.940 --> 00:00:05.970
+when you use this pattern to extend functionality.
+
+00:00:05.970 --> 00:00:08.610
+You might have noticed in the last exercise that
+
+00:00:08.610 --> 00:00:12.419
+the higher-order functions can quickly accumulate a lot of arguments,
+
+00:00:12.419 --> 00:00:16.830
+because they need to take arguments for both themselves and the callbacks they invoke.
+
+00:00:16.830 --> 00:00:18.975
+When you see this starting to be an issue,
+
+00:00:18.975 --> 00:00:22.470
+it might help to use the second ability of higher-order functions,
+
+00:00:22.470 --> 00:00:24.810
+which is the ability to return a function.
+
+00:00:24.810 --> 00:00:28.785
+This way we can create a closure around an inner function,
+
+00:00:28.785 --> 00:00:30.345
+but that can be confusing.
+
+00:00:30.345 --> 00:00:32.250
+So let's take a look at an example.
+
+00:00:32.250 --> 00:00:35.360
+In this example, I have a function called greater than,
+
+00:00:35.360 --> 00:00:37.175
+which returns a function.
+
+00:00:37.175 --> 00:00:42.394
+If I call the greater than function and store its result in a variable,
+
+00:00:42.394 --> 00:00:46.970
+I can console log that variable and see that it stores a function.
+
+00:00:46.970 --> 00:00:51.755
+But if I call that variable and pass a value to it,
+
+00:00:51.755 --> 00:00:55.400
+I get true that 11 is in fact greater than eight.
+
+00:00:55.400 --> 00:00:58.610
+We have nested our functions together in a way
+
+00:00:58.610 --> 00:01:02.060
+that allows us to pass arguments to them one at a time.
+
+00:01:02.060 --> 00:01:05.815
+If this syntax is a little bit confusing for you though,
+
+00:01:05.815 --> 00:01:10.325
+know that this and this are exactly the same.
+
+00:01:10.325 --> 00:01:16.705
+Function greater than returns another function which returns a value.
+
+00:01:16.705 --> 00:01:20.510
+This relies on a pre firm understanding of closures.
+
+00:01:20.510 --> 00:01:22.040
+So if you need a refresher on that,
+
+00:01:22.040 --> 00:01:24.170
+we have some resources linked for you.
+
+00:01:24.170 --> 00:01:26.495
+That syntax was a little bit tricky,
+
+00:01:26.495 --> 00:01:30.990
+but you'll get the chance to be more familiar with it in the exercises.
+

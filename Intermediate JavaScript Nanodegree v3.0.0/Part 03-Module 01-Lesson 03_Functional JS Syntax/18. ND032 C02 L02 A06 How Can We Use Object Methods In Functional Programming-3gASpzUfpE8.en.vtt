@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.020
+Object freeze is one way to deal with the shortcomings of const,
+
+00:00:04.020 --> 00:00:06.465
+to ensure that objects cannot be changed.
+
+00:00:06.465 --> 00:00:09.420
+This is the Mozilla definition of object freeze:
+
+00:00:09.420 --> 00:00:12.610
+"A frozen object can no longer be changed.
+
+00:00:12.610 --> 00:00:15.675
+A frozen object can have no properties added to it,
+
+00:00:15.675 --> 00:00:18.225
+removed from it, or its values edited.
+
+00:00:18.225 --> 00:00:20.935
+It effectively makes an immutable object."
+
+00:00:20.935 --> 00:00:24.620
+In this example, I have an object declared as a const.
+
+00:00:24.620 --> 00:00:26.810
+But even though this is a const,
+
+00:00:26.810 --> 00:00:29.930
+I can actually update values in
+
+00:00:29.930 --> 00:00:34.675
+the object as long as I don't replace the object, const'll let me do it.
+
+00:00:34.675 --> 00:00:38.680
+So if I run this code,
+
+00:00:38.800 --> 00:00:43.265
+you'll see that I can indeed update the current season.
+
+00:00:43.265 --> 00:00:49.045
+But if I freeze the object and run it again,
+
+00:00:49.045 --> 00:00:56.100
+we get an error, because you cannot update any value on a frozen object.
+

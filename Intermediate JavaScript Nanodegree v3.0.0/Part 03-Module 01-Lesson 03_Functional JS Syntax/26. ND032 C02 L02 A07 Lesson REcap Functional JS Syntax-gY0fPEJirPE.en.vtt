@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.260
+This lesson was all about getting more comfortable with ES6 syntax,
+
+00:00:04.260 --> 00:00:08.670
+especially in the methods we might use in our functional style JavaScript programs.
+
+00:00:08.670 --> 00:00:10.320
+The more methods you learn,
+
+00:00:10.320 --> 00:00:12.975
+the better equipped you are to use the right one for the job
+
+00:00:12.975 --> 00:00:16.650
+instead of writing more code to make the method you know work.
+
+00:00:16.650 --> 00:00:18.570
+Not only will learning more of
+
+00:00:18.570 --> 00:00:22.110
+the available methods make you a more efficient JavaScript developer,
+
+00:00:22.110 --> 00:00:24.945
+but these methods, especially the ES6 ones,
+
+00:00:24.945 --> 00:00:28.780
+will make an appearance in almost every JavaScript interview.
+

@@ -1,0 +1,109 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.665
+When working with the DOM,
+
+00:00:01.665 --> 00:00:04.155
+we need a way for our JavaScript to add,
+
+00:00:04.155 --> 00:00:05.880
+remove, and update elements.
+
+00:00:05.880 --> 00:00:09.660
+Unfortunately, here, our functional methods stumbled right out of the gate.
+
+00:00:09.660 --> 00:00:15.495
+We can't reach the DOM without the help of good old innerHTML and getElementById.
+
+00:00:15.495 --> 00:00:18.780
+We need an index.html file like
+
+00:00:18.780 --> 00:00:24.615
+this one with a basic structure and a single div with the id of root.
+
+00:00:24.615 --> 00:00:27.120
+This connects to our JavaScript file,
+
+00:00:27.120 --> 00:00:30.645
+where we can use document getElementById.
+
+00:00:30.645 --> 00:00:35.695
+Now, we need a way to fill the targeted div with our layout and content.
+
+00:00:35.695 --> 00:00:40.234
+In React, you can write JSX elements that look very similar to HTML.
+
+00:00:40.234 --> 00:00:43.805
+But we're not going to implement all of JSX for this example.
+
+00:00:43.805 --> 00:00:47.975
+Instead, we're going to send strings of HTML content.
+
+00:00:47.975 --> 00:00:54.875
+Here is an example of a function that calls innerHTML on root and sends it a single div.
+
+00:00:54.875 --> 00:01:00.190
+But this wouldn't be very easy to code in if we have a lot of layout to add,
+
+00:01:00.190 --> 00:01:02.425
+so let's find a better way to do this.
+
+00:01:02.425 --> 00:01:05.525
+Here, I've updated the code so that now
+
+00:01:05.525 --> 00:01:09.490
+InnerHTML is the result of calling the App function.
+
+00:01:09.490 --> 00:01:13.760
+The App function returns the same div that we were before,
+
+00:01:13.760 --> 00:01:15.800
+but now it's also calling
+
+00:01:15.800 --> 00:01:20.570
+the Welcome function that returns some extra layout and content.
+
+00:01:20.570 --> 00:01:24.170
+That means that App is a higher-order function,
+
+00:01:24.170 --> 00:01:27.650
+and both Welcome and App are pure functions.
+
+00:01:27.650 --> 00:01:31.990
+This will be the basis of building functional DOM manipulations.
+
+00:01:31.990 --> 00:01:37.700
+Great. Now, we have a function that can act as a staging area for us to collect content.
+
+00:01:37.700 --> 00:01:42.620
+The Welcome method created some extra content that we didn't have to write in line,
+
+00:01:42.620 --> 00:01:45.245
+which means that it is effectively a component.
+
+00:01:45.245 --> 00:01:48.874
+It returns a single piece of the UI and is reusable.
+
+00:01:48.874 --> 00:01:51.260
+Did you also notice that the Welcome and App
+
+00:01:51.260 --> 00:01:53.795
+functions comply with functional rules so far?
+
+00:01:53.795 --> 00:01:56.885
+We have contained our non-functional,
+
+00:01:56.885 --> 00:01:59.194
+but necessary HTML connectors,
+
+00:01:59.194 --> 00:02:01.074
+to the first two functions,
+
+00:02:01.074 --> 00:02:05.255
+which means we can write in a more functional style for the rest of the program.
+
+00:02:05.255 --> 00:02:10.050
+Now, it's time for you to extend this program in the exercises.
+

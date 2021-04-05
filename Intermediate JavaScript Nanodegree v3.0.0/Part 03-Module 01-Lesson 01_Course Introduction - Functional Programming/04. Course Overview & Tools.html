@@ -1,0 +1,218 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Course Overview &amp; Tools</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Course Introduction - Functional Programming</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. FP Basics.html">02. FP Basics</a>
+    </li>
+    <li class="">
+      <a href="03. FP History.html">03. FP History</a>
+    </li>
+    <li class="">
+      <a href="04. Course Overview &amp; Tools.html">04. Course Overview &amp; Tools</a>
+    </li>
+    <li class="">
+      <a href="05. Baseline Questions.html">05. Baseline Questions</a>
+    </li>
+    <li class="">
+      <a href="06. Intro Recap.html">06. Intro Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. Course Overview & Tools</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Course Overview</p></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/l0-11-courseoverview.png" alt="In this course we will start with an overview of Lambda Calculus and how ideas from it came to form the Functional Programming paradigm. In the next lesson we will go over specifics of the Functional paradigm, and the last lessons will all be on implementing the Functional paradigm in Javascript." class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>In this course we will start with an overview of Lambda Calculus and how ideas from it came to form the Functional Programming paradigm. In the next lesson we will go over specifics of the Functional paradigm, and the last lessons will all be on implementing the Functional paradigm in Javascript.</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Course Overview</p></h3>
+  <div>
+  <h2 id="course-overview">Course Overview</h2>
+<ul>
+<li><p><strong>Lesson 1: Course Introduction</strong> <br> The lesson you are currently going through introduces the Functional Programming in JavaScript to prepare you for the rest of this course.</p></li>
+<li><p><strong>Lesson 2: Understanding Functional Programming</strong><br>This lesson will be slightly more theory-heavy, going in the details of paradigms and Lambda Calculus to develop a core understanding that will help the rest of the course content hold together. </p></li>
+<li><p><strong>Lesson 3: Functional JS Syntax</strong> <br>Javascript gives us many tools to write in a functional way, but they might not be all the ways you are used to. This will also give a good tour of ES6 syntax that will come in handy in any Javascript you write and help you study up for potential interview questions. </p></li>
+<li><p><strong>Lesson 4: Building a Functional Program with JS</strong> <br>This lesson will take all the syntax practiced in lesson 2 and teach you to combine them into powerful, Functional programs. This lesson will also give you clarity into how React works behind the scenes. </p></li>
+<li><p><strong>Lesson 5: Libraries and Other Functional Tools for JS</strong> <br>The final lesson is all about going further with Functional Programming and the tools you are likely to come across. It will pay special attention to showing how Functional Programming concepts we learned in lesson 1 are being used to solve traditional problems in web development. </p></li>
+<li><p><strong>Project: NASA Mars Rover Dashboard</strong> <br>Using the Functional Programming tools learned in the course, you will build a web page that consumes the NASA API to display information about the various Mars rovers.   </p></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>What are the relevant tools that students will use?</p></h3>
+  <div>
+  <h2 id="tools">Tools</h2>
+<p>The nice thing about working with Functional JS is that we need very few tools! Just pull up your text editor of choice and you’ll be able to follow along. I will use <a href="https://repl.it/" target="_blank">repl.it</a> for early code walkthroughs but as we progress to more complex programs, I will switch over to using the Visual Studio (VS) Code text editor. If you want to install VS Code yourself you can go <a href="https://code.visualstudio.com/docs/setup/setup-overview" target="_blank">here</a> and follow the instructions for your OS.</p>
+<p>One thing to remember, browsers <strong>don’t</strong> support all the ES6 syntax, so if you are used to testing your JavaScript by pulling up Inspect Element and throwing code in the console - that won’t work here. Instead, you’ll have to run a <code>.js</code> file through Node in your terminal or find an online ES6 sandbox. </p>
+<h2 id="local-machine">Local Machine</h2>
+<p>The command to clone the entire exercises repo will be as follows:</p>
+<pre><code>$ git clone -b exercises https://github.com/udacity/nd032-c2-functional-programming-with-javascript-starter.git</code></pre>
+<p>The general organization of the repo is that each lesson has its own folder and programs are named according to the subject matter. For example, the first exercise is located in <strong>Exercise: Compare Paradigms</strong> Concept and the corresponding exercise will be found here:  </p>
+<pre><code>.../exercises/intro_to_fp/compare_paradigms.js</code></pre>
+<p><strong>Note</strong>: Spend some time to set up your environment now, this will make going through the rest of the lessons much easier.</p>
+<h2 id="workspaces">Workspaces</h2>
+<p>Another option will be working through the workspaces embedded in the classroom. These are already setup environments with the relevant code for the particular exercise.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. Baseline Questions.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. Course Overview &amp; Tools')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

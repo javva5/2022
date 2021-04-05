@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.010
+It can be confusing to know when to use each of the ES6 array methods,
+
+00:00:05.010 --> 00:00:07.380
+but what I've found is that it's easiest to
+
+00:00:07.380 --> 00:00:10.200
+pay attention to the end result that you want.
+
+00:00:10.200 --> 00:00:16.425
+For instance, map takes in an array and returns a new array of the same length,
+
+00:00:16.425 --> 00:00:21.615
+but it performs the same action on each item.
+
+00:00:21.615 --> 00:00:23.325
+Filter, on the other hand,
+
+00:00:23.325 --> 00:00:27.585
+takes in an array but returns a subset of that array.
+
+00:00:27.585 --> 00:00:30.190
+It doesn't change the individual values,
+
+00:00:30.190 --> 00:00:34.740
+but what it does is filter out some of the items and leave the rest.
+
+00:00:34.740 --> 00:00:37.505
+Reduce takes in an array,
+
+00:00:37.505 --> 00:00:40.324
+but it returns a single value.
+
+00:00:40.324 --> 00:00:44.210
+It finds a familiar property on each item,
+
+00:00:44.210 --> 00:00:48.310
+and then returns the sum or the aggregate of that.
+
+00:00:48.310 --> 00:00:51.260
+So if you're ever aren't sure which to use,
+
+00:00:51.260 --> 00:00:55.290
+first determine what you want back, and that'll be a big help.
+

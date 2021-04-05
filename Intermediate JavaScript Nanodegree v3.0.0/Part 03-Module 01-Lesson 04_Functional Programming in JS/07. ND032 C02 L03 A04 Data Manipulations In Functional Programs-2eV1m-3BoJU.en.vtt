@@ -1,0 +1,106 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.920
+Whether it's from a database,
+
+00:00:01.920 --> 00:00:03.915
+API or any other source,
+
+00:00:03.915 --> 00:00:08.595
+manipulating and consuming data is something that every developer needs to be able to do.
+
+00:00:08.595 --> 00:00:11.520
+Getting exactly the information you want out of
+
+00:00:11.520 --> 00:00:14.790
+a large or complex set of data can be frustrating.
+
+00:00:14.790 --> 00:00:17.610
+We'll cover how the tools and rules we've
+
+00:00:17.610 --> 00:00:20.790
+learned so far can help us navigate these data structures.
+
+00:00:20.790 --> 00:00:24.420
+Here are some quick tips when working with large data sets.
+
+00:00:24.420 --> 00:00:27.045
+The first tip for working with large data sets
+
+00:00:27.045 --> 00:00:29.925
+is to determine the points and shape that you need.
+
+00:00:29.925 --> 00:00:32.280
+When we talk about data shape, we're talking about,
+
+00:00:32.280 --> 00:00:36.480
+is it an object inside of an array or an array inside of an object.
+
+00:00:36.480 --> 00:00:39.270
+Being able to give your program exactly the
+
+00:00:39.270 --> 00:00:42.560
+shape that fits it best will make your life a lot easier.
+
+00:00:42.560 --> 00:00:47.435
+The second tip is to locate one individual item to use as an example.
+
+00:00:47.435 --> 00:00:51.805
+Oftentimes, an API will send you back a long array of objects,
+
+00:00:51.805 --> 00:00:54.025
+and those objects can be complicated.
+
+00:00:54.025 --> 00:00:57.835
+Just pull one out and find the values that you need.
+
+00:00:57.835 --> 00:01:02.740
+Another tip is that sometimes working up the data tree is easier than down.
+
+00:01:02.740 --> 00:01:07.570
+We want to deal with API responses like we do text and read it from the top down,
+
+00:01:07.570 --> 00:01:11.170
+but it's often easier to start with a specific object or value we
+
+00:01:11.170 --> 00:01:15.375
+want to get and find the path to it as we work our way up the data.
+
+00:01:15.375 --> 00:01:20.055
+The last tip is to extract the information you need as soon as you can.
+
+00:01:20.055 --> 00:01:24.560
+You probably aren't going to use 100 percent of an API response in your app,
+
+00:01:24.560 --> 00:01:29.260
+so grab out the information you need in the same function that handles the response.
+
+00:01:29.260 --> 00:01:30.690
+Most of the time,
+
+00:01:30.690 --> 00:01:34.970
+data manipulation skills will help you work with data coming from outside your app,
+
+00:01:34.970 --> 00:01:36.655
+for example, from an API.
+
+00:01:36.655 --> 00:01:38.120
+Later on in the lesson,
+
+00:01:38.120 --> 00:01:41.090
+we will cover how we can work with the DOM in a functional way,
+
+00:01:41.090 --> 00:01:44.755
+and this will be the foundation for building functional apps in JavaScript.
+
+00:01:44.755 --> 00:01:46.415
+In the next exercise,
+
+00:01:46.415 --> 00:01:49.355
+you'll get to work with some real API response data.
+
+00:01:49.355 --> 00:01:52.170
+Maybe these tips will come in handy.
+

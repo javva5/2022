@@ -1,0 +1,1035 @@
+{
+  "data": {
+    "lesson": {
+      "id": 960434,
+      "key": "cda15ac3-493d-4200-849e-7598e06467a3",
+      "title": "Introduction to Functional Programming",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Foundational Introduction to Functional Programming in JavaScript",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/cda15ac3-493d-4200-849e-7598e06467a3/960434/1594154491991/Introduction+to+Functional+Programming+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/cda15ac3-493d-4200-849e-7598e06467a3/960434/1594154489418/Introduction+to+Functional+Programming+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 960428,
+          "key": "b17ced9e-8511-4e47-9e12-0b3b089e1b31",
+          "title": "Programming Paradigms",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b17ced9e-8511-4e47-9e12-0b3b089e1b31",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 960403,
+              "key": "82f41b5e-8abf-401e-8cf8-aca9bc696c3d",
+              "title": "What is a paradigm?",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Introduction to Functional Programming\n## Lesson Outline\n\nIn this lesson, I'll be covering the following topics:\n- Introduction to Programming Paradigms\n- History of Functional Programming\n- Foundational Concepts of Functional Programming\n- Benefits of Functional Programming\n\n## Introduction to Programming Paradigms\nWhat are **programming paradigms** anyway? The word “paradigm” always felt ephemeral and for a long time I did not feel like I understood what it was all about. Paradigms are styles of programming that are tried and true at helping you write clean, readable, and effective programs, so they are definitely worth learning! In this lesson, we will start with an overview of paradigms in general, look at three in particular, and then move into the specific benefits and structure of the Functional Programming paradigm.\n\n\n\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 960391,
+              "key": "ce3fabe2-bbf0-47fc-b4bf-2d1dad182306",
+              "title": "Course Overview",
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2020/January/5e0e3a86_l1-2-courseoverview/l1-2-courseoverview.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/ce3fabe2-bbf0-47fc-b4bf-2d1dad182306",
+              "caption": "We will continue on to an Introduction to Functional Programming paradigm.",
+              "alt": "Course Overview Diagram",
+              "width": 612,
+              "height": 201,
+              "instructor_notes": null
+            },
+            {
+              "id": 960399,
+              "key": "3dbe557e-2ed9-43c7-8dff-2ea6c51a3eab",
+              "title": "ND032 C02 L01 A01 Programming Paradigms Overview",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "hHj7-fyi6Ys",
+                "china_cdn_id": "hHj7-fyi6Ys.mp4"
+              }
+            },
+            {
+              "id": 960417,
+              "key": "4a1ff70c-c213-4eec-b71a-fb7dde3e6368",
+              "title": "Programming paradigm overview highlights",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "That was a lot of information, so here are the main points again:\n- **Programming Paradigm** is a philosophy, style, or general approach to writing code.\n- Most programming paradigms differ in how they deal with state.\n- The **Imperative Paradigm** solves problems with an explicit sequence of commands to get from point A to point B. If the code or comments read like a recipe or handbook, it's likely to be imperative. Many programming languages, especially dynamic ones, including Javascript, PHP, and Python can be used to write imperative programs.\n- The **Functional Paradigm** solves problems with functions that hold simple pieces of logic and can be chained together to accomplish more complex actions.\n- The **Object-Oriented Paradigm** solves problems by defining objects that can hold both values (properties) and functionality (methods).",
+              "instructor_notes": ""
+            },
+            {
+              "id": 960396,
+              "key": "cc0ce16e-f406-46fd-98b4-56b6f729306d",
+              "title": "Why paradigms reading",
+              "semantic_type": "ReflectAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "cc0ce16e-f406-46fd-98b4-56b6f729306d",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "title": "Reflect",
+                "semantic_type": "TextQuestion",
+                "evaluation_id": null,
+                "text": "Find **two** new paradigms you've never heard of and read their examples. You could start  from a resource like Dr. Ray Toal's note linked [here](https://cs.lmu.edu/~ray/notes/paradigms/). \n\nLearning about paradigms is all well and good, but it becomes important when we consider how these theories will affect what we write. Reflect on the two paradigms you read: \n- Did anything about them perhaps change the way you think about programs you’ve written in the past? \n- Would you be interested in writing a program that used either of them? "
+              },
+              "answer": {
+                "text": "Thanks for your response! Hopefully, learning the Functional Paradigm in this course will have an effect on the code you write in the future. ",
+                "video": null
+              }
+            },
+            {
+              "id": 960410,
+              "key": "33ff7ef0-f716-4939-a5ba-7004eca3e3ee",
+              "title": "Concept Summary & further research",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Advancing your understanding of paradigms is a worthwhile endeavor, and before the course is done, I hope you begin to see tangible benefits in your programs because of these concepts. As you have seen, we are only scratching the surface of all the paradigms that are out there!\r",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 960432,
+          "key": "cc7de669-1a87-4843-8eea-1846afa5edeb",
+          "title": "Why Learn Paradigms?",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "cc7de669-1a87-4843-8eea-1846afa5edeb",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 960397,
+              "key": "be8a64ad-07e6-4ded-862d-171c56523849",
+              "title": "relationship between programming languages and paradigms",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Relationship Between Programming Languages & Paradigms\nWe sometimes describe a **programming language** by its *paradigm* like “**Haskell** is a *Functional* programming language,” and that is true, but this is a course on writing Functional JavaScript. \n\nIf JavaScript is a functional language, why would we have to learn to write it functionally? The reality is that all of the most popular dynamic programming languages in use today have the features necessary to create programs that follow the style of whichever paradigm we choose. **Some programming languages are written to write programs in one paradigm, other languages can write programs in whatever paradigm the author chooses**. \n\nJavaScript, more than most other programming languages, can be used to write in the paradigm and style of the authors’ choosing. It is a shape-shifting language, which can be both a wonderful freedom and source of chaos for JavaScript developers. Perhaps you have already seen some chaotic JavaScript programs ( if not, you will ) and it is often due at least in part to having so much freedom in the language. Later in this course, we will walk through one program in multiple paradigms so that you get a taste for concrete differences between these paradigms.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 960398,
+              "key": "293b05f6-de89-414f-bf79-34d2d677ba8a",
+              "title": "ND032 C02 L01 A02 Why Do Programming Paradigms Matter",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "aLoHqfAj-8U",
+                "china_cdn_id": "aLoHqfAj-8U.mp4"
+              }
+            },
+            {
+              "id": 960408,
+              "key": "c20840fb-a7d0-4187-a9c8-081ad5e52e86",
+              "title": "Paradigms reading",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### How do you choose a programming paradigm? <br>\nThis can be a daunting question. When you start thinking about a new project, without a single line of code even written yet, how can you have confidence you’re choosing the right paradigm for the job? \n\nHere are some things to consider. If your application is inherently state-based, like maybe a simple game, a blog, or a GUI, it is likely a good candidate for Object Oriented programming, because the entities in an Object Oriented program are easier to reason about. \n\nOn the other hand, if you have a large program that needs to have a high degree of reliability, or if you need to manage lots of user interactions and fast updates, then it might be a good sign that you could write a Functional program. Functional programs shine especially when you need to leverage concurrency. As chips have become about as fast as we can make them, the way to get faster computers has been to add more cores. But those cores are useless to make our programs faster unless we can use them well. For a program that manages concurrency well, you probably would want to rethink your decision to use JavaScript, but the Functional Paradigm would be the best choice. \r\rIt turns out though, that the choice of programming paradigm is quite personal and subjective among developers. Many people will learn a paradigm and more or less stick to it. For instance, a person who is comfortable with Object Oriented programs will trend towards creating more Object Oriented programs, because at the end of the day, we want to build things more than we want to think about building things. \n\rAnother way to go about it is to know the strengths and weaknesses of the various paradigms and try to choose one based on which is the best fit for the thing you are trying to build. This might mean you choose a paradigm you are less familiar with, meaning that development of your project will take longer initially. \n\nNeither of these approaches is bad, and you will find what works for you. I lean towards the second option and it's my personal opinion that over time trying to choose the best paradigm for the problem will make you a more well rounded developer. The only time I go away from that is prototyping. When you just need to get a rough idea of an app working, use the paradigm you are most familiar with as this will help you move quickly and with confidence before motivation for the project fizzles out. Once the idea has proven itself a little bit, and you have good visibility into the tricky parts of your particular program, you can re-evaluate which paradigm would be best. Of course, this requires re-writing your program at some point. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 960425,
+              "key": "227d77f9-f582-46a1-9416-30d2f9c8483f",
+              "title": "What is the main reason the text gives for why developers are turning to functional programming?",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "227d77f9-f582-46a1-9416-30d2f9c8483f",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What is the main reason in the above section, **\"How do you choose a programming paradigm?\"**, gives for why developers are turning to functional programming? ",
+                "answers": [
+                  {
+                    "id": "rbk1",
+                    "text": "For the simplicity it provides when utilizing multiple cores to achieve tasks.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "rbk2",
+                    "text": "React is really popular.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk3",
+                    "text": "Developers need new tools for dealing with global state.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk4",
+                    "text": "Because it works very well with naturally asynchronous languages like JavaScript.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 960405,
+              "key": "95d0e2e1-b680-4c94-92a4-f9151b049d34",
+              "title": "What paradigms could you write in with the language you use most? (Choose one language and explore the paradigms you can write in with it)",
+              "semantic_type": "ReflectAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "95d0e2e1-b680-4c94-92a4-f9151b049d34",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "title": "Reflect",
+                "semantic_type": "TextQuestion",
+                "evaluation_id": null,
+                "text": "What paradigms could you write in with the language you use most? (For example, if you often code in Ruby, explore the paradigms you can write in with it)"
+              },
+              "answer": {
+                "text": "Thanks for your response.",
+                "video": null
+              }
+            },
+            {
+              "id": 960404,
+              "key": "e6e7d92b-631c-4460-a49c-90c9ed303104",
+              "title": "Concept summary & Further Research",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Paradigm Summary\nHopefully, you are beginning to get a clearer picture of what a paradigm is and the range of them that exist, and perhaps I have also convinced you that learning them will benefit your career. But you can relax because we are going to put away the theory for a little while now and in the next section dive into some code examples to compare paradigms.<br><br>If you want some extra thoughts to chew on, the article's in the **Further Research** section below is full of good ideas about paradigms and coding in general. \n\n## Further Research\nI would highly recommend the article, An Introduction to Programming Paradigms, from Digital Fellows by Patrick Smyth, especially the sections following sections:\n- [A Simpler Program](https://digitalfellows.commons.gc.cuny.edu/2018/03/12/an-introduction-to-programming-paradigms/#orgheadline1), is a great perspective on how to think about your programs. \n- [Which Paradigm to Choose?](https://digitalfellows.commons.gc.cuny.edu/2018/03/12/an-introduction-to-programming-paradigms/#orgheadline11), which gives more information on choosing a programming paradigm.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 960430,
+          "key": "473bf431-ed6e-47c0-a6ea-d5e3b891f0d5",
+          "title": "Comparing Paradigms",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "473bf431-ed6e-47c0-a6ea-d5e3b891f0d5",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 960416,
+              "key": "86454a10-3873-46eb-955a-b8a63149d415",
+              "title": "ND032 C02 L01 A03 Programming Paradigms",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "H3oVYmXdzVE",
+                "china_cdn_id": "H3oVYmXdzVE.mp4"
+              }
+            },
+            {
+              "id": 966178,
+              "key": "4b795d2f-710d-4548-ba0b-fbc27689b4f0",
+              "title": "Programming Paradigms Review",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Code Review\n\n### Imperative\n\n```\nlet name = 'Captain Kirk'\nlet hour = new Date().getHours()\n\nlet greeting = ''\n\nif (hour <= 6) {\n    greeting = 'Good Morning, '\n} else if (hour >= 17) {\n    greeting = 'Good Evening, '\n} else {\n    greeting = 'Hello, '\n}\n\ngreeting += name + '.'\n\nconsole.log(greeting)  \n//expected output: Hello, Captain Kirk\n```\n\n### Functional\n\n```\nconst greet = (name) => (salutation) => `${salutation}, ${name}.`\n\nconst determineSalutation = (callback) => {\n    const hour = new Date().getHours()\n\n    if (hour <= 6) {\n        return callback('Good Morning')\n    } else if (hour >= 17) {\n        return callback('Good Evening')\n    } else {\n        return callback('Hello')\n    }\n}\n\nlet result = determineSalutation(greet('Captain Kirk')) \nconsole.log(result)\n//expected output: Hello, Captain Kirk\n```\n\n### Object-Oriented\n\n```\nclass Person {\n    constructor(name){\n        this.name = name\n    }\n\n    determineSalutation(date){\n        const hour = (date && date.getHours()) || new Date().getHours()\n\n        if (hour <= 6) {\n            return \"Good Morning\"\n        } else if (hour >= 17) {\n            return \"Good Evening\"\n        } else {\n            return \"Hello\"\n        }\n    }\n\n    greet() {\n        return `${this.determineSalutation()}\\u00A0${this.name}`\n        // using JavaScript template literal: `${}`\n        // \\u00A0 is a symbol to add a space in the template literal\n    }\n}\n\nconst kirk = new Person(\"Kirk\", \"Captain\")\nconsole.log(kirk.greet())\n//expected output: Hello, Captain Kirk\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1008747,
+              "key": "1eec9fcc-cd4f-41d5-bf28-d0360d7a6602",
+              "title": "Exercise Instructions",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Exercise Instructions\nNext, you will put what you have learned into hands-on practice in the following exercise. You can complete these exercises on your local machine or in the given workspace. Below are the directions for both.  \r\n#### Local Machine\n1. You should have the exercise repo on your local machine. If you do not, go back to the **Course Introduction to Functional Programming** Lesson and find the instructions in the **Course Overview & Tools** Concept. \n2. You will find this exercise here:\n``` plaintext\n.../exercises/intro_to_fp//compare_paradigms.js\n```\n3. Now you can use your local setup to complete the exercise. You can use the *Workspace* directions to help you debug your setup.\n\n#### Workspace\nThe following instructions will also be found in the workspace. \n1. Check that the `compare_paradigms.js` is open on the top half of the workspace. \n2. In the bottom half you will find a terminal with the title BASH with a version number as the 1st line. This indicates you have node installed and the current version. \n3. To run the starter code, type `node compare_paradigms.js` in BASH and hit **Enter**. This should be what your BASH terminal should now look like:\n``` BASH\nroot:/home/workspace# node compare_paradigms.js\nCaptain, the engines are active and we could be going faster.\nroot:/home/workspace# \n```\n4.  Now you can use the workspace to complete the exercise. ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 966191,
+          "key": "496ef25e-3165-4ba3-b506-f9e8d2270ad7",
+          "title": "Exercise: Compare Paradigms",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "496ef25e-3165-4ba3-b506-f9e8d2270ad7",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 966196,
+              "key": "c4366932-3f02-4dde-b391-408b09a8e004",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "r950324c966191xGENERIC4aaf0h31",
+              "pool_id": "webterminal",
+              "view_id": "generic-bmbic",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "port": 3000,
+                    "ports": [],
+                    "userCode": "node -v",
+                    "openFiles": [
+                      "/home/workspace/workspace_instructions.md",
+                      "/home/workspace/compare_paradigms.js"
+                    ],
+                    "showFiles": false,
+                    "allowClose": false,
+                    "showEditor": true,
+                    "allowSubmit": false,
+                    "terminalTitle": "BASH",
+                    "openTerminalOnStartup": true
+                  },
+                  "kind": "generic"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 966195,
+          "key": "9cfc300c-a811-46f9-a704-f0b3ecbd47c3",
+          "title": "Paradigms Review",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9cfc300c-a811-46f9-a704-f0b3ecbd47c3",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 966187,
+              "key": "0b0ff39a-2d98-434f-a8f7-ca4afb82b7b5",
+              "title": "Exercise Solution",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Compare Paradigms - Exercise Solution\n\n``` javascript\nclass WarpDrive {\n    // Creating a class requires us to decide what properties to give it.\n    // Take a look at the imperative program - everything that was a global variable there, we want to make a property on our class\n    constructor(type, recipient) {\n        this.type = type\n        this.status = 'active'\n        this.warp = 2\n        this.recipient = recipient ? recipient : 'Captain'\n    }\n\n    // The bulk of the logic that the imperative program had in the global scope, we turn into methods\n    // The logic will stay mostly the same but we now need to reference values that belong to this instance of class WarpDrive, instead of global variables\n\n    status_report() {\n        if (this.status === 'active' && this.warp <= 4) {\n            return this.recipient + ', the engines are active and we could be going faster'\n        } else if (this.status === 'active' && this.warp > 4) {\n            return this.recipient + ', the engines are active and we are going ' + this.warp\n        } else if (this.status === 'down') {\n            return this.recipient + ', the engines are down'\n        } else {\n            return this.recipient + ', the comms are down and we can`t reach engineering'\n        }\n    }\n\n    // Anytime you see a variable changing in the imperative program, it is a sign that a method will be needed in this class\n    // I added these setter methods as examples for how you could update the state of the object to test the various status_report responses\n\n    set_status(status) {\n        this.status = status\n    }\n\n    set_warp(integer) {\n        this.warp = integer\n    }\n}\n\n// Because we are working with classes now, we have to instantiate the class before we use it\n\nlet enterprise_warp = new WarpDrive('Dilithium Chrystal')\n\n// NOTE: This is a big win for the object oriented style - it is so easy to make multiple instances of WarpDrive\n// Our program could simultaneously reference as many warp drive as instances as we want -- how would you do that in the imperative program?\n\nenterprise_warp.set_warp(2)\n\nconsole.log(enterprise_warp.status_report())\n\n// expected output: Captain, the engines are active and we could go faster.\n\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 960419,
+              "key": "ebc1002f-b569-4cf8-bd0a-5fba9748658e",
+              "title": "Review",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "ebc1002f-b569-4cf8-bd0a-5fba9748658e",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Is the following statement True/False/Both: Paradigms have lots of smart techniques to keep code clean, so you will see the best results when you mix and match strengths and approaches from as many paradigms as possible in your program.",
+                "answers": [
+                  {
+                    "id": "rbk1",
+                    "text": "True",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk2",
+                    "text": "False",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk3",
+                    "text": "Both",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 960423,
+              "key": "0f4af6e0-4f80-46eb-a7c7-cf49267b426c",
+              "title": "Review",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "0f4af6e0-4f80-46eb-a7c7-cf49267b426c",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Is the following statement True/False: The Imperative Paradigm would be the best choice if your program makes use of multiple threads and is very large and complex. ",
+                "answers": [
+                  {
+                    "id": "rbk1",
+                    "text": "True",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk2",
+                    "text": "False",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 960394,
+              "key": "a5e247fb-8602-4073-9bab-0062293c027a",
+              "title": "Concept summary & Further Research",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Summary\nAfter this brief walking tour through some paradigms, maybe we’ve whetted your appetite to explore further on your own. \n\n## Further Research\n- [This site](http://progopedia.com/paradigm/functional/) is an encyclopedia of many paradigms if you want to do some further exploration. \n- Computerphile's YouTube video on [Programming Paradigms](https://www.youtube.com/watch?v=sqV3pL5x8PI) is a good resource to see this topic explained in another way. \n- Another could be GeeksForGeek's article on [Introduction to Programming Paradigms](https://www.geeksforgeeks.org/introduction-of-programming-paradigms/).",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 960433,
+          "key": "4a69653c-08cd-4d60-8f35-3e5cb0b23239",
+          "title": "Foundations of FP",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4a69653c-08cd-4d60-8f35-3e5cb0b23239",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 960411,
+              "key": "5df64540-b920-4213-a9d1-b845ea3e42e0",
+              "title": "Functional Programming Overview",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Functional Programming Specifics\nSo we’ve set up where functional programming came from, and that it is growing in popularity, but we haven’t yet discussed any specifics of what it contains. This lesson will focus on the concepts that are core to Functional Programming, like pure functions, side effects, and the idea of immutability. Those might sound like just a jumble of technical words, but I think you’ll be surprised at how familiar they are to you because of the amount of JavaScript you already know! \n\nIn the end, everything we learn in this section will point back to the main tenet of functional programming, which is to have confidence in the programs you write because you rely on functions that behave the same way every time. Read on to learn how pure functions and immutability will make your programs more predictable.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 960400,
+              "key": "e584ab89-f932-4e53-9ae8-b24c6fec095f",
+              "title": "Pure Functions",
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2020/January/5e0e3a86_l1-18-purefunctions/l1-18-purefunctions.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/e584ab89-f932-4e53-9ae8-b24c6fec095f",
+              "caption": "A pure function should have no effect on the rest of the program (in blue).",
+              "alt": "Pure Function",
+              "width": 613,
+              "height": 206,
+              "instructor_notes": null
+            },
+            {
+              "id": 960421,
+              "key": "dc352a45-4fb3-4b72-afa7-b5a6d0fe5112",
+              "title": "Pure Functions",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Pure Functions\n\n**Pure functions** are a simple concept with big implications. And to start off with, I’m pretty sure you have already written a pure function! If you started off learning to write functions like this:\n\n```\nfunction add(x,y) {\n    return x + y\n}\n```\n\nThen you have written a pure function! So what makes this pure, and why is this simple idea the foundation for a powerful paradigm like functional programming?\n\nOne thing that is obvious in this case, but incredibly important, is that if given the same arguments, this function will return the same value. You can run `add(2, 2)` as many times as you want, and the only thing you will get is `4`. Brian Lonsdorf's definition of a pure function in the GitBook, <a href=\"https://mostly-adequate.gitbooks.io/mostly-adequate-guide/ch03.html\" target=\"_blank\">\"Professor Frisby's Mostly Adequate Guide to Functional Programming\"</a> is this:\n\n> A pure function is a function that, given the same input, will always return the same output and does not have any observable side effect.  \n>\n\n\nWhat are **Side Effects**? Let's take a look.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 960412,
+              "key": "3f8f7e6f-bb6f-4dbf-b296-37bb6b8395c3",
+              "title": "ND032 C02 L01 A03 Programming Paradigms Part 2 - Pure Functions & Side Effects",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "zzw0JySAv2g",
+                "china_cdn_id": "zzw0JySAv2g.mp4"
+              }
+            },
+            {
+              "id": 960406,
+              "key": "c6c720b4-a090-4aee-8210-c0c5591a3c9f",
+              "title": "Summary on Pure Functions",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Code Review - Side Effects\n``` javascript\nlet galaxy_ship = {\n    torpedo_balance: 0,\n    id: 123456,\n}\n\nfunction stock_arsenal(amount, id) {\n    if (galaxy_ship.id === id) {\n      // SIDE EFFECT\n      // Galaxy_ship’s values are being updated, but it is not a part of the return of this function\n      galaxy_ship.torpedo_balance += amount \n      \n      console.log('arsenal successfully stocked')\n      console.log(galaxy_ship.torpedo_balance)\n      \n      // return value is just a message\n      return 'arsenal successfully stocked'\n    }\n\n    console.log(`invalid account id`)\n    return `invalid account id`\n}\n\nstock_arsenal(40, 123456)\n// expected output: \n// arsenal successfully stocked\n// 40\n```\n\n## Summary on Pure Functions\nWe just learned about side effects, which modify state and don't come from the return statement of that function. So now we have everything we need to understand pure functions. **Same inputs get the same output and the return value is the total effect of running the function.**\n\nWhat do we get from writing pure functions? To sum it up in one word, I would say **confidence**. But there is a lot more to it than that. Here are some last points to consider:\n- If we can count on a function to produce the same result no matter where in the program it runs, then we don’t have to be afraid of calling it anywhere. It makes my functions easy to reuse. \n- If a function has no side effects, then we remove the mental load of needing to remember them. \nI have confidence about what my functions do, and the effect they will have on my app. That confidence means that I can scale things more easily and alter programs with less fear.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 960409,
+              "key": "25759c0d-3a6c-4457-af90-9a21c38f6566",
+              "title": "Replacement not mutation",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Immutability\n\nAnother major tenant of functional programming is that we do not “edit” things; we make new things. \n\nFor instance, if I had a set of notes for a class, and you wanted to borrow them, when you see something that you wanted to edit or add, you wouldn’t make those edits on my notes...hopefully. Instead, you would make a fresh copy of my notes and make your changes there. That would preserve my copy and let you have your new notes; in essence, that is what functional programming wants. \n\nEditing - more commonly referred to in development as “mutating” the same thing over and over again makes it hard to know what copy you are looking at, and is prone to errors. At multiple points later in the course, we will take a look into how we can create **immutable** values in our JavaScript programs. For now though, this will hopefully explain why we favor ‘const’ variables over ‘let’ variables in this course.\n\n## New Terms\n- **Pure Functions** - A function that will always return the same output if given the same input, and which has no side effects.\n- **Side effects** - An effect on your overall program from running a function, that did not come from the return statement of that function.\n- **Immutable** - Unchanging. Immutable values are ones which, once declared, cannot be changed.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1008748,
+              "key": "6b1bfc68-f529-4e63-972f-c48f7757adde",
+              "title": "Exercise Instructions",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Exercise Instructions\nNext, you will complete another exercise where you will translate a normal function into a pure function.\n\n#### Local Machine\n1. You will find this exercise here:\n``` plaintext\n.../exercises/intro_to_fp/foundation_concepts.js\n```\n2. Now you can use your local setup to complete the exercise. You can use the *Workspace* directions to help you debug your setup.\n\n#### Workspace\nThe following instructions will also be found in the workspace. \n1. `foundation_concepts.js` is open on the top half of the workspace & BASH with the version number is on the bottom half. \n2. To run the starter code, type `node foundation_concepts.js` in BASH and hit **Enter**. \n``` BASH\nroot:/home/workspace# node foundation_concepts.js\nHello, Arthur. \nHello, Arthur.Arthur.\nroot:/home/workspace# \n```\n3. Now you can use the workspace to complete the exercise.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 966192,
+          "key": "ca454f70-7ed5-4985-9155-5b6538c4d268",
+          "title": "Exercise: Foundation Concepts",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ca454f70-7ed5-4985-9155-5b6538c4d268",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 966197,
+              "key": "c75f4c77-4b9e-4fad-95d1-c3e82135414c",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "r950324c966192xGENERIC9o7tn9f6",
+              "pool_id": "webterminal",
+              "view_id": "generic-9x3dm",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "port": 3000,
+                    "ports": [],
+                    "userCode": "node -v",
+                    "openFiles": [
+                      "/home/workspace/workspace_instructions.md",
+                      "/home/workspace/foundation_concepts.js"
+                    ],
+                    "showFiles": false,
+                    "allowClose": true,
+                    "showEditor": true,
+                    "allowSubmit": false,
+                    "terminalTitle": "BASH",
+                    "openTerminalOnStartup": true
+                  },
+                  "kind": "generic"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 966194,
+          "key": "5b6befcd-5a40-4444-9eaf-870ac622f67b",
+          "title": "FP & Pure Functions Review",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5b6befcd-5a40-4444-9eaf-870ac622f67b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 966188,
+              "key": "cb1c0b12-c3fc-4468-8cf0-ada166c5c032",
+              "title": "Exercise Solution",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Foundation Concepts - Exercise Solution\n\n``` javascript\nconst greet = (name, base_greeting) => {\n    return `${base_greeting} ${name}`\n}\n\nlet greeting = 'Hello, '\n\ngreet('Arthur.', greeting)\n// now we can reuse greeting, and the greet function is pure\n\nconsole.log(greet('Arthur.', greeting)) \n// expected output: \n//  Hello, Arthur. \n//  Hello, Arthur.\n\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 960402,
+              "key": "e522a9e0-1435-4ffa-9aa6-d9de5b02563c",
+              "title": "Review",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "e522a9e0-1435-4ffa-9aa6-d9de5b02563c",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Which of the following are true:",
+                "answers": [
+                  {
+                    "id": "rbk1",
+                    "text": "It is common to see pure functions in Imperative style programming.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk2",
+                    "text": "The rule of no side effects helps protect developers from writing confusing code.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "rbk3",
+                    "text": "It is suggested to write pure functions when coding in the Functional style.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk4",
+                    "text": "Immutable is a word often heard when talking about functions.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 960392,
+              "key": "a3f907db-d9b3-4fe4-8e4e-b1bb39c8e67c",
+              "title": "Review",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "a3f907db-d9b3-4fe4-8e4e-b1bb39c8e67c",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Functional Programming adds constraints to the code we write, to result in more predictable programs.",
+                "answers": [
+                  {
+                    "id": "rbk1",
+                    "text": "True",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "rbk2",
+                    "text": "False",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 960393,
+              "key": "84d7cc2d-6641-44ae-806e-e0af64ab1141",
+              "title": "Review",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "84d7cc2d-6641-44ae-806e-e0af64ab1141",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What are the potential problems with this imperative code?\r\n``` javascript\nlet background = 'red'\nlet clicked = false\n\nif (clicked === true) {\n    background = 'blue'\n} else {\n    background = 'yellow'\r}\n```",
+                "answers": [
+                  {
+                    "id": "rbk1",
+                    "text": "We can’t see the value of background.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk2",
+                    "text": "The if statement might never run.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk3",
+                    "text": "Background and clicked are global variables and might be changed accidentally.",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 966199,
+              "key": "7bb4e500-d69f-401d-9a12-ae1704e59e90",
+              "title": "Review",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "7bb4e500-d69f-401d-9a12-ae1704e59e90",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "Match the paradigm to how it manages state. "
+                },
+                "concepts_label": "Paradigm",
+                "answers_label": "State Management",
+                "concepts": [
+                  {
+                    "text": "Imperative",
+                    "correct_answer": {
+                      "id": "a1578090939246",
+                      "text": "Global state, continuously updated."
+                    }
+                  },
+                  {
+                    "text": "Functional",
+                    "correct_answer": {
+                      "id": "a1578090964295",
+                      "text": "No state, only arguments."
+                    }
+                  },
+                  {
+                    "text": "Object-Oriented",
+                    "correct_answer": {
+                      "id": "a1578090965080",
+                      "text": "Encapsulated in extendable objects."
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1578090965080",
+                    "text": "Encapsulated in extendable objects."
+                  },
+                  {
+                    "id": "a1578090964295",
+                    "text": "No state, only arguments."
+                  },
+                  {
+                    "id": "a1578090993271",
+                    "text": "Held in arrays and object literals."
+                  },
+                  {
+                    "id": "a1578090991966",
+                    "text": "Conditional statements create and manage state."
+                  },
+                  {
+                    "id": "a1578090939246",
+                    "text": "Global state, continuously updated."
+                  }
+                ]
+              }
+            },
+            {
+              "id": 960414,
+              "key": "3cd4a56f-0528-4134-9a06-6e63bcfff8ea",
+              "title": "concept summary & further research",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Summary\nThe content we learned in this section has an amazing ability to improve your everyday coding skills, even if you aren’t writing a Functional program. \n\nYou learned that pure functions are completely predictable in their outcome, and as a developer, predictable is exactly what you want your programs to be. \n\nAvoiding side effects is partly what makes pure functions predictable, and they also make code easier to read, and reduce the interdependence of programs and functions.\n\nWe also covered a little bit of how immutable values make it easier to track changes over time, and that it is preferable to make a copy of a value before editing it, rather than making changes to the original. \n\nWe have now covered the core concepts of Functional Programming. There will be a few more throughout the course, but even using and understanding just these have the power to improve the quality and clarity of your programs. ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 960431,
+          "key": "09a4e274-51a0-424a-9433-bf659a851e41",
+          "title": "Why FP?",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "09a4e274-51a0-424a-9433-bf659a851e41",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 960415,
+              "key": "2db3866a-d0eb-49f8-85e7-7f96ccd89924",
+              "title": "Intro text",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Introduction\nIn this section, we’ll build from the core functional concepts we talked about in the previous lesson to determine why developers are turning to functional programming to solve some of the common problems in web development. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 960427,
+              "key": "c4bd69ce-e673-40e0-924b-ddf2ad0e003d",
+              "title": "Functional Strengths and Benefits",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Functional Pros and Cons\nIt can be difficult to evaluate the pros and cons of a programming paradigm, and it can be hard to keep each paradigm straight. But one key that can really help is to remember that *what typically differentiates paradigms is how they deal with application state* - or put more simply - how they keep track of stuff (values and entities) and how those things change while the program runs. How does Functional Programming deal with application state? Very carefully. Functional Programming believes that values shouldn’t be sloppily edited, but rather replaced with fresh values every time. It also ensures that state changes in very predictable places -- the return values of functions. You’ll see that a lot of these pros and cons have to do with how state is handled.\n\n#### Pros  <br>\n- **Easier to test** <br>\nBecause every function is pure, we know that the return value is the sum of the function, and is the only part that needs to be tested. Functions that avoid side effects are easier to test.\n\n- **More predictable code** <br>\nFunctions that avoid side effects and the use of immutable values makes changes in the programs more visible. By definition, pure functions always return the same value when given the same inputs. This predictability is the backbone of success with Functional Programming\n\n- **Easier to edit and expand** <br>\nBecause pure functions return the same value every time, and perfectly encapsulate their logic in the return statement, it means that a function could be copied and pasted to a new part of a program, or moved to an entirely different program, and it would still always produce the same result. Functions with side effects cannot be moved without the possibility of breaking something. \n\n#### Cons\n- **More difficult to write in some languages** <br>\nWhile most modern dynamic languages have the ability to write in a Functional style, it can go against the grain with some. Even JavaScript, for instance, does not have a way to make values truly immutable. Writing programs without classes goes against the grain of Ruby, and PHP does not have all the array methods JavaScript has that follow a Functional methodology. \n\n- **Will never be able to implement completely** <br>\nThere is a big difference between pure academic Functional programming and practical Functional-inspired programming for the web. Unless you are using a language that was built to be Functional, like Haskell, there will be times you have to work within the limits of the language to do the best you can at writing functional programs. \n\n- **Few libraries to speed progress (though this is changing)** <br>\nFunctional programming for the web is still fairly new, and there are not as many helpful libraries or tutorials for getting started or writing efficiency as there are for say Object Oriented programs, for which we have prebuilt ORMs, tons of tutorials, frameworks, etc.. \n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 960395,
+              "key": "3e7a8652-c836-408d-a82a-83d66ea8a05e",
+              "title": "Functional Strengths and Benefits",
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2020/January/5e0e3a85_l1-32-paradigmscompared/l1-32-paradigmscompared.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3e7a8652-c836-408d-a82a-83d66ea8a05e",
+              "caption": "Table comparing various paradigms",
+              "alt": "Imperative\nFunctional\nObject Oriented",
+              "width": 613,
+              "height": 198,
+              "instructor_notes": null
+            },
+            {
+              "id": 960401,
+              "key": "e03bead3-62cf-4466-8623-d95f8fa1a702",
+              "title": "ND032 C02 L01 A04 Values Of Functional Programming",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "zhMTQKDXWs4",
+                "china_cdn_id": "zhMTQKDXWs4.mp4"
+              }
+            },
+            {
+              "id": 960422,
+              "key": "761675cc-f916-4968-8737-5496a155e2cc",
+              "title": "Values Highlights",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "The Functional Programming paradigm shines when things get complicated. When you need to work with concurrent or parallel programs, or with applications that need to be stable and yet scalable, this is the paradigm to choose. Confidence, simplicity, and clarity are some of the benefits of writing Functional code. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1008749,
+              "key": "aa95d860-c6ef-4008-ba57-93b09a3bd684",
+              "title": "Exercise Instructions",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Exercise Instructions\n- **Exercise 1**:  Write a pure function that prints \"good afternoon\" if its afternoon and \"good morning\" any other time of the day.\n- **Exercise 2**: Write a pure function that takes in a number and returns an array of items counting down from that number to zero.\n\n#### Local Machine\n1. You will find this exercise here:\n``` plaintext\n.../exercises/intro_to_fp/basic_functional_examples.js\n```\n2. Now you can use your local setup to complete the exercise. You can use the *Workspace* directions to help you debug your setup.\n\n#### Workspace\nThe following instructions will also be found in the workspace. \n1. `foundation_concepts.js` is open on the top half of the workspace & BASH with the version number is on the bottom half. \n2. To run the starter code, type `node basic_functional_examples.js` in BASH and hit **Enter**. <br>\nNothing should appear on your BASH as there is no JS starter code. \n3. Now you can use the workspace to complete the exercise.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 966190,
+          "key": "46b14757-dad1-4e05-8a25-e6766f4dacaf",
+          "title": "Exercise: Basic FP",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "46b14757-dad1-4e05-8a25-e6766f4dacaf",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 966198,
+              "key": "41eb5502-296b-4f9b-bc62-703d02f0bb2b",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "r950324c966190xGENERIC0vf2pe5u",
+              "pool_id": "webterminal",
+              "view_id": "generic-f262p",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "port": 3000,
+                    "ports": [],
+                    "userCode": "node -v",
+                    "openFiles": [
+                      "/home/workspace/workspace_instructions.md",
+                      "/home/workspace/basic_functional_examples.js"
+                    ],
+                    "showFiles": false,
+                    "allowClose": false,
+                    "showEditor": true,
+                    "allowSubmit": false,
+                    "terminalTitle": "BASH",
+                    "openTerminalOnStartup": true
+                  },
+                  "kind": "generic"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 966193,
+          "key": "f97698d2-5142-4b4e-b45a-0435581206a3",
+          "title": "Basic FP Review",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f97698d2-5142-4b4e-b45a-0435581206a3",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 966189,
+              "key": "5c80f91a-98c9-4f5e-b29e-b688604d8b9f",
+              "title": "Exercise Solution",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Basic Functional Programming - Exercise Solution\n\n\n``` javascript\n// -----------------------------------------------------------\n// Exercise 1 Solution\n// Write a pure function that prints \"good afternoon\" if its afternoon and \"good morning\" any other time of the day\n// hint - this will help with time of day: new Date().getHours()\n// -----------------------------------------------------------\nfunction sayHello() {\n    const time = new Date().getHours()\n    if(time > 12 && time < 17) {\n        return \"Good Afternoon\"\n    } \n\n    return \"Good Morning!\"\n}\n\nconsole.log(sayHello())\n//expected output: \n// If from noon to before 5pm = Good Afternoon\n// Any other time = Good Morning!\n\n// -----------------------------------------------------------\n// Exercise 2 Solution\n// Write a pure function that takes in a number and returns an array of items counting down from that number to zero.\n// -----------------------------------------------------------\nfunction countDown(startNum) {\n    let countDownArray = []\n    for(let i = startNum; i >= 0; i-- ){\n        countDownArray.push(i)\n    }\n    return countDownArray\n}\n\nconsole.log(countDown(5)))\n//expected output: [5, 4, 3, 2, 1, 0]\n```\n\n**NOTE**\n- For exercise 2, there is a for loop which isn't Functional Programming, but in the next lesson we will cover how to do this in a Functional Programming way! \n- Exercise 2 could also be solved using recursion as well. \n- This solution has some parts written in ES5 syntax. In the following lessons, we will cover ES6 syntax. You can find more information about ES6 [here](https://www.google.com/url?q=https://www.javascripttutorial.net/es6/&sa=D&ust=1582491687776000&usg=AFQjCNH0PKP5IxAT3IxmV6UsOfuQz3VD9Q).",
+              "instructor_notes": ""
+            },
+            {
+              "id": 960420,
+              "key": "01c735ee-72c1-424b-b538-f9c776a8ec7d",
+              "title": "Where you see it in real life",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Where You May See FP in Real Life\n[Haskell](https://en.wikipedia.org/wiki/Haskell_%28programming_language%29) is probably the most purely functional programming language, but other languages you might run across that are built specifically for programming in the functional paradigm are [Lisp](https://en.wikipedia.org/wiki/Common_Lisp), [Scheme](https://en.wikipedia.org/wiki/Scheme_%28programming_language%29), [Clojure](https://en.wikipedia.org/wiki/Clojure), [Elm](https://en.wikipedia.org/wiki/Elm_%28programming_language%29), [Erlang](https://en.wikipedia.org/wiki/Erlang_%28programming_language%29), and [F#](https://en.wikipedia.org/wiki/F_Sharp_%28programming_language%29).<br><br>The most likely place to run into functional programming ideas for web developers though, is in React and Redux. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 960407,
+              "key": "77d72ad3-99dc-4472-ba5a-6964a6b9469b",
+              "title": "concept summary & further research",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Summary\nThere are strengths and weaknesses to every paradigm, and the more you know, the more equipped you are to pick the best one for the job, instead of just getting into a routine of using only one. These concepts are especially helpful when learning React and Redux.\n\nWe’ve covered some of the strengths of functional programming that make it attractive to web developers, but if you want a little more challenge, think about the strengths of the other paradigms to see where using them might make sense. Also, if you want to stick a toe into learning a purely Functional language, here is an [Intro to Haskell](http://learnyouahaskell.com/introduction) from Learn You a Haskell for Great Good!.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 960429,
+          "key": "95ad25a2-43b3-4288-963b-a89bfca5eb57",
+          "title": "Lesson Recap",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "95ad25a2-43b3-4288-963b-a89bfca5eb57",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 960424,
+              "key": "85bfb1fc-5e49-4621-9143-f78d6e79b46b",
+              "title": "ND032 C02 L01 A05 Lesson Recap Intro To Functional Programming Lesson Summary",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Z7pTI6FaWao",
+                "china_cdn_id": "Z7pTI6FaWao.mp4"
+              }
+            },
+            {
+              "id": 960418,
+              "key": "011e9872-e439-4010-bc56-d8211921a7cd",
+              "title": "Lesson Summary",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Lesson Outline\n- Intro to Programming Paradigms\n- Why Learn Paradigms?\n- Comparing Paradigms\n- History of Functional Programming\n- Foundational Concepts of Functional Programming\n- Why Functional Programming?\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 960413,
+              "key": "36f7eaa2-39ad-4194-aef1-d35134535139",
+              "title": "Resources",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Resources \nHere are some of the major resources we used in this lesson:\n- [Digital Fellows Article - Introduction to Programming Paradigms](https://digitalfellows.commons.gc.cuny.edu/2018/03/12/an-introduction-to-programming-paradigms/)\n- [Programming Paradigms Overview](https://cs.lmu.edu/~ray/notes/paradigms/) ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 960426,
+              "key": "d5c42553-861b-4fce-a9cc-33efdc06acb2",
+              "title": "Glossary",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Glossary\n- **Programming Paradigm** - An overarching approach or style to problem-solving or ...\n> A philosophy, style, or general approach to writing code.\n\n- **Pure Functions** - A function that will always return the same output if given the same input, and which has no side effects.\n- **Side effects** - An effect on your overall program from running a function, that did not come from the return statement of that function.\n- **Immutable** - Unchanging. Immutable values are ones which, once declared, cannot be changed.",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "starter_files",
+      "reason": "prefer master_archive_id"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "starter_files",
+      "reason": "prefer master_archive_id"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "starter_files",
+      "reason": "prefer master_archive_id"
+    }
+  ]
+}

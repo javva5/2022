@@ -1,0 +1,286 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The Reduce Method</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Functional JS Syntax</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Functional JS Syntax Intro.html">01. Functional JS Syntax Intro</a>
+    </li>
+    <li class="">
+      <a href="02. Array Methods.html">02. Array Methods</a>
+    </li>
+    <li class="">
+      <a href="03. The Map Method.html">03. The Map Method</a>
+    </li>
+    <li class="">
+      <a href="04. Exercise Map Method.html">04. Exercise: Map Method</a>
+    </li>
+    <li class="">
+      <a href="05. Advanced Map Method.html">05. Advanced Map Method</a>
+    </li>
+    <li class="">
+      <a href="06. Exercise Advanced Map Method.html">06. Exercise: Advanced Map Method</a>
+    </li>
+    <li class="">
+      <a href="07. Map Method Review.html">07. Map Method Review</a>
+    </li>
+    <li class="">
+      <a href="08. The Filter Method.html">08. The Filter Method</a>
+    </li>
+    <li class="">
+      <a href="09. Exercise Filter Method.html">09. Exercise: Filter Method</a>
+    </li>
+    <li class="">
+      <a href="10. Filter Method Review.html">10. Filter Method Review</a>
+    </li>
+    <li class="">
+      <a href="11. The Reduce Method.html">11. The Reduce Method</a>
+    </li>
+    <li class="">
+      <a href="12. Exercise Reduce Method.html">12. Exercise: Reduce Method</a>
+    </li>
+    <li class="">
+      <a href="13. Reduce Review.html">13. Reduce Review</a>
+    </li>
+    <li class="">
+      <a href="14. Array Methods for Selection.html">14. Array Methods for Selection</a>
+    </li>
+    <li class="">
+      <a href="15. Exercise Array Methods (Flat, Find, Include).html">15. Exercise: Array Methods (Flat, Find, Include)</a>
+    </li>
+    <li class="">
+      <a href="16. Array Method Problem Set.html">16. Array Method Problem Set</a>
+    </li>
+    <li class="">
+      <a href="17. Variables.html">17. Variables</a>
+    </li>
+    <li class="">
+      <a href="18. ES6 Object Methods &amp; Freeze.html">18. ES6 Object Methods &amp; Freeze</a>
+    </li>
+    <li class="">
+      <a href="19. Exercise Object Method - Freeze.html">19. Exercise: Object Method - Freeze</a>
+    </li>
+    <li class="">
+      <a href="20. Object Method - Keys.html">20. Object Method - Keys</a>
+    </li>
+    <li class="">
+      <a href="21. Exercise Object Method - Keys.html">21. Exercise: Object Method - Keys</a>
+    </li>
+    <li class="">
+      <a href="22. Object Method - Assign.html">22. Object Method - Assign</a>
+    </li>
+    <li class="">
+      <a href="23. Exercise Object Method - Assign.html">23. Exercise: Object Method - Assign</a>
+    </li>
+    <li class="">
+      <a href="24. Object Methods Problem Set.html">24. Object Methods Problem Set</a>
+    </li>
+    <li class="">
+      <a href="25. Exercise Putting it All Together.html">25. Exercise: Putting it All Together</a>
+    </li>
+    <li class="">
+      <a href="26. Lesson Recap.html">26. Lesson Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">11. The Reduce Method</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>ES6 Reduce</p></h3>
+  <div>
+  <h2 id="the-reduce-method">The Reduce Method</h2>
+<p>The <code>map</code> and <code>filter</code> methods have a lot in common, they both:</p>
+<ul>
+<li>Run a function (callback given by the developer) on every item in an array.</li>
+<li>Pass three arguments to the function (item value, item index, whole array).</li>
+<li>Return a new array.</li>
+</ul>
+<p>The <code>reduce</code> method has some slight differences. From the name you might be able to guess that this method boils our array down to a <strong>single value</strong>.</p>
+<p>For example, if you have an array of products, each with a price, you could use <code>reduce</code> to sum the price values of each item and return a single total cost. Reduce has the special ability to keep track of a value that is updated as it iterates over each item in the array. To get the total cost from an array of items with a price value, you would write a function that adds an item's price to the running total and <code>reduce</code> will run that function on each item in the array until it runs out of items and the total is found. </p>
+<p>To do this, <code>reduce</code> only passes the callback two arguments, the total so far - or accumulator, and the current item. Another way that it differs from the first two array methods is that it <em>does not</em> necessarily return an array. In the case of the example above, <code>reduce</code> would return a single integer of the sum of all prices.</p>
+<h3 id="code-example">Code Example</h3>
+<p>Below, you can see how reduce is applied to the <code>sales</code> list. Reduce goes through the list <code>sales</code> and adds the individual value to a running total which is what will ultimately be returned by reduce. The final output of reduce on sales will be <code>147.49</code>. </p>
+<pre><code>const sales = [120.00, 19.99, 3.50, 4.00];
+
+const total = sales.reduce((runningTotal, currentValue) =&gt; {
+    console.log(runningTotal, currentValue)
+    return runningTotal + currentValue
+})
+
+// cycle 1: 120 19.99
+// cycle 2: 139.99 3.5
+// cycle 3: 143.49 4
+
+// expected output: 147.49
+
+// If you can follow the code above - great job! No one masters the reduce method overnight, but being able to follow the code is the first step. Below are two examples of alternate syntax that you might also see out in the wild. Can you follow these?
+
+//  SAME AS:
+const reducer = (runningTotal, currentValue) =&gt; runningTotal + currentValue;
+console.log(sales.reduce(reducer));
+
+// Look! You can even run map, filter, and reduce on array literals!
+// SAME AS:
+[120.00, 19.99, 3.50, 4.00].reduce((runningTotal, currentValue) =&gt; {
+    return runningTotal + currentValue
+})</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Exercise Instructions</p></h3>
+  <div>
+  <h2 id="exercise-instructions">Exercise Instructions</h2>
+<p>Next, you will practice using the reduce method in the following exercise. If you need a reminder on the instructions head over to <em>Introduction to Functional Programming</em> exercises to get a reminder on those instructions.</p>
+<p>There will be 2 exercises to practice what you learned in this concept and 1 exercise on how you could apply the reduce method in a real life scenario.</p>
+<h3 id="local-machine">Local Machine</h3>
+<p>This next exercise can be found in <code>.../exercises/functional_js_syntax/array_reduce.js</code>.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="12. Exercise Reduce Method.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('11. The Reduce Method')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

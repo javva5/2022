@@ -1,0 +1,103 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.390
+Welcome to the introduction of functional programming.
+
+00:00:03.390 --> 00:00:05.865
+Let's dial it back for a second though,
+
+00:00:05.865 --> 00:00:09.030
+and before taking a look at functional programming in particular,
+
+00:00:09.030 --> 00:00:12.225
+take a look at programming paradigms in general.
+
+00:00:12.225 --> 00:00:14.595
+What is a programming paradigm?
+
+00:00:14.595 --> 00:00:18.645
+A paradigm is an overarching approach or style to problem-solving.
+
+00:00:18.645 --> 00:00:22.965
+Sometimes I think of it as the worldview or culture of a programming language.
+
+00:00:22.965 --> 00:00:26.475
+One definition states, a programming paradigm
+
+00:00:26.475 --> 00:00:30.285
+is a philosophy style or general approach to writing code.
+
+00:00:30.285 --> 00:00:33.135
+But what are some of these programming paradigms?
+
+00:00:33.135 --> 00:00:37.525
+Here are a few you might run across in real life and that we will cover in this lesson.
+
+00:00:37.525 --> 00:00:39.840
+The first is the imperative style.
+
+00:00:39.840 --> 00:00:41.195
+Much like in grammar,
+
+00:00:41.195 --> 00:00:44.960
+imperatives tell the program what to do step-by-step.
+
+00:00:44.960 --> 00:00:49.760
+Imperative programs tend to be the first ones we write when we're learning to code.
+
+00:00:49.760 --> 00:00:53.795
+Because they're very intuitive and oftenly read like recipes,
+
+00:00:53.795 --> 00:00:55.690
+they're very easy to reason about.
+
+00:00:55.690 --> 00:00:57.540
+The next is functional.
+
+00:00:57.540 --> 00:00:59.000
+As you might have guessed,
+
+00:00:59.000 --> 00:01:02.140
+the functional paradigm is concerned with functions,
+
+00:01:02.140 --> 00:01:07.000
+where imperative programs describe each action more or less than order.
+
+00:01:07.000 --> 00:01:11.165
+A functional program would put all of those actions into a function,
+
+00:01:11.165 --> 00:01:15.325
+and then those functions can be called anywhere or even chained together.
+
+00:01:15.325 --> 00:01:18.620
+Another paradigm is the object-oriented paradigm.
+
+00:01:18.620 --> 00:01:22.610
+It is by far the most commonly used in web development today.
+
+00:01:22.610 --> 00:01:28.854
+Instead of describing steps to be followed or putting functionality into functions,
+
+00:01:28.854 --> 00:01:34.820
+object-oriented programs focus on objects or the entities in our application.
+
+00:01:34.820 --> 00:01:38.630
+By putting state and functionality inside of these objects,
+
+00:01:38.630 --> 00:01:41.275
+we can get a very intuitive program.
+
+00:01:41.275 --> 00:01:44.000
+There are many more programming paradigms out there,
+
+00:01:44.000 --> 00:01:46.510
+but these three are probably the most popular.
+
+00:01:46.510 --> 00:01:47.585
+In the next section,
+
+00:01:47.585 --> 00:01:52.260
+you'll get to see a full list of paradigms and read about one or two in detail.
+

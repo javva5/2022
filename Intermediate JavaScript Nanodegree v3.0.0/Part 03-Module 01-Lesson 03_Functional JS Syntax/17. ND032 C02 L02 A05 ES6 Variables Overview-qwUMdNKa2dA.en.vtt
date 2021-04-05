@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.960
+The variables we use are also important to functional programming.
+
+00:00:03.960 --> 00:00:08.835
+While learning JavaScript, you've likely seen a confusing mess of var, let, and const.
+
+00:00:08.835 --> 00:00:11.300
+Just to be sure that we're all on the same page,
+
+00:00:11.300 --> 00:00:13.120
+let's take a quick look at each of them.
+
+00:00:13.120 --> 00:00:18.630
+Var is the older pre ES6 variable that works in pre ES6 environments.
+
+00:00:18.630 --> 00:00:21.060
+It comes with some of its own domains that lead
+
+00:00:21.060 --> 00:00:23.955
+JavaScript to develop two new variable types.
+
+00:00:23.955 --> 00:00:27.390
+The issues with var are outside the scope of this course to talk about,
+
+00:00:27.390 --> 00:00:28.950
+but if you're interested in learning more,
+
+00:00:28.950 --> 00:00:31.965
+there will be resources at the end of the lesson just for that.
+
+00:00:31.965 --> 00:00:36.770
+Let and const were added in an effort to clean up some of the issues with var.
+
+00:00:36.770 --> 00:00:40.820
+It's now recommended to use either of them in your code instead of var.
+
+00:00:40.820 --> 00:00:45.510
+There's some dispute over which one you should use in a general program,
+
+00:00:45.510 --> 00:00:47.600
+but for functional style JavaScript,
+
+00:00:47.600 --> 00:00:50.095
+the only correct answer is to use const.
+
+00:00:50.095 --> 00:00:54.950
+Consts are immutable, meaning that once a value is declared as a const,
+
+00:00:54.950 --> 00:00:58.340
+its value cannot be edited, at least mostly.
+
+00:00:58.340 --> 00:01:00.860
+We'll get to that. But in general,
+
+00:01:00.860 --> 00:01:04.800
+const will be the best fit with a functional program.
+

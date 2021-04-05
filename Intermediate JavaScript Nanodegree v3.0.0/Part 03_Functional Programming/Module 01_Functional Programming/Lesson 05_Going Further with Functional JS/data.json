@@ -1,0 +1,1332 @@
+{
+  "data": {
+    "lesson": {
+      "id": 965896,
+      "key": "d381a3d8-b601-4c96-aac3-1ebd251aa567",
+      "title": "Going Further with Functional JS",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Going further with Functional Programming and common tools to solve traditional problems in web development. ",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/d381a3d8-b601-4c96-aac3-1ebd251aa567/965896/1595567293418/Going+Further+with+Functional+JS+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/d381a3d8-b601-4c96-aac3-1ebd251aa567/965896/1595567290743/Going+Further+with+Functional+JS+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 965891,
+          "key": "251650e0-3ec7-4f53-bf60-f43397cd4e00",
+          "title": "Going Further with Functional JS Intro",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "251650e0-3ec7-4f53-bf60-f43397cd4e00",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 965871,
+              "key": "d6613295-9e05-4993-b544-1fdf647085b7",
+              "title": "ND032 C02 L04 A01 Intro To Going Further With Functional JS",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "c4OV0JebQ5A",
+                "china_cdn_id": "c4OV0JebQ5A.mp4"
+              }
+            },
+            {
+              "id": 965860,
+              "key": "2372596a-f72f-4f5f-af2b-20fac5f913c8",
+              "title": "Summary & Outline",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Introduction\nWe’re in the home stretch! We’ve finished our investigation of the Javascript tools we have to write Functional programs, and we’ve seen first hand how those tools can be used to create an interactive program without the use of any external libraries. Now it's time to get a wider view of all that’s possible with Functional Programming and some of the awesome libraries built on top of these powerful concepts.\r\rIn this lesson, we will do a very high-level overview of a few of the most common Functional libraries for JavaScript - ImmutableJS, Ramda, RxJS, and Redux. The point of this lesson is not to teach you all there is to know about these awesome tools, but only to show three **real life** uses of the Functional concepts we have learned. Here and there I will stop to explain a new concept or look at some code, but the sole focus of this section will be to highlight how these tools put different Functional practices to good use. None of the lessons in this section should be seen as a tutorial on how to set up or use these libraries in an application. To go into more detail for any of these technologies would require another course of its own, so instead I will provide resources for where you can continue learning about each library on your own. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 965879,
+              "key": "1fe88f97-633d-42cb-b5c5-832eb4f97a72",
+              "title": "Course Overview",
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2020/January/5e0e3a87_l4-3-courseoverview/l4-3-courseoverview.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/1fe88f97-633d-42cb-b5c5-832eb4f97a72",
+              "caption": "You now have all the foundational tools to write Functional JS and you had a chance to practice! In this lesson, we will go into additional libraries for Functional JS that will help you be a rockstar at programming Functional JS. ",
+              "alt": "Course Overview",
+              "width": 613,
+              "height": 184,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 965892,
+          "key": "48128b9a-cb47-40cb-8cc9-a161621f1d1d",
+          "title": "Persistent Data Structures",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "48128b9a-cb47-40cb-8cc9-a161621f1d1d",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 965874,
+              "key": "5f0c97ab-4430-4ec4-9893-360cb3f47965",
+              "title": "Untitled",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Introducing Persistent Data Structures\n\nBefore we jump into our first library, ImmutableJS, we need to talk about once concept - Immutable Data Structures. When I first introduced the concept of immutability, I intentionally did not touch on one very important part of immutability -- space. If variables cannot change the values they hold, how do your programs not need huge amounts of memory to hold all those copies of old data? If even the smallest change to a value occurs, the Functional Paradigm would say that we need to create a unique variable - even if 99% of it is identical to the previous. This could not possibly be an efficient use of memory, especially for large programs, so how is this handled? Instead of making copies of variables, we make trees of data and have the variables reference values in the tree. That is a lot of new words and is probably confusing, so we will walk through an example in the next video.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 965865,
+              "key": "0d96ad0b-c85e-44ac-ac40-4a7c1e10ac75",
+              "title": "ND032 C02 L04 A02 Persistent Data Structures",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "hMVuguvKLnE",
+                "china_cdn_id": "hMVuguvKLnE.mp4"
+              }
+            },
+            {
+              "id": 965857,
+              "key": "744d0556-e138-4852-ab95-0c30aa0aeed7",
+              "title": "Persistent Data Structures questions",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "744d0556-e138-4852-ab95-0c30aa0aeed7",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Remembering and allowing edits to previous versions of something... That sounds familiar; what popular technology is built around the idea of persistent data structures?",
+                "answers": [
+                  {
+                    "id": "rbk1",
+                    "text": "React",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk2",
+                    "text": "Git",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "rbk3",
+                    "text": "Redux",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk4",
+                    "text": "Java",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk5",
+                    "text": "SVN",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 965868,
+              "key": "3734da35-83c0-4349-9646-da01d04b6989",
+              "title": "Persistent Data Structures questions",
+              "semantic_type": "TaskListAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "3734da35-83c0-4349-9646-da01d04b6989",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "tasks": [
+                "Watch this informative talk from JS Conf EU: https://www.youtube.com/watch?v=Wo0qiGPSV-s"
+              ],
+              "positive_feedback": "Way to go!",
+              "video_feedback": null,
+              "description": "Let’s do some more research into Persistent Data Structures..."
+            },
+            {
+              "id": 1044088,
+              "key": "9146dc2f-1126-4530-9029-0cda51d44a84",
+              "title": "Untitled",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "\nMost of the knowledge surrounding persistent data structures is found in a computer science algorithms or data structures course, so we are only going to dip a toe into the subject, but we are going to create one simple example so that you can have a clearer picture of what is going on. For the sake of time, this example can only show the mechanics of working with persistent data structures, we will introduce a library later that adds all of the memory saving functionality.\n\nIn Javascript, we are going to build a naive example of an **array** type persistent data structure.  \n\nFirst, we will create a class - we’ll call it PersistentArray. We are creating a class because it is the easiest way to wrap an array with extra functionality. Again, this wouldn’t really be something you would use in a real application, it is only an example to highlight some of the features of a persistent data structure. So here is our new kind of persistent array:\n``` javascript\nclass PersistentArray {\n        constructor(items = []) {\n                this.persistentArray = items\n        }\n}\n\nconst a = new PersistentArray([1, 2, 3])\nconsole.log(\"A\", a)\n```\nYou can see that PersistentArray takes in an array of items or defaults to an empty array if no arguments are provided. Then our class has a property of persistentArray, this will be a normal javascript array. \n\nNow imagine that we want to add a new item to this array. But we can’t just push a new value onto the array, because we can’t edit the original. So our PersistentArray class isn’t going to let us edit the original, it is going to five us a new array with the change made on that array by default. We are going to implement our own “push” method to work on our PersistentArray.\n``` javascript\nclass PersistentArray {\n        constructor(items = []) {\n                this.persistentArray = items\n        }\n\n        push(newItem) {\n    \t     return new PersistentArray(this.persistentArray.concat(newItem))\n         }\n}\n\nconst a = new PersistentArray([1, 2, 3])\nconsole.log(\"A\", a)\n\nconst b = a.push(4)\nconsole.log(\"A\", a)\nconsole.log(\"B\", b)\n\n```\nYou can see now that we are creating a push method which takes in one new value and returns a **whole new class instance** with an array that contains the new item. And you can see when we console log the results that array A is unchanged and the new array B contains the array with ‘4’ added to it. So in persistent data structures, you can see that once a value is created it can never be changed. \n\nWhere our example differs from a truly persistent data structure - and why this is such a naive example - is the memory sharing. When our custom push method creates the new class instance, it takes up an entirely new spot in memory, it is saved as its own entity. But in a true implementation of this, array A and array B would share memory, only differing by one node (the new ‘4’ value we added to B).\n\nSo now let’s explore the other side and implement a pop method. Take a look at this code.\n``` javascript\nclass PersistentArray {\n\tconstructor(items = []) {\n    \t        this.persistentArray = items\n\t}\n    \n\tpush(newItem) {\n    \t        return new PersistentArray(this.persistentArray.concat(newItem))\n\t}\n    \n\tpop() {\n    \t        let poppedArray = [...this.persistentArray]\n    \t        poppedArray.pop()\n    \t        return new PersistentArray(poppedArray)\n\t}\n}\n\nconst a = new PersistentArray([1, 2, 3])\nconsole.log(\"A\", a)\n\nconst b = a.push(4)\nconsole.log(\"A\", a)\nconsole.log(\"B\", b)\n\nconst c = a.pop()\nconsole.log(\"A\", a)\nconsole.log(\"B\", b)\nconsole.log(\"C\", c)\n```\nOur custom pop method does mostly the same thing as push in that it returns a new instance of the class with an array containing the changes. \n\nYou can see the above code in the following workspace. Walk through the code to get used to the syntax, are there other ways you could achieve the same result? You can also try creating a persistent data structure for objects!",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1044087,
+              "key": "32f0456c-7f89-49af-9ee6-0b3e40b07113",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "r950324c965892xGENERICb11csqi3",
+              "pool_id": "webterminal",
+              "view_id": "generic-xa8fk",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "port": 3000,
+                    "ports": [],
+                    "userCode": "node -v",
+                    "openFiles": [
+                      "/home/workspace/pds.js"
+                    ],
+                    "showFiles": false,
+                    "allowClose": false,
+                    "showEditor": true,
+                    "allowSubmit": false,
+                    "terminalTitle": "BASH",
+                    "openTerminalOnStartup": true
+                  },
+                  "kind": "generic"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 965852,
+              "key": "7a0c823e-365a-4139-b6a5-b86b82a8a18a",
+              "title": "Persistent Data Structures Summary & Further Research",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Summary\nThis is the end of our very quick overview of persistent data structures. If you want to learn more about them, there are some more links provided at the end of the lesson.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1044083,
+              "key": "cffb8163-e88a-46ae-9f7d-484b71f8b0e2",
+              "title": "Immutable and Persistent Data Structures",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "This section is not supposed to be a tutorial about using the immutable library, but to simply show a real life example of the Functional concept immutability applied in JavaScript. You can import Immutable into a project of your own to try it out or read more in their excellent documentation. ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 965890,
+          "key": "afbc56d6-8861-4502-84c3-fc42d07ba72a",
+          "title": "ImmutableJS",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "afbc56d6-8861-4502-84c3-fc42d07ba72a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 965882,
+              "key": "bf231073-31ee-4a87-9f36-0d2b9b8bc8bc",
+              "title": "ImmutableJS",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Introduction\nHopefully you’re all fired up to make use of Persistent Data Structures in your next JavaScript program, but writing all that functionality from scratch would be time consuming. Instead, we can use ImmutableJS, which is a library that gives us Persistent Data Structures in JavaScript. ImmutableJS has done the work of writing the JavaScript functionality so that when you create an object, it can look pretty much like a normal JavaScript object, but under the hood it will behave like a persistent data structure. This library is not solely a Functional library; you could actually use it in all the JavaScript you write if you wanted. The creators of Immutable have gone behind the scenes to create some very smart ways of handling data structures specific to JavaScript. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 970065,
+              "key": "94c27e9d-6bd9-4c88-8cc8-8e880ef3b855",
+              "title": "ImmutableJS Example",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "To give you a clearer picture of what we’re talking about, let's take a look at some of the Immutable syntax. \n\rFirst, because Immutable is an external library, we have to add it to our project. We can do that one of two ways: via a script tag in an HTML page, or via a node module. Choose whichever one is more convenient for your application. For this course, we are going to use the browser script tag implementation. Here is an example of how ImmutableJS is implemented.\n```\n// Put this in an html page\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/immutable/3.8.2/immutable.min.js\"></script>\n\n// Or, you can install `immutable` module using npm and import this module in a js file\nnpm install immutable // install immutable from the terminal\nconst Immutable = require('immutable'); // add this line in js file\n```\n\n## Immutable.js Basic Syntax\nNow let's take a look at some syntax. We are going to take a quick tour of what it looks like to use Immutable, then once we have a feel for the syntax we’ll go back and take a look at how this uses persistent data structures under the hood. \n\n``` javascript\n// Getting and Setting values using Immutable module\n\n// Immutable objects are called ‘maps’\nconst Immutable = require('immutable'); // import immutable module\n\n// this is how we declare an immutable Object\nconst map1 = Immutable.Map({ a: 1, b: 2, c: 3 });\n\n\n// Here is an important part. We can’t update map1, so instead we have to make the change on map2. \nconst map2 = map1.set('b', 50);\n\n// Because of this, the old state of map1 is still available\nmap1.get('b'); // 2\n\n// And map2 shows our update.\nmap2.get('b'); // 50\nconsole.log(map2.get('b'))\n\n// equality check\nmap1.equals(map2); // false\nconsole.log(map1.equals(map2))\n\n// Use with ordinary objects\nconst state1 = Immutable.Map({ a: 1, b: 2, c: 3, d: 4 });\nconst state2 = Immutable.Map({ c: 10, a: 20, t: 30 });\nconst obj = { d: 100, o: 200, g: 300 };\nconst map3 = state1.merge(state2, obj);\nconsole.log(map3.toJS()) // toJS() is a helper method to convert immutable object into javascript dictionary\n\n// If you open the returned object, you can see that it isn't an ordinary object\n// you'll find all the properties under \"entries\"\n\n// Use with ordinary arrays\n// An immutable array is declared as a `List` like this:\nconst numbers = Immutable.List([1, 2, 3]);\n\n//But Immutable can also work with plain JS arrays\nconst otherNumbers = [4, 5, 6]\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1044083,
+              "key": "cffb8163-e88a-46ae-9f7d-484b71f8b0e2",
+              "title": "Immutable and Persistent Data Structures",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "This section is not supposed to be a tutorial about using the immutable library, but to simply show a real life example of the Functional concept immutability applied in JavaScript. You can import Immutable into a project of your own to try it out or read more in their excellent documentation. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1044084,
+              "key": "651ba463-c1db-4547-8123-3d733ac3543d",
+              "title": "Immutable JS",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "651ba463-c1db-4547-8123-3d733ac3543d",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "From the code snippets below, which are examples of Immutable JS?",
+                "answers": [
+                  {
+                    "id": "rbk1",
+                    "text": "``` javascript\nconst map3 = map1.merge(map2, obj);\n```",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "rbk2",
+                    "text": "``` javascript\nconst person = Map({  name: 'Will',  pets: List(['cat', 'dog'])});\n```",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "rbk3",
+                    "text": "``` javascript\nconst people = map(p => {  name: p.name,  pets: ['cat', 'dog']\n});\n```",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk4",
+                    "text": "``` javascript\nconst collection = Immutable.List.of('Rocket');\ncollection.push('Groot');\n```",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 965853,
+              "key": "d4b02250-0bc8-44aa-ac5e-f7ebc4a6fa52",
+              "title": "ImmutableJS Problem Set",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "d4b02250-0bc8-44aa-ac5e-f7ebc4a6fa52",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "In the DOM manipulation section in the previous lesson, we created a small program that could add content from our JavaScript file into the browser. Thinking back to that code, what part of it would be the best candidate as an Immutable value?",
+                "answers": [
+                  {
+                    "id": "rbk1",
+                    "text": "The App function",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk2",
+                    "text": "Components",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk3",
+                    "text": "Store",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "rbk4",
+                    "text": "Render function",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk5",
+                    "text": "All of the above",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 970067,
+              "key": "8cbc5b10-710a-4ce7-814f-79147449f133",
+              "title": "Exercise Instructions",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Exercise Instructions\nTime to practice with some immutability challenges! Of course, Immutable is a library so we need to import it before any of its syntax will work. \n\n### Local Machine\rThis next exercise can be found in `.../exercises/further_with_functional_js/immutablejs.js`.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 970068,
+          "key": "5e236283-6b50-4130-b0dc-269ab7d5fe17",
+          "title": "Exercise: ImmutableJS",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5e236283-6b50-4130-b0dc-269ab7d5fe17",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 970080,
+              "key": "0a1b1631-fcab-4d7a-aec5-2d611b74cc5c",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "r950324c970068xGENERICjtnqkw8x",
+              "pool_id": "webterminal",
+              "view_id": "generic-xj1s8",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "port": 3000,
+                    "ports": [],
+                    "userCode": "node -v\nnpm install immutable",
+                    "openFiles": [
+                      "/home/workspace/immutablejs.js"
+                    ],
+                    "showFiles": false,
+                    "allowClose": false,
+                    "showEditor": true,
+                    "allowSubmit": false,
+                    "terminalTitle": "BASH",
+                    "openTerminalOnStartup": true
+                  },
+                  "kind": "generic"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 970078,
+          "key": "c8837475-7710-4c7d-825f-2f6894ef5134",
+          "title": "ImmutableJS Review",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c8837475-7710-4c7d-825f-2f6894ef5134",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 970075,
+              "key": "b3dbecf9-ff7a-4500-a52c-1f8cf38acd5a",
+              "title": "Exercise Solution",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## RxJS \nBefore we review ImmutableJS exercise solution you can go to [RxJS-playground](https://rxjs-playground.github.io/#/) and load the following code to run some RxJS code. \n\n``` javascript\n// Browsers won't run RxJS code on their own, but thankfully RxJS created a tool called the RxJS playground! \n// Take the code below and paste it into https://rxjs-playground.github.io/#/ to see it run\n\n\n// A function runs once and returns one set of information\n// An observable is like a function that runs for a period of time and can return many sets of information - a stream of information\n\nconst observable = new Rx.Observable(subscriber => {\n  subscriber.next(1);\n  subscriber.next(2); // \"return\" another value\n  subscriber.next(3); // \"return\" another value\n  setTimeout(() => {\n    subscriber.next(4);\n    subscriber.complete();\n  }, 1000);\n});\n \nconsole.log('just before subscribe');\n\nobservable.subscribe({\n  next(x) { console.log('got value ' + x); },\n  error(err) { console.error('something wrong occurred: ' + err); },\n  complete() { console.log('done'); }\n});\n\nconsole.log('just after subscribe');\n\n// the word 'next' is a special RxJS observable word that allows the observable to \"return\" multiple things over a period of time\n\n\n// There are three types of values an Observable Execution can deliver:\n\n// \"Next\" notification: sends a value such as a Number, a String, an Object, etc.\n// \"Error\" notification: sends a JavaScript Error or exception.\n// \"Complete\" notification: does not send a value.\n\n// \"Next\" notifications are the most important and most common type: they represent actual data being delivered to a subscriber. \n// \"Error\" and \"Complete\" notifications may happen only once during the Observable Execution, and there can only be either one of them.\n\n```\n\n## Exercise Solution - ImmutableJS\n\n``` javascript\nPART 1. Getting and Setting values\n// Given the following object, make an update that turns name to 'Mal' and role to 'Captain'\n\nconst state1 = Immutable.Map(const map1 = Immutable.Map({ \n    name: 'Wash',\n    ship: {\n        name: 'Serenity',\n        class: 'Firefly'\n    },\n    role: 'Pilot',\n    favorite_thing: {\n        item: \"Toy\",\n        details: {\n            type: 'Toy Tyrannosaurus Rex'\n        }\n    }\n});\n\n// SOLUTION\n// You can do this:\nconst state2 = state1.set('name', 'Mal')\nconst state3 = state2.set('role', 'Captain')\n\n// But Immutable also allows you to do this:\nconst state2 = state1.set('name', 'Mal').set('role', 'Captain')\n\n// -----------------------------------------------------------------\n// -----------------------------------------------------------------\n\n// PART 2. More with objects\n// This is a normal javascript object. It is very different from an Immutable Map\nconst obj = { d: 100, o: 200, g: 300 };\n\n// But thankfully, normal javascript objects are still valid in Immutable\n// Notice that here we can merge a normal object into an Immutable Map\nconst map3 = state1.merge(state2, obj);\n\n// But also notice how different the two are when we console log map3 \nconsole.log(map3)\n\n// YOUR TURN --------------------------------------------------------------\n// Can you locate the contents of our variable 'obj' inside the Immutable Map map3?\nconsole.log(map3)\n\n// SOLUTION --------------------------------------------------------------\n// If you open the Immutable map3 in inspect element, you can see that it isn't an ordinary object\n// you'll find all the properties under \"entries\"\n\n// -----------------------------------------------------------------\n// -----------------------------------------------------------------\n\n// PART 3. Arrays and Immutable Lists\n\n// An immutable array is called a LIST, and is declared like this:\nconst numbers = List([1, 2, 3]);\n\n// We can turn normal JS arrays into Immutable Lists like this:\nconst plainArray = [ 1, 2, 3, 4 ]\nconst listFromPlainArray = List(plainArray)\nconsole.log(listFromPlainArray)\n\n// we can declare a new Immutable List\nconst myList = List([ 'stuffed t-rex' ]);\nconsole.log(Array.from(myList));\n\n// and we can use the set method again to add or update values. Just provide the index first and value second\nconst myList1 = myList.set(1, 'toy lightsaber');\nconsole.log(Array.from(myList1)); // [ \"stuffed t-rex\", \"toy lightsaber\" ]\n\n// but, in order to not need to supply the index, we can also add new values with push\nconst myList2 = myList1.push('Picard bobblehead')\nconsole.log(Array.from(myList2));\n\n// YOUR TURN --------------------------------------------------------------------------\n\n// 1. Turn the following array into an Immutable array\n// 2. Add a character\n\n// -----------------------------------------------------------------\n// -----------------------------------------------------------------\n\n\n// STRETCH CHALLENGE ----------------------------------------------------------------------\n// 3. Remove Jabba the Hut from the Immutable List\n// look up in the documentation how you would remove a character from the Immutable list\n\nconst characters = [\n  {\n    name: 'Marvin the Paranoid Android',\n    role: 'First Mate',\n    universe: 'Hitchhikers Guide to the Galaxy',\n    weapon: 'severe depression',\n    powerLevel: 1000\n  },\n  {\n    name: 'Jabba the Hutt',\n    role: 'villain',\n    universe: 'Star Wars',\n    weapon: 'henchmen',\n    powerLevel:  200\n  },\n  {\n    name: 'Zoë Alleyne Washburne',\n    role: 'First Mate',\n    universe: 'Firefly',\n    weapon: 'Winchester Model 1892 rifle',\n    powerLevel: 160\n  },\n  {\n    name: 'Peter Venkman',\n    role: 'Ghostbuster',\n    universe: 'Ghostbusters',\n    weapon: 'proton pack',\n    powerLevel: 120\n  },\n  {\n    name: 'Kathryn Janeway',\n    role: 'Captain',\n    universe: 'Star Trek',\n    weapon: 'Wit',\n    power_level: 140\n  }\n]\n\n// SOLUTION \n\nconst immutableCharacters = List(characters).push({\n    name: 'Yoda',\n    role: 'Jedi Master',\n    universe: 'Star Wars',\n    weapon: 'The Force',\n    powerLevel: 900\n})\nconsole.log(Array.from(immutableCharacters))\n\n// STRETCH SOLUTION\nconst withoutJabba = immutableCharacters.delete(1)\nconsole.log(Array.from(withoutJabba))\n\n// or, all in one line, you could do:\nconst allatonce = List(characters).push({\n    name: 'Yoda',\n    role: 'Jedi Master',\n    universe: 'Star Wars',\n    weapon: 'The Force',\n    powerLevel: 900\n}).delete(1)\nconsole.log(Array.from(allatonce))\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 965881,
+              "key": "dd1befc7-8eac-4cc5-ac1c-d704b425c93b",
+              "title": "Concept Summary & Further Research",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Summary\nNow that you’ve gotten to experiment with Persistent Data Structures in JavaScript via ImmutableJS, let’s take a look at implementing this library!",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 965893,
+          "key": "084b9f00-a21c-415e-8124-e319c049ad3a",
+          "title": "Implementing ImmutableJS",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "084b9f00-a21c-415e-8124-e319c049ad3a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 965856,
+              "key": "66734fc3-dd33-4e05-8a8f-66cf8217bfc3",
+              "title": "Implementing ImmutableJS",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Introduction\nThere are many options when it comes to implementing ImmutableJS. You can install it as an npm module, grab it with a script in the browser, or use it in a Typescript project. The recommended way is to use the npm module. However, for the workspace environment that we are using in this course, we are going to use the browser script just to test it out. For use in the course project though, you should use the npm module.\n\n**WATCH OUT!** One important thing to note is that nested objects have to be declared as Immutable maps just like top level ones. Otherwise, they will be stored as normal JS objects, which Immutable handles differently. You can see the difference below. \n``` javascript\n// Nest 1\nconst currentShow = Immutable.Map({\n    title: 'Dr. Who',\n    seasons: 11,\n    currentSeason: 4,\n    characters: {\n        main: 'The Doctor',\n        supporting: ['Dalek1']\n    }\n})\n\n// Nest 2\nconst currentShow = Immutable.Map({\n    title: 'Dr. Who',\n    seasons: 11,\n    currentSeason: 4,\n    characters: Immutable.Map({\n        main: 'The Doctor',\n        supporting: List(['Dalek1'])\n    })\n})\n```\n\n`Nest 1` is not the same as `Nest 2`. The main difference is that the nested object `characters` is declared with `Immutable.Map` in `Nest 2`. `characters` in `Nest 1` will not be immutable while `characters` in `Nest 2` will be. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 965880,
+              "key": "ee2a6eff-349f-4f52-8bce-b7b7b9350c24",
+              "title": "Concept Summary & Further Research",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Summary\nImmutable makes it possible for us to write even better Functional code - or just better code in general - without being a big task to learn, which makes it a big win to me. If you want to look further into the how’s and the why's of Persistent Data Structures and ImmutableJS, a great place to start is their well-written documentation. https://immutable-js.github.io/immutable-js/\r\rOther resources:\r[Data Structures](https://www.youtube.com/watch?v=Wo0qiGPSV-s)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 970069,
+              "key": "3f59dbb0-9dd7-44ba-b655-b48d2d504ea6",
+              "title": "Exercise Instructions",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Exercise Instructions\nNext, you will practice implementing ImmutableJS. If you need a reminder on the instructions head over to *Introduction to Functional Programming* exercises to get a reminder on those instructions.\n\n### Local Machine\rThis next exercise can be found in `.../exercises/further_with_functional_js/implement_immutablejs.js`.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 970070,
+          "key": "4627246d-4c46-4c82-8763-a2f7abddef3d",
+          "title": "Exercise: Implementing ImmutableJS",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4627246d-4c46-4c82-8763-a2f7abddef3d",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 970081,
+              "key": "b2588292-c2c2-4bbb-8e0b-ec92dd58fd02",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "r950324c970070xGENERICxmfy67wv",
+              "pool_id": "webterminal",
+              "view_id": "generic-5aksi",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "port": 3000,
+                    "ports": [],
+                    "userCode": "node -v",
+                    "openFiles": [
+                      "/home/workspace/implement_immutablejs.js"
+                    ],
+                    "showFiles": false,
+                    "allowClose": false,
+                    "showEditor": true,
+                    "allowSubmit": false,
+                    "terminalTitle": "BASH",
+                    "openTerminalOnStartup": true
+                  },
+                  "kind": "generic"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 970079,
+          "key": "2876a352-2444-4b56-930b-5de3a4563c08",
+          "title": "Implementing ImmutableJS Review",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2876a352-2444-4b56-930b-5de3a4563c08",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 970066,
+              "key": "157e2f5c-b00f-4184-a16c-687a812e9b36",
+              "title": "Exercise Solution",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Exercise Solution - Implementing ImmutableJS\n``` javascript\nlet store = Immutable.Map({ \n    user: Immutable.Map({ \n        firstName: 'John', \n        lastName: 'Doe' \n    }), \n})\n\nfunction updateStore(state, newState) {\n    store = state.merge(newState)\n    render(root, store)\n}\n\nupdateStore(store, newState)\nconsole.log(store.getIn(['user', 'name']))\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 965880,
+              "key": "ee2a6eff-349f-4f52-8bce-b7b7b9350c24",
+              "title": "Concept Summary & Further Research",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Summary\nImmutable makes it possible for us to write even better Functional code - or just better code in general - without being a big task to learn, which makes it a big win to me. If you want to look further into the how’s and the why's of Persistent Data Structures and ImmutableJS, a great place to start is their well-written documentation. https://immutable-js.github.io/immutable-js/\r\rOther resources:\r[Data Structures](https://www.youtube.com/watch?v=Wo0qiGPSV-s)",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 965895,
+          "key": "0598c3bd-2afe-4191-98aa-c814cf5e60f2",
+          "title": "RxJS and Ramda",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0598c3bd-2afe-4191-98aa-c814cf5e60f2",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 965861,
+              "key": "388d7a4e-2383-4206-9700-87186eb32fb4",
+              "title": "Functional Libraries",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Introduction\nTwo more functional libraries we will take a quick look at are RxJS and Ramda. Each can help you write Functional code more efficiently, or keep you honest about not bending Functional rules. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 965873,
+              "key": "0ebf7c6b-c7ce-4998-ac8c-9a709784c695",
+              "title": "ND032 C02 L04 A03 RxJs V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "g5D8bJmQFxU",
+                "china_cdn_id": "g5D8bJmQFxU.mp4"
+              }
+            },
+            {
+              "id": 970072,
+              "key": "dd228585-cd31-499c-9a87-942c7e780a2a",
+              "title": "Code Review",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Code Review\n\n``` javascript\n// A function runs once and returns one set of information\n// An observable is like a function that runs for a period of time and can return many sets of information - a stream of information\n\n// An observable returns a stream of information\n// An observer (here, observable.subscribe) is how we ‘listen’ or subscribe to data being returned by an observable.\n\nconst observable = new Rx.Observable(subscriber => {\n  subscriber.next(1);\n  subscriber.next(2); // \"return\" another value\n  subscriber.next(3); // \"return\" another value\n  setTimeout(() => {\n    subscriber.next(4);\n    subscriber.complete();\n  }, 1000);\n});\n \nconsole.log('just before subscribe');\n\nobservable.subscribe({\n  next(x) { console.log('got value ' + x); },\n  error(err) { console.error('something wrong occurred: ' + err); },\n  complete() { console.log('done'); }\n});\n\nconsole.log('just after subscribe');\n\n// the word 'next' is a special RxJS observable word that allows the observable to \"return\" multiple things over a period of time\n\n\n// There are three types of values an Observable Execution can deliver:\n\n// \"Next\" notification: sends a value such as a Number, a String, an Object, etc.\n// \"Error\" notification: sends a JavaScript Error or exception.\n// \"Complete\" notification: does not send a value.\n\n// \"Next\" notifications are the most important and most common type: they represent actual data being delivered to a subscriber. \n// \"Error\" and \"Complete\" notifications may happen only once during the Observable Execution, and there can only be either one of them.\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 965866,
+              "key": "c945d211-563a-4f35-ac18-2f229cc360de",
+              "title": "[Optional] Implement RxJs",
+              "semantic_type": "TaskListAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "c945d211-563a-4f35-ac18-2f229cc360de",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "tasks": [
+                "Take a quick read through the [overview](https://rxjs-dev.firebaseapp.com/guide/overview) to see how RxJS could be used to clean up some of our DOM manipulations from the last lesson.",
+                "Probably the best resource, if you want to start the journey to mastering RxJS, is this very well put together [primer](https://www.learnrxjs.io/concepts/rxjs-primer.html)."
+              ],
+              "positive_feedback": "Way to go! RxJS is another world of opportunity that might become very popular in the next few years, good job getting ahead!",
+              "video_feedback": null,
+              "description": "To take some next steps to learning RxJS, take a look at the following resources:"
+            },
+            {
+              "id": 965884,
+              "key": "3f851b3f-6fab-41e6-b49a-f862f64cbb4a",
+              "title": "Ramda",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Ramda\nRamda is a library of functions that help JavaScript developers write better Functional code. Where RxJS is a whole new way to think about and interact with data streams and events, Ramda’s goal is to do an excellent job of providing JavaScript developers with truly Functional tools, and a lot of developers think they have done a really good job at that. \n\nSome cool things about Ramda:\n- Each function is self-contained, pure, side effect free, and does not mutate anything\n- Each function is written in JavaScript, so with the amount of JavaScript you know now, you can go to the source code and be able to understand how they built their function \n\nSome cool functions in Ramda:\n- If you felt robbed when you learned that push, pop, etc. weren’t allowed in Functional programming - Ramda gives them back to you! Their array Update, Tail, Take, and TakeLast are all great options.\n- Ramda even takes it one step further and allows you to leave specific values out of an array using the function [Without](https://ramdajs.com/docs/#without)\n- Remember how we struggled with Object.assign not being functional? Well with Ramda’s [Merge](https://ramdajs.com/docs/#merge) function - it can be. Merge does exactly the same as Object.assign, except it returns a new object. \n- Ramda [Pluck](https://ramdajs.com/docs/#pluck) is another great example. Knowing that developers often work with long arrays of objects, Pluck allows you to choose one property those objects share and will return a new array of just those values. \n\nIn the edge cases where you really want a functional method, but the pure JavaScript doesn’t support it, Ramda will be a great resource. So if you end up writing more Functional code, keep Ramda in mind as a great option for adding more Functional utility without changing your workflow.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 965878,
+              "key": "326fc9c8-1400-47b2-b737-955b18179ada",
+              "title": "[Optional] Implement Ramda",
+              "semantic_type": "TaskListAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "326fc9c8-1400-47b2-b737-955b18179ada",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "tasks": [
+                "Ramda [Append](https://ramdajs.com/docs/#append) could be a good one to look at first. It works like JS `concat()`.",
+                "Look at two other Ramda functions."
+              ],
+              "positive_feedback": "Great job! Even if you don’t add the library to your code, Ramda is a fantastic resource if you need to see a solid Functional approach to solving a problem in JavaScript.",
+              "video_feedback": null,
+              "description": "Now it's your turn, take a look at the Ramda docs and read about a few of their functions."
+            },
+            {
+              "id": 965863,
+              "key": "8ff10b14-c28f-4358-a74a-cb572fe415e5",
+              "title": "Functional Libraries Problem Set",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "8ff10b14-c28f-4358-a74a-cb572fe415e5",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Which library would you choose for working with a highly interactive program using web sockets?",
+                "answers": [
+                  {
+                    "id": "rbk1",
+                    "text": "ImmutableJS",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk2",
+                    "text": "RxJS",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "rbk3",
+                    "text": "RamdaJS",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk4",
+                    "text": "All of these",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk5",
+                    "text": "None of these",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 970083,
+              "key": "dac798cb-b1ce-4c36-9839-412493728389",
+              "title": "Functional Libraries",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "dac798cb-b1ce-4c36-9839-412493728389",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "Match the JS libraries to the statement or code block about them that are true."
+                },
+                "concepts_label": "Statement or Code",
+                "answers_label": "JS Library",
+                "concepts": [
+                  {
+                    "text": "Provides stronger data structures to Javascript programs, without caring if they are functional or not.",
+                    "correct_answer": {
+                      "id": "a1581360084513",
+                      "text": "Immutable"
+                    }
+                  },
+                  {
+                    "text": "Provides a comprehensive toolset of Functional methods for conventional Javascript programs",
+                    "correct_answer": {
+                      "id": "a1581360117731",
+                      "text": "Ramda"
+                    }
+                  },
+                  {
+                    "text": "Is a whole new approach to data streams that combines Functional concepts with other programming ideas",
+                    "correct_answer": {
+                      "id": "a1581360118490",
+                      "text": "RxJs"
+                    }
+                  },
+                  {
+                    "text": "``` javascript\nconst map1 = Map({ a: 1, b: 2, c: 3 });\n```",
+                    "correct_answer": {
+                      "id": "a1581360119258",
+                      "text": "Immutable"
+                    }
+                  },
+                  {
+                    "text": "``` javascript\nvar getAges = R.pluck('age');\n```",
+                    "correct_answer": {
+                      "id": "a1581360119996",
+                      "text": "Ramda"
+                    }
+                  },
+                  {
+                    "text": "``` javascript\nobservable.subscribe({\n    next(x) { console.log(x); },\n    error(err) { console.error(err);},\n    complete() { console.log('done');}\n});\n```",
+                    "correct_answer": {
+                      "id": "a1581360120714",
+                      "text": "RxJs"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1581360119258",
+                    "text": "Immutable"
+                  },
+                  {
+                    "id": "a1581360117731",
+                    "text": "Ramda"
+                  },
+                  {
+                    "id": "a1581360118490",
+                    "text": "RxJs"
+                  },
+                  {
+                    "id": "a1581360120714",
+                    "text": "RxJs"
+                  },
+                  {
+                    "id": "a1581360084513",
+                    "text": "Immutable"
+                  },
+                  {
+                    "id": "a1581360232752",
+                    "text": "Ramda"
+                  },
+                  {
+                    "id": "a1581360208461",
+                    "text": "Immutable"
+                  },
+                  {
+                    "id": "a1581360119996",
+                    "text": "Ramda"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 965883,
+              "key": "e471900e-dec9-4695-8983-3fb240120253",
+              "title": "Functional Libraries Problem Set",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "e471900e-dec9-4695-8983-3fb240120253",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "ImmutableJS only works if you use Immutable maps and lists instead of Javascript objects and arrays.",
+                "answers": [
+                  {
+                    "id": "rbk1",
+                    "text": "True",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk2",
+                    "text": "False",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 965885,
+              "key": "463da31a-2caa-4e9e-90b8-bfd81b081962",
+              "title": "Concept Summary & Further Research",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Summary\n\nI hope that at least one of these libraries has piqued your interest to go and learn beyond this course. All three are fantastic tools for expanding your Functional Javascript capabilities.\n\n- [RxJS](https://rxjs-dev.firebaseapp.com/)\n- [Ramda](https://ramdajs.com/)\n- [ImmutableJS](https://immutable-js.github.io/immutable-js/)\n\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 965888,
+          "key": "dc02eed5-6db0-40f1-a7c8-ad92605108d0",
+          "title": "Functional Redux",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "dc02eed5-6db0-40f1-a7c8-ad92605108d0",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 965869,
+              "key": "06f70082-e62e-4b1a-819f-e8f4cc9301e1",
+              "title": "ND032 C02 L04 A04 Redux Is Functional",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "PzvNL9iWCOk",
+                "china_cdn_id": "PzvNL9iWCOk.mp4"
+              }
+            },
+            {
+              "id": 970071,
+              "key": "3d99cb76-c239-4f89-8bf1-184b3e2cb65e",
+              "title": "Reducer Analogy",
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "69",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3d99cb76-c239-4f89-8bf1-184b3e2cb65e",
+              "caption": "The actions of the reducer can be compared to a teller at a bank. As a bank patron (event) you want the teller to do something to your account such as withdraw, deposit, or create an account (actions) and the teller (reducer) is able to make changes to the vault (store) where your money (data) is stored. ",
+              "alt": "Reducer Analogy",
+              "width": 787,
+              "height": 512,
+              "instructor_notes": null
+            },
+            {
+              "id": 965855,
+              "key": "6657f960-a181-482c-aa1f-cd61bd26f728",
+              "title": "Pure functions in Redux",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Pure Functions in Redux\nRedux is a library typically imported into larger applications to manage and represent state in your application with a single Javascript object. Redux uses pure functions called Reducers to enact updates on the state object which is represented by the immutable store object. This is straight from their documentation:\r\r> “Reducers are just pure functions that take the previous state and an action, and return the next state.”\n\nOftentimes, reducers are written as functions that contain case statements. Take a look at this example reducer from their docs:\n\n``` javascript\nimport { createStore, combineReducers } from 'redux'\nconst SET_NAME = 'SET_NAME'\nconst SET_AGE = 'SET_AGE'\nfunction user(state = initialUserState, action) {\n   switch (action.type) {\n       case SET_NAME: {\n           return {\n               ...state,\n               name: action.name,\n           }\n       }\n       case SET_AGE: {\n           return {\n               ...state,\n               age: action.age,\n           }\n       }\n   }\n}\nconst ADD_TODO = 'ADD_TODO'\nconst COMPLETE_TODO = 'COMPLETE_TODO'\nconst initialState = {\n   todos: []\n}\nfunction todos(state = initialState, action) {\n switch (action.type) {\n   case ADD_TODO: {\n       const { todos } = state\n       return {\n           ...state,\n           todos: [...todos, action.todo],\n       }\n   }\n   case COMPLETE_TODO: {\n       const { todos } = state\n       const index = todos.find(todo => todo.id == action.id)\n       toods[index].comleted = true\n       return {\n           ...state,\n           todos,\n       }\n   }\n   default:\n     return state\n }\n}\nconst reducers = combineReducers({\n   todos,\n   user,\n})\nconst store = createStore(reducers)\n```\n\nThe ellipses before state is called “spreading” the object, which means to return the original value for state, except where it is different from the portion of state that was updated, in this case `text` and `completed`. Redux is a great example of how you can accomplish a lot by making good use of simple concepts.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 965875,
+              "key": "5f372b4b-c362-4477-b4dc-a41a27ce8b09",
+              "title": "Functional Highlights of Redux",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Functional Highlights of Redux\r\nRedux is a big topic and this is not a Redux tutorial. What is important to this course is that Redux has found great success among developers because it uses Functional programming practices and is a great example of these power concepts being used in the real world. \n\rHere are the Functional highlights of the Redux library:\n- A read-only -- or immutable -- state. Reducers don’t update state; they return a brand new object.\n- Pure Function reducers to handle Actions. This means that no actions in our entire app can be affected by Side Effects. This is a huge reason Redux is so effective.\n- This careful Functional flow of data from event to store means that the same action, if called twice, will have the same effect on the whole application.\n\n## Further Research\n- Redux online tutorial [book](https://redux.js.org/introduction/getting-started)\n- If you are interested in learning how to use React more in depth, you can take the Udacity [React Nanodegree](https://www.udacity.com/course/react-nanodegree--nd019), specifically the React & Redux Course.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 965854,
+              "key": "2dae41e8-97c0-4381-834a-377e5ac0679a",
+              "title": "Object methods questions",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "2dae41e8-97c0-4381-834a-377e5ac0679a",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Which of the following are objects in Redux?",
+                "answers": [
+                  {
+                    "id": "rbk1",
+                    "text": "Reducers",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk2",
+                    "text": "Events",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk3",
+                    "text": "Actions",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "rbk4",
+                    "text": "The Store",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 970073,
+              "key": "e88585e3-6f57-4325-b0dc-bab17bed4d28",
+              "title": "Exercise Instructions",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Exercise Instructions\nNext, you will create practice using Redux to write an app. If you need a reminder on the instructions head over to *Introduction to Functional Programming* exercises to get a reminder on those instructions.\n\n### Local Machine\rThis next exercise can be found in `.../exercises/further_with_functional_js/reducer.js`.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 970074,
+          "key": "b0fbdcea-41b9-4123-be90-e6817c61fbf1",
+          "title": "Exercise: Build Your Own Reducer",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b0fbdcea-41b9-4123-be90-e6817c61fbf1",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 970082,
+              "key": "16d1542a-e5bc-434c-893e-2c150b238af8",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "r950324c970074xGENERICy4lslmqu",
+              "pool_id": "webterminal",
+              "view_id": "generic-tu5ka",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "port": 3000,
+                    "ports": [],
+                    "userCode": "node -v",
+                    "openFiles": [
+                      "/home/workspace/reducer.js"
+                    ],
+                    "showFiles": false,
+                    "allowClose": false,
+                    "showEditor": true,
+                    "allowSubmit": false,
+                    "terminalTitle": "BASH",
+                    "openTerminalOnStartup": true
+                  },
+                  "kind": "generic"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 970077,
+          "key": "78791595-f1d5-41a2-946a-27c4c9d14877",
+          "title": "Functional Redux Review",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "78791595-f1d5-41a2-946a-27c4c9d14877",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 970076,
+              "key": "45516730-c769-4527-9d03-3b9bcf6bdca2",
+              "title": "Exercise Solution",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Exercise Solution - Reducer\n``` javascript\nimport { DAMAGE_SHIELD, REPAIR_SHIELD } from './actions'\n\nconst initialState = {\n\tshieldLevel: 100,\n}\n\nconst shieldsReducer = (state = initialState, action) => {\n    switch (action.type) {\n        case DAMAGE_SHIELD:\n            const { amount } = action\n            let { shieldLevel } = state\n\n            shieldLevel -= amount\n\n            return {\n                ...state,\n                shieldLevel,\n            }\n\n        case REPAIR_SHIELD:\n            const { amount } = action\n            let { shieldLevel } = state\n\n            shieldLevel += amount\n\n            return {\n                ...state,\n                shieldLevel,\n            }\n    }\n}\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 965862,
+              "key": "a3bb95cb-d778-4aba-adbe-aa77c61dd623",
+              "title": "Redux Summary & Further Research",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Summary\nRedux is a great tool but does require a bit of setup to use with React or other libraries. I hope this was a good taste of what it looks like and I hope you get to use it in the future! Like RxJS, Redux also has a [great primer](https://redux.js.org/introduction/learning-resources/) that I highly recommend you check out if you’re interested in learning more.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 965894,
+          "key": "4d8b3c3b-3ea3-4611-a146-bf1a2aaa66a3",
+          "title": "Lesson Recap",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4d8b3c3b-3ea3-4611-a146-bf1a2aaa66a3",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 965887,
+              "key": "1777de57-8b37-47d1-b85d-066e48227653",
+              "title": "ND032 C02 L04 A05 Lesson Recap Going Further With Functional JS",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "FWb6yQ7ErGY",
+                "china_cdn_id": "FWb6yQ7ErGY.mp4"
+              }
+            },
+            {
+              "id": 965864,
+              "key": "492342d5-5c03-4a7c-ae02-5f08776cfaa5",
+              "title": "Summary",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Lesson Overview\n\nImmutable, Ramda, RxJS, and Redux, all of these are valuable Functional tools that you might come across in a job and which will help you greatly as you build web apps that are capable of dealing with complex logic. This lesson was to give you a lay of the land as to the options for Functional programming in Javascript, and I hope the resources will serve you well if you choose to tackle any in more depth. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 965870,
+              "key": "ba662263-7189-4b86-9c6b-100362b02c36",
+              "title": "Resources",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Further Research\n- [An in-depth resource for Persistent Data Structures](http://www.cs.tau.ac.il/~haimk/papers/persistent-survey.ps) (downloads a PDF textbook)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 965877,
+              "key": "9e08d1b6-0e86-4f12-9504-c5879cd52dc3",
+              "title": "Glossary",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Glossary\n**Persistent Data Structures** - data structures that store all versions of a variable and allow you to go back and edit previous versions <br>\n**Partially Persistent Data Structures** - data structures that store all versions of a variable, but only allow you to view previous versions",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 965889,
+          "key": "a6c0dd91-feb1-4e22-9a55-24735933f696",
+          "title": "Course Recap",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a6c0dd91-feb1-4e22-9a55-24735933f696",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 965859,
+              "key": "690afd0f-8f53-457f-b6a1-56fbb6740153",
+              "title": "ND032 C02 L04 A06 Course Recap Functional Programming With JS",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "gyGlGaPqS_Q",
+                "china_cdn_id": "gyGlGaPqS_Q.mp4"
+              }
+            },
+            {
+              "id": 965850,
+              "key": "a04d4247-8ded-4024-955c-49dbfadbba35",
+              "title": "Summary",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Course Recap\n\nAs part of the Intermediate Javascript Nanodegree program, my hope for this course is that it has challenged your skills on two fronts - your knowledge and comfort with advanced syntax, and your ability to judge and design advanced programs. Both of these together are required for you to advance to a mid and senior-level developer. \r\rThe sections on ES6 syntax, Higher-Order Functions, and data manipulations and associated challenges were designed to challenge your ability to wield advanced and modern syntax to accomplish your goals. \r\rThe section on paradigms and the introduction to Lambda Calculus were intended to challenge how you think about your programs. Growing your ability to reason about, critique, and make decisions about the overall design of your programs is vital to advancing as a developer -- it is equally as important as mastering syntax. \r\rI sincerely hope that this course has been able to challenge you in both of these areas! Thank you so much for joining me and I wish you the best of luck in the project and the next course!",
+              "instructor_notes": ""
+            },
+            {
+              "id": 965872,
+              "key": "73b3f695-dbb9-4037-8726-9aaf7da14017",
+              "title": "Course Resources",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Further Research\n- [An in-depth resource for Persistent Data Structures](http://www.cs.tau.ac.il/~haimk/papers/persistent-survey.ps)\n- [RxJS](https://rxjs-dev.firebaseapp.com/)\n- [Ramda](https://ramdajs.com/)\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 965858,
+              "key": "c4bf7bbd-b64f-48f8-8b2c-7a487d45865a",
+              "title": "Baseline Questions Reprise",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Baseline Questions Reprise\nAt the beginning of this course, you were asked some baseline questions; here you will be asked the same questions. Once you have completed the below questions, you could go back to the end of the **Course Introduction - Functional Programming** Lesson and see how far you have come!",
+              "instructor_notes": ""
+            },
+            {
+              "id": 1044089,
+              "key": "071cc8c6-1cab-460d-9135-695359eae9be",
+              "title": "End of Course, Understanding of functional Programming",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "071cc8c6-1cab-460d-9135-695359eae9be",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "At the end of the course, how would you rate your understanding of Functional Programming?",
+                "answers": [
+                  {
+                    "id": "rbk1",
+                    "text": "Heard of it.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "rbk2",
+                    "text": "Never Heard of it.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk3",
+                    "text": "Very comfortable.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 1044090,
+              "key": "12b50213-da6a-4aa1-8f95-f054eb6b564e",
+              "title": "End of Course, Understanding of ES6 JavaScript",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "12b50213-da6a-4aa1-8f95-f054eb6b564e",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "At the end of this course, how would you rate your understanding of ES6 JavaScript?",
+                "answers": [
+                  {
+                    "id": "rbk1",
+                    "text": "Never heard of it",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "rbk2",
+                    "text": "Heard of it but don't use it.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk3",
+                    "text": "Use it a little.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk4",
+                    "text": "Use it all the time.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 965886,
+              "key": "1c6b5c43-9487-470b-a6ed-e481949fb6a1",
+              "title": "What is functional programming? Explain as best you can",
+              "semantic_type": "ReflectAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "1c6b5c43-9487-470b-a6ed-e481949fb6a1",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "title": "What is functional programming? Explain as best you can",
+                "semantic_type": "TextQuestion",
+                "evaluation_id": null,
+                "text": "What is functional programming?"
+              },
+              "answer": {
+                "text": "Thanks for your response.",
+                "video": null
+              }
+            },
+            {
+              "id": 965867,
+              "key": "dd3dbeed-44d7-4a35-a45a-bd9c512cad25",
+              "title": "How would you explain a programming paradigm to a developer friend?",
+              "semantic_type": "ReflectAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "dd3dbeed-44d7-4a35-a45a-bd9c512cad25",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "title": "How would you explain a programming paradigm to a developer friend?",
+                "semantic_type": "TextQuestion",
+                "evaluation_id": null,
+                "text": "How would you explain a programming paradigm to a developer friend?"
+              },
+              "answer": {
+                "text": "Thanks for your response.",
+                "video": null
+              }
+            },
+            {
+              "id": 965851,
+              "key": "b4a050e0-df50-4801-8d7a-9ef5ea60f8aa",
+              "title": "Closing",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Next Steps\nYou are now ready to tackle the project! In the project, you will be using all of these skills to create a functional web dashboard for the NASA Mars Rovers. Let's get started! ",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "starter_files",
+      "reason": "prefer master_archive_id"
+    },
+    {
+      "name": "starter_files",
+      "reason": "prefer master_archive_id"
+    },
+    {
+      "name": "starter_files",
+      "reason": "prefer master_archive_id"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "starter_files",
+      "reason": "prefer master_archive_id"
+    }
+  ]
+}

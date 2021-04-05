@@ -1,0 +1,517 @@
+{
+  "data": {
+    "lesson": {
+      "id": 960296,
+      "key": "432a93a3-1fba-4e51-bff2-14a3a4541499",
+      "title": "Course Introduction - Functional Programming",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Introduction to the course on Functional Programming with JavaScript",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/432a93a3-1fba-4e51-bff2-14a3a4541499/960296/1594154485906/Course+Introduction+-+Functional+Programming+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/432a93a3-1fba-4e51-bff2-14a3a4541499/960296/1594154483493/Course+Introduction+-+Functional+Programming+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 960292,
+          "key": "48204298-20fe-4f8f-a9d7-1a6cb1a6a956",
+          "title": "Introduction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "48204298-20fe-4f8f-a9d7-1a6cb1a6a956",
+            "completed_at": "2021-04-05T02:02:42.958Z",
+            "last_viewed_at": "2021-04-05T02:02:42.178Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 960274,
+              "key": "02ade123-e90e-408a-b4bf-0159de975de8",
+              "title": "ND032 C02 L00 A01t2 Instructor Introduction",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "2Vb3fOI1Wag",
+                "china_cdn_id": "2Vb3fOI1Wag.mp4"
+              }
+            },
+            {
+              "id": 960283,
+              "key": "ab984eb8-46b8-415a-a8cb-8aeb2466aa39",
+              "title": "My teaching style",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## About My Teaching\nWelcome! My primary goal is to give clear and applicable knowledge of the concepts we are going to cover. Functional Programming (FP) is heavy on theory, so if that’s your jam, then you’ll be right at home, but if it's not - not to worry - I will try to break up the theory sections with videos, external readings, and concise text blocks. \n\nThis is also an intermediate Javascript course, so there will be a ton of exercises. The exercises were carefully designed to emulate real-life situations that I come across in my job so that you can take this practice and apply it straight to the code you do every day.\n\nAnother skill I try to incorporate into every lesson is reading documentation. It might sound boring, but I guarantee that it is one of the most valuable skills to have as a developer. Throughout the course, I will send you to different documentation sources so that they can become part of your resource arsenal long after you’ve completed this course. ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 960293,
+          "key": "742ad913-d13b-46f4-8c74-4496893812a6",
+          "title": "FP Basics",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "742ad913-d13b-46f4-8c74-4496893812a6",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 960287,
+              "key": "c3f0846a-a169-4672-8386-3873370df53f",
+              "title": "ND032 C02 L00 A02 What Is Functional Programming",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "ACxKcgtxszM",
+                "china_cdn_id": "ACxKcgtxszM.mp4"
+              }
+            },
+            {
+              "id": 960282,
+              "key": "6b0ef145-65f0-44fb-bdd8-4bdf1bd49fb7",
+              "title": "Why do I need to understand functional programming?",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Why Do I Need to Understand FP?\n1. First and probably most importantly, having a solid understanding of another programming paradigm will help you **write better code** - even if you never end up using a functional language or framework in your job. \n2. It is on the rise, **more languages are choosing at least functional-inspired styles**, and understanding where these ideas are coming from will help you learn them faster\n3. It will make **learning React less mysterious**. React and Redux both heavily ascribe to functional principles.\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 960295,
+          "key": "9d85a670-9b6e-437c-b4de-53883197c4ea",
+          "title": "FP History",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9d85a670-9b6e-437c-b4de-53883197c4ea",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 960275,
+              "key": "62a17406-66d3-4cd9-b1c6-63bae884b37c",
+              "title": "ND032 C02 L00 A03 History Of Functional Programming",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "NjEojr2U89s",
+                "china_cdn_id": "NjEojr2U89s.mp4"
+              }
+            },
+            {
+              "id": 960284,
+              "key": "ecd46331-977d-4c3d-bf6f-43281b87bf97",
+              "title": "Timeline",
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2020/March/5e7c5c8b_l0-6-timeline-v2/l0-6-timeline-v2.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/ecd46331-977d-4c3d-bf6f-43281b87bf97",
+              "caption": "Timeline showing the events tying Lambda Calculus to Functional Programming",
+              "alt": "Functional Programming Timeline",
+              "width": 612,
+              "height": 266,
+              "instructor_notes": null
+            },
+            {
+              "id": 960280,
+              "key": "832d3ccd-13a1-4229-b5f9-3bdf38b1be66",
+              "title": "Review",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "832d3ccd-13a1-4229-b5f9-3bdf38b1be66",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Which of the following are true of Lambda Calculus?",
+                "answers": [
+                  {
+                    "id": "rbk1",
+                    "text": "Formally stated in 1934 by Alonzo Church.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "rbk2",
+                    "text": "Computer Programmers immediately saw the benefits of using Lambda ideas in their languages.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk3",
+                    "text": "Lambda the symbol was chosen because it was the first letter of the Greek word “unchanging”.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "rbk4",
+                    "text": "In lambda calculus, all work that happens in a program, happens inside a function.",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 1008643,
+              "key": "f3ed17a3-f097-458e-9dfb-16dc54a2508d",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "f3ed17a3-f097-458e-9dfb-16dc54a2508d",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "Below are some concepts from Lambda Calculus, broken in half. Match them to their correct ending."
+                },
+                "concepts_label": "Part 1",
+                "answers_label": "Part 2",
+                "concepts": [
+                  {
+                    "text": "Variable values cannot be edited, but...",
+                    "correct_answer": {
+                      "id": "a1585208561864",
+                      "text": "...functions can return new values."
+                    }
+                  },
+                  {
+                    "text": "Programs can be expressed completely with... ",
+                    "correct_answer": {
+                      "id": "a1585208584487",
+                      "text": "...chains of functions and inputs."
+                    }
+                  },
+                  {
+                    "text": "Functions...",
+                    "correct_answer": {
+                      "id": "a1585208585898",
+                      "text": "...have no effect except the values they return."
+                    }
+                  },
+                  {
+                    "text": "Dr. Church described programs as assembly lines of functions that...",
+                    "correct_answer": {
+                      "id": "a1585208587306",
+                      "text": "...are like black boxes, you cannot see the logic inside."
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1585208584487",
+                    "text": "...chains of functions and inputs."
+                  },
+                  {
+                    "id": "a1585208561864",
+                    "text": "...functions can return new values."
+                  },
+                  {
+                    "id": "a1585208587306",
+                    "text": "...are like black boxes, you cannot see the logic inside."
+                  },
+                  {
+                    "id": "a1585208585898",
+                    "text": "...have no effect except the values they return."
+                  }
+                ]
+              }
+            },
+            {
+              "id": 960273,
+              "key": "d63a0be7-13ee-4c53-b520-10c6007f650c",
+              "title": "Lambda Calculus Diagram",
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2020/January/5e0e3a84_l0-9-lambdacalculus/l0-9-lambdacalculus.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/d63a0be7-13ee-4c53-b520-10c6007f650c",
+              "caption": "A basic representation of Lambda Calculus ",
+              "alt": "Lambda Calculus representation",
+              "width": 960,
+              "height": 540,
+              "instructor_notes": null
+            },
+            {
+              "id": 960279,
+              "key": "53dafafa-f6c9-4de8-9a68-0508cbe8f750",
+              "title": "Concept Summary & Further Research",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "You just learned about Lambda Calculus and how that contributed to developing the concept of FP.\n\nIf you want to learn more about Lambda Calculus, you can take a look at [this YouTube video](https://www.youtube.com/watch?v=eis11j_iGMs) from Computerphile on this topic.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 960294,
+          "key": "04c75b28-8866-4d4a-beef-52508be68087",
+          "title": "Course Overview & Tools",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "04c75b28-8866-4d4a-beef-52508be68087",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 960289,
+              "key": "bf76a222-7304-4c15-976e-5cd5c5169196",
+              "title": "Course Overview",
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2020/January/5e0e3a85_l0-11-courseoverview/l0-11-courseoverview.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/bf76a222-7304-4c15-976e-5cd5c5169196",
+              "caption": "In this course we will start with an overview of Lambda Calculus and how ideas from it came to form the Functional Programming paradigm. In the next lesson we will go over specifics of the Functional paradigm, and the last lessons will all be on implementing the Functional paradigm in Javascript.",
+              "alt": "Course Overview Diagram",
+              "width": 612,
+              "height": 201,
+              "instructor_notes": null
+            },
+            {
+              "id": 960286,
+              "key": "0f632ac5-854f-427e-9e03-02d499561384",
+              "title": "Course Overview",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Course Overview\n- **Lesson 1: Course Introduction** <br> The lesson you are currently going through introduces the Functional Programming in JavaScript to prepare you for the rest of this course.\n\n- **Lesson 2: Understanding Functional Programming**<br>This lesson will be slightly more theory-heavy, going in the details of paradigms and Lambda Calculus to develop a core understanding that will help the rest of the course content hold together. \n\n- **Lesson 3: Functional JS Syntax** <br>Javascript gives us many tools to write in a functional way, but they might not be all the ways you are used to. This will also give a good tour of ES6 syntax that will come in handy in any Javascript you write and help you study up for potential interview questions. \n\n- **Lesson 4: Building a Functional Program with JS** <br>This lesson will take all the syntax practiced in lesson 2 and teach you to combine them into powerful, Functional programs. This lesson will also give you clarity into how React works behind the scenes. \n\n- **Lesson 5: Libraries and Other Functional Tools for JS** <br>The final lesson is all about going further with Functional Programming and the tools you are likely to come across. It will pay special attention to showing how Functional Programming concepts we learned in lesson 1 are being used to solve traditional problems in web development. \n\n- **Project: NASA Mars Rover Dashboard** <br>Using the Functional Programming tools learned in the course, you will build a web page that consumes the NASA API to display information about the various Mars rovers.   \n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 960276,
+              "key": "f9044fa6-d891-4bd6-893a-4978ac9ed74f",
+              "title": "What are the relevant tools that students will use?",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Tools\n\nThe nice thing about working with Functional JS is that we need very few tools! Just pull up your text editor of choice and you’ll be able to follow along. I will use <a href=\"https://repl.it/\" target=\"_blank\">repl.it</a> for early code walkthroughs but as we progress to more complex programs, I will switch over to using the Visual Studio (VS) Code text editor. If you want to install VS Code yourself you can go <a href=\"https://code.visualstudio.com/docs/setup/setup-overview\" target=\"_blank\">here</a> and follow the instructions for your OS.\n\nOne thing to remember, browsers **don’t** support all the ES6 syntax, so if you are used to testing your JavaScript by pulling up Inspect Element and throwing code in the console - that won’t work here. Instead, you’ll have to run a `.js` file through Node in your terminal or find an online ES6 sandbox. \n\n## Local Machine\n\nThe command to clone the entire exercises repo will be as follows:\n\n```\n$ git clone -b exercises https://github.com/udacity/nd032-c2-functional-programming-with-javascript-starter.git\n```\n\nThe general organization of the repo is that each lesson has its own folder and programs are named according to the subject matter. For example, the first exercise is located in **Exercise: Compare Paradigms** Concept and the corresponding exercise will be found here:  \n\n```\n.../exercises/intro_to_fp/compare_paradigms.js\n```\n\n**Note**: Spend some time to set up your environment now, this will make going through the rest of the lessons much easier.\n\n## Workspaces\n\nAnother option will be working through the workspaces embedded in the classroom. These are already setup environments with the relevant code for the particular exercise.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 960291,
+          "key": "f84bd5ec-0262-4a0e-bf54-737ea37b865e",
+          "title": "Baseline Questions",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f84bd5ec-0262-4a0e-bf54-737ea37b865e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 1043508,
+              "key": "f4ff958c-077d-428c-932b-e5093b95e45d",
+              "title": "At Start - Rate Understanding of Functional Programming",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "f4ff958c-077d-428c-932b-e5093b95e45d",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "At the start of this course, how would you rate your understanding of Functional Programming (FP)?",
+                "answers": [
+                  {
+                    "id": "a1593926094344",
+                    "text": "Heard of it.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1593926161711",
+                    "text": "Never heard of it.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1593926162441",
+                    "text": "Very comfortable",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 1043509,
+              "key": "f2e49581-a0c2-4f2e-9684-0bd568f0102c",
+              "title": "At Start - Rate Understanding of ES6 JavaScript",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "f2e49581-a0c2-4f2e-9684-0bd568f0102c",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "At the start of this course, how would you rate your understanding of ES6 JavaScript?",
+                "answers": [
+                  {
+                    "id": "a1593926215057",
+                    "text": "Never heard of it.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1593926259118",
+                    "text": "Heard of it but don't use it. ",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1593926259753",
+                    "text": "Use it a little.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1593926280875",
+                    "text": "Use it all the time. ",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 960277,
+              "key": "4fe7b3e6-7e2a-41e7-aa4d-cf1eaef1ba93",
+              "title": "What is functional programming? Explain as best you can",
+              "semantic_type": "ReflectAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "4fe7b3e6-7e2a-41e7-aa4d-cf1eaef1ba93",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "title": "Explain as best as you can. ",
+                "semantic_type": "TextQuestion",
+                "evaluation_id": null,
+                "text": "What is functional programming? "
+              },
+              "answer": {
+                "text": "Thanks for your response.",
+                "video": null
+              }
+            },
+            {
+              "id": 960288,
+              "key": "80a4032c-bc7e-4f6a-8858-2d28ca95aa50",
+              "title": "How would you explain a programming paradigm to a developer friend?",
+              "semantic_type": "ReflectAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "80a4032c-bc7e-4f6a-8858-2d28ca95aa50",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "title": "Explain as best as you can. ",
+                "semantic_type": "TextQuestion",
+                "evaluation_id": null,
+                "text": "How would you explain a programming paradigm to a developer friend?"
+              },
+              "answer": {
+                "text": "Thanks for your response.",
+                "video": null
+              }
+            }
+          ]
+        },
+        {
+          "id": 960290,
+          "key": "6e5593ee-1f4e-4ebd-922d-057d4fb2e55a",
+          "title": "Intro Recap",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6e5593ee-1f4e-4ebd-922d-057d4fb2e55a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 960281,
+              "key": "a6f047ea-55bd-4afc-8487-6c0f270cac05",
+              "title": "Intro Recap",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Recap\nIn this lesson you have learned about the following!\n- Course introduction\n- Functional Programming Basics\n- History \n- Course Overview\n- Baseline Questions\n\nNext up, we’ll cover programming paradigms and the foundational concepts of Functional programming. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 966175,
+              "key": "bcf62bff-8fc3-4211-80ea-fc1d1b7de45c",
+              "title": "Glossary",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Glossary\n\n- **Functional programming** - a programming paradigm that keeps the processing within functions. **Note**: This will be expanded upon in the following lesson. \n- **Lambda Calculus** - a mathematical idea that any computation - any program - can be expressed as a function or set of functions.",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

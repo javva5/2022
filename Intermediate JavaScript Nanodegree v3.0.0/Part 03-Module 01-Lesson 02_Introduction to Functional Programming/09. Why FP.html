@@ -1,0 +1,282 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Why FP?</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Introduction to Functional Programming</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Programming Paradigms.html">01. Programming Paradigms</a>
+    </li>
+    <li class="">
+      <a href="02. Why Learn Paradigms.html">02. Why Learn Paradigms?</a>
+    </li>
+    <li class="">
+      <a href="03. Comparing Paradigms.html">03. Comparing Paradigms</a>
+    </li>
+    <li class="">
+      <a href="04. Exercise Compare Paradigms.html">04. Exercise: Compare Paradigms</a>
+    </li>
+    <li class="">
+      <a href="05. Paradigms Review.html">05. Paradigms Review</a>
+    </li>
+    <li class="">
+      <a href="06. Foundations of FP.html">06. Foundations of FP</a>
+    </li>
+    <li class="">
+      <a href="07. Exercise Foundation Concepts.html">07. Exercise: Foundation Concepts</a>
+    </li>
+    <li class="">
+      <a href="08. FP &amp; Pure Functions Review.html">08. FP &amp; Pure Functions Review</a>
+    </li>
+    <li class="">
+      <a href="09. Why FP.html">09. Why FP?</a>
+    </li>
+    <li class="">
+      <a href="10. Exercise Basic FP.html">10. Exercise: Basic FP</a>
+    </li>
+    <li class="">
+      <a href="11. Basic FP Review.html">11. Basic FP Review</a>
+    </li>
+    <li class="">
+      <a href="12. Lesson Recap.html">12. Lesson Recap</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">09. Why FP?</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Intro text</p></h3>
+  <div>
+  <h2 id="introduction">Introduction</h2>
+<p>In this section, we’ll build from the core functional concepts we talked about in the previous lesson to determine why developers are turning to functional programming to solve some of the common problems in web development. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Functional Strengths and Benefits</p></h3>
+  <div>
+  <h2 id="functional-pros-and-cons">Functional Pros and Cons</h2>
+<p>It can be difficult to evaluate the pros and cons of a programming paradigm, and it can be hard to keep each paradigm straight. But one key that can really help is to remember that <em>what typically differentiates paradigms is how they deal with application state</em> - or put more simply - how they keep track of stuff (values and entities) and how those things change while the program runs. How does Functional Programming deal with application state? Very carefully. Functional Programming believes that values shouldn’t be sloppily edited, but rather replaced with fresh values every time. It also ensures that state changes in very predictable places -- the return values of functions. You’ll see that a lot of these pros and cons have to do with how state is handled.</p>
+<h4 id="pros--br">Pros  <br></h4>
+<ul>
+<li><p><strong>Easier to test</strong> <br><br />
+Because every function is pure, we know that the return value is the sum of the function, and is the only part that needs to be tested. Functions that avoid side effects are easier to test.</p></li>
+<li><p><strong>More predictable code</strong> <br><br />
+Functions that avoid side effects and the use of immutable values makes changes in the programs more visible. By definition, pure functions always return the same value when given the same inputs. This predictability is the backbone of success with Functional Programming</p></li>
+<li><p><strong>Easier to edit and expand</strong> <br><br />
+Because pure functions return the same value every time, and perfectly encapsulate their logic in the return statement, it means that a function could be copied and pasted to a new part of a program, or moved to an entirely different program, and it would still always produce the same result. Functions with side effects cannot be moved without the possibility of breaking something. </p></li>
+</ul>
+<h4 id="cons">Cons</h4>
+<ul>
+<li><p><strong>More difficult to write in some languages</strong> <br><br />
+While most modern dynamic languages have the ability to write in a Functional style, it can go against the grain with some. Even JavaScript, for instance, does not have a way to make values truly immutable. Writing programs without classes goes against the grain of Ruby, and PHP does not have all the array methods JavaScript has that follow a Functional methodology. </p></li>
+<li><p><strong>Will never be able to implement completely</strong> <br><br />
+There is a big difference between pure academic Functional programming and practical Functional-inspired programming for the web. Unless you are using a language that was built to be Functional, like Haskell, there will be times you have to work within the limits of the language to do the best you can at writing functional programs. </p></li>
+<li><p><strong>Few libraries to speed progress (though this is changing)</strong> <br><br />
+Functional programming for the web is still fairly new, and there are not as many helpful libraries or tutorials for getting started or writing efficiency as there are for say Object Oriented programs, for which we have prebuilt ORMs, tons of tutorials, frameworks, etc.. </p></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Functional Strengths and Benefits</p></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/l1-32-paradigmscompared.png" alt="Table comparing various paradigms" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Table comparing various paradigms</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ND032 C02 L01 A04 Values Of Functional Programming</p></h3>
+  <video controls>
+  <source src="09. ND032 C02 L01 A04 Values Of Functional Programming-zhMTQKDXWs4.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="09. ND032 C02 L01 A04 Values Of Functional Programming-zhMTQKDXWs4.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Values Highlights</p></h3>
+  <div>
+  <p>The Functional Programming paradigm shines when things get complicated. When you need to work with concurrent or parallel programs, or with applications that need to be stable and yet scalable, this is the paradigm to choose. Confidence, simplicity, and clarity are some of the benefits of writing Functional code. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Exercise Instructions</p></h3>
+  <div>
+  <h2 id="exercise-instructions">Exercise Instructions</h2>
+<ul>
+<li><strong>Exercise 1</strong>:  Write a pure function that prints "good afternoon" if its afternoon and "good morning" any other time of the day.</li>
+<li><strong>Exercise 2</strong>: Write a pure function that takes in a number and returns an array of items counting down from that number to zero.</li>
+</ul>
+<h4 id="local-machine">Local Machine</h4>
+<ol>
+<li>You will find this exercise here:</li>
+</ol>
+<pre><code class="plaintext language-plaintext">.../exercises/intro_to_fp/basic_functional_examples.js</code></pre>
+<ol start="2">
+<li>Now you can use your local setup to complete the exercise. You can use the <em>Workspace</em> directions to help you debug your setup.</li>
+</ol>
+<h4 id="workspace">Workspace</h4>
+<p>The following instructions will also be found in the workspace. </p>
+<ol>
+<li><code>foundation_concepts.js</code> is open on the top half of the workspace &amp; BASH with the version number is on the bottom half. </li>
+<li>To run the starter code, type <code>node basic_functional_examples.js</code> in BASH and hit <strong>Enter</strong>. <br><br />
+Nothing should appear on your BASH as there is no JS starter code. </li>
+<li>Now you can use the workspace to complete the exercise.</li>
+</ol>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="10. Exercise Basic FP.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('09. Why FP?')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

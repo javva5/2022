@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.785
+We now know that map,
+
+00:00:01.785 --> 00:00:06.569
+filter and reduce are higher-order functions because they take a callback.
+
+00:00:06.569 --> 00:00:09.175
+But let's take a closer look at the details.
+
+00:00:09.175 --> 00:00:12.450
+You'll recognize this example from a previous lesson,
+
+00:00:12.450 --> 00:00:16.050
+but just to look in more detail at how doubler is
+
+00:00:16.050 --> 00:00:20.220
+the callback and map is the higher-order function.
+
+00:00:20.220 --> 00:00:23.085
+For every item in the nums array,
+
+00:00:23.085 --> 00:00:26.700
+map will call back to the doubler function.
+
+00:00:26.700 --> 00:00:29.374
+When it calls it, it actually supplies
+
+00:00:29.374 --> 00:00:33.290
+three arguments: the value of the item in the array,
+
+00:00:33.290 --> 00:00:36.020
+the index of the current item in the array,
+
+00:00:36.020 --> 00:00:40.460
+and the entire original array that we are mapping over.
+
+00:00:40.460 --> 00:00:44.929
+Now, because doubler only takes in one argument,
+
+00:00:44.929 --> 00:00:46.790
+the other two are left off.
+
+00:00:46.790 --> 00:00:49.610
+But one thing to be aware of is that if the function you're
+
+00:00:49.610 --> 00:00:53.955
+calling in map does take more than one argument,
+
+00:00:53.955 --> 00:00:58.475
+these values will be passed in for the array that you're running it on.
+
+00:00:58.475 --> 00:01:00.365
+Now that you've seen that in action,
+
+00:01:00.365 --> 00:01:02.880
+you can try it in the exercises.
+

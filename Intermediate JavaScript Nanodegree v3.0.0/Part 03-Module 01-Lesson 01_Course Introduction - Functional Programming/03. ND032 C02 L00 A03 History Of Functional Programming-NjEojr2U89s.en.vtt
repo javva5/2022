@@ -1,0 +1,145 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.950
+Functional programming might be
+
+00:00:01.950 --> 00:00:05.790
+a relatively new word to hear in the context of a JavaScript meetup.
+
+00:00:05.790 --> 00:00:08.430
+But it's foundational concepts have been around since
+
+00:00:08.430 --> 00:00:11.580
+the 1930s and the development of lambda calculus.
+
+00:00:11.580 --> 00:00:15.015
+Lambda calculus is the idea that any computation,
+
+00:00:15.015 --> 00:00:18.930
+any program, can be expressed as a function or set of functions.
+
+00:00:18.930 --> 00:00:22.980
+In fact, any calculation can be expressed with lambda calculus,
+
+00:00:22.980 --> 00:00:28.275
+which is a very surface level way of saying that it is equivalent to Turing complete.
+
+00:00:28.275 --> 00:00:35.880
+A man named Alonzo Church created a formal theory of lambda calculus in 1934.
+
+00:00:35.880 --> 00:00:39.405
+Maybe the name Lambda sounds familiar?
+
+00:00:39.405 --> 00:00:41.925
+As with most mathematical symbols,
+
+00:00:41.925 --> 00:00:43.280
+it's from the Greek alphabet,
+
+00:00:43.280 --> 00:00:46.070
+but you might also know it from AWS Lambda,
+
+00:00:46.070 --> 00:00:48.020
+the serverless computing platform,
+
+00:00:48.020 --> 00:00:50.335
+also based in lambda calculus.
+
+00:00:50.335 --> 00:00:54.830
+In fact, the name Lambda is popular to hear in the tech world right now,
+
+00:00:54.830 --> 00:01:00.425
+which got me wondering why did Dr. Church choose this symbol for his new calculus?
+
+00:01:00.425 --> 00:01:03.775
+It turns out that there was no particular reason.
+
+00:01:03.775 --> 00:01:08.660
+He chose that symbol simply because it wasn't already associated with something else.
+
+00:01:08.660 --> 00:01:12.230
+He once received a postcard asking him, "Why lambda?"
+
+00:01:12.230 --> 00:01:14.060
+His response was simply,
+
+00:01:14.060 --> 00:01:16.070
+"Eeny meeny, miney moe."
+
+00:01:16.070 --> 00:01:18.815
+So I thought that was fun.
+
+00:01:18.815 --> 00:01:20.635
+If we take a closer look,
+
+00:01:20.635 --> 00:01:23.590
+lambda calculus treats a program like an assembly line.
+
+00:01:23.590 --> 00:01:25.805
+You start with certain inputs in the beginning,
+
+00:01:25.805 --> 00:01:29.360
+and by passing these inputs through various machines,
+
+00:01:29.360 --> 00:01:31.990
+you end up with a new result.
+
+00:01:31.990 --> 00:01:36.755
+Dr. Church wasn't as interested in the logic inside of every function.
+
+00:01:36.755 --> 00:01:42.185
+It was really this transition of inputs to outputs that he cared about.
+
+00:01:42.185 --> 00:01:45.500
+Those outputs can then be passed to new functions,
+
+00:01:45.500 --> 00:01:48.820
+which in turn will become your end result.
+
+00:01:48.820 --> 00:01:51.590
+There are a few important takeaways from this.
+
+00:01:51.590 --> 00:01:55.370
+The first is that values don't update, instead,
+
+00:01:55.370 --> 00:01:58.750
+you create new values by returning them from functions,
+
+00:01:58.750 --> 00:02:03.305
+and secondly, functions do nothing other than return a result.
+
+00:02:03.305 --> 00:02:06.800
+These rules of lambda calculus might seem very strict,
+
+00:02:06.800 --> 00:02:10.585
+but they still allow us to express any computation.
+
+00:02:10.585 --> 00:02:14.680
+How did we get from lambda calculus to functional programming?
+
+00:02:14.680 --> 00:02:16.430
+It took a long time.
+
+00:02:16.430 --> 00:02:19.760
+Functional programming remained a mainly academic endeavor
+
+00:02:19.760 --> 00:02:22.700
+from the 40s all the way till 2008 or so.
+
+00:02:22.700 --> 00:02:25.820
+But more and more, developers are turning to the concepts of
+
+00:02:25.820 --> 00:02:29.560
+lambda calculus to solve more modern computing problems.
+
+00:02:29.560 --> 00:02:33.200
+What makes lambda calculus an attractive source to draw from?
+
+00:02:33.200 --> 00:02:35.870
+In the next lesson, we'll go into details of
+
+00:02:35.870 --> 00:02:39.780
+what makes functional programming unique and attractive.
+

@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.935
+At a meet up in a blog article.If you've been around the JavaScript community,
+
+00:00:04.935 --> 00:00:09.990
+you've likely heard the term functional programming floating around, but what is it?
+
+00:00:09.990 --> 00:00:12.405
+Is it really a JavaScript thing?
+
+00:00:12.405 --> 00:00:15.945
+In fact, functional programming is just a style of programming,
+
+00:00:15.945 --> 00:00:20.935
+also known as the programming paradigm that can be used in almost any language.
+
+00:00:20.935 --> 00:00:25.520
+What makes functional programming so attractive is that it focuses on being simple and
+
+00:00:25.520 --> 00:00:28.070
+efficient with a few rules to follow that can
+
+00:00:28.070 --> 00:00:31.250
+make large programs more reliable and predictable.
+
+00:00:31.250 --> 00:00:34.355
+These rules are actually derived from mathematics,
+
+00:00:34.355 --> 00:00:38.044
+in particular a branch of calculus called lambda calculus.
+
+00:00:38.044 --> 00:00:39.845
+Though the rules are simple,
+
+00:00:39.845 --> 00:00:41.900
+they hold a wealth of good practices that will
+
+00:00:41.900 --> 00:00:45.930
+benefit you even if you never code in a functional program.
+

@@ -1,0 +1,22 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.100
+In the last lesson, we went over
+
+00:00:02.100 --> 00:00:05.085
+all the tools that equip us to write a functional JavaScript,
+
+00:00:05.085 --> 00:00:07.530
+but we didn't write any real programs.
+
+00:00:07.530 --> 00:00:11.970
+This lesson will be all about using the tools we learned together to create
+
+00:00:11.970 --> 00:00:14.220
+powerful functional programs that benefit from
+
+00:00:14.220 --> 00:00:17.980
+the strengths of functional programming we learned in the first lesson.
+
