@@ -1,0 +1,1421 @@
+{
+  "data": {
+    "lesson": {
+      "id": 468902,
+      "key": "fd2e70b8-84b4-4793-a89e-78a695ecf89d",
+      "title": "Functions at Runtime",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Functions are one of most important data structures. Learn what a \"first-class function\" is, learn about scope, dig into closures, and use immediately-invoked function expressions for private state.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/fd2e70b8-84b4-4793-a89e-78a695ecf89d/468902/1545053713937/Functions+at+Runtime+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/fd2e70b8-84b4-4793-a89e-78a695ecf89d/468902/1545053709789/Functions+at+Runtime+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 468903,
+          "key": "4f972cf3-f265-4c78-a396-8c1edccbb642",
+          "title": "Introduction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4f972cf3-f265-4c78-a396-8c1edccbb642",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 696409,
+              "key": "b8e0f368-b2e6-450c-ab18-c4cdd7f17286",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Introduction\n\nBefore we jump into the intro, take a quick glance at the following code:\n\n```js\nfunction greet() {\n  console.log('Functions are cool!');\n}\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 478365,
+              "key": "6c39cf79-1bb4-4c98-80cd-83edc4c03723",
+              "title": "Lesson Overview",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "GXClOl9Tghc",
+                "china_cdn_id": "GXClOl9Tghc.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 468911,
+          "key": "f92efa0e-7143-4222-bf70-b44e5278fed6",
+          "title": "First-Class Functions",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f92efa0e-7143-4222-bf70-b44e5278fed6",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 478366,
+              "key": "f73b603b-3f00-41e1-971f-f70e1ea9456a",
+              "title": "OOJS L2 2 - First Class Functions - V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "8VjddoyyG1Q",
+                "china_cdn_id": "8VjddoyyG1Q.mp4"
+              }
+            },
+            {
+              "id": 468916,
+              "key": "12b41090-4601-4e4f-97af-39eab49ae1aa",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Functions are First-Class Functions\n\nIn JavaScript, functions are _first-class_ functions. This means that you can do with a _function_ just about anything that you can do with other elements, such as numbers, strings, objects, arrays, etc. JavaScript functions can:\n\n1. Be stored in variables\n2. Be returned from a function.\n3. Be passed as arguments into another function.\n\nNote that while we can, say, treat a function as an object, a key difference between a function and an object is that functions can be called (i.e., invoked with `()`), while regular objects _cannot_.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 478367,
+              "key": "d8936e0e-da93-4dea-9066-290535760d97",
+              "title": "L2 - 4 - Functions Are First Class Objects V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "FpT_U0pOB-c",
+                "china_cdn_id": "FpT_U0pOB-c.mp4"
+              }
+            },
+            {
+              "id": 492709,
+              "key": "3a779fcf-1ca1-42e3-b833-61061035bd48",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "[Here's the code from the preceding video.](https://github.com/udacity/OOJS-screencasts/blob/master/L2-functions-at-runtime/4-functions-are-first-class-functions-demo.js)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468932,
+              "key": "b83c8e64-a572-4ffa-8ed0-fc2ef069360f",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "b83c8e64-a572-4ffa-8ed0-fc2ef069360f",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "How are JavaScript functions _first-class_ functions? Select all that apply:",
+                "answers": [
+                  {
+                    "id": "a1512503217528",
+                    "text": "A function can be returned from another function",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512503232219",
+                    "text": "A function can be stored in a variable",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512503232787",
+                    "text": "A function is actually a primitive",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512503233346",
+                    "text": "A function can be passed in as an argument into another function",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 468934,
+              "key": "78024952-c2ca-4919-ab53-98b35cd37857",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Functions Can Return Functions\n\nRecall that a function must always return a value. Whether the value is explicitly specified in a `return` statement (e.g., returning a string, boolean, array, etc.), or the function implicitly returns `undefined` (e.g., a function that simply logs something to the console), a function will always return just _one_ value. \n\nSince we know that functions are first-class functions, we can treat a _function_ as a value and just as easily return a _function_ from another function! A function that returns another function is known as **higher-order function**. Consider this example:\n\n```js\nfunction alertThenReturn() {\n  alert('Message 1!');\n\n  return function () {\n    alert('Message 2!');\n  };\n}\n```\n\nIf `alertThenReturn()` is invoked in a browser, we'll first see an alert message that says `'Message 1!'`, followed by the `alertThenReturn()` function returning an anonymous function. However, we don't actually see an alert that says `'Message 2!'`, since none of the code from the inner function is executed. How do we go about executing the returned function?\n\nSince `alertThenReturn()` _returns_ that inner function, we can assign a variable to that return value:\n\n```js\nconst innerFunction = alertThenReturn();\n```\n\nWe can then use the `innerFunction` variable like any other function!\n\n```js\ninnerFunction();\n\n// alerts 'Message 2!'\n```\n\nLikewise, this function can be invoked immediately without being stored in a variable. We'll still get the same outcome if we simply add another set of parentheses to the expression `alertThenReturn();`:\n\n```js\nalertThenReturn()();\n\n// alerts 'Message 1!' then alerts 'Message 2!'\n```\n\nNotice the double set of parentheses (i.e. `()()`) in that function call! The first pair of parentheses executes the `alertThenReturn()` function. The return value of this invocation is a function, which then gets invoked by the _second_ pair of parentheses!\n\nLet's see another example in action!\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 478369,
+              "key": "c9dde2cd-8644-46bd-8393-c3dd01fecf40",
+              "title": "L2 -8 - Returning Functions Demo V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "tKzF0-cDblg",
+                "china_cdn_id": "tKzF0-cDblg.mp4"
+              }
+            },
+            {
+              "id": 492710,
+              "key": "b34ee96d-6f3d-44dd-a861-39d0d578067d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "[Here's the code from the preceding video.](https://github.com/udacity/OOJS-screencasts/blob/master/L2-functions-at-runtime/9-returning-functions-demo.js)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468937,
+              "key": "40833b81-8a34-4313-bec0-42074ebb50d0",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "40833b81-8a34-4313-bec0-42074ebb50d0",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6751145528262656",
+                "initial_code_files": [
+                  {
+                    "text": "/*\n\nDeclare a function named `higherOrderFunction` that takes no arguments,\nand returns an anonymous function.\n\nThe returned function itself takes no arguments as well, and simply\nreturns the number 8.\n\n*/\n",
+                    "name": "StudentMain.js"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 468938,
+              "key": "652f7559-da3f-48e7-a7f4-7ab9413736cf",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Summary\n\nIn the JavaScript language, functions are **first-class functions**. This means that we can do with functions just about everything that we can do with other elements in JavaScript, such as strings, arrays, or numbers. JavaScript functions can:\n\n1. Be stored in variables\n2. Be returned from a function.\n3. Be passed as arguments into another function.\n\nWe've seen quite a few examples of the first two in the list, but what about passing a _function_ as an argument into another function? Since this is such an important and common pattern in JavaScript, we'll take a deep dive in the next section!",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468941,
+              "key": "c021539b-b008-41af-a2d6-cfc22edaf2cf",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Further Research\n\n* [First-class function](https://en.wikipedia.org/wiki/First-class_function) on Wikipedia",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 468948,
+          "key": "435a5d87-0a67-4787-9096-5426e36f9a90",
+          "title": "Callbacks",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "435a5d87-0a67-4787-9096-5426e36f9a90",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 478372,
+              "key": "a06f7d97-bb5b-4160-ac6f-00817d7bcea5",
+              "title": "OOJS L2 13 - Callbacks V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "pJfiPKKiu9Q",
+                "china_cdn_id": "pJfiPKKiu9Q.mp4"
+              }
+            },
+            {
+              "id": 469030,
+              "key": "b18e5f92-49ed-4f21-9db9-d0f94395dbcf",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Callback Functions\n\nRecall that JavaScript functions are first-class functions. We can do with functions just about everything we can do with other values -- including passing them into _other_ functions! A function that takes other functions as arguments (and/or _returns_ a function, as we learned in the previous section) is known as a **higher-order function**. A function that is passed as an argument into another function is called a **callback** function. \n\nWe'll be focusing on callbacks in this section. Callback functions are great because they can delegate calling functions to other functions. They allow you to build your applications with _composition_, leading to cleaner and more efficient code.\n\nLet's jump right in!\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 478373,
+              "key": "82a1ce44-af18-4f73-83f2-bdfd35a67187",
+              "title": "L2 - 15 - Callback Demo",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "nXPC4YTKdZg",
+                "china_cdn_id": "nXPC4YTKdZg.mp4"
+              }
+            },
+            {
+              "id": 492711,
+              "key": "f1bcad85-6bb8-47c1-8a1a-507853c2b2d5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "[Here's the code from the preceding video.](https://github.com/udacity/OOJS-screencasts/blob/master/L2-functions-at-runtime/16-callback-demo.js)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 469039,
+              "key": "59426f8b-c335-468a-b578-da108ef3e44c",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "59426f8b-c335-468a-b578-da108ef3e44c",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What is true about callbacks? Select all that apply:",
+                "answers": [
+                  {
+                    "id": "a1512507127106",
+                    "text": "A function that is passed as an argument to another function is called a callback.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512507205113",
+                    "text": "A function that takes another function in as an argument is a higher-order function.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512507205945",
+                    "text": "Leveraging callbacks is possible because JavaScript functions are _first-class_ functions.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512507213025",
+                    "text": "Callback functions do not work in the browser.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469053,
+              "key": "aceee8b6-801e-4e21-8536-1fd27e620cda",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "aceee8b6-801e-4e21-8536-1fd27e620cda",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Consider the following two functions:\n\n\n```js\nfunction each(array, callback) {\n  for (let i = 0; i < array.length; i++) {\n    if (callback(array[i])) {\n      console.log(array[i]);\n    }\n  }\n}\n```\n```js\nfunction isPositive(n) {\n  return n > 0;\n};\n```\n\nThe following is then executed:\n\n```\neach([-2, 7, 11, -4, -10], isPositive);\n```\n\nWhat is outputted to the console?",
+                "answers": [
+                  {
+                    "id": "a1512507380285",
+                    "text": "`-2`, `-4`, `-10`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512507425627",
+                    "text": "`-7`, `-11`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512507426139",
+                    "text": "`-2`, `7`, `11`, `-4`, `-10`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512507426643",
+                    "text": "`7`, `11`",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469059,
+              "key": "9631fba1-4b02-442c-a25b-d76160839500",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Array Methods\n\nWhere have you probably seen callback functions used? In array methods! Functions are commonly passed into array methods and called on elements _within_ an array (i.e., the array on which the method was called). \n\nLet's check out a couple in detail:\n\n* `forEach()`\n* `map()`\n* `filter()`\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 469070,
+              "key": "7994a181-dd23-4547-a0d4-b3ee0ae400c8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## forEach()\n\nArray's `forEach()` method takes in a callback function and invokes that function _for each_ element in the array. In other words, `forEach()` allows you to iterate (i.e., loop) through an array, similar to using a `for` loop. Check out its signature:\n\n```js\narray.forEach(function callback(currentValue, index, array) {\n    // function code here\n});\n```\n\nThe callback function itself receives the arguments: the current array element, its index, and the entire array itself. \n\nLet's say we have a simple function, `logIfOdd()`, that takes in a single number and logs it to the console if that number is an odd number:\n\n```js\nfunction logIfOdd(n) {\n  if (n % 2 !== 0) {\n    console.log(n);\n  }\n}\n\nlogIfOdd(2);\n// (nothing is logged)\n\nlogIfOdd(3);\n// 3\n```\n\nWhen `2` is passed into the function, `logIfOdd()` does not output anything to the console because `2` is an even number. However, when `3` is passed into the function, `3` _is_ logged to the console because it's an odd number. \n\nThe `logIfOdd()` function works great for individual numbers, but what if we want to check _an entire array_ and log only the odd numbers within it?\n\n```js\n[1, 5, 2, 4, 6, 3]\n```\n\nWe can iterate through the above array with `forEach()` and simply pass it the `logIfOdd()` function!\n\n```js\n[1, 5, 2, 4, 6, 3].forEach(function logIfOdd(n) {\n  if (n % 2 !== 0) {\n    console.log(n);\n  }\n});\n\n// 1\n// 5\n// 3\n```\n\nIn the above array, only the numbers that are odd numbers are printed to the console. Let's recap what happened: `logIfOdd()` is a function and is passed in as an argument to `forEach()`. `forEach()` then invokes `logIfOdd()` for each element in the array (i.e., `[1, 5, 2, 4, 6, 3]`), which outputs `1`, `5`, and `3`.\n\nKeep in mind that it's quite common to pass an _anonymous function_ as an argument in `forEach()` as well:\n\n```js\n[1, 5, 2, 4, 6, 3].forEach(function (n) {\n  if (n % 2 !== 0) {\n    console.log(n);\n  }\n});\n\n// 1\n// 5\n// 3\n```\n\nAlternatively, it's possible to simply pass in just the name of the function as well (i.e., assuming the function was already defined, of course).\n\n```js\n[1, 5, 2, 4, 6, 3].forEach(logIfOdd);\n\n// 1\n// 5\n// 3\n```\n\nThe three different ways shown each produce the same output (i.e., logging `1`, `5`, and `3` to the console). \n\nNow, let's see `forEach()` in action!\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 478376,
+              "key": "3328e413-09ea-4725-9a1c-3d4307553aeb",
+              "title": "L2 - 21 - ForEach Demo",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "g99g07TZYvo",
+                "china_cdn_id": "g99g07TZYvo.mp4"
+              }
+            },
+            {
+              "id": 492712,
+              "key": "b2a10b09-bee9-4dd9-8243-e9fcda297123",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "[Here's the code from the preceding video.](https://github.com/udacity/OOJS-screencasts/blob/master/L2-functions-at-runtime/22-forEach-demo.js)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 469081,
+              "key": "0cfcf73b-9582-4543-bc71-1e1314fb191d",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "0cfcf73b-9582-4543-bc71-1e1314fb191d",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Which of the following are valid ways to iterate through an array and log each value to the console?",
+                "answers": [
+                  {
+                    "id": "a1512508167422",
+                    "text": "[1, 2, 3, 4].forEach(function(num) { <br>   &nbsp;&nbsp; console.log(num); <br> });",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512508861818",
+                    "text": "[1, 2, 3, 4].forEach(function() {  <br>   &nbsp;&nbsp; console.log(num);<br> });",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512508862690",
+                    "text": "function logNum (num) {  <br>   &nbsp;&nbsp; console.log(num);<br> }  <br> <br> [1, 2, 3, 4].forEach(logNum);",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512508863345",
+                    "text": "[1, 2, 3, 4].forEach(console.log);",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469094,
+              "key": "6e4e1677-3e07-4a88-a49a-5da700f53bb1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## map()\n \nArray's `map()` method is similar to `forEach()` in that it invokes a callback function for each element in an array. However, `map()` returns a _new array_ based on what's returned from the callback function. Check out the following:\n \n```js\nconst names = ['David', 'Richard', 'Veronika'];\n \nconst nameLengths = names.map(function(name) {\n  return name.length;\n});\n```\n \nLet's go over what's happening here. The `map()` method works on arrays, so we have to have an array to start with:\n \n```js\nconst names = ['David', 'Richard', 'Veronika'];\n```\n \nWe call `map()` on the `names` array and pass it an anonymous function as an argument:\n \n```js\nnames.map(function(name) {\n  return name.length;\n});\n```\n \nThe function that's passed to `map()` gets called _for each item_ in the `names` array! The function receives the first name in the array, stores it in the `name` variable and returns its length. Then it does that again for the remaining two names. \n \nRemember that the key difference between `forEach()` and `map()` is that `forEach()` doesn't return anything, while `map()` returns a new array with the values that are returned from the function:\n \n```js\nconst nameLengths = names.map(function(name) {\n  return name.length;\n});\n```\n \nSo `nameLengths` will be a _new_ array: `[5, 7, 8]`. Again, it is important to understand that **the `map()` method returns a new array; it does not modify the original array**.\n \nThis was just a brief overview of how the `map()` method works. For a deeper dive, check out [`map()` on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 469101,
+              "key": "d66cb0cb-f0ff-4728-8e3e-100a87e5d815",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "d66cb0cb-f0ff-4728-8e3e-100a87e5d815",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "4654750272978944",
+                "initial_code_files": [
+                  {
+                    "text": "/* Using map()\n *\n * Using the musicData array and map():\n *   - Return a string for each item in the array in the following format:\n *     <album-name> by <artist> sold <sales> copies\n *   - Store the returned data in a new albumSalesStrings variable\n *\n * Note:\n *   - Do not delete the musicData variable\n *   - Do not alter any of the musicData content\n *   - Do not format the sales number; leave it as a long string of digits\n */\n\nconst musicData = [\n    { artist: 'Adele', name: '25', sales: 1731000 },\n    { artist: 'Drake', name: 'Views', sales: 1608000 },\n    { artist: 'Beyonce', name: 'Lemonade', sales: 1554000 },\n    { artist: 'Chris Stapleton', name: 'Traveller', sales: 1085000 },\n    { artist: 'Pentatonix', name: 'A Pentatonix Christmas', sales: 904000 },\n    { artist: 'Original Broadway Cast Recording', \n      name: 'Hamilton: An American Musical', sales: 820000 },\n    { artist: 'Twenty One Pilots', name: 'Blurryface', sales: 738000 },\n    { artist: 'Prince', name: 'The Very Best of Prince', sales: 668000 },\n    { artist: 'Rihanna', name: 'Anti', sales: 603000 },\n    { artist: 'Justin Bieber', name: 'Purpose', sales: 554000 }\n];\n\nconst albumSalesStrings = 'Replace this message with your code!';\n\nconsole.log(albumSalesStrings);\n",
+                    "name": "StudentMain.js"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 469105,
+              "key": "4f18b462-62a5-4e4b-b6e4-60739f5caf2a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## filter()\n \nArray's `filter()` method is similar to the `map()` method:\n \n* It is called on an array\n* It takes a function as an argument\n* It returns a new array\n \nThe difference is that the function passed to `filter()` is used as a test, and only items in the array that pass the test are included in the new array. Consider the following example:\n \n```js\nconst names = ['David', 'Richard', 'Veronika'];\n \nconst shortNames = names.filter(function(name) {\n  return name.length < 6;\n});\n```\n\nJust as before, let's break it down a bit! We have the starting array:\n \n```js\nconst names = ['David', 'Richard', 'Veronika'];\n```\n \nWe call `filter()` on the `names` array and pass it a function as an argument:\n \n```js\nnames.filter(function(name) {\n  return name.length < 6;\n});\n```\n \nAgain, just like with `map()`, the function that's passed to `filter()` gets called _for each item_ in the `names` array. The first item (i.e., `'David'`) is stored in the `name` variable. Then the test is performed -- and this is what's doing the actual filtering. First, it checks the length of the name. If it's `6` or greater, then it's skipped (and _not_ included in the new array!). But, if the length of the name is less than `6`, then `name.length < 6` returns `true` and the name _is_ included in the new array!\n \nAnd lastly, just like with `map()`, the `filter()` method returns a _new_ array instead of modifying the original array:\n \n```js\nconst shortNames = names.filter(function(name) {\n  return name.length < 6;\n});\n\nconsole.log(shortNames);\n// ['David']\n```\n \nAbove, the value of `shortNames` is the new array: `['David']`. Notice that it only has one name in it, because both `'Richard'` and `'Veronika'` are `6` characters or longer, and were filtered out.\n \nThis was just a brief overview of how the `filter()` method works. For a deeper dive, check out [`filter()` on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter). \n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 469106,
+              "key": "ef2a919d-62d4-4ab6-b691-e73a5c55417f",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "ef2a919d-62d4-4ab6-b691-e73a5c55417f",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6248940127780864",
+                "initial_code_files": [
+                  {
+                    "text": "/* Using filter()\n *\n * Using the musicData array and filter():\n *   - Return only album objects where the album's name is\n *     10 characters long, 25 characters long, or anywhere in between\n *   - Store the returned data in a new `results` variable\n *\n * Note:\n *   - Do not delete the musicData variable\n *   - Do not alter any of the musicData content\n */\n\nconst musicData = [\n    { artist: 'Adele', name: '25', sales: 1731000 },\n    { artist: 'Drake', name: 'Views', sales: 1608000 },\n    { artist: 'Beyonce', name: 'Lemonade', sales: 1554000 },\n    { artist: 'Chris Stapleton', name: 'Traveller', sales: 1085000 },\n    { artist: 'Pentatonix', name: 'A Pentatonix Christmas', sales: 904000 },\n    { artist: 'Original Broadway Cast Recording', \n      name: 'Hamilton: An American Musical', sales: 820000 },\n    { artist: 'Twenty One Pilots', name: 'Blurryface', sales: 738000 },\n    { artist: 'Prince', name: 'The Very Best of Prince', sales: 668000 },\n    { artist: 'Rihanna', name: 'Anti', sales: 603000 },\n    { artist: 'Justin Bieber', name: 'Purpose', sales: 554000 }\n];\n\nconst results = 'Replace this message with your code!';\n\nconsole.log(results);",
+                    "name": "StudentMain.js"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 469107,
+              "key": "1e8a7afa-7f12-4fdc-a986-1f5323ff76e6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Summary\n\nJavaScript functions can take in a variety of different arguments, including strings, numbers, arrays, and objects. Since functions are first-class functions, functions can _also_ be passed as arguments to a given function. Functions that take in other functions as arguments are called **higher-order functions**. Functions that are passed as arguments to other functions are called **callback** functions.\n\nCallbacks allow you to pass functions without needing to name them (i.e., anonymous functions), which leads to less variables floating around. They also allow you to delegate calling functions to _other_ functions. Array methods, such as `forEach()`, `map()`, and `filter()`, take advantage of callbacks to execute functions onto a given array's elements. Feel free to check out the list of other array methods listed below.\n\nNow that we know that functions in JavaScript can have access to many different types of variables in its list of arguments -- _what else_ is available for functions to use? That is, what is included in the **scope** of a function? Let's find out in the next section!\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 469108,
+              "key": "9e23fec0-cf83-4d75-89d0-47f2f9ecb31f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Further Research\n\n* [Array Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype) on MDN",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 469109,
+          "key": "9354109e-3251-4a46-8aad-173f982429d9",
+          "title": "Scope",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9354109e-3251-4a46-8aad-173f982429d9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469110,
+              "key": "bb257e2f-a01b-41ec-844b-796751bd1a4a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "If you took [Intro to Javascript](https://www.udacity.com/course/intro-to-javascript--ud803), you learned about _block_ scope vs. _function_ scope. These determine where a variable can be seen in some code. Computer scientists call this **lexical scope**.\n\nHowever, there also exists _another_ kind of scope called **runtime scope**. When a function is run, it creates a new runtime scope. This scope represents the _context_ of the function, or more specifically, the set of variables available for the function to use. \n\nSo what exactly _does_ a function have access to?\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 478378,
+              "key": "c4b96c14-9d3f-4f92-8e3e-1ae802abfbce",
+              "title": "OOJS L2 32 - Scope Intro",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "EZ3owNzefF4",
+                "china_cdn_id": "EZ3owNzefF4.mp4"
+              }
+            },
+            {
+              "id": 469112,
+              "key": "1d0867a6-6531-4494-af79-04f00ab17a9a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Scope\n\nA function's runtime scope describes the variables available for use inside a given function. The code inside a function has access to:\n\n1. The function's arguments.\n2. Local variables declared within the function.\n3. Variables from its parent function's scope.\n4. Global variables.\n\nCheck out the following image that highlights a function's scope, then we'll take a look at a live example.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 478566,
+              "key": "eb5a890f-a4be-47e1-b284-71902d7749c1",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a31c70a_l2-34-scope-image/l2-34-scope-image.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/eb5a890f-a4be-47e1-b284-71902d7749c1",
+              "caption": "_The nested `child()` function has access to all `a`, `b`, and `c` variables. That is, these variables are in the `child()` function's scope._",
+              "alt": "",
+              "width": 481,
+              "height": 292,
+              "instructor_notes": null
+            },
+            {
+              "id": 478380,
+              "key": "661a70f5-3c14-4e49-a46e-53e18fe14e5d",
+              "title": "L2 - 34 - Scope Demo",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "1OcdRnbiepI",
+                "china_cdn_id": "1OcdRnbiepI.mp4"
+              }
+            },
+            {
+              "id": 492713,
+              "key": "b7d8e11b-72cf-4ad4-bbbc-77375af2c8e2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "[Here's the code from the preceding video.](https://github.com/udacity/OOJS-screencasts/blob/master/L2-functions-at-runtime/35-scope-demo.js)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 469116,
+              "key": "ef9be74a-b0e9-43b9-9feb-af5db0d4da78",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Video Recap\n\nIn the previous video, the `introduceMyself()` function contains a nested `introduce()` function. While `introduce()` does not take in any arguments, nor are there any local variables declared within it -- variables in both the aforementioned settings are indeed in `introduce()`'s scope.\n\n`introduce()` _does_ use the global variable `myName`, however, as well as the `you` variable contained in its parent function, `introduceMyself()`  (where `introduce()` was defined). Both are highlighted below:\n\n```js\nconst myName = 'Andrew';\n// Global variable\n\nfunction introduceMyself() {\n\n  const you = 'student';\n  // Variable declared where introduce() is defined\n  // (i.e., within introduce()'s parent function, introduceMyself())\n\n  function introduce() {\n    console.log(`Hello, ${you}, I'm ${myName}!`);\n  }\n\n  return introduce();\n}\n```\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 469117,
+              "key": "80e02fb5-fb32-4fca-9ad4-c4f6d7a8c959",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "80e02fb5-fb32-4fca-9ad4-c4f6d7a8c959",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Consider the following:\n\n```\nconst num1 = 5;\n\nfunction functionOne() {\n  const num2 = 10;\n\n  function functionTwo(num3) {\n    const num4 = 35;\n\n    return num1 + num2 + num3 + num4;\n  }\n\n  return functionTwo(0);\n}\n```\n\nWhich variables does `functionTwo()` have access to? Select all that apply:",
+                "answers": [
+                  {
+                    "id": "a1512510124290",
+                    "text": "`num1`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512510139605",
+                    "text": "`num2`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512510140077",
+                    "text": "`num3`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512510140492",
+                    "text": "`num4`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512510146941",
+                    "text": "It is indeterminate.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469118,
+              "key": "7409df64-c2c6-477a-b91f-80c4bfa54725",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## JavaScript is Function-Scoped\n\nYou may be wondering why scope is so heavily associated with _functions_ in JavaScript. Especially if you've had past experience in another programming language, this might seem a bit unusual (e.g., _blocks_ in Ruby have their own scope)!\n\nThis is all because variables in JavaScript are traditionally defined in the scope of a _function_, rather than in the scope of a _block_. Since entering a function will change scope, any variables defined inside that function are _not_ available outside of that function. On the other hand, if there are any variables defined inside a _block_ (e.g., within an `if` statement), those variables _are_ available outside of that block.\n\nLet's see an example of how function-scoping in JavaScript works:\n\n```js\nvar globalNumber = 5;\n\nfunction globalIncrementer() {\n  const localNumber = 10;\n\n  globalNumber += 1;\n  return globalNumber;\n}\n```\n\nIn the example above, `globalNumber` is outside the function; it is a global variable that the `globalIncrementer()` function has access to. `globalIncrementer()` simply has a local variable (`localNumber`) declared within it, then increments `globalNumber` by 1 before returning the updated value of `globalNumber` itself. \n\nAfter calling the function a few times, we see that the value of `globalNumber` has indeed increased each time:\n\n```js\nconsole.log(globalIncrementer());\n// 6\n\nconsole.log(globalIncrementer());\n// 7\n\nconsole.log(globalIncrementer());\n// 8\n```\n\nHowever, when attempting to access `localNumber` outside of the function, we see a error:\n\n```js\nconsole.log(localNumber);\n\n// ReferenceError: localNumber is not defined\n```\n\nBecause JavaScript is function-scoped, functions have access to all its own variables as well as all the global variables outside of it. For more details on _block scoping_, check out **Further Research** at the end of this page.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 469119,
+              "key": "1a36d5cd-77ed-4bdd-87dd-723f78daeb80",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "> ## 💡 Block-Scoping 💡\n>\n> ES6 syntax allows for additional scope while declaring variables with the `let` and `const` keywords. These keywords are used to declare _block-scoped_ variables in JavaScript, and largely replace the need for `var`. \n>\n> We've used them throughout this course, but for a closer look, check out our course: [ES6 - JavaScript Improved](https://www.udacity.com/course/es6-javascript-improved--ud356). Via MDN:\n>\n> * [let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)\n* [const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 469120,
+              "key": "a3845940-ee7d-49f1-bc32-c4f3f510b987",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Scope Chain\n\nWhenever your code attempts to access a variable during a function call, the JavaScript interpreter will always start off by looking within its own local variables. If the variable isn't found, the search will continue looking up what is called the **scope chain**. Let's take a look at an example:\n\n```js\nfunction one() {\n  two();\n  function two() {\n    three();\n    function three() {\n      // function three's code here\n    }\n  }\n}\n\none();\n```\n\nIn the above example, when `one()` is called, all the other nested functions will be called as well (all the way to `three()`). \n\nYou can visualize the scope chain moving outwards starting at the innermost level: from `three()`, to `two()`, to `one()`, and finally to `window` (i.e., the global/window object). This way, the function `three()` will not only have access to the variables and functions \"above\" it (i.e., those of `two()` and `one()`) -- `three()` will also have access to any global variables defined outside `one()`.\n\nLet's now revisit the image from the beginning of this section, and visualize the entire process:",
+              "instructor_notes": ""
+            },
+            {
+              "id": 478567,
+              "key": "451b77f7-69f2-4207-a138-66b15276ea47",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a31c70a_l2-42-scope-chain/l2-42-scope-chain.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/451b77f7-69f2-4207-a138-66b15276ea47",
+              "caption": "_When resolving a variable, the JavaScript engine begins by looking at the nested child function's locally-defined variables. If found, then the value is retrieved; if not, the JavaScript engine continues to looking outward until the variable is resolved. If the JavaScript engine reaches the global scope and is still unable to resolve the variable, the variable is undefined._",
+              "alt": "",
+              "width": 900,
+              "height": 568,
+              "instructor_notes": null
+            },
+            {
+              "id": 469122,
+              "key": "d4734313-b69d-4757-bec8-e19f71fa448e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "> ## 💡 The Global (`window`) Object💡\n>\n> Recall that when JavaScript applications run inside a host environment (e.g., a browser), the host provides a `window` object, otherwise known as the [global object](https://developer.mozilla.org/en-US/docs/Glossary/Global_object). Any global variables declared are accessed as _properties_ of this object, which represents the outermost level of the scope chain.\n>\n> For a refresher, feel free to check out **Beware of Globals** in Lesson 1.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 469123,
+              "key": "8ea28f52-e8aa-4f70-82a3-7b3c0aabfda6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Variable Shadowing\n\nWhat happens when you create a variable with the _same name_ as another variable somewhere in the scope chain?\n\nJavaScript won't throw an error or otherwise prevent you from creating that extra variable. In fact, the variable with local scope will just temporarily \"shadow\" the variable in the outer scope. This is called **variable shadowing**. Consider the following example:\n\n```js\nconst symbol = '¥';\n\nfunction displayPrice(price) {\n  const symbol = '$';\n  console.log(symbol + price);\n}\n\ndisplayPrice('80');\n// '$80'\n```\n\nIn the above snippet, note that `symbol` is declared in two places: \n\n1. Outside the `displayPrice()` function, as a _global_ variable.\n2. Inside the `displayPrice()` function, as a _local_ variable.\n\nAfter invoking `displayPrice()` and passing it an argument of `'80'`, the function outputs `'$80'` to the console.\n\nHow does the JavaScript interpreter know which value of `symbol` to use? Well, since the variable pointing to `'$'` is declared inside a function (i.e., the \"inner\" scope), it will override any variables of the same name that belong in an outer scope -- such as the global variable pointing to `'¥'`. As a result, `'$80'` is displayed rather than `'¥80'`.\n\nAll in all, if there are any naming overlaps between variables in different contexts, they are all resolved by moving through the scope chain from inner to outer scopes (i.e., local all the way to global). This way, any local variables that have the same name take precedence over those with a wider scope.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 469124,
+              "key": "8448c137-4b2b-44a3-a7a0-6946860cf508",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "8448c137-4b2b-44a3-a7a0-6946860cf508",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What will the console display when `myFunction()` is called?\n\n\n```js\nlet n = 2;\n\nfunction myFunction() {\n  let n = 8;\n  console.log(n);\n}\n\nmyFunction();\n// ???\n```\n",
+                "answers": [
+                  {
+                    "id": "a1512510420444",
+                    "text": "`2`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512510460385",
+                    "text": "`8`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512510460968",
+                    "text": "`null`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512510462752",
+                    "text": "`undefined`",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469125,
+              "key": "c9e07262-85fc-488e-9309-45743aba66a5",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "c9e07262-85fc-488e-9309-45743aba66a5",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "When searching for variables along the scope chain, in what order will the JavaScript interpreter search?"
+                },
+                "concepts_label": "Order",
+                "answers_label": "Location",
+                "concepts": [
+                  {
+                    "text": "1st",
+                    "correct_answer": {
+                      "id": "a1512510505692",
+                      "text": "Local variables"
+                    }
+                  },
+                  {
+                    "text": "2nd",
+                    "correct_answer": {
+                      "id": "a1512510558530",
+                      "text": "Parent function's variables"
+                    }
+                  },
+                  {
+                    "text": "3rd",
+                    "correct_answer": {
+                      "id": "a1512510559193",
+                      "text": "Parent function's _parent function's_ variables"
+                    }
+                  },
+                  {
+                    "text": "4th",
+                    "correct_answer": {
+                      "id": "a1512510560785",
+                      "text": "Global variables"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1512510558530",
+                    "text": "Parent function's variables"
+                  },
+                  {
+                    "id": "a1512510559193",
+                    "text": "Parent function's _parent function's_ variables"
+                  },
+                  {
+                    "id": "a1512510505692",
+                    "text": "Local variables"
+                  },
+                  {
+                    "id": "a1512510560785",
+                    "text": "Global variables"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469127,
+              "key": "a6627fe3-32de-4348-8c99-e7e25b6f9915",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "a6627fe3-32de-4348-8c99-e7e25b6f9915",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "When the following code runs, what is the output of the first, second, and third logs to the console (respectively)?\n\n```js\nlet n = 8;\n\nfunction functionOne() {\n  let n = 9;\n  \n  function functionTwo() {\n    let n = 10;\n    console.log(n);  // First log\n  }\n\n  functionTwo();\n\n  console.log(n);  // Second log\n}\n\nfunctionOne();\n\nconsole.log(n);  // Third log\n```\n",
+                "answers": [
+                  {
+                    "id": "a1512510739703",
+                    "text": "`8`, `9`, `10`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512510762803",
+                    "text": "`10`, `9`, `9`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512510763363",
+                    "text": "`9`, `10`, `8`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512510763755",
+                    "text": "`10`, `9`, `8`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512510778467",
+                    "text": " It is indeterminant.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469128,
+              "key": "96982aef-e4fe-45eb-ad41-96f1fd639f59",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Summary\n\nWhen a function is run, it creates its own **scope**. A function's scope is the set of variables available for use within that function. The scope of a function includes:\n\n1. The function's arguments.\n2. Local variables declared within the function.\n3. Variables from its parent function's scope.\n4. Global variables.\n\nVariables in JavaScript are also _function-scoped_. This means that any variables defined inside a function are not available for use outside the function, though any variables defined within blocks (e.g. `if` or `for`) _are_ available outside that block.\n\nWhen it comes to accessing variables, the JavaScript engine will traverse the **scope chain**, first looking at the innermost level (e.g., a function's local variables), then to outer scopes, eventually reaching the global scope if necessary.\n\nIn this section, we've seen quite a few examples of a nested function being able to access variables declared in its parent function's scope (i.e., in the scope in which that function was nested). These functions, combined with the lexical environment it which it was declared, actually have a very particular name: **closure**. Closures are _very_ closely related to scope in JavaScript, and lead to some powerful and useful applications. We'll take a look at closures in detail next!\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 469129,
+              "key": "cdd48f4b-d351-41a2-bff8-0691b664ac59",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Further Research\n\n* [Intro to JavaScript](https://www.udacity.com/course/intro-to-javascript--ud803) (Lesson 5's coverage of scope)\n* Douglas Crockford's discussion of block-scoped variables in [The Better Parts](https://www.youtube.com/watch?v=Ji6NHEnNHcA&t=26m9s)\n* [Block Scoping Rules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block#Description) on MDN\n* [Functions and Function Scope](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions) on MDN",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 469130,
+          "key": "4a704701-a6ec-4882-8075-13524d1cd68a",
+          "title": "Closures",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4a704701-a6ec-4882-8075-13524d1cd68a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469182,
+              "key": "2f0705da-f260-40d5-b361-abb4324a783a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Functions Retain Their Scope\n\nWe just looked at how function scope works and how a scope chain is created. Just to recap: when an **identifier** (i.e., a variable) is used, the JavaScript engine will check the scope chain to retrieve the value for that identifier. The identifier might be found in the local scope (either in the function or block). If it's not found locally, then it might exist in an outer scope. It'll then keep checking the next outer scope followed by the next outer scope until it reaches the global scope (if necessary). \n\nIdentifier lookup and the scope chain are really powerful tools for a function to access identifiers in the code. In fact, this lets you do something really interesting: create a function now, package it up with some variables, and save it to run later. If you have five buttons on the screen, you could write five different click handler functions, or you could use the same code five times with different saved values.\n\nLet's check out an example of a function retaining access to its scope. Consider the `remember()` function below:\n\n```js\nfunction remember(number) {\n    return function() {\n        return number;\n    }\n}\n\nconst returnedFunction = remember(5);\n\nconsole.log( returnedFunction() );\n// 5\n```\n\nWhen the Javascript engine enters `remember()`, it creates a new execution scope that points back to the prior execution scope. This new scope includes a reference to the `number` parameter (an immutable `Number` with the value `5`). When the engine reaches the inner function (a _function expression_), it attaches a link to the current execution scope.\n\nThis process of a function retaining access to its scope is called a **closure**. In this example, the inner function \"closes over\" `number`. A closure can capture any number of parameters and variables that it needs. MDN defines a closure as:\n\n> \"the combination of a function and the lexical environment within which that function was declared.\"\n\nThis definition might not make a lot of sense if you don't know what the words \"lexical environment\" mean. The [ES5 spec](http://es5.github.io/#x10.2) refers to a lexical environment as:\n\n> \"the association of Identifiers to specific variables and functions based upon the lexical nesting structure of ECMAScript code.\"\n\nIn this case, the \"lexical environment\" refers the code as it was written in the JavaScript file. As such, a closure is:\n\n* The function itself, and\n* The code (but more importantly, the _scope chain of_) where the function is declared\n\nWhen a function is declared, it locks onto the scope chain. You might think this is pretty straightforward since we just looked at that in the previous section. What's really interesting about a function, though, is that it will _retain_ this scope chain -- even if it is invoked in a location _other_ than where it was declared. This is all due to the closure!\n\nSo looking back at the above example -- after `remember(5)` is executed and returned, how is the returned function still able to access `number`'s value (i.e., `5`)? In this section, we'll investigate how closures allow us to _store a snapshot of state_ at the time the function object is created. Let's jump in!\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 478381,
+              "key": "f6ab472f-2aa1-418c-9b9c-52e7f78a7fc6",
+              "title": "OOJS L2 50 - Closure Intro V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "qSUqXlJ3CII",
+                "china_cdn_id": "qSUqXlJ3CII.mp4"
+              }
+            },
+            {
+              "id": 469187,
+              "key": "7d9f5fd8-30ea-4d32-aaed-18365a515486",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "\n## Creating a Closure\n\nEvery time a function is defined, closure is created for that function. Strictly speaking, then, _every_ function has closure! This is because functions close over at least one other context along the scope chain: the global scope. However, the capabilities of closures really shine when working with a nested function (i.e., a function defined within another function). \n\nRecall that a nested function has access to variables outside of it. From what we have learned about the scope chain, this includes the variables from the outer, enclosing function itself (i.e., the parent function)! These nested functions close over (i.e., _capture_) variables that aren't passed in as arguments nor defined locally, otherwise known as **free variables**.\n\nAs we saw with the `remember()` function earlier, it is important to note that a function maintains a reference to its parent's scope. If the reference to the function is still accessible, the scope persists!\n\n### Closures and Scope\n\nClosures and scope are so closely related that you may even be surprised you had been working with them all along! Let's revisit an example from the previous section:\n\n```js\nconst myName = 'Andrew';\n\nfunction introduceMyself() {\n  const you = 'student';\n\n  function introduce() {\n    console.log(`Hello, ${you}, I'm ${myName}!`);\n  }\n\n  return introduce();\n}\n\nintroduceMyself();\n// 'Hello, student, I'm Andrew!'\n```\n\nTo recap: `myName` is a variable defined outside a function, hence it's a _global_ variable in the global scope. In other words, `myName` is available for all functions to use. \n\nBut let's look closely at the other variable: `you`. `you` is referenced by `introduce()`, even though it wasn't declared within `introduce()`! This is possible because a nested function's scope includes variables declared in the scope where the function is nested (i.e., variables from its parent function's scope, where the function is defined).\n\nAs it turns out, the `introduce()` function and its lexical environment form a _closure_. This way, `introduce()` has access to not only the global variable `myName`, but also the variable `you`, which was declared in the scope of its parent function, `introduceMyself()`. \n\nLet's see closures in action!\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 478382,
+              "key": "85da1cd2-8cef-4fe7-a55f-3058ac2214bc",
+              "title": "L2 - 52 - Closure Demo 1 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "dCcypTP_LEg",
+                "china_cdn_id": "dCcypTP_LEg.mp4"
+              }
+            },
+            {
+              "id": 492714,
+              "key": "0bb2cc6d-52ec-43c6-839d-43fa4be45eec",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "[Here's the code from the preceding video.](https://github.com/udacity/OOJS-screencasts/blob/master/L2-functions-at-runtime/53-closure-demo-1.js)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 469208,
+              "key": "10cc6154-1bbf-4b8f-8e5a-ea6b6c35e41a",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "10cc6154-1bbf-4b8f-8e5a-ea6b6c35e41a",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What is true about closures? Select all that apply:",
+                "answers": [
+                  {
+                    "id": "a1512523515121",
+                    "text": "A closure is created for a function only if that function is executed.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512523524451",
+                    "text": "Scope and closures are largely unrelated topics.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512523525235",
+                    "text": "A function maintains a reference to its parent's scope.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512523525819",
+                    "text": "If the reference to a parent function is still accessible, the scope persists.",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469209,
+              "key": "177da3dc-2813-4bbf-b093-3d93505aab16",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "177da3dc-2813-4bbf-b093-3d93505aab16",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What is the output when `result(10);` is executed?\n\n```js\nfunction outerFunction() {\n  let num1 = 5;\n\n  return function(num2) {\n    console.log(num1 + num2);\n  };\n}\n\nlet result = outerFunction();\n\nresult(10);\n// ???\n```\n",
+                "answers": [
+                  {
+                    "id": "a1512523609054",
+                    "text": "`5`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512523616363",
+                    "text": "`10`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512523616899",
+                    "text": "`15`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512523617499",
+                    "text": "`undefined`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512523626083",
+                    "text": "`null`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512523626611",
+                    "text": "`NaN`",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 478477,
+              "key": "2426e2ec-6f55-4d1e-93cb-cd6bebb0ed42",
+              "title": "2 56 - Closure Demo 2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "ojZBKgCv83s",
+                "china_cdn_id": "ojZBKgCv83s.mp4"
+              }
+            },
+            {
+              "id": 492715,
+              "key": "e147a38d-f25f-4ca0-b6ec-e6e0b3d411aa",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "[Here's the code from the preceding video.](https://github.com/udacity/OOJS-screencasts/blob/master/L2-functions-at-runtime/57-closure-demo-2.js)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 469212,
+              "key": "e7b809b6-dae0-4a14-8de3-50c3257d9047",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Applications of Closures\n\nTo recap, we've seen two common and powerful applications of closures:\n\n1. Passing arguments implicitly.\n2. At function declaration, storing a snapshot of scope.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 469213,
+              "key": "22cf3a93-631b-4f01-9a11-d949fa9ef1a9",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "22cf3a93-631b-4f01-9a11-d949fa9ef1a9",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6037723274674176",
+                "initial_code_files": [
+                  {
+                    "text": "/*\n\nDeclare a function named `expandArray()` that:\n\n* Takes no arguments\n* Contains a single local variable, `myArray`, which points to [1, 1, 1]\n* Returns an anonymous function that directly modifies `myArray` by\n  appending another `1` into it\n* The returned function then returns the value of `myArray`\n\n*/\n",
+                    "name": "StudentMain.js"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 469214,
+              "key": "ca4b8e80-69e8-4393-812a-ff81f2abb1cb",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Garbage Collection\n\nJavaScript manages memory with automatic **garbage collection**. This means that when data is no longer referable (i.e., there are no remaining references to that data available for executable code), it is \"garbage collected\" and will be destroyed at some later point in time. This frees up the resources (i.e., computer memory) that the data had once consumed, making those resources available for re-use.\n\nLet's look at garbage collection in the context of _closures_. We know that the variables of a parent function are accessible to the nested, inner function. If the nested function captures and uses its parent's variables (or variables along the scope chain, such as its parent's parent's variables), those variables will stay in memory as long as the functions that utilize them can still be referenced. \n\nAs such, referenceable variables in JavaScript are _not_ garbage collected! Let's quickly look back at the `myCounter` function from the previous video: \n\n```js\nfunction myCounter() {\n  let count = 0;\n\n  return function () {\n    count += 1;\n    return count;\n  };\n}\n```\n\nThe existence of the nested function keeps the `count` variable from being available for garbage collection, therefore `count` remains available for future access. After all, a given function (and its scope) does _not_ end when the function is returned. Remember that functions in JavaScript retain access to the scope that they were created in!\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 469215,
+              "key": "8063d18a-f0b7-4bce-a85d-8ebf7e79743d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Summary\n\nA **closure** refers to the combination of a function and the lexical environment in which that function was declared. Every time a function is defined, closure is created for that function. This is especially powerful in situations where a function is defined within another function, allowing the nested function to access variables outside of it. Functions also keep a link to its parent's scope even if the _parent_ has returned. This prevents data in its parents from being garbage collected.\n\nAt this point, we've worked a lot with functions declarations and function expressions. Did you know that you can write functions that can be immediately invoked after they're defined? We'll check out these **immediately-invoked function expressions** (IIFE's, or _iiffy's_) in the next section!\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 469216,
+              "key": "bb838405-89d9-4b3e-8c95-c09980697ed5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Further Research\n\n* [Memory Management](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management) on MDN\n* [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures) on MDN\n* [Lexical Environments](http://es5.github.io/#x10.2) in the ES5 spec",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 469217,
+          "key": "aca49107-327f-4a9e-afba-f897c08e894c",
+          "title": "Immediately-Invoked Function Expressions (IIFE)",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "aca49107-327f-4a9e-afba-f897c08e894c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469218,
+              "key": "4809bf39-0de6-479d-b6bd-470867d35c04",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Function Declarations vs. Function Expressions\n\nBefore we jump into **immediately-invoked function expressions** (IIFE), let's make sure we're on the same page regarding the differences between function _declarations_ and function _expressions_.\n\nA function _declaration_ defines a function and does not require a variable to be assigned to it. It simply declares a function, and doesn't itself return a value. Here's an example:\n\n```js\nfunction returnHello() {\n  return 'Hello!';\n}\n```\n\nOn the other hand, a function _expression_ does return a value. Function expressions can be anonymous or named, and are part of another expression's syntax. They're commonly assigned to variables, as well. Here's the same function as a function _expression_:\n\n```js\n// anonymous\nconst myFunction = function () {\n  return 'Hello!';\n};\n\n// named\nconst myFunction = function returnHello() {\n  return 'Hello!';\n};\n```\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 478384,
+              "key": "d46df1e8-7a1a-46eb-bc5b-a64e9cb19d2c",
+              "title": "L2 64 - IIFE Intro",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "jHrk_5erjxE",
+                "china_cdn_id": "jHrk_5erjxE.mp4"
+              }
+            },
+            {
+              "id": 469220,
+              "key": "3b4be444-a2a2-41f7-b2e5-c47bd32bdbaf",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Immediately-Invoked Function Expressions: Structure and Syntax\n\nAn immediately-invoked function expression, or IIFE (pronounced _iffy_), is a function that is called immediately after it is defined. Check out the following example:\n\n```js\n(function sayHi(){\n    alert('Hi there!');\n  }\n)();\n\n// alerts 'Hi there!'\n```\n\nThe syntax might seem a bit odd, but all we're doing is wrapping a function in parentheses, then adding a pair of parentheses at the end of that to invoke it! \n\n### Passing Arguments into IIFE's\n\nLet's look into how we can go about passing arguments into IIFE's. Consider the following example of an _anonymous_ function expression that takes in a single argument:\n\n```js\n(function (name){\n    alert(`Hi, ${name}`);\n  }\n)('Andrew');\n\n// alerts 'Hi, Andrew'\n```\n\nThe second pair of parentheses not only immediately executes the function preceding it -- it's also the place to put any arguments that the function may need! We pass in the string `'Andrew'`, which is stored in the function expression's `name` variable. It is then immediately invoked, alerting the message `'Hi, Andrew'` onto the screen.\n\nHere's another example of an IIFE, this time taking two arguments and returning their product:\n\n```js\n(function (x, y){\n    console.log(x * y);\n  }\n)(2, 3);\n\n// 6\n```\n\nAgain -- the arguments passed into the anonymous function (i.e., `2` and `3`) belong in trailing set of parentheses.\n\n## IIFE's and Private Scope\n\nOne of the primary uses for IIFE's is to create _private scope_ (i.e., private state). Recall that variables in JavaScript are traditionally scoped to a function. Knowing this, we can leverage the behavior of closures to protect variables or methods from being accessed! Consider the following example of a simple closure within an IIFE, referenced by `myFunction`:\n\n```js\nconst myFunction = (\n  function () {\n    const hi = 'Hi!';\n    return function () {\n      console.log(hi);\n    }\n  }\n)();\n```\n\nLet's break `myFunction` down and review the individual parts that make it up:\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 478569,
+              "key": "fa267835-7708-46e5-9dbe-366d376f4074",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a31c70b_l2-67-iife-with-a-closure/l2-67-iife-with-a-closure.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/fa267835-7708-46e5-9dbe-366d376f4074",
+              "caption": "_`myFunction` refers to an IIFE with a locally-defined variable, `hi`, and a returned function that closes over `hi` and prints its value to the console._",
+              "alt": "",
+              "width": 772,
+              "height": 234,
+              "instructor_notes": null
+            },
+            {
+              "id": 469222,
+              "key": "8c40e813-86ed-429d-92b6-57ae8f75e858",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "In the above image, an immediately-invoked function expression is used to immediately run a function. This function runs and returns an anonymous function that is stored in the `myFunction` variable.\n\nNote that the function that is being returned closes over (i.e., _captures_) the `hi` variable. This allows `myFunction` to maintain a private, mutable state that cannot be accessed outside the function! What's more: because the function expressed is called immediately, the IIFE wraps up the code nicely so that we don't pollute the global scope. \n\nIf any of this sounds familiar -- it's because IIFE's are _very_ closely related to everything you've learned about scope and closures!\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 474082,
+              "key": "bbb6b123-e1d6-4c03-9986-2d938f339522",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "bbb6b123-e1d6-4c03-9986-2d938f339522",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What is true about immediately-invoked function expressions? Select all that apply:",
+                "answers": [
+                  {
+                    "id": "a1512688681809",
+                    "text": "IIFE's can be used to create private scope",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512688738325",
+                    "text": "IIFE's are generally written without parentheses",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512688738893",
+                    "text": "IIFE's are very closely associated with scope and closures",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512688739301",
+                    "text": "There is an alternative syntax for writing an IIFE",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469225,
+              "key": "2de4a2eb-4768-40a7-9d79-644e54a98c02",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "> ## 💡 Alternative Syntax for IIFE's 💡\n\n> Recall the example from the beginning of this section:\n\n> ```js\n>(function sayHi(){\n>    alert('Hi there!');\n>  }\n>)();\n>\n>// alerts 'Hi there!'\n> ```\n\n> This works great, but there's also another way we can write this to achieve the same results! The first set of parentheses can wrap around the _entire_ expression. That is, we can move the first closing parenthesis to the very end:\n\n> ```js\n>(function sayHi(){\n>    alert('Hi there!');\n>}());\n>\n>// alerts 'Hi there!'\n>```\n\n> Again, using either approach will still produce the same result: alerting `'Hi there!'` in the browser.\n\n> Now, when would you choose one form over the other? Much of this is a stylistic choice; there is no \"correct\" way of auto-executing an anonymous function. Both are valid approaches for achieving the same result, and the JavaScript engine will still parse them each as a function expression (i.e., rather than as a function _declaration_). \n\n> Among developers, Douglas Crockford has mentioned that wrapping the entire unit in parentheses (as presented directly above) helps readers understand that what they're seeing is indeed an expression. Feel free to check out his chat [here](https://www.youtube.com/watch?feature=player_detailpage&v=taaEzHI9xyY#t=2020s). \n\n> All in all, however you decide to form your immediately-invoked function expressions is up to you!",
+              "instructor_notes": ""
+            },
+            {
+              "id": 469226,
+              "key": "5ba562d3-82f8-4770-9bc8-df50326af979",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## IIFE's, Private Scope, and Event Handling\n\nLet's check out another example of an immediately-invoked function expression -- this time in the context of handling an event. Say that we want to create a button on a page that alerts the user on every other click. One way to begin doing this would be to keep track of the number of times that the button was clicked. But how should we maintain this data? \n\nWe _could_ keep track of the count with a variable that we declare in the global scope (this would make sense if other parts of the application need access to the count data). However, an even better approach would be to enclose this data _in event handler itself_! \n\nFor one, this approach prevents us from polluting the global with extra variables (and potentially variable name collisions). What's more: if we use an IIFE, we can leverage a _closure_ to protect the `count` variable from being accessed externally! This prevents any accidental mutations or unwanted side-effects from inadvertently altering the count.\n\nTo begin, let's first create an HTML file containing a single button:\n\n```html\n<!-- button.html -->\n\n<html>\n\n  <body>\n\n     <button id='button'>Click me!</button>\n\n     <script src='button.js'></script>\n\n  </body>\n\n</html>\n```\n\nNo surprises here -- just a `<button>` tag with ID of `'button'`. We also reference a `button.js` file that we're now going to build. Within that file, let's retrieve a reference to that element via its ID, then save that reference to a variable, `button`:\n\n```js\n// button.js\n\nconst button = document.getElementById('button');\n```\n\nNext, we'll add an event listener to `button`, and listen for a `'click'` event. Then, we'll pass in an IIFE as the second argument:\n\n```js\n// button.js\n\nbutton.addEventListener('click', (function() {\n  let count = 0;\n\n  return function() {\n    count += 1;\n\n    if (count === 2) {\n      alert('This alert appears every other press!');\n      count = 0;\n    }\n  };\n})());\n```\n\nQuite a bit is going on in the IIFE, so let's break it down! \n\nFirst, we declare a local variable, `count`, which is initially set to `0`. We then return a function from _that_ function. The returned function increments `count`, but alerts the user and resets the count back to `0` if the count reaches `2`. \n\nWhat is important to note is that the returned function _closes over_ the `count` variable. That is, because a function maintains a reference to its parent's scope, `count` is available for the returned function to use! As a result, we immediately invoke a function that returns that function. And since the returned function has access to the internal variable, `count`, a **private scope** is created -- effectively protecting the data! \n\nContaining `count` in a closure allows us to retain the data from each click. Now, let's see this all in action!\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 478385,
+              "key": "da9d7dfd-d8e3-4c41-8ac9-d7c2686bb275",
+              "title": "L2 - 70 - IIFE In Events",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "lowdzRLtNKg",
+                "china_cdn_id": "lowdzRLtNKg.mp4"
+              }
+            },
+            {
+              "id": 492718,
+              "key": "c163bbd8-f786-4d86-9c08-f70ee91d0f72",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Here's the code from the preceding video:\n* [button.html](https://github.com/udacity/OOJS-screencasts/blob/master/L2-functions-at-runtime/button.html)\n* [button.js](https://github.com/udacity/OOJS-screencasts/blob/master/L2-functions-at-runtime/button.js)\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 474083,
+              "key": "6a446ef8-526e-49ca-b1a9-2c2c44e24902",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "6a446ef8-526e-49ca-b1a9-2c2c44e24902",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "The following immediately-invoked function expression is run in the browser:\n\n```js\n(function(n){\n  delete n;\n  return n;\n})(2);\n```\n\nWhat is the return value?\n",
+                "answers": [
+                  {
+                    "id": "a1512688825953",
+                    "text": "`undefined`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512688835430",
+                    "text": "`null`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512688835965",
+                    "text": "`NaN`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512688836541",
+                    "text": "`2`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512688843390",
+                    "text": "The console will throw an error.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469231,
+              "key": "4bf1ecf1-71e4-4beb-b035-3a34fe1083ba",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Benefits of Immediately-Invoked Function Expressions\n\nWe've seen how using an immediately-invoked function expression creates a private scope that protects variables or methods from being accessed. IIFE's ultimately use the returned functions to access private data within the closure. This works out very well: while these returned functions are publicly-accessible, they still maintain privacy for the variables defined within them!\n\nAnother great opportunity to use an IFFE is when you want to execute some code without creating extra global variables. However, note that an IIFE is only intended to be invoked once, to create a unique execution context. If you have some code that is expected to be re-used (e.g., a function meant to be executed more than once in the application), declaring the function and then invoking it might be a better option. \n\nAll in all, if you simply have a one-time task (e.g., initializing an application), an IIFE is a great way to get something done without polluting your the global environment with extra variables. Cleaning up the global namespace decreases the chance of collisions with duplicate variable names, after all.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 469232,
+              "key": "eafb6919-299f-47fc-9a4c-c5096acab336",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Summary\n\nAn **immediately-invoked function expression** (IIFE) is a function that is called immediately after it is defined. Utilizing an IIFE alongside closures allows for a **private scope**, which maintains privacy for variables defined within them. And since less variables are created, an IIFE will help to minimize pollution of the global environment, hindering the chances of variable name collisions.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 469233,
+              "key": "79d52b6a-c3c8-48cd-8c4d-01a4099e4e80",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Further Research\n\n* [Function Declarations vs. Function Expressions](https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/)\n* [An Introduction to IIFEs - Immediately Invoked Function Expressions](http://adripofjavascript.com/blog/drips/an-introduction-to-iffes-immediately-invoked-function-expressions.html) on A Drip of JavaScript\n* [Immediately-Invoked Function Expression (IIFE)](http://benalman.com/news/2010/11/immediately-invoked-function-expression/) by Ben Alman",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 469234,
+          "key": "00f37f28-4e41-4d6c-9c50-74d4338b6f2f",
+          "title": "Lesson Summary",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "00f37f28-4e41-4d6c-9c50-74d4338b6f2f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 478387,
+              "key": "9a985edb-65ea-45a9-8fb1-9b6d62152117",
+              "title": "Functions at Runtime - Summary",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "GHUgAUd6YoE",
+                "china_cdn_id": "GHUgAUd6YoE.mp4"
+              }
+            },
+            {
+              "id": 469236,
+              "key": "fb8e8031-6de1-41e9-b6b6-8a50c833254a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Further Research\n* Addy Osmani's [Learning JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

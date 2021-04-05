@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.279
+Great job. We started off this lesson by
+
+00:00:03.279 --> 00:00:06.330
+looking at how we can access properties in an object.
+
+00:00:06.330 --> 00:00:09.125
+We then went on to create and modify objects.
+
+00:00:09.125 --> 00:00:12.370
+Finally, we closed out the lesson with some useful object methods.
+
+00:00:12.369 --> 00:00:14.500
+For more foundation or reading on objects,
+
+00:00:14.500 --> 00:00:17.230
+definitely check out the links listed below.
+
+00:00:17.230 --> 00:00:21.144
+Next, we'll learn why JavaScript functions are actually objects.
+
+00:00:21.144 --> 00:00:22.660
+You might be surprised to discover,
+
+00:00:22.660 --> 00:00:25.000
+that you've been using these function objects all along.
+

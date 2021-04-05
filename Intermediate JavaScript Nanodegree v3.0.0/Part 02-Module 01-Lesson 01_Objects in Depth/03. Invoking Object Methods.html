@@ -1,0 +1,538 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Invoking Object Methods</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Objects in Depth</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Create and Modify Properties.html">02. Create and Modify Properties</a>
+    </li>
+    <li class="">
+      <a href="03. Invoking Object Methods.html">03. Invoking Object Methods</a>
+    </li>
+    <li class="">
+      <a href="04. Beware of Globals.html">04. Beware of Globals</a>
+    </li>
+    <li class="">
+      <a href="05. Extracting Properties and Values.html">05. Extracting Properties and Values</a>
+    </li>
+    <li class="">
+      <a href="06. Lesson Summary.html">06. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. Invoking Object Methods</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="functions-vs-methods">Functions vs. Methods</h2>
+<p>At this point, we've mostly seen objects with properties that behave more like <em>attributes</em>. That is, properties such as <code>color</code> or <code>type</code> are data that describe an object, but they don't "do" anything. We can extend <em>functionality</em> to objects by adding <strong>methods</strong> to them.</p>
+<p>Say that we have a function, <code>sayHello()</code>, which simply logs a message to the console:</p>
+<pre><code class="js language-js">function sayHello () {
+  console.log('Hi there!');
+}</code></pre>
+<p>Now, say that we also have a <code>developer</code> object with a single property, <code>name</code>:</p>
+<pre><code class="js language-js">const developer = {
+  name: 'Andrew'
+};</code></pre>
+<p>If we want to add the <code>sayHello()</code> function into the <code>developer</code> object, we can add the same way as we add other new properties: by providing  property name, then giving it a value. This time, the value of the property is a <em>function</em>!</p>
+<pre><code class="js language-js">developer.sayHello = function () {
+  console.log('Hi there!');
+};</code></pre>
+<p>This is how the updated <code>developer</code> object looks:</p>
+<pre><code class="js language-js">{
+  name: 'Andrew',
+  sayHello: function () {
+    console.log('Hi there!');
+  }
+}</code></pre>
+<p>So now that a <code>sayHello</code> property has been defined, how do we go about calling (i.e., invoking) its referenced function?</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="calling-methods">Calling Methods</h2>
+<p>We can access a function in an object using the property name. Again, another name for a function property of an object is a <em>method</em>. We can access it the same way that we do with other properties: by using dot notation or square bracket notation. Let's take a look back at the updated <code>developer</code> object above, then invoke its <code>sayHello()</code> method:</p>
+<pre><code class="js language-js">const developer = {
+  name: 'Andrew',
+  sayHello: function () {
+    console.log('Hi there!');
+  }
+};</code></pre>
+<pre><code class="js language-js">developer.sayHello();
+// 'Hi there!'
+
+developer['sayHello']();
+// 'Hi there!'</code></pre>
+<p>Just like calling a function, an object's method is called by adding parentheses at the end of the method's name. Note that both dot notation and square bracket notation return the same result!</p>
+<h3 id="passing-arguments-into-methods">Passing Arguments Into Methods</h3>
+<p>If the method takes arguments, you can proceed the same way, too:</p>
+<pre><code class="js language-js">const developer = {
+  name: 'Andrew',
+  sayHello: function () {
+    console.log('Hi there!');
+  },
+  favoriteLanguage: function (language) {
+    console.log(`My favorite programming language is ${language}`);
+  }
+};
+
+
+developer.favoriteLanguage('JavaScript');
+// My favorite programming language is JavaScript'</code></pre>
+<p>Let's see this all in action!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L1 -38 - Calling Methods Demo V1</p></h3>
+  <video controls>
+  <source src="03. L1 -38 - Calling Methods Demo V1-MgNjr5z3MGw.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="03. L1 -38 - Calling Methods Demo V1-MgNjr5z3MGw.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="03. L1 -38 - Calling Methods Demo V1-MgNjr5z3MGw.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="03. L1 -38 - Calling Methods Demo V1-MgNjr5z3MGw.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="03. L1 -38 - Calling Methods Demo V1-MgNjr5z3MGw.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/OOJS-screencasts/blob/master/L1-objects-in-depth/39-calling-methods-demo.js" rel="noopener noreferrer" target="_blank">Here's the code from the preceding video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is true about object methods? Select all that apply:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1512436302151" name="468626" id="a1512436302151">
+      <label for="a1512436302151"><p>Unlike how regular functions are invoked, to invoke a method you can simply access the object's property without parentheses (<code>()</code>). </p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512436330323" name="468626" id="a1512436330323">
+      <label for="a1512436330323"><p>Methods cannot accept any arguments.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512436330899" name="468626" id="a1512436330899">
+      <label for="a1512436330899"><p>Methods can be called without a receiving object.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512436331539" name="468626" id="a1512436331539">
+      <label for="a1512436331539"><p>A method is a property that points to a function.</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>A method is a property that points to a function.</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>Write an expression that invokes the <code>alerter()</code> function in the following array, <code>myArray</code>:</p>
+<pre><code class="js language-js">const myArray = [ function alerter() { alert('Hello!'); } ];</code></pre></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>Write an expression that invokes the function referenced by the <code>bell</code> object's <code>ring</code> property:</p>
+<pre><code class="js language-js">const bell = {
+  color: 'gold',
+  ring: function () {
+    console.log('Ring ring ring!');
+  }
+};</code></pre></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="💡-call-methods-by-property-name-💡">💡 Call Methods by Property Name 💡</h2>
+</blockquote>
+<blockquote>
+  <p>We've been using <em>anonymous</em> functions (i.e., functions without a name) for object methods. However, <em>naming</em> those functions is still valid JavaScript syntax. Consider the following object, <code>greeter</code>:</p>
+</blockquote>
+<blockquote>
+<pre><code class="js language-js">const greeter = {
+  greet: function sayHello() {
+    console.log('Hello!');
+  }
+};</code></pre>
+</blockquote>
+<blockquote>
+  <p>Note that the <code>greet</code> property points to a function with a name: <code>sayHello</code>. Whether this function is named or not, <code>greet</code> is invoked the same way:</p>
+</blockquote>
+<blockquote>
+<pre><code class="js language-js">greeter.greet();
+
+// 'Hello!'</code></pre>
+</blockquote>
+<blockquote>
+  <p>Named functions are great for a smoother debugging experience, since those functions will have a useful name to display in stack traces. They're completely optional, however, and you'll often read code written by developers who prefer one way or the other.</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="a-method-can-access-the-object-it-was-called-on">A Method Can Access the Object it was Called On</h2>
+<p>Recall that an object can contain data and the means to <em>manipulate that data</em>. But just <em>how</em> can an object reference its own properties, much less <em>manipulate</em> some of those properties itself? This is all possible with the <code>this</code> keyword!</p>
+<p>Using <code>this</code>, methods can directly access the object that it is called on. Consider the following object, <code>triangle</code>:</p>
+<pre><code class="js language-js">const triangle = {
+  type: 'scalene',
+  identify: function () {
+    console.log(`This is a ${this.type} triangle.`);
+  }
+};</code></pre>
+<p>Note that inside the <code>identify()</code> method, the value <code>this</code> is used. When you say <code>this</code>, what you're really saying is "<em>this</em> object" or "the object at hand." <code>this</code> is what gives the <code>identify()</code> method direct access to the <code>triangle</code> object's properties:</p>
+<pre><code class="js language-js">triangle.identify();
+
+// 'This is a scalene triangle.'</code></pre>
+<p>When the <code>identify()</code> method is called, the value of <code>this</code> is set to the object it was called on: <code>triangle</code>. As a result, the <code>identify()</code> method can access and use <code>triangle</code>'s <code>type</code> property, as seen in the above <code>console.log()</code> expression.</p>
+<p>Note that <code>this</code> is a reserved word in JavaScript, and cannot be used as an identifier (e.g. variable names, function names, etc.).</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L1-45 - This Demo V1</p></h3>
+  <video controls>
+  <source src="03. L1-45 - This Demo V1-VOkwNvRW_s0.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="03. L1-45 - This Demo V1-VOkwNvRW_s0.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="03. L1-45 - This Demo V1-VOkwNvRW_s0.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="03. L1-45 - This Demo V1-VOkwNvRW_s0.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="03. L1-45 - This Demo V1-VOkwNvRW_s0.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/OOJS-screencasts/blob/master/L1-objects-in-depth/46-this-demo.js" rel="noopener noreferrer" target="_blank">Here's the code from the preceding video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is true about <code>this</code>? Select all that apply:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1512437180521" name="468639" id="a1512437180521">
+      <label for="a1512437180521"><p><code>this</code> refers to "this property," or "this method."</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512437199261" name="468639" id="a1512437199261">
+      <label for="a1512437199261"><p>Using <code>this</code>, methods can access and manipulate an object's properties.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512437199813" name="468639" id="a1512437199813">
+      <label for="a1512437199813"><p>The exact value of <code>this</code> is set before a method is invoked.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512437200597" name="468639" id="a1512437200597">
+      <label for="a1512437200597"><p><code>this</code> is a reserved word in JavaScript.</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Using `this`, methods can access and manipulate an object's properties.</li>
+      <li>`this` is a reserved word in JavaScript.</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>Let's make sure we're still on the same page! Write an expression that invokes the function referenced by the <code>tree</code> object's <code>growOneFoot</code> property:</p>
+<pre><code class="js language-js">const tree = {
+  type: 'redwood',
+  leaves: 'green',
+  height: 80,
+  age: 15,
+  growOneFoot: function () {
+    this.height += 1;
+  }
+};</code></pre></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#468642-StudentMain-js" class="nav-item nav-link  active show" id="tab-468642-StudentMain-js" data-toggle="tab" role="tab"
+      aria-controls="468642-StudentMain-js" aria-selected="true">StudentMain.js</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="468642-StudentMain-js" aria-labelledby="tab-468642-StudentMain-js" role="tabpanel">
+      <pre><code></code>/*
+
+Create an object called &#x60;chameleon&#x60; with two properties:
+
+1. &#x60;color&#x60;, whose value is initially set to &#x27;green&#x27; or &#x27;pink&#x27;
+2. &#x60;changeColor&#x60;, a function which changes &#x60;chameleon&#x60;&#x27;s &#x60;color&#x60; to &#x27;pink&#x27;
+    if it is &#x27;green&#x27;, or to &#x27;green&#x27; if it is &#x27;pink&#x27;
+
+*/
+</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="💡-the-value-of-this💡">💡 The value of <code>this</code>💡</h2>
+</blockquote>
+<blockquote>
+  <p>Depending on <em>how</em> a function is called, <code>this</code> can be set to different values! Later in this course, we'll take a deep dive into different ways that functions can be invoked, and how each approach influences the value of <code>this</code>.</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>A <strong>method</strong> is a function property of an object. It is accessed the same way as any other property of the object (i.e., using dot notation or square bracket notation), and is invoked the same way as a regular function outside of an object (i.e., adding parentheses to the end of the expression).</p>
+<p>Since an object is a collection of data and the means to operate on that data, a method can access the object it was called on using the special <code>this</code> keyword. The value of <code>this</code> is determined when a method is invoked, and its value is the object on which the method was called. Since <code>this</code> is a reserved word in JavaScript, its value cannot be used as an identifier. Feel free to check out the links below for an additional look at methods and their relationship with <code>this</code>.</p>
+<p>We've spent a bit of time on <code>this</code> inside objects, but did you know that the value of <code>this</code> can have different meanings <em>outside</em> an object? In the next section, we'll take a close look at globals, their relationship with <code>this</code>, and the implications of using them.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_methods" rel="noopener noreferrer" target="_blank">Defining Methods</a> on MDN</li>
+<li><a href="https://javascript.info/object-methods#this-in-methods" rel="noopener noreferrer" target="_blank">"this" in Methods</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. Beware of Globals.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. Invoking Object Methods')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

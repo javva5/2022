@@ -1,0 +1,157 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.233 --> 00:00:02.567
+Aqui, temos o objeto
+"iceCreamTotals",
+
+00:00:02.600 --> 00:00:04.733
+que mostra o número total
+de galões de sorvete
+
+00:00:04.767 --> 00:00:07.133
+que cada membro da equipe
+da Udacity consumiu.
+
+00:00:07.167 --> 00:00:11.833
+Veronika: 600, Jessica: 818,
+David: mais de 900,
+
+00:00:12.200 --> 00:00:14.967
+Richard não parece
+muito preciso.
+
+00:00:15.000 --> 00:00:17.467
+Vamos adicionar
+mais uns zeros para ele.
+
+00:00:18.533 --> 00:00:19.667
+Perfeito.
+
+00:00:19.967 --> 00:00:22.300
+Agora, digamos
+que eu queria um array
+
+00:00:22.333 --> 00:00:25.000
+só com as chaves
+neste objeto "iceCreamTotals",
+
+00:00:25.033 --> 00:00:27.733
+isto é, que eu queria um array
+só com Veronika, Andrew,
+
+00:00:27.767 --> 00:00:29.100
+Jessica, David e Richard.
+
+00:00:29.367 --> 00:00:32.067
+O que podemos fazer é chamar
+"Object.keys"
+
+00:00:32.100 --> 00:00:34.433
+e passar o objeto
+"iceCreamTotals".
+
+00:00:34.467 --> 00:00:35.667
+Vamos fazer isso.
+
+00:00:38.667 --> 00:00:41.167
+Veja como o valor de retorno
+do chamado de "Object.keys",
+
+00:00:41.200 --> 00:00:44.500
+passando "iceCreamTotals",
+nos dá um array de todas as chaves
+
+00:00:44.533 --> 00:00:46.000
+do nosso objeto original.
+
+00:00:46.400 --> 00:00:50.033
+Mas e se quiséssemos apenas
+um array de valores deste objeto?
+
+00:00:50.433 --> 00:00:53.600
+De forma parecida,
+podemos chamar "Object.values",
+
+00:00:53.633 --> 00:00:55.967
+passando os mesmos objetos,
+e obtemos esse array.
+
+00:00:59.267 --> 00:01:03.367
+Aí está. Temos um array
+do valor de 600 até...
+
+00:01:05.267 --> 00:01:06.767
+10 milhões para o Richard.
+
+00:01:07.967 --> 00:01:09.100
+Certo.
+
+00:01:09.133 --> 00:01:13.633
+Essa foi uma maneira rápida
+de obter os valores das chaves.
+
+00:01:14.133 --> 00:01:16.700
+Nós também poderíamos
+ter feito um loop "for in"
+
+00:01:16.733 --> 00:01:18.233
+para construir
+o nosso próprio array.
+
+00:01:18.467 --> 00:01:21.767
+Com configuração similar à original,
+temos o objeto "iceCreamTotals"
+
+00:01:21.800 --> 00:01:22.900
+e as mesmas informações,
+
+00:01:22.933 --> 00:01:27.800
+mas, desta vez, vamos construir
+o nosso próprio array de resultados,
+
+00:01:27.833 --> 00:01:30.333
+e, depois, iterar pelo objeto
+"iceCreamTotals"
+
+00:01:30.367 --> 00:01:31.533
+com um loop "for in".
+
+00:01:32.900 --> 00:01:34.733
+Agora, se você conferir
+o resultado do array...
+
+00:01:37.600 --> 00:01:39.500
+vai ver que ele nos dá
+o mesmo valor de saída.
+
+00:01:40.800 --> 00:01:42.267
+Vou colocá-los lado a lado.
+
+00:01:43.700 --> 00:01:45.900
+Note que o resultado do array
+que construímos
+
+00:01:45.933 --> 00:01:48.967
+dá o mesmo valor de saída
+que a chamada do "Object.keys"
+
+00:01:49.000 --> 00:01:50.433
+que fizemos originalmente.
+
+00:01:51.233 --> 00:01:53.433
+Usar "Object.keys" nos dá
+o mesmo resultado
+
+00:01:53.467 --> 00:01:55.467
+que obteríamos fazendo
+o loop por ele.
+
+00:01:55.500 --> 00:01:56.833
+É só um pouco mais legível
+
+00:01:56.867 --> 00:01:58.200
+e muito menos código
+para escrever.
+

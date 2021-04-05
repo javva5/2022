@@ -1,0 +1,97 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.055
+Here, we have the cat object from earlier,
+
+00:00:02.055 --> 00:00:05.235
+and you can see how it has four properties: age,
+
+00:00:05.235 --> 00:00:09.720
+name, meow, and greet, which point to a function.
+
+00:00:09.720 --> 00:00:12.410
+Now, let's go ahead and add two more properties.
+
+00:00:12.410 --> 00:00:15.650
+Let's just say that this cat has a color property.
+
+00:00:15.650 --> 00:00:18.240
+I mean, give it a value of gray.
+
+00:00:18.239 --> 00:00:27.199
+And we can also say that this cat has a sayName property and we give this one a function.
+
+00:00:28.280 --> 00:00:32.780
+Let's go ahead and see what the new cat object looks like.
+
+00:00:32.780 --> 00:00:38.545
+I'm going to clear my console.
+
+00:00:38.545 --> 00:00:41.179
+Okay. Now, we can see that in
+
+00:00:41.179 --> 00:00:44.179
+addition to the four original properties that we had in the cat object,
+
+00:00:44.179 --> 00:00:46.354
+it now has a color property, gray,
+
+00:00:46.354 --> 00:00:47.744
+and the sayName property,
+
+00:00:47.744 --> 00:00:49.669
+which points to a function.
+
+00:00:49.670 --> 00:00:52.510
+Now, let's change up this cat property just a little bit.
+
+00:00:52.509 --> 00:00:57.754
+Let's go ahead and delete the greet property from the cat because,
+
+00:00:57.755 --> 00:01:00.136
+of course, cats can't talk.
+
+00:01:00.136 --> 00:01:05.635
+Now, if we try to invoke the greet method on this cat object,
+
+00:01:05.635 --> 00:01:08.665
+we get a type error.
+
+00:01:08.665 --> 00:01:10.510
+Cat.greet is not a function.
+
+00:01:10.510 --> 00:01:14.440
+Let's kind of see what's going on. If we access the property on its own,
+
+00:01:14.439 --> 00:01:16.239
+we can see that it's undefined.
+
+00:01:16.239 --> 00:01:18.351
+It actually doesn't exist in this object anymore.
+
+00:01:18.352 --> 00:01:21.237
+So, that's why you get a type error when we're trying to invoke the greet method.
+
+00:01:21.236 --> 00:01:24.194
+Let's check out the cat object.
+
+00:01:24.194 --> 00:01:27.284
+So, running out of space down here,
+
+00:01:27.284 --> 00:01:29.314
+let's go ahead and collapse the original one
+
+00:01:29.314 --> 00:01:32.399
+and take a look at what's going on inside the new cat object.
+
+00:01:32.400 --> 00:01:34.520
+You see that it has now five properties: age,
+
+00:01:34.519 --> 00:01:37.009
+color, meow, name, and sayName.
+
+00:01:37.010 --> 00:01:41.000
+Notice how the greet property is now gone because we deleted it.
+

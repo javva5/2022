@@ -1,0 +1,133 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.314
+Here, we have the dog object with a couple properties on it.
+
+00:00:03.314 --> 00:00:05.745
+Three of which are actually methods.
+
+00:00:05.745 --> 00:00:08.460
+Let's check out each of these methods and see how each of them can
+
+00:00:08.460 --> 00:00:12.105
+access the dog object using the special "this" keyword.
+
+00:00:12.105 --> 00:00:14.859
+Let's start off the very top, "whatIsThis".
+
+00:00:14.859 --> 00:00:16.320
+If we called "whatIsThis" on dog,
+
+00:00:16.320 --> 00:00:22.140
+all it's going to do is print out the value of "this" to the console.
+
+00:00:22.140 --> 00:00:23.969
+So let's see what this looks like.
+
+00:00:23.969 --> 00:00:26.549
+Pretty interesting. So it looks like we have
+
+00:00:26.550 --> 00:00:29.274
+an object with a couple of properties on it: name,
+
+00:00:29.274 --> 00:00:31.664
+age, "whatIsThis", woof, and "ageOneYear".
+
+00:00:31.664 --> 00:00:34.850
+It's actually the same set of properties as the properties in dog
+
+00:00:34.850 --> 00:00:38.329
+because "this" refers to the dog object itself.
+
+00:00:38.329 --> 00:00:41.179
+That's pretty straightforward. Check out the next one.
+
+00:00:41.179 --> 00:00:44.219
+If we call the "woof" on dog,
+
+00:00:44.219 --> 00:00:49.364
+what we get printed to the console is the message, "Jodi says 'woof!'"
+
+00:00:49.365 --> 00:00:51.914
+So, let's kind of explore how it does that.
+
+00:00:51.914 --> 00:00:54.464
+So when woof, what's your console logging is
+
+00:00:54.465 --> 00:00:58.330
+this.name concatenated with a string says "woof".
+
+00:00:58.329 --> 00:01:00.960
+So, we know for the example that "this",
+
+00:01:00.960 --> 00:01:02.945
+just refers to the dog object.
+
+00:01:02.945 --> 00:01:04.364
+So, this is dog,
+
+00:01:04.364 --> 00:01:07.875
+accessing the name property gets us the string "Jodi".
+
+00:01:07.875 --> 00:01:11.909
+So if you add that together this.name which is Jodi plus "says 'woof!'",
+
+00:01:11.909 --> 00:01:14.118
+you get "Jodi says 'woof!'".
+
+00:01:14.118 --> 00:01:17.010
+Great. So we'll check out the next one, "ageOneYear".
+
+00:01:17.010 --> 00:01:20.540
+Let's go ahead and call this one on dog.
+
+00:01:21.969 --> 00:01:27.034
+It looks like what we get is current age: 8.
+
+00:01:27.034 --> 00:01:28.364
+So how does it do that?
+
+00:01:28.364 --> 00:01:31.164
+Let's take a look a little more closely at the "ageOneYear" method.
+
+00:01:31.165 --> 00:01:37.405
+So, we see that it accesses the this.age property and increments that by a value of 1.
+
+00:01:37.405 --> 00:01:40.090
+Well, again we know "this" refers to a dog.
+
+00:01:40.090 --> 00:01:42.895
+So if we grab the age property of dog,
+
+00:01:42.894 --> 00:01:44.924
+we can see that it's a value of 7.
+
+00:01:44.924 --> 00:01:47.134
+And then 7 incremented by 1,
+
+00:01:47.135 --> 00:01:49.090
+is going to give you 8.
+
+00:01:49.090 --> 00:01:51.640
+And after that, all the method does is
+
+00:01:51.640 --> 00:01:53.724
+that it's going to print the console the string "Current
+
+00:01:53.724 --> 00:01:58.944
+age" and concatenate that with this.age which is now going to be 8.
+
+00:01:58.944 --> 00:02:03.914
+So, "ageOneYear" can not only access the age property of the dog object,
+
+00:02:03.915 --> 00:02:08.645
+it can also directly mutate it by incrementing it by a value of 1.
+
+00:02:08.645 --> 00:02:11.094
+So everything you just saw here was possible using
+
+00:02:11.094 --> 00:02:16.819
+the "this" keyword which gives methods access to the object on which it was called.
+

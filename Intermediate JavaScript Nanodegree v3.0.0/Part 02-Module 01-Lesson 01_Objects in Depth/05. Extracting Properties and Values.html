@@ -1,0 +1,371 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Extracting Properties and Values</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Objects in Depth</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Create and Modify Properties.html">02. Create and Modify Properties</a>
+    </li>
+    <li class="">
+      <a href="03. Invoking Object Methods.html">03. Invoking Object Methods</a>
+    </li>
+    <li class="">
+      <a href="04. Beware of Globals.html">04. Beware of Globals</a>
+    </li>
+    <li class="">
+      <a href="05. Extracting Properties and Values.html">05. Extracting Properties and Values</a>
+    </li>
+    <li class="">
+      <a href="06. Lesson Summary.html">06. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. Extracting Properties and Values</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="object-methods">Object Methods</h2>
+<p>Do you remember earlier when we used the <code>Object()</code> constructor function to create (i.e., instantiate) new objects with the <code>new</code> keyword?</p>
+<pre><code class="js language-js">const myNewFancyObject = new Object();</code></pre>
+<p>The <code>Object()</code> function actually includes a few methods of its own to aid in the development of your applications. These methods are:</p>
+<ul>
+<li><code>Object.keys()</code></li>
+<li><code>Object.values()</code></li>
+</ul>
+<p>Whether you're building logic in your code, or just writing a utility "helper" function, feel free to use these methods as necessary. Let's see how each of these work!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="objectkeys-and-objectvalues">Object.keys() and Object.values()</h2>
+<p>At its core, an object is just a collection of key/value pairs. What if we want to extract <em>only</em> the keys from an object? Say we have this object representing a real-life dictionary:</p>
+<pre><code class="js language-js">const dictionary = {
+  car: 'automobile',
+  apple: 'healthy snack',
+  cat: 'cute furry animal',
+  dog: 'best friend'
+};</code></pre>
+<p>Having a collection of just the words (i.e., the <code>dictionary</code> object's keys) may be particularly useful. While we <em>could</em> use a <code>for...in</code> loop to iterate through an object and build our own list of keys, it can get a bit messy and verbose. Thankfully, JavaScript provides an abstraction just for this! </p>
+<p>When <code>Object.keys()</code> is given an object, it extracts just the <em>keys</em> of that object, then returns those keys in an array:</p>
+<pre><code class="js language-js">Object.keys(dictionary);
+
+// ['car', 'apple', 'cat', 'dog']</code></pre>
+<p>So <code>Object.keys()</code> gives returns an array of the provided object's property names. Likewise, if we want a list of the <em>values</em> of an object, we can use <code>Object.values()</code>:</p>
+<pre><code class="js language-js">Object.values(dictionary);
+
+// ['automobile', 'healthy snack', 'cute furry animal', 'best friend']</code></pre>
+<p>Excellent! Let's see it all in action.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L1 -68 - Object Keys And Object Values Demo V1</p></h3>
+  <video controls>
+  <source src="05. L1 -68 - Object Keys And Object Values Demo V1-mRgapwiy-MQ.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="05. L1 -68 - Object Keys And Object Values Demo V1-mRgapwiy-MQ.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="05. L1 -68 - Object Keys And Object Values Demo V1-mRgapwiy-MQ.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="05. L1 -68 - Object Keys And Object Values Demo V1-mRgapwiy-MQ.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="05. L1 -68 - Object Keys And Object Values Demo V1-mRgapwiy-MQ.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/OOJS-screencasts/blob/master/L1-objects-in-depth/70-objectkeys-and-objectvalues-demo.js" rel="noopener noreferrer" target="_blank">Here's the code from the preceding video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="support-for-objectkeys-and-objectvalues">Support for <code>Object.keys()</code> and <code>Object.values()</code></h2>
+</blockquote>
+<blockquote>
+  <p><code>Object.keys()</code> has been around for quite a long time, so it is fully supported by every browser.</p>
+</blockquote>
+<blockquote>
+  <p><code>Object.values()</code>, on the other hand, is significantly newer. It was officially added to the language specification in 2017. However, just because it's been added to the specification, it necessarily doesn't mean your browser supports it yet! </p>
+</blockquote>
+<blockquote>
+  <p>How do you know if your browser <em>does</em> support <code>Object.values()</code>? Check out the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values#Browser_compatibility" rel="noopener noreferrer" target="_blank">Browser Compatibility table</a>!</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is true about <code>Object.keys()</code>? Select all that apply.</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1512500867618" name="468878" id="a1512500867618">
+      <label for="a1512500867618"><p>The resulting array's elements are strings</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512500880587" name="468878" id="a1512500880587">
+      <label for="a1512500880587"><p>The method is used simply by calling <code>.keys</code> onto any given object</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512500881179" name="468878" id="a1512500881179">
+      <label for="a1512500881179"><p>In some environments, the return value of <code>Object.keys()</code> is actually an object.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512500881955" name="468878" id="a1512500881955">
+      <label for="a1512500881955"><p>The order of the array's elements are in the same order as using a <code>for</code> loop.</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>The resulting array's elements are strings</li>
+      <li>The order of the array's elements are in the same order as using a `for` loop.</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is true about <code>Object.values()</code>? Select all that apply.</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1512501106048" name="468879" id="a1512501106048">
+      <label for="a1512501106048"><p>The resulting array's elements are strings.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512501121927" name="468879" id="a1512501121927">
+      <label for="a1512501121927"><p>The method is used simply by calling <code>.values</code> onto any given object.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512501122431" name="468879" id="a1512501122431">
+      <label for="a1512501122431"><p>In some environments, the return value of <code>Object.values()</code> is actually an object.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512501123055" name="468879" id="a1512501123055">
+      <label for="a1512501123055"><p>The order of the array's elements are in the same order as using a <code>for</code> loop.</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>The order of the array's elements are in the same order as using a `for` loop.</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>Write an expression using <code>Object.keys()</code> to extract the keys (i.e., property names) from the <code>triangle</code> object:</p>
+<pre><code class="js language-js">const triangle = {
+  type: 'polygon',
+  sides: 3,
+  sumOfAngles: 180,
+  equilateral: true,
+  equiangular: true
+};</code></pre></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>The Object() constructor function has access to several methods to aid in development. To extract property names and values from an object, we can use:</p>
+<ul>
+<li><code>Object.keys()</code> returns an array of a given object's own keys (property <em>names</em>).</li>
+<li><code>Object.values()</code> returns an array of a given object's own values (property <em>values</em>).</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys" rel="noopener noreferrer" target="_blank">Object.keys()</a> on MDN</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values" rel="noopener noreferrer" target="_blank">Object.values()</a> on MDN</li>
+<li><a href="http://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html" rel="noopener noreferrer" target="_blank">Browser Compatibility</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. Lesson Summary.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. Extracting Properties and Values')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

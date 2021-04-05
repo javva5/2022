@@ -1,0 +1,133 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.267 --> 00:00:02.333
+Aqui, temos um objeto
+chamado "camaleão",
+
+00:00:02.367 --> 00:00:04.433
+além de uma função
+chamada "whoThis".
+
+00:00:04.933 --> 00:00:07.867
+Note como ambos utilizam
+a palavra-chave "this"
+
+00:00:07.900 --> 00:00:09.133
+em suas funções.
+
+00:00:09.167 --> 00:00:12.467
+Temos "this" aqui,
+além do método "lookAround",
+
+00:00:12.500 --> 00:00:14.200
+que utiliza "this" aqui.
+
+00:00:14.833 --> 00:00:17.733
+Vamos invocar o "lookAround"
+junto com a função "whoThis",
+
+00:00:18.067 --> 00:00:20.633
+e conferir a qual valor "this"
+se refere.
+
+00:00:21.233 --> 00:00:23.367
+Primeiro, vamos nos concentrar
+no método "lookAround",
+
+00:00:23.400 --> 00:00:25.033
+e voltar ao "whoThis"
+mais tarde.
+
+00:00:27.267 --> 00:00:30.300
+Agora, antes de invocarmos
+"lookAround" em "camaleão",
+
+00:00:30.333 --> 00:00:32.067
+vamos adicionar
+um depurador aqui.
+
+00:00:35.800 --> 00:00:39.033
+Agora, vamos adicionar o método
+"lookAround" a "camaleão".
+
+00:00:44.867 --> 00:00:48.033
+Dentro do método "lookAround",
+na linha 4,
+
+00:00:48.567 --> 00:00:50.267
+vamos conferir
+o que é "this".
+
+00:00:52.400 --> 00:00:55.133
+Note que "this" é um objeto
+com algumas propriedades,
+
+00:00:55.167 --> 00:00:57.433
+incluindo "eyes"
+e "lookAround",
+
+00:00:57.467 --> 00:00:58.567
+que aponta para uma função.
+
+00:00:59.067 --> 00:01:02.600
+Parece que quando um método
+é invocado em um objeto,
+
+00:01:02.633 --> 00:01:06.433
+"this" mostra-se o próprio objeto
+no qual o método foi chamado.
+
+00:01:07.367 --> 00:01:10.600
+Ótimo. Agora, vamos conferir
+o exemplo de mais cedo.
+
+00:01:11.433 --> 00:01:13.000
+Aqui está a função
+"whoThis" de novo,
+
+00:01:13.033 --> 00:01:14.500
+mas, antes de chamá-la,
+
+00:01:14.533 --> 00:01:16.400
+vamos adicionar um depurador
+aqui também.
+
+00:01:20.067 --> 00:01:21.167
+E, agora,
+se você chamá-la...
+
+00:01:24.700 --> 00:01:27.600
+podemos interromper a execução
+aqui na segunda linha de código,
+
+00:01:27.633 --> 00:01:29.400
+mas observe o que é "this".
+
+00:01:29.433 --> 00:01:31.400
+É o objeto "janela".
+
+00:01:32.200 --> 00:01:33.267
+É uma lista longa.
+
+00:01:33.300 --> 00:01:35.833
+Há muitas propriedades
+neste objeto "janela",
+
+00:01:35.867 --> 00:01:38.233
+mas se rolarmos
+para baixo...
+
+00:01:39.333 --> 00:01:41.533
+podemos ver
+que a função "whoThis"
+
+00:01:41.567 --> 00:01:44.167
+é definida, na verdade,
+neste objeto "janela"
+
+00:01:44.200 --> 00:01:46.367
+como uma propriedade.
+Isso é muito legal.
+

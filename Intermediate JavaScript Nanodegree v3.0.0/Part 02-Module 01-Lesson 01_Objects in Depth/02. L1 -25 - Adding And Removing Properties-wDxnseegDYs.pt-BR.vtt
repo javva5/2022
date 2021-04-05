@@ -1,0 +1,135 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.200 --> 00:00:02.000
+Aqui, temos o objeto "gato"
+de mais cedo,
+
+00:00:02.033 --> 00:00:04.233
+e você pode notar
+que ele tem 4 propriedades:
+
+00:00:04.533 --> 00:00:07.400
+"idade", "nome",
+"miau" e "saudação",
+
+00:00:07.467 --> 00:00:08.767
+que aponta para uma função.
+
+00:00:09.633 --> 00:00:12.233
+Agora, vamos adicionar
+mais duas propriedades.
+
+00:00:12.533 --> 00:00:15.433
+Digamos que este gato
+tenha uma propriedade "cor"
+
+00:00:15.467 --> 00:00:18.033
+e vamos atribuir a ela
+um valor "cinza".
+
+00:00:18.500 --> 00:00:22.333
+Também podemos dizer
+que este gato tem
+
+00:00:22.367 --> 00:00:23.867
+uma propriedade
+para dizer o nome,
+
+00:00:23.900 --> 00:00:25.367
+e vamos atribuir
+uma função a ela.
+
+00:00:30.233 --> 00:00:32.833
+Vamos conferir a aparência
+do novo objeto "gato".
+
+00:00:32.867 --> 00:00:34.067
+Eu vou limpar o meu console.
+
+00:00:40.133 --> 00:00:42.767
+Agora, vemos que,
+além das 4 propriedades originais
+
+00:00:42.800 --> 00:00:44.200
+que já tínhamos
+no objeto "gato",
+
+00:00:44.233 --> 00:00:46.367
+ela agora tem uma propriedade
+de cor cinza
+
+00:00:46.400 --> 00:00:49.100
+e uma propriedade para dizer o nome,
+que aponta para uma função.
+
+00:00:49.633 --> 00:00:52.533
+Agora, vamos alterar só um pouco
+esta propriedade "gato".
+
+00:00:52.567 --> 00:00:54.733
+Vamos deletar a...
+
+00:00:56.133 --> 00:00:57.333
+propriedade "saudação"
+do gato,
+
+00:00:57.367 --> 00:00:59.167
+porque, obviamente,
+gatos não sabem falar.
+
+00:01:00.700 --> 00:01:02.767
+Agora, se tentarmos invocar
+o método "saudação"
+
+00:01:02.800 --> 00:01:04.233
+neste objeto "gato"...
+
+00:01:07.200 --> 00:01:10.133
+obtemos um erro:
+"cat.greet não é uma função".
+
+00:01:10.400 --> 00:01:11.767
+Vamos ver o que ocorre.
+
+00:01:12.233 --> 00:01:14.267
+Se acessarmos
+a propriedade sozinha,
+
+00:01:14.800 --> 00:01:18.167
+vemos que ela está indefinida,
+ela não existe mais neste objeto,
+
+00:01:18.200 --> 00:01:21.100
+é por isso que obtemos um erro
+ao invocar o método "saudação".
+
+00:01:21.600 --> 00:01:22.933
+Vamos conferir
+o objeto "gato".
+
+00:01:25.800 --> 00:01:27.267
+Estamos ficando
+sem espaço aqui,
+
+00:01:27.300 --> 00:01:29.000
+então vamos reduzir
+o original
+
+00:01:29.033 --> 00:01:31.867
+e ver o que está acontecendo
+no novo objeto "gato".
+
+00:01:32.433 --> 00:01:34.200
+Vemos que, agora,
+ele tem 5 propriedades:
+
+00:01:34.233 --> 00:01:36.600
+"idade", "cor", "miau",
+"nome" e "dizer nome".
+
+00:01:36.633 --> 00:01:40.633
+Note como a propriedade "saudação"
+sumiu, porque a deletamos.
+

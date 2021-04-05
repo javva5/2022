@@ -1,0 +1,88 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.679
+Here we have an object called "chameleon" as well as a function called "whoThis".
+
+00:00:04.679 --> 00:00:09.214
+You can see how both of them utilizes "this" keyword in their functions.
+
+00:00:09.214 --> 00:00:14.330
+We've got "this" over here as well as the method "lookAround" utilizing "this" over here.
+
+00:00:14.330 --> 00:00:17.990
+Let's go ahead and invoke "lookAround" as well as the "whoThis" function,
+
+00:00:17.989 --> 00:00:21.274
+and then kind of check out what the value of "this" refers to.
+
+00:00:21.274 --> 00:00:25.974
+First, we'll focus on a "lookAround" method then come back to "whoThis" later.
+
+00:00:25.975 --> 00:00:30.255
+Now, before we invoke "lookAround" on "chameleon",
+
+00:00:30.254 --> 00:00:33.820
+let's go ahead and add a debugger in their.
+
+00:00:33.899 --> 00:00:40.879
+Now, let's go ahead and invoke the "lookAround" method on "chameleon".
+
+00:00:42.840 --> 00:00:48.555
+We're inside "lookAround" method on this line over here, line four.
+
+00:00:48.554 --> 00:00:51.259
+Let's go ahead and check out what this is.
+
+00:00:51.259 --> 00:00:55.159
+So, you can see that "this" is an object with a couple of properties
+
+00:00:55.159 --> 00:00:58.714
+including eyes and "lookAround" which points to a function.
+
+00:00:58.715 --> 00:01:02.585
+So, what it looks like is that when a method is invoked on an object,
+
+00:01:02.585 --> 00:01:07.310
+"this" turns out to be the object itself on which the method was called.
+
+00:01:07.310 --> 00:01:10.900
+Great. Now, let's go ahead and check out the other example from earlier.
+
+00:01:10.900 --> 00:01:12.965
+Here is the "whoThis" function again,
+
+00:01:12.965 --> 00:01:14.450
+but before we call it,
+
+00:01:14.450 --> 00:01:18.135
+let's go ahead and throw a debugger in there as well.
+
+00:01:18.135 --> 00:01:24.859
+And now, if we call it, again,
+
+00:01:24.859 --> 00:01:26.540
+we stop execution on this line of code,
+
+00:01:26.540 --> 00:01:27.685
+line two, over here,
+
+00:01:27.685 --> 00:01:29.195
+but check out what this is.
+
+00:01:29.194 --> 00:01:32.159
+Turns out to be the window object.
+
+00:01:32.159 --> 00:01:35.744
+It's quite a long list. There's actually quite a few properties on this window object.
+
+00:01:35.745 --> 00:01:38.615
+But if we scroll down,
+
+00:01:38.614 --> 00:01:42.559
+you can see that the "whoThis" function is actually defined
+
+00:01:42.560 --> 00:01:46.340
+right on this window object as a property. So, that's pretty neat.
+

@@ -1,0 +1,172 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.500 --> 00:00:03.133
+Aqui, temos o objeto "cão"
+com algumas propriedades.
+
+00:00:03.500 --> 00:00:05.267
+Três delas são,
+na verdade, métodos.
+
+00:00:05.767 --> 00:00:07.100
+Vamos conferir
+cada um desses métodos
+
+00:00:07.133 --> 00:00:09.867
+e ver como cada um deles
+pode acessar o objeto "cão"
+
+00:00:09.900 --> 00:00:11.867
+usando a palavra-chave
+especial "this".
+
+00:00:11.900 --> 00:00:14.100
+Vamos começar do topo,
+em "whatIsThis".
+
+00:00:14.767 --> 00:00:16.467
+Se chamarmos "whatIsThis"
+em "cão",
+
+00:00:18.400 --> 00:00:21.867
+o valor "this"
+será impresso no console,
+
+00:00:21.900 --> 00:00:23.333
+então vamos ver
+como isso funciona.
+
+00:00:24.733 --> 00:00:28.367
+Interessante. Parece que temos
+um objeto com algumas propriedades:
+
+00:00:28.400 --> 00:00:31.633
+"nome", "idade","o que é isso",
+"latido" e "idade um ano".
+
+00:00:31.667 --> 00:00:34.933
+É o mesmo conjunto
+de propriedades que temos em "cão",
+
+00:00:34.967 --> 00:00:38.100
+porque isso se refere
+ao próprio objeto "cão'.
+
+00:00:38.467 --> 00:00:40.367
+Essa é muito direta.
+Vamos conferir a próxima.
+
+00:00:41.400 --> 00:00:42.900
+Se chamarmos "latido"
+em "cão",
+
+00:00:45.667 --> 00:00:47.467
+o que obtemos impresso
+no console é a mensagem:
+
+00:00:47.500 --> 00:00:48.767
+"Jodi diz au-au".
+
+00:00:49.533 --> 00:00:51.300
+Vamos explorar
+como ele faz isso.
+
+00:00:52.000 --> 00:00:54.433
+Em "latido",
+o que o seu console registra
+
+00:00:54.467 --> 00:00:58.067
+é "this.name", concatenado
+com a string "says 'woof'".
+
+00:00:58.633 --> 00:01:02.700
+Já sabemos que "this"
+se refere apenas ao objeto "cão".
+
+00:01:02.733 --> 00:01:06.100
+Então, se "this" é "cão",
+acessando a propriedade "nome",
+
+00:01:06.600 --> 00:01:07.933
+obtemos a string "Jodi".
+
+00:01:07.967 --> 00:01:10.700
+Então, se adicionarmos isso junto,
+"this.name", que é "Jodi",
+
+00:01:10.733 --> 00:01:13.767
+mais "says 'woof'",
+temos "Jodi diz au-au".
+
+00:01:14.300 --> 00:01:16.767
+Ótimo. Vamos conferir a próxima,
+"idade um ano".
+
+00:01:17.267 --> 00:01:18.700
+Vamos chamá-la em "cão".
+
+00:01:24.000 --> 00:01:26.633
+Parece que o que obtemos
+é "idade atual: 8".
+
+00:01:27.033 --> 00:01:28.133
+Como ele faz isso?
+
+00:01:28.300 --> 00:01:30.733
+Vamos ver o método "idade um ano"
+com mais detalhes.
+
+00:01:31.767 --> 00:01:34.800
+Vemos que ele acessa
+a propriedade "this.age",
+
+00:01:34.833 --> 00:01:37.333
+e a incrementa
+com o valor de 1.
+
+00:01:37.733 --> 00:01:39.900
+Repetindo, sabemos
+que "this" se refere a "cão",
+
+00:01:40.267 --> 00:01:42.800
+então, se pegarmos a propriedade
+"idade" de "cão",
+
+00:01:42.833 --> 00:01:45.033
+vemos que ela
+tem um valor de 7,
+
+00:01:45.067 --> 00:01:48.633
+e 7 incrementado com 1,
+vai nos dar 8.
+
+00:01:49.567 --> 00:01:54.267
+Depois disso, o método vai imprimir
+no console a string "Current age"
+
+00:01:54.633 --> 00:01:58.467
+e concatená-lo com "this.age",
+que, agora, será 8.
+
+00:01:59.433 --> 00:02:02.733
+Então, "idade um ano" não só pode
+acessar a propriedade "idade"
+
+00:02:02.767 --> 00:02:05.433
+do objeto "cão", como também
+pode modificá-la diretamente,
+
+00:02:05.467 --> 00:02:07.967
+incrementando-a
+com o valor de 1.
+
+00:02:08.700 --> 00:02:12.333
+Tudo o que vimos aqui foi possível
+usando a palavra-chave "this",
+
+00:02:12.367 --> 00:02:16.133
+que dá aos métodos acesso
+ao objeto no qual foram chamados.
+

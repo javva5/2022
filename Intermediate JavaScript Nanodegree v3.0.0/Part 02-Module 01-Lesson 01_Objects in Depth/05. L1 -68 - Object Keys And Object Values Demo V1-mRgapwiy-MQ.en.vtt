@@ -1,0 +1,106 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.475
+Here we have the iceCreamTotals object,
+
+00:00:02.475 --> 00:00:04.679
+which shows the total number of gallons of ice cream
+
+00:00:04.679 --> 00:00:07.339
+that each member of the Udacity Web team has eaten.
+
+00:00:07.339 --> 00:00:12.269
+Veronica with 600, Jessica 818, David over 9,000.
+
+00:00:12.269 --> 00:00:15.054
+Richard didn't seem too accurate.
+
+00:00:15.054 --> 00:00:17.532
+Let's go ahead add a couple more zeros onto him.
+
+00:00:17.532 --> 00:00:19.646
+Wonderful.
+
+00:00:19.646 --> 00:00:24.870
+Now let's say I wanted an array of just the keys in this iceCreamTotals object,
+
+00:00:24.870 --> 00:00:27.105
+meaning that I want an array of only Veronica,
+
+00:00:27.105 --> 00:00:29.493
+Andrew, Jessica, David, and Richard.
+
+00:00:29.493 --> 00:00:34.170
+What we can do is to call Object.keys and pass in the iceCreamTotals object.
+
+00:00:34.170 --> 00:00:38.554
+Let's go ahead and do that.
+
+00:00:38.554 --> 00:00:43.070
+You can see how the return value of calling Object.keys and passing iceCreamTotals,
+
+00:00:43.070 --> 00:00:46.380
+gives us an array of all the keys in that original object.
+
+00:00:46.380 --> 00:00:50.355
+Now, what if we wanted just an array of values of this object?
+
+00:00:50.354 --> 00:00:52.484
+Well similarly, we can just hit
+
+00:00:52.484 --> 00:00:57.479
+Object.values passing the same object. We can get that array.
+
+00:00:57.479 --> 00:01:02.319
+And here we have it, we have the array of just the values 600 all the way
+
+00:01:02.320 --> 00:01:08.784
+to 10 million for Richard. All right.
+
+00:01:08.784 --> 00:01:10.329
+So that was just a very clean,
+
+00:01:10.329 --> 00:01:13.920
+very quick way of doing things to get the key values.
+
+00:01:13.920 --> 00:01:17.995
+What we also could have done was just do a for in loop to build our own array.
+
+00:01:17.995 --> 00:01:19.660
+Similar to the original setup,
+
+00:01:19.659 --> 00:01:21.724
+we have the iceCreamTotals object,
+
+00:01:21.724 --> 00:01:24.384
+same information but now this time what we're doing
+
+00:01:24.385 --> 00:01:27.530
+is creating our own results array that are going to build up,
+
+00:01:27.530 --> 00:01:32.368
+and then iterating through the iceCreamTotals object with a for in loop.
+
+00:01:32.368 --> 00:01:37.626
+And now, if you check the result array,
+
+00:01:37.626 --> 00:01:40.064
+you'll see that it gives us the same output.
+
+00:01:40.064 --> 00:01:42.718
+Let me go ahead and put this side by side.
+
+00:01:42.718 --> 00:01:46.189
+Notice that the result of the array that we build ourselves gives us
+
+00:01:46.189 --> 00:01:50.599
+the same output as the Object.keys call we made originally.
+
+00:01:50.599 --> 00:01:55.364
+Using Object.keys gives us the same result as if we loop through it ourselves,
+
+00:01:55.364 --> 00:01:58.119
+but it's a little bit more readable and also a lot less code to write.
+

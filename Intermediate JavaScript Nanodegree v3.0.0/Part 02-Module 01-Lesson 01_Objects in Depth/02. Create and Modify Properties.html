@@ -1,0 +1,629 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Create and Modify Properties</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Objects in Depth</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Create and Modify Properties.html">02. Create and Modify Properties</a>
+    </li>
+    <li class="">
+      <a href="03. Invoking Object Methods.html">03. Invoking Object Methods</a>
+    </li>
+    <li class="">
+      <a href="04. Beware of Globals.html">04. Beware of Globals</a>
+    </li>
+    <li class="">
+      <a href="05. Extracting Properties and Values.html">05. Extracting Properties and Values</a>
+    </li>
+    <li class="">
+      <a href="06. Lesson Summary.html">06. Lesson Summary</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Create and Modify Properties</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="creating-objects">Creating Objects</h2>
+<p>To create a new, blank (i.e., “empty”) object, you can use object <strong>literal notation</strong>, or the <code>Object()</code> <strong>constructor function</strong>. If you're not familiar with constructor functions, no need to worry! We'll jump into them in-depth in Lesson 3. For now, just know that the following two expressions are equivalent:</p>
+<pre><code class="js language-js">// Using literal notation:
+
+const myObject = {};
+
+// Using the Object() constructor function:
+
+const myObject = new Object();</code></pre>
+<p>While both methods ultimately return an object without properties of its own, the <code>Object()</code> constructor function is a bit slower and more verbose. As such, the recommended way to create new objects in JavaScript is to use literal notation.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="modifying-properties">Modifying Properties</h2>
+<p>Keep in mind that data within objects are <em>mutable</em>, meaning that data can be changed. There are a few exceptions to this, but for now, let's see how we can modify/reassign existing properties in an object. </p>
+<p>Consider the following <code>cat</code> object:</p>
+<pre><code class="js language-js">const cat = {
+  age: 2,
+  name: 'Bailey',
+  meow: function () {
+    console.log('Meow!');
+  },
+  greet: function (name) {
+    console.log(`Hello ${name}`);
+  }
+};</code></pre>
+<p>Now, let's go ahead change it up a bit!</p>
+<pre><code class="js language-js">cat.age += 1;
+
+cat.age;
+// 3
+
+
+cat.name = 'Bambi';
+
+cat.name;
+// 'Bambi'</code></pre>
+<p>After incrementing the value of the <code>age</code> property by 1, and reassigning <code>name</code>'s value to <code>'Bambi'</code>, our <code>cat</code> object now looks like:</p>
+<pre><code class="js language-js">{
+  age: 3,
+  name: 'Bambi',
+  meow: function () {
+    console.log('Meow!');
+  },
+  greet: function (name) {
+    console.log(`Hello ${name}`);
+  }
+};</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="adding-properties">Adding Properties</h2>
+<p>Properties can be added to objects simply by specifying the property name, then giving it a value. Let's start off with a blank object, then add two properties:</p>
+<pre><code class="js language-js">const printer = {};
+
+printer.on = true;
+printer.mode = 'black and white';</code></pre>
+<p>The above example uses dot notation to add properties, but keep in mind that square bracket notation works just as well:</p>
+<pre><code class="js language-js">printer['remainingSheets'] = 168;</code></pre>
+<p>Likewise, we can add a method to the <code>printer</code> object in a similar manner. This time, the value of the property is an anonymous (i.e., unnamed) function:</p>
+<pre><code class="js language-js">printer.print = function () {
+  console.log('The printer is printing!');
+};</code></pre>
+<p>Great! The complete <code>printer</code> object now looks like the following:</p>
+<pre><code class="js language-js">{
+  on: true,
+  mode: 'black and white',
+  remainingSheets: 168,
+  print: function () {
+    console.log('The printer is printing!');
+  }
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="removing-properties">Removing Properties</h2>
+<p>Recall that since objects are <em>mutable</em>, not only can we modify existing properties (or even add new ones) -- we can also <em>delete</em> properties from objects.</p>
+<p>Say that the <code>printer</code> object above actually doesn't have any modes (i.e., <code>'black and white'</code>, <code>'color'</code>, etc.). We can go ahead and remove that property from <code>printer</code> using the <code>delete</code> operator.</p>
+<pre><code class="js language-js">delete printer.mode;
+
+// true</code></pre>
+<p>Note that <code>delete</code> directly mutates the object at hand. If we try to access a deleted property, the JavaScript interpreter will no longer be able to find the <code>mode</code> property because the <code>mode</code> key (along with its value, <code>true</code>) have been deleted:</p>
+<pre><code class="js language-js">printer.mode;
+
+// undefined</code></pre>
+<p>Great! Let's see this all in action below.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L1 -25 - Adding And Removing Properties</p></h3>
+  <video controls>
+  <source src="02. L1 -25 - Adding And Removing Properties-wDxnseegDYs.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="02. L1 -25 - Adding And Removing Properties-wDxnseegDYs.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="02. L1 -25 - Adding And Removing Properties-wDxnseegDYs.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="02. L1 -25 - Adding And Removing Properties-wDxnseegDYs.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="02. L1 -25 - Adding And Removing Properties-wDxnseegDYs.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/OOJS-screencasts/blob/master/L1-objects-in-depth/25-adding-and-removing-properties.js" rel="noopener noreferrer" target="_blank">Here's the code from the preceding video.</a></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>What is true about modifying objects? Select all that apply:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1512432172380" name="468560" id="a1512432172380">
+      <label for="a1512432172380"><p>Removing properties with the <code>delete</code> operator returns <code>true</code> upon successful deletion.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512432191901" name="468560" id="a1512432191901">
+      <label for="a1512432191901"><p>Accessing a deleted property (i.e., a property that no longer exists) returns <code>null</code>.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512432197678" name="468560" id="a1512432197678">
+      <label for="a1512432197678"><p>With a few exceptions, properties in objects are <em>mutable</em>.</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512432209005" name="468560" id="a1512432209005">
+      <label for="a1512432209005"><p>Properties can be added to objects exclusively with square bracket notation.</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Removing properties with the `delete` operator returns `true` upon successful deletion.</li>
+      <li>With a few exceptions, properties in objects are _mutable_.</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>Consider the following <code>house</code> object:</p>
+<pre><code class="js language-js">let house = {
+  color: 'green',
+  numRooms: 4,
+  numWindows: 8,
+  forSale: false
+};</code></pre>
+<p>Write an expression to delete the <code>numWindows</code> property from <code>house</code>.</p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>Consider the updated <code>house</code> object from above:</p>
+<pre><code class="js language-js">let house = {
+  color: 'green',
+  numRooms: 4,
+  forSale: false
+};</code></pre>
+<p>Write an expression to add a new <code>hasGarage</code> property to <code>house</code>. Set the value of the <code>hasGarage</code> property to <code>true</code>.</p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="passing-arguments">Passing Arguments</h2>
+<h3 id="passing-a-primitive">Passing a Primitive</h3>
+<p>In JavaScript, a primitive (e.g., a string, number, boolean, etc.) is <em>immutable</em>. In other words, any changes made to an argument inside a function effectively creates a <em>copy</em> local to that function, and does <em>not</em> affect the primitive <em>outside</em> of that function. Check out the following example:</p>
+<pre><code class="js language-js">function changeToEight(n) {
+  n = 8; // whatever n was, it is now 8... but only in this function!
+}
+
+let n = 7;
+
+changeToEight(n);
+
+console.log(n);
+// 7</code></pre>
+<p><code>changeToEight()</code> takes in a single argument, <code>n</code>, and changes it to <code>8</code>. However, this change only exists inside the function itself. We then pass the global variable <code>n</code> (which is assigned the value <code>7</code>) into the function. After invoking it, <code>n</code> is still equal to <code>7</code>.</p>
+<h3 id="passing-an-object">Passing an Object</h3>
+<p>On the other hand, <em>objects</em> in JavaScript are <em>mutable</em>. If you pass an object into a function, Javascript passes a <em>reference</em> to that object. Let's see what happens if we pass an object into a function and then modify a property:</p>
+<pre><code class="js language-js">let originalObject = {
+  favoriteColor: 'red'
+};
+
+function setToBlue(object) {
+  object.favoriteColor = 'blue';
+}
+
+setToBlue(originalObject);
+
+originalObject.favoriteColor;
+// 'blue'</code></pre>
+<p>In the above example, <code>originalObject</code> contains a single property, <code>favoriteColor</code>, which has a value of <code>'red'</code>. We pass <code>originalObject</code> into the <code>setToBlue()</code> function and invoke it. After accessing <code>originalObject</code>'s <code>favoriteColor</code> property, we see that the value is now <code>'blue'</code>! </p>
+<p>How did this happen? Well, since objects in JavaScript are passed by reference, if we make changes to that reference, we're actually directly modifying the original object itself! </p>
+<p>What's more: the same rule applies when re-assigning an object to a new variable, and then changing <em>that</em> copy. Again, since objects are passed by reference, the original object is changed as well. Let's take a look at this more closely with another example.</p>
+<p>Consider this <code>iceCreamOriginal</code> object, which shows the amount of ice cream cones each instructor has eaten:</p>
+<pre><code class="js language-js">const iceCreamOriginal = {
+  Andrew: 3,
+  Richard: 15
+};</code></pre>
+<p>Let's go ahead and make assign a new variable to <code>iceCreamOriginal</code>. We'll then check the value of its <code>Richard</code> property:</p>
+<pre><code class="js language-js">const iceCreamCopy = iceCreamOriginal;
+
+iceCreamCopy.Richard;
+// 15</code></pre>
+<p>As expected, the expression <code>iceCreamCopy.Richard;</code> returns <code>15</code> (i.e., it is the same value as the <code>Richard</code> property in <code>iceCreamOriginal</code>). Now, let's change the value in the copy, then check the results:</p>
+<pre><code class="js language-js">iceCreamCopy.Richard = 99;
+
+iceCreamCopy.Richard;
+// 99
+
+iceCreamOriginal.Richard;
+// 99</code></pre>
+<p>Since objects are passed by reference, making changes to the copy (<code>iceCreamCopy</code>) has a direct effect on the original object (<code>iceCreamOriginal</code>) as well. In both objects, the value of the <code>Richard</code> property is now <code>99</code>.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="comparing-an-object-with-another-object">Comparing an Object with Another Object</h2>
+<p>On the topic of references, let's see what happens when we compare one object with another object. The following objects, <code>parrot</code> and <code>pigeon</code>, have the same methods and properties:</p>
+<pre><code class="js language-js">const parrot = {
+  group: 'bird',
+  feathers: true,
+  chirp: function () {
+    console.log('Chirp chirp!');
+  }
+};
+
+const pigeon = {
+  group: 'bird',
+  feathers: true,
+  chirp: function () {
+    console.log('Chirp chirp!');
+  }
+};</code></pre>
+<p>Naturally, one might expect the <code>parrot</code> object and <code>pigeon</code> object to be <em>equal</em>. After all, both objects look exactly the same! Let's compare <code>parrot</code> and <code>pigeon</code> to find out:</p>
+<pre><code class="js language-js">parrot === pigeon;
+
+// false</code></pre>
+<p>What's going on here? As it turns out, the expression will only return <code>true</code> when comparing two <em>references</em> to exactly the same object. Using what we now know about passing objects, let's confirm this. To start off, let's create a new variable, <code>myBird</code>, and assign it to one of the objects above:</p>
+<pre><code class="js language-js">const myBird = parrot;</code></pre>
+<p>As we've just learned, <code>myBird</code> not only refers to the same object as <code>parrot</code> -- they <em>are</em> the same object! If we make any updates to <code>myBird</code>'s properties, <code>parrot</code>'s properties will be updated with exactly the same changes as well. Now, the comparison will return true:</p>
+<pre><code class="js language-js">myBird === parrot;
+
+// true</code></pre>
+<p>So since <code>pigeon</code> is <em>not</em> the same object as <code>myBird</code> or <code>parrot</code>, any comparisons between <code>myBird</code> and <code>pigeon</code> will return <code>false</code>:</p>
+<pre><code class="js language-js">myBird === pigeon;
+
+// false</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Which of the following is immutable? Select all that apply:</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1512434977499" name="468575" id="a1512434977499">
+      <label for="a1512434977499"><p>8</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512434995262" name="468575" id="a1512434995262">
+      <label for="a1512434995262"><p>'How are you today?'</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512435005758" name="468575" id="a1512435005758">
+      <label for="a1512435005758"><p>{ numProperties: 1 }</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512435011910" name="468575" id="a1512435011910">
+      <label for="a1512435011910"><p>3.14</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512435012574" name="468575" id="a1512435012574">
+      <label for="a1512435012574"><p>true</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512435018662" name="468575" id="a1512435018662">
+      <label for="a1512435018662"><p>[0, 1, 2, 3, 4, 5]</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512435030054" name="468575" id="a1512435030054">
+      <label for="a1512435030054"><p>function () { console.log('Hello!'); }</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>8</li>
+      <li>'How are you today?'</li>
+      <li>3.14</li>
+      <li>true</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Consider the following:</p>
+<pre><code class="js language-js">let string = 'orange';
+
+function changeToApple(string) {
+  string = 'apple';
+}
+
+changeToApple(string);
+
+console.log(string);
+// ???</code></pre>
+<p>What is logged to the console?</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1512435153869" name="468583" id="a1512435153869">
+        <label for="a1512435153869"><p><code>apple</code>, <code>orange</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512435259830" name="468583" id="a1512435259830">
+        <label for="a1512435259830"><p><code>orange</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512435260454" name="468583" id="a1512435260454">
+        <label for="a1512435260454"><p><code>apple</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512435261014" name="468583" id="a1512435261014">
+        <label for="a1512435261014"><p><code>undefined</code></p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    `orange`
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Consider the following object, <code>oven</code>:</p>
+<pre><code class="js language-js">const oven = {
+  type: 'clay',
+  temperature: 400
+};</code></pre>
+<p>What is the value of <code>oven</code>'s <code>temperature</code> property after the following operations?</p>
+<pre><code class="js language-js">const newOven = oven;
+
+newOven.temperature += 50;</code></pre></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1512435370387" name="468591" id="a1512435370387">
+        <label for="a1512435370387"><p><code>400</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512435385696" name="468591" id="a1512435385696">
+        <label for="a1512435385696"><p><code>50</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512435386280" name="468591" id="a1512435386280">
+        <label for="a1512435386280"><p><code>450</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512435386888" name="468591" id="a1512435386888">
+        <label for="a1512435386888"><p><code>350</code></p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    `450`
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="summary">Summary</h2>
+<p>Objects are commonly created with <strong>literal notation</strong>, and can include properties that point to functions called <strong>methods</strong>. Methods are accessed the same way as other properties of objects, and can be <em>invoked</em> the same way as regular functions, except they automatically have access to the other properties of their parent object.</p>
+<p>By default, objects are mutable (with a few exceptions), so data within them can be altered. New properties can be added, and existing properties can be modified by simply specifying the property name and assigning (or re-assigning) a value. Additionally, properties and methods of an object can be deleted as well with the <code>delete</code> operator, which directly mutates the object.</p>
+<p>We've modified objects quite a bit in this section, and even added new methods into them. In the very next section, we'll take a closer look at <em>invoking</em> these methods, as well as how these methods can directly access and modify an object itself!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="further-research">Further Research</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete" rel="noopener noreferrer" target="_blank">The 'delete' operator</a> on MDN</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Invoking Object Methods.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. Create and Modify Properties')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

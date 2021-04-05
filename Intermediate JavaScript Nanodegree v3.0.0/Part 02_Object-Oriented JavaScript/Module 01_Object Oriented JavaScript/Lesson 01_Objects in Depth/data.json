@@ -1,0 +1,1404 @@
+{
+  "data": {
+    "lesson": {
+      "id": 467065,
+      "key": "504843ae-ba16-4573-a859-94da7a7d1dd4",
+      "title": "Objects in Depth",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Objects in JavaScript encapsulate both data and functionality. You'll create, access, and modify objects to build a solid foundation for object-oriented programming.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/504843ae-ba16-4573-a859-94da7a7d1dd4/467065/1545053738795/Objects+in+Depth+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/504843ae-ba16-4573-a859-94da7a7d1dd4/467065/1545053736205/Objects+in+Depth+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 467612,
+          "key": "409c8e65-59c6-4d67-8ea8-6934fad5ab0b",
+          "title": "Introduction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "409c8e65-59c6-4d67-8ea8-6934fad5ab0b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 478341,
+              "key": "e675834b-3847-4777-918c-5979632e5d39",
+              "title": "OOJS L1 1 - Course Intro",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "XkLcC7xWK-A",
+                "china_cdn_id": "XkLcC7xWK-A.mp4"
+              }
+            },
+            {
+              "id": 467614,
+              "key": "0f84284d-6593-42a2-85bf-8404d7c41860",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Course Structure\n\nWelcome! This course covers object-oriented programming with JavaScript. Here's a quick breakdown of what each of the lessons in the course looks like:\n\n- **Lesson 1** details how to create, access, and modify objects.\n- **Lesson 2** examines how JavaScript functions are _first-class_ functions.\n- **Lesson 3** illustrates JavaScript's abstractions over traditional classes and inheritance.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 467615,
+              "key": "35e67cda-6bc1-4ddf-b30b-cf86c88bdb3c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Starting Off\n\nFirst, let's make sure we're all on the same page on some object fundamentals. _Most of the material on this page should be review._ If things feel largely unfamiliar as you go through the content, feel free to check out our course [Intro to JavaScript](https://www.udacity.com/course/intro-to-javascript--ud803) for a refresher.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 467616,
+              "key": "c976b31e-1684-4c12-a3a1-2d5493da489c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Remember the Array?\n\nThe **array** is one of the most useful data structures in JavaScript. At its core, an array is just an _ordered_ collection of elements, enclosed by square brackets (i.e., `[` and `]`). Here's a variable called `myArray`, which is assigned to an empty array:\n\n```js\nconst myArray = [];\n```\n\nEach element in an array is referenced by a _numeric key_ called an **index**, which starts from zero and increments by one for each additional element in the array. Check out the following example:\n\n```js\nconst fruits = ['apple', 'banana', 'orange', 'grape', 'lychee'];\n\nconsole.log(fruits);\n// ['apple', 'banana', 'orange', 'grape', `lychee`]\n```\n\nIf we want to retrieve the first (left-most) element in `fruits`, we access that element by its index:\n\n```js\nfruits[0];\n\n// 'apple'\n```\n\nLikewise, this is how we can access the last (right-most) element in `fruits`:\n\n```js\nfruits[4];\n\n// 'lychee'\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 467617,
+              "key": "fe53f8d2-23a5-49fa-bfc8-8fd420ecf3e9",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "fe53f8d2-23a5-49fa-bfc8-8fd420ecf3e9",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "Create an Array",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5801461150253056",
+                "initial_code_files": [
+                  {
+                    "text": "/*\nRecall that arrays can store many different types of data, not just strings!\nBelow, create an array called `mixedArray` that contains:\n\n* A number\n* A string\n* A boolean\n* Another array\n\nThe order and length of the array are up to you; just be sure to include\nat least one of each data type listed above.\n*/\n",
+                    "name": "StudentMain.js"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 467619,
+              "key": "9e0e0276-0035-4532-9c75-80d579c87b9f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Objects\n\nThe **object** is one of the most important data structures in JavaScript. After all, you're currently taking an entire course on object-oriented programming! \n\nFundamentally, an object is a collection of associated key/value pairs. We create an object with curly brackets (i.e., `{` and `}`). Here's a variable called `myObject`, which is assigned to an empty object:\n\n```js\nconst myObject = {};\n```\n\nWhile elements in _arrays_ are referenced by a numeric index, keys in an _object_ must be named explicitly, like `color` or `year`. Check out the following example:\n\n```js\nconst car = {\n  color: 'red',\n  year: 1992,\n  isPreOwned: true\n};\n```\n\nLet's break this down and see what's going on:\n\n* The variable that is assigned to the object is named `car`.\n* Curly brackets are used to define the `car` object.\n* Individual **keys** (e,g, `color`) are associated with a single **value** (`'red'` in this case). These key/value pairs are connected by a colon (`:`).\n* Each distinct key/value pair, known as a **property** of that object, is separated from other properties by a comma (`,`). The `car` object therefore contains three properties.\n\nUnlike arrays, objects are _unordered_ collections. For example, the `car` object above could be written with the key/value pairs in a different order, and it wouldn't change how you'd access `car`'s items:\n\n```js\nconst car = {\n  isPreOwned: true,\n  color: 'red',\n  year: 1992\n};\n```\n\n### Object Property Syntax\n\nAnother thing to note is that keys (i.e., the _names_ of the object's properties) are strings, but quotation marks surrounding these strings are _optional_ as long as the string is also a valid Javascript identifier (i.e., you could use it as a variable name or function name). As a result, the following three objects are equivalent:\n\n```js\nconst course = { courseId: 711 };    // ← no quotes around the courseId key\nconst course = { 'courseId': 711 };  // ← single quotes around the courseId key\nconst course = { \"courseId\": 711 };  // ← double quotes around the courseId key\n```\n\nYou'll commonly find quotation marks omitted from property names. Certain situations _require_ them to be included, especially if the property name:\n\n* Is a **reserved word** (e.g., `for`, `if`, `let`, `true`, etc.).\n* Contains **spaces or special characters** that cannot appear in a variable name (i.e., punctuation other than  `$`, and `_` -- most accented characters).\n\nFor the exact rules for property names, feel free to check out the links at the end of this section.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 467620,
+              "key": "0eed138a-a349-4beb-8624-797f29dd9ae4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 💡 JavaScript Objects Might Look Familiar 💡\n\nIf you've had past experience with Python or Ruby, objects are quite similar to **dictionaries** and **hashes** (respectively). Though they may _look_ the same, there are key differences to be mindful of.\n\nFirst, Ruby hashes and JavaScript objects have similar functionality: they are both collections of values accessible by keys. However, values are accessed in Ruby hashes a bit differently. Consider the following Ruby hash:\n\n```ruby\nbook = {\n  title: 'To Kill a Mockingbird',\n  author: 'Harper Lee',\n  published: 1960\n}\n```\n\nBecause the hash keys are **symbols** (rather than _strings_), properties are accessed _by_ that symbol:\n\n```ruby\nbook[:title]\n\n# 'To Kill a Mockingbird'\n```\n\nAny attempts to using JavaScript's dot notation or square bracket notation lead to undesirable results:\n\n```ruby\nbook.title\n\n# undefined method `title' for #<Hash> (NoMethodError)\n```\n\n```ruby\nbook['title']\n\n# nil\n```\n\nAnother major difference between Ruby hashes and JavaScript objects are that _objects can take a function as a property value_ (we'll take a deep dive into this in the next section). This functionality does not exist for Ruby hashes!\n\nOn the other hand, Python dictionaries have some similar functionality to objects in JavaScript as well, with some notable differences. For one, keys in Python dictionaries must be something hashable (e.g., a string, a number, a float, etc.). The following is a valid object in JavaScript:\n\n```js\nconst javascriptObject = { name: 'George Orwell', year: 1984 }\n```\n\nHowever, it would be invalid as a Python dictionary:\n\n```python\npython_dictionary = {name: 'George Orwell', year: 1984}\n \n# Traceback (most recent call last):\n# NameError: name 'name' is not defined\n```\n\nA quick fix would be to convert the Python dictionary's keys into strings:\n\n```python\nmy_dictionary = {'name': 'George Orwell', 'year': 1984}\n```\n\nAbove all else, you can also leverage objects in JavaScript not just to hold data, but for many powerful functionalities such as **constructors**. This is an object-oriented JavaScript course, so we'll take a deep dive into these features throughout this course!\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 467622,
+              "key": "1d3cc3c2-b6c5-4eaa-8711-316a16880491",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "1d3cc3c2-b6c5-4eaa-8711-316a16880491",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "4944846968717312",
+                "initial_code_files": [
+                  {
+                    "text": "/*\nCreate an object called `menu` that represents the following menu item:\n\nSalted Caramel Ice Cream\n2.95\nbutter, ice cream, salt, sugar\n\nThe object should contain the following properties:\n* name\n* price\n* ingredients\n\nHint: Which data collection can hold all the listed ingredients in order?\n*/\n",
+                    "name": "StudentMain.js"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 467625,
+              "key": "acec53d8-6c45-44c0-8017-0c3a12253393",
+              "title": "Object Features vs. Array Features",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "acec53d8-6c45-44c0-8017-0c3a12253393",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Which of the following are features or characteristics of an **object**? Select all that apply:",
+                "answers": [
+                  {
+                    "id": "a1512363332124",
+                    "text": "Ordered",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512363355400",
+                    "text": "Key/value pairs",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512363362062",
+                    "text": "{ Curly Braces }",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512363378041",
+                    "text": "Indexed",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512363378401",
+                    "text": "Unordered",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512363388772",
+                    "text": "[ Square Brackets ]",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 467626,
+              "key": "8815c5f1-8c03-4a75-a1c3-6c245f7e9d72",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Accessing Object Properties\n\nSo now that we know what objects look like, how do we retrieve information from them? In other words: how do we _access their values_? There are two ways: **dot notation** and **square bracket notation**. Consider this `bicycle` object:\n\n```js\nconst bicycle = {\n  color: 'blue',\n  type: 'mountain bike',\n  wheels: {\n    diameter: 18,\n    width: 8\n  }\n};\n```\n\nUsing dot notation, we can access `bicycle`'s `color` property by writing:\n\n```js\nbicycle.color;\n\n// 'blue'\n```\n\nSimilarly, we can access the same property using square bracket notation by writing:\n\n```js\nbicycle['color'];\n\n// 'blue'\n```\n\nBoth expressions are equivalent, and will each return `'blue'`.\n\nWhat about nested objects? To retrieve the value of the `width` property of the object contained within `bicycle`'s `wheels` property, you can do the following with dot notation:\n\n```js\nbicycle.wheels.width;\n\n// 8\n```\n\nAnd with square bracket notation:\n\n```js\nbicycle['wheels']['width'];\n\n// 8\n```\n\nAgain, both expressions are equivalent, and will each return `8`.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 467627,
+              "key": "66a50e51-ada9-4d8e-a10e-fd928a787377",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "> ## ⚠️ Dot Notation Limitations ⚠️\n>\n> Note that while dot notation may be easier to read and write, it can't be used in every situation. For example, let's say there's a key in the above `bicycle` object that is a _number_. An expression like `bicycle.1;` will cause a error, while `bicycle[1];` returns the intended value:\n> \n> ```js\n> bicycle.1;\n> \n> // Uncaught SyntaxError: Unexpected number\n> \n> bicycle[1];\n>\n> // (returns the value of the `1` property)\n> ```\n> \n> Another issue is when variables are assigned to property names. Let's say we declare `myVariable`, and assign it to the string `'color'`:\n> \n> ```js\n> const myVariable = 'color';\n> ```\n> \n> `bicycle[myVariable];` returns `'blue'` because the variable `myVariable` gets substituted with its value (the string `'color'`) and `bicycle['color']`'s value is `'blue'`. However, `bicycle.myVariable;` returns `undefined`:\n> \n> ```js\n> bicycle[myVariable];\n> \n> // 'blue'\n> \n> bicycle.myVariable;\n>\n> // undefined\n> ```\n> \n> It may seem odd, but recall that all property keys in a JavaScript object are _strings_, even if the quotation marks are omitted. With dot notation, the JavaScript interpreter looks for a key within `bicycle` whose value is `'myVariable'`. Since there isn't such a key defined in the object, the expression returns `undefined`.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468443,
+              "key": "87c7ab08-1e02-4010-b1f1-d305adf14856",
+              "title": "Reading Arrays",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "87c7ab08-1e02-4010-b1f1-d305adf14856",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Write an expression to access the last item in the following array:\n\n```js\nconst mileTimes = [7.50, 6.25, 10.60, 8.88];\n```",
+                "matchers": [
+                  {
+                    "expression": "^mileTimes\\[ ?3 ?\\];?\\n?$"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 468451,
+              "key": "ce510d3e-3a57-4888-b0a1-896b68c85df4",
+              "title": "Reading Objects",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "ce510d3e-3a57-4888-b0a1-896b68c85df4",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Write an expression to access the value of the `population` object's `brazil` property:\n\n```js\nconst populations = {\n  china: 1379000000,\n  brazil: 207700000,\n  india: 1324000000,\n  unitedStates: 323100000\n};\n```",
+                "matchers": [
+                  {
+                    "expression": "^populations\\.brazil;?\\n?$"
+                  },
+                  {
+                    "expression": "^populations\\[ ?['\"]brazil['\"]\\ ?];?\\n?$"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 468458,
+              "key": "4eaa30bf-e461-49ab-9929-297109e06247",
+              "title": "Reading Nested Objects",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "4eaa30bf-e461-49ab-9929-297109e06247",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Write an expression that outputs how to say hello in Portuguese:\n\n```js\nconst greetings = {\n  hello: {\n    english: 'hi',\n    french: 'bonjour',\n    portuguese: 'oi'\n  },\n  goodbye: {\n    english: 'bye',\n    french: 'au revoir',\n    portuguese: 'tchau'\n  }\n};\n```",
+                "matchers": [
+                  {
+                    "expression": "^greetings\\[ ?['\"]hello['\"] ?\\]\\.portuguese;?\\n*$"
+                  },
+                  {
+                    "expression": "^greetings\\[ ?['\"]hello['\"] ?\\]\\[ ?['\"]portuguese['\"] ?\\];?\\n*$"
+                  },
+                  {
+                    "expression": "^greetings\\.hello\\.portuguese;?\\n*$"
+                  },
+                  {
+                    "expression": "^greetings\\.hello\\[ ?['\"]portuguese['\"] ?\\];?\\n*$"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 468485,
+              "key": "8219f0a8-bb19-446e-b367-38bd1fc5311c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Summary\n\nIn JavaScript, an **object** is an unordered collection of properties. Each property consists of a key/value pair, and can reference either a primitive (e.g., strings, numbers, booleans, etc.) or another object. Unlike elements in an array, which are accessed by a numeric index, properties in objects are accessed by their key name using either **square bracket notation** or **dot notation**. For a closer look at object fundamentals, check out **Intro to JavaScript** linked below.\n\nNow that we know how to read existing properties in an object, how do we go about creating _new_ properties? What about _modifying_ existing properties, or even adding and removing properties altogether? We'll answer all this and more in the very next section!",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468486,
+              "key": "7d1493e3-2f13-4169-ac82-20d7dd4dee43",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Further Research\n\n* [Intro to JavaScript](https://www.udacity.com/course/intro-to-javascript--ud803)\n* [Unquoted property names / object keys in JavaScript](https://mathiasbynens.be/notes/javascript-properties)\n* [Valid JavaScript variable names in ECMAScript 5](https://mathiasbynens.be/notes/javascript-identifiers)\n* [Valid JavaScript variable names in ECMAScript 6](https://mathiasbynens.be/notes/javascript-identifiers-es6)",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 468492,
+          "key": "2bbcfed5-e683-431b-ace2-b67c091400d2",
+          "title": "Create and Modify Properties",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2bbcfed5-e683-431b-ace2-b67c091400d2",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 468493,
+              "key": "bf34526d-d8c7-4eab-9c49-b1e7824f086a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Creating Objects\n\nTo create a new, blank (i.e., “empty”) object, you can use object **literal notation**, or the `Object()` **constructor function**. If you're not familiar with constructor functions, no need to worry! We'll jump into them in-depth in Lesson 3. For now, just know that the following two expressions are equivalent:\n\n```js\n// Using literal notation:\n\nconst myObject = {};\n\n// Using the Object() constructor function:\n\nconst myObject = new Object();\n```\n\nWhile both methods ultimately return an object without properties of its own, the `Object()` constructor function is a bit slower and more verbose. As such, the recommended way to create new objects in JavaScript is to use literal notation.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468526,
+              "key": "70e0a09f-0543-4c3a-bf30-5fbf027a5f99",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Modifying Properties\n\nKeep in mind that data within objects are _mutable_, meaning that data can be changed. There are a few exceptions to this, but for now, let's see how we can modify/reassign existing properties in an object. \n\nConsider the following `cat` object:\n\n```js\nconst cat = {\n  age: 2,\n  name: 'Bailey',\n  meow: function () {\n    console.log('Meow!');\n  },\n  greet: function (name) {\n    console.log(`Hello ${name}`);\n  }\n};\n```\nNow, let's go ahead change it up a bit!\n\n```js\ncat.age += 1;\n\ncat.age;\n// 3\n\n\ncat.name = 'Bambi';\n\ncat.name;\n// 'Bambi'\n```\n\nAfter incrementing the value of the `age` property by 1, and reassigning `name`'s value to `'Bambi'`, our `cat` object now looks like:\n\n```js\n{\n  age: 3,\n  name: 'Bambi',\n  meow: function () {\n    console.log('Meow!');\n  },\n  greet: function (name) {\n    console.log(`Hello ${name}`);\n  }\n};\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468539,
+              "key": "fd8c7cc9-9440-468b-a947-a9c12ef66668",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Adding Properties\n\nProperties can be added to objects simply by specifying the property name, then giving it a value. Let's start off with a blank object, then add two properties:\n\n```js\nconst printer = {};\n\nprinter.on = true;\nprinter.mode = 'black and white';\n```\n\nThe above example uses dot notation to add properties, but keep in mind that square bracket notation works just as well:\n\n```js\nprinter['remainingSheets'] = 168;\n```\n\nLikewise, we can add a method to the `printer` object in a similar manner. This time, the value of the property is an anonymous (i.e., unnamed) function:\n\n```js\nprinter.print = function () {\n  console.log('The printer is printing!');\n};\n```\n\nGreat! The complete `printer` object now looks like the following:\n\n```js\n{\n  on: true,\n  mode: 'black and white',\n  remainingSheets: 168,\n  print: function () {\n    console.log('The printer is printing!');\n  }\n}\n``` \n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468540,
+              "key": "9fe32b6e-c211-4098-8c0e-2f0f4e6dd44f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Removing Properties\n\nRecall that since objects are _mutable_, not only can we modify existing properties (or even add new ones) -- we can also _delete_ properties from objects.\n\nSay that the `printer` object above actually doesn't have any modes (i.e., `'black and white'`, `'color'`, etc.). We can go ahead and remove that property from `printer` using the `delete` operator.\n\n```js\ndelete printer.mode;\n\n// true\n```\n\nNote that `delete` directly mutates the object at hand. If we try to access a deleted property, the JavaScript interpreter will no longer be able to find the `mode` property because the `mode` key (along with its value, `true`) have been deleted:\n\n```js\nprinter.mode;\n\n// undefined\n```\n\nGreat! Let's see this all in action below.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 478342,
+              "key": "9291a372-cf24-4f70-9a7c-7a0813ded28c",
+              "title": "L1 -25 - Adding And Removing Properties",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "wDxnseegDYs",
+                "china_cdn_id": "wDxnseegDYs.mp4"
+              }
+            },
+            {
+              "id": 492684,
+              "key": "8bb36878-aef7-48c3-b2ea-ffcf57258564",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "[Here's the code from the preceding video.](https://github.com/udacity/OOJS-screencasts/blob/master/L1-objects-in-depth/25-adding-and-removing-properties.js)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468560,
+              "key": "c86933ac-730d-429f-a821-edd101f9b01a",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "c86933ac-730d-429f-a821-edd101f9b01a",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What is true about modifying objects? Select all that apply:",
+                "answers": [
+                  {
+                    "id": "a1512432172380",
+                    "text": "Removing properties with the `delete` operator returns `true` upon successful deletion.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512432191901",
+                    "text": "Accessing a deleted property (i.e., a property that no longer exists) returns `null`.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512432197678",
+                    "text": "With a few exceptions, properties in objects are _mutable_.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512432209005",
+                    "text": "Properties can be added to objects exclusively with square bracket notation.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 468570,
+              "key": "e4d7a761-27d4-4750-b6ab-90c590fd1f79",
+              "title": "",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "e4d7a761-27d4-4750-b6ab-90c590fd1f79",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Consider the following `house` object:\n\n```js\nlet house = {\n  color: 'green',\n  numRooms: 4,\n  numWindows: 8,\n  forSale: false\n};\n```\n\nWrite an expression to delete the `numWindows` property from `house`.",
+                "matchers": [
+                  {
+                    "expression": "^delete house\\.numWindows;?\\n?$"
+                  },
+                  {
+                    "expression": "^delete house\\[ ?['\"]numWindows['\"]\\ ?];?\\n?$"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 468572,
+              "key": "83bba199-f4f6-4840-837f-ccc7cd0a7d65",
+              "title": "",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "83bba199-f4f6-4840-837f-ccc7cd0a7d65",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Consider the updated `house` object from above:\n\n```js\nlet house = {\n  color: 'green',\n  numRooms: 4,\n  forSale: false\n};\n```\n\nWrite an expression to add a new `hasGarage` property to `house`. Set the value of the `hasGarage` property to `true`.",
+                "matchers": [
+                  {
+                    "expression": "^house\\.hasGarage ?= ?true;?\\n?$"
+                  },
+                  {
+                    "expression": "^house\\[ ?['\"]hasGarage['\"]\\ ?] ?= ?true;?\\n?$"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 468573,
+              "key": "fc00a541-1dbe-4fe6-827a-0ed0ad2af12d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Passing Arguments\n\n### Passing a Primitive\n\nIn JavaScript, a primitive (e.g., a string, number, boolean, etc.) is _immutable_. In other words, any changes made to an argument inside a function effectively creates a _copy_ local to that function, and does _not_ affect the primitive _outside_ of that function. Check out the following example:\n\n```js\nfunction changeToEight(n) {\n  n = 8; // whatever n was, it is now 8... but only in this function!\n}\n\nlet n = 7;\n\nchangeToEight(n);\n\nconsole.log(n);\n// 7\n```\n\n`changeToEight()` takes in a single argument, `n`, and changes it to `8`. However, this change only exists inside the function itself. We then pass the global variable `n` (which is assigned the value `7`) into the function. After invoking it, `n` is still equal to `7`.\n\n### Passing an Object\n\nOn the other hand, _objects_ in JavaScript are _mutable_. If you pass an object into a function, Javascript passes a _reference_ to that object. Let's see what happens if we pass an object into a function and then modify a property:\n\n```js\nlet originalObject = {\n  favoriteColor: 'red'\n};\n\nfunction setToBlue(object) {\n  object.favoriteColor = 'blue';\n}\n\nsetToBlue(originalObject);\n\noriginalObject.favoriteColor;\n// 'blue'\n```\n\nIn the above example, `originalObject` contains a single property, `favoriteColor`, which has a value of `'red'`. We pass `originalObject` into the `setToBlue()` function and invoke it. After accessing `originalObject`'s `favoriteColor` property, we see that the value is now `'blue'`! \n\nHow did this happen? Well, since objects in JavaScript are passed by reference, if we make changes to that reference, we're actually directly modifying the original object itself! \n\nWhat's more: the same rule applies when re-assigning an object to a new variable, and then changing _that_ copy. Again, since objects are passed by reference, the original object is changed as well. Let's take a look at this more closely with another example.\n\nConsider this `iceCreamOriginal` object, which shows the amount of ice cream cones each instructor has eaten:\n\n```js\nconst iceCreamOriginal = {\n  Andrew: 3,\n  Richard: 15\n};\n```\n\nLet's go ahead and make assign a new variable to `iceCreamOriginal`. We'll then check the value of its `Richard` property:\n\n```js\nconst iceCreamCopy = iceCreamOriginal;\n\niceCreamCopy.Richard;\n// 15\n```\n\nAs expected, the expression `iceCreamCopy.Richard;` returns `15` (i.e., it is the same value as the `Richard` property in `iceCreamOriginal`). Now, let's change the value in the copy, then check the results:\n\n```js\niceCreamCopy.Richard = 99;\n\niceCreamCopy.Richard;\n// 99\n\niceCreamOriginal.Richard;\n// 99\n```\n\nSince objects are passed by reference, making changes to the copy (`iceCreamCopy`) has a direct effect on the original object (`iceCreamOriginal`) as well. In both objects, the value of the `Richard` property is now `99`.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468574,
+              "key": "aca27d2a-7b0f-4317-8ff0-d8dda401be16",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "\n## Comparing an Object with Another Object\n\nOn the topic of references, let's see what happens when we compare one object with another object. The following objects, `parrot` and `pigeon`, have the same methods and properties:\n\n```js\nconst parrot = {\n  group: 'bird',\n  feathers: true,\n  chirp: function () {\n    console.log('Chirp chirp!');\n  }\n};\n\nconst pigeon = {\n  group: 'bird',\n  feathers: true,\n  chirp: function () {\n    console.log('Chirp chirp!');\n  }\n};\n```\n\nNaturally, one might expect the `parrot` object and `pigeon` object to be _equal_. After all, both objects look exactly the same! Let's compare `parrot` and `pigeon` to find out:\n\n```js\nparrot === pigeon;\n\n// false\n```\n\nWhat's going on here? As it turns out, the expression will only return `true` when comparing two _references_ to exactly the same object. Using what we now know about passing objects, let's confirm this. To start off, let's create a new variable, `myBird`, and assign it to one of the objects above:\n\n```js\nconst myBird = parrot;\n```\n\nAs we've just learned, `myBird` not only refers to the same object as `parrot` -- they _are_ the same object! If we make any updates to `myBird`'s properties, `parrot`'s properties will be updated with exactly the same changes as well. Now, the comparison will return true:\n\n```js\nmyBird === parrot;\n\n// true\n```\n\nSo since `pigeon` is _not_ the same object as `myBird` or `parrot`, any comparisons between `myBird` and `pigeon` will return `false`:\n\n```js\nmyBird === pigeon;\n\n// false\n```\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468575,
+              "key": "3922e069-8eb4-4382-a0dc-9beebcaecb85",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "3922e069-8eb4-4382-a0dc-9beebcaecb85",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Which of the following is immutable? Select all that apply:",
+                "answers": [
+                  {
+                    "id": "a1512434977499",
+                    "text": "8",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512434995262",
+                    "text": "'How are you today?'",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512435005758",
+                    "text": "{ numProperties: 1 }",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512435011910",
+                    "text": "3.14",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512435012574",
+                    "text": "true",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512435018662",
+                    "text": "[0, 1, 2, 3, 4, 5]",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512435030054",
+                    "text": "function () { console.log('Hello!'); }",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 468583,
+              "key": "67115fb7-e9de-416c-ab7f-859f248c0de0",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "67115fb7-e9de-416c-ab7f-859f248c0de0",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Consider the following:\n\n```js\nlet string = 'orange';\n\nfunction changeToApple(string) {\n  string = 'apple';\n}\n\nchangeToApple(string);\n\nconsole.log(string);\n// ???\n```\n\nWhat is logged to the console?",
+                "answers": [
+                  {
+                    "id": "a1512435153869",
+                    "text": "`apple`, `orange`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512435259830",
+                    "text": "`orange`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512435260454",
+                    "text": "`apple`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512435261014",
+                    "text": "`undefined`",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 468591,
+              "key": "589bf081-ab41-4d50-acbf-c50fa0e567ed",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "589bf081-ab41-4d50-acbf-c50fa0e567ed",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Consider the following object, `oven`:\n\n```js\nconst oven = {\n  type: 'clay',\n  temperature: 400\n};\n```\n\nWhat is the value of `oven`'s `temperature` property after the following operations?\n\n```js\nconst newOven = oven;\n\nnewOven.temperature += 50;\n```\n",
+                "answers": [
+                  {
+                    "id": "a1512435370387",
+                    "text": "`400`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512435385696",
+                    "text": "`50`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512435386280",
+                    "text": "`450`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512435386888",
+                    "text": "`350`",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 468593,
+              "key": "3d816ee1-ec5d-4925-ba63-af053b12e9d6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Summary\n\nObjects are commonly created with **literal notation**, and can include properties that point to functions called **methods**. Methods are accessed the same way as other properties of objects, and can be _invoked_ the same way as regular functions, except they automatically have access to the other properties of their parent object.\n\nBy default, objects are mutable (with a few exceptions), so data within them can be altered. New properties can be added, and existing properties can be modified by simply specifying the property name and assigning (or re-assigning) a value. Additionally, properties and methods of an object can be deleted as well with the `delete` operator, which directly mutates the object.\n\nWe've modified objects quite a bit in this section, and even added new methods into them. In the very next section, we'll take a closer look at _invoking_ these methods, as well as how these methods can directly access and modify an object itself!",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468594,
+              "key": "7e16227c-8a68-4323-8bb7-3488c2ec4450",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Further Research\n\n* [The 'delete' operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete) on MDN",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 468602,
+          "key": "bd94ce28-164e-4ee5-b2bb-819798f22218",
+          "title": "Invoking Object Methods",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "bd94ce28-164e-4ee5-b2bb-819798f22218",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 468614,
+              "key": "cea4b529-5bca-4800-b529-1c3f8d070e79",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Functions vs. Methods\n\nAt this point, we've mostly seen objects with properties that behave more like _attributes_. That is, properties such as `color` or `type` are data that describe an object, but they don't \"do\" anything. We can extend _functionality_ to objects by adding **methods** to them.\n\nSay that we have a function, `sayHello()`, which simply logs a message to the console:\n\n```js\nfunction sayHello () {\n  console.log('Hi there!');\n}\n```\n\nNow, say that we also have a `developer` object with a single property, `name`:\n\n```js\nconst developer = {\n  name: 'Andrew'\n};\n```\n\nIf we want to add the `sayHello()` function into the `developer` object, we can add the same way as we add other new properties: by providing  property name, then giving it a value. This time, the value of the property is a _function_!\n\n```js\ndeveloper.sayHello = function () {\n  console.log('Hi there!');\n};\n```\n\nThis is how the updated `developer` object looks:\n\n```js\n{\n  name: 'Andrew',\n  sayHello: function () {\n    console.log('Hi there!');\n  }\n}\n```\n\nSo now that a `sayHello` property has been defined, how do we go about calling (i.e., invoking) its referenced function?\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468619,
+              "key": "9d667a97-bac0-4288-80bb-6d7771abba75",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Calling Methods\n\nWe can access a function in an object using the property name. Again, another name for a function property of an object is a _method_. We can access it the same way that we do with other properties: by using dot notation or square bracket notation. Let's take a look back at the updated `developer` object above, then invoke its `sayHello()` method:\n\n```js\nconst developer = {\n  name: 'Andrew',\n  sayHello: function () {\n    console.log('Hi there!');\n  }\n};\n```\n\n```js\ndeveloper.sayHello();\n// 'Hi there!'\n\ndeveloper['sayHello']();\n// 'Hi there!'\n```\n\nJust like calling a function, an object's method is called by adding parentheses at the end of the method's name. Note that both dot notation and square bracket notation return the same result!\n\n### Passing Arguments Into Methods\n\nIf the method takes arguments, you can proceed the same way, too:\n\n```js\nconst developer = {\n  name: 'Andrew',\n  sayHello: function () {\n    console.log('Hi there!');\n  },\n  favoriteLanguage: function (language) {\n    console.log(`My favorite programming language is ${language}`);\n  }\n};\n\n\ndeveloper.favoriteLanguage('JavaScript');\n// My favorite programming language is JavaScript'\n```\n\nLet's see this all in action!\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 478343,
+              "key": "fe751653-2ac7-45f7-abf8-dc7093d6d2b9",
+              "title": "L1 -38 - Calling Methods Demo V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "MgNjr5z3MGw",
+                "china_cdn_id": "MgNjr5z3MGw.mp4"
+              }
+            },
+            {
+              "id": 492685,
+              "key": "106a7122-9c87-403c-83a5-fe8d7392f1c3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "[Here's the code from the preceding video.](https://github.com/udacity/OOJS-screencasts/blob/master/L1-objects-in-depth/39-calling-methods-demo.js)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468626,
+              "key": "304c9489-6f7a-4159-b352-f6e7d067da57",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "304c9489-6f7a-4159-b352-f6e7d067da57",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What is true about object methods? Select all that apply:",
+                "answers": [
+                  {
+                    "id": "a1512436302151",
+                    "text": "Unlike how regular functions are invoked, to invoke a method you can simply access the object's property without parentheses (`()`). ",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512436330323",
+                    "text": "Methods cannot accept any arguments.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512436330899",
+                    "text": "Methods can be called without a receiving object.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512436331539",
+                    "text": "A method is a property that points to a function.",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 468627,
+              "key": "f95eeb65-92d2-446c-9baf-9e64c7cbb375",
+              "title": "",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "f95eeb65-92d2-446c-9baf-9e64c7cbb375",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Write an expression that invokes the `alerter()` function in the following array, `myArray`:\n\n```js\nconst myArray = [ function alerter() { alert('Hello!'); } ];\n```",
+                "matchers": [
+                  {
+                    "expression": "^myArray\\[ ?0 ?\\]\\(\\);?\\n?$"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 468630,
+              "key": "f5f09400-681f-4584-86fb-8ea5de5fa45d",
+              "title": "",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "f5f09400-681f-4584-86fb-8ea5de5fa45d",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Write an expression that invokes the function referenced by the `bell` object's `ring` property:\n\n```js\nconst bell = {\n  color: 'gold',\n  ring: function () {\n    console.log('Ring ring ring!');\n  }\n};\n```",
+                "matchers": [
+                  {
+                    "expression": "^bell\\.ring\\(\\);?\\n?$"
+                  },
+                  {
+                    "expression": "^bell\\[ ?['\"]ring['\"]\\ ?]\\(\\);?\\n?$"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 468634,
+              "key": "6cf18b82-0f9d-474f-9ae7-b077ee9d3e03",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "> ## 💡 Call Methods by Property Name 💡\n\n> We've been using _anonymous_ functions (i.e., functions without a name) for object methods. However, _naming_ those functions is still valid JavaScript syntax. Consider the following object, `greeter`:\n\n> ```js\nconst greeter = {\n  greet: function sayHello() {\n    console.log('Hello!');\n  }\n};\n```\n\n> Note that the `greet` property points to a function with a name: `sayHello`. Whether this function is named or not, `greet` is invoked the same way:\n\n> ```js\ngreeter.greet();\n>\n>// 'Hello!'\n> ```\n\n> Named functions are great for a smoother debugging experience, since those functions will have a useful name to display in stack traces. They're completely optional, however, and you'll often read code written by developers who prefer one way or the other.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468636,
+              "key": "87c6cf6e-0ace-4565-b4c4-e93e1709f8fe",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## A Method Can Access the Object it was Called On\n\nRecall that an object can contain data and the means to _manipulate that data_. But just _how_ can an object reference its own properties, much less _manipulate_ some of those properties itself? This is all possible with the `this` keyword!\n\nUsing `this`, methods can directly access the object that it is called on. Consider the following object, `triangle`:\n\n```js\nconst triangle = {\n  type: 'scalene',\n  identify: function () {\n    console.log(`This is a ${this.type} triangle.`);\n  }\n};\n```\n\nNote that inside the `identify()` method, the value `this` is used. When you say `this`, what you're really saying is \"_this_ object\" or \"the object at hand.\" `this` is what gives the `identify()` method direct access to the `triangle` object's properties:\n\n```js\ntriangle.identify();\n\n// 'This is a scalene triangle.'\n```\n\nWhen the `identify()` method is called, the value of `this` is set to the object it was called on: `triangle`. As a result, the `identify()` method can access and use `triangle`'s `type` property, as seen in the above `console.log()` expression.\n\nNote that `this` is a reserved word in JavaScript, and cannot be used as an identifier (e.g. variable names, function names, etc.).\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 478344,
+              "key": "6a83c350-d8dc-443a-83d0-fd740d29c0bf",
+              "title": "L1-45 - This Demo V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "VOkwNvRW_s0",
+                "china_cdn_id": "VOkwNvRW_s0.mp4"
+              }
+            },
+            {
+              "id": 492687,
+              "key": "7bb31cb2-2ff3-477b-905d-b4c7092eddce",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "[Here's the code from the preceding video.](https://github.com/udacity/OOJS-screencasts/blob/master/L1-objects-in-depth/46-this-demo.js)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468639,
+              "key": "fd582a6d-f5e9-432f-a047-c40d8a334403",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "fd582a6d-f5e9-432f-a047-c40d8a334403",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What is true about `this`? Select all that apply:",
+                "answers": [
+                  {
+                    "id": "a1512437180521",
+                    "text": "`this` refers to \"this property,\" or \"this method.\"",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512437199261",
+                    "text": "Using `this`, methods can access and manipulate an object's properties.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512437199813",
+                    "text": "The exact value of `this` is set before a method is invoked.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512437200597",
+                    "text": "`this` is a reserved word in JavaScript.",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 468641,
+              "key": "62225dc1-c150-44a4-bb0f-0a64ad2d5add",
+              "title": "",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "62225dc1-c150-44a4-bb0f-0a64ad2d5add",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Let's make sure we're still on the same page! Write an expression that invokes the function referenced by the `tree` object's `growOneFoot` property:\n\n```js\nconst tree = {\n  type: 'redwood',\n  leaves: 'green',\n  height: 80,\n  age: 15,\n  growOneFoot: function () {\n    this.height += 1;\n  }\n};\n```",
+                "matchers": [
+                  {
+                    "expression": "^tree\\.growOneFoot\\(\\);?\\n?$"
+                  },
+                  {
+                    "expression": "^tree\\[ ?['\"]growOneFoot['\"]\\ ?]\\(\\);?\\n?$"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 468642,
+              "key": "189b3076-4612-4734-aae9-14ab3b8fd5b3",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "189b3076-4612-4734-aae9-14ab3b8fd5b3",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "Change Colors!",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6613209298108416",
+                "initial_code_files": [
+                  {
+                    "text": "/*\n\nCreate an object called `chameleon` with two properties:\n\n1. `color`, whose value is initially set to 'green' or 'pink'\n2. `changeColor`, a function which changes `chameleon`'s `color` to 'pink'\n    if it is 'green', or to 'green' if it is 'pink'\n\n*/\n",
+                    "name": "StudentMain.js"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 468643,
+              "key": "91ad50f5-5e75-4cf5-b66e-bf63eb15a947",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "> ## 💡 The value of `this`💡\n\n> Depending on _how_ a function is called, `this` can be set to different values! Later in this course, we'll take a deep dive into different ways that functions can be invoked, and how each approach influences the value of `this`.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468644,
+              "key": "e088ed20-27b6-4b76-b208-ff576f61af73",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Summary\n\nA **method** is a function property of an object. It is accessed the same way as any other property of the object (i.e., using dot notation or square bracket notation), and is invoked the same way as a regular function outside of an object (i.e., adding parentheses to the end of the expression).\n\nSince an object is a collection of data and the means to operate on that data, a method can access the object it was called on using the special `this` keyword. The value of `this` is determined when a method is invoked, and its value is the object on which the method was called. Since `this` is a reserved word in JavaScript, its value cannot be used as an identifier. Feel free to check out the links below for an additional look at methods and their relationship with `this`.\n\nWe've spent a bit of time on `this` inside objects, but did you know that the value of `this` can have different meanings _outside_ an object? In the next section, we'll take a close look at globals, their relationship with `this`, and the implications of using them.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468645,
+              "key": "7245bb42-a192-4d72-b68c-5632de071abd",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Further Research\n\n* [Defining Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_methods) on MDN\n* [\"this\" in Methods](https://javascript.info/object-methods#this-in-methods)\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 468646,
+          "key": "27af7aad-6d3b-483e-960d-22d3fc090dc1",
+          "title": "Beware of Globals",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "27af7aad-6d3b-483e-960d-22d3fc090dc1",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 468647,
+              "key": "29b5f564-7ce8-41f4-ae23-9417c2531fb9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Things that Belong to Objects\n\nPreviously, we saw that the properties and methods contained inside an object _belong_ to that object. Let's drive this home with one quick example:\n\n```js\nconst chameleon = {\n  eyes: 2,\n  lookAround: function () {\n     console.log(`I see you with my ${this.eyes} eyes!`);\n  }\n};\n\nchameleon.lookAround();\n// 'I see you with my 2 eyes!'\n```\n\nWe've already looked at how `this` inside a method refers to the object that the method was called on. Let's take a closer look at `chameleon`'s `lookAround()` method.\n\n```js\nlookAround: function () {\n  console.log(`I see you with my ${this.eyes} eyes!`);\n}\n```\n\n\nInside the function body is the code `this.eyes`. Since the `lookAround()` method was called on the chameleon object as `chameleon.lookAround();`, the value of `this` is the `chameleon` object itself! As such, `this.eyes` is the number `2`, since it refers to the value of the `chameleon` object's `eyes` property. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468648,
+              "key": "1741e4fa-75fd-4234-be4a-cac7a53922a4",
+              "title": "What is this?",
+              "semantic_type": "ReflectAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "1741e4fa-75fd-4234-be4a-cac7a53922a4",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "title": null,
+                "semantic_type": "TextQuestion",
+                "evaluation_id": null,
+                "text": "Now, let's check out a different example. What do you think will be the value of `this` inside the following code?\n\n```js\nfunction whoThis () {\n  this.trickyish = true\n}\n\nwhoThis();\n// (what does the above expression output?)\n```\n\nWrite your thoughts below.\n"
+              },
+              "answer": {
+                "text": "Thank you for your thoughts!",
+                "video": null
+              }
+            },
+            {
+              "id": 468676,
+              "key": "41604c86-0a14-403e-b0c5-96d72a10af56",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## `this` and Function Invocation\n\nLet's compare the code from the `chameleon` object with the `whoThis()` code.\n\n```js\nconst chameleon = {\n  eyes: 2,\n  lookAround: function () {\n     console.log(`I see you with my ${this.eyes} eyes!`);\n  }\n};\n\nchameleon.lookAround();\n```\n\n```js\nfunction whoThis () {\n  this.trickyish = true\n}\n\nwhoThis();\n```\n\n### `this` in the Function/Method\n\nBefore we dive into how this all works, take a look at the use of `this` inside both of these code snippets:\n\n```js\n// from the chameleon code:\nconsole.log(`I see you with my ${this.eyes} eyes!`);\n\n// from the whoThis() code:\nthis.trickyish = true  \n```\n\nThere is some other code around them, but both of them have the format `this.<some-identifier>`. For our purposes of discovering the value of `this`, it does not matter that in the `chameleon` code, we're using `this` to _retrieve_ a property, while in the `whoThis()` code, we're using `this` to _set_ a property.\n\nSo, in both of these cases, the _use_ of `this` is virtually identical.\n\n### Compare the Structures of the Function/Method\n\nNow, I want you to pay attention to the differences in _structure_ of how the two snippets of code are invoked. The `lookAround()` code is a _method_ because it belongs to an object. Since it's a method, it's invoked as a property on the `chameleon` object:\n\n```js  \nchameleon.lookAround();\n```\n\nNow compare that with the `whoThis()` code. `whoThis()` is _not_ a method; it's a plain, old, regular function. And look at how the `whoThis()` function is invoked:\n\n```js\nwhoThis();\n```\n\nJust like every normal function is invoked; it's just the name of the function and the parentheses (there's no object and no dot in front of it). \n\n### `this` and Invocation\n\n**How the function is invoked determines the value of `this` inside the function.** ← That sentence is really important, so read that two more times...we'll wait!\n\nBecause `.lookAround()` is invoked as a method, the value of `this` inside of `.lookAround()` is whatever is _left of the dot_ at invocation. Since the invocation looks like:\n\n```js\nchameleon.lookAround();\n```\n\nThe `chameleon` object is left of the dot. Therefore, inside the `.lookAround()` method, `this` will refer to the `chameleon` object!\n\nNow let's compare that with the `whoThis()` function. Since it is called as a regular function (i.e., _not_ called as an method on an object), its invocation looks like:\n\n```js\nwhoThis();\n```\n\nWell, there is no dot. And there is no object _left of the dot_. So what is the value of `this` inside the `whoThis()` function? This is an interesting part of the JavaScript language. \n\n**When a _regular_ function is invoked, the value of `this` is the global `window` object.**\n\nLet's see it all in action!\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 478345,
+              "key": "9d9eba7d-b0b2-4f43-93da-27e1c119a9c5",
+              "title": "L1 - 56 -This Without Object V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "fTVmpcG_9ss",
+                "china_cdn_id": "fTVmpcG_9ss.mp4"
+              }
+            },
+            {
+              "id": 492688,
+              "key": "6945e9b2-095c-41b2-86b6-9eeaa6f38e1f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "[Here's the code from the preceding video.](https://github.com/udacity/OOJS-screencasts/blob/master/L1-objects-in-depth/57-this-without-object.js)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468678,
+              "key": "ee35ad47-59b8-4717-a279-ac0e5d0c70ba",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "> ## The `window` Object\n>\n> If you haven't worked with the `window` object yet, this object is provided by the browser environment and is globally accessible to your JavaScript code using the identifier, `window`. This object is not part of the JavaScript specification (i.e., ECMAScript); instead, it is developed by the [W3C](https://www.w3.org/Consortium/).\n>\n> This `window` object has access to a ton of information about the page itself, including:\n>\n> * The page's URL (`window.location;`)\n> * The vertical scroll position of the page (`window.scrollY'`)\n> * Scrolling to a new location (`window.scroll(0, window.scrollY + 200);` to scroll 200 pixels down from the current location)\n> * Opening a new web page (`window.open(\"https://www.udacity.com/\");`)\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468680,
+              "key": "6a1b55f5-5ad4-41d1-9702-69c22133450f",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "6a1b55f5-5ad4-41d1-9702-69c22133450f",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "You've seen what `this` refers to in `chameleon.lookAround();` and in `whoThis()`. Carefully review this code:\n\n```js\nconst car = {\n  numberOfDoors: 4,\n  drive: function () {\n     console.log(`Get in one of the ${this.numberOfDoors} doors, and let's go!`);\n  }\n};\n\nconst letsRoll = car.drive;\n\nletsRoll();\n```\n\nWhat does you think `this` refers to in the code above?\n",
+                "answers": [
+                  {
+                    "id": "a1512451640937",
+                    "text": "The `letsRoll` function itself",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512451674991",
+                    "text": "The `window` object",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512451675619",
+                    "text": "The `document` object",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512451676181",
+                    "text": "The `<body>` element",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512451691613",
+                    "text": "It will cause an error",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 468681,
+              "key": "ac9289c0-b1aa-400f-81aa-7a987564f136",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Global Variables are Properties on `window`\n\nSince the `window` object is at the highest (i.e., global) level, an interesting thing happens with global variable declarations. Every variable declaration that is made at the global level (outside of a function) automatically becomes a property on the `window` object!\n\nHere we can see that the `currentlyEating` variable is set to `'ice cream'`. Then, we immediately see that the `window` now has a `currentlyEating` property! Checking this property against the `currentlyEating` variable shows us that they are _identical_.\n\n```js\nvar currentlyEating = 'ice cream';\n\nwindow.currentlyEating === currentlyEating\n// true\n```\n\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468682,
+              "key": "91145a16-5539-4767-937b-d06b8f665b62",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "> ### Globals and `var`, `let`, and `const`\n>\n> The keywords `var`, `let`, and `const` are used to declare variables in JavaScript. `var` has been around since the beginning of the language, while `let` and `const` are significantly newer additions (added in ES6).\n>\n> Only declaring variables with the `var` keyword will add them to the `window` object. If you declare a variable _outside of a function_ with either `let` or `const`, it will _not_ be added as a property to the `window` object.\n>\n> ```js\n> let currentlyEating = 'ice cream';\n>\n> window.currentlyEating === currentlyEating \n> // false!\n> ```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468683,
+              "key": "ae9f8187-6b28-40b4-b5a5-0430de3a545e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Global Functions are Methods on `window`\n\nSimilarly to how global variables are accessible as properties on the `window` object, any global function declarations are accessible on the `window` object as methods:\n\n```js\nfunction learnSomethingNew() {\n  window.open('https://www.udacity.com/');\n}\n\nwindow.learnSomethingNew === learnSomethingNew\n// true\n```\n\nDeclaring the `learnSomethingNew()` function as a global function declaration (i.e., it's globally accessible and not written _inside_ another function) makes it accessible to your code as either `learnSomethingNew()` or `window.learnSomethingNew()`.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468684,
+              "key": "79ad4a86-06af-4ba4-82d2-cf21c3a5eb49",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "79ad4a86-06af-4ba4-82d2-cf21c3a5eb49",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Which of the following variables and functions will be available on the `window` object?\n\n```js\nvar iceCreamEaten = 1;\n\nfunction consume (numberOfGallons) {\n  var result = iceCreamEaten + numberOfGallons;\n\n  function updateTotals (newTotal) {\n    iceCreamEaten = result;\n  }\n  \n  updateTotals();\n}\n\nconsume(3);\n```\n",
+                "answers": [
+                  {
+                    "id": "a1512452164821",
+                    "text": "`iceCreamEaten`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512452172169",
+                    "text": "`consume`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512452172634",
+                    "text": "`numberOfGallons`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512452173132",
+                    "text": "`result`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512452173540",
+                    "text": "`updateTotals`",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 468685,
+              "key": "84844732-bea9-4523-ae32-dc74aad10dfb",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Avoid Globals\n\nWe've seen that declaring global variables and functions add them as properties to the `window` object. _Globally_-accessible code sounds like something that might be super helpful, right? I mean, wouldn't it be great if you could always be within arms reach of some ice cream (or is that just my lifelong dream)?\n\nCounterintuitively, though, global variables and functions are _not_ ideal. There are actually a number of reasons why, but the two we'll look at are:\n\n* Tight coupling\n* Name collisions\n\n### Tight Coupling\n\n**Tight coupling** is a phrase that developers use to indicate code that is too dependent on the details of each other. The word \"coupling\" means the \"pairing of two items together.\" In tight coupling, pieces of code are joined together in a way where changing one unintentionally alters the functioning of some other code: \n\n```js\nvar instructor = 'Richard';\n\nfunction richardSaysHi() {\n  console.log(`${instructor} says 'hi!'`);\n}\n```\n\nIn the code above, note that the `instructor` variable is declared globally. The `richardSaysHi()` function does _not_ have a local variable that it uses to store the instructor's name. Instead, it reaches out to the global variable and uses that. If we refactored this code by changing the variable from `instructor` to `teacher`, this would break the `richardSaysHi()` function (or we'd have to update it there, too!). This is a (simple) example of tightly-coupled code.\n\n### Name Collisions\n\nA **name collision** occurs when two (or more) functions depend on a variable with the same name. A major problem with this is that both functions will try to update the variable and or set the variable, but these changes are overridden by each other! \n\nLet's look at an example of name collision with this DOM manipulation code: \n\n```js\nlet counter = 1;\n\nfunction addDivToHeader () {\n  const newDiv = document.createElement('div');\n  newDiv.textContent = 'div number ' + counter;\n\n  counter = counter + 1;\n\n  const headerSection = document.querySelector('header');\n  headerSection.appendChild(newDiv)\n}\n\nfunction addDivToFooter() {\n  const newDiv = document.createElement('div');\n  newDiv.textContent = 'div number ' + counter;\n\n  counter = counter + 1;\n\n  const headerSection = document.querySelector('footer');\n  headerSection.appendChild(newDiv)\n}\n```\n\nIn this code, we have an `addDivToHeader()` function and a `addDivToFooter()` function. Both of these functions create a `<div>` element and increment a `counter` variable. \n\nThis code looks fine, but if you try running this code and adding a few `<div>`s to the `<header>` and `<footer>` elements, you'll find that the numbering will get off! Both `addDivToHeader()` and `addDivToFooter()` expect a global `counter` variable to be accessible to them -- not change out from under them!\n\nSince both functions increment the `counter` variable, if the code alternates between calling `addDivToHeader()` and `addDivToFooter()`, then their respective `<div>`s will not have numerically ascending numbers. For example, if we had the following calls:\n\n```js\naddDivToHeader();\naddDivToHeader();\n\naddDivToFooter();\n\naddDivToHeader();\n```\n\nThe developer _probably wanted_ the `<header>` to have three `<div>` elements with the numbers 1, 2, and 3 and the `<footer>` element to have a single `<div>` with the number 1. However, what this code will produce is a `<header>` element with three `<div>` but with the numbers 1, 2, and 4 (not 3) and a `<footer>` element with the number 3...these are very different results. But it's happening because both functions depend on the `counter` variable and both update it.\n\nSo what should you do instead? You should write as few global variables as possible. Write your variables inside of the functions that need them, keeping them as close to where they are needed as possible. Now, there _are_ times when you'll need to write global variables, but you should only write them as a last resort.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468686,
+              "key": "29763689-5dbd-4b11-b08a-33bdb375b929",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Summary\n\nThe `window` object is provided by the browser and is not part of the JavaScript language or specification. Any global variable declarations (i.e., those that use `var`) or global function declarations are added as properties to this `window` object. Excessive use of global variables is not a good practice, and can cause unexpected problems to accurately-written code.\n\nWhether you're working with the `window` object, or with an object you create yourself, recall that all objects are made up of key/value pairs. In the next section, we'll check out how to extract these individual keys or values!",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468687,
+              "key": "58f1fe82-bfb9-4b0e-9296-6aa7554be493",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Further Research\n\n* [The window object](https://developer.mozilla.org/en-US/docs/Web/API/Window) on MDN\n* [The window specification](https://www.w3.org/TR/html5/browsers.html#the-window-object) on W3C\n* [Article: Globals are Bad](http://wiki.c2.com/?GlobalVariablesAreBad)\n* [Coupling](https://bit.ly/2m07ZOj) on Wikipedia\n* [Name Collision](https://en.wikipedia.org/wiki/Name_collision) on Wikipedia",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 468688,
+          "key": "da23525a-34a4-4d5f-836a-c83505f4bb96",
+          "title": "Extracting Properties and Values",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "da23525a-34a4-4d5f-836a-c83505f4bb96",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 468689,
+              "key": "bd6c292c-d4d8-44cb-8263-90b3a34403df",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Object Methods\n\nDo you remember earlier when we used the `Object()` constructor function to create (i.e., instantiate) new objects with the `new` keyword?\n\n```js\nconst myNewFancyObject = new Object();\n```\n\nThe `Object()` function actually includes a few methods of its own to aid in the development of your applications. These methods are:\n\n* `Object.keys()`\n* `Object.values()`\n\nWhether you're building logic in your code, or just writing a utility \"helper\" function, feel free to use these methods as necessary. Let's see how each of these work!\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468690,
+              "key": "4de6b2ab-cc6a-4f14-81b1-4731f4378dd8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Object.keys() and Object.values()\n\nAt its core, an object is just a collection of key/value pairs. What if we want to extract _only_ the keys from an object? Say we have this object representing a real-life dictionary:\n\n```js\nconst dictionary = {\n  car: 'automobile',\n  apple: 'healthy snack',\n  cat: 'cute furry animal',\n  dog: 'best friend'\n};\n```\n\nHaving a collection of just the words (i.e., the `dictionary` object's keys) may be particularly useful. While we _could_ use a `for...in` loop to iterate through an object and build our own list of keys, it can get a bit messy and verbose. Thankfully, JavaScript provides an abstraction just for this! \n\nWhen `Object.keys()` is given an object, it extracts just the _keys_ of that object, then returns those keys in an array:\n\n```js\nObject.keys(dictionary);\n\n// ['car', 'apple', 'cat', 'dog']\n```\n\nSo `Object.keys()` gives returns an array of the provided object's property names. Likewise, if we want a list of the _values_ of an object, we can use `Object.values()`:\n\n```js\nObject.values(dictionary);\n\n// ['automobile', 'healthy snack', 'cute furry animal', 'best friend']\n```\n\nExcellent! Let's see it all in action.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 478346,
+              "key": "f2164bb0-5f39-425b-ad1e-30f2042e039e",
+              "title": "L1 -68 - Object Keys And Object Values Demo V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "mRgapwiy-MQ",
+                "china_cdn_id": "mRgapwiy-MQ.mp4"
+              }
+            },
+            {
+              "id": 492707,
+              "key": "4cac8fe3-de26-44a2-b39e-af56e6bcc36a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "[Here's the code from the preceding video.](https://github.com/udacity/OOJS-screencasts/blob/master/L1-objects-in-depth/70-objectkeys-and-objectvalues-demo.js)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468694,
+              "key": "b6546947-bcbf-4fad-ae14-7a0d90dfbde5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "> ## Support for `Object.keys()` and `Object.values()`\n\n> `Object.keys()` has been around for quite a long time, so it is fully supported by every browser.\n\n> `Object.values()`, on the other hand, is significantly newer. It was officially added to the language specification in 2017. However, just because it's been added to the specification, it necessarily doesn't mean your browser supports it yet! \n\n> How do you know if your browser _does_ support `Object.values()`? Check out the [Browser Compatibility table](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values#Browser_compatibility)!\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468878,
+              "key": "0f6fb150-8498-4e62-8548-631013edf42c",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "0f6fb150-8498-4e62-8548-631013edf42c",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What is true about `Object.keys()`? Select all that apply.",
+                "answers": [
+                  {
+                    "id": "a1512500867618",
+                    "text": "The resulting array's elements are strings",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512500880587",
+                    "text": "The method is used simply by calling `.keys` onto any given object",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512500881179",
+                    "text": "In some environments, the return value of `Object.keys()` is actually an object.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512500881955",
+                    "text": "The order of the array's elements are in the same order as using a `for` loop.",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 468879,
+              "key": "acf9dfa0-99fc-4505-81c0-94254c3f40d9",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "acf9dfa0-99fc-4505-81c0-94254c3f40d9",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What is true about `Object.values()`? Select all that apply.",
+                "answers": [
+                  {
+                    "id": "a1512501106048",
+                    "text": "The resulting array's elements are strings.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512501121927",
+                    "text": "The method is used simply by calling `.values` onto any given object.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512501122431",
+                    "text": "In some environments, the return value of `Object.values()` is actually an object.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512501123055",
+                    "text": "The order of the array's elements are in the same order as using a `for` loop.",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 468884,
+              "key": "f9e11fae-121a-4d89-a270-7c1b5ed3a71a",
+              "title": "",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "f9e11fae-121a-4d89-a270-7c1b5ed3a71a",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Write an expression using `Object.keys()` to extract the keys (i.e., property names) from the `triangle` object:\n\n```js\nconst triangle = {\n  type: 'polygon',\n  sides: 3,\n  sumOfAngles: 180,\n  equilateral: true,\n  equiangular: true\n};\n```",
+                "matchers": [
+                  {
+                    "expression": "^Object\\.keys\\( ?triangle ?\\);?\\n?$"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 468885,
+              "key": "b45b786b-ae00-497f-b368-426f461255ec",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Summary\n\nThe Object() constructor function has access to several methods to aid in development. To extract property names and values from an object, we can use:\n\n* `Object.keys()` returns an array of a given object's own keys (property _names_).\n* `Object.values()` returns an array of a given object's own values (property _values_).\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 468886,
+              "key": "3f39da40-6333-4dc4-946a-849e78afa66f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Further Research\n\n* [Object.keys()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys) on MDN\n* [Object.values()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values) on MDN\n* [Browser Compatibility](http://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html)",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 468887,
+          "key": "08205c02-bfe8-4443-8fe1-5dedbe86b5e4",
+          "title": "Lesson Summary",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "08205c02-bfe8-4443-8fe1-5dedbe86b5e4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 478349,
+              "key": "015a1de9-85f3-45d6-87eb-05ce2ca08641",
+              "title": "L1 83 HS - Summary",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "2VGDq4aCdfc",
+                "china_cdn_id": "2VGDq4aCdfc.mp4"
+              }
+            },
+            {
+              "id": 468889,
+              "key": "7fe30fcf-1e88-4465-a9ff-70ef5c27bc4e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Further Research\n\n* [JavaScript: The Good Parts](http://javascript.crockford.com/) by Douglas Crockford\n* [JavaScript: The Good Parts](https://www.goodreads.com/book/show/2998152-javascript) via Goodreads\n",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
